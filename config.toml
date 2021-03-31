@@ -47,14 +47,14 @@ anchor = "smart"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "UA-00000000-0"
+id = "G-4QCM5VHF7M"
 
 # Language configuration
 
 [languages]
 [languages.en]
 title = "Haksung"
-description = "Haksung's Homepage"
+description = "Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
@@ -87,7 +87,7 @@ section = ["HTML", "print"]
 
 [params]
 copyright = "The Docsy Authors"
-privacy_policy = "https://policies.google.com/privacy"
+# privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -111,9 +111,9 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/haksungjang/haksungjang.github.io"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/google/docsy"
+github_project_repo = "https://github.com/haksungjang/haksungjang.github.io"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
