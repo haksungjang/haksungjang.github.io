@@ -1,7 +1,7 @@
 
 ---
 title: "Open Source License"
-linkTitle: "License"
+linkTitle: "Open Source License"
 weight: 10
 ---
 
