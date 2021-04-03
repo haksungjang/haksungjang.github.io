@@ -58,8 +58,8 @@ description = "Haksung's Homepage 장학성 오픈소스 프로그램 매니저 
 languageName ="English"
 # Weight used for sorting.
 weight = 1
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
+time_format_default = "2006년 1일 2월"
+time_format_blog = "2006년 1일 2월"
 
 # [languages.no]
 # title = "Haksung"
