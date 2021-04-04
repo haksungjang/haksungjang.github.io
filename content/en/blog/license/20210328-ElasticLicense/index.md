@@ -11,8 +11,11 @@ resources:
   byline: "Photo: Haksung Jang"
 ---
 
----
+{{% pageinfo %}}
+This paper was translated by Haksung Jang from the English version available at this [white paper](https://www.coss.community/coss/elastic-license-2-0-and-the-evolution-of-open-source-licensing-3jb3).  The original author, [Heather Meeker](https://heathermeeker.com/about-me/), has not reviewed this translation.
+{{% /pageinfo %}}
 
+---
 > 안녕하세요. 
 > 
 > 미국의 오픈소스 전문 변호사인 [Heather Meeker](https://heathermeeker.com/about-me/)가 2021년 3월 11일 공개한 Elastic License에 대한 [White Paper](https://www.coss.community/coss/elastic-license-2-0-and-the-evolution-of-open-source-licensing-3jb3)를 기반으로 아래의 글을 작성하였습니다. 대부분 원글을 번역하는 방식이며, 제 의견은 인용구로 추가하였습니다. 
