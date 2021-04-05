@@ -1,0 +1,383 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haksung – Open Source License</title><link>/blog/license/</link><description>Recent content in Open Source License on Haksung</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/license/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Elastic License 2.0 그리고 진화하는 오픈소스 라이선스</title><link>/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/</link><pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate><guid>/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/</guid><description>
+&lt;img src="/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/featured-scale_hu0adce3c464c6f6e27493d0d0745cd5d4_35813_640x0_resize_catmullrom_2.png" width="640" height="612"/>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>This paper was translated by Haksung Jang from the English version available at this &lt;a href="https://www.coss.community/coss/elastic-license-2-0-and-the-evolution-of-open-source-licensing-3jb3">white paper&lt;/a>. The original author, &lt;a href="https://heathermeeker.com/about-me/">Heather Meeker&lt;/a>, has not reviewed this translation.&lt;/p>
+&lt;/div>
+&lt;hr>
+&lt;blockquote>
+&lt;p>안녕하세요.&lt;/p>
+&lt;p>미국의 오픈소스 전문 변호사인 &lt;a href="https://heathermeeker.com/about-me/">Heather Meeker&lt;/a>가 2021년 3월 11일 공개한 Elastic License에 대한 &lt;a href="https://www.coss.community/coss/elastic-license-2-0-and-the-evolution-of-open-source-licensing-3jb3">White Paper&lt;/a>를 기반으로 아래의 글을 작성하였습니다. 대부분 원글을 번역하는 방식이며, 제 의견은 인용구로 추가하였습니다.&lt;/p>
+&lt;p>참고로, Heather Meeker는 이 백서를 자신의 개인적인 견해임을 나타내면서도 일부 Elastic의 자금 지원이 있었다고 밝혔습니다. 그래서인지, 원글은 Elastic License에 호의적인 입장을 보입니다.&lt;/p>
+&lt;blockquote>
+&lt;p>(조금 찾아보니, Elastic License 2.0을 &lt;a href="https://www.elastic.co/blog/elastic-license-v2">Heather Meeker가 작성&lt;/a>하였군요.)&lt;/p>
+&lt;/blockquote>
+&lt;p>여하튼 시대가 변하며 소프트웨어 배포 방식이 바뀌는 상황에 따라 상용 오픈소스 기업들이 개발과 사업을 병행하기 위해 어떤 라이선스 모델을 도입해야 할지 고민해야 했고, Elastic License가 나온 배경에 대한 한 측면을 이해하는 데 도움이 되는 글이라 생각합니다.
+글에 오류가 있다면 언제든 &lt;a href="https://haksungjang.github.io/">연락&lt;/a>해주세요. :-)&lt;/p>
+&lt;ul>
+&lt;li>감수에 도움 주신 카카오의 &lt;a href="https://www.linkedin.com/in/%EC%98%81%ED%99%98-%EA%B9%80-4069b5135/">Sean&lt;/a>, &lt;a href="https://www.linkedin.com/in/hwang-minho/">Robin&lt;/a> 그리고 LG전자의 &lt;a href="https://www.linkedin.com/in/kyoungae-kim-597a1630">김경애&lt;/a>님에게 깊은 감사 드립니다.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>최근, 2021년 2월, &lt;a href="https://www.elastic.co/">Elastic&lt;/a>은 소프트웨어 제품에 &lt;a href="https://www.elastic.co/licensing/elastic-license">Elastic License 2.0&lt;/a>이라는 새로운 라이선스를 도입하였다. 이 라이선스 모델은 Elasticsearch, Kibana 등 주요 소프트웨어 제품군에 적용되었다. 이런 변화의 목적과 의미하는 바가 무엇인지 알아보자.&lt;/p>
+&lt;p>Elastic License 2.0은 개방형 개발 모델&lt;sub>Open Development Model&lt;/sub>로 사업하는 기업이 취할 수 있는 대표적인 라이선스 모범 사례이다. Elastic License 2.0은 오픈소스 라이선스는 아니지만, 소프트웨어의 사용, 공유 및 변경의 자유와 커뮤니티에 해를 끼는 행동 방지 간의 공정한 균형을 유지하는 데 필요한 최소한의 제한 설정을 목표로 한다.&lt;/p>
+&lt;p>&lt;img src="./featured-scale.png" alt="scale">&lt;/p>
+&lt;h2 id="유닉스-리눅스-자유소프트웨어-그리고-오픈소스">유닉스, 리눅스, 자유소프트웨어, 그리고 오픈소스&lt;/h2>
+&lt;p>Elastic License 2.0과 같은 새로운 라이선스의 추세를 이해하려면 오픈소스 라이선스 운동이 어떻게 성장했는지 살펴보는 것이 도움이 된다.&lt;/p>
+&lt;p>오픈소스와 자유소프트웨어&lt;sub>Free Software&lt;/sub> 운동은 소프트웨어가 사유화되는 것에 대한 개발자의 우려에서 시작되었다. 이러한 우려의 불씨는 당시 가장 인기있는 운영체제인 유닉스였다. 유닉스의 개발사인 AT&amp;amp;T Bell Labs은 1956년의 동의령&lt;sub>consent decree&lt;/sub>에 따라 유닉스 및 C언어를 포함하는 연구 프로젝트로 이익 얻는 것을 금지&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 당했으며, 이때문에 수년간 매우 관대한 조건의 라이선스로 유닉스를 배포하였다. 학계, 연구자, 개발자들은 유닉스를 수정/개선하여 공유하기 시작했고, 유닉스는 곧 운영체제 분야의 선두가 되었다. 하지만, 1983년 동의령이 해제되자 AT&amp;amp;T는 유닉스에 수정 사항 공유를 허용하지 않는 조항을 적용하였다. 이에 따라 각 업체별로 각자 수정한 운영체제를 사용하며 유닉스는 많은 호환되지 않는 종류로 쪼개졌고, 사용자들은 더 이상 협업할 수 없게 되었다.&lt;/p>
+&lt;p>유닉스가 사유화되면서 자유소프트웨어 운동, 그리고 이어서 오픈소스 운동이 생겨났으며, 이들은 인프라 소프트웨어가 폐쇄되는 상황이 다시 발생하는 것을 방지하려고 하였다. 이 운동은 유닉스를 대체하는 자유소프트웨어인 리눅스를 중심으로 이루어졌으며 곧 모든 소프트웨어는 자유&lt;sub>free&lt;/sub>(무료&lt;sub>free&lt;/sub> 맥주에서의 Free가 아니라 언론의 자유&lt;sub>free&lt;/sub>에서의 Free)로워야 한다는 철학에 기반한 더 큰 운동으로 발전하였다. 이러한 운동의 한 요소는 소스 코드에 대한 접근, 개선 및 변경 사항을 만들고 공유할 수 있는 권리이다. 이러한 원칙들은 &lt;a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License&lt;/a> (GPL)에서 구현되었으며, 이에 따라 바이너리 배포자들은 해당 소스 코드를 공유해야 한다.&lt;/p>
+&lt;p>시간이 흐르고, 2000년대 초반 인터넷 붐에 힘입어 오픈소스 라이선스는 더욱 인기를 얻게 되었다. GPL과 같은 일부 라이선스는 복잡한 법적 우려를 불러일으키기도 했지만, 기업이 협업할 수 있는 기반을 마련하였다. 2000년 이후 오픈소스와 이를 통해 가능해진 협업은 모든 기술 부문에 채택되었다. 오늘날, 오픈소스는 전자상거래&lt;sub>e-commerce&lt;/sub>의 핵심 기술이며, 기업들은 소프트웨어 인프라를 위한 지속해서 협력한다.&lt;/p>
+&lt;h2 id="클라우드의-출현과-agpl">클라우드의 출현과 AGPL&lt;/h2>
+&lt;p>GPL과 같은 라이선스는 변경 사항의 공유를 요구한다. 바이너리 배포에 대한 소스 코드 공유 조건을 부과한다. 반면에 &amp;ldquo;개인 복사본&amp;quot;을 만들어서 사용하는 건 변경 사항을 공유할 필요가 없다. 이러한 조건은 당시 대부분의 소프트웨어를 직접설치&lt;sub>on-premise&lt;/sub>하는 방식이었기 때문에 공유를 강제하는 데 효과적이었다. 그러나 2000년대 초부터 소프트웨어는 퍼블릭 클라우드로 이동하기 시작하였고, 더 이상 소프트웨어를 배포할 필요가 없었다. 고객은 로컬 사본을 얻지 않고도 소프트웨어를 사용할 수 있게 되었다.&lt;/p>
+&lt;p>클라우드 서비스 사업이 커지면서, 이러한 패러다임의 변화는 오픈소스 커뮤니티의 기대치와 AWS&lt;sub>Amazon Web Services&lt;/sub>와 같은 클라우드 서비스 공급 업체 사이에 긴장감을 조성하였다. 클라우드 서비스 공급 업체는 개선 사항을 공유해야 하는 법적 의무에서 자유로웠다. 구글이 검색 서비스 강화를 위해 Linux에 의존하는 것으로 잘 알려졌기 때문에 이를 &amp;ldquo;구글 루프홀&lt;sub>Loophole&lt;/sub>&amp;ldquo;이라고도 불렀다. 이에 대응하기 위해 자유소프트웨어 커뮤니티는 &lt;a href="https://www.gnu.org/licenses/agpl-3.0.en.html">Affero GPL&lt;/a> (AGPL)이라는 GPL을 부분 변경한 형태의 라이선스를 만들었다. AGPL 3.0은 GPL 3.0과 거의 동일하지만 다음과 같은 원격 네트워크 상호 작용&lt;sub>Remote Network Interaction&lt;/sub> 조항을 포함한다.&lt;/p>
+&lt;pre>&lt;code>[I]f you modify the Program, your modified version must prominently offer
+all users interacting with it remotely through a computer network …
+an opportunity to receive the Corresponding Source of your version by
+providing access to the Corresponding Source from a network server at no
+charge, through some standard or customary means of facilitating copying
+of software….
+&lt;/code>&lt;/pre>&lt;p>이 새로운 라이선스는 GPL이 리눅스 배포에 대해 했던 것처럼 클라우드 서비스 공급 업체가 소스 코드 개선 사항을 공유하도록 강제하기 위한 것이다.&lt;/p>
+&lt;h2 id="agpl과-듀얼-라이선스">AGPL과 듀얼 라이선스&lt;/h2>
+&lt;p>AGPL은 첫 번째 릴리스부터 논란이 있었다. 2007년, GPL 3.0 초안 작성이 마무리되어 가는 과정에서 일부 작성자들은 GPL을 네트워크 카피레프트&lt;sub>Copyleft&lt;/sub> 모델로 변경하기를 원하였다. 하지만 커뮤니티는 GPL 3.0의 &amp;ldquo;루프홀&amp;quot;을 그대로 유지하기로 결정했고, 몇 달 후, 이에 대한 대안으로 AGPL을 내놓았다. 그러나 AGPL은 널리 채택되지 않았다. 매우 인기 있는 분산 데이터베이스 제품인 &lt;a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB&lt;/a>가 유일무이한 AGPL의 &amp;ldquo;킬러 앱&lt;sub>killer app&lt;/sub>&amp;ldquo;이다. 기업들은 처음에는 AGPL을 이해하고 받아들이기 어려워했지만, 대부분 사용자는 소프트웨어를 변경하거나 서비스로 제공하지 않았기 때문에 AGPL하의 소프트웨어를 사용하겠다는 합리적인 결정을 내릴 수 있었다.&lt;/p>
+&lt;blockquote>
+&lt;p>AGPL 3.0의 Remote Network Interaction 조항은 프로그램을 변경하였을 때에 한하여 변경 사항의 소스 코드를 컴퓨터 네트워크를 통한 원격 사용자에게 제공해야 합니다. 즉, 변경하지 않는다면 소스 코드 공개 의무가 발생하지 않습니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>MongoDB는 &amp;ldquo;&lt;a href="http://monty-says.blogspot.com/2009/08/thoughts-about-dual-licensing-open.html">듀얼 라이선스&lt;/a>&amp;rdquo; 비즈니스 모델로 AGPL을 사용하였다. 사용자&lt;sub>licensee&lt;/sub>에게 AGPL 또는 상용 소프트웨어 라이선스 중 하나를 선택하게 하였다. 사용자는 AGPL의 요구사항을 준수하고 싶지 않거나 준수하기 위한 법적인 검토조차 관여하고 싶지 않다면 상용 라이선스를 선택하였다. 이러한 듀얼 라이선스 비즈니스 모델은 원래 GPL과 상용 라이선스를 선택하게 하는 방식으로 개발되었으나 시간이 지나면서 GPL 대신 보다 카피레프트 범위를 확장한 AGPL이 사용되었다. MongoDB의 이 라이선스 모델은 상당히 성공적이었다. AGPL은 가장 강력한 카피레프트 라이선스였기 때문에 MongoDB가 상업적인 협상을 추진하는 데 유용하였다. 한편, AGPL을 만든 이들은 AGPL이 MongoDB의 사업 수단으로 사용되는 모습이 &lt;a href="http://ebb.org/bkuhn/blog/">유해한 갈취&lt;/a>&lt;sub>toxic shakedown&lt;/sub>라면서 비판하기도 하였다. 여하튼, 그렇게 강력하다고 평가 받던 AGP의 소스 코드 공유 조건도 클라우드 공급 업체가 오픈소스를 대규모로 상업적인 사용을 하면서 개발자나 커뮤니티에 아무것도 되돌려 주지 않는 행위를 막기에는 충분하지 않았다.&lt;/p>
+&lt;h2 id="무상-사용substrip-miningsub">무상 사용&lt;sub>Strip-mining&lt;/sub>&lt;/h2>
+&lt;p>클라우드 이용이 GPL 모델을 &amp;ldquo;파괴&lt;sub>broken&lt;/sub>&amp;ldquo;시켰던 것처럼, 2010년대 클라우드 컴퓨팅이 발전하면서 AGPL 듀얼 라이선스 모델도 압박을 받기 시작하였다. 이번에는 문제가 달랐다. GPL 또는 AGPL의 범위는 하나의 단일 실행 가능 프로그램&lt;sub>single program executable&lt;/sub>까지만 확장된다. 이 &amp;ldquo;기능&amp;quot;은 저작권 라이선스가 단일 저작물에 대해서만 사용 조건을 지정할 수 있다는 이론에 따라 GPL에서 의도적으로 설계된 것이었다. 즉, GPL은 파생 저작물&lt;sub>derivative work&lt;/sub>에 대한 소스 코드 공유 요건을 갖지만, 집합 저작물&lt;sub>collective work&lt;/sub>에 대해서는 아니다. 법적으로 이 둘 간의 경계는 상당히 불분명하지만 GPL이 인기를 얻으면서 단일 프로그램이란 하나의 실행 가능한 프로세스라고 정의하는 것이 일반적인 관행이 되었다. 자유소프트웨어재단&lt;sub>Free Software Foundation&lt;/sub>은 &lt;a href="https://www.gnu.org/licenses/gpl-faq.en.html#MereAggregation">GPL FAQ&lt;/a>에서 오랫동안 이런 원칙을 주장해왔다.&lt;/p>
+&lt;p>하지만 클라우드 서비스가 발전하면서 두 가지 일이 발생하였다. 첫째, 소프트웨어 엔지니어링을 클라우드 구현에 더욱 집중하게 되었다. 클라우드 공급 업체는 한때 클라우드 환경에서 실행하기 위한 소프트웨어를 개선하거나 수정해야 했던 반면, 소프트웨어 엔지니어링이 발전하면서 클라우드 공급 업체는 기존 오픈소스 소프트웨어를 &amp;ldquo;플러그 앤드 플레이&lt;sub>plug and play&lt;/sub>&amp;ldquo;형태로 사용할 수 있게 되었다. 그러다 보니 클라우드 공급 업체는 혁신의 주체를 주요 실행 파일이 아닌 곳으로 변화할 수 있었다. 그들은 소프트웨어를 관리, 모니터링 및 배포하기 위한 소프트웨어를 추가로 개발했으며, 이러한 혁신은 클라우드 서비스를 키울 수 있었다. AGPL은 클라우드 공급 업체의 이러한 개선사항에 대해서는 이를 공유하도록 강제하는 데 아무런 도움이 되지 않았다.&lt;/p>
+&lt;p>이렇게 오픈소스 상용 기업들은 대형 클라우드 공급 업체가 무료로 갖다 쓰기 좋은 상점처럼 되어 버렸다. 특히 &amp;ldquo;플랫폼 소프트웨어&amp;rdquo; 또는 미들웨어 (컴퓨터 스택에서 최상위 계측인 응용 프로그램과 운영 체제의 중간에 있는 소프트웨어)에서 문제는 더 심각하였다. 이 범주의 소프트웨어는 최신 컴퓨팅에 필수적이며 클라우드 구현에 매우 유용하다.&lt;/p>
+&lt;p>이 때문에 비즈니스 세계에서 클라우드 공급 업체의 오픈소스 사용에 대한 비판이 제기되었다. Bain Capital의 Salil Deshpande는 2018년 &amp;ldquo;분명히 이것은 불법은 아니다. 그러나 우리는 이것이 잘못되었고, 오픈소스 커뮤니티의 지속 가능성에 도움이 되지 않는다고 생각한다&amp;quot;라고 &lt;a href="https://techcrunch.com/2018/09/07/commons-clause-stops-open-source-abuse/">하였다&lt;/a>. 또 다른 전문가는 &amp;ldquo;AWS는 오픈소스의 아킬레스건을 건드리고 있다. 다른 사람의 저작물을 무료로 가져다가 이에 대한 접근 권한을 임대하는 사업을 하는 것이다.&amp;ldquo;라고 &lt;a href="https://onezero.medium.com/open-source-betrayed-industry-leaders-accuse-amazon-of-playing-a-rigged-game-with-aws-67177bc748b7">하였다&lt;/a>. 문제는 모든 주요 오픈소스 라이선스는 이런 방식으로 소프트웨어를 사용하는 것을 제지하지 않는다는 것이다.&lt;/p>
+&lt;blockquote>
+&lt;p>주요 오픈소스 라이선스가 작성되었던 시점에는 AWS의 &amp;ldquo;Program as a Service&amp;rdquo; 형태의 프로그램이 없었으니, 이에 대한 조건도 고려하지 않았을 테지요.&lt;/p>
+&lt;p>오픈소스 상용 기업들은 오픈소스 프로그램을 개발해서 듀얼 라이선스 모델 (GPL or 상용)로 사업을 하고 있었는데, 클라우드 제공 업체에서 이 오픈소스 프로그램을 그대로 가져다가 클라우드 서비스로 제공하는 사업을 하고, 자기네한테는 아무런 이윤도 안겨주지 않으니, 사업 또는 개발 측면에서 모두 좋지 않은 영향을 미쳤을 것은 충분히 추측할 수 있습니다.&lt;/p>
+&lt;p>클라우드 공급 업체가 MongoDB를 &lt;a href="https://aws.amazon.com/ko/documentdb/">Amazon DocumentDB&lt;/a>나 &lt;a href="https://docs.microsoft.com/ko-kr/azure/cosmos-db/introduction">Azure Cosmos DB&lt;/a>로 서비스하며 고객을 확보하는게 대표적인 예라고 볼 수 있을 것 같습니다.&lt;/p>
+&lt;/blockquote>
+&lt;p>오픈소스 상용 기업들과 투자자들은 이런 오픈소스 모델의 한계 때문에 고민이 되었다. GPL, AGPL 등 어떤 라이선스도 저작권법을 사용하여 클라우드 공급 업체가 변경 사항을 공유하도록 강제할 수 없었다. 또한 AWS, Azure 또는 Google Cloud와 같은 대규모 고객 기반을 가진 클라우드 공급 업체는 버튼 클릭으로 소프트웨어를 쉽게 추가할 수 있게 하여 고객과 &amp;ldquo;끈끈한&amp;rdquo; 관계를 유지하였다. 일부 오픈소스 개발사는 자체 클라우드 서비스를 제공했지만, 소프트웨어를 무료로 사용하는 대형 클라우드 공급 업체와 경쟁하는 건 너무 어렵다는 걸 알게 되었다. 오픈소스 개발사의 서비스가 더 우수한 경우에도, 기존 클라우드 계정에서는 단지 &amp;ldquo;체크박스를 선택&amp;quot;하여 소프트웨어 제품군을 추가하는 것과는 달리, 새로운 서비스를 사용하기 위한 거래 비용&lt;sub>transaction cost&lt;/sub>이 발생한다는 점이 고객이 등을 돌리게 하였다.&lt;/p>
+&lt;h2 id="sspl과-소스-공개-라이선스">SSPL과 소스 공개 라이선스&lt;/h2>
+&lt;p>2018년 업계는 돌파구를 찾았다. AWS가 오픈소스 플랫폼 소프트웨어를 호스팅하면서 계속 인기를 얻자 오픈소스 개발사들은 행동에 나서기 시작하였다. 라이선스를 변경하였다.&lt;/p>
+&lt;p>오픈소스 개발사들은 두 가지 다른 경로를 통해 &lt;a href="https://techcrunch.com/2018/11/29/the-crusade-against-open-source-abuse/">무상 사용 문제에 대응&lt;/a>하였다.&lt;/p>
+&lt;ol>
+&lt;li>매우 강한&lt;sub>ultra-strong&lt;/sub> 네트워크 카피레프트 라이선스&lt;/li>
+&lt;li>제한 조건을 갖는 소스 공개 라이선스&lt;sub>Source Available Licensing&lt;/sub>&lt;/li>
+&lt;/ol>
+&lt;p>이 두 범주 모두 이전에는 정의되지 않았던 형태이다. 둘 다 MySQL 및 MongoDB 에서와 같은 듀얼 라이선스 모델을 지원하기 위한 것이다.&lt;/p>
+&lt;h3 id="sspl">SSPL&lt;/h3>
+&lt;p>매우 강한 카피레프트 접근 방식은 2018년 &lt;a href="https://www.mongodb.com/licensing/server-side-public-license">SSPL&lt;/a>&lt;sub>Server Side Public License&lt;/sub>을 만든 MongoDB에 의해 시도되었다.&lt;/p>
+&lt;pre>&lt;code>1. Offering the Program as a Service.
+If you make the functionality of the Program or a modified version
+available to third parties as a service, you must make the Service
+Source Code available via network download to everyone at no charge,
+under the terms of this License. Making the functionality of the
+Program or modified version available to third parties as a service
+includes, without limitation, enabling third parties to interact
+with the functionality of the Program or modified version remotely
+through a computer network, offering a service the value of which
+entirely or primarily derives from the value of the Program or
+modified version, or offering a service that accomplishes for users
+the primary purpose of the Program or modified version.
+&amp;quot;Service Source Code&amp;quot; means the Corresponding Source for the Program
+or the modified version, and the Corresponding Source for all programs
+that you use to make the Program or modified version available as a
+service, including, without limitation, management software, user
+interfaces, application program interfaces, automation software,
+monitoring software, backup software, storage software and hosting
+software, all such that a user could run an instance of the service
+using the Service Source Code you make available. [emphasis added].
+&lt;/code>&lt;/pre>&lt;p>이 라이선스는 무상 사용 문제에 대응하기 위한 오픈소스 솔루션을 만들기 위해 작성되었다. 소스 코드 공유 요구 사항은 AGPL의 요구 사항보다 훨씬 광범위하다. 이러한 요구 사항의 범위는 분산 소프트웨어에 대해서도 GPL 요구 사항과 유사하게 작동하도록 설계되었다. &lt;a href="https://www.mongodb.com/community/licensing">MongoDB는 SSPL 또는 상용 라이선스&lt;/a>에 따라 소프트웨어를 사용할 수 있는 듀얼 라이선스 모델을 적용하였다.&lt;/p>
+&lt;p>MongoDB는 SSPL을 &lt;a href="https://opensource.org/approval">OSI&lt;/a>&lt;sub>Open Source Initiative&lt;/sub>에 승인받기 위해 제출하였다. 수개월 간의 논쟁 끝에 승인을 받지는 못하였지만, MongoDB는 듀얼 라이선스 모델의 오픈소스 선택지로 SSPL을 계속 사용하고 있다. 이 라이선스가 &lt;a href="https://opensource.org/osd">오픈소스 정의&lt;/a>&lt;sub>Open Source Definition&lt;/sub>에 적합하지 않은 이유에 대한 논의는 복잡했으며, 이 정의를 충족하는 것만이 유일한 기준은 아니었다. 요약하자면, 이렇게 광범위한 소스 공유 요구 사항을 가진 라이선스가 &amp;ldquo;&lt;a href="https://opensource.org/approval">소프트웨어 자유를 보장&lt;/a>&amp;ldquo;할지가 분명하지 않았다.&lt;/p>
+&lt;h3 id="제한-조건을-갖는-소스-공개-라이선스">제한 조건을 갖는 소스 공개 라이선스&lt;/h3>
+&lt;p>다른 사람들은 또 다른 경로를 따랐다. 일부 회사는 Salil Deshpande가 주도한 &lt;a href="https://commonsclause.com/">Commons Clause&lt;/a>를 채택했으며, 어떤 회사는 Elastic이 Elastic License 1.0을 만든 것처럼 &lt;a href="https://redislabs.com/legal/licenses/">Redis&lt;/a>, &lt;a href="https://www.confluent.io/confluent-community-license">Confluent&lt;/a>, &lt;a href="https://www.cockroachlabs.com/cockroachdb-community-license/">CockroachDB&lt;/a>와 같은 자체 라이선스를 제작하였다. SSPL과는 달리, 이 라이선스들은 오픈소스 정의를 충족시키기 위한 것이 아니었다. 대신, 이들은 무상 사용을 겨냥한 제한 조건을 갖고 있다.&lt;/p>
+&lt;p>왜 이렇게 두 가지 경로로 갈렸을까? 이는 &lt;a href="https://www.gnu.org/philosophy/free-sw.en.html">Freedom Zero&lt;/a>, &amp;ldquo;어떤 목적으로든 원하는 대로 프로그램을 실행할 수 있는 자유&amp;quot;와 관련이 있다&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>오픈소스 또는 자유소프트웨어 라이선스의 주요 특징은 라이선스 제약이나 제한이 없다는 것이다&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>. 일반적인 상용 소프트웨어 라이선스와 비교해보자. 개인용으로 사용하겠다는 라이선스 조건에 클릭하여 수락하는 형태의 최종 사용자 라이선스&lt;sub>End User license Agreement&lt;/sub>는 소프트웨어를 사용하는 것만 허용하며, 변경하거나 배포할 수 없다. 엔터프라이즈 라이선스는 소프트웨어를 사용할 수 있는 사용자, 서버 또는 물리적 위치의 수에 대한 제한을 설정하고, 기업은 해당 사용을 감시해야 한다. 그러나 오픈소스 라이선스에는 그러한 제한이 없다. 따라서, 소스 코드를 무료로 제공한다고 하더라도 상업적 사용 불가와 같은 제한을 갖고 있다면 정의상 오픈소스가 아니다.&lt;/p>
+&lt;p>즉, 모든 라이선스 제한은 오픈소스 범주에서 벗어나게 한다.&lt;/p>
+&lt;p>2018년 이후 발생한 라이선스 변경의 물결 가운데 출시된 모든 라이선스는 거의 비슷한 제한을 갖고 있다. 각각 고유한 조건이 있지만, 이들은 모두 사용자가 소프트웨어를 무료로 사용할 수 있도록 허용하는 동시에 경쟁 호스팅 서비스 제공을 위한 소프트웨어 사용을 금지하는 데 초점을 맞추고 있다.&lt;/p>
+&lt;h2 id="elastic-license-20">Elastic License 2.0&lt;/h2>
+&lt;p>2021년 초, Elasticsearch는 이 두 가지 경로를 모두 따르는 하나의 길을 개척하였다. SSPL과 새로운 &lt;a href="https://www.elastic.co/licensing/elastic-license">Elastic License 2.0&lt;/a> (ELv2)이라는 두 가지 무료 선택지를 제공하여 소프트웨어 제품군을 사용할 수 있게 하였다.&lt;/p>
+&lt;p>새로운 Elastic 2.0 라이선스는 짧고 (한 페이지에 불과) 쉬운 언어로 작성되었으며 오픈소스 라이선스의 거의 모든 자유를 허용한다. 소프트웨어 수신자는 소프트웨어를 자유롭게 사용, 변경 및 재배포 할 수 있다. 전에 소프트웨어 라이선스를 읽어본 적이 없더라도 이 라이선스는 한번 읽어볼 가치가 있다.&lt;/p>
+&lt;p>여기에는 두 가지 주요 제한이 있다.&lt;/p>
+&lt;pre>&lt;code>You may not provide the software to third parties as a hosted or
+managed service, where the service provides users with access to
+any substantial set of the features or functionality of the software.
+You may not move, change, disable, or circumvent the license key
+functionality in the software, and you may not remove or obscure
+any functionality in the software that is protected by the license key.
+&lt;/code>&lt;/pre>&lt;p>첫 번째 제한은 무상 사용 문제를 해결하는 데 초점이 맞춰져 있다. 이로써 이 제한을 위반하여 소프트웨어를 사용하면 소프트웨어의 권한을 침해하게 된다.&lt;/p>
+&lt;p>두 번째 제한은 소프트웨어 라이선스 키의 해킹을 금지하기 위한 것이다. 이러한 제한은 소프트웨어 라이선스에서는 오래전부터 일반적이었으나, 소스 공개 라이선스에서는 이제 막 사용되기 시작하였다. 이 조항을 통해 개발자는 유료 서비스를 ELv2하의 소프트웨어와 상호 작용하게 하거나, 유료 기능을 위한 소프트웨어 구성 요소 일부를 보호할 수 있게 되었다.&lt;/p>
+&lt;p>이 라이선스의 다른 조항들은 매우 간단하며 오픈소스 라이선스를 읽은 사람이라면 누구나 익숙할 것이다.&lt;/p>
+&lt;h2 id="왜-듀얼-라이선스를-사용하였는가">왜 듀얼 라이선스를 사용하였는가?&lt;/h2>
+&lt;p>Elasticsearch는 사용자에게 SSPL과 Elastic License 중 하나를 선택할 수 있게 하는 특이한 경로를 택하였다. 오늘날 많은 기업이 &amp;ldquo;오픈 코어&lt;sub>open core&lt;/sub>&amp;rdquo; 모델을 사용하고 있으며, 실제로 Elasticsearch도 전에는 이 모델을 사용하였다. 둘의 차이는 미묘하다고 할 수 있다. 오픈 코어 모델은 (대부분 Apache 2.0과 같은 허용적인&lt;sub>permissive&lt;/sub>) 오픈소스 라이선스로 핵심 소프트웨어를 제공한다. 그런 다음 제한된 라이선스로 또는 서비스로만&lt;sub>as a service&lt;/sub> 추가 기능(대개 기업이 대규모로 배포하는 데 유용한 기능)을 제공한다. 그러나 Elasticsearch는 동일한 소프트웨어를 두 개의 다른 라이선스로 사용할 수 있는 듀얼 라이선스 모델을 고수하였다. 이 듀얼 라이선스 모델은 MySQL에 의해 개척되었고, 일반적으로 무료 라이선스 선택지로 GPL, AGPL 또는 SSPL과 같은 카피레프트 라이선스를 사용한다. 그러나 이 모델은 오픈소스 라이선스와 클라우드 서비스 간의 충돌 때문에 최근 몇 년 동안 인기가 시들해졌다.&lt;/p>
+&lt;p>Elastic의 선택은 SSPL과 Elastic License 2.0의 두 가지 무료 라이선스 선택권을 제공하였다는 점에서 더욱 이례적이었다. 듀얼 라이선스는 일반적으로 하나의 무료 옵션만 제공한다. 이러한 이례적인 방법을 통해 Elasticsearch는 거의 모든 사용자가 소프트웨어를 무료로 사용할 수 있도록 하는 유연성을 강조하였다.&lt;/p>
+&lt;blockquote>
+&lt;p>Elastic License 2.0는 오직 클라우드 서비스 공급 업체에서 Elasticsearch를 자기네 클라우드 서비스로 제공하는 것만은 막겠다는 의지인 것 같습니다.&lt;/p>
+&lt;p>결국 AWS는 Elasticsearch 서비스를 계속하기 위해 Elasticsearch를 &lt;a href="https://aws.amazon.com/ko/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/">Fork&lt;/a>했고, 이를 &lt;a href="https://opendistro.github.io/for-elasticsearch/">Open Distro for Elasticsearch&lt;/a>라고 명명하며 Apache License 2.0을 적용하고, 커뮤니티를 키워가기로 했습니다.&lt;/p>
+&lt;p>누가 오픈소스의 지속가능성과 발전에 기여하고 있는 것일까요?&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="elastic-license-20과-최신-라이선스-기술">Elastic License 2.0과 최신 라이선스 기술&lt;/h2>
+&lt;p>Elasticsearch는 사용자와 개발자 모두에게 공정하고 지속 가능한 비즈니스 모델을 유지하면서 가능한 한 개방성을 유지하기 위해 새로운 라이선스 모델로 전환하였다. 그렇게 함으로써 소스 공개 운동&lt;sub>source-available movement&lt;/sub>에 참여한 다른 참여자들의 목표와 추구하는 바를 라이선스 작성 시 반영하였다.&lt;/p>
+&lt;p>&lt;a href="https://www.elastic.co/licensing/elastic-license/faq">라이선스 변경에 대한 FAQ&lt;/a>에서 요약한 바와 같이 Elastic의 라이선스 변경은 고객이나 커뮤니티 사용자 수에 영향을 미치지 않을 것으로 예상된다. 대부분의 사용자는 Elastic의 소프트웨어를 기반으로 애플리케이션을 구축한다. 이는 &amp;ldquo;제3자에게 호스팅 또는 관리 서비스&lt;sub>as a hosted or managed Service&lt;/sub>로 제공&amp;quot;하는 비즈니스가 아니기 때문이다.&lt;/p>
+&lt;h2 id="더-나은-라이선스-만들기">더 나은 라이선스 만들기&lt;/h2>
+&lt;p>또한, Elastic은 Elastic License 2.0을 작성하는 데 리소스를 투입함으로써 라이선스 작성 기술의 발전을 추구하였다. 어떤 의미에서 소스 공개 라이선스는 소프트웨어만큼 오래되었다. 사실, 바이너리 전용 라이선스는 1980년대 PC / Mac 플랫폼 표준화의 산물이었다. 그 이전에는 거의 모든 소프트웨어가 소스 코드 형식으로 라이선스 되었다. 그러나 시간이 지남에 따라 라이선스의 배포 형식과 방법은 크게 달라졌다.&lt;/p>
+&lt;p>Elastic License 2.0은 이러한 추세의 정점이다. 형식적으로는 오픈소스 라이선스의 가장 인기 있는 간단하고 직관적인 작성 방식과 템플릿을 채택하였다. 또한 라이선스 키 보존 조항을 통해 공급 업체가 무료 및 유료 기능을 모두 갖춘 소프트웨어에 대한 라이선스를 쉽게 사용할 수 있도록 지원한다.&lt;/p>
+&lt;p>수십 년 전 유닉스에서 분리된 수많은 호환되지 않은 독점 버전과 마찬가지로 독점 라이선스는 제각각의 조항과 조건으로 덕지덕지 붙여진 누더기이다. 일반 소비자 소프트웨어 제품에 대한 단순한 최종 사용자 라이선스조차도 일반적으로 너무 길고 난해하여 대부분의 사용자는 이해할 수 없다. &lt;a href="https://en.wikipedia.org/wiki/HumancentiPad">아무도 그것을 읽지 않는다는 말도 많다&lt;/a>. 그러나 이러한 복잡성은 대부분 불필요하다. 오픈소스 라이선스, 특히 허용&lt;sub>permissive&lt;/sub> 라이선스는 이를 교훈으로 삼았다. 간단한 일련의 규칙으로도 충분해야 하며 이해하기 쉬울수록 사용자가 이를 존중할 가능성은 높아진다.&lt;/p>
+&lt;p>Elastic License 2.0은 짧고 간단하며 이해하기 쉬울 뿐만 아니라 사람들이 이를 &lt;a href="https://www.elastic.co/blog/elastic-license-v2">템플릿으로 사용&lt;/a>할 수도 있다. 무상 사용 방지 논쟁이 시작된 후, 마찰이 없는 방식으로, 합리적인 제한을 가지며, 간단하고 이해 가능한 라이선스에 대한 수요가 증가하고 있다. 그러나 대부분의 소규모 소프트웨어 회사는 자체적으로 라이선스를 작성할 리소스가 없다. 많은 소프트웨어 스타트업이 Elastic License 2.0과 Confluent Community License와 같은 라이선스를 그들이 채택할 수 있는 모델로 찾고 있는 것은 놀라운 일이 아니다.&lt;/p>
+&lt;p>이 분야는 &lt;a href="https://faircode.io/">Fair Code&lt;/a>가 이에 대한 표준을 만들면서 대중화되었다. Fair Code는 다음과 같이 말한다.&lt;/p>
+&lt;pre>&lt;code>Fair-code is not a software license.
+It describes a software model where software:
+* is generally free to use and can be distributed by anybody
+* has its source code openly available
+* can be extended by anybody in public and private communities
+* is commercially restricted by its authors
+&lt;/code>&lt;/pre>&lt;p>이 계획은 아직 초기 단계에 있지만, 이로써 사용자와 개발자 모두에게 공정한 패러다임의 필요성을 업계가 인식하기 시작하고 있으며, 오픈소스 상용 기업이 오픈소스 모델보다 더 유연한 방식으로 둘 사이의 균형을 맞출 수 있도록 하고 있음은 분명하다. 한 전문가는 최근의 라이선스 발전을 &amp;ldquo;&lt;a href="https://monetize.substack.com/p/open-source-eras">오픈소스 이후 시대&lt;/a>&amp;ldquo;라고 부르기까지 하였다. 하지만 실제로는 이러한 소스 공개 라이선스는 비즈니스 및 라이선스 모델이 계속 발전함에 따라 일반적으로 오픈소스 라이선스와 함께 사용된다. 따라서 두 모델은 엄격한 대체품이 아니라 보완품이다.&lt;/p>
+&lt;p>또 다른 표준화된 라이선스 옵션도 있다. 2020년, 한 변호사 그룹은 &lt;a href="http://www.polyformproject.org/">PolyForm Project&lt;/a>를 시작하여 소스 공개 라이선스 템플릿 모음을 작성하였다. 이러한 라이선스는 오픈소스 라이선스와 독점 라이선스 모두에 경험이 있는 변호사에 의해 상호 리뷰되었다. 개방형 콘텐츠 라이선싱을 위한 &lt;a href="https://creativecommons.org/">Creative Commons&lt;/a>와 마찬가지로 비상업적, 평가 전용, 경쟁 방지 라이선스 등의 옵션 메뉴를 제공한다. Elastic License 2.0과 같이 모두 무료로 소스 코드에 대한 접근을 제공하며 필요한 특허 라이선스를 부여한다. PolyForm Perimeter 및 PolyForm Shield는 선조라고 할 수 있는 Confluent Community License와 유사하며, Elastic License 2.0은 이러한 추세에 따라 사용 가능한 옵션을 발전시켰다.&lt;/p>
+&lt;p>질문이 있거나 더 자세한 내용을 알아가고 싶다면 다음과 같은 몇 가지 자료를 참조하라.&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;The rise of open source IPOs&amp;rdquo;&lt;/strong> &lt;a href="https://coss.media/rise-of-the-open-source-ipo/">https://coss.media/rise-of-the-open-source-ipo/&lt;/a>. This article tracks some of the spectacular business successes of open source companies.&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;The After Open Source Era Has Started&amp;rdquo;&lt;/strong> &lt;a href="https://monetize.substack.com/p/open-source-eras">https://monetize.substack.com/p/open-source-eras&lt;/a> . This article discusses the sea change represented by companies moving to source available licenses.&lt;/p>
+&lt;p>&lt;strong>US House of Representatives Committee on the Judiciary&amp;rsquo;s report on investigation into competition in digital markets, spearheaded by the Subcommittee on Antitrust, Commercial and Administrative Law.&lt;/strong> &lt;a href="https://www.documentcloud.org/documents/7222836-Investigation-of-Competition-in-Digital-Markets.html">https://www.documentcloud.org/documents/7222836-Investigation-of-Competition-in-Digital-Markets.html&lt;/a>. Note the mention of Elasticsearch on page 326.&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&amp;ldquo;Modification of Final Judgment,&amp;rdquo; August 24, 1982, filed in case 82-0192, United States of America v. Western Electric Company, Incorporated, and American Telephone and Telegraph Company, U.S. District Court for the District of Columbia &lt;a href="http://web.archive.org/web/20060827191354/members.cox.net/hwilkerson/documents/AT&amp;amp;T_Consent_Decree.pdf">web.archive.org/web/20060827191354/members.cox&lt;/a>. &lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>The Free Software Definition is similar to the Open Source Definition, but shorter and clearer. &lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>Open source licenses can contain conditions, such as notices or source code sharing. But these are not limitations that tell you what you cannot do with software, they only require that if you elect to do certain things, you also must do others. &lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>Blog: 소스 코드 내 저작권 표시 방법</title><link>/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</link><pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</guid><description>
+&lt;img src="/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/featured_copyright_hu3c20e8f1f30640c88b46434ba146f1f1_89522_640x0_resize_catmullrom_2.png" width="640" height="299"/>
+&lt;blockquote>
+&lt;p>안녕하세요.&lt;/p>
+&lt;p>오픈소스 분야의 저명한 변호사인 &lt;a href="https://matija.suklje.name/">Matija Šuklje&lt;/a>는 최근 소스 코드 내 저작권 표시가 필요한 이유와 올바르게 작성하는 방법을 &lt;a href="https://matija.suklje.name/how-and-why-to-properly-write-copyright-statements-in-your-code">소개&lt;/a>하였습니다.&lt;/p>
+&lt;p>아래 글은 위의 원글을 기반으로 작성하였습니다. 대부분 원글을 그대로 번역하여 저자의 의도가 충실히 전달되도록 하였습니다.&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>개발자를 위한 간단한 저작권 표시 가이드로 생각하고 시작하였으나, 저작권 정보 표시에 대한 통일된 가이드가 없었기 때문에 가이드 작성이 쉽지 않았다. 결국 새로 하나 작성하기로 하였다.&lt;/p>
+&lt;p>다음 사항을 고려하며 균형을 맞춰서 작성하려고 하였다.&lt;/p>
+&lt;ol>
+&lt;li>무엇을 하면 되는지만 간단히 알고 싶어하는 개발자를 위해&lt;/li>
+&lt;li>단지 모범 사례 뿐만 아니라 그 이면에 있는 이유에 대해서도 이해하고자 하는 FOSS 컴플라이언스 담당자와 법률가를 위해&lt;/li>
+&lt;/ol>
+&lt;p>시간이 극단적으로 없다면, &lt;a href="#tldr">TL;DR&lt;/a>에서 최소한의 가이드를 확인하라. 2분 정도의 시간이 있다면 아래의 &lt;a href="#how-to-write-a-good-copyright-statement-and-license-notice">actual HowTo a bit lower below&lt;/a>를 읽어라.&lt;/p>
+&lt;p>물론, 20분 정도의 시간이 있다면, 처음부터 끝까지 한번 읽어보는 것이 제일 좋다.&lt;/p>
+&lt;h1 id="tldr">TL;DR&lt;/h1>
+&lt;p>아래 포맷의 저작권 및 라이선스 표시 당신이 작성한 모든 소스 코드 파일에 추가하라.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© {$year_of_file_creation} {$name_of_copyright_holder} &amp;lt;{$contact}&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">SPDX-License-Identifier&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#000">$SPDX_license_name}&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>예를 들어, 내가 오늘 소스 코드 파일을 하나 작성하였고, 이를 [BSD-3-Clause license][bsd-3-clause] 라이선스로 공개하였다면, 다음과 같은 내용을 파일 상단 주석 부분에 추가한다.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">SPDX-License-Identifier&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">BSD-3-Clause&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>참고로 [REUSE.software][reuse] 프로젝트의 가이드를 따르면 모든 파일에 적절한 표시가 되었는지 확인할 수 있다.&lt;/p>
+&lt;!--TODO: enable once this style gets implemented in https://github.com/fsfe/reuse-tool/issues/329
+!!! tip "Using the REUSE helper tool"
+If you will be doing this for many files, it makes sense to use tooling. Luckily the [REUSE helper tool][reuse_tool] can help with that as well.
+To implement the example above, I would call the following:
+```.fish
+reuse addheader --copyright-style spdx-symbol --copyright "Matija Šuklje &lt;matija@suklje.name>" --year (date +%Y)
+```
+And while you are at it, check the [other features of the REUSE helper tool][reuse_tool], to manage also licensing info.
+-->
+&lt;h1 id="저작권이란">저작권이란?&lt;/h1>
+&lt;p>&lt;strong>저작권&lt;/strong>은 ([베른 협약][berne] 이후) 저작자가 저작물 만들 때 &lt;strong>자동으로 생성&lt;/strong>된다. 모든 저작물은 저작권에 의해 보호되며, 저작권 보유자에게 저작물에 대한 독점적인 권한이 부여된다. 따라서 당신의 저작물(소스 코드, 텍스트, 이미지, 기타 미디어 등)을 다른 사용자가 사용할 수 있게 하려면 그들에게 라이선스를 부여해야 한다. 라이선스의 사전적 정의는 &amp;ldquo;특정 권리를 실행하기 위해 자격이 있는 기관으로부터 받은 허가&amp;quot;이며, 이러한 허가 없이 특정 권리를 실행하는 것은 저작권 침해와 같은 불법 행위가 된다.&lt;/p>
+&lt;p>마찬가지로 당신이 다른 사람의 소스 코드를 복사, 수정 등의 작업을 하려면 &lt;strong>필요한 권한을 부여 받아야&lt;/strong> 한다. 즉, 라이선스를 받아야 한다. 만약, 그 라이선스가 권리 실행 허가 조건으로 특정 의무를 요구한다면, 당신은 권리 실행을 위해 그 의무사항도 따라야만 한다.&lt;/p>
+&lt;p>어쨌든, 저작권법의 기본 요건을 준수해야 하며, 이를 위해서는 최소한 다음 두 가지가 필요한다.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>저작자 표시 (attribution)&lt;/strong> : 저작권 보유자 및/또는 저자를 명시한다. (특히 도덕적 권리를 인정하는 관할권에서)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>라이선스 (license)&lt;/strong> : 라이선스는 저작권 보유자 이외의 다른 사람에게 코드를 사용할 권한을 부여하는 유일한 방법이기 때문에 라이선스를 고지하고 전체 라이선스 텍스트를 제공하는 것이 좋다. 이는 당신이 내보내는 Outbound 라이선스나 (복사된 코드나 라이브러리 같은 3rd party 저작물을 사용하면서) 다른 이로부터 받는 Inbound 라이선스 모두에 해당한다.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">Inbound vs. Outbound 라이선스&lt;/h4>
+당신이 사용자(downstream)에게 부여한 라이선스를 Outbound 라이선스라고 부릅니다. 이는 당신으로부터 흘러나오는(out) 코드의 권한을 다루기 때문이다. 반대로, (동일한 코드의) 사용자 입장에서는 그들에게 흘러들어오는 (In) 코드의 권한을 다루기 때문에 Inbound 라이선스로 간주한다.
+간단히 말해, 유입되는 권한을 설명하는 라이선스를 Inbound 라이선스라고 하고, 유출되는 권한을 설명하는 라이선스를 Outbound 라이선스라고 한다.
+다행인 점은 저작자 표시는 저자의 권리이지 의무는 아닙니다. 또한 사용자는 저자가 저작자 표시 권리를 사용한 경우에만 이를 유지해야 하는 의무가 있다. 즉, 저자가 저작자 표시를 하지 않았을 때에는 사용자가 이를 직 표시하려고 수고하지 않아도 된다.
+&lt;/div>
+&lt;h1 id="왜-저작권-표시를-해야-하는가">왜 저작권 표시를 해야 하는가?&lt;/h1>
+&lt;p>1989년 베른 협약에 가입하기 전까지 미국 저작권법은 저작물을 보호하려면 명시적인 저작권 표시를 요구하였다. 그러나 베른 협약으로 저작권 표시를 하지 않아도 저작권은 자동으로 생성된다. 그럼에도 저작권 표시는 유용한다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+저작권 표시가 법에 따라 요구되는 것은 아니지만, 실제로는 해당 저작물의 저작권이 누구에게 있는지에 대한 증거로서 매우 유용한다. 또한, 이는 컴플라이언스 측면이나 코드 추적을 위해서도 큰 도움이 된다.
+&lt;/div>
+&lt;p>저작권 표시는 실질적으로 다음과 같은 이유로 필요한다.&lt;/p>
+&lt;ol>
+&lt;li>대부분의 라이선스가 저작권 표시를 요구한다.&lt;/li>
+&lt;li>라이선스에서 요구하지 않더라도 대부분의 관할권의 저작권 법률에서 요구한다.&lt;/li>
+&lt;li>(이러한 요구가 없더라도) 사용자는 법적 또는 기술적인 이유로 원저작자에게 연락하기를 원할 수도 있다.&lt;/li>
+&lt;/ol>
+&lt;p>따라서, 저작물에 저작자의 이름과 연락처 정보를 포함하는 것은 의미가 있다.&lt;/p>
+&lt;h1 id="저작권-표시-및-라이선스-고지의-올바른-방법">저작권 표시 및 라이선스 고지의 올바른 방법&lt;/h1>
+&lt;h2 id="저작권-표시">저작권 표시&lt;/h2>
+&lt;p>좋은 저작권 표시는 다음 정보로 구성되어야 한다.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>​&lt;a href="https://haksung.gitbook.io/oss/research/license/copyright-statements#c">© 기호&lt;/a>​&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>연도 : 처음 소스 코드 파일을 작성한 연도이다. 한번 작성했으면 &lt;a href="https://haksung.gitbook.io/oss/research/license/copyright-statements#undefined-6">더 수정하지 마라&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>저작권 보유자 이름 : 일반적으로 저자이지만, 저자의 고용주일 수 있다. 또한, CLA에 따라 다른 법인이나 개인이 될 수도 있다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>​&lt;a href="https://haksung.gitbook.io/oss/research/license/copyright-statements#undefined-8">유효한 연락처&lt;/a> : 저작권 보유자에게 연락할 수 있는 정보&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>예를 들어, 오늘 소스 코드 파일을 작성하였다면 다음과 같이 저작권 표시를 파일 상단 헤더 부분에 추가한다.&lt;/p>
+&lt;pre>&lt;code>© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;
+&lt;/code>&lt;/pre>&lt;h2 id="라이선스-고지">라이선스 고지&lt;/h2>
+&lt;p>또한, 코드를 공개하면서 라이선스가 무엇인지 알리는 것도 매우 중요한다. &lt;a href="https://spdx.org/ids">SPDX ID&lt;/a>를 사용하면 코드의 라이선스를 명확하게 알릴 수 있다. 라이선스 고지가 명확하지 않으면 이를 보는 사용자에게 혼란을 야기시킬 수 있다.&lt;/p>
+&lt;h2 id="reusesoftware">REUSE.software&lt;/h2>
+&lt;p>​&lt;a href="https://reuse.software/">REUSE.software&lt;/a> 프로젝트는 SPDX tag를 사용해서 저작권 표시와 라이선스 고지를 작성하는 Best Practice를 제공한다.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>저작권 표시 tag : SPDX-FileCopyrightText&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>라이선스 고지 tag : SPDX-License-Identifier&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>아래의 예는 위의 모든 사항을 고려하고 SPDX 및 REUSE.software 요구사항을 모두 준수하는 저작권 표시 및 라이선스 고지이다.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">SPDX-License-Identifier&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">BSD-3-Clause&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이제 당신이 작성한 모든 소스 코드 파일에 이러한 주석이 포함되었는지 확인하라!&lt;/p>
+&lt;h1 id="faq">FAQ&lt;/h1>
+&lt;h2 id="왜-연도를-표시해야-하는가">왜 연도를 표시해야 하는가?&lt;/h2>
+&lt;p>어떤 사람들은 연도를 생략하고 단순하게 작성하는 게 오히려 저작권 표시를 유지하기 쉬울 것이라고 주장한다. 실제로 이는 Microsoft와 GitHub의 정책이기도 한다.&lt;/p>
+&lt;p>연도를 표시하지 않는 게 작업을 크게 단순화한다는 데에는 동의하지만, 이를 유지한다면 코드 베이스에서의 모호한 타임라인을 확인하는 데 도움이 된다. 또한, 발명이 처음으로 일반인에게 언제 공개되었는지를 알아내는데 유용할 수 있다. 특히 특허 방어에 유용하게 사용될 수 있다.&lt;/p>
+&lt;p>이런 사항들을 고려하여 Liferay의 새로운 정책에서는 파일 생성 연도를 작성하고, 연도를 더 변경하지 않다.&lt;/p>
+&lt;h2 id="왜-연도-표시를-변경하지-말아야-하는가">왜 연도 표시를 변경하지 말아야 하는가?&lt;/h2>
+&lt;p>다음과 같은 저작권 표시를 보았을 거다.&lt;/p>
+&lt;pre>&lt;code>Copyright (C) 1992, 1995, 2000, 2001, 2003 CompanyX Inc.
+&lt;/code>&lt;/pre>&lt;p>이렇게 계속해서 연도를 추가하는 건 이렇게 하면 저작권 보호 기간을 연장할 수 있다는 생각이 있기 때문이며, 실제 널리 행해 지고 있다. 하지만, 불행하게도 이런 작업은 쓸모가 없고, 오히려 해가 될 도 있다.&lt;/p>
+&lt;p>게다가 새로운 변경이나 기여를 받을 때마다 이렇게 그 연도를 추가하는 행위를 법적으로 본다면 논란의 여지가 있다. 문제는 모든 기여가 저작권을 주장할 수 있을 정도로 독창적이거나 규모가 있지 않다. 따라서, 문제 소지를 없애려면 모든 기여에 대해 법률에 따라 저작권 보호를 받을 수 있을 만큼 독창적인지 여부를 먼저 판단하고, 그에 따라 저작권 표시에 연도를 추가해야할 것이다.아&lt;/p>
+&lt;p>반면에 저작권은 저자의 사망 이후 (혹은 저작권자가 법인일 경우, 발행 이후) 최소 50년 (보통 70년) 동안 지속된다. 따라서, 굳이 저작권 표시에 연도를 계속해서 추가하지 않아도 보호 기간 만료 때문에 저작권을 주장하지 못하게 될 위험은 매우 낮다.&lt;/p>
+&lt;p>게다가, 일반적으로 하나의 소스 코드 파일은 소프트웨어를 구성하는 수많은 파일 중 하나일 뿐이다. 소프트웨어가 성장해가면서 새롭게 파일이 추가될 텐데, 그때 새로운 파일에 새로운 작성 연도를 추가해간다면 전체 저작물로서의 소프트웨어에는 최신 연도의 저작권 표시가 이미 포함되고 있는 거다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">Git/VCS 히스토리를 더럽히지 마라&lt;/h4>
+만약 매년 모든 파일에 연도 표시를 새롭게 추가한다면 이로 인해 Git/VCS 히스토리가 불필요하게 길어지게 되고, 저장소 공간을 소비하며, 정작 중요한 정보를 찾을 때 방해가 될 수 있다.
+&lt;/div>
+&lt;h2 id="연도를-범위로-표시하는-건-어떤가요">연도를 범위로 표시하는 건 어떤가요?&lt;/h2>
+&lt;p>연도를 범위로 표시하는 것(예: 1999-2020)도 매년 연도 표시를 변경해줘야 하기 때문에 위의 질문에서 언급한 모든 사항이 동일하게 적용된다.&lt;/p>
+&lt;p>어떤 경우는 &amp;lsquo;{$year}-present&amp;rsquo;와 같은 형태로 범위를 지정하기도 한다. 이 또한 위에서 언급한 사항들이 대부분 적용되며, 추가로 또 다른 혼란을 줄 수 있다. &amp;lsquo;present&amp;rsquo;가 의미하는 것은 추상적이다. &amp;lsquo;present&amp;rsquo;는 어떤 것을 의미하는 걸까요?&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>파일이 마지막으로 수정 시간?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>패키지가 릴리즈된 시간?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>처음 다운로드 한 시간?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>마지막으로 실행한 시간?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>아니면 바로 지금?&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>이처럼 &amp;lsquo;present&amp;rsquo;는 전혀 도움이 되지 않는 표시이다.&lt;/p>
+&lt;h2 id="gitmercurial이-저작권-정보를-추적하는데-더-좋지-않는가">Git/Mercurial이 저작권 정보를 추적하는데 더 좋지 않는가?&lt;/h2>
+&lt;p>항상 그렇지는 않다. Git (및 다른 VCS)은 메타데이터 관리에 뛰어나지만, 항상 이 의존하는 것은 주의해야 한다.&lt;/p>
+&lt;p>먼저 Git은 &amp;lsquo;Committer&amp;rsquo; 필드와 별개로 &amp;lsquo;Author&amp;rsquo; 필드가 있다. 기여자마다 &amp;lsquo;Author&amp;rsquo; 필드에 제각각의 값을 포함시킬 뿐더러, &amp;lsquo;Author&amp;rsquo; 필드에 입력된 사람이 실제 저자라고 가정하여도 저자는 저작권 보유자가 아닐 수도 있다.&lt;/p>
+&lt;p>더 중요하게는, 파일이 저장소에서 옮기게 되면 메타데이터는 사라집니다. 소스 코드만 압축해서 배포한다거나, 저장소를 fork 혹은 rebase하는 방식으로 각 파일을 새로운 코드 베이스로 복사하면 이전까지의 추적 데이터는 더 이상 확인할 수 없다.&lt;/p>
+&lt;p>이러한 문제들은 모든 파일에 저작권 및 라이선스 정보를 표시하면 해결된다. &lt;a href="https://reuse.software/">REUSE.software&lt;/a>의 Best Practice는 이를 아주 잘 처리한다.&lt;/p>
+&lt;h2 id="왜--기호를-사용하는가">왜 © 기호를 사용하는가?&lt;/h2>
+&lt;p>어떤 사람은 &amp;ldquo;Copyright&amp;quot;라는 영어 단어가 더 자주 사용되고, 이미 많은 사람이 익숙하다고 주장할 수도 있지만, 실제로 저작권법을 보면 &amp;ldquo;©&amp;rdquo; (Copyright Sign)을 사용하는 것이 저작권 진술을 위한 유일한 방법임을 알 수 있다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+EU에서의 한 예로, 슬로베니아의 ZASP §175. (1)은 독점적 저작권 보유자가 자신의 저작물을 표시하기 위해 &amp;ldquo;(c)&amp;rdquo; 또는 &amp;ldquo;©&amp;quot;로 표시할 수 있다고 명시하고 있다.
+반면에 미국에서는 17 U.S. Code § 401. (b)(1) 에서는 다음과 같이 저작물 표시 방법을 지정하고 있다.
+&amp;ldquo;the symbol © (the letter C in a circle), or the word “Copyright”, or the abbreviation “Copr.”&amp;rdquo;
+&lt;/div>
+&lt;p>또한, © 는 &amp;ldquo;common global denominator&amp;quot;이기 때문에 이를 사용하는 것이 합리적이다.&lt;/p>
+&lt;p>© 기호가 호불호가 있을 수 있지만, 실용적인 관점에서 볼 때 사실 그다지 중요하지 않은 부분이다. 위에서 설명했듯이 저작권은 자동으로 생성되기 때문에 어떤 기호를 쓰느냐에 따라 법적인 리스크가 달라지지는 않다.&lt;/p>
+&lt;h2 id="왜-연락처를-남겨야-하는가-두-명-이상의-저자가-있을-때는-어떻게-하는가">왜 연락처를 남겨야 하는가? 두 명 이상의 저자가 있을 때는 어떻게 하는가?&lt;/h2>
+&lt;p>연락처 정보는 저작권법에 의해 요구되는 것은 아니지만, 실용적인 이유로 매우 유용한다.&lt;/p>
+&lt;p>사용자는 법적 또는 기술적인 문의를 위해 코드의 저자 또는 저작권 보유자에게 연락하고 싶을 수 있다. 코드가 어떻게 동작하는지 물어보거나 수정을 요청할 수도 있다. 라이선스 문제를 발견하여 문제를 해결할 수 있도록 도움을 주거나 별도의 라이선스를 요청해야 할 수도 있다. 이 모든 경우에 연락처 정보가 많은 도움이 된다.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>현재까지도 이메일이 자주 사용되는 연락 방법이기 때문에 저작권자의 이메일 주소를 제공하는 것이 가장 좋다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>저작권이 매우 분산되어 있거나 법인인 경우도 있다. 이런 경우에는 프로젝트 또는 법인 홈페이지의 URL을 제공하는 것이 더 합리적일 수 있다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>프로젝트에서 AUTHORS 또는 CONTRIBUTORS와 같은 파일에 저작권 보유자를 표시하는 경우 해당 파일을 가리키는 링크를 제공하는 것도 좋은 옵션이다.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="public-domain은-무엇인가">Public Domain은 무엇인가?&lt;/h2>
+&lt;p>일반적으로 Public Domain은 저작권 기간이 만료된 저작물이지만, 까다로운 개념이어서 주의가 필요한다.&lt;/p>
+&lt;p>일부 관할권 (예: 미국, 영국)에서는 저작권 보유자가 자신의 저작권을 포기하고 저작물을 Public Domain으로 기부할 수 있지만, 대부분의 관할권(예: 대부분의 EU 회원국)에서는 이런 행위가 불가능한다. 이는 관할권에 따라 저자가 자신의 저작물을 Public Domain으로 제공한다고 표시하였다고 하더라도 이것이 실제로 유효하게 하기 위한 법적 기준을 충족할 수 없고, 결국 여전히 저작물에 대한 저작권을 저작권자만 보유하고 있음을 의미한다.&lt;/p>
+&lt;p>따라서 저작권과 라이선스를 진지하게 다루는 오픈소스 컴플라이언스 담당자들은 &amp;ldquo;this is public domain&amp;quot;이라는 표시를 매우 경계한다.&lt;/p>
+&lt;p>저작권자는 이런 문제를 다음 두 가지 방법으로 완화할 수 있다.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>자신의 저작물에 대해 저작권을 포기하고 기부하고 싶을 때 &amp;ldquo;public domain&amp;quot;이라는 단어 대신, &lt;a href="https://spdx.org/licenses/CC0-1.0">CC0-1.0&lt;/a>과 같은 매우 허용적인 라이선스를 사용하라.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&amp;ldquo;SPDX-FileCopyrightText:&amp;rdquo; 필드에 이름과 연락처 정보를 남기세요. 사용자가 저작권자의 의도를 궁금해하거나, 어떤 불분명한 사항이 있으면 연락을 취하여 문제를 해결할 수 있게 하라.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="minified-javascript에서는-저작권-표시를-어떻게-하는가">Minified JavaScript에서는 저작권 표시를 어떻게 하는가?&lt;/h2>
+&lt;p>최근의 Minifier는 주석을 제거하더라도 저작권 및 라이선스 정보는 보존하는 옵션을 제공한다. 코드를 minify 할 때 이런 옵션을 사용하여 저작권과 라이선스 정보를 유지하라.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+소스 코드를 다른 언어나 컴파일러 및 다른 형태로 변환하더라도 모두 저작권 보유자에게 독점적 권리가 있다. 따라서, minify 한 코드를 사용할 때에도 유효한 라이선스가 필요한다.
+&lt;/div>
+&lt;h2 id="all-rights-reserved-표시에는-어떤-문제가-있는가">&amp;ldquo;All rights reserved&amp;rdquo; 표시에는 어떤 문제가 있는가?&lt;/h2>
+&lt;p>종종 저작권 표시에 &amp;ldquo;All rights reserved&amp;quot;라는 문장을 본 적이 있을 거다. 저작권법은 이런 표현을 요구하지 않다. 아마 음악 CD나 책에서 사용하는 걸 보고 단순히 모방해서 사용하는 게 아닐까 생각한다. 하지만, 오픈소스에서 이런 표현은 혼란을 야기시킵니다.&lt;/p>
+&lt;p>&amp;ldquo;All rights reserved&amp;quot;는 명백히 오픈소스 라이선스와 모순된다. 오픈소스 라이선스는 누구나 코드를 사용, 연구, 공유 및 개선할 수 있는 권리를 제공한다. 반면에 &amp;ldquo;All rights reserved&amp;quot;는 이러한 모든 권리가 자신에게만 부여된다는 표현이다.&lt;/p>
+&lt;p>&amp;ldquo;All right reserved&amp;quot;는 이와 같은 문제만 가져올 뿐, 어떤 이점도 가져오지 않기 때문에 오픈소스에서는 사용하지 말아야 한다.&lt;/p></description></item><item><title>Blog: 2019 FOSS Legal Issue Top 10</title><link>/blog/2020/01/30/2019-foss-legal-issue-top-10/</link><pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate><guid>/blog/2020/01/30/2019-foss-legal-issue-top-10/</guid><description>
+&lt;hr>
+&lt;blockquote>
+&lt;p>안녕하세요.&lt;/p>
+&lt;p>DLA Piper의 IP 전문 변호사인 Mark Radcliffe는 최근 &amp;ldquo;&lt;a href="https://www-synopsys-com.cdn.ampproject.org/c/s/www.synopsys.com/blogs/software-security/top-10-open-source-legal-issues-2019/amp/">Top 10 FOSS legal developments in 2019&lt;/a>&amp;ldquo;라는 글을 기고하였습니다. Open Source Compliance에 관심 있는 분들에게 도움이 될 것으로 기대하여 내용을 제가 이해하는 선에서 정리해보았습니다. (저는 법률가가 아니기 때문에 법적인 용어나 해석 부분은 미흡한 부분이 있을 수 있습니다. 보완이 필요한 부분을 알려주시면 고맙겠습니다.)&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2 id="1-mchardy-linux-system-copyright-트롤-독일-새로운-전략-채택">1. McHardy (Linux system copyright 트롤, 독일), 새로운 전략 채택&lt;/h2>
+&lt;p>Linux kernel의 초기 기여자인 Patrick McHardy는 독일에서 소송을 무기로 금적적인 이익을 취득하려는 Copyright 트롤과 같은 활동을 하였다. 그는 7년 반 동안 활동했으며, 80개가 넘는 회사에 접근한 것으로 알려져 있지만, 많은 기업이 소송까지 가지 않고 합의로 처리하였고, 독일 법원의 소송 절차는 기밀로 유지되기 때문에 정확한 수치는 추정하기는 어렵다. 2017년 McHardy가 소송을 제기한 &lt;a href="https://www.jolts.world/index.php/jolts/article/view/128">Geniatech 사건&lt;/a>의 항소 법원 판사는 2018년 GPLv2 위반에 대한 저작권 주장을 제기하는 McHardy의 주장에 대해 회의적으로 대응하였고, 결국 MacHardy는 소송을 취하하였다.&lt;/p>
+&lt;p>이후 McHardy는 추가적인 소송 제기하는 상황을 만들고 있지는 않지만, 여전히 GPLv2에 대한 Compliance 위반에 대한 주장을 계속하고 있다. 그는 그동안 가벼운 Contractual Penalty를 우선 체결하고, 이후 추가적인 위반을 발견해서 무거운 Penalty를 집행하는 방법으로 금전적인 이익을 취했다면, 2019년 초부터는 위반을 찾아내기 위해 그가 소비한 시간에 대한 배상을 요구(과다한 Engineering cost 요구)하는 새로운 전략으로 전환했다.&lt;/p>
+&lt;h2 id="2-richard-stallman-gnu-mit-및-free-software-foundation에서-사임">2. Richard Stallman, GNU, MIT 및 Free Software Foundation에서 사임&lt;/h2>
+&lt;p>Richard Stallman이 Free Software Foundation의 President 겸 이사직을 &lt;a href="https://www.fsf.org/news/richard-m-stallman-resigns">사임&lt;/a>했다. Free Software (및 Open Source) 운동은 Richard Stallman의 비전과 지속적인 노력에 힘입은 바가 크다. 그러나 지난 수년간 그는 FOSS 운동 이외의 문제에 대해 여러 의견을 제시하여 논쟁을 불러일으켰다. Jeffrey Epstein 사건의 희생자에 대한 올해의 그의 진술은 Free Software Foundation으로부터의 사임 압력을 받게 하였다.&lt;/p>
+&lt;p>그는 또한 MIT에서 사임했고, GNU 운영 체제의 Maintainer들은 그를 쫓아냈다. 그들은 그의 기여에 대해서는 인정했지만, 다음과 같이 &lt;a href="https://guix.gnu.org/blog/2019/joint-statement-on-the-gnu-project/">언급&lt;/a>했다. &amp;ldquo;그러나, 몇 년 동안 Stallman의 행동이 GNU 프로젝트의 핵심 가치인 &lt;a href="https://www.gnu.org/gnu/manifesto.html#benefit">모든 컴퓨터 사용자&lt;/a>의 이익을 약화시켰음을 인정해야 한다. GNU는 리더의 행동이 우리가 도달하고자 하는 가치에서 멀어질 때 제대로 된 임무를 수행할 수 없다.&amp;rdquo;&lt;/p>
+&lt;p>앞으로 누가 Free Software 운동의 리더십 역할을 맡을지는 분명하지 않다.&lt;/p>
+&lt;p>(관련 국내 기사 : &lt;a href="http://www.zdnet.co.kr/view/?no=20190918173513">http://www.zdnet.co.kr/view/?no=2019091817351&lt;/a>)&lt;/p>
+&lt;h2 id="3-oss에-닥친-무역-전쟁">3. OSS에 닥친 무역 전쟁&lt;/h2>
+&lt;p>2019년 5월, 미 산업안전국(BIS)은 Huawei Technologies Co., Ltd. 및 68개 미국 이외의 계열사를 Entry List에 &lt;a href="https://www.federalregister.gov/documents/2019/05/21/2019-10616/addition-of-entities-to-the-entity-list">올렸다&lt;/a>. BIS는 2019년 8월 Entry List에 46개의 미국 이외의 Huawei 계열사를 추가했다. 회사들은 BIS가 임시 라이선스를 발급한 4개 영역(2019년 8월, 3개로 축소)을 제외하고는 수출 관리 규정(EAR)에 해당하는 품목을 Huawei로 수출, 재수출, 또는 양도할 수 없다.&lt;/p>
+&lt;p>Google은 즉시 Google Play Store와 같은 Google Service 뿐만 아니라 Android OS에 대한 접근을 &lt;a href="https://www.theverge.com/2019/5/19/18631558/google-huawei-android-suspension">차단했다&lt;/a>(단, BIS 예외에 따라 일부 업데이트 제공). Huawei는 Android Open Source Project를 사용하는 것으로 되돌아가야 했다. BIS는 Temporary General License를 여러 차례 연장했다. Huawei는 Android를 대체할 수 있는 버전을 개발 중이며, 다음 버전의 폰과 함께 배포할 수 있을 것이라고 &lt;a href="https://www.engadget.com/2019/08/09/huawei-harmony-os-hongmeng-android/">발표했다&lt;/a>. 이번 Huawei의 Google Android OS 접속 중단은 영구적일 것으로 보여 Android가 미국에 본사를 둔 생태계와 중국에 본사를 둔 생태계 두 곳으로 쪼개질 가능성도 있다.&lt;/p>
+&lt;h2 id="4-oss-라이선스에서의-윤리적-제한">4. OSS 라이선스에서의 윤리적 제한&lt;/h2>
+&lt;p>OSS에는 윤리적인 이유에 대해 사용을 조건화하려는 여러 차례의 시도가 있었다. 올해, 여러 가지의 &amp;ldquo;Ethical License&amp;rdquo; 사례가 있었다. 한 예로, 개발자인 Seth Vargo는 자신의 open source library project인 Chef Sugar를 사용자들이 사용할 수 없도록 &lt;a href="https://www.wired.com/story/developer-deletes-code-protest-ice/">삭제해버렸다&lt;/a>. 그는 Chef Sugar가 미국 이민 관세 수사청(U.S. Immigration and Customs Enforcement, ICE)과의 계약의 일부로 사용(되었고, 그는 ICE가 불법 입국한 부모와 자녀를 격리 수용한 것을 비판하기)때문에 Chef Sugar를 삭제했다.&lt;/p>
+&lt;p>초기에는 Chef Sugar 제공사인 Chef가 Chef Sugar 프로젝트의 저작권을 소유하고 있다고 주장하며, 문제를 해결하려고 했다. Chef의 CEO는 Chef가 ICE에 서비스를 계속 제공할 것이라고 했지만, 4일 후 CEO는 Chef가 ICE와의 라이선스를 갱신하지 않고, ICE 계약의 수익을 이산가족(ICE로 인해 헤어진 가족)을 다루는 자선단체에 기부할 것이라도 &lt;a href="https://www.businessinsider.com/chef-ice-contract-expires-next-year-2019-9">발표했다&lt;/a>.&lt;/p>
+&lt;p>운동가인 Coraline Ada Ehmke는 &lt;a href="https://firstdonoharm.dev/">Hippocratic License&lt;/a>를 만들었다. 그녀는 이 라이선스가 &amp;ldquo;Open Source 프로젝트에 윤리를 추가&amp;quot;한다고 말한다. Hippocratic License는 MIT License에 다음 조항을 추가한다.:&lt;/p>
+&lt;p>“The software may not be used by anyone for systems or activities that actively and knowingly endanger, harm, or otherwise threaten the physical, mental, economic, or general well-being of other individuals or groups, in violation of the &lt;a href="https://www.un.org/en/universal-declaration-human-rights/">United Nations Universal Declaration of Human Rights&lt;/a>.”&lt;/p>
+&lt;p>OSI는 Hippocratic License가 &amp;ldquo;open source&amp;rdquo; 라이선스가 아니라고 신속하게 &lt;a href="https://perens.com/2019/09/23/sorry-ms-ehmke-the-hippocratic-license-cant-work/">언급했다&lt;/a>. 불행히도 이 추가 조항으로 인해 매우 해석하기 어려운 라이선스가 됐다.&lt;/p>
+&lt;h2 id="5-블록체인-프로젝트의-foss-전략">5. 블록체인 프로젝트의 FOSS 전략&lt;/h2>
+&lt;p>많은 &lt;a href="https://www.synopsys.com/glossary/what-is-blockchain.html">블록체인&lt;/a> 프로젝트가 FOSS 라이선스 하에 공개되었다. 블록체인 커뮤니티가 인프라 기술에 대한 복잡하고 특이한 선택을 했다. 새로운 블록체인인 Algorand 블록체인 프로젝트는 2019년 SDK, example application, helper library를 MIT License로 공개하였다. 그러나 Algorand node software는 &lt;a href="https://github.com/algorand/go-algorand/blob/master/COPYING_FAQ">AGPLv3&lt;/a>로 라이선스 되었다. 많은 회사의 법률 또는 Compliance 부서는 AGPLv3 하의 software는 compliance를 보장하기가 어렵기 때문에 이를 사용하지 못하도록 제한한다. 이로 인해 기업들이 Algorand 프로젝트를 채택하는데 어려움을 초래할 수 있게 되었다.&lt;/p>
+&lt;h2 id="6-oracle-v-google-전쟁">6. Oracle v. Google 전쟁&lt;/h2>
+&lt;p>연방 순회 항소 법원(CAFC)은 Oracle v. Google의 사건에 대한 두 번째 결정을 &lt;a href="http://www.cafc.uscourts.gov/sites/default/files/opinions-orders/17-1118.Opinion.3-26-2018.1.PDF">발표했으며&lt;/a>, 여기에서 Google이 Android 운영체제에서 Oracle의 Java Application Programing Interface (API) 37개 package를 무단 사용한 것이 Oracle의 저작권을 침해했다고 판결하였다. 2014년 CAFC는 지방 법원의 1심 판결을 뒤집고 API가 저작권을 가지고 있다고 인정했으며, 다만 Fair Use 여부를 심리하도록 1심으로 환송하였다. 2016년 지방 법원은 Google의 API 사용이 Fair Use에 해당한다는 사실을 근거로 Google이 승소하는 판결을 내렸고, Oracle은 항소했다. 2019년 3월, CAFC는 다시 한번 지방 법원의 판결을 뒤집어 Google의 API 사용이 법적인 관점에서 Fair Use에 해당하지 않는다고 판결하였다. 대법원은 이송 명령서(certiorari)를 부여했다 (2020년 3월부터 심리 예정). 이 사건은 컴퓨터 소프트웨어의 저작권 보호 범위를 결정하는 데 매우 중요한 근거가 될 것이다.&lt;/p>
+&lt;p>(관련 국내 기사 : &lt;a href="https://byline.network/2020/02/11-94/">https://byline.network/2020/02/11-94/&lt;/a>)&lt;/p>
+&lt;h2 id="7-독일-hellwigvmware-case-종결">7. 독일 Hellwig/VMware case 종결&lt;/h2>
+&lt;p>2015년 3월, Linux kernel의 핵심 개발자인 Christoph Hellwig는 독일 함부르크 지방 법원에 &lt;a href="https://www.theregister.co.uk/2015/03/05/vmware_sued_for_gpl_violation_by_linux_kernel_developer/">VMware를 고소했다.&lt;/a> Hellwig는 VMware가 (1) 파생 저작물을 생성하는 방식으로 Linux와 &amp;ldquo;vmkernel&amp;quot;이라는 VMware의 독점 코드를 결합하였음에도 (2) GPLv2에 따라 vmkernel의 완전한 해당 소스 코드(complete corresponding source code)를 제공하지 않음으로써 GPLv2의 조건을 위반했다고 주장했다. VMware ESXi 운영체제의 &amp;ldquo;kernel&amp;quot;인 vmkernel은 물리 서버의 하드웨어 및 소프트웨어 리소스를 관리한다.&lt;/p>
+&lt;p>VMware는 vmkernel이 Linux의 파생 저작물이 아니라 단지 VMK API를 통해 Linux와 통신한다고 응답했다. 또한, VMware는 또한 vmkernel과 동작하는 드라이버는 Linux 드라이버일 필요는 없으며, &amp;ldquo;&amp;lsquo;vmklinux&amp;rsquo;라고 불리는 loadable kernel module을 통한 compatiblity alternative(어떤 Linux driver와도 연동)가 vmkernel에 의해 로드되고, VMK API를 통해 vmkernel과 인터페이스 한다.&amp;ldquo;라고 &lt;a href="http://vmware.com/company/news/vmware-update-to-mr-hellwigs-legal-proceedings.html">하였다&lt;/a>. 공소장 및 법정 문서들은 독일 법원의 규정에 따라 기밀로 유지되기 때문에 분쟁과 관련된 사실은 확인할 수 없다.&lt;/p>
+&lt;p>함부르크 법원은 Hellwig가 자신이 개발한 Linux 시스템의 구성 요소와 VMware가 해당 구성 요소를 사용했는지 여부를 입증하지 못했다는 근거로 Hellwig의 소송을 기각했다. 함부르크 고등 법원은 1심 판결에 대한 항소를 기각했으며, Hellwig는 그 결정에 항소하지 않기로 결정했다. 두 법원은 고소장의 실질적인 문제는 다루지 않았으며, Linux에서 가져온 일부 component의 right ownership 또는 copyright protection 능력에 대한 불충분한 증거에 근거하여 결정을 내렸다.&lt;/p>
+&lt;p>이러한 결정에 대한 대응으로 VMware는 &amp;ldquo;VMware는 소송과 무관하게 vSphere에서 vmklinux를 제거하기 위한 활동을 다년간 활발히 진행해 왔으며, 향후 major release에서 이를 달성하기를 희망한다&amp;quot;라고 &lt;a href="https://www.vmware.com/company/news/updates/march-2019-hellwig-legal-proceedings.html">발표했다&lt;/a>.&lt;/p>
+&lt;h2 id="8-oss-비즈니스-모델-및-라이선스">8. OSS 비즈니스 모델 및 라이선스&lt;/h2>
+&lt;p>많은 상용 FOSS 회사들이 전통적인 OSS 라이선스는 Cloud Service Provider가 FOSS 회사에 비용을 지불하지 않고도 그들의 프로그램을 사용하는 것을 허용한다는 우려를 표명한다. 2019년 6월, CockroachDB는 Open Source 운동의 창시자 중 한 명인 Bruce Perens가 MariaDB를 위해 처음 개발한 &lt;a href="https://www.cockroachlabs.com/blog/oss-relicensing-cockroachdb/">BSL (Business Source License)를 채택했다&lt;/a>. CockroachDB의 CEO는 다음과 같이 말했다. &amp;ldquo;오늘 우리는 매우 permissive 한 라이선스인 BSL (Business Source License)를 채택한다. CockroachDB의 사용자는 CockroachDB를 여러 노드로 확장할 수 있다. CockroachDB를 사용하거나 application에 포함시킬 수 있다 (application을 고객에게 배포하거나 servicve 형태로 실행하거나 상관없이). 내부적으로 서비스로 실행할 수도 있다. &lt;strong>단 하나의 유일한 제한은 라이선스를 구매하지 않은 상태로 CockroachDB를 상용 버전의 서비스로 제공할 수 없다는 것이다.&lt;/strong>&amp;rdquo;&lt;/p>
+&lt;p>11월, Sentry도 &lt;a href="https://blog.sentry.io/2019/11/06/relicensing-sentry/">BSL을 채택했다&lt;/a>. 2018년에 채택된 새로운 라이선스들에도 몇 가지 새로운 발전이 있었다. 2018년 Redis Labs는 Redis 모듈의 라이선스를 AGPL에서 Common Clause가 추가된 Apache v2.0으로 변경하였다 (이 Redis 모듈은 Redis core 위에 add-on 된다). Common Clause는 Cloud Service Provider에 의한 제품 사용을 제한하기 위해 Apache Software License version 2에 추가되는 형식으로 도입되었다. 이 혼합 라이선스의 도입은 논란의 여지가 많았으며, Redis는 Commons Clause를 포기하고, RediSearch, RedisGraph, RedisJSON, Redis-ML 및 RedisBloom에 &lt;a href="https://redislabs.com/blog/redis-labs-modules-license-changes/">Redis Source Available License를 채택했다&lt;/a>. 다른 회사들도 비슷한 라이선스를 채택했다.&lt;/p>
+&lt;h2 id="9-foss-governance와-표준-제정기구-governance를-사용하는-프로젝트-간-rand-특허-라이선스에-대한-충돌">9. FOSS governance와 표준 제정기구 governance를 사용하는 프로젝트 간 RAND 특허 라이선스에 대한 충돌&lt;/h2>
+&lt;p>FOSS가 하나의 개발 방법론으로 널리 보급되면서 표준 제정기구 (standard setting organizations / SSO)는 FOSS 접근 방식을 자신의 프로세스에 통합하기 위해 노력해왔다. 그러나 FOSS 프로젝트와 SSO의 방법론은 상당히 다르다. FOSS 프로젝트는 매우 다양한 책임과 더 분산된 방식으로 실행된다. 특히 마찰이 되는 요인 중 하나는 SSO의 일반적인 접근 방식으로써 SSO는 멤버들에게 royalty-bearing 기준(공정하고, 합리적이고, 비차별적 혹은 FRAND 조건으로 / FRAND : Fair, Reasonable, And Non-Discriminator)의 특허권을 부여한다. 이러한 마찰은 open source license에서 특허 라이선싱에 관한 분쟁을 다룬 기사들에서 보여준다 (&lt;a href="http://www.stlr.org/download/volumes/volume20/kappos.pdf">here&lt;/a> 및 &lt;a href="http://stlr.org/2019/03/04/oss-and-frand-complementary-models-for-innovation-and-development/">here&lt;/a>).&lt;/p>
+&lt;p>David Kappos 전 특허청장은 다음과 같이 &lt;a href="http://stlr.org/2018/10/15/the-truth-about-oss-frand-by-all-indications-compatible-models-in-standards-settings/">언급했다&lt;/a>. &amp;ldquo;대신, 우리는 OSD 준수 라이선스는 명시적 특허 허여 조항이 없는 한 특허 라이선스를 부여하는 것으로 가정해서는 안 된다는 반대 결론에 대한 상당한 지지를 얻었다. 즉, OSS 라이센서는 특허 라이선스를 부여하는 라이선스를 선택하거나, MIT와 Berkely처럼 부여하지 않는 라이선스를 선택할 수 있다. 그래서 OSS와 실질 표준특허(standard-essential patents, SEP)가 혁신을 발전시키는데 협력할 수 있는 능력을 보존할 수 있다.&amp;rdquo;&lt;/p>
+&lt;p>반면에 Van Lindberg는 다음과 같이 &lt;a href="http://stlr.org/2019/03/04/oss-and-frand-complementary-models-for-innovation-and-development/">응답했다&lt;/a>. : &amp;ldquo;이것이 open source와 FRAND가 상호보완적이지만 호환될 수 없는 이유이다.: open source와 FRAND는 서로 다른 지적 재산 정책에 의존하여 혁신해간다. 이 두 개발 모델은 서로 배우고, 서로 경쟁할 수 있지만, 근본적으로 다른 기본 원칙을 기반으로 한다. &amp;quot;&lt;/p>
+&lt;p>&amp;ldquo;SSO가 OSS를 포함시키려는 이유는 이해할만하다. open source는 저렴하고, 상호 운용이 가능하며, 혁신적이다. SSO는 OSS와 상호 운용성을 확보하기 위해 변화할 수 있는 능력이 있다. 많은 조직이 그랬던 것처럼 Royalty-free IPR(지식 재산권) 정책을 채택하기만 하면 된다. 그러나 FRAND 로열티를 부과하고자 하는 SSO라면 궁극적으로 open source를 다룰 때 상업적인 기업들이 가지고 있는 것과 같은 선택권을 가지고 있는 것이다. 즉, OSS 사용 시 준수해야 하는 라이선스와 규칙을 존중하거나, 아니라면 상용 버전을 만들어내는데 시간을 투자해야 한다. &amp;quot;&lt;/p>
+&lt;p>특허에 대한 로열티 지불 방식의 차이는 FOSS와 SSO 커뮤니티 사이에 긴장을 유발하고 있다. 그리고 일부 SSO 커뮤니티는 &amp;ldquo;open source&amp;quot;가 무엇인지 정의할 수 있어야 한다고 주장했다. 이 문제는 가까운 시일 내에 해결되지 않을 것 같다.&lt;/p>
+&lt;h2 id="10-open-source-license-데이터-및-암호-문제로-확장">10. Open source license, 데이터 및 암호 문제로 확장&lt;/h2>
+&lt;p>데이터는 &amp;ldquo;new oil&amp;quot;이라고 불린다. Open source 개념이 데이터 라이선스에 적용되었다(2017년 Linux Foundation의 &lt;a href="https://cdla.io/">Community Data License Agreement&lt;/a> 참조). 그러나 올해에는 데이터와 사이버 보안(cybersecurity)에 적용되었다. 예를 들어, Holochain에서 잘 알려진 open source 변호사인 Van Lindberg에 의해 &lt;a href="https://github.com/holochain/cryptographic-autonomy-license">Cryptographic Autonomy License&lt;/a> (CAL)가 개발되었다. Holochain은 이 라이선스에 대해 다음과 같이 &lt;a href="https://medium.com/holochain/understanding-the-cryptographic-autonomy-license-172ac920966d">설명했다&lt;/a>. &amp;ldquo;분산 앱의 경우, 암호화 키(cryptograhpic key)는 code와 user data 사이의 낯선 중간 영역에 들어간다. Code는 기능적이며 컴퓨팅 시스템의 입력 또는 출력으로 user data를 라우팅하고 변환하는 프로세스를 제공한다. User data는 일반적으로 code에 의해 처리되고 저장될 수 있는 수동 콘텐츠에 더 가깝다. 암호화 키는 user data이면서 기능적(functional)이다. Holochain에서 암호화 키는 데이터의 소유권에 대한 증명을 조율한다 : 데이터가 어디에 저장되는지, 누가 데이터를 제어하는지, 통신과 스토리지의 보안과 암호화를 누가 확인하는지, 데이터의 순서와 무결성을 확립하는 progressive hashing 및 signning을 위한 체인 구조의 운영 등.&amp;rdquo;&lt;/p>
+&lt;p>CAL은 user data와 관련하여 다음과 같은 의무를 &lt;a href="https://github.com/holochain/cryptographic-autonomy-license/blob/master/README.md">제공한다&lt;/a>. &amp;ldquo;Throughout any period in which You exercise any of the permissions granted to You under this License, You must also provide to any Recipient to whom you provide services via the Work, a no-charge copy, provided in a commonly used electronic form, of the Recipient’s User Data in your possession, to the extent that such User Data is available to You for use in conjunction with the Work.&amp;rdquo;&lt;/p>
+&lt;p>또한 이 라이선스는 또한 보안상의 결함을 다루는 경우, 소스 코드 제공의 지연을 허용하는데 이는 새롭고 환영받는 접근 방식이다. &amp;ldquo;You may delay providing the Source Code corresponding to a particular modification of the Work for up to ninety (90) days (the ‘Embargo Period’) if: a) the modification is intended to address a newly-identified vulnerability or a security flaw in the Work, b) disclosure of the vulnerability or security flaw before the end of the Embargo Period would put the data, identity, or autonomy of one or more Recipients of the Work at significant risk, c) You are participating in a coordinated disclosure of the vulnerability or security flaw with one or more additional Licensees, and d) Access to the Source Code pertaining to the modification is provided to all Recipients at the end of the Embargo Period.&amp;rdquo;&lt;/p>
+&lt;p>Linux Foundation은 JDF (Joint Development Foundation)을 통해 open data 문제에 대해 작업을 계속했다. JDF는 AWS, Genesys 및 Salesforce와 협력하여 Cloud 애플리케이션 전반에서 데이터 상호 운용성을 표준화하는 open source data 모델인 Cloud Information Model을 개발했다.&lt;/p></description></item></channel></rss>
