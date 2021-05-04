@@ -1,5 +1,5 @@
 ---
-date: 2021-04-22
+date: 2021-05-04
 title: "Dockerfile 배포 시 컴플라이언스 책임은 누구에게?"
 linkTitle: "Dockerfile 배포"
 description: "Distribution of Dockerfiles: Who is responsible for FOSS Licence Compliance?"
