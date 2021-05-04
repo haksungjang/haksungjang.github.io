@@ -1,7 +1,7 @@
 ---
 title: "OpenChain을 활용한 기업 오픈소스 컴플라이언스 가이드"
 linkTitle: "OpenChain 해설서"
-weight: 1
+weight: 10
 description: >
   OpenChain 규격은 오픈소스 컴플라이언스를 위한 유일한 국제 표준(ISO)이다. 이를 활용하여 기업이 오픈소스 컴플라이언스 수준을 높이기 위한 방법을 설명한다. 
 ---
