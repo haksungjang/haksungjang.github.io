@@ -778,7 +778,7 @@ OpenChain 파트너로 등록된 법무법인은 OpenChain 프로젝트에서 �
 
 | 2.g | 오픈소스 컴플라이언스에 대한 내부 책임을 할당하는 문서화된 절차가 있습니까? |
 |---|:---|
-|  | Do you have a documented procedure assigning internal responsibilities for Open Source compliance. |
+|  | Do you have a documented procedure assigning internal responsibilities for Open Source compliance? |
 
 오픈소스 컴플라이언스를 위한 내부 책임을 할당하는 절차가 있어야 한다. 이는 오픈소스 프로그램 매니저의 역할이다. 오픈소스 프로그램 매니저는 이슈를 파악하고 각 역할의 담당자에게 적절히 이슈를 할당해야 한다. 구체적으로 다음 사항을 수행해야 한다.
 
