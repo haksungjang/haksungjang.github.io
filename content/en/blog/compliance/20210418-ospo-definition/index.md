@@ -11,28 +11,31 @@ resources:
     byline: "Photo: TODO Group"
 ---
 
-{{% pageinfo %}}
-This paper was translated by Haksung Jang from the English version available at the [OSPO Definition](https://github.com/todogroup/ospodefinition.org).  The original document is licensed under [CC-BY-SA-4.0](https://github.com/todogroup/ospodefinition.org/blob/master/LICENSE). 
-{{% /pageinfo %}}
+
+> This paper was translated by Haksung Jang from the English version available at the [OSPO Definition](https://github.com/todogroup/ospodefinition.org).  The original document is licensed under [CC-BY-SA-4.0](https://github.com/todogroup/ospodefinition.org/blob/master/LICENSE). 
+
 
 ---
 
 > 안녕하세요!  
 > 
-> [TODO Group](https://todogroup.org/)[^todogroup]은 Talk Openly, Develop Openly를 표방하며 협업을 통해 성공적인 오픈소스 프로젝트와 프로그램을 만들어가고자 하는 Linux Foundation 산하의 [그룹](https://todogroup.org/members/)[^todogroupmember]입니다. TODO 그룹에서는 오픈소스 [가이드](https://todogroup.org/guides/)[^guide], [도구](https://github.com/todogroup/repolinter)[^repolinter] 등을 함께 만들어서 공개하며 오픈소스에 관심 있는 누구나 활용할 수 있게 하고 있습니다. 
+> [TODO Group](https://todogroup.org/)은 Talk Openly, Develop Openly를 표방하며 협업을 통해 성공적인 오픈소스 프로젝트와 프로그램을 만들어가고자 하는 Linux Foundation 산하의 [그룹](https://todogroup.org/members/)입니다. TODO 그룹에서는 오픈소스 [가이드](https://todogroup.org/guides/), [도구](https://github.com/todogroup/repolinter) 등을 함께 만들어서 공개하며 오픈소스에 관심 있는 누구나 활용할 수 있게 하고 있습니다. 
 > 
-> 기업 등의 조직이 오픈소스를 효과적으로 관리하고 사용하기 위해서는 OSPO<sub>Open Source Program Office</sub>를 설립하여 개발자 교육, 컴플라이언스 보장, 커뮤니티 참여 및 구축, 오픈소스 공개, 코드 점검 등의 활동이 필요하다고 합니다. 이 글에서는 OSPO가 무엇이고, 어떤 역할을 하는지에 대해 TODO Group에서 [정의한 글](https://todogroup.org/blog/ospo-definition/)[^definition]을 옮겼습니다. 
-
-[^todogroup]: TODO Group : https://todogroup.org/
-[^todogroupmember]: TODO Group Member : https://todogroup.org/members/
-[^repolinter]: Repolinter : https://github.com/todogroup/repolinter
-[^guide]: TODO guides : https://todogroup.org/guides/
-[^definition]: Open Source Program Office (OSPO) Definition and Guide : https://github.com/todogroup/ospodefinition.org
+> 기업 등의 조직이 오픈소스를 효과적으로 관리하고 사용하기 위해서는 OSPO<sub>Open Source Program Office</sub>를 설립하여 개발자 교육, 컴플라이언스 보장, 커뮤니티 참여 및 구축, 오픈소스 공개, 코드 점검 등의 활동이 필요하다고 합니다. 이 글에서는 OSPO가 무엇이고, 어떤 역할을 하는지에 대해 TODO Group에서 [정의한 글](https://todogroup.org/blog/ospo-definition/)을 옮겼습니다. 
 
 ---
 
-{{< imgproc todogroup Fit "768x768" >}}
-{{< /imgproc >}}
+<figure class="image">
+  <img src="./featured-todogroup.png" alt="image-layer">
+  <figcaption><i>TODO group : https://todogroup.org/</i><figcaption>
+</figure>
+
+- [OSPO의 정의](#ospo의-정의)
+  - [법적 위험 완화](#법적-위험-완화)
+  - [엔지니어 작업 방식 개선](#엔지니어-작업-방식-개선)
+  - [재정적 이익 실현](#재정적-이익-실현)
+- [OSPO 가이드](#ospo-가이드)
+- [OSPO Examples](#ospo-examples)
 
 
 ## OSPO의 정의
@@ -84,44 +87,30 @@ OSPO는 오픈소스 환경에서 코드 관리에 대한 가이드와 정책을
 
 > TODO Group은 기업이 OSPO를 설립하고 운영하기 위한 가이드를 제공합니다. 
 
-* [How to Create an Open Source Program](https://todogroup.org/guides/create-program)[^howtocreate]
-* [Measuring Your Open Source Program](https://todogroup.org/guides/measuring)[^measuring]
-* [Tools for Managing Your Open Source Program](https://todogroup.org/guides/management-tools)[^tools]
-
-[^howtocreate]: How to Create an Open Source Program : https://todogroup.org/guides/create-program)
-[^measuring]: Measuring Your Open Source Program : https://todogroup.org/guides/measuring)
-[^tools]: Tools for Managing Your Open Source Program : https://todogroup.org/guides/management-tools)[
+* [How to Create an Open Source Program](https://todogroup.org/guides/create-program)
+* [Measuring Your Open Source Program](https://todogroup.org/guides/measuring)
+* [Tools for Managing Your Open Source Program](https://todogroup.org/guides/management-tools)
 
 
 ## OSPO Examples
 
 > TODO Group은 Microsoft, Faceboo, Uber 등 오픈소스를 효과적으로 활용하는 기업들이 어떻게 OSPO를 운영하고 있는지, 각 기업의 사례를 취합하여 공개하였습니다. 
 
-* [Autodesk](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/autodesk.md)[^autodesk]
-* [Capital One](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/capitalone.md)[^capitalone]
-* [Comcast](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/comcast.md)[^comcast]
-* [Facebook](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/facebook.md)[^facebook]
-* [Microsoft](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/microsoft.md)[^microsoft]
-* [Red Hat](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/redhat.md)[^redhat]
-* [Salesforce](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/salesforce.md)[^salesforce]
-* [SAP](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/sap.md)[^sap]
-* [Uber](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/uber.md)[^uber]
-* [Yahoo/Verizon Media](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/oath.md)[^yahoo]
+* [Autodesk](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/autodesk.md)
+* [Capital One](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/capitalone.md)
+* [Comcast](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/comcast.md)
+* [Facebook](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/facebook.md)
+* [Microsoft](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/microsoft.md)
+* [Red Hat](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/redhat.md)
+* [Salesforce](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/salesforce.md)
+* [SAP](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/sap.md)
+* [Uber](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/uber.md)
+* [Yahoo/Verizon Media](https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/oath.md)
 
-[^autodesk]: Autodesk's OSPO : https://bit.ly/3mVdi0I)
-[^capitalone]: Capital One's OSPO : https://bit.ly/3sxbf4e
-[^comcast]: Comcast's OSPO : https://bit.ly/2RAIw1A
-[^facebook]: Facebook's OSPO : https://bit.ly/3gkwOmg
-[^microsoft]: Microsoft's OSPO : https://bit.ly/3eajxKm
-[^redhat]: Red Hat : https://bit.ly/3xfk3iW
-[^salesforce]: Salesforce's OSPO : https://bit.ly/3akfzgR
-[^sap]: SAP's OSPO : https://bit.ly/32sVznS
-[^uber]: Uber's OSPO : https://bit.ly/2Qcxwar
-[^yahoo]: Yahoo/Verizon Media's OSPO : https://bit.ly/3mYRmBP
+---
 
-> SK텔레콤의 OSPO에 대한 글을 소개 하며 글을 마칩니다. : [SK텔레콤 OSPO](https://sktelecom.github.io/about/ospo/)[^sktospo]
+> SK텔레콤의 OSPO에 대한 글을 소개 하며 글을 마칩니다. : [SK텔레콤 OSPO](https://sktelecom.github.io/about/ospo/)
 > 
 > 감사합니다. 
 
-[^sktospo]: SK텔레콤 OSPO : https://sktelecom.github.io/about/ospo
 
