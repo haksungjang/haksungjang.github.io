@@ -1,5 +1,5 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haksung – Blog</title><link>/blog/</link><description>Recent content in Blog on Haksung</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Dockerfile 배포 시 컴플라이언스 책임은 누구에게?</title><link>/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/</link><pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/</guid><description>
-&lt;img src="/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/featured-dockerfile-ex_hu144e77f3a0c06d5c2e11835ba0d8ec62_326508_640x0_resize_catmullrom_2.png" width="640" height="368"/>
+&lt;img src="/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/featured-dockerfile-ex_hu144e77f3a0c06d5c2e11835ba0d8ec62_326508_640x0_resize_catmullrom_3.png" width="640" height="368"/>
 &lt;blockquote>
 &lt;p>안녕하세요!&lt;/p>
 &lt;p>2021년 4월, 독일의 유명한 오픈소스 변호사인 Till Jaeger는 Dockerfile이 생성하는 Docker image내 포함될 오픈소스에 대한 라이선스 컴플라이언스 책임은 누구에게 있는가에 대한 글을 &lt;a href="https://jolts.world/index.php/jolts/article/view/147">발표&lt;/a>하였습니다. Till은 독일법과 유럽 연합 사법 재판소&lt;sub>CJEU&lt;/sub>의 판례를 근거로 Dockerfile 제공자가 라이선스 의무를 준수해야 한다고 설명하였습니다.&lt;/p>
@@ -9,64 +9,59 @@
 &lt;li>감수에 도움 주신 카카오의 &lt;a href="https://www.linkedin.com/in/%EC%98%81%ED%99%98-%EA%B9%80-4069b5135/">Sean&lt;/a>에게 깊이 감사드립니다. ^^&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
+&lt;br>
 &lt;hr>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>This paper was translated by Haksung Jang from the English version available at the &lt;a href="https://jolts.world/index.php/jolts/article/view/147">Distribution of Dockerfiles: &lt;/a>. The original document is licensed under &lt;a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0&lt;/a>. The original author, Till Jaeger, has not reviewed this translation.&lt;/p>
-&lt;/div>
-&lt;div class="alert alert-success" role="alert">
-&lt;h4 class="alert-heading">개요&lt;/h4>
-&lt;p>컨테이너 기술은 Target 시스템과 관계 없이 통합 소프트웨어 배포를 가능하게 한다. 이런 장점으로 Docker를 이용하는 배포가 점점 더 인기를 얻고 있다. 그런데 이때 FOSS 라이선스 컴플라이언스에 대한 새로운 의문이 제기되었다. Docker 환경에서는 &amp;ldquo;Docker image&amp;rdquo; 형태의 전체 소프트웨어를 배포하는 것뿐만 아니라, Dockerfile만을 배포할 수도 있다. Dockerfile은 스크립트 파일과 유사한 형태로 외부 Repository로부터 소프트웨어를 다운로드받게 하는 일종의 명령만을 포함하고 있다. 이러한 분산형 배포&lt;sub>decentralized distribution&lt;/sub>의 형태는 라이선스 컴플라이언스를 누가 책임을 져야 하는지에 대한 의문을 제기하였다. 이 글에서는 프리 라이선스를 설명하기 위한 출발점으로 유럽 저작권법에 따른 &amp;ldquo;배포&lt;sub>distribution&lt;/sub>&amp;ldquo;의 개념을 설명한다. 연구를 통해 저작권법 의미에서의 배포가 항상 물리적인 배포여야 하는 것은 아니라는 점이 밝혀졌다.&lt;/p>
-&lt;p>이 글은 &lt;a href="https://www.osadl.org/">OSADL&lt;/a>&lt;sub>Open Source Automation Development Lab&lt;/sub>로부터 자금 지원을 받고, 공동으로 작성하였다.&lt;/p>
-&lt;/div>
+&lt;blockquote>
+&lt;p>This paper was translated by Haksung Jang from the English version available at the &lt;a href="https://jolts.world/index.php/jolts/article/view/147">Distribution of Dockerfiles&lt;/a>. The original document is licensed under &lt;a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0&lt;/a>. The original author, Till Jaeger, has not reviewed this translation.&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;br>
+> **개요**
+>
+> 컨테이너 기술은 Target 시스템과 관계 없이 통합 소프트웨어 배포를 가능하게 한다. 이런 장점으로 Docker를 이용하는 배포가 점점 더 인기를 얻고 있다. 그런데 이때 FOSS 라이선스 컴플라이언스에 대한 새로운 의문이 제기되었다. Docker 환경에서는 "Docker image" 형태의 전체 소프트웨어를 배포하는 것뿐만 아니라, Dockerfile만을 배포할 수도 있다. Dockerfile은 스크립트 파일과 유사한 형태로 외부 Repository로부터 소프트웨어를 다운로드받게 하는 일종의 명령만을 포함하고 있다. 이러한 분산형 배포&lt;sub>decentralized distribution&lt;/sub>의 형태는 라이선스 컴플라이언스를 누가 책임을 져야 하는지에 대한 의문을 제기하였다. 이 글에서는 프리 라이선스를 설명하기 위한 출발점으로 유럽 저작권법에 따른 "배포&lt;sub>distribution&lt;/sub>"의 개념을 설명한다. 연구를 통해 저작권법 의미에서의 배포가 항상 물리적인 배포여야 하는 것은 아니라는 점이 밝혀졌다.
+>
+> 이 글은 [OSADL](https://www.osadl.org/)&lt;sub>Open Source Automation Development Lab&lt;/sub>로부터 자금 지원을 받고, 공동으로 작성하였다.
 &lt;h2 id="1-소개-및-문제점">1. 소개 및 문제점&lt;/h2>
-&lt;p>Docker 기술과 관련된 FOSS 라이선스 컴플라이언스 문제는 최근 몇 년 동안 주요 연구 대상이 되었다. 특히 Docker의 기술적 토대를 설명하고 관련된 라이선스 컴플라이언스 문제를 제기한 Armijn Hemel의 백서인 “&lt;a href="https://www.linuxfoundation.org/wp-content/uploads/Docker-Containers-for-Legal-Professionals-Whitepaper_042420.pdf">Docker Containers for Legal Professionals&lt;/a>”&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>는 광범위한 분석 내용을 제공한다. Hemel은 Dockerfile의 수신자가 이를 사용하기 위하여 제삼자로부터 소스 파일을 다운로드받게 되는데, 이때 다운받는 소프트웨어 컴포넌트에 대한 라이선스 컴플라이언스 책임은 누구에게 있는가에 대해 공개적으로 질문을 제기하였다.&lt;/p>
-&lt;p>거의 모든 FOSS 라이선스는 라이선스 의무 준수를 &amp;ldquo;배포&lt;sub>distribution&lt;/sub>&amp;rdquo; (또는 GPL-3.0의 &amp;ldquo;전달&lt;sub>conveying&lt;/sub>&amp;ldquo;와 연결시킨다. 대부분의 라이선스는 라이선스 내에서 &amp;ldquo;배포&amp;rdquo; 또는 &amp;ldquo;전달&amp;quot;이 무엇인지에 대해 추가로 정의하지는 않기 때문에, &amp;ldquo;배포&amp;quot;의 정의는 적용되는 저작권법에 따라 판단해야 한다&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Docker 기술과 관련된 FOSS 라이선스 컴플라이언스 문제는 최근 몇 년 동안 주요 연구 대상이 되었다. 특히 Docker의 기술적 토대를 설명하고 관련된 라이선스 컴플라이언스 문제를 제기한 Armijn Hemel의 백서인 “&lt;a href="https://www.linuxfoundation.org/wp-content/uploads/Docker-Containers-for-Legal-Professionals-Whitepaper_042420.pdf">Docker Containers for Legal Professionals&lt;/a>”&lt;sup>&lt;a name="footnote_1_return">&lt;/a>&lt;a href="#footnote_1">1&lt;/a>&lt;/sup>는 광범위한 분석 내용을 제공한다. Hemel은 Dockerfile의 수신자가 이를 사용하기 위하여 제삼자로부터 소스 파일을 다운로드받게 되는데, 이때 다운받는 소프트웨어 컴포넌트에 대한 라이선스 컴플라이언스 책임은 누구에게 있는가에 대해 공개적으로 질문을 제기하였다.&lt;/p>
+&lt;p>거의 모든 FOSS 라이선스는 라이선스 의무 준수를 &amp;ldquo;배포&lt;sub>distribution&lt;/sub>&amp;rdquo; (또는 GPL-3.0의 &amp;ldquo;전달&lt;sub>conveying&lt;/sub>&amp;ldquo;와 연결시킨다. 대부분의 라이선스는 라이선스 내에서 &amp;ldquo;배포&amp;rdquo; 또는 &amp;ldquo;전달&amp;quot;이 무엇인지에 대해 추가로 정의하지는 않기 때문에, &amp;ldquo;배포&amp;quot;의 정의는 적용되는 저작권법에 따라 판단해야 한다&lt;sup>&lt;a name="footnote_2_return">&lt;/a>&lt;a href="#footnote_2">2&lt;/a>&lt;/sup>.&lt;/p>
+&lt;hr>
 &lt;blockquote>
 &lt;p>대부분의 오픈소스 라이선스는 오픈소스를 &amp;ldquo;재배포&amp;quot;하는 시점에 준수해야 할 라이선스 의무 사항을 요구합니다. 즉, 오픈소스를 재배포하지 않는다면 라이선스 의무 준수가 요구되지 않습니다.
 &amp;ldquo;배포&amp;quot;의 범위를 어디까지로 판단해야 할지는 해당 지역에 적용되는 저작권법에 따라 해석해야 합니다.&lt;/p>
 &lt;/blockquote>
-&lt;p>라이선스 컴플라이언스에 대한 중요성 때문에 &amp;ldquo;배포&amp;quot;라는 용어는 계속해서 법적인 분석 대상이 되고 있다. Heather Meeker는 미국 저작권 관점에서 &lt;a href="http://dx.doi.org/10.5033/ifosslr.v4i1.66">오픈소스 라이선스에서의 배포&lt;/a>를 주제로 글을 작성하였다&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>. 많은 오픈소스 라이선스가 미국 저작권법을 배경으로 작성되었지만, 유럽 법원은 CJEU(유럽 연합 사법 재판소)&lt;sub>Court of Justice of the European Union&lt;/sub>에서 정교하게 설명한 &amp;ldquo;배포&amp;quot;에 대한 정의를 바탕으로 판결할 것으로 예상한다.&lt;/p>
+&lt;hr>
+&lt;p>라이선스 컴플라이언스에 대한 중요성 때문에 &amp;ldquo;배포&amp;quot;라는 용어는 계속해서 법적인 분석 대상이 되고 있다. Heather Meeker는 미국 저작권 관점에서 &lt;a href="http://dx.doi.org/10.5033/ifosslr.v4i1.66">오픈소스 라이선스에서의 배포&lt;/a>를 주제로 글을 작성하였다&lt;sup>&lt;a name="footnote_3_return">&lt;/a>&lt;a href="#footnote_3">3&lt;/a>&lt;/sup>. 많은 오픈소스 라이선스가 미국 저작권법을 배경으로 작성되었지만, 유럽 법원은 CJEU(유럽 연합 사법 재판소)&lt;sub>Court of Justice of the European Union&lt;/sub>에서 정교하게 설명한 &amp;ldquo;배포&amp;quot;에 대한 정의를 바탕으로 판결할 것으로 예상한다.&lt;/p>
 &lt;p>이 글에서는 먼저 Docker의 기술적인 기본 사항에 대한 개요와 유럽 저작권법에 따른 &amp;ldquo;배포&amp;quot;라는 용어에 대한 해석을 제공한다. 이어서 Dockerfile을 배포할 때 라이선스 컴플라이언스를 누가 책임져야 하느냐에 대해 논의하겠다.&lt;/p>
 &lt;h2 id="2-docker의-기술적-배경">2. Docker의 기술적 배경&lt;/h2>
 &lt;p>Docker는 컨테이너에 프로그램을 설치하고 배포하는 기술이다. 모든 Dependency가 하나의 기술 Unit에 존재하고, 호스트 시스템과 대부분 독립적이라는 장점이 있다. Hypervisor를 통한 가상화와 달리 Docker 컨테이너에는 운영 체제 커널이 포함되어 있지 않다. 대신 특정 운영 체제 명령을 사용하면 컨테이너의 파일 시스템 트리가 컨테이너의 모든 프로그램에 대한 루트 디렉터리로 표시된다. 따라서 컨테이너 외부의 나머지 파일 시스템은 컨테이너 프로그램에서 보이지 않게 된다. Docker 컨테이너에는 Unix 계열 운영 체제가 필요하며 주로 Linux 커널과 함께 사용하도록 되어 있다.&lt;/p>
 &lt;h3 id="docker-image">Docker image&lt;/h3>
 &lt;p>사전에 구성된 컨테이너는 &amp;ldquo;Docker image&amp;quot;로 배포될 수 있으며, 기본 프로그램 외에 애플리케이션, 프로그램 코드로서의 Dependency, 필요한 경우 유틸리티 및 구성 파일도 포함할 수 있다. Docker image는 개별적으로 배포될 수 있지만 &amp;ldquo;Docker Hub&amp;quot;와 같은 공용 Repository를 통해서도 배포될 수 있다. 이는 C 라이브러리, Package Manager, Shell 및 디렉터리 트리와 같은 필수 시스템 구성 요소를 포함하고 특정 Linux 배포를 참조하는 이른바 &amp;ldquo;Base Image&amp;quot;에도 해당된다. 이 Base image 위에, 추가 기능은 개별 보관 파일로 별도로 배포될 수 있지만 서로 빌드되어 완전한 Docker image를 형성하는 이른바 &amp;ldquo;레이어&amp;quot;로 추가될 수 있다.&lt;/p>
-&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 778px">
-&lt;img class="card-img-top" src="/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/image-layer_hu9d57ff001bc659885ebe5d88704277f8_22464_768x768_fit_catmullrom_2.png" width="768" height="304">
-&lt;div class="card-body px-0 pt-2 pb-0">
-&lt;p class="card-text">
-&lt;center>&lt;i>레이어 저장방식 : https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker정리/&lt;/i>&lt;/center>
-&lt;/p>
-&lt;/div>
-&lt;/div>
+&lt;figure class="image">
+&lt;img src="./image-layer.png" alt="image-layer" width="600">
+&lt;figcaption>&lt;i>레이어 저장방식 : https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker정리/&lt;/i>&lt;figcaption>
+&lt;/figure>
 &lt;h3 id="dockerfile">Dockerfile&lt;/h3>
 &lt;p>&amp;ldquo;Dockerfile&amp;quot;은 스크립트와 유사하게 Docker image를 만들기 위한 단계별 명령을 포함하는 텍스트 파일이다. Dockerfile은 일반적으로 Dockerfile 자체에만 적용되는 자체 라이선스를 가질 수 있으며, 이 라이선스는 Docker 컨테이너에 포함되는 프로그램에는 적용되지 않는다.&lt;/p>
-&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 778px">
-&lt;img class="card-img-top" src="/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/featured-dockerfile-ex_hu144e77f3a0c06d5c2e11835ba0d8ec62_326508_768x768_fit_catmullrom_2.png" width="768" height="441">
-&lt;div class="card-body px-0 pt-2 pb-0">
-&lt;p class="card-text">
-&lt;center>&lt;i>Dockerfile : https://www.slideshare.net/vincenzoferme/using-docker-containers-to-improve-reproducibility-in-software-and-web-engineering&lt;/i>&lt;/center>
-&lt;/p>
-&lt;/div>
-&lt;/div>
+&lt;figure class="image">
+&lt;img src="./featured-dockerfile-ex.png" alt="featured-dockerfile-ex.png" width="600">
+&lt;figcaption>&lt;i>Dockerfile : https://www.slideshare.net/vincenzoferme/using-docker-containers-to-improve-reproducibility-in-software-and-web-engineering&lt;/i>&lt;/figcaption>
+&lt;/figure>
 &lt;h3 id="docker-엔진">Docker 엔진&lt;/h3>
 &lt;p>Docker 컨테이너용 관리 소프트웨어인 &amp;ldquo;Docker 엔진&amp;quot;은 Dockerfile의 명령을 순차적으로 처리하여 Docker image를 생성한다. 일반적으로, Base image나 개별 레이어를 위한 각 컴포넌트는 내부 또는 외부 저장소에서 다운로드된다. 이는 제공자가 Dockerfile을 제공하더라도 물리적인 프로그램 코드를 전달하지 않는 것이 가능함을 의미하고, 이런 일은 실제로 관례적이다. 고객은 전달받은 Dockerfile을 가지고 자체적으로 공개 저장소로부터 전체 혹은 일부 프로그램 코드를 받아와서 Docker 컨테이너를 구축할 수 있다.&lt;/p>
-&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 778px">
-&lt;img class="card-img-top" src="/blog/2021/05/04/dockerfile-%EB%B0%B0%ED%8F%AC-%EC%8B%9C-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%B1%85%EC%9E%84%EC%9D%80-%EB%88%84%EA%B5%AC%EC%97%90%EA%B2%8C/docker_hufb296f6373118a7f15e41d8376f0e484_183225_768x768_fit_q75_catmullrom.jpg" width="768" height="576">
-&lt;div class="card-body px-0 pt-2 pb-0">
-&lt;p class="card-text">
-&lt;center>&lt;i>https://cultivatehq.com/posts/docker/&lt;/i>&lt;/center>
-&lt;/p>
-&lt;/div>
-&lt;/div>
+&lt;figure class="image">
+&lt;img src="./docker.jpg" alt="docker.jpg" width="600">
+&lt;figcaption>&lt;i>https://cultivatehq.com/posts/docker/&lt;/i>&lt;/figcaption>
+&lt;/figure>
 &lt;p>여기서 이러한 Dockerfile을 사용하여 빌드한 Docker image에 포함된 FOSS의 라이선스 의무를 Dockerfile 제공자가 준수해야 하는지 여부와 어떤 라이선스 의무를 준수해야 하는지에 대한 의문이 제기될 수 있다.&lt;/p>
 &lt;h2 id="3-법적-배경---eu-법률에-따른-배포-권한">3. 법적 배경 - EU 법률에 따른 배포 권한&lt;/h2>
 &lt;p>거의 모든 FOSS 라이선스는 저작권법에 따라 소프트웨어를 배포&lt;sub>distributing&lt;/sub> 또는 전달&lt;sub>conveying&lt;/sub> 행위를 위한 조건으로 라이선스 의무 준수를 요구한다. 즉, 프로그램의 사본을 제삼자에게 전달할 때 라이선스 의무를 준수해야 한다. 일부 라이선스는 &amp;ldquo;배포&lt;sub>distribution&lt;/sub>&amp;ldquo;에 대한 정의를 라이선스 내에 포함(예: GPL-3.0은 &amp;ldquo;전달&lt;sub>convey&lt;/sub>&amp;ldquo;이라는 용어 정의를 포함함)하지만, 대부분의 라이선스는 이에 대해 정의하지 않고 있다. 따라서, 해당하는 저작권법이 배포를 어떻게 해석하는가를 참조하는 것이 일반적이다. 독일에서는 독일 저작권법의 §69c no 3 UrhG에서 배포를 &amp;ldquo;&lt;code>Verbreitung&lt;/code>&amp;ldquo;라는 용어로 사용하여 &amp;ldquo;컴퓨터 프로그램의 원본 또는 사본을 배포하는 모든 형태(임대 포함)&amp;ldquo;라고 정의한다. 여기서 &amp;ldquo;&lt;code>Verbreitung&lt;/code>&amp;ldquo;은 §17 (1) UrhG에서와 같이 컴퓨터 프로그램 말고도 일반적인 저작물을 사용할 수 있는 권리를 제공하는 것으로 이해할 수 있다.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
+&lt;hr>
+&lt;blockquote>
 &lt;p>&lt;i>&amp;ldquo;배포권&lt;sub>right of distribution&lt;/sub>은 저작물의 원본 또는 사본을 일반 대중에게 제안&lt;sub>offer&lt;/sub>하거나 유통할 수 있는 권리이다&amp;rdquo;&lt;/p>
 &lt;p>“The right of distribution is the right to offer the original or copies of the work to the public or to put it into circulation.”&lt;/i>&lt;/p>
-&lt;/div>
-&lt;p>이는 컴퓨터 프로그램의 법적 보호에 관한 유럽 의회 및 이사회의 지침 &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0024">2009/24/EG 4조&lt;/a>&lt;sub>Directive 2009/24/EG of the European Parliament and of the Council&lt;/sub>에 비추어 해석되었다&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>. 독일 및 유럽 최고 법원인 독일 연방 사법 재판소&lt;sub>German Federal Court of Justice, Bundesgerichtshof (BGH)&lt;/sub>와 유럽 연합 사법 재판소&lt;sub>Court of Justice of the European Union (CJEU)&lt;/sub>는 수많은 법원 판결에서 배포권을 해석하는 데 도움이 되는 기여를 했다. 이에 대해서는 아래에서 자세히 설명한다.&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>이는 컴퓨터 프로그램의 법적 보호에 관한 유럽 의회 및 이사회의 지침 &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0024">2009/24/EG 4조&lt;/a>&lt;sub>Directive 2009/24/EG of the European Parliament and of the Council&lt;/sub>에 비추어 해석되었다&lt;sup>&lt;a name="footnote_4_return">&lt;/a>&lt;a href="#footnote_4">4&lt;/a>&lt;/sup>. 독일 및 유럽 최고 법원인 독일 연방 사법 재판소&lt;sub>German Federal Court of Justice, Bundesgerichtshof (BGH)&lt;/sub>와 유럽 연합 사법 재판소&lt;sub>Court of Justice of the European Union (CJEU)&lt;/sub>는 수많은 법원 판결에서 배포권을 해석하는 데 도움이 되는 기여를 했다. 이에 대해서는 아래에서 자세히 설명한다.&lt;/p>
 &lt;h2 id="4-dockerfile의-배포---분석">4. Dockerfile의 배포 - 분석&lt;/h2>
 &lt;p>이 섹션에서는 먼저 저작권법에 따른 배포가 프로그램 코드의 물리적인 전송을 반드시 요구하는지 여부에 대해 살펴본다. 이후에는 Docker image의 다양한 구성 요소, 즉, Base image, 프로그램 라이브러리, 패치 및 업데이트에 관해 설명한다.&lt;/p>
 &lt;h3 id="41-프로그램-코드의-물리적인-배포가-있어야만-배포인가">4.1 프로그램 코드의 물리적인 배포가 있어야만 배포인가?&lt;/h3>
@@ -80,54 +75,61 @@
 &lt;li>물리적 행위&lt;/li>
 &lt;li>복제 또는 배포와 법적으로 관련된 행위를 물리적으로 수행하는 제삼자는 단순히 당사자의 &amp;ldquo;도구&amp;quot;로 간주됨&lt;/li>
 &lt;/ul>
-&lt;p>이러한 측면에는 특히 CJEU가 &amp;ldquo;필수적 역할&lt;sub>essential role&lt;/sub>&amp;ldquo;이라고 부르는 조직적 통제&lt;sub>organizational control&lt;/sub>를 포함한다&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>. 한가지 예는 독일 연방 사법 재판소&lt;sub>BGH&lt;/sub>의 &amp;ldquo;인터넷 라디오 음악 녹음 서비스&amp;rdquo; 판결이다. 이 판결은 인터넷 서비스에 의한 디지털 라디오 방송국의 완전 자동 녹음이 클라이언트의 개인 복사본인지 (허가) 혹은 서비스 제공자의 복사본인지에 (무허가) 대해 다룬다. 이에 대해 BGH는 다음과 같이 명시하였다&lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
-&lt;h4 class="alert-heading">BGH, judgment of 2020-03-05&lt;/h4>
-&lt;p>&lt;i>&amp;ldquo;이러한 맥락에서, 결정적인 요소는 제조사가 &amp;lsquo;복제 기기를 대신&lt;sub>taking the place of the reproduction device&lt;/sub>&amp;lsquo;하여 상대방의 &amp;lsquo;필요한 도구&lt;sub>necessary tool&lt;/sub>&amp;lsquo;로 행위하는 것에 국한되는지 (이 경우 복제는 구매자에게 귀속되어야 함) 또는 사적 이용으로 정당화될 수 없을 정도의 범위와 강도로 저작권 침해 사용을 요구하는지 (이 경우 복제는 제조사에 귀속되어야 함) 여부이다. 규범적 판단에 근거한 이번 조사에서는 녹음 과정에 대한 조직적 주도권&lt;sub>organizational sovereignty&lt;/sub>을 고객이 가졌는지 여부도 판단해야 한다.&lt;/p>
-&lt;p>“In this context, the decisive factor is whether the manufacturer is limited to ’taking the place of the reproduction device’ and acting as a ‘necessary tool’ of the other party - in which case the reproduction is to be attributed to the purchaser - or whether he opens up a copyright-relevant use to an extent and intensity that cannot be reconciled with the considerations that justify the privileges of private use - then the reproduction is to be attributed to the manufacturer. Within the framework of this examination, which is based on normative standards, it must also be determined whether the client has organizational sovereignty over the recording process.”&lt;/i>&lt;/p>
-&lt;/div>
+&lt;p>이러한 측면에는 특히 CJEU가 &amp;ldquo;필수적 역할&lt;sub>essential role&lt;/sub>&amp;ldquo;이라고 부르는 조직적 통제&lt;sub>organizational control&lt;/sub>를 포함한다&lt;sup>&lt;a name="footnote_5_return">&lt;/a>&lt;a href="#footnote_5">5&lt;/a>&lt;/sup>. 한가지 예는 독일 연방 사법 재판소&lt;sub>BGH&lt;/sub>의 &amp;ldquo;인터넷 라디오 음악 녹음 서비스&amp;rdquo; 판결이다. 이 판결은 인터넷 서비스에 의한 디지털 라디오 방송국의 완전 자동 녹음이 클라이언트의 개인 복사본인지 (허가) 혹은 서비스 제공자의 복사본인지에 (무허가) 대해 다룬다. 이에 대해 BGH는 다음과 같이 명시하였다&lt;sup>&lt;a name="footnote_6_return">&lt;/a>&lt;a href="#footnote_6">6&lt;/a>&lt;/sup>.&lt;/p>
+&lt;hr>
 &lt;blockquote>
-&lt;p>인터넷 라디오 음악 녹음 서비스에 대한 세부 내용은 한국저작권위원회의 &lt;a href="http://www.copyright.or.kr/information-materials/trend/the-copyright/download.do?brdctsno=44381&amp;amp;brdctsfileno=15929">2019년 자료&lt;/a>&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>를 참고할 수 있습니다.&lt;/p>
+&lt;p>&lt;strong>BGH, judgment of 2020-03-05&lt;/strong>&lt;/p>
+&lt;p>&lt;i>&amp;ldquo;이러한 맥락에서, 결정적인 요소는 제조사가 &amp;lsquo;복제 기기를 대신&lt;sub>taking the place of the reproduction device&lt;/sub>&amp;lsquo;하여 상대방의 &amp;lsquo;필요한 도구&lt;sub>necessary tool&lt;/sub>&amp;lsquo;로 행위하는 것에 국한되는지 (이 경우 복제는 구매자에게 귀속되어야 함) 또는 사적 이용으로 정당화될 수 없을 정도의 범위와 강도로 저작권 침해 사용을 요구하는지 (이 경우 복제는 제조사에 귀속되어야 함) 여부이다. 규범적 판단에 근거한 이번 조사에서는 녹음 과정에 대한 조직적 주도권&lt;sub>organizational sovereignty&lt;/sub>을 고객이 가졌는지 여부도 판단해야 한다.&lt;/p>
+&lt;p>&amp;ldquo;In this context, the decisive factor is whether the manufacturer is limited to ’taking the place of the reproduction device’ and acting as a ‘necessary tool’ of the other party - in which case the reproduction is to be attributed to the purchaser - or whether he opens up a copyright-relevant use to an extent and intensity that cannot be reconciled with the considerations that justify the privileges of private use - then the reproduction is to be attributed to the manufacturer. Within the framework of this examination, which is based on normative standards, it must also be determined whether the client has organizational sovereignty over the recording process.&amp;quot;&lt;/i>&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;blockquote>
+&lt;p>인터넷 라디오 음악 녹음 서비스에 대한 세부 내용은 한국저작권위원회의 2019년 자료 &lt;a href="http://www.copyright.or.kr/information-materials/trend/the-copyright/download.do?brdctsno=44381&amp;amp;brdctsfileno=15929">독일 지방법원, 인터넷 라디오 음악 녹음 서비스(stream ripping) 제공자는 복제권과 전송권을 침해한다&lt;/a>를 참고할 수 있습니다.&lt;/p>
 &lt;p>이 판결의 원고는 음반 제작자인 독일 소니 뮤직(Sony Music)이며, 피고는 인터넷 라디오에서 방송되는 음악을 녹음하여 제공하는 서비스를 운영하는 MusicMonster.FM입니다.&lt;/p>
 &lt;p>독일 법원은 피고의 서비스는 복제를 위한 기술적 수단을 단순히 제공하는 것을 넘어서고 사적 이용으로 정당화되는 범위를 초과하기 때문에 피고가 복제 및 공중접근의 행위자이고, 피고가 원고의 복제권과 전송권을 침해하였다고 판결하였습니다.&lt;/p>
 &lt;/blockquote>
-&lt;p>CJEU는 저작권 침해 행위와 관련하여 누가 &amp;ldquo;필수적 역할&lt;sub>essential role&lt;/sub>&amp;ldquo;을 하였는지에 대한 몇 가지 판단을 근거로 삼았다. 이는 특히 §17 UrhG(독일 저작권법)에서 명백하게 드러난다. UrhG는 단순한 &amp;ldquo;제안&lt;sub>offer&lt;/sub>&amp;rdquo; 행위, 즉 물리적 배포의 준비 행위&lt;sub>preparatory act of a physical distribution&lt;/sub>도 배포 행위&lt;sub>act of distribution&lt;/sub>라고 지정하였다&lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
-&lt;h4 class="alert-heading">CJEU of 2015-05-13&lt;/h4>
+&lt;hr>
+&lt;p>CJEU는 저작권 침해 행위와 관련하여 누가 &amp;ldquo;필수적 역할&lt;sub>essential role&lt;/sub>&amp;ldquo;을 하였는지에 대한 몇 가지 판단을 근거로 삼았다. 이는 특히 §17 UrhG(독일 저작권법)에서 명백하게 드러난다. UrhG는 단순한 &amp;ldquo;제안&lt;sub>offer&lt;/sub>&amp;rdquo; 행위, 즉 물리적 배포의 준비 행위&lt;sub>preparatory act of a physical distribution&lt;/sub>도 배포 행위&lt;sub>act of distribution&lt;/sub>라고 지정하였다&lt;sup>&lt;a name="footnote_7_return">&lt;/a>&lt;a href="#footnote_7">7&lt;/a>&lt;/sup>.&lt;/p>
+&lt;hr>
+&lt;blockquote>
+&lt;p>&lt;strong>CJEU of 2015-05-13&lt;/strong>&lt;/p>
 &lt;p>&lt;i>&amp;ldquo;이러한 정황을 고려했을 때, 법원은 일반 대중에게 배포하는 것은 적어도 매매 계약 체결부터 공공의 구성원에게 전달하기까지의 일련의 행위들로 구성된다는 것을 구체적으로 발견하였다. 이러한 상황에서 판매자&lt;sub>trader&lt;/sub>는 배포 저작물을 (저작권으로 보호하는 회원국의) 일반 대중에게로 배포를 유발한 자신이 (또는 자신을 대신하여 누군가) 수행한 모든 행위에 대한 책임이 있다. …&lt;/p>
 &lt;p>이러한 일련의 행위에는 제안&lt;sub>offer&lt;/sub>을 하기 위한 권유 또는 해당 물건의 판매를 목적으로 취해진 보호 대상에 대한 구속력이 없는 광고도 포함한다. …&lt;/p>
 &lt;p>전술한 고려사항에 비추어볼 때, 언급된 질문에 대한 대답으로는 2001/29의 지침 제4조 제1항은 다음과 같은 의미로 해석해야 한다. 저작권 보유자에게 저작물 배포를 위한 독점적 권리를 허용하고, 이는 제삼자가 해당 저작물 원본 또는 사본의 판매 제안이나 광고하는 것을 방지할 수 있다. 이는 해당 저작물을 저작권으로 보호하는 회원국의 소비자를 대상으로 광고하는 한 해당 광고로 인해 EU 구매자가 보호 대상 저작물을 구매하게 되었다는 사실이 입증되지 않은 경우에도 마찬가지이다.&amp;rdquo;&lt;/p>
 &lt;p>&amp;ldquo;Taking that context into account, the Court specifically found that distribution to the public is characterised by a series of acts going, at the very least, from the conclusion of a contract of sale to the performance thereof by delivery to a member of the public. A trader in such circumstances bears responsibility for any act carried out by him or on his behalf giving rise to a distribution to the public in a Member State where the goods distributed are protected by copyright. … As regards an invitation to submit an offer, or a non-binding advertisement for a protected object, those also fall under the series of acts taken with the objective of making a sale of that object. … In the light of the foregoing considerations, the answer to the questions referred is that Article 4(1) of Directive 2001/29 must be interpreted as meaning that it allows a holder of an exclusive right to distribute a protected work to prevent an offer for sale or a targeted advertisement of the original or a copy of that work, even if it is not established that that advertisement gave rise to the purchase of the protected work by an EU buyer, in so far as that that advertisement invites consumers of the Member State in which that work is protected by copyright to purchase it.&amp;quot;&lt;/i>&lt;/p>
-&lt;/div>
+&lt;/blockquote>
+&lt;hr>
 &lt;p>CJEU의 이 판결과 다른 판결들은 기술적으로 배포하는 것뿐만 아니라, 배포를 위한 준비 행위도, 적어도 배포자가 배포 과정에서 &amp;ldquo;필수적 역할&amp;quot;을 하는 경우라면, 배포가 될 수 있다는 것을 보여준다. Dockerfile의 경우가 정확히 그렇다. Dockerfile은 (의도된 용도에 따라) Dockerfile의 수신자에게 완전한 기능의 시스템&lt;sub>complete functioning system&lt;/sub>을 전송하기 위해 조직된 명령을 제공하기 때문에 Dockerfile 제공자는 Docker image에 포함된 소프트웨어의 배포에 필수적인 역할을 하는 것이다. 이런 점에서, 조직적 통제권&lt;sub>organizational control&lt;/sub>을 가진 것은 Dockerfile 제공자이다. 따라서, Dockerfile 제공자는 이러한 형태로 배포되는 (Docker image에 포함될) FOSS의 라이선스 의무를 준수해야 한다.&lt;/p>
-&lt;p>Dockerfile의 제공자가 Dockerfile이 참조하는 소프트웨어를 배포한다는 사실이, Base image나 레이어를 다운로드할 수 있는 저장소의 운영자도 각각 프로그램 코드의 배포 행위를 수행하거나 &amp;ldquo;공개적으로 이용할 수 있게 한다&amp;quot;는 사실과 충돌하는건 아니다&lt;sup id="fnref:9">&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref">9&lt;/a>&lt;/sup>. 이는 대부분의 Base image나 레이어는 특정 컨테이너를 위해서만이 아니라 일반적인 다운로드도 제공하기 때문이다. 일반적인 다운로드의 경우, 저장소 운영자가 아닌 저장소를 통해 Base image나 레이어를 제공하는 개인 또는 단체가 배포(또는 대중과의 통신) 행위를 잠재적으로 수행하는 것으로 볼 수 있다.&lt;/p>
+&lt;p>Dockerfile의 제공자가 Dockerfile이 참조하는 소프트웨어를 배포한다는 사실이, Base image나 레이어를 다운로드할 수 있는 저장소의 운영자도 각각 프로그램 코드의 배포 행위를 수행하거나 &amp;ldquo;공개적으로 이용할 수 있게 한다&amp;quot;는 사실과 충돌하는건 아니다&lt;sup>&lt;a name="footnote_8_return">&lt;/a>&lt;a href="#footnote_8">8&lt;/a>&lt;/sup>. 이는 대부분의 Base image나 레이어는 특정 컨테이너를 위해서만이 아니라 일반적인 다운로드도 제공하기 때문이다. 일반적인 다운로드의 경우, 저장소 운영자가 아닌 저장소를 통해 Base image나 레이어를 제공하는 개인 또는 단체가 배포(또는 대중과의 통신) 행위를 잠재적으로 수행하는 것으로 볼 수 있다.&lt;/p>
 &lt;h3 id="42-패치">4.2 패치&lt;/h3>
 &lt;p>추가 레이어를 사용하면 이미 설치된 프로그램도 수정할 수 있다. 이 경우, Docker 컨테이너는 수정되지 않은 프로그램을 한 레이어에 포함하고 수정한 프로그램을 다른 레이어에 포함하여 수정된 프로그램이 실행되도록 한다. 이러한 상황에서도 Dockerfile에는 적용될 수정사항이 정의되어 있기 때문에 Dockerfile 제공자는 &amp;ldquo;필수적 역할&amp;quot;의 책임을 맡아야 한다. 따라서, Dockerfile 제공자가 수정사항에 대한 라이선스 의무를 준수해야 한다.&lt;/p>
-&lt;p>이는 두 버전이 모두 수신자에게 배포되기 때문에 (수정된 버전만 실제 사용되더라도) 수정된 버전 뿐만 아니라 원 버전에도 적용된다는 사실에 주의해야 한다&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>. 프로그램이 새 레이어에 의해 제거되더라도 Docker image에 물리적으로 여전히 포함된 경우에도 마찬가지이다.&lt;/p>
+&lt;p>이는 두 버전이 모두 수신자에게 배포되기 때문에 (수정된 버전만 실제 사용되더라도) 수정된 버전 뿐만 아니라 원 버전에도 적용된다는 사실에 주의해야 한다&lt;sup>&lt;a name="footnote_9_return">&lt;/a>&lt;a href="#footnote_9">9&lt;/a>&lt;/sup>. 프로그램이 새 레이어에 의해 제거되더라도 Docker image에 물리적으로 여전히 포함된 경우에도 마찬가지이다.&lt;/p>
 &lt;h3 id="43-시스템-요구-사항-및-base-image">4.3 시스템 요구 사항 및 Base image&lt;/h3>
 &lt;h4 id="시스템-요구-사항">시스템 요구 사항&lt;/h4>
 &lt;p>이 섹션은 오픈소스 라이선스는 오픈소스 소프트웨어를 사용하는 데 필요하지만 라이선스 범위에 포함되지 않는 독립 프로그램에 대한 사용 권한을 부여하는 데까지는 확장되지 않는다는 점에서 출발한다. 애플리케이션을 실행하는 데 필요한 운영 체제 또는 웹 서버가 대표적인 예입니다. 이와 같이 애플리케이션 실행에 필요한 독립 프로그램을 &amp;ldquo;시스템 요구 사항&amp;quot;이라고 하겠다. Dockerfile을 배포하는 제공자는 Docker 엔진 또는 Linux 커널과 같은 시스템 요구 사항에 대한 라이선스 의무는 준수할 책임이 없다. 이런 시스템 요구 사항은 Dockerfile에서 참조하지도 않는다.&lt;/p>
+&lt;hr>
 &lt;blockquote>
 &lt;p>참고로, GPL-2.0 3조에서는 다음과 같이 컴파일러, 커널 등 운영 체제의 주요 컴포넌트는 소스 코드 공개 범위에 포함되지 않는다는 예외를 두고 있습니다.&lt;/p>
 &lt;p>&lt;i>&amp;ldquo;3. However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable.&amp;quot;&lt;/i>&lt;/p>
 &lt;p>&lt;a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">https://www.gnu.org/licenses/old-licenses/gpl-2.0.html&lt;/a>&lt;/p>
 &lt;/blockquote>
+&lt;hr>
 &lt;h4 id="base-image">Base image&lt;/h4>
 &lt;p>Base image도 시스템 요구 사항으로 간주할 수 있을까? 일반적으로 Base image에 포함되는 프로그램은 Docker 컨테이너에서 실행되는 애플리케이션과 독립적이다. Base image에 포함된 프로그램이 수정되지 않은 형태로 사용되는 한, Dockerfile에 다운로드 명령이 포함되어 있다고 해도 Dockerfile 제공자가 Base image의 제공자는 아니기 때문에 Base image는 시스템 요구 사항으로 간주할 수 있다. 또한, Repository 운영자가 액세스를 거부한다면 더 이상 다운로드가 불가능하다. 이런 사실에 비추어볼때 Base image는 Dockerfile 제공자의 통제를 벗어난다. 패치의 경우에도 비슷하지만 패치와 시스템 요구 사항은 다르게 처리해야 한다.&lt;/p>
 &lt;p>컴퓨터 프로그램은 일반적으로 다른 독립 프로그램과 작동한다. 이는 다른 형태의 저작물과 구별되는 특징이다. 예를 들어 대부분의 애플리케이션은 운영 체제 없이 실행되지 않는다. 하지만 이러한 애플리케이션 실행을 위해 시스템 요구 사항을 설치해야 한다고 해서 애플리케이션 제공자가 시스템 요구 사항 배포의 필수적 역할&lt;sub>essential role&lt;/sub>을 한다는 것을 의미하지는 않는다.&lt;/p>
-&lt;p>이런 상황은 다운로드 링크와 다소 비슷하다. 저작권이 있는 저작물을 다운로드하는 링크가 저작권법이 적용되는 관련 행위를 구성하는지, 즉 대중에게 전달하는 행위(따라서 저작권 침해를 초래할 가능성이 있음)에 해당하는지 여부에 대한 문제가 EU에서 치열하게 논의되고 있다. CJEU는 이에 대하여 일련의 복합적인 기준을 설정하였다&lt;sup id="fnref:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>. 이 기준은 특히 다음과 같은 사례별 질문을 제시한다. : 새로운 구매자 그룹에 공개되어 있는지 여부, 의도된 용도가 상업적 목적인지 여부, 해당 행위가 제안에 중요한 역할을 하는지 여부, 제안이 불법인지 여부. 이렇게 사례별로 다뤄야하며 포괄적인 판단은 거의 불가능하다. 사실 회원국에서는 이러한 기준을 고려하는 경우가 흔하지 않았다. 그럼에도 이런 기준을 만든건 아마도 인터넷 저작권의 법적 상황을 더 잘 조화시키려는 CJEU의 바람 때문일 것이다.&lt;/p>
+&lt;p>이런 상황은 다운로드 링크와 다소 비슷하다. 저작권이 있는 저작물을 다운로드하는 링크가 저작권법이 적용되는 관련 행위를 구성하는지, 즉 대중에게 전달하는 행위(따라서 저작권 침해를 초래할 가능성이 있음)에 해당하는지 여부에 대한 문제가 EU에서 치열하게 논의되고 있다. CJEU는 이에 대하여 일련의 복합적인 기준을 설정하였다&lt;sup>&lt;a name="footnote_10_return">&lt;/a>&lt;a href="#footnote_10">10&lt;/a>&lt;/sup>. 이 기준은 특히 다음과 같은 사례별 질문을 제시한다. : 새로운 구매자 그룹에 공개되어 있는지 여부, 의도된 용도가 상업적 목적인지 여부, 해당 행위가 제안에 중요한 역할을 하는지 여부, 제안이 불법인지 여부. 이렇게 사례별로 다뤄야하며 포괄적인 판단은 거의 불가능하다. 사실 회원국에서는 이러한 기준을 고려하는 경우가 흔하지 않았다. 그럼에도 이런 기준을 만든건 아마도 인터넷 저작권의 법적 상황을 더 잘 조화시키려는 CJEU의 바람 때문일 것이다.&lt;/p>
 &lt;p>지금까지 제시된 견해에 따르면, Base image의 Repository 운영자와 제공자는 Base image의 배포에 필수적인 역할을 하는 반면, Dockerfile이 단지 참조하는 Base image는 시스템 요구 사항을 쉽게 취득하게 하기 위한 것이다. 그러므로, Repository의 운영자가 일반 대중에게 전달하는 행위를 수행하는 것이고, Repository 운영자는, 최소한 이러한 제공이 합법적이라면, 포함된 FOSS의 라이선스 의무를 단독으로 준수해야 한다.&lt;/p>
 &lt;p>위에서 언급한 해석은 본 연구 저자의 법적 의견이다. 일반적으로 컴퓨터 프로그램 및 특히 Dockerfile에 대한 이러한 특정 상황에 관한 판례는 없다. 다른 해석들도 분명 논쟁의 여지가 있다(특히 Base image를 포함하는 모든 참조 레이어가 Dockerfile의 제공자에 의해 배포되는 경우).&lt;/p>
-&lt;p>한가지 언급해야 할 사항은 현재 수많은 Repository 운영자들이 FOSS의 라이선스 의무를 올바르게 준수하지 않고 있으며 (예: GPL 및 LGPL 구성 요소의 소스 코드를 적절하게 제공하지 않음), 이는 저작권 침해의 책임이 있다는 점이다. 이 경우, 만약 Dockerfile의 제공자가 라이선스 위반을 알고 있다면 혹은 알고 있어야 한다면, 라이선스를 위반하는 참조를 포함하는 Dockerfile을 제공하는 것은 독립적인 배포 행위로 간주되거나 최소한 기여 저작권 침해(즉, 라이선스 위반에 대한 선동 또는 방조)로 간주될 수 있다. 따라서 Dockerfile 제공자는 지정된 Repository에서 제공하는 Base image가 라이선스를 준수하는지 여부를 검토해야 한다&lt;sup id="fnref:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup>.&lt;/p>
-&lt;p>Docker image를 단순히 조직 내부에만 사용하려는 수신자라면, FOSS 프로그램의 단순한 실행은 제한되지 않기 때문에, 문제없이 사용할 수 있다. 예를 들어, GPL-2.0 4조에서는 이를 명확히 말하고 있다&lt;sup id="fnref:13">&lt;a href="#fn:13" class="footnote-ref" role="doc-noteref">13&lt;/a>&lt;/sup>. 그러나, 수신자가 Docker image를 재배포하려고 한다면, Dockerfile의 배포가 저작권을 침해하는 경우라면 배포권이 소진되는 것이 아니기 때문에, 재배포하려는 수신자는 라이선스 조건의 컴플라이언스를 보장해야 한다(아래의 4.6절 참조).&lt;/p>
+&lt;p>한가지 언급해야 할 사항은 현재 수많은 Repository 운영자들이 FOSS의 라이선스 의무를 올바르게 준수하지 않고 있으며 (예: GPL 및 LGPL 구성 요소의 소스 코드를 적절하게 제공하지 않음), 이는 저작권 침해의 책임이 있다는 점이다. 이 경우, 만약 Dockerfile의 제공자가 라이선스 위반을 알고 있다면 혹은 알고 있어야 한다면, 라이선스를 위반하는 참조를 포함하는 Dockerfile을 제공하는 것은 독립적인 배포 행위로 간주되거나 최소한 기여 저작권 침해(즉, 라이선스 위반에 대한 선동 또는 방조)로 간주될 수 있다. 따라서 Dockerfile 제공자는 지정된 Repository에서 제공하는 Base image가 라이선스를 준수하는지 여부를 검토해야 한다&lt;sup>&lt;a name="footnote_11_return">&lt;/a>&lt;a href="#footnote_11">11&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Docker image를 단순히 조직 내부에만 사용하려는 수신자라면, FOSS 프로그램의 단순한 실행은 제한되지 않기 때문에, 문제없이 사용할 수 있다. 예를 들어, GPL-2.0 4조에서는 이를 명확히 말하고 있다&lt;sup>&lt;a name="footnote_12_return">&lt;/a>&lt;a href="#footnote_12">12&lt;/a>&lt;/sup>. 그러나, 수신자가 Docker image를 재배포하려고 한다면, Dockerfile의 배포가 저작권을 침해하는 경우라면 배포권이 소진되는 것이 아니기 때문에, 재배포하려는 수신자는 라이선스 조건의 컴플라이언스를 보장해야 한다(아래의 4.6절 참조).&lt;/p>
 &lt;h3 id="44-프로그램-라이브러리">4.4 프로그램 라이브러리&lt;/h3>
-&lt;p>프로그램과 연결된 라이브러리의 경우, 이러한 라이브러리가 독립적인 프로그램으로 간주되는지 또는 링크된 프로그램의 일부가 되는건지에 대해서는 약간의 의견 차이가 있다&lt;sup id="fnref:14">&lt;a href="#fn:14" class="footnote-ref" role="doc-noteref">14&lt;/a>&lt;/sup>. 이러한 맥락에서 다음과 같이 구분할 수 있다.&lt;/p>
+&lt;p>프로그램과 연결된 라이브러리의 경우, 이러한 라이브러리가 독립적인 프로그램으로 간주되는지 또는 링크된 프로그램의 일부가 되는건지에 대해서는 약간의 의견 차이가 있다&lt;sup>&lt;a name="footnote_13_return">&lt;/a>&lt;a href="#footnote_13">13&lt;/a>&lt;/sup>. 이러한 맥락에서 다음과 같이 구분할 수 있다.&lt;/p>
 &lt;ul>
 &lt;li>시스템 라이브러리&lt;/li>
 &lt;li>GPL 및 AGPL 애플리케이션과 연결되는 비시스템 라이브러리&lt;sub>non-system library&lt;/sub>&lt;/li>
 &lt;li>GPL 및 AGPL 이외의 다른 라이선스의 애플리케이션과 연결되는 비시스템 라이브러리&lt;/li>
 &lt;/ul>
-&lt;p>GPL-2.0 섹션 3 및 GPL-3.0 섹션 1 (3)에는 라이선스 의무 중 소스 코드를 제공해야 하는 범위 내에 &amp;ldquo;시스템 라이브러리&amp;quot;는 면제하는 조항이 포함되어 있다&lt;sup id="fnref:15">&lt;a href="#fn:15" class="footnote-ref" role="doc-noteref">15&lt;/a>&lt;/sup>. 따라서 Dockerfile이 Docker 컨테이너에서 수정되지 않은 이러한 시스템 라이브러리를 사용하라는 명령을 포함하는 경우, 이러한 시스템 라이브러리에 대한 라이선스 의무는 준수할 필요가 없다. 그러므로 이러한 시스템 라이브러리의 법적인 상황은 Base image에 적용되는 상황(위 4.3 참조)과 동일하며, 이때는 배포를 위한 필수적인 역할이 Dockerfile 제공자에게 있는 것은 아니다.&lt;/p>
+&lt;p>GPL-2.0 섹션 3 및 GPL-3.0 섹션 1 (3)에는 라이선스 의무 중 소스 코드를 제공해야 하는 범위 내에 &amp;ldquo;시스템 라이브러리&amp;quot;는 면제하는 조항이 포함되어 있다&lt;sup>&lt;a name="footnote_14_return">&lt;/a>&lt;a href="#footnote_14">14&lt;/a>&lt;/sup>. 따라서 Dockerfile이 Docker 컨테이너에서 수정되지 않은 이러한 시스템 라이브러리를 사용하라는 명령을 포함하는 경우, 이러한 시스템 라이브러리에 대한 라이선스 의무는 준수할 필요가 없다. 그러므로 이러한 시스템 라이브러리의 법적인 상황은 Base image에 적용되는 상황(위 4.3 참조)과 동일하며, 이때는 배포를 위한 필수적인 역할이 Dockerfile 제공자에게 있는 것은 아니다.&lt;/p>
 &lt;p>그러나 Dockerfile이 제삼자 Repository에서 (시스템 라이브러리 이외의) 라이브러리를 다운로드하고 이 라이브러리가 Docker 컨테이너 내에서 GPL-3.0 또는 AGPL-3.0 애플리케이션과 링크하는 레이어를 지정하는 경우라면, 이러한 라이브러리에 대해서는 각각 링크하는 애플리케이션의 라이선스(GPL-3.0 또는 AGPL-3.0) 의무를 준수해야 한다. 예를 들어 라이브러리의 소스 코드를 반드시 제공해야 한다 (cf. section 1 GPL-3.0: “Corresponding Source includes &amp;hellip;, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, &amp;hellip;”). 이는 GPL-2.0에도 동일하게 적용된다. 라이브러리의 물리적 배포의 경우와 마찬가지로 (라이선스 충돌 문제가 없다면) 해당 라이선스 조건을 준수해야 한다. 즉, 분산형 배포 프로세스&lt;sub>decentralized distribution process&lt;/sub>로 카피레프트 요구 사항을 회피할 수 없다.&lt;/p>
 &lt;p>Dockerfile 제공자는 프로그램 라이브러리를 Dependency로 선택하는 조직적 제어권&lt;sub>organizational control&lt;/sub>을 가졌기 때문에 Dockerfile 제공자가 프로그램 라이브러리를 배포한다고 판단할 수 있다. 따라서, 프로그램 라이브러리의 배포 프로세스에서 Dockerfile 제공자가 필수적인 역할&lt;sub>essential role&lt;/sub>을 한다.&lt;/p>
 &lt;h3 id="45-업데이트">4.5 업데이트&lt;/h3>
@@ -143,14 +145,16 @@
 &lt;li>단, Docker 레이어가 FOSS 라이선스를 준수하지 않는 상태로 Repository에서 제공된다면. 이를 참조하는 Dockerfile 제공자에게도 위험을 초래한다.&lt;/li>
 &lt;li>따라서, FOSS 라이선스 컴플라이언스는 Dockerfile 제공자와 Docker 레이어를 공개 Repository에 공개한 배포자가 공동으로 책임져야할 사항이다.&lt;/li>
 &lt;/ul>
-&lt;div class="alert alert-success" role="alert">
-&lt;h4 class="alert-heading">About the author&lt;/h4>
+&lt;hr>
+&lt;blockquote>
+&lt;p>&lt;strong>About the author&lt;/strong>&lt;/p>
 &lt;p>&lt;i>&lt;b>Till Jaeger&lt;/b> has been a partner at JBB Rechtsanwälte since 2001 (&lt;a href="http://www.jbb.de">www.jbb.de&lt;/a>). He is a Certified Copyright and Media Law Attorney and advises large and medium-sized IT businesses as well as government authorities and software developers on matters involving contracts, licensing and IP rights.&lt;/p>
 &lt;p>One particular focus of Till Jaeger&amp;rsquo;s work is on the legal issues created by free and open source software (FOSS). He is co-founder of the Institute for Legal Aspects of Free &amp;amp; Open Source Software, ifrOSS (&lt;a href="http://www.ifross.org">www.ifross.org&lt;/a>), contributing to its work with academic publications, lectures and seminars in the fields of software law and copyright law.&lt;/p>
 &lt;p>Till Jaeger is a lecturer at the Humboldt University Berlin in the subjects of IT law and IP law and general counsel of Open Source Automation Development Lab (OSADL) eG.&lt;/p>
 &lt;p>He represented the gpl-violations.org project in several lawsuits to enforce the GPL and has published articles and books related to legal questions of Free and Open Source Software (among them Jaeger/Metzger, Open Source Software - Rechtliche Rahmenbedingungen der Freien Software, 5th ed. Munich 2020, and Van den Brande/Coughlan/Jaeger - The International FOSS Law Book, 2nd ed. Munich 2014). He was member of the Committee C in the GPLv3 drafting process.&lt;/i>&lt;/p>
-&lt;/div>
-&lt;div class="pageinfo pageinfo-primary">
+&lt;/blockquote>
+&lt;hr>
+&lt;blockquote>
 &lt;p>&lt;b>Licence and Attribution&lt;/b>&lt;/p>
 &lt;p>This paper was published in the Journal of Open Law, Technology, &amp;amp; Society, Volume 12, Issue 1 (April 2021). It originally appeared online at &lt;a href="http://www.jolts.world">http://www.jolts.world&lt;/a>&lt;/p>
 &lt;p>This article should be cited as follows:&lt;/p>
@@ -160,77 +164,51 @@ DOI: 10.5033/jolts.v12i1.147&lt;/p>
 &lt;p>This article is licensed under a Creative Commons Attribution 4.0 CC-BY available at&lt;/p>
 &lt;p>&lt;a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/&lt;/a>&lt;/p>
 &lt;p>&lt;img src="./cc.png" alt="cc">&lt;/p>
-&lt;/div>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;/blockquote>
 &lt;hr>
-&lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>Hemel, Armijn, (2020), ‘Docker Containers for Legal Professionals,’ [pdf] Available at: &lt;a href="https://www.linuxfoundation.org/wp-content/uploads/Docker-Containers-for-Legal-Professionals-Whitepaper_042420.pdf">https://www.linuxfoundation.org/wp-content/uploads/Docker-Containers-for-Legal-Professionals-Whitepaper_042420.pdf&lt;/a> [Accessed 16 February 2021]. See also Peterson, Scott, (2020), ‘Making compliance scalable in a container world.’ Available at: &lt;a href="https://opensource.com/article/20/7/compliance-containers">https://opensource.com/article/20/7/compliance-containers&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
-&lt;p>Sec. 0 GPL-3.0 provides as follows: “To ‘convey'‘ a work means any kind of propagation that enables other parties to make or receive copies.” and “To ’propagate’ a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy.”&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
-&lt;p>Meeker, Heather (2012), ‘The Gift that Keeps on Giving – Distribution and Copyleft in Open Source Software Licenses’, JOLTS, 4(1), pp 29 – 40, [DOI: 10.5033/ifosslr.v4i1.66].&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
-&lt;p>Directive 2009/24/EC on the legal protection of computer programs (codified version). Available at: &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0024">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0024&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:5" role="doc-endnote">
-&lt;p>See the ‘Opinion of Advocate General Saugmandsgaard Øe in the joined Cases C‑682/18 and C‑683/18 (Frank Peterson v Google LLC et al), ECLI:EU:C:2020:586. Available at: &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62018CC0682">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62018CC0682&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:6" role="doc-endnote">
-&lt;p>BGH (German Federal Court of Justice), judgment of 2020-03-05 - I ZR 32/19 – Internet radio recorder. Available at: &lt;a href="https://openjur.de/u/2202077.html">https://openjur.de/u/2202077.html&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:7" role="doc-endnote">
-&lt;p>독일 지방법원, 인터넷 라디오 음악 녹음 서비스(stream ripping) 제공자는 복제권과 전송권을 침해한다 : &lt;a href="http://www.copyright.or.kr/information-materials/trend/the-copyright/download.do?brdctsno=44381&amp;amp;brdctsfileno=15929">http://www.copyright.or.kr/information-materials/trend/the-copyright/download.do?brdctsno=44381&amp;amp;brdctsfileno=15929&lt;/a>&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:8" role="doc-endnote">
-&lt;p>CJEU of 2015-05-13, C-516/13 – Dimensione Direct Sales and Labianca. Available at:
-&lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62013CJ0516&amp;amp;qid=1607613372933&amp;amp;from=EN">https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62013CJ0516&amp;amp;qid=1607613372933&amp;amp;from=EN&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:9" role="doc-endnote">
-&lt;p>Please not that the “Right of communication to the public of works and right of making available to the public” in Art. 3 are independent rights from the “distribution right” in Art. 4 Directive 2001/29/EC. Available at: &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32001L0029">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32001L0029&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:10" role="doc-endnote">
-&lt;p>See Hemel Armijn, ibid n. 1, p. 19.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:11" role="doc-endnote">
-&lt;p>As the CJEU, judgment of 14 June 2017 in case C-610/15 – Stichting Brein (The Pirate Bay) itself declares: “In order to determine whether a user is making a ‘communication to the public’ within the meaning of Article 3(1) of Directive 2001/29, it is necessary to take into account several complementary criteria, which are not autonomous and are interdependent. Consequently, those criteria must be applied both individually and in their interaction with one another, since they may, in different situations, be present to widely varying degrees.” Available at: &lt;a href="http://curia.europa.eu/juris/liste.jsf?language=en&amp;amp;T,F&amp;amp;num=c-610-15">http://curia.europa.eu/juris/liste.jsf?language=en&amp;amp;T,F&amp;amp;num=c-610-15&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:12" role="doc-endnote">
-&lt;p>For efforts of Red Hat to improve the situation see Peterson, S., ibid.&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:13" role="doc-endnote">
-&lt;p>&amp;ldquo;However, parties who have received copies, or rights, from you under this License will not have their licenses terminated so long as such parties remain in full compliance.&amp;rdquo;&amp;#160;&lt;a href="#fnref:13" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:14" role="doc-endnote">
-&lt;p>See for more details Jaeger, Till and Metzger, Aaxel, Open Source Software, 5th edition, 2020, 64 et seq; Meeker, Heather, Open Source for Business, A practical Guide to Open Source Software Licensing, 3rd edition 2020, 119 et seq; Working Paper on the legal implication of certain forms of
-Software Interactions (a.k.a linking), Available at: &lt;a href="https://www.ifosslr.org/public/LinkingDocument.odt">https://www.ifosslr.org/public/LinkingDocument.odt&lt;/a> [Accessed 16 February 2021].&amp;#160;&lt;a href="#fnref:14" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:15" role="doc-endnote">
-&lt;p>The definition in section 1 GPL-3.0 reads as follows: ’The “System Libraries’ of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A ‘Major Component’, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.”&amp;#160;&lt;a href="#fnref:15" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/section></description></item><item><title>Blog: OSPO란?</title><link>/blog/2021/04/18/ospo%EB%9E%80/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/04/18/ospo%EB%9E%80/</guid><description>
-&lt;img src="/blog/2021/04/18/ospo%EB%9E%80/featured-todogroup_hue4eb93ef039f28113d98d652a131b29e_3378_640x0_resize_catmullrom_2.png" width="640" height="320"/>
-&lt;div class="pageinfo pageinfo-primary">
+&lt;p>&lt;a name="footnote_1">1&lt;/a>: Hemel, Armijn, (2020), ‘Docker Containers for Legal Professionals,’ [pdf] Available at: &lt;a href="https://www.linuxfoundation.org/wp-content/uploads/Docker-Containers-for-Legal-Professionals-Whitepaper_042420.pdf">https://www.linuxfoundation.org/wp-content/uploads/Docker-Containers-for-Legal-Professionals-Whitepaper_042420.pdf&lt;/a> [Accessed 16 February 2021]. See also Peterson, Scott, (2020), ‘Making compliance scalable in a container world.’ Available at: &lt;a href="https://opensource.com/article/20/7/compliance-containers">https://opensource.com/article/20/7/compliance-containers&lt;/a> [Accessed 16 February 2021]. &lt;a href="#footnote_1_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_2">2&lt;/a>: Sec. 0 GPL-3.0 provides as follows: “To ‘convey&amp;rsquo;‘ a work means any kind of propagation that enables other parties to make or receive copies.” and “To ’propagate’ a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy.”&lt;a href="#footnote_2_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_3">3&lt;/a>: Meeker, Heather (2012), ‘The Gift that Keeps on Giving – Distribution and Copyleft in Open Source Software Licenses’, JOLTS, 4(1), pp 29 – 40, [DOI: 10.5033/ifosslr.v4i1.66].&lt;a href="#footnote_3_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_4">4&lt;/a>: Directive 2009/24/EC on the legal protection of computer programs (codified version). Available at: &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0024">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009L0024&lt;/a> [Accessed 16 February 2021]. &lt;a href="#footnote_4_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_5">5&lt;/a>: See the ‘Opinion of Advocate General Saugmandsgaard Øe in the joined Cases C‑682/18 and C‑683/18 (Frank Peterson v Google LLC et al), ECLI:EU:C:2020:586. Available at: &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62018CC0682">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62018CC0682&lt;/a> [Accessed 16 February 2021].&lt;a href="#footnote_5_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_6">6&lt;/a>: BGH (German Federal Court of Justice), judgment of 2020-03-05 - I ZR 32/19 – Internet radio recorder. Available at: &lt;a href="https://openjur.de/u/2202077.html">https://openjur.de/u/2202077.html&lt;/a> [Accessed 16 February 2021].&lt;a href="#footnote_6_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_7">7&lt;/a>: CJEU of 2015-05-13, C-516/13 – Dimensione Direct Sales and Labianca. Available at:
+&lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62013CJ0516&amp;amp;qid=1607613372933&amp;amp;from=EN">https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:62013CJ0516&amp;amp;qid=1607613372933&amp;amp;from=EN&lt;/a> [Accessed 16 February 2021]. &lt;a href="#footnote_7_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_8">8&lt;/a>: Please not that the “Right of communication to the public of works and right of making available to the public” in Art. 3 are independent rights from the “distribution right” in Art. 4 Directive 2001/29/EC. Available at: &lt;a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32001L0029">https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32001L0029&lt;/a> [Accessed 16 February 2021].&lt;a href="#footnote_8_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_9">9&lt;/a>: See Hemel Armijn, ibid n. 1, p. 19. &lt;a href="#footnote_9_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_10">10&lt;/a>: As the CJEU, judgment of 14 June 2017 in case C-610/15 – Stichting Brein (The Pirate Bay) itself declares: “In order to determine whether a user is making a ‘communication to the public’ within the meaning of Article 3(1) of Directive 2001/29, it is necessary to take into account several complementary criteria, which are not autonomous and are interdependent. Consequently, those criteria must be applied both individually and in their interaction with one another, since they may, in different situations, be present to widely varying degrees.” Available at: &lt;a href="http://curia.europa.eu/juris/liste.jsf?language=en&amp;amp;T,F&amp;amp;num=c-610-15">http://curia.europa.eu/juris/liste.jsf?language=en&amp;amp;T,F&amp;amp;num=c-610-15&lt;/a> [Accessed 16 February 2021]. &lt;a href="#footnote_10_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_11">11&lt;/a>: For efforts of Red Hat to improve the situation see Peterson, S., ibid. &lt;a href="#footnote_11_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_12">12&lt;/a>: &amp;ldquo;However, parties who have received copies, or rights, from you under this License will not have their licenses terminated so long as such parties remain in full compliance.&amp;rdquo; &lt;a href="#footnote_12_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_13">13&lt;/a>: See for more details Jaeger, Till and Metzger, Aaxel, Open Source Software, 5th edition, 2020, 64 et seq; Meeker, Heather, Open Source for Business, A practical Guide to Open Source Software Licensing, 3rd edition 2020, 119 et seq; Working Paper on the legal implication of certain forms of
+Software Interactions (a.k.a linking), Available at: &lt;a href="https://www.ifosslr.org/public/LinkingDocument.odt">https://www.ifosslr.org/public/LinkingDocument.odt&lt;/a> [Accessed 16 February 2021]. &lt;a href="#footnote_13_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_14">14&lt;/a>: The definition in section 1 GPL-3.0 reads as follows: ’The “System Libraries’ of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A ‘Major Component’, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.” &lt;a href="#footnote_14_return">⏎&lt;/a>&lt;/p>
+&lt;hr></description></item><item><title>Blog: OSPO란?</title><link>/blog/2021/04/18/ospo%EB%9E%80/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/04/18/ospo%EB%9E%80/</guid><description>
+&lt;img src="/blog/2021/04/18/ospo%EB%9E%80/featured-todogroup_hue4eb93ef039f28113d98d652a131b29e_3378_640x0_resize_catmullrom_3.png" width="640" height="320"/>
+&lt;blockquote>
 &lt;p>This paper was translated by Haksung Jang from the English version available at the &lt;a href="https://github.com/todogroup/ospodefinition.org">OSPO Definition&lt;/a>. The original document is licensed under &lt;a href="https://github.com/todogroup/ospodefinition.org/blob/master/LICENSE">CC-BY-SA-4.0&lt;/a>.&lt;/p>
-&lt;/div>
+&lt;/blockquote>
 &lt;hr>
 &lt;blockquote>
 &lt;p>안녕하세요!&lt;/p>
-&lt;p>&lt;a href="https://todogroup.org/">TODO Group&lt;/a>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>은 Talk Openly, Develop Openly를 표방하며 협업을 통해 성공적인 오픈소스 프로젝트와 프로그램을 만들어가고자 하는 Linux Foundation 산하의 &lt;a href="https://todogroup.org/members/">그룹&lt;/a>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>입니다. TODO 그룹에서는 오픈소스 &lt;a href="https://todogroup.org/guides/">가이드&lt;/a>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>, &lt;a href="https://github.com/todogroup/repolinter">도구&lt;/a>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> 등을 함께 만들어서 공개하며 오픈소스에 관심 있는 누구나 활용할 수 있게 하고 있습니다.&lt;/p>
-&lt;p>기업 등의 조직이 오픈소스를 효과적으로 관리하고 사용하기 위해서는 OSPO&lt;sub>Open Source Program Office&lt;/sub>를 설립하여 개발자 교육, 컴플라이언스 보장, 커뮤니티 참여 및 구축, 오픈소스 공개, 코드 점검 등의 활동이 필요하다고 합니다. 이 글에서는 OSPO가 무엇이고, 어떤 역할을 하는지에 대해 TODO Group에서 &lt;a href="https://todogroup.org/blog/ospo-definition/">정의한 글&lt;/a>&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>을 옮겼습니다.&lt;/p>
+&lt;p>&lt;a href="https://todogroup.org/">TODO Group&lt;/a>은 Talk Openly, Develop Openly를 표방하며 협업을 통해 성공적인 오픈소스 프로젝트와 프로그램을 만들어가고자 하는 Linux Foundation 산하의 &lt;a href="https://todogroup.org/members/">그룹&lt;/a>입니다. TODO 그룹에서는 오픈소스 &lt;a href="https://todogroup.org/guides/">가이드&lt;/a>, &lt;a href="https://github.com/todogroup/repolinter">도구&lt;/a> 등을 함께 만들어서 공개하며 오픈소스에 관심 있는 누구나 활용할 수 있게 하고 있습니다.&lt;/p>
+&lt;p>기업 등의 조직이 오픈소스를 효과적으로 관리하고 사용하기 위해서는 OSPO&lt;sub>Open Source Program Office&lt;/sub>를 설립하여 개발자 교육, 컴플라이언스 보장, 커뮤니티 참여 및 구축, 오픈소스 공개, 코드 점검 등의 활동이 필요하다고 합니다. 이 글에서는 OSPO가 무엇이고, 어떤 역할을 하는지에 대해 TODO Group에서 &lt;a href="https://todogroup.org/blog/ospo-definition/">정의한 글&lt;/a>을 옮겼습니다.&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 328px">
-&lt;img class="card-img-top" src="/blog/2021/04/18/ospo%EB%9E%80/featured-todogroup_hue4eb93ef039f28113d98d652a131b29e_3378_768x768_fit_catmullrom_2.png" width="318" height="159">
-&lt;div class="card-body px-0 pt-2 pb-0">
-&lt;p class="card-text">
-&lt;small class="text-muted">&lt;br/>Photo: TODO Group&lt;/small>&lt;/p>
-&lt;/div>
-&lt;/div>
+&lt;figure class="image">
+&lt;img src="./featured-todogroup.png" alt="image-layer">
+&lt;figcaption>&lt;i>TODO group : https://todogroup.org/&lt;/i>&lt;figcaption>
+&lt;/figure>
+&lt;ul>
+&lt;li>&lt;a href="#ospo%EC%9D%98-%EC%A0%95%EC%9D%98">OSPO의 정의&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#%EB%B2%95%EC%A0%81-%EC%9C%84%ED%97%98-%EC%99%84%ED%99%94">법적 위험 완화&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D-%EA%B0%9C%EC%84%A0">엔지니어 작업 방식 개선&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%EC%9E%AC%EC%A0%95%EC%A0%81-%EC%9D%B4%EC%9D%B5-%EC%8B%A4%ED%98%84">재정적 이익 실현&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#ospo-%EA%B0%80%EC%9D%B4%EB%93%9C">OSPO 가이드&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#ospo-examples">OSPO Examples&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;h2 id="ospo의-정의">OSPO의 정의&lt;/h2>
 &lt;p>OSPO&lt;sub>Open Source Program Office&lt;/sub>는 조직의 오픈소스 운영을 위해 조직의 중앙에 역량을 집중하도록 설계되었다. 여기에는 오픈소스의 사용, 배포, 선택, 검사 및 관련 정책 수립뿐만 아니라 개발자 교육, 컴플라이언스 보장과 조직에 이익이 되는 커뮤니티 참여와 구축을 촉진하는 활동이 포함될 수 있다.&lt;/p>
 &lt;p>모든 산업에 걸쳐 적용할 수 있는 오픈소스 프로그램을 구축하기 위한 광범위한 템플릿은 없지만, 여기에서는 일반적인 OSPO의 기능을 세 가지로 분류해보았다.&lt;/p>
@@ -271,96 +249,35 @@ Software Interactions (a.k.a linking), Available at: &lt;a href="https://www.ifo
 &lt;p>TODO Group은 기업이 OSPO를 설립하고 운영하기 위한 가이드를 제공합니다.&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;a href="https://todogroup.org/guides/create-program">How to Create an Open Source Program&lt;/a>&lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://todogroup.org/guides/measuring">Measuring Your Open Source Program&lt;/a>&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://todogroup.org/guides/management-tools">Tools for Managing Your Open Source Program&lt;/a>&lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;a href="https://todogroup.org/guides/create-program">How to Create an Open Source Program&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://todogroup.org/guides/measuring">Measuring Your Open Source Program&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://todogroup.org/guides/management-tools">Tools for Managing Your Open Source Program&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="ospo-examples">OSPO Examples&lt;/h2>
 &lt;blockquote>
 &lt;p>TODO Group은 Microsoft, Faceboo, Uber 등 오픈소스를 효과적으로 활용하는 기업들이 어떻게 OSPO를 운영하고 있는지, 각 기업의 사례를 취합하여 공개하였습니다.&lt;/p>
 &lt;/blockquote>
 &lt;ul>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/autodesk.md">Autodesk&lt;/a>&lt;sup id="fnref:9">&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref">9&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/capitalone.md">Capital One&lt;/a>&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/comcast.md">Comcast&lt;/a>&lt;sup id="fnref:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/facebook.md">Facebook&lt;/a>&lt;sup id="fnref:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/microsoft.md">Microsoft&lt;/a>&lt;sup id="fnref:13">&lt;a href="#fn:13" class="footnote-ref" role="doc-noteref">13&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/redhat.md">Red Hat&lt;/a>&lt;sup id="fnref:14">&lt;a href="#fn:14" class="footnote-ref" role="doc-noteref">14&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/salesforce.md">Salesforce&lt;/a>&lt;sup id="fnref:15">&lt;a href="#fn:15" class="footnote-ref" role="doc-noteref">15&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/sap.md">SAP&lt;/a>&lt;sup id="fnref:16">&lt;a href="#fn:16" class="footnote-ref" role="doc-noteref">16&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/uber.md">Uber&lt;/a>&lt;sup id="fnref:17">&lt;a href="#fn:17" class="footnote-ref" role="doc-noteref">17&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/oath.md">Yahoo/Verizon Media&lt;/a>&lt;sup id="fnref:18">&lt;a href="#fn:18" class="footnote-ref" role="doc-noteref">18&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/autodesk.md">Autodesk&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/capitalone.md">Capital One&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/comcast.md">Comcast&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/facebook.md">Facebook&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/microsoft.md">Microsoft&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/redhat.md">Red Hat&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/salesforce.md">Salesforce&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/sap.md">SAP&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/uber.md">Uber&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/todogroup/todogroup.github.io/blob/master/content/en/guides/casestudies/oath.md">Yahoo/Verizon Media&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;blockquote>
-&lt;p>SK텔레콤의 OSPO에 대한 글을 소개 하며 글을 마칩니다. : &lt;a href="https://sktelecom.github.io/about/ospo/">SK텔레콤 OSPO&lt;/a>&lt;sup id="fnref:19">&lt;a href="#fn:19" class="footnote-ref" role="doc-noteref">19&lt;/a>&lt;/sup>&lt;/p>
-&lt;p>감사합니다.&lt;/p>
-&lt;/blockquote>
-&lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
-&lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>TODO Group : &lt;a href="https://todogroup.org/">https://todogroup.org/&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
-&lt;p>TODO Group Member : &lt;a href="https://todogroup.org/members/">https://todogroup.org/members/&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
-&lt;p>TODO guides : &lt;a href="https://todogroup.org/guides/">https://todogroup.org/guides/&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
-&lt;p>Repolinter : &lt;a href="https://github.com/todogroup/repolinter">https://github.com/todogroup/repolinter&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:5" role="doc-endnote">
-&lt;p>Open Source Program Office (OSPO) Definition and Guide : &lt;a href="https://github.com/todogroup/ospodefinition.org">https://github.com/todogroup/ospodefinition.org&lt;/a>&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:6" role="doc-endnote">
-&lt;p>How to Create an Open Source Program : &lt;a href="https://todogroup.org/guides/create-program">https://todogroup.org/guides/create-program&lt;/a>)&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:7" role="doc-endnote">
-&lt;p>Measuring Your Open Source Program : &lt;a href="https://todogroup.org/guides/measuring">https://todogroup.org/guides/measuring&lt;/a>)&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:8" role="doc-endnote">
-&lt;p>Tools for Managing Your Open Source Program : &lt;a href="https://todogroup.org/guides/management-tools)%5B">https://todogroup.org/guides/management-tools)[&lt;/a>&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:9" role="doc-endnote">
-&lt;p>Autodesk&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/3mVdi0I">https://bit.ly/3mVdi0I&lt;/a>)&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:10" role="doc-endnote">
-&lt;p>Capital One&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/3sxbf4e">https://bit.ly/3sxbf4e&lt;/a>&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:11" role="doc-endnote">
-&lt;p>Comcast&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/2RAIw1A">https://bit.ly/2RAIw1A&lt;/a>&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:12" role="doc-endnote">
-&lt;p>Facebook&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/3gkwOmg">https://bit.ly/3gkwOmg&lt;/a>&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:13" role="doc-endnote">
-&lt;p>Microsoft&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/3eajxKm">https://bit.ly/3eajxKm&lt;/a>&amp;#160;&lt;a href="#fnref:13" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:14" role="doc-endnote">
-&lt;p>Red Hat : &lt;a href="https://bit.ly/3xfk3iW">https://bit.ly/3xfk3iW&lt;/a>&amp;#160;&lt;a href="#fnref:14" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:15" role="doc-endnote">
-&lt;p>Salesforce&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/3akfzgR">https://bit.ly/3akfzgR&lt;/a>&amp;#160;&lt;a href="#fnref:15" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:16" role="doc-endnote">
-&lt;p>SAP&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/32sVznS">https://bit.ly/32sVznS&lt;/a>&amp;#160;&lt;a href="#fnref:16" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:17" role="doc-endnote">
-&lt;p>Uber&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/2Qcxwar">https://bit.ly/2Qcxwar&lt;/a>&amp;#160;&lt;a href="#fnref:17" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:18" role="doc-endnote">
-&lt;p>Yahoo/Verizon Media&amp;rsquo;s OSPO : &lt;a href="https://bit.ly/3mYRmBP">https://bit.ly/3mYRmBP&lt;/a>&amp;#160;&lt;a href="#fnref:18" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:19" role="doc-endnote">
-&lt;p>SK텔레콤 OSPO : &lt;a href="https://sktelecom.github.io/about/ospo">https://sktelecom.github.io/about/ospo&lt;/a>&amp;#160;&lt;a href="#fnref:19" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/section></description></item><item><title>Blog: Elastic License 2.0 그리고 진화하는 오픈소스 라이선스</title><link>/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/</link><pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate><guid>/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/</guid><description>
-&lt;img src="/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/featured-scale_hu0adce3c464c6f6e27493d0d0745cd5d4_35813_640x0_resize_catmullrom_2.png" width="640" height="612"/>
-&lt;div class="pageinfo pageinfo-primary">
+&lt;blockquote>
+&lt;p>SK텔레콤의 OSPO에 대한 글을 소개 하며 글을 마칩니다. : &lt;a href="https://sktelecom.github.io/about/ospo/">SK텔레콤 OSPO&lt;/a>&lt;/p>
+&lt;p>감사합니다.&lt;/p>
+&lt;/blockquote></description></item><item><title>Blog: Elastic License 2.0 그리고 진화하는 오픈소스 라이선스</title><link>/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/</link><pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate><guid>/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/</guid><description>
+&lt;img src="/blog/2021/03/28/elastic-license-2.0-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/featured-scale_hu0adce3c464c6f6e27493d0d0745cd5d4_35813_640x0_resize_catmullrom_3.png" width="640" height="612"/>
+&lt;blockquote>
 &lt;p>This paper was translated by Haksung Jang from the English version available at this &lt;a href="https://www.coss.community/coss/elastic-license-2-0-and-the-evolution-of-open-source-licensing-3jb3">white paper&lt;/a>. The original author, &lt;a href="https://heathermeeker.com/about-me/">Heather Meeker&lt;/a>, has not reviewed this translation.&lt;/p>
-&lt;/div>
+&lt;/blockquote>
 &lt;hr>
 &lt;blockquote>
 &lt;p>안녕하세요.&lt;/p>
@@ -376,14 +293,32 @@ Software Interactions (a.k.a linking), Available at: &lt;a href="https://www.ifo
 &lt;/ul>
 &lt;/blockquote>
 &lt;hr>
+&lt;ul>
+&lt;li>&lt;a href="#%EC%9C%A0%EB%8B%89%EC%8A%A4-%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%9E%90%EC%9C%A0%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4">유닉스, 리눅스, 자유소프트웨어, 그리고 오픈소스&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%9D%98-%EC%B6%9C%ED%98%84%EA%B3%BC-agpl">클라우드의 출현과 AGPL&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#agpl%EA%B3%BC-%EB%93%80%EC%96%BC-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4">AGPL과 듀얼 라이선스&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%EB%AC%B4%EC%83%81-%EC%82%AC%EC%9A%A9substrip-miningsub">무상 사용&lt;sub>Strip-mining&lt;/sub>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#sspl%EA%B3%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4">SSPL과 소스 공개 라이선스&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#sspl">SSPL&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%EC%A0%9C%ED%95%9C-%EC%A1%B0%EA%B1%B4%EC%9D%84-%EA%B0%96%EB%8A%94-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4">제한 조건을 갖는 소스 공개 라이선스&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#elastic-license-20">Elastic License 2.0&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%EC%99%9C-%EB%93%80%EC%96%BC-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%98%80%EB%8A%94%EA%B0%80">왜 듀얼 라이선스를 사용하였는가?&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#elastic-license-20%EA%B3%BC-%EC%B5%9C%EC%8B%A0-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EA%B8%B0%EC%88%A0">Elastic License 2.0과 최신 라이선스 기술&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%EB%8D%94-%EB%82%98%EC%9D%80-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0">더 나은 라이선스 만들기&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;p>최근, 2021년 2월, &lt;a href="https://www.elastic.co/">Elastic&lt;/a>은 소프트웨어 제품에 &lt;a href="https://www.elastic.co/licensing/elastic-license">Elastic License 2.0&lt;/a>이라는 새로운 라이선스를 도입하였다. 이 라이선스 모델은 Elasticsearch, Kibana 등 주요 소프트웨어 제품군에 적용되었다. 이런 변화의 목적과 의미하는 바가 무엇인지 알아보자.&lt;/p>
 &lt;p>Elastic License 2.0은 개방형 개발 모델&lt;sub>Open Development Model&lt;/sub>로 사업하는 기업이 취할 수 있는 대표적인 라이선스 모범 사례이다. Elastic License 2.0은 오픈소스 라이선스는 아니지만, 소프트웨어의 사용, 공유 및 변경의 자유와 커뮤니티에 해를 끼는 행동 방지 간의 공정한 균형을 유지하는 데 필요한 최소한의 제한 설정을 목표로 한다.&lt;/p>
 &lt;p>&lt;img src="./featured-scale.png" alt="scale">&lt;/p>
+&lt;br>
 &lt;h2 id="유닉스-리눅스-자유소프트웨어-그리고-오픈소스">유닉스, 리눅스, 자유소프트웨어, 그리고 오픈소스&lt;/h2>
 &lt;p>Elastic License 2.0과 같은 새로운 라이선스의 추세를 이해하려면 오픈소스 라이선스 운동이 어떻게 성장했는지 살펴보는 것이 도움이 된다.&lt;/p>
-&lt;p>오픈소스와 자유소프트웨어&lt;sub>Free Software&lt;/sub> 운동은 소프트웨어가 사유화되는 것에 대한 개발자의 우려에서 시작되었다. 이러한 우려의 불씨는 당시 가장 인기있는 운영체제인 유닉스였다. 유닉스의 개발사인 AT&amp;amp;T Bell Labs은 1956년의 동의령&lt;sub>consent decree&lt;/sub>에 따라 유닉스 및 C언어를 포함하는 연구 프로젝트로 이익 얻는 것을 금지&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 당했으며, 이때문에 수년간 매우 관대한 조건의 라이선스로 유닉스를 배포하였다. 학계, 연구자, 개발자들은 유닉스를 수정/개선하여 공유하기 시작했고, 유닉스는 곧 운영체제 분야의 선두가 되었다. 하지만, 1983년 동의령이 해제되자 AT&amp;amp;T는 유닉스에 수정 사항 공유를 허용하지 않는 조항을 적용하였다. 이에 따라 각 업체별로 각자 수정한 운영체제를 사용하며 유닉스는 많은 호환되지 않는 종류로 쪼개졌고, 사용자들은 더 이상 협업할 수 없게 되었다.&lt;/p>
+&lt;p>오픈소스와 자유소프트웨어&lt;sub>Free Software&lt;/sub> 운동은 소프트웨어가 사유화되는 것에 대한 개발자의 우려에서 시작되었다. 이러한 우려의 불씨는 당시 가장 인기있는 운영체제인 유닉스였다. 유닉스의 개발사인 AT&amp;amp;T Bell Labs은 1956년의 동의령&lt;sub>consent decree&lt;/sub>에 따라 유닉스 및 C언어를 포함하는 연구 프로젝트로 이익 얻는 것을 금지&lt;sup>&lt;a name="footnote_1_return">&lt;/a>&lt;a href="#footnote_1">1&lt;/a>&lt;/sup> 당했으며, 이때문에 수년간 매우 관대한 조건의 라이선스로 유닉스를 배포하였다. 학계, 연구자, 개발자들은 유닉스를 수정/개선하여 공유하기 시작했고, 유닉스는 곧 운영체제 분야의 선두가 되었다. 하지만, 1983년 동의령이 해제되자 AT&amp;amp;T는 유닉스에 수정 사항 공유를 허용하지 않는 조항을 적용하였다. 이에 따라 각 업체별로 각자 수정한 운영체제를 사용하며 유닉스는 많은 호환되지 않는 종류로 쪼개졌고, 사용자들은 더 이상 협업할 수 없게 되었다.&lt;/p>
 &lt;p>유닉스가 사유화되면서 자유소프트웨어 운동, 그리고 이어서 오픈소스 운동이 생겨났으며, 이들은 인프라 소프트웨어가 폐쇄되는 상황이 다시 발생하는 것을 방지하려고 하였다. 이 운동은 유닉스를 대체하는 자유소프트웨어인 리눅스를 중심으로 이루어졌으며 곧 모든 소프트웨어는 자유&lt;sub>free&lt;/sub>(무료&lt;sub>free&lt;/sub> 맥주에서의 Free가 아니라 언론의 자유&lt;sub>free&lt;/sub>에서의 Free)로워야 한다는 철학에 기반한 더 큰 운동으로 발전하였다. 이러한 운동의 한 요소는 소스 코드에 대한 접근, 개선 및 변경 사항을 만들고 공유할 수 있는 권리이다. 이러한 원칙들은 &lt;a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License&lt;/a> (GPL)에서 구현되었으며, 이에 따라 바이너리 배포자들은 해당 소스 코드를 공유해야 한다.&lt;/p>
 &lt;p>시간이 흐르고, 2000년대 초반 인터넷 붐에 힘입어 오픈소스 라이선스는 더욱 인기를 얻게 되었다. GPL과 같은 일부 라이선스는 복잡한 법적 우려를 불러일으키기도 했지만, 기업이 협업할 수 있는 기반을 마련하였다. 2000년 이후 오픈소스와 이를 통해 가능해진 협업은 모든 기술 부문에 채택되었다. 오늘날, 오픈소스는 전자상거래&lt;sub>e-commerce&lt;/sub>의 핵심 기술이며, 기업들은 소프트웨어 인프라를 위한 지속해서 협력한다.&lt;/p>
+&lt;br>
 &lt;h2 id="클라우드의-출현과-agpl">클라우드의 출현과 AGPL&lt;/h2>
 &lt;p>GPL과 같은 라이선스는 변경 사항의 공유를 요구한다. 바이너리 배포에 대한 소스 코드 공유 조건을 부과한다. 반면에 &amp;ldquo;개인 복사본&amp;quot;을 만들어서 사용하는 건 변경 사항을 공유할 필요가 없다. 이러한 조건은 당시 대부분의 소프트웨어를 직접설치&lt;sub>on-premise&lt;/sub>하는 방식이었기 때문에 공유를 강제하는 데 효과적이었다. 그러나 2000년대 초부터 소프트웨어는 퍼블릭 클라우드로 이동하기 시작하였고, 더 이상 소프트웨어를 배포할 필요가 없었다. 고객은 로컬 사본을 얻지 않고도 소프트웨어를 사용할 수 있게 되었다.&lt;/p>
 &lt;p>클라우드 서비스 사업이 커지면서, 이러한 패러다임의 변화는 오픈소스 커뮤니티의 기대치와 AWS&lt;sub>Amazon Web Services&lt;/sub>와 같은 클라우드 서비스 공급 업체 사이에 긴장감을 조성하였다. 클라우드 서비스 공급 업체는 개선 사항을 공유해야 하는 법적 의무에서 자유로웠다. 구글이 검색 서비스 강화를 위해 Linux에 의존하는 것으로 잘 알려졌기 때문에 이를 &amp;ldquo;구글 루프홀&lt;sub>Loophole&lt;/sub>&amp;ldquo;이라고도 불렀다. 이에 대응하기 위해 자유소프트웨어 커뮤니티는 &lt;a href="https://www.gnu.org/licenses/agpl-3.0.en.html">Affero GPL&lt;/a> (AGPL)이라는 GPL을 부분 변경한 형태의 라이선스를 만들었다. AGPL 3.0은 GPL 3.0과 거의 동일하지만 다음과 같은 원격 네트워크 상호 작용&lt;sub>Remote Network Interaction&lt;/sub> 조항을 포함한다.&lt;/p>
@@ -394,23 +329,30 @@ providing access to the Corresponding Source from a network server at no
 charge, through some standard or customary means of facilitating copying
 of software….
 &lt;/code>&lt;/pre>&lt;p>이 새로운 라이선스는 GPL이 리눅스 배포에 대해 했던 것처럼 클라우드 서비스 공급 업체가 소스 코드 개선 사항을 공유하도록 강제하기 위한 것이다.&lt;/p>
+&lt;br>
 &lt;h2 id="agpl과-듀얼-라이선스">AGPL과 듀얼 라이선스&lt;/h2>
 &lt;p>AGPL은 첫 번째 릴리스부터 논란이 있었다. 2007년, GPL 3.0 초안 작성이 마무리되어 가는 과정에서 일부 작성자들은 GPL을 네트워크 카피레프트&lt;sub>Copyleft&lt;/sub> 모델로 변경하기를 원하였다. 하지만 커뮤니티는 GPL 3.0의 &amp;ldquo;루프홀&amp;quot;을 그대로 유지하기로 결정했고, 몇 달 후, 이에 대한 대안으로 AGPL을 내놓았다. 그러나 AGPL은 널리 채택되지 않았다. 매우 인기 있는 분산 데이터베이스 제품인 &lt;a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB&lt;/a>가 유일무이한 AGPL의 &amp;ldquo;킬러 앱&lt;sub>killer app&lt;/sub>&amp;ldquo;이다. 기업들은 처음에는 AGPL을 이해하고 받아들이기 어려워했지만, 대부분 사용자는 소프트웨어를 변경하거나 서비스로 제공하지 않았기 때문에 AGPL하의 소프트웨어를 사용하겠다는 합리적인 결정을 내릴 수 있었다.&lt;/p>
+&lt;hr>
 &lt;blockquote>
 &lt;p>AGPL 3.0의 Remote Network Interaction 조항은 프로그램을 변경하였을 때에 한하여 변경 사항의 소스 코드를 컴퓨터 네트워크를 통한 원격 사용자에게 제공해야 합니다. 즉, 변경하지 않는다면 소스 코드 공개 의무가 발생하지 않습니다.&lt;/p>
 &lt;/blockquote>
+&lt;hr>
 &lt;p>MongoDB는 &amp;ldquo;&lt;a href="http://monty-says.blogspot.com/2009/08/thoughts-about-dual-licensing-open.html">듀얼 라이선스&lt;/a>&amp;rdquo; 비즈니스 모델로 AGPL을 사용하였다. 사용자&lt;sub>licensee&lt;/sub>에게 AGPL 또는 상용 소프트웨어 라이선스 중 하나를 선택하게 하였다. 사용자는 AGPL의 요구사항을 준수하고 싶지 않거나 준수하기 위한 법적인 검토조차 관여하고 싶지 않다면 상용 라이선스를 선택하였다. 이러한 듀얼 라이선스 비즈니스 모델은 원래 GPL과 상용 라이선스를 선택하게 하는 방식으로 개발되었으나 시간이 지나면서 GPL 대신 보다 카피레프트 범위를 확장한 AGPL이 사용되었다. MongoDB의 이 라이선스 모델은 상당히 성공적이었다. AGPL은 가장 강력한 카피레프트 라이선스였기 때문에 MongoDB가 상업적인 협상을 추진하는 데 유용하였다. 한편, AGPL을 만든 이들은 AGPL이 MongoDB의 사업 수단으로 사용되는 모습이 &lt;a href="http://ebb.org/bkuhn/blog/">유해한 갈취&lt;/a>&lt;sub>toxic shakedown&lt;/sub>라면서 비판하기도 하였다. 여하튼, 그렇게 강력하다고 평가 받던 AGP의 소스 코드 공유 조건도 클라우드 공급 업체가 오픈소스를 대규모로 상업적인 사용을 하면서 개발자나 커뮤니티에 아무것도 되돌려 주지 않는 행위를 막기에는 충분하지 않았다.&lt;/p>
+&lt;br>
 &lt;h2 id="무상-사용substrip-miningsub">무상 사용&lt;sub>Strip-mining&lt;/sub>&lt;/h2>
 &lt;p>클라우드 이용이 GPL 모델을 &amp;ldquo;파괴&lt;sub>broken&lt;/sub>&amp;ldquo;시켰던 것처럼, 2010년대 클라우드 컴퓨팅이 발전하면서 AGPL 듀얼 라이선스 모델도 압박을 받기 시작하였다. 이번에는 문제가 달랐다. GPL 또는 AGPL의 범위는 하나의 단일 실행 가능 프로그램&lt;sub>single program executable&lt;/sub>까지만 확장된다. 이 &amp;ldquo;기능&amp;quot;은 저작권 라이선스가 단일 저작물에 대해서만 사용 조건을 지정할 수 있다는 이론에 따라 GPL에서 의도적으로 설계된 것이었다. 즉, GPL은 파생 저작물&lt;sub>derivative work&lt;/sub>에 대한 소스 코드 공유 요건을 갖지만, 집합 저작물&lt;sub>collective work&lt;/sub>에 대해서는 아니다. 법적으로 이 둘 간의 경계는 상당히 불분명하지만 GPL이 인기를 얻으면서 단일 프로그램이란 하나의 실행 가능한 프로세스라고 정의하는 것이 일반적인 관행이 되었다. 자유소프트웨어재단&lt;sub>Free Software Foundation&lt;/sub>은 &lt;a href="https://www.gnu.org/licenses/gpl-faq.en.html#MereAggregation">GPL FAQ&lt;/a>에서 오랫동안 이런 원칙을 주장해왔다.&lt;/p>
 &lt;p>하지만 클라우드 서비스가 발전하면서 두 가지 일이 발생하였다. 첫째, 소프트웨어 엔지니어링을 클라우드 구현에 더욱 집중하게 되었다. 클라우드 공급 업체는 한때 클라우드 환경에서 실행하기 위한 소프트웨어를 개선하거나 수정해야 했던 반면, 소프트웨어 엔지니어링이 발전하면서 클라우드 공급 업체는 기존 오픈소스 소프트웨어를 &amp;ldquo;플러그 앤드 플레이&lt;sub>plug and play&lt;/sub>&amp;ldquo;형태로 사용할 수 있게 되었다. 그러다 보니 클라우드 공급 업체는 혁신의 주체를 주요 실행 파일이 아닌 곳으로 변화할 수 있었다. 그들은 소프트웨어를 관리, 모니터링 및 배포하기 위한 소프트웨어를 추가로 개발했으며, 이러한 혁신은 클라우드 서비스를 키울 수 있었다. AGPL은 클라우드 공급 업체의 이러한 개선사항에 대해서는 이를 공유하도록 강제하는 데 아무런 도움이 되지 않았다.&lt;/p>
 &lt;p>이렇게 오픈소스 상용 기업들은 대형 클라우드 공급 업체가 무료로 갖다 쓰기 좋은 상점처럼 되어 버렸다. 특히 &amp;ldquo;플랫폼 소프트웨어&amp;rdquo; 또는 미들웨어 (컴퓨터 스택에서 최상위 계측인 응용 프로그램과 운영 체제의 중간에 있는 소프트웨어)에서 문제는 더 심각하였다. 이 범주의 소프트웨어는 최신 컴퓨팅에 필수적이며 클라우드 구현에 매우 유용하다.&lt;/p>
 &lt;p>이 때문에 비즈니스 세계에서 클라우드 공급 업체의 오픈소스 사용에 대한 비판이 제기되었다. Bain Capital의 Salil Deshpande는 2018년 &amp;ldquo;분명히 이것은 불법은 아니다. 그러나 우리는 이것이 잘못되었고, 오픈소스 커뮤니티의 지속 가능성에 도움이 되지 않는다고 생각한다&amp;quot;라고 &lt;a href="https://techcrunch.com/2018/09/07/commons-clause-stops-open-source-abuse/">하였다&lt;/a>. 또 다른 전문가는 &amp;ldquo;AWS는 오픈소스의 아킬레스건을 건드리고 있다. 다른 사람의 저작물을 무료로 가져다가 이에 대한 접근 권한을 임대하는 사업을 하는 것이다.&amp;ldquo;라고 &lt;a href="https://onezero.medium.com/open-source-betrayed-industry-leaders-accuse-amazon-of-playing-a-rigged-game-with-aws-67177bc748b7">하였다&lt;/a>. 문제는 모든 주요 오픈소스 라이선스는 이런 방식으로 소프트웨어를 사용하는 것을 제지하지 않는다는 것이다.&lt;/p>
+&lt;hr>
 &lt;blockquote>
 &lt;p>주요 오픈소스 라이선스가 작성되었던 시점에는 AWS의 &amp;ldquo;Program as a Service&amp;rdquo; 형태의 프로그램이 없었으니, 이에 대한 조건도 고려하지 않았을 테지요.&lt;/p>
 &lt;p>오픈소스 상용 기업들은 오픈소스 프로그램을 개발해서 듀얼 라이선스 모델 (GPL or 상용)로 사업을 하고 있었는데, 클라우드 제공 업체에서 이 오픈소스 프로그램을 그대로 가져다가 클라우드 서비스로 제공하는 사업을 하고, 자기네한테는 아무런 이윤도 안겨주지 않으니, 사업 또는 개발 측면에서 모두 좋지 않은 영향을 미쳤을 것은 충분히 추측할 수 있습니다.&lt;/p>
 &lt;p>클라우드 공급 업체가 MongoDB를 &lt;a href="https://aws.amazon.com/ko/documentdb/">Amazon DocumentDB&lt;/a>나 &lt;a href="https://docs.microsoft.com/ko-kr/azure/cosmos-db/introduction">Azure Cosmos DB&lt;/a>로 서비스하며 고객을 확보하는게 대표적인 예라고 볼 수 있을 것 같습니다.&lt;/p>
 &lt;/blockquote>
+&lt;hr>
 &lt;p>오픈소스 상용 기업들과 투자자들은 이런 오픈소스 모델의 한계 때문에 고민이 되었다. GPL, AGPL 등 어떤 라이선스도 저작권법을 사용하여 클라우드 공급 업체가 변경 사항을 공유하도록 강제할 수 없었다. 또한 AWS, Azure 또는 Google Cloud와 같은 대규모 고객 기반을 가진 클라우드 공급 업체는 버튼 클릭으로 소프트웨어를 쉽게 추가할 수 있게 하여 고객과 &amp;ldquo;끈끈한&amp;rdquo; 관계를 유지하였다. 일부 오픈소스 개발사는 자체 클라우드 서비스를 제공했지만, 소프트웨어를 무료로 사용하는 대형 클라우드 공급 업체와 경쟁하는 건 너무 어렵다는 걸 알게 되었다. 오픈소스 개발사의 서비스가 더 우수한 경우에도, 기존 클라우드 계정에서는 단지 &amp;ldquo;체크박스를 선택&amp;quot;하여 소프트웨어 제품군을 추가하는 것과는 달리, 새로운 서비스를 사용하기 위한 거래 비용&lt;sub>transaction cost&lt;/sub>이 발생한다는 점이 고객이 등을 돌리게 하였다.&lt;/p>
+&lt;br>
 &lt;h2 id="sspl과-소스-공개-라이선스">SSPL과 소스 공개 라이선스&lt;/h2>
 &lt;p>2018년 업계는 돌파구를 찾았다. AWS가 오픈소스 플랫폼 소프트웨어를 호스팅하면서 계속 인기를 얻자 오픈소스 개발사들은 행동에 나서기 시작하였다. 라이선스를 변경하였다.&lt;/p>
 &lt;p>오픈소스 개발사들은 두 가지 다른 경로를 통해 &lt;a href="https://techcrunch.com/2018/11/29/the-crusade-against-open-source-abuse/">무상 사용 문제에 대응&lt;/a>하였다.&lt;/p>
@@ -419,6 +361,7 @@ of software….
 &lt;li>제한 조건을 갖는 소스 공개 라이선스&lt;sub>Source Available Licensing&lt;/sub>&lt;/li>
 &lt;/ol>
 &lt;p>이 두 범주 모두 이전에는 정의되지 않았던 형태이다. 둘 다 MySQL 및 MongoDB 에서와 같은 듀얼 라이선스 모델을 지원하기 위한 것이다.&lt;/p>
+&lt;br>
 &lt;h3 id="sspl">SSPL&lt;/h3>
 &lt;p>매우 강한 카피레프트 접근 방식은 2018년 &lt;a href="https://www.mongodb.com/licensing/server-side-public-license">SSPL&lt;/a>&lt;sub>Server Side Public License&lt;/sub>을 만든 MongoDB에 의해 시도되었다.&lt;/p>
 &lt;pre>&lt;code>1. Offering the Program as a Service.
@@ -443,12 +386,14 @@ software, all such that a user could run an instance of the service
 using the Service Source Code you make available. [emphasis added].
 &lt;/code>&lt;/pre>&lt;p>이 라이선스는 무상 사용 문제에 대응하기 위한 오픈소스 솔루션을 만들기 위해 작성되었다. 소스 코드 공유 요구 사항은 AGPL의 요구 사항보다 훨씬 광범위하다. 이러한 요구 사항의 범위는 분산 소프트웨어에 대해서도 GPL 요구 사항과 유사하게 작동하도록 설계되었다. &lt;a href="https://www.mongodb.com/community/licensing">MongoDB는 SSPL 또는 상용 라이선스&lt;/a>에 따라 소프트웨어를 사용할 수 있는 듀얼 라이선스 모델을 적용하였다.&lt;/p>
 &lt;p>MongoDB는 SSPL을 &lt;a href="https://opensource.org/approval">OSI&lt;/a>&lt;sub>Open Source Initiative&lt;/sub>에 승인받기 위해 제출하였다. 수개월 간의 논쟁 끝에 승인을 받지는 못하였지만, MongoDB는 듀얼 라이선스 모델의 오픈소스 선택지로 SSPL을 계속 사용하고 있다. 이 라이선스가 &lt;a href="https://opensource.org/osd">오픈소스 정의&lt;/a>&lt;sub>Open Source Definition&lt;/sub>에 적합하지 않은 이유에 대한 논의는 복잡했으며, 이 정의를 충족하는 것만이 유일한 기준은 아니었다. 요약하자면, 이렇게 광범위한 소스 공유 요구 사항을 가진 라이선스가 &amp;ldquo;&lt;a href="https://opensource.org/approval">소프트웨어 자유를 보장&lt;/a>&amp;ldquo;할지가 분명하지 않았다.&lt;/p>
+&lt;br>
 &lt;h3 id="제한-조건을-갖는-소스-공개-라이선스">제한 조건을 갖는 소스 공개 라이선스&lt;/h3>
 &lt;p>다른 사람들은 또 다른 경로를 따랐다. 일부 회사는 Salil Deshpande가 주도한 &lt;a href="https://commonsclause.com/">Commons Clause&lt;/a>를 채택했으며, 어떤 회사는 Elastic이 Elastic License 1.0을 만든 것처럼 &lt;a href="https://redislabs.com/legal/licenses/">Redis&lt;/a>, &lt;a href="https://www.confluent.io/confluent-community-license">Confluent&lt;/a>, &lt;a href="https://www.cockroachlabs.com/cockroachdb-community-license/">CockroachDB&lt;/a>와 같은 자체 라이선스를 제작하였다. SSPL과는 달리, 이 라이선스들은 오픈소스 정의를 충족시키기 위한 것이 아니었다. 대신, 이들은 무상 사용을 겨냥한 제한 조건을 갖고 있다.&lt;/p>
-&lt;p>왜 이렇게 두 가지 경로로 갈렸을까? 이는 &lt;a href="https://www.gnu.org/philosophy/free-sw.en.html">Freedom Zero&lt;/a>, &amp;ldquo;어떤 목적으로든 원하는 대로 프로그램을 실행할 수 있는 자유&amp;quot;와 관련이 있다&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.&lt;/p>
-&lt;p>오픈소스 또는 자유소프트웨어 라이선스의 주요 특징은 라이선스 제약이나 제한이 없다는 것이다&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>. 일반적인 상용 소프트웨어 라이선스와 비교해보자. 개인용으로 사용하겠다는 라이선스 조건에 클릭하여 수락하는 형태의 최종 사용자 라이선스&lt;sub>End User license Agreement&lt;/sub>는 소프트웨어를 사용하는 것만 허용하며, 변경하거나 배포할 수 없다. 엔터프라이즈 라이선스는 소프트웨어를 사용할 수 있는 사용자, 서버 또는 물리적 위치의 수에 대한 제한을 설정하고, 기업은 해당 사용을 감시해야 한다. 그러나 오픈소스 라이선스에는 그러한 제한이 없다. 따라서, 소스 코드를 무료로 제공한다고 하더라도 상업적 사용 불가와 같은 제한을 갖고 있다면 정의상 오픈소스가 아니다.&lt;/p>
+&lt;p>왜 이렇게 두 가지 경로로 갈렸을까? 이는 &lt;a href="https://www.gnu.org/philosophy/free-sw.en.html">Freedom Zero&lt;/a>, &amp;ldquo;어떤 목적으로든 원하는 대로 프로그램을 실행할 수 있는 자유&amp;quot;와 관련이 있다&lt;sup>&lt;a name="footnote_2_return">&lt;/a>&lt;a href="#footnote_2">2&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>오픈소스 또는 자유소프트웨어 라이선스의 주요 특징은 라이선스 제약이나 제한이 없다는 것이다&lt;sup>&lt;a name="footnote_3_return">&lt;/a>&lt;a href="#footnote_3">3&lt;/a>&lt;/sup>. 일반적인 상용 소프트웨어 라이선스와 비교해보자. 개인용으로 사용하겠다는 라이선스 조건에 클릭하여 수락하는 형태의 최종 사용자 라이선스&lt;sub>End User license Agreement&lt;/sub>는 소프트웨어를 사용하는 것만 허용하며, 변경하거나 배포할 수 없다. 엔터프라이즈 라이선스는 소프트웨어를 사용할 수 있는 사용자, 서버 또는 물리적 위치의 수에 대한 제한을 설정하고, 기업은 해당 사용을 감시해야 한다. 그러나 오픈소스 라이선스에는 그러한 제한이 없다. 따라서, 소스 코드를 무료로 제공한다고 하더라도 상업적 사용 불가와 같은 제한을 갖고 있다면 정의상 오픈소스가 아니다.&lt;/p>
 &lt;p>즉, 모든 라이선스 제한은 오픈소스 범주에서 벗어나게 한다.&lt;/p>
 &lt;p>2018년 이후 발생한 라이선스 변경의 물결 가운데 출시된 모든 라이선스는 거의 비슷한 제한을 갖고 있다. 각각 고유한 조건이 있지만, 이들은 모두 사용자가 소프트웨어를 무료로 사용할 수 있도록 허용하는 동시에 경쟁 호스팅 서비스 제공을 위한 소프트웨어 사용을 금지하는 데 초점을 맞추고 있다.&lt;/p>
+&lt;br>
 &lt;h2 id="elastic-license-20">Elastic License 2.0&lt;/h2>
 &lt;p>2021년 초, Elasticsearch는 이 두 가지 경로를 모두 따르는 하나의 길을 개척하였다. SSPL과 새로운 &lt;a href="https://www.elastic.co/licensing/elastic-license">Elastic License 2.0&lt;/a> (ELv2)이라는 두 가지 무료 선택지를 제공하여 소프트웨어 제품군을 사용할 수 있게 하였다.&lt;/p>
 &lt;p>새로운 Elastic 2.0 라이선스는 짧고 (한 페이지에 불과) 쉬운 언어로 작성되었으며 오픈소스 라이선스의 거의 모든 자유를 허용한다. 소프트웨어 수신자는 소프트웨어를 자유롭게 사용, 변경 및 재배포 할 수 있다. 전에 소프트웨어 라이선스를 읽어본 적이 없더라도 이 라이선스는 한번 읽어볼 가치가 있다.&lt;/p>
@@ -462,17 +407,22 @@ any functionality in the software that is protected by the license key.
 &lt;/code>&lt;/pre>&lt;p>첫 번째 제한은 무상 사용 문제를 해결하는 데 초점이 맞춰져 있다. 이로써 이 제한을 위반하여 소프트웨어를 사용하면 소프트웨어의 권한을 침해하게 된다.&lt;/p>
 &lt;p>두 번째 제한은 소프트웨어 라이선스 키의 해킹을 금지하기 위한 것이다. 이러한 제한은 소프트웨어 라이선스에서는 오래전부터 일반적이었으나, 소스 공개 라이선스에서는 이제 막 사용되기 시작하였다. 이 조항을 통해 개발자는 유료 서비스를 ELv2하의 소프트웨어와 상호 작용하게 하거나, 유료 기능을 위한 소프트웨어 구성 요소 일부를 보호할 수 있게 되었다.&lt;/p>
 &lt;p>이 라이선스의 다른 조항들은 매우 간단하며 오픈소스 라이선스를 읽은 사람이라면 누구나 익숙할 것이다.&lt;/p>
+&lt;br>
 &lt;h2 id="왜-듀얼-라이선스를-사용하였는가">왜 듀얼 라이선스를 사용하였는가?&lt;/h2>
 &lt;p>Elasticsearch는 사용자에게 SSPL과 Elastic License 중 하나를 선택할 수 있게 하는 특이한 경로를 택하였다. 오늘날 많은 기업이 &amp;ldquo;오픈 코어&lt;sub>open core&lt;/sub>&amp;rdquo; 모델을 사용하고 있으며, 실제로 Elasticsearch도 전에는 이 모델을 사용하였다. 둘의 차이는 미묘하다고 할 수 있다. 오픈 코어 모델은 (대부분 Apache 2.0과 같은 허용적인&lt;sub>permissive&lt;/sub>) 오픈소스 라이선스로 핵심 소프트웨어를 제공한다. 그런 다음 제한된 라이선스로 또는 서비스로만&lt;sub>as a service&lt;/sub> 추가 기능(대개 기업이 대규모로 배포하는 데 유용한 기능)을 제공한다. 그러나 Elasticsearch는 동일한 소프트웨어를 두 개의 다른 라이선스로 사용할 수 있는 듀얼 라이선스 모델을 고수하였다. 이 듀얼 라이선스 모델은 MySQL에 의해 개척되었고, 일반적으로 무료 라이선스 선택지로 GPL, AGPL 또는 SSPL과 같은 카피레프트 라이선스를 사용한다. 그러나 이 모델은 오픈소스 라이선스와 클라우드 서비스 간의 충돌 때문에 최근 몇 년 동안 인기가 시들해졌다.&lt;/p>
 &lt;p>Elastic의 선택은 SSPL과 Elastic License 2.0의 두 가지 무료 라이선스 선택권을 제공하였다는 점에서 더욱 이례적이었다. 듀얼 라이선스는 일반적으로 하나의 무료 옵션만 제공한다. 이러한 이례적인 방법을 통해 Elasticsearch는 거의 모든 사용자가 소프트웨어를 무료로 사용할 수 있도록 하는 유연성을 강조하였다.&lt;/p>
+&lt;hr>
 &lt;blockquote>
 &lt;p>Elastic License 2.0는 오직 클라우드 서비스 공급 업체에서 Elasticsearch를 자기네 클라우드 서비스로 제공하는 것만은 막겠다는 의지인 것 같습니다.&lt;/p>
 &lt;p>결국 AWS는 Elasticsearch 서비스를 계속하기 위해 Elasticsearch를 &lt;a href="https://aws.amazon.com/ko/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/">Fork&lt;/a>했고, 이를 &lt;a href="https://opendistro.github.io/for-elasticsearch/">Open Distro for Elasticsearch&lt;/a>라고 명명하며 Apache License 2.0을 적용하고, 커뮤니티를 키워가기로 했습니다.&lt;/p>
 &lt;p>누가 오픈소스의 지속가능성과 발전에 기여하고 있는 것일까요?&lt;/p>
 &lt;/blockquote>
+&lt;hr>
+&lt;br>
 &lt;h2 id="elastic-license-20과-최신-라이선스-기술">Elastic License 2.0과 최신 라이선스 기술&lt;/h2>
 &lt;p>Elasticsearch는 사용자와 개발자 모두에게 공정하고 지속 가능한 비즈니스 모델을 유지하면서 가능한 한 개방성을 유지하기 위해 새로운 라이선스 모델로 전환하였다. 그렇게 함으로써 소스 공개 운동&lt;sub>source-available movement&lt;/sub>에 참여한 다른 참여자들의 목표와 추구하는 바를 라이선스 작성 시 반영하였다.&lt;/p>
 &lt;p>&lt;a href="https://www.elastic.co/licensing/elastic-license/faq">라이선스 변경에 대한 FAQ&lt;/a>에서 요약한 바와 같이 Elastic의 라이선스 변경은 고객이나 커뮤니티 사용자 수에 영향을 미치지 않을 것으로 예상된다. 대부분의 사용자는 Elastic의 소프트웨어를 기반으로 애플리케이션을 구축한다. 이는 &amp;ldquo;제3자에게 호스팅 또는 관리 서비스&lt;sub>as a hosted or managed Service&lt;/sub>로 제공&amp;quot;하는 비즈니스가 아니기 때문이다.&lt;/p>
+&lt;br>
 &lt;h2 id="더-나은-라이선스-만들기">더 나은 라이선스 만들기&lt;/h2>
 &lt;p>또한, Elastic은 Elastic License 2.0을 작성하는 데 리소스를 투입함으로써 라이선스 작성 기술의 발전을 추구하였다. 어떤 의미에서 소스 공개 라이선스는 소프트웨어만큼 오래되었다. 사실, 바이너리 전용 라이선스는 1980년대 PC / Mac 플랫폼 표준화의 산물이었다. 그 이전에는 거의 모든 소프트웨어가 소스 코드 형식으로 라이선스 되었다. 그러나 시간이 지남에 따라 라이선스의 배포 형식과 방법은 크게 달라졌다.&lt;/p>
 &lt;p>Elastic License 2.0은 이러한 추세의 정점이다. 형식적으로는 오픈소스 라이선스의 가장 인기 있는 간단하고 직관적인 작성 방식과 템플릿을 채택하였다. 또한 라이선스 키 보존 조항을 통해 공급 업체가 무료 및 유료 기능을 모두 갖춘 소프트웨어에 대한 라이선스를 쉽게 사용할 수 있도록 지원한다.&lt;/p>
@@ -491,21 +441,11 @@ It describes a software model where software:
 &lt;p>&lt;strong>&amp;ldquo;The rise of open source IPOs&amp;rdquo;&lt;/strong> &lt;a href="https://coss.media/rise-of-the-open-source-ipo/">https://coss.media/rise-of-the-open-source-ipo/&lt;/a>. This article tracks some of the spectacular business successes of open source companies.&lt;/p>
 &lt;p>&lt;strong>&amp;ldquo;The After Open Source Era Has Started&amp;rdquo;&lt;/strong> &lt;a href="https://monetize.substack.com/p/open-source-eras">https://monetize.substack.com/p/open-source-eras&lt;/a> . This article discusses the sea change represented by companies moving to source available licenses.&lt;/p>
 &lt;p>&lt;strong>US House of Representatives Committee on the Judiciary&amp;rsquo;s report on investigation into competition in digital markets, spearheaded by the Subcommittee on Antitrust, Commercial and Administrative Law.&lt;/strong> &lt;a href="https://www.documentcloud.org/documents/7222836-Investigation-of-Competition-in-Digital-Markets.html">https://www.documentcloud.org/documents/7222836-Investigation-of-Competition-in-Digital-Markets.html&lt;/a>. Note the mention of Elasticsearch on page 326.&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>
-&lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
-&lt;p>&amp;ldquo;Modification of Final Judgment,&amp;rdquo; August 24, 1982, filed in case 82-0192, United States of America v. Western Electric Company, Incorporated, and American Telephone and Telegraph Company, U.S. District Court for the District of Columbia &lt;a href="http://web.archive.org/web/20060827191354/members.cox.net/hwilkerson/documents/AT&amp;amp;T_Consent_Decree.pdf">web.archive.org/web/20060827191354/members.cox&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
-&lt;p>The Free Software Definition is similar to the Open Source Definition, but shorter and clearer.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
-&lt;p>Open source licenses can contain conditions, such as notices or source code sharing. But these are not limitations that tell you what you cannot do with software, they only require that if you elect to do certain things, you also must do others.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/section></description></item><item><title>Blog: 소스 코드 내 저작권 표시 방법</title><link>/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</link><pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</guid><description>
-&lt;img src="/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/featured_copyright_hu3c20e8f1f30640c88b46434ba146f1f1_89522_640x0_resize_catmullrom_2.png" width="640" height="299"/>
+&lt;p>&lt;a name="footnote_1">1&lt;/a>: &amp;ldquo;Modification of Final Judgment,&amp;rdquo; August 24, 1982, filed in case 82-0192, United States of America v. Western Electric Company, Incorporated, and American Telephone and Telegraph Company, U.S. District Court for the District of Columbia &lt;a href="http://web.archive.org/web/20060827191354/members.cox.net/hwilkerson/documents/AT&amp;amp;T_Consent_Decree.pdf">web.archive.org/web/20060827191354/members.cox&lt;/a>.&lt;a href="#footnote_1_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_2">2&lt;/a>: The Free Software Definition is similar to the Open Source Definition, but shorter and clearer.&lt;a href="#footnote_2_return">⏎&lt;/a>&lt;/p>
+&lt;p>&lt;a name="footnote_3">3&lt;/a>: Open source licenses can contain conditions, such as notices or source code sharing. But these are not limitations that tell you what you cannot do with software, they only require that if you elect to do certain things, you also must do others.&lt;a href="#footnote_3_return">⏎&lt;/a>&lt;/p></description></item><item><title>Blog: 소스 코드 내 저작권 표시 방법</title><link>/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</link><pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/</guid><description>
+&lt;img src="/blog/2020/08/12/%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%A0%80%EC%9E%91%EA%B6%8C-%ED%91%9C%EC%8B%9C-%EB%B0%A9%EB%B2%95/featured_copyright_hu3c20e8f1f30640c88b46434ba146f1f1_89522_640x0_resize_catmullrom_3.png" width="640" height="299"/>
 &lt;blockquote>
 &lt;p>안녕하세요.&lt;/p>
 &lt;p>오픈소스 분야의 저명한 변호사인 &lt;a href="https://matija.suklje.name/">Matija Šuklje&lt;/a>는 최근 소스 코드 내 저작권 표시가 필요한 이유와 올바르게 작성하는 방법을 &lt;a href="https://matija.suklje.name/how-and-why-to-properly-write-copyright-statements-in-your-code">소개&lt;/a>하였습니다.&lt;/p>
@@ -518,15 +458,15 @@ It describes a software model where software:
 &lt;li>무엇을 하면 되는지만 간단히 알고 싶어하는 개발자를 위해&lt;/li>
 &lt;li>단지 모범 사례 뿐만 아니라 그 이면에 있는 이유에 대해서도 이해하고자 하는 FOSS 컴플라이언스 담당자와 법률가를 위해&lt;/li>
 &lt;/ol>
-&lt;p>시간이 극단적으로 없다면, &lt;a href="#tldr">TL;DR&lt;/a>에서 최소한의 가이드를 확인하라. 2분 정도의 시간이 있다면 아래의 &lt;a href="#how-to-write-a-good-copyright-statement-and-license-notice">actual HowTo a bit lower below&lt;/a>를 읽어라.&lt;/p>
+&lt;p>시간이 극단적으로 없다면, &lt;a href="##tldr">TL;DR&lt;/a>에서 최소한의 가이드를 확인하라. 2분 정도의 시간이 있다면 아래의 &lt;a href="#how-to-write-a-good-copyright-statement-and-license-notice">actual HowTo a bit lower below&lt;/a>를 읽어라.&lt;/p>
 &lt;p>물론, 20분 정도의 시간이 있다면, 처음부터 끝까지 한번 읽어보는 것이 제일 좋다.&lt;/p>
-&lt;h1 id="tldr">TL;DR&lt;/h1>
+&lt;h2 id="tldr">TL;DR&lt;/h2>
 &lt;p>아래 포맷의 저작권 및 라이선스 표시 당신이 작성한 모든 소스 코드 파일에 추가하라.&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© {$year_of_file_creation} {$name_of_copyright_holder} &amp;lt;{$contact}&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© {$year_of_file_creation} {$name_of_copyright_holder} &amp;lt;{$contact}&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">SPDX-License-Identifier&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{&lt;span style="color:#000">$SPDX_license_name}&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>예를 들어, 내가 오늘 소스 코드 파일을 하나 작성하였고, 이를 [BSD-3-Clause license][bsd-3-clause] 라이선스로 공개하였다면, 다음과 같은 내용을 파일 상단 주석 부분에 추가한다.&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">SPDX-License-Identifier&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">BSD-3-Clause&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>참고로 [REUSE.software][reuse] 프로젝트의 가이드를 따르면 모든 파일에 적절한 표시가 되었는지 확인할 수 있다.&lt;/p>
@@ -539,7 +479,7 @@ reuse addheader --copyright-style spdx-symbol --copyright "Matija Šuklje &lt;ma
 ```
 And while you are at it, check the [other features of the REUSE helper tool][reuse_tool], to manage also licensing info.
 -->
-&lt;h1 id="저작권이란">저작권이란?&lt;/h1>
+&lt;h2 id="저작권이란">저작권이란?&lt;/h2>
 &lt;p>&lt;strong>저작권&lt;/strong>은 ([베른 협약][berne] 이후) 저작자가 저작물 만들 때 &lt;strong>자동으로 생성&lt;/strong>된다. 모든 저작물은 저작권에 의해 보호되며, 저작권 보유자에게 저작물에 대한 독점적인 권한이 부여된다. 따라서 당신의 저작물(소스 코드, 텍스트, 이미지, 기타 미디어 등)을 다른 사용자가 사용할 수 있게 하려면 그들에게 라이선스를 부여해야 한다. 라이선스의 사전적 정의는 &amp;ldquo;특정 권리를 실행하기 위해 자격이 있는 기관으로부터 받은 허가&amp;quot;이며, 이러한 허가 없이 특정 권리를 실행하는 것은 저작권 침해와 같은 불법 행위가 된다.&lt;/p>
 &lt;p>마찬가지로 당신이 다른 사람의 소스 코드를 복사, 수정 등의 작업을 하려면 &lt;strong>필요한 권한을 부여 받아야&lt;/strong> 한다. 즉, 라이선스를 받아야 한다. 만약, 그 라이선스가 권리 실행 허가 조건으로 특정 의무를 요구한다면, 당신은 권리 실행을 위해 그 의무사항도 따라야만 한다.&lt;/p>
 &lt;p>어쨌든, 저작권법의 기본 요건을 준수해야 하며, 이를 위해서는 최소한 다음 두 가지가 필요한다.&lt;/p>
@@ -551,17 +491,17 @@ And while you are at it, check the [other features of the REUSE helper tool][reu
 &lt;p>&lt;strong>라이선스 (license)&lt;/strong> : 라이선스는 저작권 보유자 이외의 다른 사람에게 코드를 사용할 권한을 부여하는 유일한 방법이기 때문에 라이선스를 고지하고 전체 라이선스 텍스트를 제공하는 것이 좋다. 이는 당신이 내보내는 Outbound 라이선스나 (복사된 코드나 라이브러리 같은 3rd party 저작물을 사용하면서) 다른 이로부터 받는 Inbound 라이선스 모두에 해당한다.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="alert alert-success" role="alert">
-&lt;h4 class="alert-heading">Inbound vs. Outbound 라이선스&lt;/h4>
-당신이 사용자(downstream)에게 부여한 라이선스를 Outbound 라이선스라고 부릅니다. 이는 당신으로부터 흘러나오는(out) 코드의 권한을 다루기 때문이다. 반대로, (동일한 코드의) 사용자 입장에서는 그들에게 흘러들어오는 (In) 코드의 권한을 다루기 때문에 Inbound 라이선스로 간주한다.
+&lt;blockquote>
+&lt;p>&lt;strong>Inbound vs. Outbound 라이선스&lt;/strong>&lt;/p>
+&lt;p>당신이 사용자(downstream)에게 부여한 라이선스를 Outbound 라이선스라고 부른다. 이는 당신으로부터 흘러나오는(out) 코드의 권한을 다루기 때문이다. 반대로, (동일한 코드의) 사용자 입장에서는 그들에게 흘러들어오는 (In) 코드의 권한을 다루기 때문에 Inbound 라이선스로 간주한다.
 간단히 말해, 유입되는 권한을 설명하는 라이선스를 Inbound 라이선스라고 하고, 유출되는 권한을 설명하는 라이선스를 Outbound 라이선스라고 한다.
-다행인 점은 저작자 표시는 저자의 권리이지 의무는 아닙니다. 또한 사용자는 저자가 저작자 표시 권리를 사용한 경우에만 이를 유지해야 하는 의무가 있다. 즉, 저자가 저작자 표시를 하지 않았을 때에는 사용자가 이를 직 표시하려고 수고하지 않아도 된다.
-&lt;/div>
-&lt;h1 id="왜-저작권-표시를-해야-하는가">왜 저작권 표시를 해야 하는가?&lt;/h1>
+다행인 점은 저작자 표시는 저자의 권리이지 의무는 아니다. 또한 사용자는 저자가 저작자 표시 권리를 사용한 경우에만 이를 유지해야 하는 의무가 있다. 즉, 저자가 저작자 표시를 하지 않았을 때에는 사용자가 이를 직 표시하려고 수고하지 않아도 된다.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="왜-저작권-표시를-해야-하는가">왜 저작권 표시를 해야 하는가?&lt;/h2>
 &lt;p>1989년 베른 협약에 가입하기 전까지 미국 저작권법은 저작물을 보호하려면 명시적인 저작권 표시를 요구하였다. 그러나 베른 협약으로 저작권 표시를 하지 않아도 저작권은 자동으로 생성된다. 그럼에도 저작권 표시는 유용한다.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
-저작권 표시가 법에 따라 요구되는 것은 아니지만, 실제로는 해당 저작물의 저작권이 누구에게 있는지에 대한 증거로서 매우 유용한다. 또한, 이는 컴플라이언스 측면이나 코드 추적을 위해서도 큰 도움이 된다.
-&lt;/div>
+&lt;blockquote>
+&lt;p>저작권 표시가 법에 따라 요구되는 것은 아니지만, 실제로는 해당 저작물의 저작권이 누구에게 있는지에 대한 증거로서 매우 유용한다. 또한, 이는 컴플라이언스 측면이나 코드 추적을 위해서도 큰 도움이 된다.&lt;/p>
+&lt;/blockquote>
 &lt;p>저작권 표시는 실질적으로 다음과 같은 이유로 필요한다.&lt;/p>
 &lt;ol>
 &lt;li>대부분의 라이선스가 저작권 표시를 요구한다.&lt;/li>
@@ -569,8 +509,8 @@ And while you are at it, check the [other features of the REUSE helper tool][reu
 &lt;li>(이러한 요구가 없더라도) 사용자는 법적 또는 기술적인 이유로 원저작자에게 연락하기를 원할 수도 있다.&lt;/li>
 &lt;/ol>
 &lt;p>따라서, 저작물에 저작자의 이름과 연락처 정보를 포함하는 것은 의미가 있다.&lt;/p>
-&lt;h1 id="저작권-표시-및-라이선스-고지의-올바른-방법">저작권 표시 및 라이선스 고지의 올바른 방법&lt;/h1>
-&lt;h2 id="저작권-표시">저작권 표시&lt;/h2>
+&lt;h2 id="저작권-표시-및-라이선스-고지의-올바른-방법">저작권 표시 및 라이선스 고지의 올바른 방법&lt;/h2>
+&lt;h3 id="저작권-표시">저작권 표시&lt;/h3>
 &lt;p>좋은 저작권 표시는 다음 정보로 구성되어야 한다.&lt;/p>
 &lt;ul>
 &lt;li>
@@ -588,9 +528,9 @@ And while you are at it, check the [other features of the REUSE helper tool][reu
 &lt;/ul>
 &lt;p>예를 들어, 오늘 소스 코드 파일을 작성하였다면 다음과 같이 저작권 표시를 파일 상단 헤더 부분에 추가한다.&lt;/p>
 &lt;pre>&lt;code>© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;
-&lt;/code>&lt;/pre>&lt;h2 id="라이선스-고지">라이선스 고지&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h3 id="라이선스-고지">라이선스 고지&lt;/h3>
 &lt;p>또한, 코드를 공개하면서 라이선스가 무엇인지 알리는 것도 매우 중요한다. &lt;a href="https://spdx.org/ids">SPDX ID&lt;/a>를 사용하면 코드의 라이선스를 명확하게 알릴 수 있다. 라이선스 고지가 명확하지 않으면 이를 보는 사용자에게 혼란을 야기시킬 수 있다.&lt;/p>
-&lt;h2 id="reusesoftware">REUSE.software&lt;/h2>
+&lt;h3 id="reusesoftware">REUSE.software&lt;/h3>
 &lt;p>​&lt;a href="https://reuse.software/">REUSE.software&lt;/a> 프로젝트는 SPDX tag를 사용해서 저작권 표시와 라이선스 고지를 작성하는 Best Practice를 제공한다.&lt;/p>
 &lt;ul>
 &lt;li>
@@ -601,27 +541,27 @@ And while you are at it, check the [other features of the REUSE helper tool][reu
 &lt;/li>
 &lt;/ul>
 &lt;p>아래의 예는 위의 모든 사항을 고려하고 SPDX 및 REUSE.software 요구사항을 모두 준수하는 저작권 표시 및 라이선스 고지이다.&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">SPDX-FileCopyrightText&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">© 2020 Matija Šuklje &amp;lt;matija@suklje.name&amp;gt;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">SPDX-License-Identifier&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">BSD-3-Clause&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이제 당신이 작성한 모든 소스 코드 파일에 이러한 주석이 포함되었는지 확인하라!&lt;/p>
-&lt;h1 id="faq">FAQ&lt;/h1>
-&lt;h2 id="왜-연도를-표시해야-하는가">왜 연도를 표시해야 하는가?&lt;/h2>
+&lt;h2 id="faq">FAQ&lt;/h2>
+&lt;h3 id="왜-연도를-표시해야-하는가">왜 연도를 표시해야 하는가?&lt;/h3>
 &lt;p>어떤 사람들은 연도를 생략하고 단순하게 작성하는 게 오히려 저작권 표시를 유지하기 쉬울 것이라고 주장한다. 실제로 이는 Microsoft와 GitHub의 정책이기도 한다.&lt;/p>
 &lt;p>연도를 표시하지 않는 게 작업을 크게 단순화한다는 데에는 동의하지만, 이를 유지한다면 코드 베이스에서의 모호한 타임라인을 확인하는 데 도움이 된다. 또한, 발명이 처음으로 일반인에게 언제 공개되었는지를 알아내는데 유용할 수 있다. 특히 특허 방어에 유용하게 사용될 수 있다.&lt;/p>
 &lt;p>이런 사항들을 고려하여 Liferay의 새로운 정책에서는 파일 생성 연도를 작성하고, 연도를 더 변경하지 않다.&lt;/p>
-&lt;h2 id="왜-연도-표시를-변경하지-말아야-하는가">왜 연도 표시를 변경하지 말아야 하는가?&lt;/h2>
+&lt;h3 id="왜-연도-표시를-변경하지-말아야-하는가">왜 연도 표시를 변경하지 말아야 하는가?&lt;/h3>
 &lt;p>다음과 같은 저작권 표시를 보았을 거다.&lt;/p>
 &lt;pre>&lt;code>Copyright (C) 1992, 1995, 2000, 2001, 2003 CompanyX Inc.
 &lt;/code>&lt;/pre>&lt;p>이렇게 계속해서 연도를 추가하는 건 이렇게 하면 저작권 보호 기간을 연장할 수 있다는 생각이 있기 때문이며, 실제 널리 행해 지고 있다. 하지만, 불행하게도 이런 작업은 쓸모가 없고, 오히려 해가 될 도 있다.&lt;/p>
 &lt;p>게다가 새로운 변경이나 기여를 받을 때마다 이렇게 그 연도를 추가하는 행위를 법적으로 본다면 논란의 여지가 있다. 문제는 모든 기여가 저작권을 주장할 수 있을 정도로 독창적이거나 규모가 있지 않다. 따라서, 문제 소지를 없애려면 모든 기여에 대해 법률에 따라 저작권 보호를 받을 수 있을 만큼 독창적인지 여부를 먼저 판단하고, 그에 따라 저작권 표시에 연도를 추가해야할 것이다.아&lt;/p>
 &lt;p>반면에 저작권은 저자의 사망 이후 (혹은 저작권자가 법인일 경우, 발행 이후) 최소 50년 (보통 70년) 동안 지속된다. 따라서, 굳이 저작권 표시에 연도를 계속해서 추가하지 않아도 보호 기간 만료 때문에 저작권을 주장하지 못하게 될 위험은 매우 낮다.&lt;/p>
 &lt;p>게다가, 일반적으로 하나의 소스 코드 파일은 소프트웨어를 구성하는 수많은 파일 중 하나일 뿐이다. 소프트웨어가 성장해가면서 새롭게 파일이 추가될 텐데, 그때 새로운 파일에 새로운 작성 연도를 추가해간다면 전체 저작물로서의 소프트웨어에는 최신 연도의 저작권 표시가 이미 포함되고 있는 거다.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
-&lt;h4 class="alert-heading">Git/VCS 히스토리를 더럽히지 마라&lt;/h4>
-만약 매년 모든 파일에 연도 표시를 새롭게 추가한다면 이로 인해 Git/VCS 히스토리가 불필요하게 길어지게 되고, 저장소 공간을 소비하며, 정작 중요한 정보를 찾을 때 방해가 될 수 있다.
-&lt;/div>
-&lt;h2 id="연도를-범위로-표시하는-건-어떤가요">연도를 범위로 표시하는 건 어떤가요?&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;strong>Git/VCS 히스토리를 더럽히지 마라&lt;/strong>&lt;/p>
+&lt;p>만약 매년 모든 파일에 연도 표시를 새롭게 추가한다면 이로 인해 Git/VCS 히스토리가 불필요하게 길어지게 되고, 저장소 공간을 소비하며, 정작 중요한 정보를 찾을 때 방해가 될 수 있다.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="연도를-범위로-표시하는-건-어떤가요">연도를 범위로 표시하는 건 어떤가요?&lt;/h3>
 &lt;p>연도를 범위로 표시하는 것(예: 1999-2020)도 매년 연도 표시를 변경해줘야 하기 때문에 위의 질문에서 언급한 모든 사항이 동일하게 적용된다.&lt;/p>
 &lt;p>어떤 경우는 &amp;lsquo;{$year}-present&amp;rsquo;와 같은 형태로 범위를 지정하기도 한다. 이 또한 위에서 언급한 사항들이 대부분 적용되며, 추가로 또 다른 혼란을 줄 수 있다. &amp;lsquo;present&amp;rsquo;가 의미하는 것은 추상적이다. &amp;lsquo;present&amp;rsquo;는 어떤 것을 의미하는 걸까요?&lt;/p>
 &lt;ul>
@@ -642,21 +582,21 @@ And while you are at it, check the [other features of the REUSE helper tool][reu
 &lt;/li>
 &lt;/ul>
 &lt;p>이처럼 &amp;lsquo;present&amp;rsquo;는 전혀 도움이 되지 않는 표시이다.&lt;/p>
-&lt;h2 id="gitmercurial이-저작권-정보를-추적하는데-더-좋지-않는가">Git/Mercurial이 저작권 정보를 추적하는데 더 좋지 않는가?&lt;/h2>
+&lt;h3 id="gitmercurial이-저작권-정보를-추적하는데-더-좋지-않는가">Git/Mercurial이 저작권 정보를 추적하는데 더 좋지 않는가?&lt;/h3>
 &lt;p>항상 그렇지는 않다. Git (및 다른 VCS)은 메타데이터 관리에 뛰어나지만, 항상 이 의존하는 것은 주의해야 한다.&lt;/p>
 &lt;p>먼저 Git은 &amp;lsquo;Committer&amp;rsquo; 필드와 별개로 &amp;lsquo;Author&amp;rsquo; 필드가 있다. 기여자마다 &amp;lsquo;Author&amp;rsquo; 필드에 제각각의 값을 포함시킬 뿐더러, &amp;lsquo;Author&amp;rsquo; 필드에 입력된 사람이 실제 저자라고 가정하여도 저자는 저작권 보유자가 아닐 수도 있다.&lt;/p>
-&lt;p>더 중요하게는, 파일이 저장소에서 옮기게 되면 메타데이터는 사라집니다. 소스 코드만 압축해서 배포한다거나, 저장소를 fork 혹은 rebase하는 방식으로 각 파일을 새로운 코드 베이스로 복사하면 이전까지의 추적 데이터는 더 이상 확인할 수 없다.&lt;/p>
+&lt;p>더 중요하게는, 파일이 저장소에서 옮기게 되면 메타데이터는 사라진다. 소스 코드만 압축해서 배포한다거나, 저장소를 fork 혹은 rebase하는 방식으로 각 파일을 새로운 코드 베이스로 복사하면 이전까지의 추적 데이터는 더 이상 확인할 수 없다.&lt;/p>
 &lt;p>이러한 문제들은 모든 파일에 저작권 및 라이선스 정보를 표시하면 해결된다. &lt;a href="https://reuse.software/">REUSE.software&lt;/a>의 Best Practice는 이를 아주 잘 처리한다.&lt;/p>
-&lt;h2 id="왜--기호를-사용하는가">왜 © 기호를 사용하는가?&lt;/h2>
+&lt;h3 id="왜--기호를-사용하는가">왜 © 기호를 사용하는가?&lt;/h3>
 &lt;p>어떤 사람은 &amp;ldquo;Copyright&amp;quot;라는 영어 단어가 더 자주 사용되고, 이미 많은 사람이 익숙하다고 주장할 수도 있지만, 실제로 저작권법을 보면 &amp;ldquo;©&amp;rdquo; (Copyright Sign)을 사용하는 것이 저작권 진술을 위한 유일한 방법임을 알 수 있다.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
-EU에서의 한 예로, 슬로베니아의 ZASP §175. (1)은 독점적 저작권 보유자가 자신의 저작물을 표시하기 위해 &amp;ldquo;(c)&amp;rdquo; 또는 &amp;ldquo;©&amp;quot;로 표시할 수 있다고 명시하고 있다.
+&lt;blockquote>
+&lt;p>EU에서의 한 예로, 슬로베니아의 ZASP §175. (1)은 독점적 저작권 보유자가 자신의 저작물을 표시하기 위해 &amp;ldquo;(c)&amp;rdquo; 또는 &amp;ldquo;©&amp;quot;로 표시할 수 있다고 명시하고 있다.
 반면에 미국에서는 17 U.S. Code § 401. (b)(1) 에서는 다음과 같이 저작물 표시 방법을 지정하고 있다.
-&amp;ldquo;the symbol © (the letter C in a circle), or the word “Copyright”, or the abbreviation “Copr.”&amp;rdquo;
-&lt;/div>
+&amp;ldquo;the symbol © (the letter C in a circle), or the word “Copyright”, or the abbreviation “Copr.”&amp;rdquo;&lt;/p>
+&lt;/blockquote>
 &lt;p>또한, © 는 &amp;ldquo;common global denominator&amp;quot;이기 때문에 이를 사용하는 것이 합리적이다.&lt;/p>
 &lt;p>© 기호가 호불호가 있을 수 있지만, 실용적인 관점에서 볼 때 사실 그다지 중요하지 않은 부분이다. 위에서 설명했듯이 저작권은 자동으로 생성되기 때문에 어떤 기호를 쓰느냐에 따라 법적인 리스크가 달라지지는 않다.&lt;/p>
-&lt;h2 id="왜-연락처를-남겨야-하는가-두-명-이상의-저자가-있을-때는-어떻게-하는가">왜 연락처를 남겨야 하는가? 두 명 이상의 저자가 있을 때는 어떻게 하는가?&lt;/h2>
+&lt;h3 id="왜-연락처를-남겨야-하는가-두-명-이상의-저자가-있을-때는-어떻게-하는가">왜 연락처를 남겨야 하는가? 두 명 이상의 저자가 있을 때는 어떻게 하는가?&lt;/h3>
 &lt;p>연락처 정보는 저작권법에 의해 요구되는 것은 아니지만, 실용적인 이유로 매우 유용한다.&lt;/p>
 &lt;p>사용자는 법적 또는 기술적인 문의를 위해 코드의 저자 또는 저작권 보유자에게 연락하고 싶을 수 있다. 코드가 어떻게 동작하는지 물어보거나 수정을 요청할 수도 있다. 라이선스 문제를 발견하여 문제를 해결할 수 있도록 도움을 주거나 별도의 라이선스를 요청해야 할 수도 있다. 이 모든 경우에 연락처 정보가 많은 도움이 된다.&lt;/p>
 &lt;ul>
@@ -670,7 +610,7 @@ EU에서의 한 예로, 슬로베니아의 ZASP §175. (1)은 독점적 저작�
 &lt;p>프로젝트에서 AUTHORS 또는 CONTRIBUTORS와 같은 파일에 저작권 보유자를 표시하는 경우 해당 파일을 가리키는 링크를 제공하는 것도 좋은 옵션이다.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="public-domain은-무엇인가">Public Domain은 무엇인가?&lt;/h2>
+&lt;h3 id="public-domain은-무엇인가">Public Domain은 무엇인가?&lt;/h3>
 &lt;p>일반적으로 Public Domain은 저작권 기간이 만료된 저작물이지만, 까다로운 개념이어서 주의가 필요한다.&lt;/p>
 &lt;p>일부 관할권 (예: 미국, 영국)에서는 저작권 보유자가 자신의 저작권을 포기하고 저작물을 Public Domain으로 기부할 수 있지만, 대부분의 관할권(예: 대부분의 EU 회원국)에서는 이런 행위가 불가능한다. 이는 관할권에 따라 저자가 자신의 저작물을 Public Domain으로 제공한다고 표시하였다고 하더라도 이것이 실제로 유효하게 하기 위한 법적 기준을 충족할 수 없고, 결국 여전히 저작물에 대한 저작권을 저작권자만 보유하고 있음을 의미한다.&lt;/p>
 &lt;p>따라서 저작권과 라이선스를 진지하게 다루는 오픈소스 컴플라이언스 담당자들은 &amp;ldquo;this is public domain&amp;quot;이라는 표시를 매우 경계한다.&lt;/p>
@@ -683,16 +623,16 @@ EU에서의 한 예로, 슬로베니아의 ZASP §175. (1)은 독점적 저작�
 &lt;p>&amp;ldquo;SPDX-FileCopyrightText:&amp;rdquo; 필드에 이름과 연락처 정보를 남기세요. 사용자가 저작권자의 의도를 궁금해하거나, 어떤 불분명한 사항이 있으면 연락을 취하여 문제를 해결할 수 있게 하라.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="minified-javascript에서는-저작권-표시를-어떻게-하는가">Minified JavaScript에서는 저작권 표시를 어떻게 하는가?&lt;/h2>
+&lt;h3 id="minified-javascript에서는-저작권-표시를-어떻게-하는가">Minified JavaScript에서는 저작권 표시를 어떻게 하는가?&lt;/h3>
 &lt;p>최근의 Minifier는 주석을 제거하더라도 저작권 및 라이선스 정보는 보존하는 옵션을 제공한다. 코드를 minify 할 때 이런 옵션을 사용하여 저작권과 라이선스 정보를 유지하라.&lt;/p>
-&lt;div class="alert alert-success" role="alert">
-소스 코드를 다른 언어나 컴파일러 및 다른 형태로 변환하더라도 모두 저작권 보유자에게 독점적 권리가 있다. 따라서, minify 한 코드를 사용할 때에도 유효한 라이선스가 필요한다.
-&lt;/div>
-&lt;h2 id="all-rights-reserved-표시에는-어떤-문제가-있는가">&amp;ldquo;All rights reserved&amp;rdquo; 표시에는 어떤 문제가 있는가?&lt;/h2>
-&lt;p>종종 저작권 표시에 &amp;ldquo;All rights reserved&amp;quot;라는 문장을 본 적이 있을 거다. 저작권법은 이런 표현을 요구하지 않다. 아마 음악 CD나 책에서 사용하는 걸 보고 단순히 모방해서 사용하는 게 아닐까 생각한다. 하지만, 오픈소스에서 이런 표현은 혼란을 야기시킵니다.&lt;/p>
+&lt;blockquote>
+&lt;p>소스 코드를 다른 언어나 컴파일러 및 다른 형태로 변환하더라도 모두 저작권 보유자에게 독점적 권리가 있다. 따라서, minify 한 코드를 사용할 때에도 유효한 라이선스가 필요하다.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="all-rights-reserved-표시에는-어떤-문제가-있는가">&amp;ldquo;All rights reserved&amp;rdquo; 표시에는 어떤 문제가 있는가?&lt;/h3>
+&lt;p>종종 저작권 표시에 &amp;ldquo;All rights reserved&amp;quot;라는 문장을 본 적이 있을 거다. 저작권법은 이런 표현을 요구하지 않다. 아마 음악 CD나 책에서 사용하는 걸 보고 단순히 모방해서 사용하는 게 아닐까 생각한다. 하지만, 오픈소스에서 이런 표현은 혼란을 야기시킨다.&lt;/p>
 &lt;p>&amp;ldquo;All rights reserved&amp;quot;는 명백히 오픈소스 라이선스와 모순된다. 오픈소스 라이선스는 누구나 코드를 사용, 연구, 공유 및 개선할 수 있는 권리를 제공한다. 반면에 &amp;ldquo;All rights reserved&amp;quot;는 이러한 모든 권리가 자신에게만 부여된다는 표현이다.&lt;/p>
 &lt;p>&amp;ldquo;All right reserved&amp;quot;는 이와 같은 문제만 가져올 뿐, 어떤 이점도 가져오지 않기 때문에 오픈소스에서는 사용하지 말아야 한다.&lt;/p></description></item><item><title>Blog: OSS Supply Chain Security</title><link>/blog/2020/03/01/oss-supply-chain-security/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/blog/2020/03/01/oss-supply-chain-security/</guid><description>
-&lt;img src="/blog/2020/03/01/oss-supply-chain-security/featured-loop_hu88dfe7eb0bb5368b8993741697168b99_363064_640x0_resize_catmullrom_2.png" width="640" height="546"/>
+&lt;img src="/blog/2020/03/01/oss-supply-chain-security/featured-loop_hu88dfe7eb0bb5368b8993741697168b99_363064_640x0_resize_catmullrom_3.png" width="640" height="546"/>
 &lt;hr>
 &lt;blockquote>
 &lt;p>안녕하세요.&lt;/p>
