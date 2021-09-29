@@ -135,3 +135,46 @@ This offer is valid to anyone in receipt of this information.
 
 아래 그림은 외부 문의 대응을 위해 기업이 갖춰야할 프로세스이다. 
 
+![](access.png)
+[https://haksungjang.github.io/docs/openchain/#2-외부-문의-대응-프로세스](https://haksungjang.github.io/docs/openchain/#2-%EC%99%B8%EB%B6%80-%EB%AC%B8%EC%9D%98-%EB%8C%80%EC%9D%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)
+
+[“부록 2. 샘플 오픈소스 컴플라이언스 프로세스의 2. 외부 문의 대응 프로세스](https://haksungjang.github.io/docs/openchain/#2-%EC%99%B8%EB%B6%80-%EB%AC%B8%EC%9D%98-%EB%8C%80%EC%9D%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)”에서 세부 내용을 확인할 수 있다.
+
+이와 같은 절차를 마련한다면 ISO/IEC 5230에서 요구하는 다음 입증 자료를 준비할 수 있다.
+
+{{% alert title="ISO/IEC 5230" color="success" %}}
+
+* <b>3.2.1.2 제 3자의 오픈소스 라이선스 컴플라이언스 문의에 대응하기 위한 내부의 문서화된 절차</b>
+
+{{% /alert %}}
+
+| 자체 인증 2.c  | 오픈소스 컴플라이언스 문의를 받고 대응하기 위한 책임을 할당하는 문서화된 절차가 있습니까? |
+|---|:---|
+|  | Do you have a documented procedure that assigns responsibility for receiving and responding to open source compliance inquiries? |
+
+## 오픈소스 기여 프로세스
+
+기업이 외부 오픈소스 프로젝트에 기여를 허용하는 정책을 갖고 있다면, 사내 개발자들이 어떤 절차로 외부 프로젝트에 기여할 수 있을지 관리하는 문서화된 절차가 있어야 한다. 
+
+SK텔레콤에서 공개한 [오픈소스 기여 절차](https://sktelecom.github.io/guide/contribute/process/)는 좋은 예이다.
+
+![](contribution.png)
+[https://sktelecom.github.io/guide/contribute/process/](https://sktelecom.github.io/guide/contribute/process/)
+
+
+이와 같은 절차를 마련한다면 ISO/IEC 5230에서 요구하는 다음 입증 자료를 준비할 수 있다.
+
+{{% alert title="ISO/IEC 5230" color="success" %}}
+
+* <b>3.5.1.2 오픈소스 기여를 관리하는 문서화된 절차</b>
+
+{{% /alert %}}
+
+| 자체 인증 5.b  | 오픈소스 기여를 관리하는 문서화된 절차가 있습니까? |
+|---|:---|
+|  | Do you have a documented procedure that governs Open Source contributions? |
+
+여기까지 프로세스를 구축하게 되면 ISO/IEC 5230 요구사항을 아래와 같이 준수하게 된다. 
+
+![](processno.png)
+
