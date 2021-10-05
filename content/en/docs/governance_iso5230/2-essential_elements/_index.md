@@ -7,7 +7,7 @@ description: >
 
 ## 오픈소스 거버넌스 체계 필수 구성 요소
 
-기업이 효율적인 오픈소스 거버넌스 체계를 구축하기 위해선느 다음과 같은 구성 요소가 필요하다. 
+기업이 효율적인 오픈소스 거버넌스 체계를 구축하기 위해서는 다음과 같은 구성 요소가 필요하다. 
 
 {{< imgproc elements Fit "900x600" >}}
 <center><i>Essential elements of an open source management program : https://www.linuxfoundation.org/wp-content/uploads/OpenSourceComplianceHandbook_2018_2ndEdition_DigitalEdition.pdf</i></center>
