@@ -63,11 +63,11 @@
 &lt;/div>
 &lt;p>이런 구성 요소 중 기업이 ISO/IEC 5230에서 요구하는 모든 항목에 적합한 오픈소스 거버넌스 체계 구축을 위해서는 기본적으로 아래의 다섯가지 사항을 갖추어야 한다. 여기서는 이에 대한 세부 사항을 설명한다.&lt;/p>
 &lt;ol>
-&lt;li>조직 (담당자)&lt;/li>
-&lt;li>정책&lt;/li>
-&lt;li>프로세스&lt;/li>
-&lt;li>도구&lt;/li>
-&lt;li>교육 / 가이드&lt;/li>
+&lt;li>&lt;a href="../3-teams">조직 (담당자)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../4-polic">정책&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../5-process">프로세스&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../6-tool">도구&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../7-training">교육/평가&lt;/a>&lt;/li>
 &lt;/ol></description></item><item><title>Docs: 3. 조직 (담당자)</title><link>/docs/governance_iso5230/3-teams/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/governance_iso5230/3-teams/</guid><description>
 &lt;h2 id="역할과-책임-정의">역할과 책임 정의&lt;/h2>
 &lt;p>기업의 오픈소스 거버넌스 체계를 구축하기 위해서는 먼저 이를 책임지고 수행할 책임자가 필요하다. 오픈소스 프로그램 매니저, 오픈소스 컴플라이언스 담당자 등의 명칭으로 불릴 수 있으며, 이 책임자는 기업의 오픈소스 컴플라이언스에 대한 총괄 책임을 담당한다.&lt;/p>
