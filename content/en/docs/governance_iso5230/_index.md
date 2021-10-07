@@ -1,5 +1,5 @@
 ---
-title: "오픈소스 국제 표준(ISO/IEC 5230)에 기반한 기업 오픈소스 거버넌스 구축 가이드"
+title: "국제표준(ISO/IEC 5230)에 기반한 기업 오픈소스 거버넌스 구축 가이드"
 linkTitle: "기업 오픈소스 거버넌스 구축"
 weight: 30
 description: >
