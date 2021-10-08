@@ -15,3 +15,11 @@ ISO/IEC 5230은 오픈소스 컴플라이언스를 위한 국제 표준으로 �
 **Author : 장학성 (haksung@sktelecom.com)**
 
 {{% /pageinfo %}}
+
+## References
+
+이 가이드는 다음 자료를 참고하였습니다.
+
+1. [OpenChain Project Website](https://www.openchainproject.org/)
+2. [OpenChain Open Source Policy Template](https://www.openchainproject.org/resources)
+3. [Open Source Compliance In The Enterprise](https://www.linuxfoundation.org/compliance-and-security/2018/12/open-source-compliance-in-the-enterprise/)
