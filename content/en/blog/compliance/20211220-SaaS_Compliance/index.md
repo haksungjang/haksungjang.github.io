@@ -19,7 +19,7 @@ SaaS 서비스 제공 업체는 서비스를 위해 소프트웨어를 배포하
 
 ---
 
-## 1. Client Side로 전달되는 소프트웨어가 있다.
+## 1. Client Side로 배포되는 소프트웨어를 고려하라. 
 
 Heather는 먼저 Client Side Software에 대해 언급하였습니다. SaaS Platform에서는 대부분의 소프트웨어가 공급업체의 Server-side에 존재하지만, 일부 소프트웨어는 사용자의 컴퓨터(“Client-Side”)로 전달이 되어 동작하게 됩니다. 
 
