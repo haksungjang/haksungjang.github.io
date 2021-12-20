@@ -105,7 +105,7 @@ By <b>장학성</b> |
 <p>SaaS 서비스 제공 업체는 서비스를 위해 소프트웨어를 배포하지 않기 때문에 오픈소스를 사용하더라도 라이선스 의무에서 비교적 자유로울 수 있습니다. 하지만, AGPL 등 네트워크를 통한 서비스 제공 시에도 라이선스 의무를 준수하는 오픈소스 라이선스도 있기 때문에 이에 대해서는 주의가 필요합니다.</p>
 <p>미국의 저명한 오픈소스 전문 변호사인 Heather Meeker는 <a href=https://heathermeeker.com/2021/11/23/open-source-compliance-for-saas-vendors/>Open Source Compliance for SaaS Vendors</a>라는 글을 게재하여 SaaS 공급업체가 주의해야 할 Open Source Compliance에 대해 설명하였는데요, 오늘은 이 내용을 소개하겠습니다.</p>
 <hr>
-<h2 id=1-client-side로-전달되는-소프트웨어가-있다>1. Client Side로 전달되는 소프트웨어가 있다.</h2>
+<h2 id=1-client-side로-배포되는-소프트웨어를-고려하라>1. Client Side로 배포되는 소프트웨어를 고려하라.</h2>
 <p>Heather는 먼저 Client Side Software에 대해 언급하였습니다. SaaS Platform에서는 대부분의 소프트웨어가 공급업체의 Server-side에 존재하지만, 일부 소프트웨어는 사용자의 컴퓨터(“Client-Side”)로 전달이 되어 동작하게 됩니다.</p>
 <p>Heather는 SaaS 형태로 웹사이트 제작 기능을 제공하는 <a href=https://wordpress.com/>워드프레스</a>를 예로 들어 설명하였습니다. Chrome 브라우저로 워드프레스에 접속하여 블로그를 제작하는 화면을 가정하겠습니다. 거기에서 control-u(맥북 환경에서는 Command + Option + U)를 누르면 page source code를 볼 수 있는데, 3천 라인 가량의 소스 코드가 있는 것을 볼 수 있습니다(물론 블로그 작성 기능을 구성하는 대부분의 소스 코드는 <a href=http://WordPress.com>WordPress.com</a> 측 서버에서 구동됩니다).</p>
 <p>이러한 Client-side의 코드는 주로 웹페이지 내 입력 ‘form’에 날짜나 주소 등의 값이 유효한지 여부를 체크하는 등 단순한 로직 정도입니다. 이런 small task는 굳이 서버와 연동하느라 시간을 소요할 필요가 없습니다. 이런 Client-side의 코드는 주로 “scripting language” 코드이며, 대개 HTML, Javascript, CSS 입니다. 여기서 주목할 점은 이런 스크립트 코드는 브라우저에서 볼 수 있듯이 항상 소스 코드 형태로 전달이 된다는 겁니다. 그래서, LGPL 같은 Copyleft 라이선스가 적용된 코드라고 하더라도 별도로 소스 코드를 제공해야할 필요가 없습니다.</p>
