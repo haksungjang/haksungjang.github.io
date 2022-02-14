@@ -13,9 +13,9 @@ resources:
 
 안녕하세요, 장학성입니다. 
 
-AI는 사용하지 않는 기업이 없을 정도로 현대 비즈니스에 중요한 기술이 되었습니다. AI 서비스를 만들기 위해서는 많은 양의 data가 필요한데요, 공개 Dataset<sub>publicly available datasets</sub>도 널리 사용되고 있습니다. 다만 공개 Dataset이라고 하더라도 상용 AI 서비스에 사용할 수 있는지 라이선스 측면의 확인이 필요합니다. 
+AI는 사용하지 않는 기업이 없을 정도로 현대 비즈니스에 중요한 기술이 되었습니다. AI 서비스를 만들기 위해서는 많은 양의 data가 필요한데요, 공개 Dataset<sub>publicly available datasets</sub>도 널리 사용되고 있습니다. 다만 공개 Dataset이라고 하더라도 저작권이 있기 때문에 이를 상용 AI 서비스에 사용하려면 저작권 침해 등 법적 리스크를 최소화하기 위해 라이선스 측면의 확인이 필요합니다. 
 
-오늘은 이와 관련하여 최근 발표된 논문인 "Can I use this publicly available dataset to build commercial AI software? -- A Case Study on Publicly Available Image Datasets"을 소개하려고 합니다. : https://arxiv.org/abs/2111.02374
+오늘은 이와 관련하여 최근 발표된 논문인 <b>Can I use this publicly available dataset to build commercial AI software?-- A Case Study on Publicly Available Image Datasets</b>을 소개하려고 합니다. : https://arxiv.org/abs/2111.02374
 
 
 {{% pageinfo %}}
@@ -26,6 +26,8 @@ AI는 사용하지 않는 기업이 없을 정도로 현대 비즈니스에 중�
 
 {{% /pageinfo %}}
 
+이 글을 통해 공개 Dataset을 활용한 AI 서비스를 준비하면서 저작권 침해를 최소화하기 위해 어떤 노력과 절차를 거쳐야 하는지에 대한 인사이트를 얻을 수 있기를 바랍니다. 
+
 ## 1. Intro
 
 이 논문에서는 먼저 공개 Dataset을 사용하기 위한 라이선스는 오픈소스 라이선스와는 달리 몇 가지 어려운 문제가 있다고 설명합니다. 
@@ -35,10 +37,10 @@ AI는 사용하지 않는 기업이 없을 정도로 현대 비즈니스에 중�
 1. 해당 Dataset에 대한 완전하고 정확한 라이선스를 식별하기가 어렵다. 
     - 예를 들어, Dataset을 제공하던 웹사이트가 폐쇄되는 경우도 있다.
 2. 해당 Dataset에 대한 라이선스가 유효한지 확인하는 것이 어렵다. 
-    - 많은 Dataset은 여러 개의 data source를 결합하여 생성한다. 이러한 여러 data source는 각각 다른 라이선스가 적용된다.
-    - 더구나 publicly available dataset의 작성자는 Dataset을 만들면서 사용한 다양한 data source의 라이선스를 거의 문서화하지 않는다.
+    - 많은 Dataset은 여러 개의 Data Source를 결합하여 생성한다. 이러한 여러 Data Source는 각각 다른 라이선스가 적용된다.
+    - 더구나 publicly available dataset의 작성자는 Dataset을 만들면서 사용한 다양한 Data Source의 라이선스를 거의 문서화하지 않는다.
     - 예를 들어, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) Dataset도 웹사이트에서 요구하는 유일한 라이선스는 ‘인용 요구' 뿐이고 그 외에는 설명하지 않는다.
-        - 하지만, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)는 상업적 이미지 사용을 제한할 수 있는 라이선스가 적용된 Google Images, Flickr와 같은 다양한 data source의 이미지를 크롤링하여 생성되었다.
+        - 하지만, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)는 상업적 이미지 사용을 제한할 수 있는 라이선스가 적용된 Google Images, Flickr와 같은 다양한 Data Source의 이미지를 크롤링하여 생성되었다.
         - 이러한 경우, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)의 라이선스만을 고려하는 것은 컴플라이언스 문제가 될 수 있다.
 3. Publicly available dataset에 적용된 라이선스는 일반적으로 모호하여 권리와 의무를 명확하게 설명하지 않는다.
     - 이러한 Dataset을 사용하여 라이선스 리스크 없이 상용 AI software를 구축하는 것은 실제로 어렵다.
@@ -95,7 +97,7 @@ Copilot은 GitHub에 개발자의 코드 작성을 돕기 위해 공개된 sourc
 
 결국 공개 Dataset을 사용하여 AI 서비스를 개발하는 기업은 (Fair Use로 판단할 수 있는 경우를 제외한다면) 저작권침해, 계약법 위반 등을 방지하기 위하여 공개 Dataset과 관련된 권리와 의무를 확인하고 라이선스 컴플라이언스를 보장하기 위한 엄격한 접근 방식이 중요하다고 강조합니다. 
 
-그런데 이후에 다시 언급하겠지만 사실 공개 Dataset을 사용하면서 Dataset, data source 뿐만 아니라 data point 등의 모든 라이선스를 확인하고 각각의 의무를 준수하는 것은 거의 불가능에 가깝습니다. 공개 Dataset을 사용하기 위해 일정 부분의 라이선스 리스크를 감수하거나 Fair Use라고 주장할 수 있는 법적 근거를 마련하는 것이 현실적인 대응 방안이라고 개인적으로 생각합니다. 
+그런데 이후에 다시 언급하겠지만 사실 공개 Dataset을 사용하면서 Dataset, Data Source 뿐만 아니라 data point 등의 모든 라이선스를 확인하고 각각의 의무를 준수하는 것은 거의 불가능에 가깝습니다. 공개 Dataset을 사용하기 위해 일정 부분의 라이선스 리스크를 감수하거나 Fair Use라고 주장할 수 있는 법적 근거를 마련하는 것이 현실적인 대응 방안이라고 개인적으로 생각합니다. 
 
 그럼 이 논문에서 제안하는 공개 Dataset을 상용 AI 서비스에 활용하기 위한 엄격한 접근 방식이 무엇인지 살펴보겠습니다. 
 
@@ -134,21 +136,21 @@ Copilot은 GitHub에 개발자의 코드 작성을 돕기 위해 공개된 sourc
 
 #### (Step 3) Lineage extraction
 
-컴퓨터 비전 및 NLP Dataset을 포함하여 많은 publicly available dataset은 일반적으로 이미지와 같은 data를 호스팅하거나 인기 있는 웹사이트 등 다양한 소스에서 data를 수집하여 생성된다. 이러한 data source의 라이선스는 Dataset의 라이선스와 다르기 때문에 추가로 확인해야 한다. 
+컴퓨터 비전 및 NLP Dataset을 포함하여 많은 publicly available dataset은 일반적으로 이미지와 같은 data를 호스팅하거나 인기 있는 웹사이트 등 다양한 소스에서 data를 수집하여 생성된다. 이러한 Data Source의 라이선스는 Dataset의 라이선스와 다르기 때문에 추가로 확인해야 한다. 
 1. (Sub-step 1) Dataset 생성 프로세스를 추적한다. 
     - 이를 별도로 기록해둔다. (위 테이블의 “Description of the data collection process” 필드 참조)
-    - 만약, data source 내에 또 다른 data source가 있다는 것을 알게 되면 해당 data source도 찾아서 기록한다. (재귀적으로 반복)
-    - 예를 들어, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)는 [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/)라는 다른 dataset의 subset이다. 논문을 통해 이 Dataset에는 Google, Flickr, Ask, Altavista, Picsearch, Webshots 및 Cydral의 7가지 data source가 있다는 것을 알 수 있다.
+    - 만약, Data Source 내에 또 다른 Data Source가 있다는 것을 알게 되면 해당 Data Source도 찾아서 기록한다. (재귀적으로 반복)
+    - 예를 들어, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)는 [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/)라는 다른 dataset의 subset이다. 논문을 통해 이 Dataset에는 Google, Flickr, Ask, Altavista, Picsearch, Webshots 및 Cydral의 7가지 Data Source가 있다는 것을 알 수 있다.
     ![](./datasource.png)
-2. (Sub-step 2) Data source의 공식 출처를 찾는다. (웹사이트, 검색 엔진 등 활용)
+2. (Sub-step 2) Data Source의 공식 출처를 찾는다. (웹사이트, 검색 엔진 등 활용)
     - 예를 들어, [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/) 웹사이트에서는 Dataset이 더 이상 제공되지 않는다. 이 경우, 가능한 아카이브 버전을 찾는다. (예: [http://web.archive.org/web/20100601000000*/http://groups.csail.mit.edu/vision/TinyImages/](http://web.archive.org/web/20100601000000*/http://groups.csail.mit.edu/vision/TinyImages/))
-    - 그런 다음, 위에 나열한 7가지 data source 각각에 대한 공식 웹사이트를 알아낸다.
+    - 그런 다음, 위에 나열한 7가지 Data Source 각각에 대한 공식 웹사이트를 알아낸다.
 3. (Sub-step 3) 시간적으로 적용 가능한 라이선스인지 확인한다. 
-    - Data source의 라이선스가 시간에 따라 달라졌을 수도 있음을 염두에 둬야 한다.
-    - 즉, Dataset이 생성된 시점의 data source에 대한 라이선스를 확인한다.
+    - Data Source의 라이선스가 시간에 따라 달라졌을 수도 있음을 염두에 둬야 한다.
+    - 즉, Dataset이 생성된 시점의 Data Source에 대한 라이선스를 확인한다.
     - 예를 들어, Google Images에서 온 data인 경우, Google’s Terms of Service from 2005, and/or 2007, and/or 2012 등 중 어느 라이선스가 적용될지 확인한다.
-4. (Sub-step 4) Data source에 대한 라이선스를 식별한다. 
-    - Dataset 생성에 기여한 모든 data source와 관련된 라이선스를 식별한다.
+4. (Sub-step 4) Data Source에 대한 라이선스를 식별한다. 
+    - Dataset 생성에 기여한 모든 Data Source와 관련된 라이선스를 식별한다.
 
 {{% /alert %}}
 
@@ -195,15 +197,15 @@ Copilot은 GitHub에 개발자의 코드 작성을 돕기 위해 공개된 sourc
 
 법률전문가는 Enhanced MDL의 정보를 기반으로 위험 평가를 수행하여 dataset을 상업적으로 사용할 수 있는지 결정한다. 
 
-- Dataset 라이선스가 허용하더라도 data source의 라이선스가 사용 사례를 제한하는 경우에 유의한다.
-- 예를 들어, CIFAR-10의 경우 Dataset 라이선스가 허용하는 것과 data source 라이선스가 허용하는 것이 서로 다른 경우가 있다.
-- 위의 Table에서 빨간색(x)는 data source의 라이선스가 제한한다는 것이다. (Google 및 Flickr의 라이선스 등)
+- Dataset 라이선스가 허용하더라도 Data Source의 라이선스가 사용 사례를 제한하는 경우에 유의한다.
+- 예를 들어, CIFAR-10의 경우 Dataset 라이선스가 허용하는 것과 Data Source 라이선스가 허용하는 것이 서로 다른 경우가 있다.
+- 위의 Table에서 빨간색(x)는 Data Source의 라이선스가 제한한다는 것이다. (Google 및 Flickr의 라이선스 등)
 
-요약하자면 CIFAR-10의 라이선스는 논문이 인용되는 한 dataset에 대한 모든 권리를 허용하지만, data source의 라이선스는 더 제한적이므로, 이 Dataset을 AI Model을 학습시키거나 또는 Dataset 자체를 수정 또는 배포를 포함한 상업적 목적으로 사용될 경우 라이선스 컴플라이언스 위반의 잠재적 위험이 발생한다.
+요약하자면 CIFAR-10의 라이선스는 논문이 인용되는 한 dataset에 대한 모든 권리를 허용하지만, Data Source의 라이선스는 더 제한적이므로, 이 Dataset을 AI Model을 학습시키거나 또는 Dataset 자체를 수정 또는 배포를 포함한 상업적 목적으로 사용될 경우 라이선스 컴플라이언스 위반의 잠재적 위험이 발생한다.
 
 {{% /alert %}}
 
-여기까지 Phase 2를 거치면서 법률 전문가에 의해 Enhanced MDL 포맷으로 라이선스 권리와 의무를 문서화하고 이를 활용하는 방법을 살펴 보았습니다. Dataset 뿐만 아니라 data source의 라이선스까지 확인해서 data source의 라이선스가 상업적 사용 등 제한을 가하면 Dataset을 상업용으로 사용하는 것도 리스크가 있음을 설명하고 있습니다. 
+여기까지 Phase 2를 거치면서 법률 전문가에 의해 Enhanced MDL 포맷으로 라이선스 권리와 의무를 문서화하고 이를 활용하는 방법을 살펴 보았습니다. Dataset 뿐만 아니라 Data Source의 라이선스까지 확인해서 Data Source의 라이선스가 상업적 사용 등 제한을 가하면 Dataset을 상업용으로 사용하는 것도 리스크가 있음을 설명하고 있습니다. 
 
 논문에서는 위와 같은 방식으로 다른 Dataset에 대해서도 Case Study를 진행하였습니다. 그 내용을 살펴보겠습니다. 
 
@@ -225,14 +227,14 @@ Case Study에서는 인기도와 상업적으로 사용될 가능성이 높은 6
 
 이 여섯 개 dataset은 모두 이미지에 대한 것이며, 라이선스는 다음과 같은 특징을 갖습니다. 
 
-| Dataset | dataset license | data source |
+| Dataset | Dataset license | Data Source |
 | --- | --- | --- |
-| CIFAR-10 | 라이선스 언급 없음 (인용만 요구) | data source 다수 |
-| ImageNet | custom license | data source 다수 |
-| Cityscapes | custom license | 하나의 data source |
-| FFHQ | CC-NC-SA-4.0 | data source 다수|
-| VGGFaces2 | CC-NC-SA-4.0 | data source 다수 |
-| MS COCO | CC 4.0 | data source 다수 |
+| CIFAR-10 | 라이선스 언급 없음 (인용만 요구) | Data Source 다수 |
+| ImageNet | custom license | Data Source 다수 |
+| Cityscapes | custom license | 하나의 Data Source |
+| FFHQ | CC-NC-SA-4.0 | Data Source 다수|
+| VGGFaces2 | CC-NC-SA-4.0 | Data Source 다수 |
+| MS COCO | CC 4.0 | Data Source 다수 |
 
 
 그럼 이 논문에서 여섯 개의 dataset에 대하여 연구를 수행한 결과를 살펴보겠습니다.
@@ -296,10 +298,10 @@ Case Study에서는 인기도와 상업적으로 사용될 가능성이 높은 6
 
 ### Internal validity
 
-이 연구에서는 data source의 라이선스까지만 고려하고, 개별 data point (예: 개별 이미지)와 관련된 라이선스는 고려하지 않았다. 
+이 연구에서는 Data Source의 라이선스까지만 고려하고, 개별 data point (예: 개별 이미지)와 관련된 라이선스는 고려하지 않았다. 
 
 - 개별 이미지에도 저작권이 있을 수 있다. 
-- 하지만, 각 data source에는 수천, 수만 개의 data point가 있는데, 이에 대한 각 라이선스를 추출하는 것은 사실상 불가능하다.
+- 하지만, 각 Data Source에는 수천, 수만 개의 data point가 있는데, 이에 대한 각 라이선스를 추출하는 것은 사실상 불가능하다.
 - 따라서, 이 부분은 여전히 위협으로 남아 있다.
 
 ### Construct validity
@@ -307,8 +309,8 @@ Case Study에서는 인기도와 상업적으로 사용될 가능성이 높은 6
 이 연구에서 확인한 각 Dataset에 대한 provenance나 lineage가 정확하지 않을 수 있다. 
 
 - Dataset이 언제, 어디에서 생성되었는지를 정확히 확인하는 것은 불가능하다.
-- ImageNet과 같은 경우, 정확한 data source를 알 수도 없다.
-- 가능한 관련 문서를 통해 data source를 유추하여 라이선스를 유추할 수 있도록 최선을 다할 뿐이다.
+- ImageNet과 같은 경우, 정확한 Data Source를 알 수도 없다.
+- 가능한 관련 문서를 통해 Data Source를 유추하여 라이선스를 유추할 수 있도록 최선을 다할 뿐이다.
 
 {{% /alert %}}
 
