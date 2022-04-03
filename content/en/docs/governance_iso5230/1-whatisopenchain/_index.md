@@ -2,6 +2,7 @@
 title: "1. ISO/IEC 5230 살펴보기"
 linkTitle: "1. ISO/IEC 5230"
 weight: 10
+type: docs
 description: >
 ---
 

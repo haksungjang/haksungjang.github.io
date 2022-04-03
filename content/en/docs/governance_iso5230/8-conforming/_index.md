@@ -2,6 +2,7 @@
 title: "8. 준수 선언"
 linkTitle: "8. 준수 선언"
 weight: 80
+type: docs
 description: >
 ---
 
@@ -17,7 +18,7 @@ ISO/IEC 5230 규격의 6조를 제외한 모든 요구사항을 준수하는 오
 [https://sktelecom.github.io/compliance/iso5230/](https://sktelecom.github.io/compliance/iso5230/)
  
 
-이렇게 ISO/IEC 5230의 모든 요구사항을 충족함을 보장한다고 문서함으로 ISO/IEC 5230에서 요구하는 다음 입증 자료를 준비할 수 있다.
+이렇게 ISO/IEC 5230의 모든 요구사항을 충족함을 보장한다고 문서화하면 ISO/IEC 5230에서 요구하는 다음 입증 자료를 준비할 수 있다.
 
 {{% alert title="ISO/IEC 5230" color="success" %}}
 

@@ -1,7 +1,8 @@
 ---
 title: "국제표준(ISO/IEC 5230)에 기반한 기업 오픈소스 거버넌스 구축 가이드"
-linkTitle: "기업 오픈소스 거버넌스 구축"
+linkTitle: "ISO/IEC 5230 기반 거버넌스"
 weight: 30
+type: docs
 description: >
   오픈소스 국제 표준인 ISO/IEC 5230에 기반한 기업의 오픈소스 거버넌스 체계 구축 방법을 설명한다. 
 ---
