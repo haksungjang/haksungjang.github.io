@@ -1,7 +1,7 @@
 ---
 title: "인수합병(M&A)에서의 오픈 소스 감사"
 linkTitle: "M&A에서 오픈소스 감사"
-weight: 20
+weight: 30
 description: >
   인수합병(M&A) 거래에서 오픈소스 감사를 위한 개요와 실무 가이드를 제공한다. 
 ---
