@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haksung – Open Source Compliance</title><link>/blog/compliance/</link><description>Recent content in Open Source Compliance on Haksung</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/compliance/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Akka는 더 이상 오픈소스가 아닙니다.</title><link>/blog/2022/09/30/akka%EB%8A%94-%EB%8D%94-%EC%9D%B4%EC%83%81-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EA%B0%80-%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4./</link><pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/09/30/akka%EB%8A%94-%EB%8D%94-%EC%9D%B4%EC%83%81-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EA%B0%80-%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4./</guid><description>
 &lt;img src="/blog/2022/09/30/akka%EB%8A%94-%EB%8D%94-%EC%9D%B4%EC%83%81-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EA%B0%80-%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4./featured_akka_hu515c71a488a6766b364d7f25ac0e66ab_48953_640x0_resize_catmullrom_2.png" width="640" height="235"/>
 &lt;blockquote>
-&lt;p>오픈소스로 시작한 소프트웨어 기업이 라이선스 정책을 변경하는 사례가 증가하고 있는데요, 그동안 Apache-2.0으로 오픈소스 라이선스 정책을 유지해오던 미국의 Lightbend사도 2022년 9월, Akka의 라이선스를 BUSL-1.1 (Business Source License)로 변경한다고 발표하였습니다.
+&lt;p>오픈소스로 시작한 소프트웨어 기업이 라이선스 정책을 변경하는 사례가 증가하고 있는데요, 그동안 Apache-2.0으로 오픈소스 라이선스 정책을 유지해오던 미국의 Lightbend사도 2022년 9월, Akka의 라이선스를 BUSL-1.1 (Business Source License)로 변경한다고 발표하였습니다.&lt;br>
 Business Source License가 무엇인지, Lightbend가 Akka의 라이선스를 BSL로 변경한 배경과 그 영향은 무엇인지에 대해 알아보겠습니다.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="akka란">Akka란?&lt;/h2>
