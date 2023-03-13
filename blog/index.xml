@@ -16,13 +16,13 @@
 &lt;p>Anaconda사는 &lt;a href="https://repo.anaconda.com">Anaconda Repository&lt;/a>를 호스팅하며 8천 개 이상의 오픈소스 package를 제공하고, 사용자는 conda install PACKAGENAME 명령어로 이들 package를 안정적으로 설치/관리 할 수 있습니다.&lt;/p>
 &lt;p>&lt;img src="Untitled%203.png" alt="https://repo.anaconda.com/">&lt;/p>
 &lt;p>&lt;a href="https://repo.anaconda.com/">https://repo.anaconda.com/&lt;/a>&lt;/p>
-&lt;p>바로, 이 &lt;a href="https://repo.anaconda.com">Anaconda Repository&lt;/a>의 &lt;a href="https://legal.anaconda.com/policies/en/?name=terms-of-service">서비스 약관&lt;/a>이 2020년 9월에 변경된 것이고, commercial activity 목적일 때에는 Anaconda Repository의 무료 사용이 불가능해졌습니다.&lt;/p>
-&lt;p>많은 개발자가 Anaconda Distribution을 쉽게 다운받아서 설치하지만 이 과정에서 Anconda Repository를 사용하게 되는데요, 200명 이상 기업의 개발자라면 ‘의도하지는 않았지만’ Anaconda의 서비스 약관을 위반하게 되는 것이고, 이를 방지하기 위해서는 꼭 Anaconda Pro 이상을 구매하셔야 합니다.&lt;/p>
-&lt;p>참고로, &lt;a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda&lt;/a>는 Anaconda와 마찬가지로 conda package manager와 Python 및 최소한의 dependency를 설치하는 소프트웨어 패키지인데요, 이 과정에서 마찬가지로 Anaconda Repository를 사용하는 것으로 보이며, Anaconda와 동일하게 유료 구매 대상으로 간주할 수 있습니다.&lt;/p>
+&lt;p>그런데, 바로 이 &lt;a href="https://repo.anaconda.com">Anaconda Repository&lt;/a>의 &lt;a href="https://legal.anaconda.com/policies/en/?name=terms-of-service">서비스 약관&lt;/a>이 2020년 9월에 변경된 것이고, commercial activity 목적일 때에는 Anaconda Repository의 무료 사용이 불가능해졌습니다.&lt;/p>
+&lt;p>많은 개발자가 Anaconda Distribution을 쉽게 다운받아서 사용하지만 이 과정에서 Anconda Repository를 사용하게 되는데요, 200명 이상 기업의 개발자라면 ‘의도하지는 않았지만’ Anaconda의 서비스 약관을 위반하게 되는 것이고, 이를 방지하기 위해서는 꼭 Anaconda Pro 이상을 구매하셔야 합니다.&lt;/p>
+&lt;p>참고로, &lt;a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda&lt;/a>는 Anaconda와 마찬가지로 conda package manager와 Python 및 최소한의 dependency를 설치하는 소프트웨어 패키지인데요, Miniconda를 사용하면서도 마찬가지로 Anaconda Repository에 Access하여 package를 다운 받아 사용하게 되며, Anaconda와 동일하게 유료 구매 대상으로 간주될 수 있습니다.&lt;/p>
 &lt;p>&lt;img src="Untitled%204.png" alt="https://docs.conda.io/en/latest/miniconda.html">&lt;/p>
 &lt;p>&lt;a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html&lt;/a>&lt;/p>
-&lt;p>200인 이상 기업의 개발자가 Anaconda Distribution을 무료로 다운받아서 사용하더라도 당장 비용이 청구되거나 기능이 막히지는 않겠지만, Anaconda의 안정적인 발전을 위해서도 200인 이상의 기업 개발자는 자발적으로 구매하여 사용하는 것이 좋을 것 같습니다. (물론 어느 순간 회사로 라이선스 위반 통지 및 비용 청구서가 날아올 수도 있습니다. ^^)&lt;/p>
-&lt;h2 id="miniforge가-대안이-될-수는-있어-보입니다">Miniforge가 대안이 될 수는 있어 보입니다.&lt;/h2>
+&lt;p>결국, 200인 이상 기업의 개발자가 Anaconda Distribution을 무료로 다운받아서 사용하더라도 당장 비용이 청구되거나 기능이 막히지는 않겠지만, Anaconda의 안정적인 발전을 위해서도 200인 이상의 기업 개발자는 자발적으로 구매하여 사용하는 것이 좋을 것 같습니다. (물론 어느 순간 회사로 라이선스 위반 통지 및 비용 청구서가 날아올 수도 있습니다. ^^)&lt;/p>
+&lt;h2 id="대안은-있습니다-conda-forge">대안은 있습니다. &amp;lsquo;conda-forge&amp;rsquo;&lt;/h2>
 &lt;p>Anaconda사는 &lt;a href="https://conda.io/">conda&lt;/a>라는 package manager를 오픈소스로 공개하여 관리하고 있습니다. &lt;a href="https://github.com/conda/conda">conda&lt;/a> 자체는 &lt;a href="https://github.com/conda/conda/blob/main/LICENSE.txt">BSD-3-Clause&lt;/a> 라이선스로 공개된 오픈소스여서 기업이 무료로 사용하는 데 문제되지 않습니다.&lt;/p>
 &lt;p>&lt;img src="Untitled%205.png" alt="https://github.com/conda/conda">&lt;/p>
 &lt;p>&lt;a href="https://github.com/conda/conda">https://github.com/conda/conda&lt;/a>&lt;/p>
@@ -32,13 +32,17 @@
 &lt;p>conda를 설치하고 default channel을 기존의 Anaconda Repository가 아닌 conda-forge로 변경할 수 있습니다.&lt;/p>
 &lt;pre>&lt;code>conda config --add channels conda-forge
 conda config --set channel_priority strict
-&lt;/code>&lt;/pre>&lt;p>이렇게 하면 Anaconda Repository를 사용하지 않기 때문에 위에서 설명한 &lt;a href="https://legal.anaconda.com/policies/en/?name=terms-of-service">서비스 약관&lt;/a>을 위반하지 않고 conda를 사용할 수 있다는 의견이 있습니다. : &lt;a href="https://florianwilhelm.info/2021/09/Handling_Anaconda_without_getting_constricted/">https://florianwilhelm.info/2021/09/Handling_Anaconda_without_getting_constricted/&lt;/a>&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>이렇게 하면 Anaconda Repository를 사용하지 않기 때문에 위에서 설명한 &lt;a href="https://legal.anaconda.com/policies/en/?name=terms-of-service">서비스 약관&lt;/a>을 위반하지 않고 conda를 사용할 수 &lt;a href="https://florianwilhelm.info/2021/09/Handling_Anaconda_without_getting_constricted/">있습니다&lt;/a>.&lt;/p>
+&lt;p>Anaconda사의 CEO인 Peter Wang은 Miniconda를 다운 받아서 conda config를 conda-forge로 변경할 경우, 무료로 사용할 수 있다고 직접 밝힌 바 &lt;a href="https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/">있습니다&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="./pwang.png" alt="">&lt;/p>
+&lt;p>&lt;a href="https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/">https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/&lt;/a>&lt;/p>
+&lt;h2 id="miniforge는-기본-채널이-conda-forge입니다">Miniforge는 기본 채널이 conda-forge입니다.&lt;/h2>
 &lt;p>한 걸음 더 나아가서 &lt;a href="https://github.com/conda-forge/miniforge">Miniforge&lt;/a>는 conda-forge를 기본 channel로 설정하여 conda를 설치하는 최소의 installer를 제공하는 프로젝트입니다. 게다가 Miniforge는 Apple M1을 포함한 다양한 CPU 아키텍처를 지원한다고도 알려져 있습니다.&lt;/p>
 &lt;p>&lt;img src="Untitled%207.png" alt="https://github.com/conda-forge/miniforge">&lt;/p>
 &lt;p>&lt;a href="https://github.com/conda-forge/miniforge">https://github.com/conda-forge/miniforge&lt;/a>&lt;/p>
 &lt;p>따라서, Anaconda 대신 Miniforge를 설치한다면 비교적 수월하게 라이선스 위반 없이 conda package manager로 개발 환경을 구성할 수 있는 것으로 보입니다.&lt;/p>
 &lt;p>한 가지 특이한 점은 conda-forge 운영에는 막대한 호스팅 비용이 필요한데 이를 Anaconda사가 지불하고 있다는 점입니다. Anaconda사는 conda-forge를 계속 무료로 유지하기 위해서라도 Anaconda Repository의 서비스 약관 변경을 통한 수익이 &lt;a href="https://conda-forge.org/blog/posts/2020-11-20-anaconda-tos/">필요했다&lt;/a>고 설명합니다.&lt;/p>
-&lt;p>결론적으로 개발 편의성과 안정성을 고려하여 가급적 Anaconda Pro를 구매하여 사용하는 것이 좋겠습니다. 구매 전까지 라이선스 이슈 방지를 위해 Miniforge를 대안으로 고려할 수 있을 것 같습니다. 🙂&lt;/p>
+&lt;p>결론적으로 개발 편의성과 안정성을 고려하여 가급적 Anaconda Pro를 구매하여 사용하는 것이 좋겠습니다. 구매 전까지 라이선스 이슈 방지를 위해 Miniconda + conda-forge 조합, 혹은 Miniforge를 대안으로 고려할 수 있을 것 같습니다. 🙂&lt;/p>
 &lt;p>혹시 틀린 내용이 있다면 알려주시면 감사하겠습니다. ^^&lt;/p>
 &lt;p>감사합니다.&lt;/p></description></item><item><title>Blog: Akka는 더 이상 오픈소스가 아닙니다.</title><link>/blog/2022/09/30/akka%EB%8A%94-%EB%8D%94-%EC%9D%B4%EC%83%81-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EA%B0%80-%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4./</link><pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate><guid>/blog/2022/09/30/akka%EB%8A%94-%EB%8D%94-%EC%9D%B4%EC%83%81-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EA%B0%80-%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4./</guid><description>
 &lt;img src="/blog/2022/09/30/akka%EB%8A%94-%EB%8D%94-%EC%9D%B4%EC%83%81-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4%EA%B0%80-%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4./featured_akka_hu515c71a488a6766b364d7f25ac0e66ab_48953_640x0_resize_catmullrom_2.png" width="640" height="235"/>
