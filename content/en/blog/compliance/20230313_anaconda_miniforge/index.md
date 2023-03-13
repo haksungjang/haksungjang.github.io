@@ -65,7 +65,7 @@ Anaconda사는 [conda](https://conda.io/)라는 package manager를 오픈소스�
 
 conda는 package 설치/관리를 위해 설치할 package를 찾기 위한 저장소 위치가 필요한데요, 이를 channel이라고 칭합니다. 기본 channel이 바로 [Anaconda Repository](https://repo.anaconda.com/)입니다. 그런데, commuinity 기반의 repository가 또 있습니다. 바로 [conda-forge](https://conda-forge.org/)인데요, 
 
-![[https://conda-forge.org/](https://conda-forge.org/)](Untitled%206.png)
+![[https://conda-forge.org/](https://conda-forge.org/)](featured_condaforge.png)
 
 [https://conda-forge.org/](https://conda-forge.org/)
 
