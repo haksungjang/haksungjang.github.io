@@ -1,10 +1,95 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haksung – Blog</title><link>/blog/</link><description>Recent content in Blog on Haksung</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 또 다시 Elasticsearch 라이선스 변경, 기업의 대응 방안은?</title><link>/blog/2024/09/06/%EB%98%90-%EB%8B%A4%EC%8B%9C-elasticsearch-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B3%80%EA%B2%BD-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%8C%80%EC%9D%91-%EB%B0%A9%EC%95%88%EC%9D%80/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate><guid>/blog/2024/09/06/%EB%98%90-%EB%8B%A4%EC%8B%9C-elasticsearch-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B3%80%EA%B2%BD-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%8C%80%EC%9D%91-%EB%B0%A9%EC%95%88%EC%9D%80/</guid><description>
-&lt;img src="/blog/2024/09/06/%EB%98%90-%EB%8B%A4%EC%8B%9C-elasticsearch-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B3%80%EA%B2%BD-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%8C%80%EC%9D%91-%EB%B0%A9%EC%95%88%EC%9D%80/featured_original-elastic-logos_hu36e0488bdc3c30af55ee75cb1e6a7ff9_76478_640x0_resize_catmullrom_2.png" width="640" height="239"/>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haksung – Blog</title><link>/blog/</link><description>Recent content in Blog on Haksung</description><generator>Hugo -- gohugo.io</generator><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 중국 저작권 침해 소송 사례 “GPL 기반 소프트웨어 제품은 어차피 소스 공개 의무가 있으니 배껴도 되는 것 아닌가요?</title><link>/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/</link><pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate><guid>/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/</guid><description>
+&lt;img src="/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/featured_openwrt_hu3e99f0adf550f3926011d46835205d06_24140_640x0_resize_catmullrom_2.png" width="640" height="564"/>
+&lt;p>오픈소스 소프트웨어의 사용이 널리 퍼지면서, 이와 관련된 법적 문제들도 점점 더 복잡해지고 있습니다. 특히 GPL(GNU General Public License)과 같은 copyleft 라이선스를 사용하는 오픈소스 프로젝트를 기반으로 한 2차적 저작물의 저작권 문제는 많은 기업들에게 골치 아픈 주제입니다. 최근 중국에서 있었던 한 소프트웨어 저작권 침해 소송은 이러한 문제에 대한 중요한 시사점을 제공합니다.&lt;/p>
+&lt;h2 id="소송-당사자">소송 당사자&lt;/h2>
+&lt;ul>
+&lt;li>원고: Wangjing Technology(왕징)&lt;/li>
+&lt;li>피고:
+&lt;ul>
+&lt;li>Yibang Communication Technology(이방)&lt;/li>
+&lt;li>Qi&amp;rsquo;ao Network Technology(치아오)&lt;/li>
+&lt;li>그리고 3명의 개인(Liu, Wu, Xie)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="사건의-개요">사건의 개요&lt;/h2>
+&lt;p>2009년, 왕징은 &amp;lsquo;OfficeTen&amp;rsquo;이라는 융합 통신 스마트 게이트웨이 제품을 개발했습니다.&lt;/p>
+&lt;p>&lt;img src="./1800.png" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>OfficeTen SDG 1800 by Wangjing - &lt;a href="http://www.cncr-it.com/product_detail.php?sid=26&amp;amp;cid=133&amp;amp;id=388">http://www.cncr-it.com/product_detail.php?sid=26&amp;amp;cid=133&amp;amp;id=388&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>이 제품에 내장된 &amp;lsquo;OfficeTen1800&amp;rsquo; 소프트웨어는 오픈소스 프레임워크인 &amp;lsquo;OpenWRT&amp;rsquo;를 기반으로 개발되었으며, 2013년 국가판권국에서 저작권 등록 증서를 취득했습니다.&lt;/p>
+&lt;p>이 소프트웨어는 두 가지 구성 요소로 이루어져 있었습니다: OpenWRT를 기반으로 한 기본 시스템 소프트웨어와 상위 계층 기능 소프트웨어입니다. 왕징은 후자가 OpenWRT 시스템과는 &amp;ldquo;독립적이고 별개의 프로그램&amp;quot;이라고 주장했습니다.&lt;/p>
+&lt;p>&lt;img src="./featured_openwrt.png" alt="">&lt;/p>
+&lt;p>2015년, 왕징은 경쟁사인 이방의 제품이 자사의 저작권을 침해했다고 의심하여 조사를 시작했습니다. 조사 결과, 왕징의 전 직원들이 &amp;lsquo;OfficeTen1800&amp;rsquo;의 소스코드를 치아오에 제공하여 매우 유사한 소프트웨어를 개발하도록 도왔고, 이 소프트웨어가 이방의 제품에 사용된 것으로 밝혀졌습니다.&lt;/p>
+&lt;p>감정 결과, 왕징의 &amp;lsquo;OfficeTen1800&amp;rsquo;과 이방 제품에 사용된 소프트웨어 간의 비오픈소스 코드 동일 비율이 90.2%에 달했고, 이방의 제품에서 왕징의 특수 마크가 발견되었습니다.&lt;/p>
+&lt;h2 id="소송의-전개">소송의 전개&lt;/h2>
+&lt;p>2018년 7월, 왕징은 이방과 치아오를 상대로 소프트웨어 저작권 침해 소송을 제기했습니다. 왕징은 침해 중지와 300만 위안의 손해배상을 요구했습니다.&lt;/p>
+&lt;h3 id="피고-측의-주장">피고 측의 주장&lt;/h3>
+&lt;p>이방과 치아오는 침해 사실을 부인하며 다음과 같이 주장했습니다:&lt;/p>
+&lt;ol>
+&lt;li>&amp;lsquo;OfficeTen1800&amp;rsquo;은 &amp;lsquo;OpenWRT&amp;rsquo;라는 오픈소스 프레임워크를 기반으로 개발되었다.&lt;/li>
+&lt;li>&amp;lsquo;OpenWRT&amp;rsquo;는 GPLv2 라이선스의 제약을 받는다.&lt;/li>
+&lt;li>왕징가 &amp;lsquo;OfficeTen1800&amp;rsquo;의 소스코드를 공개하지 않은 것은 GPLv2 위반이다.&lt;/li>
+&lt;li>따라서 왕징은 해당 소프트웨어에 대한 저작권을 주장할 수 없다.&lt;/li>
+&lt;/ol>
+&lt;h2 id="법원의-판단">법원의 판단&lt;/h2>
+&lt;h3 id="1심-판결">1심 판결&lt;/h3>
+&lt;p>쑤저우 중급법원은 다음과 같이 판단했습니다:&lt;/p>
+&lt;ol>
+&lt;li>개발자가 오픈소스 제품을 수정하거나 2차 개발한 경우에도, 독창적인 작품을 생성했다면 해당 작품에 대한 저작권을 가진다.&lt;/li>
+&lt;li>GPLv2 계약에 따라 모든 관련 소프트웨어가 공개되어야 한다고 단정할 수 없다.&lt;/li>
+&lt;/ol>
+&lt;p>이에 따라 법원은 이방과 치아오의 침해 행위를 인정하고, 침해 중지와 50만 위안(약 70,961 달러, 약10억)의 손해배상을 명령했습니다.&lt;/p>
+&lt;h3 id="최고인민법원의-판결">최고인민법원의 판결&lt;/h3>
+&lt;p>이방과 치아오가 항소했으나, 최고인민법원은 원심 판결을 유지했습니다. 최고인민법원의 주요 판단 내용은 다음과 같습니다:&lt;/p>
+&lt;ol>
+&lt;li>이 사건의 당사자들은 &amp;lsquo;OpenWRT&amp;rsquo; 시스템 소프트웨어의 권리자가 아니므로, GPLv2 계약 준수 여부를 심리할 수 없다.&lt;/li>
+&lt;li>왕징의 GPLv2 계약 위반 여부와 저작권 침해에 대한 배상 청구는 별개의 문제이다.&lt;/li>
+&lt;li>소프트웨어 개발자의 독창적인 기여를 기반으로 한 저작권을 불합리하게 박탈하거나 제한해서는 안 된다.&lt;/li>
+&lt;/ol>
+&lt;h2 id="판결의-의의">판결의 의의&lt;/h2>
+&lt;p>이 판결은 오픈소스 소프트웨어를 기반으로 한 2차적 저작물의 저작권 보호에 대해 중요한 시사점을 제공합니다.&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>독창성의 인정&lt;/strong>: 법원은 오픈소스 소프트웨어를 기반으로 한 2차적 저작물이라도 개발자의 독창적인 기여가 있다면 저작권 보호의 대상이 될 수 있다고 판단했습니다.&lt;/li>
+&lt;li>&lt;strong>라이선스 위반과 저작권 보호의 분리&lt;/strong>: GPLv2 라이선스 위반 여부와 저작권 침해에 대한 배상 청구를 별개의 문제로 보았습니다. 이는 라이선스 위반이 있더라도 저작권 자체는 유효할 수 있음을 의미합니다.&lt;/li>
+&lt;li>&lt;strong>권리 남용 방지&lt;/strong>: 피고 측의 &amp;ldquo;어차피 소스 공개 의무가 있으니 배껴도 된다&amp;quot;는 주장을 받아들이지 않음으로써, GPL 라이선스를 악용한 무분별한 복제를 방지했습니다.&lt;/li>
+&lt;li>&lt;strong>오픈소스 생태계 보호&lt;/strong>: 2차적 저작물에 대한 저작권을 인정함으로써, 오픈소스 기반 혁신을 장려하고 건전한 오픈소스 생태계 발전을 도모했습니다.&lt;/li>
+&lt;/ol>
+&lt;h2 id="wordpress테마-사건과의-유사성">WordPress 테마 사건과의 유사성&lt;/h2>
+&lt;p>칼스루에 고등법원의 WordPress 테마 사건(2020년 11월 13일 판결, 참조번호 6 U 60/20)에서도 GPLv2가 방어 논리로 주장되었습니다. 이 사건에서 법원은 다음과 같은 중요한 판단을 내렸습니다:&lt;/p>
+&lt;ol>
+&lt;li>(주장된) 파생 저작물 저작권 소유자가 해당 저작물을 GPLv2에 따라 라이선스했는지 여부에 따라 구분이 이루어져야 합니다.&lt;/li>
+&lt;li>Copyleft 위반의 단순한 가능성만으로는 저작권 주장에 대항하기에 충분하지 않습니다.&lt;/li>
+&lt;li>GPLv2의 집행은 라이선서의 책임이며, 사용자가 소프트웨어를 &amp;ldquo;GPL 라이선스&amp;quot;라고 선언하는 것만으로는 집행될 수 없습니다.&lt;/li>
+&lt;li>카피레프트 효과가 자동으로 GPL 라이선싱으로 이어지지는 않습니다. 이는 파생 저작물의 저자가 적극적으로 수행해야 하는 행위입니다.&lt;/li>
+&lt;/ol>
+&lt;p>이러한 판단은 중국 최고인민법원의 판결과 맥을 같이 하며, GPL 라이선스와 2차적 저작물의 권리에 대한 국제적인 법적 해석의 흐름을 보여줍니다.&lt;/p>
+&lt;h2 id="기업의-오픈소스-관리에-대한-시사점">기업의 오픈소스 관리에 대한 시사점&lt;/h2>
+&lt;p>이 판결은 기업의 오픈소스 관리자들에게 다음과 같은 중요한 시사점을 제공합니다:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>철저한 라이선스 준수&lt;/strong>: GPL 등 copyleft 라이선스를 사용하는 오픈소스 소프트웨어를 활용할 때는 해당 라이선스의 요구사항을 철저히 준수해야 합니다.&lt;/li>
+&lt;li>&lt;strong>독창적 기여의 중요성&lt;/strong>: 오픈소스 프로젝트를 기반으로 개발할 때도 독창적인 기여를 명확히 하고 문서화하는 것이 중요합니다.&lt;/li>
+&lt;li>&lt;strong>소스코드 관리&lt;/strong>: 오픈소스 코드와 자체 개발 코드를 명확히 구분하고 관리해야 합니다.&lt;/li>
+&lt;li>&lt;strong>법적 리스크 평가&lt;/strong>: 오픈소스 사용 시 발생할 수 있는 법적 리스크를 사전에 평가하고 대비해야 합니다.&lt;/li>
+&lt;li>&lt;strong>지속적인 모니터링&lt;/strong>: 자사 제품과 경쟁사 제품의 유사성을 지속적으로 모니터링하여 잠재적인 저작권 침해를 조기에 발견해야 합니다.&lt;/li>
+&lt;/ol>
+&lt;h2 id="결론">결론&lt;/h2>
+&lt;p>이번 중국 법원의 판결과 독일 법원의 유사 판결은 &amp;ldquo;GPL 기반 소프트웨어 제품은 어차피 소스 공개 의무가 있으니 배껴도 되는 것 아닌가요?&amp;ldquo;라는 오해를 명확히 해소했습니다. GPL 라이선스를 사용하는 오픈소스 소프트웨어를 기반으로 한 2차적 저작물이라도, 개발자의 독창적인 기여가 있다면 저작권 보호의 대상이 될 수 있습니다.&lt;/p>
+&lt;p>이는 오픈소스 소프트웨어를 활용한 혁신을 장려하면서도, 무분별한 복제와 저작권 침해를 방지하는 균형 잡힌 접근법이라고 볼 수 있습니다. 기업들은 이러한 법적 해석을 참고하여 오픈소스 정책을 수립하고, 라이선스 준수와 독창적 개발 사이의 균형을 잡아나가야 할 것입니다.&lt;/p>
+&lt;p>오픈소스 소프트웨어의 사용이 더욱 보편화되는 현재, 이러한 법적 판단은 앞으로 더 많은 국가에서 참고될 것으로 예상됩니다. 따라서 기업의 오픈소스 관리자들은 이러한 법적 동향을 지속적으로 모니터링하고, 자사의 오픈소스 정책에 반영해 나가야 할 것입니다.&lt;/p>
+&lt;p>마지막으로, 이번 판결은 오픈소스 커뮤니티와 상업적 이용자 모두에게 중요한 메시지를 전달합니다. 오픈소스 정신을 존중하면서도 개발자의 노력과 창의성을 인정하는 것, 그리고 라이선스를 준수하면서도 혁신을 추구하는 것이 건강한 소프트웨어 생태계를 만드는 길임을 다시 한 번 상기시켜 줍니다.&lt;/p>
+&lt;h2 id="참고문서">참고문서&lt;/h2>
+&lt;ol>
+&lt;li>2024-09-20 OpenWRT, the GPL and the Supreme People&amp;rsquo;s Court of China: &lt;a href="https://www.ifross.org/?q=node/1676">https://www.ifross.org/?q=node/1676&lt;/a>&lt;/li>
+&lt;li>2023-12-29 오픈 소스 코드 기반 2차적 저작물의 저작권 분쟁 사례: &lt;a href="https://www.copyright.or.kr/information-materials/trend/International-copyright-center/download.do?brdctsno=52544&amp;amp;brdctsfileno=22493">https://www.copyright.or.kr/information-materials/trend/International-copyright-center/download.do?brdctsno=52544&amp;amp;brdctsfileno=22493&lt;/a>&lt;/li>
+&lt;/ol>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>&lt;em>이 글은 Perplexity(&lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>)와 함께 작성하였습니다.&lt;/em>&lt;/p>
+&lt;p>&lt;em>이 글은 Perplexity (&lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>)와 함께 작성하였습니다.&lt;/em>&lt;/p>
 &lt;p>&lt;em>SKT고객은 Perplexicy Pro를 1년간 무료로 이용할 수 있습니다.: &lt;a href="https://perplexity.sktadotevent.com/">https://perplexity.sktadotevent.com/&lt;/a>&lt;/em>&lt;/p>
-&lt;p>&lt;img src="./image.png" alt="image.png">&lt;/p>
-&lt;/div>
+&lt;p>&lt;img src="./perplexity.png" alt="">&lt;/p>
+&lt;/div></description></item><item><title>Blog: 또 다시 Elasticsearch 라이선스 변경, 기업의 대응 방안은?</title><link>/blog/2024/09/06/%EB%98%90-%EB%8B%A4%EC%8B%9C-elasticsearch-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B3%80%EA%B2%BD-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%8C%80%EC%9D%91-%EB%B0%A9%EC%95%88%EC%9D%80/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate><guid>/blog/2024/09/06/%EB%98%90-%EB%8B%A4%EC%8B%9C-elasticsearch-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B3%80%EA%B2%BD-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%8C%80%EC%9D%91-%EB%B0%A9%EC%95%88%EC%9D%80/</guid><description>
+&lt;img src="/blog/2024/09/06/%EB%98%90-%EB%8B%A4%EC%8B%9C-elasticsearch-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B3%80%EA%B2%BD-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%8C%80%EC%9D%91-%EB%B0%A9%EC%95%88%EC%9D%80/featured_original-elastic-logos_hu36e0488bdc3c30af55ee75cb1e6a7ff9_76478_640x0_resize_catmullrom_2.png" width="640" height="239"/>
 &lt;h2 id="서론-elasticsearch-라이선스-배경">서론: Elasticsearch 라이선스 배경&lt;/h2>
 &lt;p>Elasticsearch는 오픈소스 프로젝트로 시작했으며, 그동안 여러 번의 라이선스 정책 변경을 겪었습니다. 처음에는 &lt;strong>Apache 2.0 라이선스&lt;/strong> 하에 배포되었지만, 2021년 Elastic은 &lt;strong>Elastic License 2.0&lt;/strong>과 &lt;strong>Server Side Public License&lt;/strong>로 라이선스를 변경했습니다. 이후 2024년 8월 30일에는 다시 &lt;strong>AGPL-3.0&lt;/strong>을 추가하는 발표(&lt;a href="https://www.elastic.co/kr/blog/elasticsearch-is-open-source-again">Elasticsearch is Open Source, Again&lt;/a>)를 하면서 주목을 받고 있습니다.&lt;/p>
 &lt;p>&lt;img src="./featured_original-elastic-logos.png" alt="">&lt;/p>
@@ -70,13 +155,13 @@
 &lt;p>Elasticsearch가 다시 AGPL-3.0으로 돌아가는 결정은 오픈소스 생태계 내에서 큰 의미를 지닙니다. 이는 상업적 이익과 오픈소스 정신 간의 균형을 찾으려는 Elastic의 노력일 뿐만 아니라, 오픈소스를 사용하는 모든 기업에게도 중요한 시사점을 제공합니다.&lt;/p>
 &lt;p>기업은 오픈소스 라이선스의 변화에 적극적으로 대응해야 하며, 이를 통해 법적 리스크를 줄이고, 기술적 기회를 극대화할 수 있는 전략을 마련해야 합니다. AGPL-3.0과 같은 강력한 카피레프트 라이선스는 클라우드 시대에서 더욱 주목받을 것이며, 기업은 이에 맞춰 내부 시스템을 강화하고, 오픈소스 관리 체계를 발전시켜야 할 것입니다.&lt;/p>
 &lt;p>오픈소스 라이선스의 변화는 피할 수 없는 현실이지만, 이를 기회로 삼아 적절히 대응하는 기업은 경쟁 우위를 확보할 수 있습니다. 체계적인 오픈소스 관리 전략을 통해 법적 리스크를 최소화하고 기술적 이점을 극대화함으로써, 기업은 오픈소스 생태계 내에서 지속 가능한 성장을 이룰 수 있을 것입니다.&lt;/p>
-&lt;hr></description></item><item><title>Blog: SPDX 3.0 소개와 기업 도입 전략</title><link>/blog/2024/09/06/spdx-3.0-%EC%86%8C%EA%B0%9C%EC%99%80-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%A0%84%EB%9E%B5/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate><guid>/blog/2024/09/06/spdx-3.0-%EC%86%8C%EA%B0%9C%EC%99%80-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%A0%84%EB%9E%B5/</guid><description>
-&lt;img src="/blog/2024/09/06/spdx-3.0-%EC%86%8C%EA%B0%9C%EC%99%80-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%A0%84%EB%9E%B5/featured_SPDX30_hub7b7c8ee75d62f837b6290fa14d325ee_84057_640x0_resize_catmullrom_2.png" width="640" height="360"/>
+&lt;hr>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>&lt;em>이 글은 Perplexity (&lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>)와 함께 작성하였습니다.&lt;/em>&lt;/p>
+&lt;p>&lt;em>이 글은 Perplexity(&lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>)와 함께 작성하였습니다.&lt;/em>&lt;/p>
 &lt;p>&lt;em>SKT고객은 Perplexicy Pro를 1년간 무료로 이용할 수 있습니다.: &lt;a href="https://perplexity.sktadotevent.com/">https://perplexity.sktadotevent.com/&lt;/a>&lt;/em>&lt;/p>
 &lt;p>&lt;img src="./image.png" alt="image.png">&lt;/p>
-&lt;/div>
+&lt;/div></description></item><item><title>Blog: SPDX 3.0 소개와 기업 도입 전략</title><link>/blog/2024/09/06/spdx-3.0-%EC%86%8C%EA%B0%9C%EC%99%80-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%A0%84%EB%9E%B5/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate><guid>/blog/2024/09/06/spdx-3.0-%EC%86%8C%EA%B0%9C%EC%99%80-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%A0%84%EB%9E%B5/</guid><description>
+&lt;img src="/blog/2024/09/06/spdx-3.0-%EC%86%8C%EA%B0%9C%EC%99%80-%EA%B8%B0%EC%97%85-%EB%8F%84%EC%9E%85-%EC%A0%84%EB%9E%B5/featured_SPDX30_hub7b7c8ee75d62f837b6290fa14d325ee_84057_640x0_resize_catmullrom_2.png" width="640" height="360"/>
 &lt;h2 id="1-spdx-30-소개">1. SPDX 3.0 소개&lt;/h2>
 &lt;p>SPDX(Software Package Data Exchange)는 소프트웨어 구성 요소, 라이선스, 저작권 및 보안 정보를 표준화된 방식으로 전달하기 위한 오픈 표준입니다. SPDX 3.0은 이 표준의 최신 버전으로, 2024년 4월에 출시되었으며 소프트웨어 공급망의 투명성과 보안을 크게 향상시키는 중요한 업데이트입니다[2].&lt;/p>
 &lt;p>&lt;img src="./featured_SPDX30.png" alt="">&lt;/p>
@@ -1277,7 +1362,12 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ol>
-&lt;p>결론적으로, SPDX 3.0은 기업의 오픈소스 관리자에게 오픈소스 생태계를 효과적으로 관리하고 활용할 수 있는 강력한 도구를 제공합니다. 전략적이고 체계적인 접근을 통해 SPDX 3.0을 활용한다면, 조직은 오픈소스의 이점을 최대화하면서 관련 리스크를 최소화할 수 있을 것입니다. 오픈소스 관리자는 이러한 도구를 통해 조직의 디지털 혁신과 경쟁력 강화에 핵심적인 역할을 수행할 수 있을 것입니다.&lt;/p></description></item><item><title>Blog: 프랑스 법원, 대형 통신사 Orange에게 GPL 위반으로 손해배상 판결</title><link>/blog/2024/02/19/%ED%94%84%EB%9E%91%EC%8A%A4-%EB%B2%95%EC%9B%90-%EB%8C%80%ED%98%95-%ED%86%B5%EC%8B%A0%EC%82%AC-orange%EC%97%90%EA%B2%8C-gpl-%EC%9C%84%EB%B0%98%EC%9C%BC%EB%A1%9C-%EC%86%90%ED%95%B4%EB%B0%B0%EC%83%81-%ED%8C%90%EA%B2%B0/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>/blog/2024/02/19/%ED%94%84%EB%9E%91%EC%8A%A4-%EB%B2%95%EC%9B%90-%EB%8C%80%ED%98%95-%ED%86%B5%EC%8B%A0%EC%82%AC-orange%EC%97%90%EA%B2%8C-gpl-%EC%9C%84%EB%B0%98%EC%9C%BC%EB%A1%9C-%EC%86%90%ED%95%B4%EB%B0%B0%EC%83%81-%ED%8C%90%EA%B2%B0/</guid><description>
+&lt;p>결론적으로, SPDX 3.0은 기업의 오픈소스 관리자에게 오픈소스 생태계를 효과적으로 관리하고 활용할 수 있는 강력한 도구를 제공합니다. 전략적이고 체계적인 접근을 통해 SPDX 3.0을 활용한다면, 조직은 오픈소스의 이점을 최대화하면서 관련 리스크를 최소화할 수 있을 것입니다. 오픈소스 관리자는 이러한 도구를 통해 조직의 디지털 혁신과 경쟁력 강화에 핵심적인 역할을 수행할 수 있을 것입니다.&lt;/p>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>&lt;em>이 글은 Perplexity (&lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>)와 함께 작성하였습니다.&lt;/em>&lt;/p>
+&lt;p>&lt;em>SKT고객은 Perplexicy Pro를 1년간 무료로 이용할 수 있습니다.: &lt;a href="https://perplexity.sktadotevent.com/">https://perplexity.sktadotevent.com/&lt;/a>&lt;/em>&lt;/p>
+&lt;p>&lt;img src="./image.png" alt="image.png">&lt;/p>
+&lt;/div></description></item><item><title>Blog: 프랑스 법원, 대형 통신사 Orange에게 GPL 위반으로 손해배상 판결</title><link>/blog/2024/02/19/%ED%94%84%EB%9E%91%EC%8A%A4-%EB%B2%95%EC%9B%90-%EB%8C%80%ED%98%95-%ED%86%B5%EC%8B%A0%EC%82%AC-orange%EC%97%90%EA%B2%8C-gpl-%EC%9C%84%EB%B0%98%EC%9C%BC%EB%A1%9C-%EC%86%90%ED%95%B4%EB%B0%B0%EC%83%81-%ED%8C%90%EA%B2%B0/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>/blog/2024/02/19/%ED%94%84%EB%9E%91%EC%8A%A4-%EB%B2%95%EC%9B%90-%EB%8C%80%ED%98%95-%ED%86%B5%EC%8B%A0%EC%82%AC-orange%EC%97%90%EA%B2%8C-gpl-%EC%9C%84%EB%B0%98%EC%9C%BC%EB%A1%9C-%EC%86%90%ED%95%B4%EB%B0%B0%EC%83%81-%ED%8C%90%EA%B2%B0/</guid><description>
 &lt;img src="/blog/2024/02/19/%ED%94%84%EB%9E%91%EC%8A%A4-%EB%B2%95%EC%9B%90-%EB%8C%80%ED%98%95-%ED%86%B5%EC%8B%A0%EC%82%AC-orange%EC%97%90%EA%B2%8C-gpl-%EC%9C%84%EB%B0%98%EC%9C%BC%EB%A1%9C-%EC%86%90%ED%95%B4%EB%B0%B0%EC%83%81-%ED%8C%90%EA%B2%B0/featured_lasso_hu2be1628cf2eec4d7efae0b7b34a4e256_61950_640x0_resize_catmullrom_2.png" width="640" height="142"/>
 &lt;p>안녕하세요.&lt;/p>
 &lt;p>오늘은 프랑스 법원이 GPL 위반으로 통신사인 Orange에게 손해배상을 판결한 사건에 대해 살펴보려 합니다. 이 사건은 두 가지 주요 측면에서 특별히 주목할 만한 점이 있어 보였습니다.&lt;/p>
