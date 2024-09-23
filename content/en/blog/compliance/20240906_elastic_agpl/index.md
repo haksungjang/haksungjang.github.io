@@ -13,15 +13,6 @@ resources:
     byline: ""
 ---
 
-{{% pageinfo %}}
-
-*이 글은 Perplexity([https://www.perplexity.ai/](https://www.perplexity.ai/))와 함께 작성하였습니다.*
-
-*SKT고객은 Perplexicy Pro를 1년간 무료로 이용할 수 있습니다.: [https://perplexity.sktadotevent.com/](https://perplexity.sktadotevent.com/)*
-
-![image.png](./image.png)
-
-{{% /pageinfo %}}
 
 ## 서론: Elasticsearch 라이선스 배경
 
@@ -118,3 +109,14 @@ Elasticsearch가 다시 AGPL-3.0으로 돌아가는 결정은 오픈소스 생�
 
 
 ---
+
+
+{{% pageinfo %}}
+
+*이 글은 Perplexity([https://www.perplexity.ai/](https://www.perplexity.ai/))와 함께 작성하였습니다.*
+
+*SKT고객은 Perplexicy Pro를 1년간 무료로 이용할 수 있습니다.: [https://perplexity.sktadotevent.com/](https://perplexity.sktadotevent.com/)*
+
+![image.png](./image.png)
+
+{{% /pageinfo %}}
