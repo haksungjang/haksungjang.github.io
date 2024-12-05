@@ -1,23 +1,34 @@
 ---
-title: "SBOM 가이드라인 in India"
+title: "SOFTWARE BILL OF MATERIALS (SBOM)에 대한 기술 가이드라인 (인도 정부 발간)"
 linkTitle: "SBOM 가이드라인"
 weight: 2
 type: docs
 description: >
-  This document is for governance of OpenChain KWG.
+  Technical Guidelines on Software Bill of Materials (SBOM)
 ---
 
-## SOFTWARE BILL OF MATERIALS (SBOM)에 대한 기술 가이드라인
+{{% pageinfo %}}
+
+본 문서는 인도 컴퓨터 비상대응팀(CERT-In)이 2023년 10월에 발표한 "[Technical Guidelines on Software Bill of Materials (SBOM)](https://www.cert-in.org.in/PDF/SBOM_Guidelines.pdf)"의 한국어 번역본입니다. 
+
+원문은 인도의 공공 부문, 정부, 필수 서비스, 소프트웨어 수출 및 서비스 산업 관련 조직을 대상으로 SBOM 도입에 대한 기술적 지침을 제공하며, SBOM의 가치와 모범 사례를 중점적으로 다루고 있습니다.: [DOWNLOAD](./SBOM_Guidelines.pdf)
+
+이 가이드라인은 한국 기업에도 다음과 같은 시사점을 제공합니다:
+
+1. **경쟁력 강화**: SBOM 도입은 소프트웨어 공급망 보안을 강화하고 글로벌 시장에서 신뢰성을 높이는 데 기여할 수 있습니다.
+2. **사이버 보안 향상**: SBOM은 취약점 관리와 사고 대응 능력을 개선하는 데 중요한 역할을 합니다.
+3. **규제 대비**: 인도와 거래하거나 협력하는 기업들은 해당 지침을 숙지하고 준수할 필요가 있습니다.
+4. **국제 협력 촉진**: 글로벌 표준 준수를 통해 국제 거래에서 투명성과 신뢰성을 확보할 수 있습니다.
+
+이 번역본이 한국의 소프트웨어 개발 및 보안 전략 수립에 실질적인 도움이 되기를 기대합니다.
+
+**Author : [장학성 (Haksung Jang)](https://haksungjang.github.io/)**
+
+{{% /pageinfo %}}
+
 
 ![image.png](img/image.png)
 
-버전 1.0
-
-* [Indian Computer Emergency Response Team (CERT-In)](https://www.cert-in.org.in/)
-* [Ministry of Electronics and Information Technology](https://www.meity.gov.in/)
-* Government of India
-
----
 
 ## 1. Executive Summary
 
@@ -114,7 +125,7 @@ B. ***DataAnalyzer*** 제품을 개발하기 위해 ***TechGenius*** 회사는 �
 
 **앞서 언급한 시나리오의 다양한 구성 요소/소프트웨어와 해당 SBOM 유형 및 상태는 아래 표에 제공되어 있습니다:**
 
-Table 1: 소프트웨어 구성 요소와 SBOM 작성자 현황
+*Table 1: 소프트웨어 구성 요소와 SBOM 작성자 현황*
 | 번호 | 이름 | SBOM 작성자 현황 |
 | --- | --- | --- |
 | 1 | ***DataAnalyzer*** 애플리케이션에 대한 SBOM | ***TechGenius*** 회사에서 개발하여 제품/애플리케이션인 ***DataAnalyzer***와 함께 ***GovInsights*** 조직에 제공될 예정 |
@@ -122,10 +133,10 @@ Table 1: 소프트웨어 구성 요소와 SBOM 작성자 현황
 | 3 | ***Apache Tomcat Server*** 플랫폼에 대한 SBOM | ***ServerSolutions*** 회사가 배포 SBOM을 생성하여 ***TechGenius***가 플랫폼을 조달했을 때 ***TechGenius***와 공유 |
 | 4 | ***Postfix & Twilio SDK***에 대한 SBOM | ***MessageMaster***가 SBOM을 제공하지 않았기 때문에 TechGenius 회사가 전이적 SBOM을 생성 |
 
-이 시나리오에서 이해관계자와 구성 요소 간의 상호 관계는 그림 1에 시각적으로 표현되어 있습니다. 묘사된 바와 같이, SBOM 생태계 내의 수많은 주체는 소프트웨어의 제공자와 소비자 역할을 모두 수행합니다. 이는 다른 주체가 제공한 SBOM의 정보를 활용할 뿐만 아니라 새로 개발된 구성 요소에 대한 SBOM을 생성하고 이를 다른 주체와 공유하는 것을 포함합니다. 이상적으로는 소프트웨어 구성 요소의 제작자가 해당 SBOM의 작성자가 되어야 합니다.
+이 시나리오에서 이해관계자와 구성 요소 간의 상호 관계는 Figure 1에 시각적으로 표현되어 있습니다. 묘사된 바와 같이, SBOM 생태계 내의 수많은 주체는 소프트웨어의 제공자와 소비자 역할을 모두 수행합니다. 이는 다른 주체가 제공한 SBOM의 정보를 활용할 뿐만 아니라 새로 개발된 구성 요소에 대한 SBOM을 생성하고 이를 다른 주체와 공유하는 것을 포함합니다. 이상적으로는 소프트웨어 구성 요소의 제작자가 해당 SBOM의 작성자가 되어야 합니다.
 
-![그림 1: 시나리오 흐름도](img/image%201.png)
-그림 1: 시나리오 흐름도
+![Figure 1: 시나리오 흐름도](img/image%201.png)
+*Figure 1: 시나리오 흐름도*
 
 - SBOM 소비자: 완전한 SBOM을 요청해야 합니다.
 - 소프트웨어 개발자: 정확하고 완전한 SBOM이 소비자에게 제공되도록 해야 합니다.
@@ -146,12 +157,12 @@ SBOM의 다양한 수준은 각각 다른 정도의 세부성과 복잡성을 �
 | Transitive SBOM | 소프트웨어 구성 요소의 직접적인 의존성뿐만 아니라 간접적이거나 전이적인 의존성도 포함합니다. |
 | Complete SBOM | 소프트웨어 시스템에 존재하는 모든 부분, 의존성, 관련 메타데이터의 완전하고 철저한 목록을 제공합니다. |
 
-[Figure 2: SBOM 수준]
+*Figure 2: SBOM 수준*
 
 다중 SBOM 접근 방식을 채택하면 조직의 사이버 복원력을 크게 향상시킬 수 있습니다. 조직은 민감한 데이터를 노출하지 않고 보안 요구 사항을 해결하는 맞춤형 SBOM을 소비자를 위해 생성해야 합니다. 동시에 "완전한" 수준의 내부 SBOM을 유지하여 해당 소프트웨어와 관련된 취약점 업데이트를 식별하고 주기적으로 의무적으로 소비자와 상세히 공유해야 합니다. 이 접근 방식은 특히 조직이 완전한 소프트웨어 및 의존성 세부 정보를 공유함으로써 발생하는 데이터 유출 및 지적 재산 도용에 대한 제약이나 우려에 직면한 상황에서 생태계 전반에 걸쳐 사이버 복원력, 데이터 기밀성, 협력적 보안의 균형을 맞춥니다.
 
 
-Table 2: SBOM을 작성한 조직의 시나리오에 따른 수준 매핑
+*Table 2: SBOM을 작성한 조직의 시나리오에 따른 수준 매핑*
 | 번호 | 이름 | SBOM 수준 | SBOM 작성자 현황 |
 | --- | --- | --- | --- |
 | 1 | ***DataAnalyzer*** 애플리케이션에 대한 SBOM | Complete SBOM | ***TechGenius*** 회사에서 개발하여 제품/애플리케이션인 ***DataAnalyzer***와 함께 ***GovInsights*** 조직에 제공될 예정 |
@@ -163,7 +174,7 @@ Table 2: SBOM을 작성한 조직의 시나리오에 따른 수준 매핑
 
 SBOM 분류는 소프트웨어 개발 생명주기 단계와 일치하며, 각각 고유한 데이터와 통찰력을 제공합니다. SBOM의 다양한 분류는 다음과 같습니다:
 
-![그림 3: SDLC 단계와 일치하는 SBOM 분류](img/image%202.png)
+![Figure 3: SDLC 단계와 일치하는 SBOM 분류](img/image%202.png)
 
 *Figure 3: SDLC 단계와 일치하는 SBOM 분류*
 
@@ -205,7 +216,7 @@ SBOM 분류는 소프트웨어 개발 생명주기 단계와 일치하며, 각�
 
 - **3.3.2.2 각 구성 요소에 고유 식별자 할당**: 소비자가 리브랜딩을 인식하지 못하면 보안 업데이트나 취약점을 간과할 수 있어 악용에 취약해질 수 있습니다. 이로 인해 소비자가 자체 SBOM에 포함할 정확한 데이터 필드(예: 현재 공급업체 및 구성 요소 이름)를 조사하기 어려워집니다. 공급업체 및 구성 요소 이름 변경은 SBOM 수정과 이전 SBOM에서 후속 버전으로의 링크를 통해 수정 이력을 유지해야 합니다. 이를 해결하기 위해 고유 식별자를 생성해야 합니다.
 
-Table 3: 고유 식별자의 구문 및 예시
+*Table 3: 고유 식별자의 구문 및 예시*
 
 | 필드 | 설명 | 예시 |
 | --- | --- | --- |
@@ -220,7 +231,7 @@ Table 3: 고유 식별자의 구문 및 예시
 위 시나리오에 대한 고유 식별자는 다음과 같습니다:
 pkg:supplier/ApacheSoftwareFoundation/ApacheTomcat@9.0.71?arch=x86_64&os=linux#server/webapps
 
-Table 4: 고유 식별자의 유용성
+*Table 4: 고유 식별자의 유용성*
 
 | 문제 | Apache Tomcat 예시 | 고유 식별자가 도움이 되는 방법 |
 | --- | --- | --- |
@@ -277,7 +288,7 @@ Table 4: 고유 식별자의 유용성
 
 SBOM의 최소 요소는 소프트웨어 구성 요소와 관련된 필수 정보인 "Data Fields"를 규정합니다. "Automation Support" 탐지 및 관리는 보안 오케스트레이션 도구와 조직의 SBOM 구현을 위한 "Process 및 Practice"와 통합하여 개선될 수 있습니다. "Minimum Elements"의 범주와 정의는 다음과 같습니다.
 
-Table 5: SBOM의 최소 요소
+*Table 5: SBOM의 최소 요소*
 | 최소 요소 | 개요 | 정의 |
 |-----------|-------|-------|
 | Data Fields | 추적해야 할 각 구성 요소에 대한 기본 정보를 문서화 | 이 기본 구성 요소 정보는 다음을 포함합니다:<br>• Component Name<br>• Component Version<br>• Component Description<br>• Component Supplier<br>• Component License<br>• Component Origin<br>• Component Dependencies<br>• Vulnerabilities<br>• Patch Status<br>• Release Date<br>• End-of-Life (EOL) Date<br>• Criticality<br>• Usage Restrictions<br>• Checksums or Hashes<br>• Comments or Notes<br>• Author of SBOM Data<br>• Timestamp<br>• Executable Property<br>• Archive Property<br>• Structured Property<br>• Unique Identifier |
@@ -312,7 +323,7 @@ Data fields의 목적은 이러한 구성 요소를 적절히 식별하는 것�
 20. **Structured Property**: SBOM에 나열된 구성 요소 내 데이터의 구성된 형식을 정의하는 설명자
 21. **Unique Identifier**: 각 소프트웨어 구성 요소에 할당된 고유 코드로, "pkg:supplier/OrganizationName/ComponentName@Version?qualifiers&subpath" 형식으로 구성되어 소유권 변경과 버전 업데이트를 추적하여 정확하고 일관된 소프트웨어 구성 요소 관리를 보장
 
-Table 6: 조직별 시나리오에서 활용된 Component의 Data Fields
+*Table 6: 조직별 시나리오에서 활용된 Component의 Data Fields*
 
 | Component Name | Apache Tomcat | PostgreSQL | Postfix | Twilio SDK |
 | --- | --- | --- | --- | --- |
@@ -353,7 +364,7 @@ Table 6: 조직별 시나리오에서 활용된 Component의 Data Fields
 | Integration with Security Orchestration Platforms | 자동화 도구는 보안 오케스트레이션 플랫폼과 통합하여 SBOM 분석 결과를 기반으로 수정 워크플로우를 자동화할 수 있습니다. 이를 통해 보안 취약점을 완화하기 위한 패치, 업데이트 또는 구성 변경의 자동 배포가 가능합니다. |
 | Monitoring and Maintenance | 자동화 도구는 구성 요소 정보 업데이트, 변경 사항 추적 및 이상이나 compliance 위반에 대한 경고 생성을 통해 SBOM의 지속적인 모니터링과 유지 관리를 용이하게 할 수 있습니다. |
 
-Figure 5: SBOM의 Automation Support 이점
+*Figure 5: SBOM의 Automation Support 이점*
 
 SBOM 데이터를 활용하기 위해서는 일관된 데이터 형식과 구현이 필요한 도구가 필요합니다. 자동화는 SBOM의 생성, 유지 관리 및 활용의 여러 측면을 지원할 수 있습니다. 이는 일관성 있는 변경 사항 구현, 시간 절약, 취약점 관리 개선 등 다양한 이점을 제공합니다. 자동화된 SBOM 생성은 감사 및 규정 준수 절차를 간소화하고 보안 취약점에 대한 대응 시간을 단축시킵니다. 조직은 이 기능을 현재의 취약점 관리 절차와 보안 정책의 실시간 감사 compliance에 포함할 수 있습니다. 두 가지 모두 표준화된 기계 판독 가능한 데이터 형식을 필요로 하는 자동화에 크게 의존합니다. SBOM을 생성하고 사용하는 데 사용되는 표준 형식은 다음과 같습니다:
 
@@ -373,7 +384,7 @@ SBOM을 구현하기 위해서는 필요한 역할과 책임을 식별해야 합
 
 ![image.png](img/image%203.png)
 
-Figure 6: 역할 및 책임 수립 단계
+*Figure 6: 역할 및 책임 수립 단계*
 
 1. 주요 이해관계자 식별: SBOM 프로그램의 주요 이해관계자를 식별하기 위해 조직은 소프트웨어 개발, IT 운영, 보안, 조달, 비즈니스 리더십, compliance 팀 및 규제 기관의 대표자를 고려해야 합니다. 보안 데이터 처리, 취약점 관리 및 위험 평가에 대한 전문 지식을 제공하기 위해 사이버보안 전문가를 포함해야 합니다.
 
@@ -395,7 +406,7 @@ Figure 6: 역할 및 책임 수립 단계
 
 이 섹션에서는 SBOM의 세 가지 주요 측면인 관행, 도구 지원 및 관련 문제의 목표를 탐구합니다. 이를 통해 소프트웨어 Developer/Consumer/Integrator 조직에게 다양한 기능을 탐색하고 SBOM의 특정 측면에서 실제로 달성해야 할 사항에 대한 로드맵을 제공합니다.
 
-Table 7: SBOM 개념의 목표
+*Table 7: SBOM 개념의 목표*
 | SBOM Functions | 목표 |
 | --- | --- |
 | Benefits | • SBOM의 주요 이점은 소프트웨어 제품에 대한 향상된 투명성과 가시성이어야 하며, 이는 잠재적인 SBOM 중심 생태계의 기반이 됩니다.<br>• SBOM의 장점은 SBOM과 지원 도구의 학습 및 관리와 관련된 비용보다 커야 합니다. |
@@ -483,7 +494,7 @@ a) VEX Document 설계: Vulnerability Exchange Document (VEX)는 취약점이 �
 b) Common Security Advisory Framework (CSAF) 채택: VEX document 이후에 supplier는 취약점에 대한 설명, 영향을 받는 제품 버전, 심각도 평가 및 권장되는 완화 단계와 같은 자세한 정보가 포함된 CSAF 권고사항을 제공해야 합니다. 이는 다음 예시를 통해 이해할 수 있습니다:
 
 ![image.png](img/image%204.png)
-Figure 7: SBOM의 취약점 추적 및 분석 단계 시퀀스 예시
+*Figure 7: SBOM의 취약점 추적 및 분석 단계 시퀀스 예시*
 
 Log4j 취약점은 위 그림에 설명된 개념을 매핑하고 설명하는 예시로 사용됩니다:
 
