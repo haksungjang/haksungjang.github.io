@@ -1,0 +1,1857 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Haksung – [2025] ISO 표준 기반 기업 오픈소스 관리 가이드</title><link>/docs/opensource_for_enterprise/</link><description>Recent content in [2025] ISO 표준 기반 기업 오픈소스 관리 가이드 on Haksung</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/opensource_for_enterprise/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 0. OpenChain 살펴보기</title><link>/docs/opensource_for_enterprise/0-openchain/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/0-openchain/</guid><description>
+&lt;h2 id="1-openchain-project란">1. OpenChain Project란?&lt;/h2>
+&lt;p>오늘날 소프트웨어는 갈수록 그 규모와 복잡도가 커지고 있습니다. 하나의 소프트웨어를 개발하기 위해서는 자체 개발한 소프트웨어뿐 아니라 오픈소스, 타사 소프트웨어&lt;sub>3rd party software&lt;/sub>, 벤더의 SDK 등 소프트웨어 공급망에 걸친 다양한 소프트웨어가 사용될 수 있습니다.&lt;/p>
+&lt;p>이러한 복잡한 소프트웨어 공급망의 여러 조직 중 한 곳이라도 오픈소스 라이선스 의무를 준수하지 않거나 올바른 오픈소스 사용 정보를 제공하지 않으면 최종 소프트웨어를 배포하는 기업은 오픈소스 라이선스 의무 준수에 실패할 수밖에 없습니다. 이로 인해 소송을 제기당해 제품 판매가 중단되는 상황이 발생할 수도 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/supplychain_hu6e9af657df792943cdce25f560f6e119_95730_900x600_fit_catmullrom_2.png" width="813" height="552">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>[OpenChain Open Source Software License Compliance General Public Guide]&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>2009년 12월, &lt;a href="https://busybox.net/">Busybox&lt;/a>라는 오픈소스 관련된 소송이 있었습니다. Busybox는 임베디드 시스템에 광범위하게 사용되고 있는 GPL-2.0 라이선스가 적용된 오픈소스인데, 국내 회사 두 곳을 포함하여 14개 회사가 소송 대상이 되었습니다. 이 사례에서 주목할만한 점은 이 중에는 제품을 직접 개발하지 않고 배포만 한 회사도 소송을 당하였다는 점입니다.&lt;/p>
+&lt;p>이와 같은 복잡한 소프트웨어 공급망 환경에서는 어느 한 기업이 아무리 훌륭한 프로세스를 갖추고 있다고 해도 자체적으로 완벽한 오픈소스 컴플라이언스를 달성하는 건 매우 어렵습니다. 결국 한 기업이 오픈소스 컴플라이언스를 제대로 이행하기 위해서는 소프트웨어 공급망의 모든 구성원이 라이선스 의무를 준수하고 올바른 오픈소스 정보를 제공해야 합니다. 공급망 전체에 걸쳐 이런 신뢰가 구축되어야 합니다.&lt;/p>
+&lt;p>&lt;a href="https://www.linuxfoundation.org/">Linux Foundation&lt;/a>의 &lt;a href="https://www.openchainproject.org/">OpenChain&lt;/a> 프로젝트는 기업이 오픈소스 컴플라이언스를 위해 준수해야 할 핵심 사항을 간결하고 일관성 있게 정의하고, 이를 모두가 준수한다면 소프트웨어 공급망 전체에 걸쳐 오픈소스 라이선스 측면의 신뢰를 구축할 수 있다는 믿음으로 설립되었습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/openchainlogo_huafe0912432e2a7cf16ff02866e9e894e_19898_600x450_fit_catmullrom_2.png" width="600" height="79">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>[OpenChain Project Logo]&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>2016년 유럽에서의 한 오픈소스 콘퍼런스에서 퀄컴의 오픈소스 변호사인 데이브 머&lt;sub>Dave Marr&lt;/sub>는 바로 이 점을 강조하였습니다. 한 기업의 오픈소스 컴플라이언스 수준을 높이기 위해서는 소프트웨어 공급망 내 모든 구성원의 오픈소스 컴플라이언스 수준을 높여야 합니다. 아울러 이를 위해서는 오픈소스를 충분히 이해하고, 정책 및 프로세스를 이미 구축하고 있는 선진 기업이 자신의 자산과 노하우를 공개하여 누구나 이를 참고할 수 있게 하면 어떻겠냐는 의견을 제시하였습니다. 콘퍼런스 참석자들은 &amp;ldquo;오픈소스 컴플라이언스는 기업의 이익을 차별화할 수 있는 분야가 아니다. 기업은 적은 리소스를 투입하면서도 적정한 수준의 리스크 관리를 원한다. 그렇기 때문에 기업이 가진 자산을 서로 공유하면 할수록 적은 리소스로 모두 함께 컴플라이언스를 달성 할 수 있게 된다&amp;quot;는 아이디어에 공감하였습니다. 그렇게 OpenChain 프로젝트(당시에는 Work Group)는 시작되었고, &lt;a href="https://www.qualcomm.com/">퀄컴&lt;/a>, &lt;a href="https://www.siemens.com/">지멘스&lt;/a>, &lt;a href="https://www.windriver.com/">윈드리버&lt;/a>, &lt;a href="https://www.arm.com/">ARM&lt;/a>, &lt;a href="https://www.adobe.com/">어도비&lt;/a> 등 다수 글로벌 기업들이 참여하였습니다.&lt;/p>
+&lt;p>OpenChain 프로젝트는 기업들이 오픈소스 컴플라이언스를 더욱 쉽게 달성 할 수 있도록 크게 다음 세 가지를 제공합니다.&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="https://www.openchainproject.org/get-started/conformance">OpenChain 규격&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://certification.openchainproject.org/">OpenChain 적합성 인증&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.openchainproject.org/resources">문서 자료&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;p>기업이 어떻게 이들을 활용할 수 있을지 하나씩 알아보겠습니다.&lt;/p>
+&lt;h2 id="2-openchain-규격과-isoiec-표준">2. OpenChain 규격과 ISO/IEC 표준&lt;/h2>
+&lt;p>OpenChain 규격은 오픈소스 컴플라이언스를 위한 핵심 요구사항을 정의한 10페이지 분량의 문서입니다. 2016년 OpenChain 규격 버전 1.0이 발표되었습니다. OpenChain 규격은 기업의 규모나 업종과 관계없이 모든 기업에 적합하도록 설계되었습니다.&lt;/p>
+&lt;p>2020년에는 버전 2.1의 규격이 배포됐으며, 기업이 오픈소스 컴플라이언스 달성을 위해 꼭 수행해야 할 여섯 가지 핵심 요구사항과 이를 입증하기 위해 필요한 자료 목록을 정의하고 있습니다.&lt;/p>
+&lt;ol>
+&lt;li>프로그램 설립&lt;/li>
+&lt;li>관련 업무 정의 및 지원&lt;/li>
+&lt;li>오픈소스 콘텐츠 검토 및 승인&lt;/li>
+&lt;li>컴플라이언스 산출물 생성 및 전달&lt;/li>
+&lt;li>오픈소스 커뮤니티 참여에 대한 이해&lt;/li>
+&lt;li>규격 요구사항 준수&lt;/li>
+&lt;/ol>
+&lt;p>오픈소스 컴플라이언스를 처음 시작하는 기업이라면 이러한 OpenChain 규격의 요구사항을 하나씩 충족해가면서 수준을 향상시키는 것이 좋은 전략입니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 604px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec_huea9325fb33e6a4ed7dca0b385b6daee7_57020_1200x900_fit_catmullrom_2.png" width="594" height="775">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; 출처 : https://github.com/OpenChain-Project/Specification/blob/master/Official/en/2.1/openchainspec-2.1.pdf>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이 OpenChain 규격은 2020년 12월 오픈소스 컴플라이언스에 대한 국제 표준인 &lt;a href="https://www.iso.org/standard/81039.html">ISO/IEC 5230:2020&lt;/a>으로 정식 등록되었습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 681px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/iso_hu55883dc0d3475bd183fb3baf15fb8209_97543_900x600_fit_catmullrom_2.png" width="671" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; 출처 : https://www.iso.org/standard/81039.html>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>지난 4년간 사실상의 표준이었던 OpenChain 규격이 ISO/IEC 5230:2020이라는 정식 국제 표준으로 전환되었고, 이는 오픈소스 컴플라이언스 및 프로세스 관리를 정의한 최초의 국제 표준입니다. 이로써 글로벌 IT기업의 ISO/IEC 5230 준수에 관한 관심이 높아지고 있고, 소프트웨어 공급망에서 공급자들에게 ISO/IEC 5230 준수를 요구하는 기업이 늘어날 것으로 예상됩니다.&lt;/p>
+&lt;p>2023년에는 오픈소스 보안 보증을 위한 새로운 표준인 &lt;a href="https://www.iso.org/standard/81039.html">ISO/IEC 18974&lt;/a>가 발표되었습니다. 이 표준은 OpenChain 보안 보증 규격을 기반으로 하며, 오픈소스 소프트웨어의 알려진 보안 취약점을 관리하기 위한 핵심 요구사항을 정의합니다. ISO/IEC 18974는 다음과 같은 주요 영역을 다룹니다:&lt;/p>
+&lt;ol>
+&lt;li>보안 프로세스가 필요한 핵심 영역 식별&lt;/li>
+&lt;li>역할과 책임 할당 방법&lt;/li>
+&lt;li>프로세스의 지속 가능성 보장 방법&lt;/li>
+&lt;/ol>
+&lt;p>ISO/IEC 18974는 ISO/IEC 5230과 마찬가지로 간결하고 이해하기 쉬우며, 글로벌 커뮤니티의 지원을 받아 무료 참조 자료와 적합성 리소스를 제공합니다.&lt;/p>
+&lt;p>이 두 표준은 함께 작동하여 조직이 오픈소스 소프트웨어의 라이선스 컴플라이언스와 보안 보증을 효과적으로 관리할 수 있도록 지원합니다. ISO/IEC 5230이 라이선스 컴플라이언스에 중점을 둔다면, ISO/IEC 18974는 보안 취약점 관리에 초점을 맞추고 있어 상호 보완적인 역할을 합니다.&lt;/p>
+&lt;h2 id="3-isoiec-표준-인증-방법">3. ISO/IEC 표준 인증 방법&lt;/h2>
+&lt;p>ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 모두 준수한다면 이 표준들에 적합한 오픈소스 프로그램을 보유했음을 인증받을 수 있습니다. 오픈소스 프로그램이란 정책, 프로세스, 인원 등 기업이 오픈소스 컴플라이언스와 보안 보증 활동을 수행하기 위한 일련의 관리 체계를 의미합니다.&lt;/p>
+&lt;p>아래의 이미지는 ISO/IEC 5230이 요구하는 항목 번호를 나열한 그림입니다. 이 항목을 모두 충족하는 기업은 소프트웨어 공급망에서 투명하고 신뢰할 수 있는 오픈소스 거버넌스 체계를 구축하였다고 인정받을 수 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 682px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec3111_hu9e3365669d2cb1ca43107a57dbb79401_110515_900x600_fit_catmullrom_2.png" width="672" height="440">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;a href="https://www.openchainproject.org/">OpenChain 프로젝트&lt;/a>에서 제안하는 인증 방법은 세 가지입니다:&lt;/p>
+&lt;ul>
+&lt;li>자체 인증&lt;/li>
+&lt;li>독립 평가&lt;/li>
+&lt;li>타사 인증&lt;/li>
+&lt;/ul>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/certify_hu6149cf2956ab1688dc37f8ac681e4cd8_135469_900x600_fit_catmullrom_2.png" width="900" height="596">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i> https://www.openchainproject.org/get-started/conformance &lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>각각의 방법을 알아보겠습니다.&lt;/p>
+&lt;h3 id="1-자체-인증">(1) 자체 인증&lt;/h3>
+&lt;p>자체 인증은 OpenChain 프로젝트에서 가장 권장하는 방법이며, 비용이 발생하지 않는다는 장점이 있습니다. OpenChain Project는 기업이 OpenChain 규격을 준수하는지 자체적으로 확인할 수 있도록 &lt;a href="https://openchainproject.org/checklist-iso-5230-2020">ISO/IEC 5230 자체 인증 웹사이트&lt;/a>를 제공합니다. 기업의 오픈소스 담당자는 이 웹사이트에 가입해 온라인 자체 인증을 시작할 수 있습니다. 자체 인증은 아래와 같이 Yes/No 질문에 답변하는 방식으로 진행됩니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 846px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/question_hu4f44f92da355ecf95f03a5b240a3636b_73520_900x600_fit_catmullrom_2.png" width="836" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; 출처 : https://certification.openchainproject.org/>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>오픈소스 컴플라이언스 체계를 잘 구축하여 OpenChain 자체 인증의 모든 질문에 Yes로 대답할 수 있다면 이 결과를 웹사이트상에 제출할 수 있습니다(Conforming Submission). 그러면 &lt;a href="https://www.linuxfoundation.org/">Linux Foundation&lt;/a>의 간단한 문답식의 확인 절차를 거친 후 ISO/IEC 5230 인증을 선언할 수 있게 됩니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 877px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/sktannounce_hu3cb20ac17e702452c92f79a5304fefae_235751_900x600_fit_catmullrom_2.png" width="867" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;예: SK텔레콤 인증 선언 - 출처: https://www.openchainproject.org/featured/2021/09/08/sk-telecom>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이렇게 인증 선언을 하게 되면, Global Software Supply Chain에서 ISO/IEC 5230을 준수하는 오픈소스 프로그램을 가진 기업으로 인정받게 됩니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 850px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/announcelogo_hucb9003ce80389bc56192ba3f677cbafb_691803_900x600_fit_catmullrom_2.png" width="840" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; ISO/IEC 5230 적합 프로그램 보유 선언 기업, 출처 - https://www.openchainproject.org/ >&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>OpenChain 프로젝트는 자체 인증 방식을 권장합니다. 참고로, OpenChain 적합성을 선언한 대부분의 기업도 자체 인증 방식을 채택하였습니다.&lt;/p>
+&lt;p>또한, 기업은 자체 인증 과정을 통해 부족한 부분이 무엇인지, 추가로 필요한 활동이 무엇인지 판단할 수 있습니다. 이 가이드에서는 조직, 정책, 프로세스 등 주요 구성 요소별로 ISO/IEC 5230과 ISO/IEC 18974 요구사항을 준수할 수 있는 방법을 설명합니다.&lt;/p>
+&lt;p>가이드만으로 자체적으로 보완할 수 있는 역량이 부족한 기업인 경우 독립 평가 방법을 고려할 수 있습니다.&lt;/p>
+&lt;h3 id="2-독립-평가">(2) 독립 평가&lt;/h3>
+&lt;p>독립 평가는 기업 외부의 독립 기관이 공정한 관점에서 기업의 오픈소스 컴플라이언스와 보안 보증 상태를 점검하고 평가합니다. 독립 평가의 특징은 평가 보고서를 생성하는 것에 그치지 않고 도출된 미비점을 보완하기 위한 컨설팅을 제공한다는 것입니다. (단, 공인 인증서를 발급하지는 않습니다.)&lt;/p>
+&lt;p>기업은 독립 기관으로부터의 공정한 평가와 컨설팅을 받아 컴플라이언스와 보안 보증 수준을 높이고, 다시 독립 평가를 수행하는 반복적인 과정을 통해 정책을 세분화하고 프로세스를 구축할 수 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/independent2_huc1808161635a16af9518c90148487e75_232770_900x1200_fit_catmullrom_2.png" width="900" height="409">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; Independent Compliance Assessment, 출처 - https://youtu.be/DEBd-g0Ab8E >&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>결국 기업은 ISO/IEC 5230과 ISO/IEC 18974 인증을 받을 수 있는 수준에 도달하게 되고, 그때 자체 인증, 혹은 타사 인증을 획득하는 절차에 돌입할 수 있습니다. 독립 평가는 이렇게 기업의 오픈소스 컴플라이언스와 보안 보증 수준을 높이기 위한 평가와 컨설팅을 제공하여 기업이 ISO/IEC 5230과 ISO/IEC 18974 적합 프로그램을 보유하고 인증을 획득할 수 있게 지원합니다.&lt;/p>
+&lt;p>독립 평가를 제공하는 업체는 &lt;a href="https://alektometis.com/">AlektoMetis&lt;/a>, &lt;a href="https://sourcecodecontrol.co/">Source Code Control&lt;/a> 등이 있습니다.&lt;/p>
+&lt;p>국내에서는 OpenChain Korea Work Group의 Subgroup인 &lt;a href="https://openchain-project.github.io/OpenChain-KWG/subgroup/conformance/">Conformance Group&lt;/a>에서 기업간에 자체적으로 ISO/IEC 5230과 ISO/IEC 18974 준수를 위한 방법을 논의하고 공유하는 커뮤니티가 있습니다. OpenChain Korea Work Group 멤버라면 누구나 참여하여 도움을 받을 수 있습니다.&lt;/p>
+&lt;h3 id="3-타사-인증">(3) 타사 인증&lt;/h3>
+&lt;p>소프트웨어 공급망에서 구매자에게 보다 신뢰성 있고 투명한 오픈소스 컴플라이언스와 보안 보증 수준을 나타내고자 한다면 타사 인증 기관으로부터 인증서를 발급받고 이를 홍보에 활용할 수 있습니다. 또한, 오픈소스 컴플라이언스와 보안 보증의 보다 견고한 신뢰성을 요구하는 일부 구매자는 공급자(Supplier)에게 타사 인증을 의무화할 수도 있을 것으로 예상됩니다.&lt;/p>
+&lt;p>2024년 기준, OpenChain의 공인 타사 인증 기관은 &lt;a href="https://orcro.co.uk/">ORCRO&lt;/a>, &lt;a href="https://www.pwc.de/en/opensource">PWC&lt;/a>, &lt;a href="https://www.tuvsud.com/">TÜV SÜD&lt;/a>, &lt;a href="https://www.synopsys.com/">Synopsys&lt;/a>, &lt;a href="https://group.bureauveritas.com/">Bureau Veritas&lt;/a>입니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/3rdpartycertifiers_hu3326ecd792c70d6c371776d576a8318f_346317_900x600_fit_catmullrom_2.png" width="900" height="320">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; Third-Party Certifiers, 출처 - https://www.openchainproject.org/partners >&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이들은 ISO/IEC 5230과 ISO/IEC 18974 적합 프로그램 확인을 위한 평가를 제공하고 통과한 기업에 인증서를 발급합니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/pwc_hub36eb9916035c2e988088c22745058db_75188_900x600_fit_catmullrom_2.png" width="900" height="331">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; PWC certification, 출처 - https://youtu.be/HslvXCM-4pQ >&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>2024년 현재, 아직은 타사 인증을 의무적으로 요구하는 구매자나 기관은 많지 않습니다. 하지만 유럽의 자동차 업계에서는 ISO/IEC 5230과 ISO/IEC 18974가 &lt;a href="http://www.automotivespice.com/">ASPICE&lt;/a>(Automotive SPICE, 자동차 소프트웨어 개발을 위한 국제 표준 프로세스 모델)와 같이 자동차 소프트웨어 공급자에게 의무화될 날이 머지않을 것이라고 예견하는 전문가도 있습니다.&lt;/p>
+&lt;p>또한, 자세한 자체 인증 방법은 다음 슬라이드를 참고할 수 있습니다:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://openchain-project.github.io/OpenChain-KWG/meeting/9th/OpenChain_Korea_20210311_howto.pptx">OpenChain Korea 9th Meeting - How to Self Certify&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-openchain-resources">4. OpenChain Resources&lt;/h2>
+&lt;p>&lt;a href="https://www.openchainproject.org/">OpenChain 프로젝트&lt;/a>에서는 기업이 컴플라이언스 프로그램을 구축하는 데 필요한 정책 문서 템플릿, 교육 자료 등 다양한 문서 자료를 제공합니다. 이 자료는 OpenChain 규격을 준수하고 일반적인 오픈소스 컴플라이언스 활동을 지원하기 위해 고안됐으며, 누구나 자유롭게 사용할 수 있도록 CC-0 라이선스로 제공됩니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 843px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/resource_hufa5d8f8facda7678ad4f989e1a4151ec_61336_900x600_fit_catmullrom_2.png" width="833" height="557">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt; OpenChain Curriculum, 출처 - https://www.openchainproject.org/resources >&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이 가이드의 많은 내용도 OpenChain에서 공개한 자료를 기반으로 작성하였습니다. 각 기업의 오픈소스 담당자는 정책, 프로세스, 교육자료가 필요하다면 OpenChain Resources를 먼저 찾아보기 바랍니다. 또한 이 자료는 한국어로도 번역되어 공개되고 있습니다. &lt;a href="https://openchain-project.github.io/OpenChain-KWG/">OpenChain Korea Work Group&lt;/a>에서 이러한 번역 작업을 주도하고 있습니다. 한국어 번역은 관심 있는 누구나 &lt;a href="https://openchain-project.github.io/OpenChain-KWG/resource/">참여&lt;/a>할 수 있습니다.&lt;/p>
+&lt;p>OpenChain 프로젝트는 또한 다양한 웨비나와 스터디 그룹을 운영하여 추가적인 리소스를 제공하고 있습니다:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>웨비나: OpenChain 프로젝트는 정기적으로 웨비나를 개최하여 오픈소스 컴플라이언스와 보안 관련 최신 동향과 모범 사례를 공유합니다. 이 웨비나는 &lt;a href="https://openchainproject.org/webinars">OpenChain 웹사이트&lt;/a>에서 확인할 수 있으며, 녹화본도 제공됩니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>교육 자료: OpenChain 프로젝트는 &lt;a href="https://github.com/OpenChain-Project/Reference-Material">종합적인 교육 커리큘럼&lt;/a>을 제공하여 기업이 내부 교육 프로그램을 개발하는 데 도움을 줍니다. 이 자료는 오픈소스 소프트웨어의 기본 개념부터 라이선스 컴플라이언스, 보안 보증까지 다양한 주제를 다룹니다.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>이러한 다양한 리소스를 활용함으로써, 기업은 ISO/IEC 5230과 ISO/IEC 18974 표준을 준수하는 강력한 오픈소스 프로그램을 구축하고 유지할 수 있습니다.&lt;/p>
+&lt;h2 id="5-isoiec-표준-적용-추세">5. ISO/IEC 표준 적용 추세&lt;/h2>
+&lt;p>ISO/IEC 5230과 ISO/IEC 18974 표준의 적용은 글로벌 소프트웨어 공급망에서 점차 확대되는 추세를 보이고 있습니다.&lt;/p>
+&lt;p>2021년 초, 독일의 자동차 제조사가 부품 공급업체에게 ISO/IEC 5230 준수 계획을 요구하기 시작했다는 소식이 전해졌습니다. 이에 대해 유럽의 한 오픈소스 분야 교수는 &amp;ldquo;앞으로 소프트웨어 공급망의 구매자는 공급자에게 ISO/IEC 5230 준수를 요구할 것이 명백하다&amp;quot;며, &amp;ldquo;자동차 업계에서는 ASPICE와 같은 위치를 차지하게 될 것&amp;quot;이라고 전망했습니다.&lt;/p>
+&lt;p>이러한 전망을 반영하듯 2021년 5월, 폭스바겐 그룹의 &lt;a href="https://www.scania.com/">Scania&lt;/a>는 공급업체가 따라야 하는 자체 기업 표준(STD 4589)에 ISO/IEC 5230 준수를 요구하는 내용을 포함시켰습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/scania_hu68fd35232ecfdb90e6342be9139fd025_601836_900x600_fit_catmullrom_2.png" width="313" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>linkedin, May 2021&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>또한, 2021년 7월, 자동차 및 산업 기술 기업인 &lt;a href="https://www.bosch.com/">Bosch&lt;/a>는 연말까지 모든 그룹사가 ISO/IEC 5230을 준수하는 프로그램을 갖추겠다고 선언하였습니다. 업계에서는 모든 자동차 제조사나 다른 산업에서도 소프트웨어 공급망 내에서 ISO/IEC 5230을 요구하기 시작하는 것은 시간 문제라는 전망을 내놓고 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/bosch_hu5c3b88a62e1c26534c923de3e04bacd9_879805_900x600_fit_catmullrom_2.png" width="313" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>linkedin, July 2021&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>2023년에는 오픈소스 보안 보증을 위한 새로운 표준인 ISO/IEC 18974가 발표되었습니다. 이 표준은 오픈소스 소프트웨어의 알려진 보안 취약점을 관리하기 위한 핵심 요구사항을 정의합니다. ISO/IEC 18974는 ISO/IEC 5230과 함께 조직이 오픈소스 소프트웨어의 라이선스 컴플라이언스와 보안 보증을 효과적으로 관리할 수 있도록 지원합니다.&lt;/p>
+&lt;p>2024년 현재, 이러한 추세는 더욱 가속화되고 있습니다. 예를 들어, &lt;a href="https://www.kt.com/">KT&lt;/a>는 2024년 10월에 ISO/IEC 18974 인증을 획득했다고 발표했습니다. 이는 국내 기업들도 오픈소스 보안 관리에 대한 국제 표준을 적극적으로 도입하고 있음을 보여줍니다.&lt;/p>
+&lt;p>또한, &lt;a href="https://openchain-project.github.io/OpenChain-KWG/">OpenChain Korea Work Group&lt;/a>의 활동도 활발해지고 있습니다. 2024년 6월에 열린 제22차 정기 모임에서는 ISO/IEC 18974 오픈소스 보안 표준 준비 현황과 SBOM 기반 SW공급망 관리 가이드라인에 대한 논의가 이루어졌습니다. 이는 국내 기업들이 ISO/IEC 5230과 ISO/IEC 18974 표준을 적극적으로 수용하고 있음을 보여줍니다.&lt;/p>
+&lt;p>이러한 추세는 앞으로도 계속될 것으로 예상됩니다. 소프트웨어 공급망의 복잡성이 증가하고 보안 위협이 늘어남에 따라, ISO/IEC 5230과 ISO/IEC 18974와 같은 국제 표준의 중요성은 더욱 커질 것으로 보입니다. 기업들은 이러한 표준을 준수함으로써 오픈소스 사용의 투명성을 높이고, 보안 리스크를 효과적으로 관리할 수 있을 것입니다.&lt;/p></description></item><item><title>Docs: 1. 조직</title><link>/docs/opensource_for_enterprise/1-teams/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/1-teams/</guid><description>
+&lt;p>먼저, 기업은 오픈소스 관리 업무를 담당할 조직을 구성해야 합니다.&lt;/p>
+&lt;p>조직 구성 시 고려해야 할 내용은 다음과 같습니다:&lt;/p>
+&lt;ul>
+&lt;li>조직의 역할과 책임&lt;/li>
+&lt;li>각 역할의 필요 역량&lt;/li>
+&lt;li>각 역할을 담당할 조직/담당자&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-조직의-역할과-책임-정의">1. 조직의 역할과 책임 정의&lt;/h2>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 프로그램 내 여러 참여자의 역할과 책임을 기술한 문서를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.1 - A documented list of roles with corresponding responsibilities for the different participants in the program.&lt;br>
+&lt;code>프로그램의 여러 참여자에 대한 역할과 각 역할의 책임을 나열한 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.1: A documented list of roles with corresponding responsibilities for the different Program Participants&lt;br>&lt;code>여러 프로그램 참여자에 대한 각각의 책임을 나열한 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h3 id="오픈소스-프로그램-매니저">오픈소스 프로그램 매니저&lt;/h3>
+&lt;p>오픈소스 관리 체계를 구축하기 위해서는 먼저 이를 책임지고 수행할 책임자가 필요합니다. 책임자는 &lt;code>오픈소스 프로그램 매니저&lt;/code> 또는 &lt;code>오픈소스 컴플라이언스 담당자&lt;/code> 등의 명칭으로 불리며, 여기서는 &lt;code>오픈소스 프로그램 매니저&lt;/code>라는 용어를 사용합니다.&lt;/p>
+&lt;p>오픈소스 프로그램 매니저는 기업의 오픈소스 프로그램 오피스를 담당합니다. &lt;code>오픈소스 프로그램 오피스&lt;/code>란 기업의 오픈소스 관리를 위한 조직을 의미하며, &lt;code>오픈소스 사무국&lt;/code>이라는 용어로도 사용됩니다.&lt;/p>
+&lt;p>아래의 역량을 가지고 있다면 오픈소스 프로그램 매니저 역할에 적합하다고 할 수 있습니다.&lt;/p>
+&lt;ul>
+&lt;li>오픈소스 생태계에 대한 이해 및 개발 경험&lt;/li>
+&lt;li>기업의 비즈니스에 대한 폭넓은 이해&lt;/li>
+&lt;li>기업 구성원에게 효과적인 오픈소스 활용을 전파할 수 있는 열정과 커뮤니케이션 능력&lt;/li>
+&lt;/ul>
+&lt;p>오픈소스 프로그램 매니저는 가능한 풀타임으로 역할을 수행할 수 있도록 보장되는 것이 좋습니다.&lt;/p>
+&lt;p>글로벌 ICT 기업은 이와 같은 우수한 오픈소스 프로그램 매니저를 채용하기 위해 노력하고 있습니다. 다음 사이트에서 다양한 채용 공고를 확인할 수 있습니다. : &lt;a href="https://github.com/todogroup/job-descriptions">https://github.com/todogroup/job-descriptions&lt;/a>&lt;/p>
+&lt;h3 id="역할과-책임-문서화">역할과 책임 문서화&lt;/h3>
+&lt;p>기업은 오픈소스 프로그램 오피스에 필요한 각 역할을 정의하고, 어떠한 책임을 부여해야 하는지를 판단해야 합니다.&lt;/p>
+&lt;p>소규모 기업의 경우, 오픈소스 프로그램 매니저 혼자서 모든 역할을 수행하는 것도 가능합니다. 기업의 규모에 따라 오픈소스 도구를 운영하는 IT 담당자도 필요할 수 있으며, 전문적인 법무 자문을 제공하기 위한 법무 담당의 역할이 요구될 수도 있습니다.&lt;/p>
+&lt;p>일반적으로 기업의 오픈소스 관리 체계 구축을 위해서는 아래의 역할이 필요합니다.&lt;/p>
+&lt;ul>
+&lt;li>법무 담당&lt;/li>
+&lt;li>IT 담당&lt;/li>
+&lt;li>보안 담당&lt;/li>
+&lt;li>개발 문화 담당&lt;/li>
+&lt;/ul>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 543px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/complianceofficer_hub381da67a0457ff40be51fb508361881_139738_900x600_fit_catmullrom_2.png" width="533" height="434">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>Individuals and teams involved in ensuring open source compliance : https://www.linuxfoundation.org/wp-content/uploads/OpenSourceComplianceHandbook_2018_2ndEdition_DigitalEdition.pdf&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이를 위해 아래와 같이 오픈소스 프로그램 오피스를 구성하는 역할과 책임을 문서화해야 합니다.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>No&lt;/th>
+&lt;th style="text-align:left">역할&lt;/th>
+&lt;th style="text-align:left">책임&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td style="text-align:left">오픈소스 프로그램 매니저&lt;/td>
+&lt;td style="text-align:left">회사의 오픈소스 프로그램에 대한 총괄 책임을 담당한다.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td style="text-align:left">법무 담당&lt;/td>
+&lt;td style="text-align:left">오픈소스 라이선스와 의무를 해석한다. 이러한 의무를 실제 이행하는 등 오픈소스 활용을 위해 발생할 수 있는 법적 위험의 완화를 위한 자문을 제공한다.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td style="text-align:left">IT 담당&lt;/td>
+&lt;td style="text-align:left">오픈소스 분석 도구를 운영하고 자동화하여 모든 배포용 소프트웨어에 대해 오픈소스 분석이 원활히 수행되도록 시스템을 구축한다.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td style="text-align:left">보안 담당&lt;/td>
+&lt;td style="text-align:left">오픈소스 보안취약점 분석 도구를 운영하여 모든 배포용 소프트웨어에 대해 보안취약점 분석이 수행되도록 시스템을 구축하고 발견된 보안취약점이 기준에 맞게 보완되도록 조치한다.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td style="text-align:left">개발 문화 담당&lt;/td>
+&lt;td style="text-align:left">사내 개발자들이 오픈소스를 적극적으로 활용하고 사내외 커뮤니티에 참여하여 선진 개발 문화를 습득할 수 있도록 지원한다.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td style="text-align:left">사업 부서&lt;/td>
+&lt;td style="text-align:left">소프트웨어 개발/배포 조직은 올바른 오픈소스 활용을 위해 오픈소스 정책 및 프로세스를 준수한다.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="2-필요-역량-정의">2. 필요 역량 정의&lt;/h2>
+&lt;p>각 역할과 그에 대한 책임을 정의하였다면, 그 역할을 수행할 인원이 갖춰야 할 필수 역량이 무엇인지 파악해야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 각 역할을 위해 필요한 역량을 기술한 문서를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.2 - A document that identifies the competencies for each role.&lt;br>&lt;code>각 역할을 위해 필요한 역량을 기술한 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.2: A document that identifies the competencies for each role.&lt;br>&lt;code>각 역할을 위해 필요한 역량을 기술한 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 통해 역할별 담당자가 해당 역할을 수행할 수 있는 역량을 갖추었는지 평가하고, 필요시 교육을 제공해야 하기 때문입니다.&lt;/p>
+&lt;p>이를 위해 기업은 아래와 같이 각 역할을 위해 필요한 역량을 기술하여 문서화해야 합니다.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>No&lt;/th>
+&lt;th style="text-align:left">역할&lt;/th>
+&lt;th style="text-align:left">필요 역량&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td style="text-align:left">오픈소스 프로그램 매니저&lt;/td>
+&lt;td style="text-align:left">1. 소프트웨어 개발 프로세스 이해&lt;br>2. 저작권, 특허 등 오픈소스 라이선스와 관련한 지식재산 이해&lt;br>3. 오픈소스 컴플라이언스에 대한 전문 지식&lt;br>4. 오픈소스 개발 경험&lt;br>5. 커뮤니케이션 스킬&lt;br>6. 오픈소스 보안 보증에 대한 기본 지식&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td style="text-align:left">법무 담당&lt;/td>
+&lt;td style="text-align:left">1. 오픈소스 생태계에 대한 기본 지식&lt;br>2. 소프트웨어 저작권에 대한 전문 지식&lt;br>3. 오픈소스 라이선스에 대한 전문 지식&lt;br>4. 오픈소스 관련 법적 위험 평가 능력&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td style="text-align:left">IT 담당&lt;/td>
+&lt;td style="text-align:left">1. 오픈소스 컴플라이언스 프로세스에 기본 지식&lt;br>2. 오픈소스 분석 도구에 대한 이해&lt;br>3. IT 인프라에 대한 전문 지식&lt;br>4. 자동화 및 CI/CD 파이프라인에 대한 이해&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td style="text-align:left">보안 담당&lt;/td>
+&lt;td style="text-align:left">1. &lt;a href="https://www.redhat.com/ko/topics/devops/what-is-devsecops">DevSecOps&lt;/a>에 대한 폭넓은 이해&lt;br>2. 오픈소스 보안취약점 분석 도구에 대한 이해&lt;br>3. 오픈소스 보안취약점에 대한 전문 지식&lt;br>4. 커뮤니케이션 스킬&lt;br>5. 위험 평가 및 관리 능력&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td style="text-align:left">개발 문화 담당&lt;/td>
+&lt;td style="text-align:left">1. 소프트웨어 개발 프로세스 이해&lt;br>2. 오픈소스 컴플라이언스에 대한 기본 지식&lt;br>3. 오픈소스 정책에 대한 이해&lt;br>4. 교육 및 트레이닝 설계 능력&lt;br>5. 오픈소스 커뮤니티 참여 경험&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td style="text-align:left">사업 부서&lt;/td>
+&lt;td style="text-align:left">1. 소프트웨어 개발 프로세스 이해&lt;br>2. 오픈소스 컴플라이언스에 대한 기본 지식&lt;br>3. 오픈소스 정책에 대한 이해&lt;br>4. 오픈소스 라이선스에 대한 기본 지식&lt;br>5. 오픈소스 사용이 비즈니스에 미치는 영향 이해&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="3-담당자-지정">3. 담당자 지정&lt;/h2>
+&lt;p>오픈소스 프로그램 매니저는 관련 부서와 협의하여 각 역할을 위한 담당자를 지정하고 이를 문서화합니다. 이를 위해서는 CEO 등 최고 의사결정권자에게 오픈소스 컴플라이언스 체계 구축을 위한 목표와 방향을 보고하여 필요한 지원을 받아야 합니다.&lt;/p>
+&lt;p>오픈소스 관련 조직과 담당자는 반드시 풀타임으로 오픈소스 업무에 참여할 필요는 없습니다. OSRB (Open Source Review Board) 형태의 가상 조직을 구성하여 필요한 역할을 수행하는 것도 가능합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 프로그램 내 각 역할을 담당하는 인원, 그룹 또는 직무의 이름을 기재한 문서를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.1 - Document with name of persons, group or function in program role(s) identified.&lt;br>&lt;code>프로그램 내 각 역할을 담당하는 인원, 그룹 또는 직무의 이름을 기재한 문서 &lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.3: List of participants and their roles&lt;br>&lt;code>참여자 명단과 그들의 역할&lt;/code>&lt;/li>
+&lt;li>3.2.2.1: Document with name of persons, group or function in Program role(s) identified&lt;br>&lt;code>프로그램 내 각 역할을 담당하는 인원, 그룹 또는 직무의 이름을 기재한 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 아래와 같이 프로그램 내 각 역할을 담당하는 인원, 그룹 또는 직무의 이름을 문서화해야 합니다.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>No&lt;/th>
+&lt;th style="text-align:left">역할&lt;/th>
+&lt;th style="text-align:left">담당 조직&lt;/th>
+&lt;th style="text-align:left">담당자&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td style="text-align:left">오픈소스 프로그램 매니저&lt;/td>
+&lt;td style="text-align:left">CTO&lt;/td>
+&lt;td style="text-align:left">OOO&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td style="text-align:left">법무 담당&lt;/td>
+&lt;td style="text-align:left">법무팀&lt;/td>
+&lt;td style="text-align:left">OOO&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td style="text-align:left">IT 담당&lt;/td>
+&lt;td style="text-align:left">IT 인프라팀&lt;/td>
+&lt;td style="text-align:left">OOO&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td style="text-align:left">보안 담당&lt;/td>
+&lt;td style="text-align:left">보안팀&lt;/td>
+&lt;td style="text-align:left">OOO&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td style="text-align:left">개발 문화 담당&lt;/td>
+&lt;td style="text-align:left">DR&lt;/td>
+&lt;td style="text-align:left">OOO&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td style="text-align:left">사업 부서&lt;/td>
+&lt;td style="text-align:left">개발팀&lt;/td>
+&lt;td style="text-align:left">전원&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>다음 페이지에서는 역할, 책임, 필요 역량 및 담당자 지정 등을 문서화한 샘플을 참고할 수 있습니다. &lt;a href="../../templates/1-policy/#appendix-1-%EB%8B%B4%EB%8B%B9%EC%9E%90-%ED%98%84%ED%99%A9">[부록1]오픈소스 정책(샘플) - Appendix 1. 담당자 현황&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.sktelecom.com/">SK텔레콤&lt;/a>은 &lt;a href="https://sktelecom.github.io/about/osrb/">OSRB&lt;/a>를 구성하여 기업 내 오픈소스 정책과 프로세스를 만들고, 이슈 발생 시 협업하여 대응 방안을 마련하고 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 471px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/sktosrb_hudb2d30eec1b89635a12caf266f1f24ba_65832_600x300_fit_catmullrom_2.png" width="461" height="300">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://sktelecom.github.io/about/osrb/&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="4-summary">4. Summary&lt;/h2>
+&lt;p>역할, 책임, 필요 역량 및 담당자 지정을 문서화한 샘플은 오픈소스 정책 템플릿 문서에서 확인할 수 있습니다. : &lt;a href="../../templates/1-policy/#appendix-1-%EB%8B%B4%EB%8B%B9%EC%9E%90-%ED%98%84%ED%99%A9">Appendix 1. 담당자 현황&lt;/a>&lt;/p>
+&lt;p>기업은 이를 참고하여 기업의 상황에 맞게 오픈소스 관리 조직을 구성할 수 있습니다.&lt;/p>
+&lt;p>이렇게 오픈소스 프로그램 오피스 조직을 지정하고 문서화하면, ISO 표준 규격 중 아래의 붉은색으로 표시된 요구사항을 충족하게 됩니다.&lt;/p>
+&lt;p>사실, 문서화하는 것보다 실제 업무를 충실히 수행할 담당자를 지정하고, 담당자가 역량을 확보할 수 있도록 지원하는 것이 더 중요합니다.&lt;/p>
+&lt;p>한국저작권위원회의 &lt;a href="https://www.olis.or.kr/consulting/openswStudy.do">오픈소스 라이선스 전문 교육&lt;/a>이나 &lt;a href="https://www.oss.kr/oss_data/show/448d2e96-6819-45f4-b114-73cd41b3e9d3">NIPA의 공개소프트웨어 매니지먼트 아카데미&lt;/a>에 참여하여 체계적인 교육을 수강하는 것도 매우 도움이 됩니다.&lt;/p>
+&lt;p>오픈소스 프로그램 매니저와 보안 담당의 역할이 더욱 중요해지고 있습니다. 오픈소스 프로그램 매니저는 오픈소스 보안 보증에 대한 기본 지식도 갖추어야 하며, 보안 담당자는 &lt;a href="https://www.cisa.gov/sbom">SBOM&lt;/a> (Software Bill of Materials) 관리와 같은 새로운 보안 요구사항에 대한 이해도 필요합니다.&lt;/p>
+&lt;p>또한, 모든 역할에서 지속적인 학습과 최신 트렌드 파악이 중요해지고 있습니다. 오픈소스 생태계와 관련 기술, 법규는 빠르게 변화하고 있어, 각 담당자는 자신의 분야에서 지속적으로 지식을 업데이트해야 합니다. 이를 위해 &lt;a href="https://www.openchainproject.org/">OpenChain&lt;/a>이나 &lt;a href="https://todogroup.org/">TODO Group&lt;/a>과 같은 국제 커뮤니티에 참여하거나, &lt;a href="https://www.oss.kr/">국내 오픈소스 컨퍼런스&lt;/a>에 참석하는 것도 좋은 방법입니다.&lt;/p></description></item><item><title>Docs: 2. 정책</title><link>/docs/opensource_for_enterprise/2-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/2-policy/</guid><description>
+&lt;h2 id="1-오픈소스-정책-문서화">1. 오픈소스 정책 문서화&lt;/h2>
+&lt;p>기업은 공급 소프트웨어 개발, 서비스, 배포에 관여하는 조직이 올바르게 오픈소스를 활용하기 위한 원칙으로 구성된 오픈소스 정책을 수립하여 문서화하고 이를 조직 내 전파해야 합니다.&lt;/p>
+&lt;p>이를 위해 ISO 표준은 공통적으로 다음과 같이 문서화된 오픈소스 정책 및 보안 보증 정책을 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.1.1 - A documented open source policy.&lt;br>&lt;code>문서화된 오픈소스 정책&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.1.1: A documented Open Source Software Security Assurance policy &lt;br>&lt;code>문서화된 오픈소스 소프트웨어 보안 보증 정책&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>일반적인 오픈소스 정책은 다음을 포함합니다. 기업은 이러한 원칙을 포함한 오픈소스 정책을 만들어서 문서화해야 합니다:&lt;/p>
+&lt;ol>
+&lt;li>공급 소프트웨어 제품과 서비스 배포 시 오픈소스 라이선스 컴플라이언스 및 보안 취약점 리스크를 최소화하기 위한 원칙&lt;/li>
+&lt;li>외부 오픈소스 프로젝트에 기여하기 위한 원칙&lt;/li>
+&lt;li>기업의 소프트웨어를 오픈소스로 공개하기 위한 원칙&lt;/li>
+&lt;li>오픈소스 소프트웨어 컴포넌트의 SBOM(Software Bill of Materials) 생성 및 관리 원칙&lt;/li>
+&lt;li>알려진 취약점 및 새로 발견된 취약점에 대한 대응 원칙&lt;/li>
+&lt;/ol>
+&lt;p>또한 오픈소스 정책은 프로그램 참여자에게 전파되어야 하며, 정기적으로 검토 및 업데이트되어야 합니다. 이를 통해 정책이 항상 최신 상태를 유지하고 조직의 요구사항을 반영할 수 있도록 해야 합니다.&lt;/p>
+&lt;h2 id="2-오픈소스-정책에서-다뤄야할-내용">2. 오픈소스 정책에서 다뤄야할 내용&lt;/h2>
+&lt;p>오픈소스 정책은 다음과 같은 핵심 내용을 포함해야 합니다:&lt;/p>
+&lt;h3 id="1-오픈소스-라이선스-컴플라이언스-원칙">(1) 오픈소스 라이선스 컴플라이언스 원칙&lt;/h3>
+&lt;p>오픈소스 라이선스 컴플라이언스를 위해 다음 원칙을 수립해야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>공급 소프트웨어에 포함된 모든 오픈소스를 식별하고 문서화&lt;/li>
+&lt;li>각 오픈소스의 라이선스 의무사항 파악 및 준수&lt;/li>
+&lt;li>라이선스 의무를 충족하는 컴플라이언스 산출물 생성&lt;/li>
+&lt;li>오픈소스 고지문 및 소스코드 공개 등 라이선스 의무 이행&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-오픈소스-보안-보증-원칙">(2) 오픈소스 보안 보증 원칙&lt;/h3>
+&lt;p>오픈소스 보안 보증을 위해 다음 원칙을 수립해야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>공급 소프트웨어의 오픈소스 컴포넌트에 대한 알려진 취약점 및 새로 발견된 취약점 모니터링&lt;/li>
+&lt;li>취약점 발견 시 위험/영향 평가 수행&lt;/li>
+&lt;li>심각한 취약점에 대한 신속한 대응 및 패치 적용&lt;/li>
+&lt;li>취약점 정보의 고객 통지 및 업데이트 제공&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-오픈소스-리스크-대응">(3) 오픈소스 리스크 대응&lt;/h3>
+&lt;p>오픈소스 사용에 따른 라이선스 및 보안 리스크를 최소화하기 위해 다음 절차를 수립해야 합니다:&lt;/p>
+&lt;ol>
+&lt;li>오픈소스 식별 및 라이선스 의무 사항 검토&lt;/li>
+&lt;li>오픈소스 라이선스를 고려한 아키텍처 설계&lt;/li>
+&lt;li>오픈소스 컴플라이언스 산출물 생성&lt;/li>
+&lt;li>SBOM (Software Bill of Materials) 생성 및 관리&lt;/li>
+&lt;li>오픈소스 라이선스 컴플라이언스 이슈 대응&lt;/li>
+&lt;li>오픈소스 보안 취약점 대응&lt;/li>
+&lt;/ol>
+&lt;p>[부록1] 오픈소스 정책 template의 &lt;a href="../../templates/1-policy/#6-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%82%AC%EC%9A%A9">6. 오픈소스 사용&lt;/a>에서 이를 문서화한 원칙을 살펴보실 수 있습니다.&lt;/p>
+&lt;pre>&lt;code>1. 오픈소스 사용
+공급 소프트웨어를 개발하고 배포할 때 각 오픈소스 라이선스가 요구하는 의무 사항을 준수해야 합니다. 이를 위한 활동을 오픈소스 라이선스 컴플라이언스라고 합니다.
+올바른 오픈소스 라이선스 컴플라이언스 활동과 보안 보증을 위해 소프트웨어 개발/배포 조직은 다음 사항을 준수하고 모든 과정은 이슈 추적 시스템에 기록하여 보존합니다.
+(1) 오픈소스 식별 및 라이선스 의무 사항 검토
+오픈소스를 공급 소프트웨어 개발에 도입 시, 먼저 오픈소스 라이선스가 무엇인지 식별하고, 라이선스가 요구하는 의무 사항을 검토하고 확인합니다.
+회사의 [오픈소스 라이선스 가이드]에는 주요 오픈소스 라이선스 목록이 포함되어 있으며, 라이선스마다 다음의 배포 형태별 요구하는 의무사항을 구분하여 설명합니다.
+- 바이너리 형태
+- 소스 형태
+- 강한/약한 Copyleft
+- SaaS 기반 제공
+- 수정 여부
+- 저작자 표시 요구 오픈소스 포함 등
+소프트웨어 개발/배포 조직은 오픈소스 라이선스 의무 검토 시 이 가이드를 참고할 수 있습니다. 이 가이드에서 언급하지 않는 오픈소스 라이선스의 검토가 필요할 경우, 오픈소스 프로그램 매니저에게 문의합니다.
+(2) 오픈소스 라이선스 고려 설계
+오픈소스의 결합 관계를 파악하여 자사의 코드가 오픈소스 라이선스의 영향을 받지 않도록 소프트웨어 아키텍처를 설계합니다.
+회사의 [오픈소스 라이선스 가이드]에서는 오픈소스 라이선스별 소스 코드 공개 범위 및 자사 코드의 공개를 방지하기 위한 설계 방법을 설명합니다.
+(3) 오픈소스 컴플라이언스 산출물 생성
+오픈소스 라이선스 컴플라이언스 활동의 가장 기본은 공급 소프트웨어에 포함된 오픈소스 현황을 파악하는 것입니다. 이는 바로 오픈소스 라이선스 컴플라이언스의 핵심인 오픈소스 라이선스 요구사항을 올바르게 충족하기 위해서입니다. 즉, 공급 소프트웨어에 포함된 오픈소스에 대한 컴플라이언스 산출물 세트를 생성해야 합니다.
+오픈소스 컴플라이언스 산출물은 크게 두 가지로 구분됩니다.
+1. 오픈소스 고지문 : 오픈소스 라이선스 전문과 저작권 정보 제공을 위한 문서
+2. 공개할 소스 코드 패키지 : GPL, LGPL 등 소스 코드 공개를 요구하는 오픈소스 라이선스 의무 이행을 위해 공개할 소스 코드를 취합한 패키지
+이러한 컴플라이언스 산출물을 취합, 배포, 보관하기 위해 다음 사항을 준수합니다.
+- 오픈소스 고지문이나 공개할 소스 코드 패키지는 각 라이선스가 요구하는 조건대로 취합합니다. 예를 들어, 라이선스가 라이선스 전체 텍스트의 동봉을 요구하는데, 링크만을 제공해서는 안 됩니다.
+- 취합한 산출물은 별도의 저장소에 보관합니다.
+- 공개할 소스 코드를 서면 청약으로 제공할 경우, 취합한 산출물의 저장소를 외부에서 접근할 수 있도록 다운로드 링크를 공개합니다.
+회사의 오픈소스 프로세스를 통해 오픈소스 고지문을 발급하고, 공개할 소스 코드 패키지를 취합할 수 있습니다.
+(4) SBOM (Software Bill of Materials) 생성
+공급 소프트웨어를 구성하는 각 오픈소스 소프트웨어 컴포넌트 내역을 포함하는 SBOM(Software Bill of Materials)을 생성하고 이를 유지하는 프로세스가 있어야 합니다.
+회사의 오픈소스 프로세스를 통해 오픈소스 도구를 활용하여 SBOM을 생성하고 보존할 수 있습니다.
+(5) 컴플라이언스 이슈 대응 절차
+컴플라이언스 이슈가 제기될 경우, 오픈소스 프로그램 매니저는 다음의 절차를 수행하여 신속히 대응합니다.
+1. 문의 접수를 확인하고 적절한 해결 시간을 명시합니다.
+2. 이슈 내용이 실제 문제를 지적하고 있는지를 확인합니다. (아닐 경우, 이슈 제기자에게 문제가 아님을 알립니다.)
+3. 실제 문제인 경우, 우선순위를 정하고 적절한 대응 방안을 결정합니다.
+4. 대응을 수행하고, 필요할 경우, 오픈소스 프로세스를 적절하게 보완합니다.
+5. 위의 내용은 이슈 추적 시스템을 이용하여 보존합니다.
+(6) 오픈소스 보안 보증 관리
+공급 소프트웨어의 오픈소스 소프트웨어 컴포넌트에 대한 알려진 취약점의 탐지 및 해결을 위한 문서화된 절차를 수립하고 유지해야 합니다. 이 절차에는 다음 사항이 포함되어야 합니다:
+- 알려진 취약점의 존재를 발견하기 위한 방법 적용
+- 각 발견된 취약점에 대한 위험/영향 평가
+- 필요한 경우 고객에게 연락, 소프트웨어 컴포넌트 업그레이드 등 적절한 조치 수행
+또한 다음과 같은 프로세스를 구축해야 합니다:
+- 공급 소프트웨어에 대한 구조적 및 기술적 위협 식별
+- 지속적이고 반복적인 보안 테스트 적용
+- 식별된 위험이 공급 소프트웨어의 출시 전에 해결되었는지 확인
+- 공급 소프트웨어가 시장에 출시된 후 모니터링 및 대응 기능 확보
+각 오픈소스 소프트웨어 컴포넌트에 대해 식별된 알려진 취약점 및 새로 발견된 취약점, 그리고 수행된 조치에 대한 기록을 유지해야 합니다.
+&lt;/code>&lt;/pre>&lt;h3 id="4-내부-책임-할당-절차">(4) 내부 책임 할당 절차&lt;/h3>
+&lt;p>오픈소스 정책은 오픈소스 관리 이슈를 해결하기 위한 책임을 내부에 할당하는 절차를 다뤄야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 내부 책임을 할당하는 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.4 - A documented procedure that assigns internal responsibilities for open source compliance.&lt;br>&lt;code>오픈소스 컴플라이언스에 대한 내부 책임을 할당하는 문서화된 절차 &lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.4: A documented procedure that assigns internal responsibilities for Security Assurance.&lt;br>&lt;code>보안 보증에 대한 내부 책임을 할당하는 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>오픈소스 프로그램 매니저는 라이선스 컴플라이언스 이슈를 파악하고 이를 해결하기 위해 각 역할의 담당자에게 적절히 책임을 할당해야 합니다. 마찬가지로 오픈소스 보안 취약점 이슈에 대해서는 보안 담당이 이슈를 파악하고 이를 해결하기 위해 적절한 인원에게 책임을 할당합니다.&lt;/p>
+&lt;p>이를 위해 아래의 예시와 같이 오픈소스 정책에 내부 책임을 할당하는 문서화된 절차를 반영할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code>4. 역할, 책임 및 역량
+정책의 효과를 보장하기 위해 다음과 같이 역할과 책임 및 각 역할의 담당자가 갖추어야 할 역량을 정의합니다.
+(2) 오픈소스 프로그램 매니저
+- 오픈소스 라이선스 컴플라이언스를 위해 필요한 역할을 정의하고, 각 역할을 책임질 담당 조직 및 담당자를 지정합니다. 필요 시 OSRB와 협의합니다.
+(6) 보안 담당
+- 오픈소스 보안 보증을 성공할 수 있도록 각 업무에 대한 책임을 할당합니다.
+&lt;/code>&lt;/pre>&lt;p>이러한 절차를 통해 오픈소스 라이선스 컴플라이언스와 보안 보증에 대한 내부 책임을 명확히 할당하고, 각 담당자가 자신의 역할을 이해하고 수행할 수 있도록 합니다. 또한 &lt;a href="https://www.linuxfoundation.org/tools/open-source-glossary/#osrb">OSRB(Open Source Review Board)&lt;/a>와의 협의를 통해 조직 전체의 오픈소스 전략과 일관성을 유지할 수 있습니다.&lt;/p>
+&lt;p>내부 책임 할당 절차는 정기적으로 검토하고 업데이트해야 하며, 조직의 구조나 프로젝트의 변화에 따라 유연하게 조정될 수 있어야 합니다. 이를 통해 오픈소스 관리의 효율성과 효과성을 지속적으로 개선할 수 있습니다.&lt;/p>
+&lt;h3 id="5-미준수-사례-대응">(5) 미준수 사례 대응&lt;/h3>
+&lt;p>기업은 오픈소스 라이선스 컴플라이언스 및 보안 보증 미준수 사례가 발생하면 이를 신속히 검토하고 대응하기 위한 절차를 문서화해야 합니다.&lt;/p>
+&lt;p>ISO/IEC 5230과 ISO/IEC 18974는 다음과 같이 미준수 사례를 검토하고 이를 수정하기 위한 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.5 - A documented procedure for handling the review and remediation of non-compliant cases.&lt;br>&lt;code>미준수 사례를 검토하고 이를 수정하기 위한 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.5: A documented procedure for handling the review and remediation of non-compliant cases.&lt;br>&lt;code>미준수 사례를 검토하고 이를 수정하기 위한 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 아래의 예시와 같이 오픈소스 정책에 미준수 사례를 검토하고 이를 수정하기 위한 문서화된 절차를 반영할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code>6. 오픈소스 사용
+(5) 컴플라이언스 및 보안 보증 이슈 대응 절차
+라이선스 컴플라이언스 또는 보안 보증 이슈가 제기될 경우, 오픈소스 프로그램 매니저는 다음의 절차를 수행하여 신속히 대응합니다:
+1. 문의 접수를 확인하고 적절한 해결 시간을 명시합니다.
+2. 이슈 내용이 실제 문제를 지적하고 있는지를 확인합니다. (아닐 경우, 이슈 제기자에게 문제가 아님을 알립니다.)
+3. 실제 문제인 경우, 우선순위를 정하고 적절한 대응 방안을 결정합니다.
+- 라이선스 컴플라이언스 이슈의 경우, 법무 담당과 협의하여 라이선스 의무 준수 방안을 수립합니다.
+- 보안 보증 이슈의 경우, 보안 담당과 협의하여 취약점 해결 방안을 수립합니다.
+4. 대응을 수행하고, 필요할 경우 오픈소스 프로세스를 적절하게 보완합니다.
+5. 위의 내용은 이슈 추적 시스템을 이용하여 기록하고 보존합니다.
+6. 미준수 사례에 대한 근본 원인을 분석하고, 재발 방지를 위한 개선 계획을 수립합니다.
+7. OSRB(Open Source Review Board)에 미준수 사례와 대응 결과를 보고하고, 필요시 정책 및 프로세스 개선 방안을 논의합니다.
+&lt;/code>&lt;/pre>&lt;p>이러한 절차를 통해 기업은 오픈소스 라이선스 컴플라이언스 및 보안 보증과 관련된 미준수 사례를 체계적으로 관리하고, 지속적인 개선을 도모할 수 있습니다. 또한, &lt;a href="https://spdx.dev/">SPDX&lt;/a>와 같은 표준화된 형식을 사용하여 라이선스 및 보안 정보를 관리하면, 미준수 사례를 더욱 효과적으로 식별하고 대응할 수 있습니다.&lt;/p>
+&lt;h3 id="6-인원-예산-지원">(6) 인원, 예산 지원&lt;/h3>
+&lt;p>기업은 오픈소스 프로그램이 원활하게 기능을 수행할 수 있도록 충분한 리소스를 제공해야 합니다. 프로그램 내 각 역할을 담당하는 인원을 적합하게 배치하고, 충분한 예산과 업무 시간을 보장해야 합니다. 그렇지 않을 경우, 이를 보완할 수 있는 절차가 마련되어야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 프로그램 내 각 역할을 담당하는 인원이 적합하게 배치되고, 예산이 적절하게 지원되어야 함을 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.2 - The identified program roles have been properly staffed and adequate funding provided.&lt;br>&lt;code>프로그램 내 각 역할을 담당하는 인원이 적합하게 배치되고, 예산이 적절하게 지원되어야 합니다. &lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.2: The identified Program roles have been properly staffed and adequate funding provided;&lt;br>&lt;code>프로그램 내 각 역할을 담당하는 인원이 적합하게 배치되고, 예산이 적절하게 지원되어야 합니다.&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 아래의 예시와 같이 오픈소스 정책에 인원, 예산 지원에 대한 내용을 반영할 수 있습니다:&lt;/p>
+&lt;pre>&lt;code>4. 역할, 책임 및 역량
+각 역할에 대한 담당 조직의 장은 조직 내 담당자를 지정하고, 담당자가 역할을 충실하게 수행할 수 있는 적절한 시간과 예산을 할당합니다.
+- 각 역할의 담당자는 자신이 역할을 수행하면서 적절한 지원이 되지 않는다면 오픈소스 프로그램 매니저에게 문제를 제기해야 합니다.
+- 오픈소스 프로그램 매니저는 해당 조직장과 문제 해결을 논의합니다. 적절하게 해결되지 않는다면, 오픈소스 프로그램 매니저는 OSRB에 문제 해결을 요청할 수 있습니다.
+- OSRB는 상위 조직의 장에게 문제를 공유하고 해결을 요청합니다.
+&lt;/code>&lt;/pre>&lt;p>추가적으로, 기업은 다음과 같은 사항을 고려하여 인원 및 예산 지원을 강화할 수 있습니다:&lt;/p>
+&lt;ol>
+&lt;li>오픈소스 프로그램 매니저에게 전담 인력 할당&lt;/li>
+&lt;li>오픈소스 라이선스 컴플라이언스 및 보안 보증을 위한 전문 도구 구매 예산 확보&lt;/li>
+&lt;li>프로그램 참여자의 교육 및 역량 강화를 위한 예산 책정&lt;/li>
+&lt;li>외부 전문가 자문을 위한 예산 할당&lt;/li>
+&lt;li>정기적인 인력 및 예산 검토 프로세스 수립&lt;/li>
+&lt;/ol>
+&lt;p>이러한 지원을 통해 기업은 오픈소스 라이선스 컴플라이언스와 보안 보증 프로그램의 효과성을 높이고, &lt;a href="https://www.iso.org/standard/81039.html">ISO/IEC 5230&lt;/a>과 &lt;a href="https://www.iso.org/standard/34044.html">ISO/IEC 18974&lt;/a>의 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;h3 id="7-전문-자문-제공">(7) 전문 자문 제공&lt;/h3>
+&lt;p>기업은 각 역할의 담당자가 오픈소스 이슈를 해결하기 위해 전문적인 검토가 필요할 경우, 이에 대한 자문을 요청할 수 있는 방법을 제공해야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 문제 해결을 위해 내부 또는 외부의 전문 자문을 이용할 수 있는 방법을 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.3 - Identification of legal expertise available to address open source license compliance matters which could be internal or external. &lt;br>&lt;code>오픈소스 라이선스 컴플라이언스 문제 해결을 위해 내부 또는 외부의 전문 법률 자문을 이용할 수 있는 방법&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.2.3: Identification of expertise available to address identified Known Vulnerabilities&lt;br>&lt;code>식별된 알려진 취약점을 해결을 위해 전문 기술 자문을 이용할 수 있는 방법&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>오픈소스 라이선스 컴플라이언스 이슈에 대해서는 회사 내의 법무팀을 통해 우선 담당하고, 이슈가 첨예한 경우, 오픈소스 전문 변호사를 보유한 외부 법무 법인을 이용할 수 있습니다.&lt;/p>
+&lt;p>오픈소스 보안 취약점 이슈에 대해서는 회사 내 보안팀에서 우선 담당하고, 이슈가 복잡하고 첨예한 경우, 외부 보안 전문 기술 업체에 자문을 요청할 수 있습니다.&lt;/p>
+&lt;p>이를 위해 기업은 아래의 예시와 같이 오픈소스 정책에 자문을 제공하기 위한 내용을 반영할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code>4. 역할, 책임 및 역량
+(4) 법무 담당
+법무 담당은 오픈소스 라이선스와 의무를 해석하는 등 오픈소스 활용 과정에서 발생할 수 있는 법적 위험과 완화 방안에 대한 자문을 제공합니다.
+- 프로그램 참여자가 오픈소스 라이선스 컴플라이언스 이슈에 대한 문의를 할 수 있는 합리적인 방법을 제공합니다.
+- 호환되지 않는 오픈소스 라이선스로 인한 충돌을 포함하여 라이선스 및 지식재산권 문제에 대해 자문을 제공합니다.
+- 외부 오픈소스 프로젝트로의 기여 시 오픈소스 라이선스, CLA(Contributor License Agreement) 등 필요한 법적 사항을 검토합니다.
+- 이슈가 첨예한 경우, 오픈소스 전문 변호사를 보유한 외부 법무 법인에 자문을 요청합니다.
+(6) 보안 담당
+보안 담당은 오픈소스 보안 취약점 분석 도구를 운영하여 모든 공급 소프트웨어에 대해 보안 취약점 분석이 원활히 수행되도록 시스템을 구축합니다.
+- 프로그램 참여자가 알려진 취약점 또는 새로 발견된 취약점에 대한 문의를 할 수 있는 합리적인 방법을 제공하고, 취약점 해결을 위해 필요 시 외부 전문 기술 자문을 이용합니다.
+&lt;/code>&lt;/pre>&lt;p>참고로, &lt;a href="https://www.openchainproject.org/">OpenChain 프로젝트&lt;/a>에서는 파트너 프로그램을 통해 오픈소스 관련 자문을 제공하는 글로벌 법무법인 리스트를 제공합니다: &lt;a href="https://www.openchainproject.org/partners">https://www.openchainproject.org/partners&lt;/a>&lt;/p>
+&lt;p>OpenChain 파트너로 등록된 법무법인은 OpenChain 프로젝트에서 요구하는 요건을 충족한 곳들이며, 대한민국에서는 유일하게 &lt;a href="https://www.bkl.co.kr/">법무법인 태평양&lt;/a>이 등록되어 있습니다.&lt;/p>
+&lt;h3 id="8-적용-범위-지정">(8) 적용 범위 지정&lt;/h3>
+&lt;p>하나의 오픈소스 정책(프로그램)을 반드시 전체 조직에 적용해야 하는 것은 아닙니다. 기업 내 각 조직과 제품의 특성에 따라 적용 범위를 달리 지정할 수 있습니다. 예를 들어, 공급 소프트웨어를 전혀 배포하지 않는 조직은 오픈소스 프로그램의 적용 범위에서 제외할 수 있습니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 프로그램의 적용 범위와 한계를 명확하게 정의한 문서화된 진술 등을 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.4.1 - A written statement that clearly defines the scope and limits of the program. &lt;br>&lt;code>프로그램의 적용 범위와 한계를 명확하게 정의한 문서화된 진술&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.4.1: A written statement that clearly defines the scope and limits of the Program &lt;br>&lt;code>프로그램의 적용 범위와 한계를 명확하게 정의한 문서화된 진술&lt;/code>&lt;/li>
+&lt;li>3.1.4.2: A set of metrics the program shall achieve to improve&lt;br>&lt;code>프로그램 개선을 위해 달성해야 하는 일련의 측정 기준&lt;/code>&lt;/li>
+&lt;li>3.1.4.3: Documented Evidence from each review, update, or audit to demonstrate continuous improvement.&lt;br>&lt;code>지속적인 개선을 위해 검토, 업데이트 또는 검사를 수행했음을 입증하는 문서화된 증거&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>기업은 조직과 제품의 특성을 고려하여 오픈소스 프로그램의 적용 범위와 한계를 명확히 정의하고, 이를 오픈소스 정책에 명시해야 합니다.&lt;/p>
+&lt;p>또한, 비즈니스 환경에 맞추어 변화함에 따라 조직 구조, 제품 및 서비스가 프로그램의 적용 범위를 결정하거나 수정해야 하는 상황이 발생할 수 있습니다. 기업은 적용 범위를 평가하기 위한 측정 기준을 수립하고, 지속적인 개선을 위해 검토, 검사를 수행하여 미흡한 부분을 개선해야 합니다.&lt;/p>
+&lt;p>이를 위해 기업은 아래와 같이 오픈소스 정책에 다음과 같이 적용 범위에 대해 명확히 정의하고, 활동 이력을 문서화하는 체계를 갖춰야 합니다.&lt;/p>
+&lt;pre>&lt;code>2. 적용 범위
+이 정책은 다음 세 부분에 적용됩니다.
+1. 회사가 외부로 제공하거나 배포하는 모든 공급 소프트웨어에 적용됩니다. 단, 오픈소스를 내부 사용 목적으로만 사용하는 것은 이 정책의 범위에 포함되지 않습니다.
+2. 프로그램 참여자가 외부 오픈소스 프로젝트에 기여할 때 적용됩니다.
+3. 내부 코드를 오픈소스로 공개할 때 적용됩니다.
+적용 범위는 회사의 비즈니스 환경에 맞추어 변경할 수 있습니다. 특히, 오픈소스 프로그램 매니저는 지속적인 효과를 보장하기 위해 이 정책의 적용되지 않고 사외로 배포 혹은 서비스되는 공급 소프트웨어가 있는지 월 1회 이상 조사합니다. 이를 측정하여 1건이라도 발견 시 적용 범위를 변경해야 하는 기준으로 삼습니다.
+적용 범위를 변경하기 위한 절차는 다음과 같습니다.
+1. 오픈소스 프로그램 매니저는 신규사업, 조직개편 등 회사의 비즈니스 환경이 변화에 따라 정책의 적용 범위 변경이 필요하다고 판단할 경우, 이를 위한 제안을 OSRB에 제출합니다.
+2. OSRB에서는 적절한 수준의 적용 범위 변경을 승인합니다.
+3. OSRB는 오픈소스 정책을 수정하여 정책의 적용 범위를 변경합니다.
+오픈소스 프로그램 매니저는 지속적으로 월 1회 이상 적용 범위를 개선하기 위해 검토, 업데이트 및 검사 이력을 [Jira](https://www.atlassian.com/software/jira) Issue Tracker를 활용하여 문서화합니다.
+&lt;/code>&lt;/pre>&lt;p>따라서 기업은 오픈소스 정책에 다음과 같이 적용 범위를 명확히 정의하고, 활동 이력을 문서화하는 체계를 갖춰야 합니다.&lt;/p>
+&lt;h3 id="9-외부-문의-대응">(9) 외부 문의 대응&lt;/h3>
+&lt;p>오픈소스를 사용하여 개발한 공급 소프트웨어에 대해 고객 및 오픈소스 저작권자가 기업에 오픈소스 관련 문의, 요청 및 클레임을 제기하기 위해 연락을 취하는 경우가 있습니다. 외부 문의 및 요청의 주된 내용은 다음과 같습니다:&lt;/p>
+&lt;ul>
+&lt;li>특정 공급 소프트웨어에 오픈소스가 사용되었는지 문의&lt;/li>
+&lt;li>서면 청약에 언급된 GPL, LGPL 라이선스 하의 소스 코드 제공 요청&lt;/li>
+&lt;li>오픈소스 고지문에 명시되지 않았지만, 공급 소프트웨어에서 발견된 오픈소스에 대한 해명 및 소스 코드 공개 요청&lt;/li>
+&lt;li>GPL, LGPL 등의 의무로 공개된 소스 코드에 누락된 파일 및 빌드 방법 제공 요청&lt;/li>
+&lt;li>저작권 표시 요청&lt;/li>
+&lt;li>오픈소스 보안 취약점 관련한 문의 및 요청&lt;/li>
+&lt;/ul>
+&lt;p>기업은 이러한 외부 문의를 처리할 담당자를 지정해야 합니다. 일반적으로 오픈소스 프로그램 매니저가 담당합니다.&lt;/p>
+&lt;p>외부의 오픈소스 개발자가 특정 기업의 오픈소스 관련 이슈를 논의하기 위해 기업 담당자에게 연락하고 싶어도 연락 방법을 찾지 못하다가 결국 바로 법적 클레임을 제기하는 경우가 있습니다. 이를 방지하기 위해 기업은 제3자가 기업에 오픈소스 관련하여 문의 및 요청을 할 수 있는 연락 방법을 항시 공개적으로 밝혀야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 제3자가 오픈소스에 대해 문의할 수 있는 공개된 방법을 요구합니다:&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.1.1 - Publicly visible method that allows any third party to make an open source license compliance inquiry (e.g., via a published contact email address, or the Linux Foundation&amp;rsquo;s Open Compliance Directory).&lt;br>&lt;code>제 3자가 오픈소스 라이선스 컴플라이언스에 대해 문의 할 수 있는 공개된 방법 (담당자 이메일 주소, 또는 Linux Foundation의 Open Compliance Directory 활용 등)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.1.1: Publicly visible method to allow third parties to make Known Vulnerability or Newly Discovered Vulnerability enquires (e.g., via an email address or web portal that is monitored by Program Participants)&lt;br>&lt;code>제3자가 알려진 취약점 또는 새로 발견된 취약점에 대해 문의할 수 있는 공개된 방법 (예: 이메일 주소 또는 프로그램 참여자가 모니터링하는 웹 포털)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>외부에서 기업에 오픈소스 관련 문의를 할 수 있도록 다음과 같이 연락 방법을 제공할 수 있습니다:&lt;/p>
+&lt;ol>
+&lt;li>오픈소스 담당 조직의 대표 이메일 주소를 공개합니다.&lt;/li>
+&lt;li>&lt;a href="https://compliance.linuxfoundation.org/references/open-compliance-directory/">Linux Foundation의 Open Compliance Directory&lt;/a>를 이용합니다.&lt;/li>
+&lt;li>기업의 오픈소스 웹사이트가 있다면 이를 통해 이메일 주소를 공개합니다.&lt;/li>
+&lt;/ol>
+&lt;p>공급 소프트웨어와 동봉하는 오픈소스 고지문에 오픈소스 담당 조직의 대표 이메일 주소를 포함하여 공개하는 것도 좋은 방법입니다.&lt;/p>
+&lt;p>기업은 아래의 예시와 같이 오픈소스 정책에 외부 문의 대응에 대한 내용을 반영할 수 있습니다:&lt;/p>
+&lt;pre>&lt;code>9. 외부 문의 대응
+(1) 외부 문의 대응 책임
+외부로부터 오픈소스에 대한 문의 및 요청에 대한 대응은 오픈소스 프로그램 매니저가 담당합니다.
+- 오픈소스 프로그램 매니저는 회사 내의 적절한 프로그램 참여자에게 문의에 대한 전체 또는 일부의 처리를 할당할 수 있습니다. 필요할 경우 법률 담당자에게 문의하여 처리합니다.
+- 외부로부터 오픈소스에 대한 문의를 받은 프로그램 참여자는 누구나 이를 오픈소스 프로그램 매니저에게 알려서 신속한 대응이 될 수 있게 합니다.
+(2) 연락처 공개
+오픈소스 프로그램 매니저는 외부에서 오픈소스 관련한 문의 및 요청을 할 수 있도록 담당자의 연락처를 공개적으로 제공합니다.
+- 오픈소스 고지문에 연락받을 수 있는 이메일 주소 정보를 제공합니다.
+- 오픈소스 웹사이트에 이메일 주소 정보를 제공합니다.
+- Linux Foundation의 Open Compliance Directory에 연락처를 등록합니다.
+(3) 외부 문의 대응 절차
+외부로부터의 오픈소스 문의에 신속하고 정확하게 대응한다면 클레임이나 법적 소송 위험을 크게 줄일 수 있습니다. 이를 위해 회사는 외부의 오픈소스 문의에 대응하기 위해 회사의 오픈소스 프로세스에서 정의한 외부 문의 대응 절차를 준수합니다.
+&lt;/code>&lt;/pre>&lt;p>&lt;a href="https://www.sktelecom.com/">SK텔레콤&lt;/a>은 모든 공급 소프트웨어에 오픈소스 고지문을 포함하고 있습니다. 오픈소스 고지문에는 SK텔레콤 오픈소스 웹사이트 주소와 오픈소스 프로그램 오피스로 연락할 수 있는 메일 주소가 함께 제공됩니다.&lt;/p>
+&lt;p>&lt;img src="./ossnotice.png" alt="">&lt;/p>
+&lt;center>&lt;i>SK텔레콤 오픈소스 고지문&lt;/i>&lt;/center>&lt;br>
+&lt;p>또한, &lt;a href="https://sktelecom.github.io/">SK텔레콤 오픈소스 웹사이트&lt;/a>에서도 오픈소스 프로그램 오피스로 연락할 수 있는 메일 주소를 제공하고 있습니다.&lt;/p>
+&lt;p>&lt;img src="./website_email.jpg" alt="">&lt;/p>
+&lt;center>&lt;i>SK텔레콤 오픈소스 웹사이트&lt;/i>&lt;/center>&lt;br>
+&lt;h3 id="10-오픈소스-기여">(10) 오픈소스 기여&lt;/h3>
+&lt;p>글로벌 소프트웨어 기업들은 제품을 만들고 서비스를 제공하는 데 오픈소스를 사용하는 것뿐만 아니라 오픈소스 프로젝트에 기여하고 창출할 수 있는 전략적 가치도 중요시합니다. 그러나 오픈소스 프로젝트 생태계와 커뮤니티 운영 방식에 대한 충분한 이해와 전략 없이 접근한다면 예기치 않게 회사의 명성이 손상되고 법적 위험이 발생할 수 있습니다. 따라서 기업은 오픈소스 프로젝트에 참여하고 기여하기 위한 전략과 정책을 수립하는 것이 중요합니다.&lt;/p>
+&lt;p>ISO/IEC 5230은 다음과 같이 문서화된 오픈소스 기여 정책을 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.5.1.1 - A documented open source contribution policy&lt;br>&lt;code>문서화된 오픈소스 기여 정책&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이러한 오픈소스 기여에 대한 정책은 [부록1] 오픈소스 정책 샘플 &lt;a href="../../templates/1-policy/#7-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC">7. 오픈소스 기여&lt;/a>에서 확인할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code>7. 오픈소스 기여
+회사는 오픈소스에서의 비즈니스 가치 창출을 위해 외부 오픈소스 프로젝트로의 참여와 기여를 권장합니다. 그러나 이 과정에서 의도하지 않은 회사의 지식 재산 노출 혹은 제 3자의 권리 침해에 주의해야 합니다. 이를 위해 회사의 프로그램 참여자가 외부 오픈소스 프로젝트로의 기여를 위해서는 다음 사항을 준수해야 합니다.
+(1) 리뷰 요청 및 승인
+오픈소스 기여는 저작권 관점에서 저작자가 저작물을 수정/사용/배포할 수 있는 권한을 오픈소스 프로젝트에 부여하는 것입니다. 때에 따라서는 오픈소스 프로젝트에 저작권을 양도해야 하기도 합니다. 일반적으로 고용 기간에 만든 저작물의 저작권은 고용주가 소유합니다. 즉, 프로그램 참여자가 만든 저작물은 회사가 소유합니다. 프로그램 참여자가 임의로 저작물을 오픈소스에 기여하는 행위는 불필요한 저작권 침해 이슈를 유발할 수 있습니다.
+따라서, 기여하고자 하는 오픈소스 프로젝트가 있다면 오픈소스 기여 프로세스에 따라 최초 기여하기 전에 리뷰 요청 및 승인 절차를 준수합니다.
+단, 다음과 같이 단순한 내용일 경우, 저작권 침해 리스크가 크지 않기 때문에 리뷰 절차 없이 프로그램 참여자의 판단에 따라 기여할 수 있습니다.
+- 10 라인 이하의 작은 코드 조각
+- Stack Overflow에서의 문의 / 답변
+- GitHub에서의 관리 활동 : Issue 생성, Pull Request Review / Approve 등
+...
+&lt;/code>&lt;/pre>&lt;p>오픈소스 기여 정책에는 기여 절차, 승인 프로세스, 지식재산권 보호 방안, &lt;a href="https://en.wikipedia.org/wiki/Contributor_License_Agreement">CLA (Contributor License Agreement)&lt;/a> 서명 지침 등이 포함되어야 합니다. 또한 프로그램 참여자들이 회사를 대표하여 오픈소스 커뮤니티에 참여할 때의 행동 지침도 제공해야 합니다.&lt;/p>
+&lt;h3 id="11-sbom-생성-및-관리">(11) SBOM 생성 및 관리&lt;/h3>
+&lt;p>&lt;a href="https://www.cisa.gov/sbom">SBOM (Software Bill of Materials)&lt;/a> 생성 및 관리 절차를 수립해야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>SBOM 생성 도구 및 방법론 선정&lt;/li>
+&lt;li>SBOM 정보의 정확성 및 완전성 보장&lt;/li>
+&lt;li>SBOM 업데이트 및 버전 관리 프로세스 수립&lt;/li>
+&lt;li>SBOM 공유 및 배포 방법 정의&lt;/li>
+&lt;/ul>
+&lt;p>기업은 아래의 예시와 같이 오픈소스 정책에 SBOM 생성 및 관리에 대한 내용을 반영할 수 있습니다:&lt;/p>
+&lt;pre>&lt;code>6. 오픈소스 사용
+(4) SBOM (Software Bill of Materials) 생성
+공급 소프트웨어를 구성하는 각 오픈소스 소프트웨어 컴포넌트 내역을 포함하는 SBOM(Software Bill of Materials)을 생성하고 이를 유지하는 프로세스가 있어야 합니다.
+회사의 오픈소스 프로세스를 통해 오픈소스 도구를 활용하여 SBOM을 생성하고 보존할 수 있습니다.
+- SBOM은 [SPDX](https://spdx.dev/) 또는 [CycloneDX](https://cyclonedx.org/)와 같은 표준 형식을 사용하여 생성합니다.
+- 모든 공급 소프트웨어에 대해 SBOM을 생성하고 관리합니다.
+- SBOM은 공급 소프트웨어의 릴리스마다 업데이트하고 버전 관리합니다.
+- SBOM 정보의 정확성을 주기적으로 검증합니다.
+- 필요한 경우 고객 및 규제 기관과 SBOM을 공유할 수 있도록 준비합니다.
+&lt;/code>&lt;/pre>&lt;p>SBOM 생성 및 관리는 오픈소스 라이선스 컴플라이언스와 보안 보증을 위한 핵심 요소입니다. 이를 통해 기업은 사용 중인 오픈소스 컴포넌트를 정확히 파악하고, 알려진 취약점이나 라이선스 이슈에 신속하게 대응할 수 있습니다.&lt;/p>
+&lt;p>기업은 이러한 SBOM 관련 원칙을 오픈소스 정책에 포함하여, 체계적인 SBOM 관리 체계를 구축해야 합니다.&lt;/p>
+&lt;h2 id="3-summary">3. Summary&lt;/h2>
+&lt;p>오픈소스 정책을 문서화하는 것은 효과적인 오픈소스 관리를 위해 가장 중요한 과정입니다.&lt;/p>
+&lt;p>다음 페이지에서 위에서 언급한 ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 충족하는 샘플 오픈소스 정책 문서를 제공합니다: &lt;a href="../../templates/1-policy">[부록1] 오픈소스 정책 (template)&lt;/a>&lt;/p>
+&lt;p>위의 내용을 참고하여 각 요구사항을 회사의 상황에 맞게 적절한 원칙을 수립하는 것이 필요합니다. 또한 문서로만 그치지 않고, 실행 가능한 절차까지 고려해야 합니다. 말뿐인 정책은 소용이 없습니다.&lt;/p>
+&lt;p>오픈소스 정책은 다음과 같은 핵심 요소를 포함해야 합니다:&lt;/p>
+&lt;ol>
+&lt;li>오픈소스 라이선스 컴플라이언스 원칙&lt;/li>
+&lt;li>오픈소스 보안 보증 원칙&lt;/li>
+&lt;li>오픈소스 리스크 대응 방안&lt;/li>
+&lt;li>내부 책임 할당 절차&lt;/li>
+&lt;li>미준수 사례 대응 방법&lt;/li>
+&lt;li>인원 및 예산 지원 계획&lt;/li>
+&lt;li>전문 자문 제공 방식&lt;/li>
+&lt;li>정책의 적용 범위 지정&lt;/li>
+&lt;li>외부 문의 대응 절차&lt;/li>
+&lt;li>오픈소스 기여 가이드라인&lt;/li>
+&lt;li>SBOM(Software Bill of Materials) 생성 및 관리 방법&lt;/li>
+&lt;/ol>
+&lt;p>이러한 요소들을 포함하여 오픈소스 정책을 수립하고 문서화하면, ISO/IEC 5230과 ISO/IEC 18974 표준의 주요 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="./spec_number_02.png" alt="">&lt;/p>
+&lt;p>정책은 단순히 문서화에 그치지 않고 조직 내에서 실제로 이행되어야 합니다. 이를 위해 정기적인 검토와 업데이트, 그리고 프로그램 참여자들의 교육이 필요합니다. 효과적인 오픈소스 정책은 조직의 오픈소스 사용과 기여를 체계적으로 관리하고, 잠재적인 법적 및 보안 위험을 최소화하는 데 도움을 줄 것입니다.&lt;/p></description></item><item><title>Docs: 3. 프로세스</title><link>/docs/opensource_for_enterprise/3-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/3-process/</guid><description>
+&lt;p>오픈소스 프로세스는 소프트웨어 개발 및 배포 과정에서 기업이 오픈소스 정책을 준수할 수 있도록 하는 실행 가능한 절차입니다.&lt;/p>
+&lt;p>오픈소스 라이선스 컴플라이언스 측면에서는 공급 소프트웨어를 개발하고 배포하면서 사용한 오픈소스에 대해 각 라이선스가 요구하는 조건을 준수하기 위한 활동을 수행하여 오픈소스 고지문(Notice), 공개할 소스 코드 (Source Code) 등의 컴플라이언스 산출물을 생성하게 됩니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 702px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/3-process/input_hu6fb1167426b664b7db45fb3de90029fd_53101_900x600_fit_catmullrom_2.png" width="692" height="176">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>Simplified view of the compliance end-to-end process : https://www.linuxfoundation.org/wp-content/uploads/OpenSourceComplianceHandbook_2018_2ndEdition_DigitalEdition.pdf&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>오픈소스 보안 보증을 위해서는 공급 소프트웨어에 대한 알려진 취약점 또는 새로 발견된 취약점 존재 여부를 탐지하고, 구조적/기술적 위협을 식별하여 출시 전에 문제를 해결하기 위한 활동을 수행해야 합니다.&lt;/p>
+&lt;p>기업이 효과적인 오픈소스 라이선스 컴플라이언스와 보안 보증을 이루기 위해서는 아래와 같은 프로세스를 구축해야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>오픈소스 프로세스&lt;/li>
+&lt;li>오픈소스 보안 취약점 대응 프로세스&lt;/li>
+&lt;li>외부 문의 대응 프로세스&lt;/li>
+&lt;li>오픈소스 기여 프로세스&lt;/li>
+&lt;/ul>
+&lt;p>그럼 각 프로세스가 어떻게 구성되어야 하는지 하나하나 살펴보겠습니다.&lt;/p>
+&lt;h2 id="1-오픈소스-프로세스">1. 오픈소스 프로세스&lt;/h2>
+&lt;p>기업은 소프트웨어 개발 프로세스에 따라 오픈소스 라이선스 컴플라이언스와 보안 보증을 위한 오픈소스 프로세스를 구축해야 합니다.&lt;/p>
+&lt;p>아래의 이미지는 기업이 일반적으로 채택하여 사용할 수 있는 샘플 오픈소스 프로세스입니다.&lt;/p>
+&lt;p>&lt;img src="./process.png" alt="">&lt;/p>
+&lt;p>위 오픈소스 프로세스에 맞춰서 각 단계별로 취해야 할 절차는 다음과 같습니다.&lt;/p>
+&lt;h3 id="1-오픈소스-식별-및-검사">(1) 오픈소스 식별 및 검사&lt;/h3>
+&lt;p>오픈소스 식별 및 검사 단계에서는 사용하려는 오픈소스의 라이선스가 무엇인지 식별하고, 라이선스가 요구하는 의무사항은 무엇인지, 알려진 취약점은 존재하는지 확인해야 합니다.&lt;/p>
+&lt;p>어떤 오픈소스를 사용하려고 하는지, 그 라이선스는 무엇인지, 각 라이선스가 부여하는 의무는 무엇인지, 알려진 취약점은 무엇인지 검토하고 기록합니다.&lt;/p>
+&lt;p>ISO/IEC 5230 표준은 라이선스 컴플라이언스를 위해 일반적인 오픈소스 라이선스의 사용 사례를 다룰 수 있어야 하고, 각 식별된 라이선스에 의해 부여된 의무, 제한 및 권리를 검토하고 기록하기 위한 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>3.3.2.1 - A documented procedure for handling the common open source license use cases for the open source components of the supplied software.&lt;br>&lt;code>공급 소프트웨어 내의 오픈소스 컴포넌트에 대해 일반적인 오픈소스 라이선스 사용 사례를 처리하기 위한 문서화된 절차&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>3.1.5.1 - A documented procedure to review and document the obligations, restrictions and rights granted by each identified license.&lt;br>&lt;code>각 식별된 라이선스에 의해 부여된 의무, 제한 및 권리를 검토하고 기록하기 위한 문서화된 절차&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위한 절차의 예는 다음과 같습니다:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>오픈소스 프로그램 매니저는 주요 오픈소스 라이선스의 의무, 제한, 권리에 대한 가이드를 작성하여 제공합니다. 이 가이드에는 일반적인 오픈소스 라이선스의 사용 사례가 관리될 수 있도록 다음과 같은 사용 사례가 포함되어야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>바이너리 형태로 배포&lt;/li>
+&lt;li>소스 형태로 배포&lt;/li>
+&lt;li>추가 라이선스 의무를 유발하는 다른 오픈소스와 통합&lt;/li>
+&lt;li>수정된 오픈소스 포함&lt;/li>
+&lt;li>공급 소프트웨어 내의 다른 컴포넌트와 서로 호환되지 않는 라이선스 하의 오픈소스 또는 다른 소프트웨어를 포함&lt;/li>
+&lt;li>저작자 표시 요구사항을 갖는 오픈소스 포함&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>사업 부서는 오픈소스 정책에서 정의한 기준에 따라 라이선스와 알려진 취약점을 확인합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>사업 부서는 의문 사항을 오픈소스 프로그램 매니저와 보안 담당에게 문의합니다. 필요할 경우 외부 전문가에게 자문을 요청합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>모든 결정 및 관련 근거는 문서화하여 보관합니다.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>이를 위해 기업은 아래의 예시와 같이 공급 소프트웨어 출시 전에 오픈소스 식별, 검사 단계를 통해 각 식별된 라이선스가 부가하는 의무, 제한과 알려진 취약점을 검토하고 기록하기 위한 문서화된 절차를 수립해야 합니다.&lt;/p>
+&lt;pre>&lt;code>(1) 오픈소스 식별
+사업 부서는 소프트웨어 설계 단계에서 다음 사항을 준수합니다:
+- 소프트웨어를 설계하면서 예측 가능한 오픈소스 사용 현황을 파악하고 식별된 라이선스를 확인합니다.
+- 오픈소스 라이선스별 의무 사항을 확인합니다. 라이선스별 의무 사항은 회사의 오픈소스 라이선스 가이드에서 확인할 수 있습니다: https://sktelecom.github.io/guide/use/obligation/
+- 각 오픈소스 라이선스의 소스 코드 공개 범위를 고려하여 소프트웨어를 설계합니다.
+오픈소스 프로그램 매니저는 주요 오픈소스 라이선스 의무, 제한, 권리에 대한 가이드를 작성하고 공개하여 전사의 사업 부서에서 참고할 수 있도록 합니다. 이 가이드에는 일반적인 오픈소스 라이선스의 사용 사례가 관리될 수 있도록 다음과 같은 사용 사례가 포함되어야 합니다:
+- 바이너리 형태로 배포
+- 소스 형태로 배포
+- 추가 라이선스 의무를 유발하는 다른 오픈소스와 통합
+- 수정된 오픈소스 포함
+- 공급 소프트웨어 내의 다른 컴포넌트와 서로 호환되지 않는 라이선스 하의 오픈소스 또는 다른 소프트웨어를 포함
+- 저작자 표시 요구사항을 갖는 오픈소스 포함
+사업 부서는 회사 규칙에 맞게 소스 코드에 저작권 및 라이선스를 표기합니다. 회사의 소스 코드 내 저작권 및 라이선스 표기 규칙은 다음 페이지에서 확인할 수 있습니다. (insert_link)
+사업 부서는 새로운 오픈소스 도입 검토 시, 먼저 라이선스를 식별합니다. 회사의 오픈소스 라이선스 가이드에 따라 라이선스 의무, 제한 및 권리를 확인합니다. 회사의 오픈소스 라이선스 가이드에서 설명하지 않는 라이선스일 경우, 오픈소스 프로그램 매니저에게 도입 가능 여부 및 주의 사항을 문의합니다. 문의를 위해서 Jira Ticket을 생성합니다.
+오픈소스 프로그램 매니저는 오픈소스 라이선스 의무를 분석하여 소프트웨어 개발 조직에 안내합니다.
+- 의문이 있는 경우, 법무 담당에 자문을 요청하여 명확한 가이드를 제공합니다.
+- 새롭게 분석한 라이선스 정보는 전사 라이선스 가이드에 반영합니다.
+보안 담당은 회사의 보안 보증을 위한 가이드를 제공합니다.
+(2) 소스 코드 검사
+사업 부서는 IT 담당자의 안내에 따라 오픈소스 점검을 요청하고 소스 코드를 제공합니다.
+IT 담당은 오픈소스 분석 도구를 사용하여 오픈소스 점검을 하고, SBOM(Software Bill of Materials)을 생성합니다.
+오픈소스 프로그램 매니저는 오픈소스 라이선스 의무 준수 가능 여부, 오픈소스 라이선스 충돌 여부를 검토하고, 이슈가 있으면 사업 부서에 해결을 요청합니다. 이슈 사항은 Jira Ticket으로 생성하여 사업 부서에 할당합니다.
+보안 담당은 검출된 알려진 취약점을 검토하고 사전 정의한 Risk 분류 기준에 따라 사업 부서에 대응 가이드를 제공합니다. Risk는 CVSS(Common Vulnerability Scoring System) Score로 분류하며, Critical Risk는 1주 이내 조치할 수 있는 계획을 수립하도록 안내합니다.
+&lt;/code>&lt;/pre>&lt;p>오픈소스 식별 및 검사 단계에서는 소스 코드 스캔 도구를 사용할 수 있습니다. 이에 대한 자세한 내용은 &amp;ldquo;&lt;a href="../4-tool/#1-%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C-%EC%8A%A4%EC%BA%94-%EB%8F%84%EA%B5%AC">1. 소스 코드 스캔 도구&lt;/a>&amp;ldquo;에서 설명합니다.&lt;/p>
+&lt;h3 id="2-문제-해결">(2) 문제 해결&lt;/h3>
+&lt;p>오픈소스 식별 및 검사를 통해 오픈소스를 식별하고 라이선스와 보안 취약점의 위험을 확인한 후에는 문제를 해결하는 절차가 필요합니다. 다음과 같은 방법으로 검출된 모든 문제를 해결해야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>이슈가 되는 오픈소스를 삭제합니다.&lt;/li>
+&lt;li>오픈소스 라이선스 이슈 해결을 위해 다른 라이선스 하의 오픈소스로 교체합니다.&lt;/li>
+&lt;li>알려진 취약점 또는 새로 발견된 취약점이 해결된 버전의 오픈소스로 교체합니다.&lt;/li>
+&lt;/ul>
+&lt;p>이를 위한 문서화된 프로세스의 예는 다음과 같습니다:&lt;/p>
+&lt;pre>&lt;code>(3) 문제 해결
+사업 부서는 소스 코드 검사 단계에서 발견된 모든 문제를 해결합니다.
+이슈가 된 오픈소스를 제거하거나, 다른 라이선스 하의 오픈소스로 교체합니다. 알려진 취약점 또는 새로 발견된 취약점 이슈의 경우 취약점이 수정된 버전으로 교체하는 등의 조치를 취합니다.
+사업 부서는 발견된 모든 이슈를 해결하면 Jira Ticket 이슈를 Resolve하고, 재검토를 요청합니다.
+&lt;/code>&lt;/pre>&lt;h3 id="3-sbom-식별-검토-보관">(3) SBOM 식별, 검토, 보관&lt;/h3>
+&lt;p>오픈소스 라이선스 컴플라이언스 활동의 가장 기본은 공급 소프트웨어에 포함된 오픈소스 현황을 파악하는 것입니다. 공급 소프트웨어에 포함된 오픈소스와 그 라이선스를 식별하여 그 정보를 담고 있는 SBOM(Software Bill of Materials)을 작성하고 관리하는 프로세스를 구축해야 합니다. 공급 소프트웨어의 버전마다 어떤 오픈소스가 포함되어 있는지 알고 있어야 소프트웨어를 배포할 때 각 오픈소스의 라이선스가 요구하는 의무 사항을 준수할 수 있기 때문입니다. 이는 오픈소스 보안 취약점을 발견하고 대응하기 위해서도 꼭 필요한 과정입니다.&lt;/p>
+&lt;p>모든 오픈소스는 공급 소프트웨어에 통합하기 전에 검토 및 승인되어야 합니다. 오픈소스의 기능, 품질뿐만 아니라 출처, 라이선스 요건을 충족할 수 있는지, 알려진 취약점 또는 새로 발견된 취약점을 해결하였는지 등에 대해 사전 검토가 되어야 합니다. 이를 위해 검토 요청 → 리뷰 → 승인 과정이 필요합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 공급 소프트웨어에 사용된 모든 오픈소스 소프트웨어가 소프트웨어 수명 주기 동안 지속적으로 기록되도록 하는 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.3.1.1 - A documented procedure for identifying, tracking, reviewing, approving, and archiving information about the collection of open source components from which the supplied software is comprised. &lt;br>&lt;code>공급 소프트웨어를 구성하는 오픈소스 컴포넌트에 대한 정보를 식별, 추적, 검토, 승인 및 보관하는 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.3.1.1: A documented procedure ensuring all Open Source Software used in the Supplied Software is continuously recorded across the lifecycle of the Supplied Software. This includes an archive of all Open Source Software used in the Supplied Software;&lt;br>&lt;code>공급 소프트웨어에 사용된 모든 오픈소스 소프트웨어가 공급 소프트웨어의 수명 주기 동안 지속적으로 기록되도록 하는 문서화된 절차. 여기에는 공급 소프트웨어에 사용된 모든 오픈소스 소프트웨어의 저장소도 포함된다.&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 아래의 예시와 같이 오픈소스 프로세스에 SBOM에 대한 내용을 반영할 수 있습니다:&lt;/p>
+&lt;pre>&lt;code>(4) 검토
+오픈소스 프로그램 매니저는 모든 이슈가 적절하게 보완되었는지 검토합니다. 필요할 경우, 오픈소스 분석 도구를 사용하여 소스 코드 검사를 재수행합니다.
+보안 담당은 심각한 취약점이 모두 해결되었는지 검토합니다. 해결하기 어려운 취약점이 남아 있을 경우, 비즈니스 형태와 서비스 노출 현황 등을 고려하여 승인 가능 여부를 검토합니다.
+(5) 승인
+오픈소스 프로그램 매니저는 오픈소스 라이선스 컴플라이언스 절차가 적절하게 수행되었는지 최종 승인하거나 거절합니다. 거절 시에는 이유에 대한 설명과 수정 방법을 사업 부서에 제안합니다.
+(6) 등록
+오픈소스 프로그램 매니저는 공급 소프트웨어의 버전별 오픈소스 사용 목록을 추적하기 위한 SBOM을 확정합니다.
+IT 담당은 확정된 SBOM을 시스템에 등록합니다. SBOM에는 공급 소프트웨어에 포함된 오픈소스 목록과 다음과 같은 정보를 포함합니다:
+- 공급 소프트웨어의 제품(혹은 서비스) 이름과 버전
+- 오픈소스 목록
+- 오픈소스 이름 / 버전
+- 오픈소스 라이선스
+오픈소스 프로그램 매니저는 공급 소프트웨어의 버전별 오픈소스 사용 목록을 추적하기 위한 SBOM을 확정합니다.
+&lt;/code>&lt;/pre>&lt;p>SBOM 관리를 위한 도구에 대해서는 &amp;ldquo;&lt;a href="../4-tool/#3-sbom-%EA%B4%80%EB%A6%AC-%EB%8F%84%EA%B5%AC">SBOM 관리 도구&lt;/a>&amp;ldquo;에서 자세히 설명합니다.&lt;/p>
+&lt;p>또 이와 같은 오픈소스 프로세스의 모든 과정과 결과는 문서화가 되어야 합니다. 이메일을 사용하는 것보다는 &lt;a href="https://www.atlassian.com/software/jira">Jira&lt;/a>, &lt;a href="https://www.bugzilla.org/">Bugzilla&lt;/a> 등의 이슈 트래킹 시스템을 이용하는 것이 이러한 과정을 효율적으로 문서화 할 수 있습니다.&lt;/p>
+&lt;h3 id="4-라이선스-컴플라이언스-산출물-생성">(4) 라이선스 컴플라이언스 산출물 생성&lt;/h3>
+&lt;p>오픈소스 라이선스 컴플라이언스 활동의 가장 기본은 공급 소프트웨어에 포함된 오픈소스 현황을 파악하는 것입니다. 이는 오픈소스 라이선스 컴플라이언스의 핵심인 오픈소스 라이선스 요구사항을 올바르게 충족하기 위해서입니다. 즉, 공급 소프트웨어에 포함된 오픈소스에 대한 컴플라이언스 산출물 세트를 생성하는 프로세스가 구축되어야 합니다.&lt;/p>
+&lt;p>ISO/IEC 5230 표준은 다음과 같이 컴플라이언스 산출물을 준비하고, 이를 공급 소프트웨어와 함께 제공하기 위한 프로세스를 설명하는 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.4.1.1 - A documented procedure that describes the process under which the compliance artifacts are prepared and distributed with the supplied software as required by the identified licenses.&lt;br>&lt;code>식별된 라이선스가 요구하는 컴플라이언스 산출물을 준비하고, 이를 공급 소프트웨어와 함께 제공하기 위한 프로세스를 설명하는 문서화된 절차 &lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>컴플라이언스 산출물은 크게 두 가지로 구분됩니다:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>오픈소스 고지문: 오픈소스 라이선스 전문과 저작권 정보 제공을 위한 문서&lt;/p>
+&lt;p>&lt;img src="ossnotice.png" alt="">&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>도구를 활용하여 취합한 SBOM에 해당하는 오픈소스 고지문을 생성하는 방법에 대해 &amp;ldquo;&lt;a href="../4-tool/#5-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%82%B0%EC%B6%9C%EB%AC%BC-%EC%83%9D%EC%84%B1-%EB%8F%84%EA%B5%AC">오픈소스 컴플라이언스 산출물 생성 도구&lt;/a>&amp;ldquo;에서 추가로 설명합니다.&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>공개할 소스 코드 패키지: GPL, LGPL 등 소스 코드 공개를 요구하는 오픈소스 라이선스 의무 이행을 위해 공개할 소스 코드를 취합한 패키지&lt;/li>
+&lt;/ol>
+&lt;p>컴플라이언스 산출물은 공급 소프트웨어를 배포할 때 함께 제공해야 합니다.&lt;/p>
+&lt;p>이를 위해 기업은 아래의 예시와 같이 오픈소스 프로세스에 고지 단계부터 배포 단계까지 컴플라이언스 산출물 생성에 대한 내용을 반영할 수 있습니다:&lt;/p>
+&lt;pre>&lt;code>(7) 고지
+오픈소스 프로그램 매니저는 고지 의무를 준수하기 위해 오픈소스 고지문을 생성합니다. 오픈소스 고지문에는 다음과 같은 내용이 포함됩니다:
+- 오픈소스 관련 문의할 수 있는 오픈소스 연락처
+- 오픈소스별 고지 내용
+- 저작권
+- 오픈소스 라이선스 이름
+- 오픈소스 라이선스 사본
+- (해당하는 경우) 소스 코드 사본을 얻을 수 있는 서면 청약 (Written Offer)
+오픈소스 프로그램 매니저는 오픈소스 고지문을 생성하여 사업 부서에 전달합니다. 이때 소스 코드 공개가 필요할 경우 사업 부서에 공개할 소스 코드 취합 방법을 안내합니다.
+사업 부서는 오픈소스 고지문을 제품 배포 시 동봉합니다. 화면이 있는 제품일 경우, 사용자가 메뉴를 통해 확인할 수 있도록 조치합니다. (예: 앱 &amp;gt; 메뉴 &amp;gt; 설정 &amp;gt; 저작권 정보 &amp;gt; 오픈소스 라이선스)
+사업 부서는 GPL, LGPL 등 소스 코드 공개를 요구하는 라이선스 하의 오픈소스를 사용하였을 경우, 이에 대한 소스 코드 공개 범위를 확인하여 공개할 소스 코드를 취합합니다.
+- GPL, LGPL 등의 라이선스 의무 준수를 위해 취합한 소스 코드는 제품에 탑재된 바이너리를 구성하는 소스 코드와 일치해야 합니다. 즉, 취합한 소스 코드를 빌드하면 제품에 탑재된 바이너리와 동일해야 합니다.
+(8) 배포 전 확인
+사업 부서는 오픈소스 라이선스 컴플라이언스 활동이 적절히 수행되었음을 입증하는 다음의 컴플라이언스 산출물을 제출합니다:
+1. 제품에 포함한 최종 오픈소스 고지문
+2. 제품에 오픈소스 고지문이 포함되었음을 확인하는 자료 (예: 오픈소스 고지문을 보여주는 화면 캡처 이미지)
+3. (해당할 경우) 공개할 소스 코드 (하나의 파일로 압축하여 제출)
+오픈소스 프로그램 매니저는 사업 부서가 제출한 자료를 검토하여 이상 여부를 확인합니다.
+(9) 배포
+오픈소스 프로그램 매니저는 사업 부서가 제출한 컴플라이언스 산출물을 IT 담당자에게 제출합니다.
+IT 담당은 컴플라이언스 산출물을 회사의 오픈소스 배포 사이트에 등록합니다.
+&lt;/code>&lt;/pre>&lt;p>공급 소프트웨어를 배포하는 경우, 공개할 소스 코드 패키지를 동봉하는 것이 곤란할 수 있습니다. 이 경우, 최소 3년간 소스 코드를 제공하겠다는 서면 청약(Written Offer)을 제공하는 것으로 대신할 수 있습니다. 일반적으로 서면 청약은 제품의 사용자 매뉴얼을 통해 제공되며, 예시는 다음과 같습니다:&lt;/p>
+&lt;pre>&lt;code>The software included in this product contains copyrighted software
+that is licensed under the GPL. A copy of that license is included
+in this document on page X. You may obtain the complete Corresponding
+Source code from us for a period of three years after our last shipment
+of this product, which will be no earlier than 2011-08- 01, by sending
+a money order or check for $5 to:
+GPL Compliance Division
+Our Company
+Any Town, US 99999
+Please write&amp;quot;source for product Y&amp;quot; in the memo line of your payment.
+You may also find a copy of the source at http://www.example.com/sources/Y/.
+This offer is valid to anyone in receipt of this information.
+&amp;lt;출처 : SFLC Guide to GPL Compliance&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>따라서, 컴플라이언스 산출물은 3년 이상 보관해야 하며, 이를 위한 프로세스가 구축되어야 합니다.&lt;/p>
+&lt;p>이를 위해 기업은 오픈소스 웹사이트 구축을 고려할 수 있습니다. 자세한 내용은 &amp;ldquo;&lt;a href="../4-tool/#6-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%EC%82%B0%EC%B6%9C%EB%AC%BC-%EB%B3%B4%EA%B4%80">오픈소스 컴플라이언스 산출물 보관&lt;/a>&amp;ldquo;에서 확인하실 수 있습니다.&lt;/p>
+&lt;h3 id="5-보안-취약점-검사-및-평가">(5) 보안 취약점 검사 및 평가&lt;/h3>
+&lt;p>보안 담당은 공급 소프트웨어의 오픈소스 소프트웨어 컴포넌트에 대한 알려진 취약점 또는 새로 발견된 취약점을 검사하고 평가하는 프로세스를 구축해야 합니다. 이 프로세스는 다음과 같은 단계를 포함해야 합니다:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>취약점 데이터베이스 검색: &lt;a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)&lt;/a>와 같은 공개 취약점 데이터베이스를 활용하여 사용 중인 오픈소스 컴포넌트의 알려진 취약점을 검색합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>자동화된 취약점 스캔 도구 사용: &lt;a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check&lt;/a>와 같은 도구를 사용하여 공급 소프트웨어의 의존성을 스캔하고 알려진 취약점을 식별합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>취약점 심각도 평가: &lt;a href="https://www.first.org/cvss/">CVSS (Common Vulnerability Scoring System)&lt;/a>를 사용하여 발견된 취약점의 심각도를 평가합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>위험 분석: 식별된 취약점이 공급 소프트웨어에 미치는 잠재적 영향을 분석합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>대응 계획 수립: 심각도와 위험 분석 결과에 따라 각 취약점에 대한 대응 계획을 수립합니다.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;pre>&lt;code>(2) 소스 코드 검사
+보안 담당은 검출된 알려진 취약점을 검토하고 사전 정의한 Risk 분류 기준에 따라 사업 부서에 대응 가이드를 제공합니다. Risk는 CVSS(Common Vulnerability Scoring System) Score로 분류하며, Critical Risk는 1주 이내 조치할 수 있는 계획을 수립하도록 안내합니다.
+| Risk | CVSS 2.0 | CVSS 3.0 | 조치 권고 일정 |
+|---|:---:|:---:|:---:|
+| Low | 0.0 - 3.9 | 0.0 - 3.9 | - |
+| Medium | 4.0 - 6.9 | 4.0 - 6.9 | - |
+| High | 7.0 - 10.0 | 7.0 - 8.9 | 4주 이내 |
+| Critical | - | 9.0 - 10.0 | 1주 이내 |
+&lt;/code>&lt;/pre>&lt;ol start="6">
+&lt;li>
+&lt;p>보고 및 문서화: 검사 결과, 평가 내용, 대응 계획을 문서화하고 관련 이해관계자에게 보고합니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>지속적인 모니터링: 새로운 취약점이 발견되거나 기존 취약점의 심각도가 변경될 수 있으므로, 지속적인 모니터링 체계를 구축합니다.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>이러한 프로세스를 통해 공급 소프트웨어의 보안 취약점을 효과적으로 관리하고, ISO/IEC 18974의 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;h2 id="2-오픈소스-보안-취약점-대응-프로세스">2. 오픈소스 보안 취약점 대응 프로세스&lt;/h2>
+&lt;p>기업은 공급 소프트웨어를 개발하면서 오픈소스 보안 취약점을 탐지하고 해결하는 등 보안 보증을 위한 활동을 수행해야 합니다.&lt;/p>
+&lt;p>ISO/IEC 18974 표준은 다음과 같이 보안 보증 방법에 대한 문서화된 절차와 수행된 조치를 기록하도록 요구합니다.&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;p>3.1.5 - Standard Practice Implementation &lt;code>3.1.5 - 표준 사례 구현&lt;/code>&lt;/p>
+&lt;p>The Program demonstrates a sound and robust handling procedures of Known Vulnerabilities and Secure Software Development by defining and implementing following procedures:&lt;br>&lt;code>프로그램은 다음 절차를 정의하고 구현하여 알려진 취약점 및 보안 소프트웨어 개발을 건전하고 강력하게 처리하는 절차를 갖춘다.&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Method to identify structural and technical threats to the Supplied Software is defined;&lt;br>&lt;code>공급 소프트웨어에 대한 구조적 및 기술적 위협을 식별하는 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method for detecting existence of Known Vulnerabilities in Supplied Software;&lt;br>&lt;code>공급 소프트웨어에서 알려진 취약점 존재 여부를 탐지하는 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method for following up on identified Known Vulnerabilities;&lt;br>&lt;code>확인된 알려진 취약점에 대한 후속 조치 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method to communicate identified Known Vulnerabilities to customer base when warranted;&lt;br>&lt;code>확인된 알려진 취약점을 보증 대상인 고객에게 알리는 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method for analyzing Supplied Software for newly published Known Vulnerabilities post release of the Supplied Software;&lt;br>&lt;code>공급 소프트웨어의 릴리스 후 새롭게 알려진 취약점이 공개되었을 때 이미 배포된 소프트웨어에 존재하는지 확인하는 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method for continuous and repeated Security Testing is applied for all Supplied Software before release;&lt;br>&lt;code>지속적이고 반복적인 보안 테스트가 출시 전에 모든 공급 소프트웨어에 적용되기 위한 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method to verify that identified risks will have been addressed before release of Supplied Software;&lt;br>&lt;code>식별된 위험이 공급 소프트웨어의 출시 전에 해결되었는지 확인하는 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Method to export information about identified risks to third parties as appropriate.&lt;br>&lt;code>식별된 위험에 대한 정보를 제3자에게 적절하게 내보내는 방법&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>3.1.5.1: A documented procedure exists for each of the methods identified above.&lt;br>&lt;code>위에서 식별된 각 방법에 대한 문서화된 절차가 존재한다.&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>3.3.2 - Security Assurance &lt;code>3.3.2 - 보안 보증&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>3.3.2.1: A documented procedure for handling detection and resolution of Known Vulnerabilities for the Open Source Software components of the Supplied Software;&lt;br>&lt;code>공급 소프트웨어의 오픈소스 소프트웨어 컴포넌트에 대한 알려진 취약점의 탐지 및 해결을 위한 문서화된 절차&lt;/code>&lt;/li>
+&lt;li>3.3.2.2: For each Open Source Software component a record is maintained of the identified Known Vulnerabilities and action(s) taken (including even if no action was required).&lt;br>&lt;code>각 오픈소스 소프트웨어 컴포넌트에 대해 식별된 알려진 취약점 및 수행된 조치에 대한 기록을 유지한다(조치가 필요하지 않은 경우도 포함).&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 공급 소프트웨어에서 알려진 취약점 또는 새로 발견된 취약점 존재 여부를 탐지하고, 식별된 위험이 출시 전에 해결해야 할 뿐 아니라 출시 후 새롭게 알려진 취약점에 대응하기 위한 방법과 절차를 갖춰야 합니다.&lt;/p>
+&lt;p>먼저 기업은 배포용 소프트웨어에 알려진 취약점이 있는지 탐지하고, 식별된 위험을 출시 전에 해결해야 합니다. 이와 같이 알려진 취약점을 탐지하고 해결하는 절차는 &lt;a href="#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4">오픈소스 프로세스&lt;/a>의 오픈소스 식별 단계, 소스 코드 검사 단계, 문제 해결 단계를 통해 수행할 수 있습니다.&lt;/p>
+&lt;p>그리고, 배포용 소프트웨어의 릴리스 후 새롭게 알려진 취약점이 공개되었을 때 이미 배포된 소프트웨어에 존재하는지 확인하고, 해결하기 위해서는 신규 보안 취약점 대응 프로세스를 수립해야 합니다.&lt;/p>
+&lt;p>아래는 신규 보안 취약점 발견 시 대응을 위한 프로세스 샘플입니다.&lt;/p>
+&lt;p>&lt;img src="./securityprocess.png" alt="">&lt;/p>
+&lt;center>&lt;i>신규 보안 취약점 대응 프로세스 (샘플)&lt;/i>&lt;/center>&lt;br>
+&lt;h3 id="1-알려진-취약점-및-새로-발견된-취약점-모니터링">(1) 알려진 취약점 및 새로 발견된 취약점 모니터링&lt;/h3>
+&lt;pre>&lt;code>(1) 모니터링
+IT 담당은 새로운 보안 취약점을 모니터링하는 시스템을 구축하여 운영합니다. 이 시스템은 다음과 같은 기능을 수행합니다.
+- 새로운 보안 취약점이 공개되는 것을 주기적으로 수집합니다.
+- 새로운 알려진 취약점을 갖고 있는 오픈소스가 이미 출시된 제품/서비스에 사용된 경우, 해당 제품/서비스의 사업 부서 담당자에게 알림을 보냅니다. 이때 알림부터 검토, 조치, 해결 사항이 모두 문서화되어 기록될 수 있도록 Jira Issue Tracker를 사용합니다.
+&lt;/code>&lt;/pre>&lt;p>IT 담당은 알려진 취약점 및 새로 발견된 취약점을 모니터링하는 시스템을 구축하여 운영합니다. 이 시스템은 다음과 같은 기능을 수행합니다:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)&lt;/a>와 같은 공개 취약점 데이터베이스에서 새로운 보안 취약점 정보를 주기적으로 수집합니다.&lt;/li>
+&lt;li>알려진 취약점 또는 새로 발견된 취약점을 갖고 있는 오픈소스 소프트웨어 컴포넌트가 이미 출시된 공급 소프트웨어에 사용된 경우, 해당 공급 소프트웨어의 사업 부서 담당자에게 알림을 보냅니다.&lt;/li>
+&lt;li>알림부터 검토, 조치, 해결 사항이 모두 문서화되어 기록될 수 있도록 &lt;a href="https://www.atlassian.com/software/jira">Jira&lt;/a>와 같은 이슈 추적 시스템을 사용합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-취약점-평가-및-대응">(2) 취약점 평가 및 대응&lt;/h3>
+&lt;pre>&lt;code>(2) 초기 대응
+보안 담당은 사전 정의한 위험 분류 기준에 따라 사업 부서에 대응 가이드를 제공합니다. 위험은 CVSS(Common Vulnerability Scoring System) 점수로 분류하며, Critical Risk는 1주 이내에 조치할 수 있는 계획을 수립하도록 안내합니다.
+사업 부서는 기존 출시한 제품/서비스에 새로운 보안 취약점이 발견된 경우, 보안 담당자가 제공한 대응 가이드에 따라 조치 계획을 수립합니다.
+보증이 필요한 고객이 있는 경우, 사업 부서는 위험도에 따라 필요한 경우 이메일 등의 방법으로 확인된 알려진 취약점을 고지합니다.
+&lt;/code>&lt;/pre>&lt;p>보안 담당은 사전 정의한 위험/영향 평가 기준에 따라 각 취약점을 평가하고 사업 부서에 대응 가이드를 제공합니다. 위험은 &lt;a href="https://www.first.org/cvss/">CVSS (Common Vulnerability Scoring System)&lt;/a> 점수로 분류하며, 심각도에 따라 조치 기한을 설정합니다.&lt;/p>
+&lt;p>사업 부서는 기존 출시한 공급 소프트웨어에 알려진 취약점 또는 새로 발견된 취약점이 확인된 경우, 보안 담당자가 제공한 대응 가이드에 따라 조치 계획을 수립합니다.&lt;/p>
+&lt;p>필요한 경우, 사업 부서는 위험/영향 점수에 따라 고객에게 확인된 취약점을 고지합니다.&lt;/p>
+&lt;h3 id="3-보안-테스트-적용">(3) 보안 테스트 적용&lt;/h3>
+&lt;p>IT 담당은 모든 공급 소프트웨어에 대해 출시 전 지속적이고 반복적인 보안 테스트를 적용하는 시스템을 구축하고 운영합니다. 이 시스템은 다음과 같은 기능을 수행합니다:&lt;/p>
+&lt;ul>
+&lt;li>공급 소프트웨어의 구조적 및 기술적 위협을 식별합니다.&lt;/li>
+&lt;li>알려진 취약점 또는 새로 발견된 취약점의 존재를 탐지합니다.&lt;/li>
+&lt;li>식별된 위험이 공급 소프트웨어의 출시 전에 해결되었는지 확인합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-취약점-해결-및-패치-관리">(4) 취약점 해결 및 패치 관리&lt;/h3>
+&lt;pre>&lt;code>(3) 문제 해결
+사업 부서는 수립한 조치 계획에 따라 문제가 되는 오픈소스를 삭제하거나 패치된 버전으로 교체하는 등의 방법으로 보안 취약점 문제를 해결합니다. 발견된 모든 이슈를 해결하면, 재검토를 요청합니다.
+(4) 검토
+IT 담당은 오픈소스 분석 도구를 활용하여 문제가 적절하게 해결되었는지 확인합니다.
+(5) 승인
+보안 담당은 심각한 취약점이 모두 해결되었는지 검토합니다. 해결하기 어려운 취약점이 남아 있을 경우, 비즈니스 형태와 서비스 노출 현황 등을 고려하여 승인 여부를 검토합니다.
+(6) 등록
+IT 담당은 오픈소스 보안 취약점이 해결된 SBOM을 시스템에 등록합니다.
+&lt;/code>&lt;/pre>&lt;p>사업 부서는 수립한 조치 계획에 따라 문제가 되는 오픈소스 소프트웨어 컴포넌트를 제거하거나 패치된 버전으로 교체하는 등의 방법으로 취약점 문제를 해결합니다.&lt;/p>
+&lt;p>IT 담당은 오픈소스 분석 도구를 활용하여 문제가 적절하게 해결되었는지 확인합니다.&lt;/p>
+&lt;p>보안 담당은 심각한 취약점이 모두 해결되었는지 검토합니다. 해결하기 어려운 취약점이 남아 있을 경우, 비즈니스 형태와 서비스 노출 현황 등을 고려하여 승인 여부를 검토합니다.&lt;/p>
+&lt;p>IT 담당은 취약점이 해결된 SBOM(Software Bill of Materials)을 시스템에 등록합니다.&lt;/p>
+&lt;h3 id="5-고객-통지">(5) 고객 통지&lt;/h3>
+&lt;pre>&lt;code>(7) 고지
+오픈소스 프로그램 매니저는 오픈소스 보안 취약점이 해결된 SBOM을 기준으로 오픈소스 고지문을 생성하여 사업 부서에 전달합니다.
+사업 부서는 제품 배포 시 동봉한 오픈소스 고지문을 교체합니다.
+IT 담당은 수정된 오픈소스 고지문을 회사의 오픈소스 배포 사이트에 등록합니다.
+(8) 배포
+사업 부서는 오픈소스 보안 취약점 문제가 해결된 버전의 소프트웨어를 재배포합니다.
+보안 담당은 제3자에게 공개가 필요한 위험 정보가 존재하는지 식별하고, 존재할 경우 IT 담당자에게 전달합니다.
+IT 담당은 신별된 위험에 대한 정보를 오픈소스 웹사이트에 등록하여 제3자가 확인할 수 있게 합니다.
+&lt;/code>&lt;/pre>&lt;p>오픈소스 프로그램 매니저는 취약점이 해결된 SBOM을 기준으로 업데이트된 오픈소스 고지문을 생성하여 사업 부서에 전달합니다.&lt;/p>
+&lt;p>사업 부서는 다음과 같은 방법으로 고객에게 취약점 해결 사항을 통지합니다:&lt;/p>
+&lt;ul>
+&lt;li>제품 배포 시 동봉한 오픈소스 고지문을 교체합니다.&lt;/li>
+&lt;li>필요한 경우 이메일 등의 방법으로 고객에게 직접 통지합니다.&lt;/li>
+&lt;li>공급 소프트웨어의 취약점이 해결된 버전을 재배포합니다.&lt;/li>
+&lt;/ul>
+&lt;p>IT 담당은 수정된 오픈소스 고지문과 취약점 관련 정보를 회사의 오픈소스 배포 사이트에 등록하여 제3자가 확인할 수 있게 합니다.&lt;/p>
+&lt;p>이 프로세스를 통해 공급 소프트웨어가 시장에 출시된 후에도 지속적인 모니터링 및 대응 기능을 유지합니다.&lt;/p>
+&lt;p>이러한 체계적인 접근 방식을 통해 조직은 다음과 같은 이점을 얻을 수 있습니다:&lt;/p>
+&lt;ol>
+&lt;li>새로운 취약점에 대한 신속한 대응 능력 확보&lt;/li>
+&lt;li>고객에 대한 투명성 및 신뢰도 향상&lt;/li>
+&lt;li>보안 위험의 최소화 및 관리&lt;/li>
+&lt;li>규제 요구사항 준수 보장&lt;/li>
+&lt;li>지속적인 제품 품질 및 보안 개선&lt;/li>
+&lt;/ol>
+&lt;p>또한 이 프로세스는 ISO/IEC 18974의 요구사항을 충족시키며, 조직의 오픈소스 보안 보증 프로그램의 효과성을 지속적으로 향상시킬 수 있습니다.&lt;/p>
+&lt;p>=## 3. 외부 문의 대응 프로세스&lt;/p>
+&lt;p>기업이 외부 클레임으로 인해 법적 소송에까지 이르지 않기 위해서는 외부 문의 및 요청에 가능한 한 빠르고 정확하게 대응하는 것이 중요합니다. 이를 위해 기업은 외부 오픈소스 문의에 빠르고 효과적으로 대응할 수 있는 프로세스를 구축해야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 제3자의 문의에 대응하기 위한 내부의 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.1.2 - An internal documented procedure for responding to third party open source license compliance inquiries.&lt;br>&lt;code>제 3자의 오픈소스 라이선스 컴플라이언스 문의에 대응하기 위한 내부의 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.2.1.2: An internal documented procedure exists for responding to third party Known Vulnerability or Newly Discovered Vulnerability inquiries.&lt;br>&lt;code>제3자에 의한 알려진 취약점 또는 새로 발견된 취약점 문의에 대응하기 위한 내부의 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>아래 그림은 외부 문의 대응을 위해 기업이 갖춰야할 프로세스 샘플입니다.&lt;/p>
+&lt;p>&lt;img src="general-inquiry-process.png" alt="">&lt;/p>
+&lt;center>&lt;i>외부 문의 대응 프로세스 (샘플)&lt;/i>&lt;/center>&lt;br>
+&lt;p>다음은 오픈소스 프로세스 템플릿에서 제시하는 외부 문의 대응 프로세스입니다:&lt;/p>
+&lt;pre>&lt;code>외부로부터의 오픈소스 라이선스 컴플라이언스 및 보안 보증 관련 문의에 신속하고 정확하게 대응하면 법적 소송으로 진행될 위험을 크게 줄일 수 있습니다. 이를 위해 조직은 다음과 같은 프로세스를 준수합니다:
+&lt;/code>&lt;/pre>&lt;h3 id="1-접수-알림">(1) 접수 알림&lt;/h3>
+&lt;p>오픈소스 프로그램 매니저는 문의를 받은 즉시 요청자에게 문의가 접수되었음을 알립니다. 이때 적절한 응답 시간을 명시합니다. 요청자의 의도를 정확히 파악하기 위해 문의가 불명확한 경우 추가 설명을 요청합니다.&lt;/p>
+&lt;p>주요 문의 및 요청 내용:&lt;/p>
+&lt;ul>
+&lt;li>특정 공급 소프트웨어의 오픈소스 사용 여부&lt;/li>
+&lt;li>서면 청약에 언급된 GPL, LGPL 라이선스 하의 소스 코드 제공 요청&lt;/li>
+&lt;li>오픈소스 고지문에 누락된 오픈소스에 대한 해명 및 소스 코드 공개 요청&lt;/li>
+&lt;li>공개된 소스 코드의 누락 파일 및 빌드 방법 제공 요청&lt;/li>
+&lt;li>저작권 표시 요청&lt;/li>
+&lt;li>알려진 취약점 또는 새로 발견된 취약점 관련 문의&lt;/li>
+&lt;/ul>
+&lt;p>오픈소스 프로그램 매니저는 접수한 요청에 대한 이슈를 생성하여 대응 상황을 상세히 기록합니다.&lt;/p>
+&lt;h3 id="2-조사-알림">(2) 조사 알림&lt;/h3>
+&lt;p>오픈소스 프로그램 매니저는 요청자에게 오픈소스 라이선스 컴플라이언스와 보안 보증을 충실히 수행하고 있음과 문의 사항을 조사 중임을 알립니다. 내부 조사 진행 상황을 주기적으로 업데이트하여 알립니다.&lt;/p>
+&lt;h3 id="3-내부-조사">(3) 내부 조사&lt;/h3>
+&lt;p>오픈소스 프로그램 매니저는 요청 사항에 대한 내부 조사를 진행합니다. 해당 공급 소프트웨어에 대해 라이선스 컴플라이언스 및 보안 보증 프로세스가 적절하게 수행되었는지 SBOM 및 문서화된 검토 이력을 통해 확인합니다. 필요 시 법무 담당과 보안 담당에 자문을 요청합니다.&lt;/p>
+&lt;p>특정 사업 부서의 확인이 필요한 경우, 오픈소스 프로그램 매니저는 해당 부서에 조사를 요청합니다. 조사를 요청받은 사업 부서는 컴플라이언스 산출물과 보안 관련 사항에 문제가 있는지 즉시 확인하고 결과를 보고합니다.&lt;/p>
+&lt;h3 id="4-요청자에게-보고">(4) 요청자에게 보고&lt;/h3>
+&lt;p>오픈소스 프로그램 매니저는 명시된 응답 시간 내에 내부 조사를 마치고 요청자에게 결과를 알립니다.&lt;/p>
+&lt;ul>
+&lt;li>요청자의 문의가 오해로 인한 잘못된 지적이었다면 추가 조치 없이 이를 설명하고 처리를 종료합니다.&lt;/li>
+&lt;li>문제가 확인된 경우, 요청자에게 해당 오픈소스 라이선스의 의무를 이행하거나 보안 취약점을 해결하기 위한 정확한 방법과 시기를 알립니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-문제-보완--알림">(5) 문제 보완 / 알림&lt;/h3>
+&lt;p>내부 조사에서 실제 라이선스 컴플라이언스나 보안 문제가 발견되면 해당 사업 부서는 이를 해결하는 데 필요한 모든 절차를 수행합니다.&lt;/p>
+&lt;h3 id="6-문제-해결-알림">(6) 문제 해결 알림&lt;/h3>
+&lt;p>문제를 해결한 후에는 즉시 요청자에게 알리고 문제가 해결되었음을 확인할 수 있는 최선의 방법을 제공합니다.&lt;/p>
+&lt;h3 id="7-프로세스-개선">(7) 프로세스 개선&lt;/h3>
+&lt;p>라이선스 컴플라이언스나 보안 문제가 있었던 경우, &lt;a href="https://www.linuxfoundation.org/tools/open-source-glossary/#osrb">OSRB (Open Source Review Board)&lt;/a> 미팅을 통해 사례를 검토하고 문제 발생 경위를 파악하여 재발 방지를 위한 프로세스 개선 방안을 수립합니다.&lt;/p>
+&lt;p>이러한 체계적인 외부 문의 대응 프로세스를 통해 기업은 오픈소스 관련 이슈에 신속하고 효과적으로 대응할 수 있으며, 잠재적인 법적 위험을 최소화할 수 있습니다.&lt;/p>
+&lt;h2 id="4-오픈소스-기여-프로세스">4. 오픈소스 기여 프로세스&lt;/h2>
+&lt;p>기업이 외부 오픈소스 프로젝트에 기여를 허용하는 정책을 갖고 있다면, 프로그램 참여자들이 어떤 절차로 외부 프로젝트에 기여할 수 있을지 관리하는 문서화된 절차가 있어야 합니다.&lt;/p>
+&lt;p>ISO/IEC 5230 표준은 다음과 같이 오픈소스 기여를 관리하는 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+3.5.1.2 - A documented procedure that governs open source contributions; &lt;br>&lt;code>오픈소스 기여를 관리하는 문서화된 절차&lt;/code>
+&lt;/div>
+&lt;h3 id="1-기여-정책-수립-및-전파">(1) 기여 정책 수립 및 전파&lt;/h3>
+&lt;p>오픈소스 프로세스 템플릿에서는 다음과 같이 기여 정책 수립 및 전파에 대해 설명하고 있습니다:&lt;/p>
+&lt;pre>&lt;code>(1) 기여 정책 수립 및 전파
+- 오픈소스 프로젝트로의 기여를 관리하는 문서화된 정책을 수립해야 합니다.
+- 이 정책을 조직 내부에 전파해야 합니다.
+- 정책을 시행하는 프로세스가 있어야 합니다.
+오픈소스 프로그램 매니저는 다음 사항을 수행해야 합니다:
+- 문서화된 오픈소스 기여 정책을 작성합니다.
+- 모든 프로그램 참여자가 오픈소스 기여 정책의 존재를 인식하도록 하는 문서화된 절차를 수립합니다(예: 교육, 내부 위키, 또는 기타 실질적인 전달 방법 등).
+&lt;/code>&lt;/pre>&lt;h3 id="2-기여-검토-및-승인-절차">(2) 기여 검토 및 승인 절차&lt;/h3>
+&lt;p>오픈소스 프로세스 템플릿에서는 다음과 같이 기여 검토 및 승인 절차에 대해 설명하고 있습니다:&lt;/p>
+&lt;pre>&lt;code>(2) 기여 검토 및 승인 절차
+오픈소스 기여를 관리하는 문서화된 절차를 수립해야 합니다. 이 절차는 다음 사항을 포함해야 합니다:
+- 기여하려는 코드의 출처와 라이선스를 확인합니다.
+- 기여할 권리가 있는 코드인지 검토합니다.
+- 기여하려는 프로젝트의 라이선스와 기여 정책을 검토합니다.
+- 필요한 경우, 법무팀의 검토를 받습니다.
+- 기여에 대한 승인 절차를 정의합니다.
+- 승인된 기여의 제출 방법을 명시합니다.
+오픈소스 프로그램 매니저는 이 절차가 올바르게 수행되었음을 입증하는 기록을 유지해야 합니다.
+&lt;/code>&lt;/pre>&lt;p>이러한 프로세스를 통해 조직은 외부 오픈소스 프로젝트에 대한 기여를 효과적으로 관리하고, 잠재적인 법적 위험을 최소화할 수 있습니다.&lt;/p>
+&lt;p>&lt;a href="https://www.sktelecom.com/">SK텔레콤&lt;/a>에서 공개한 &lt;a href="https://sktelecom.github.io/guide/contribute/process/">오픈소스 기여 절차&lt;/a>는 좋은 예시입니다:&lt;/p>
+&lt;p>&lt;img src="contribution.png" alt="">&lt;/p>
+&lt;p>&lt;a href="https://sktelecom.github.io/guide/contribute/process/">https://sktelecom.github.io/guide/contribute/process/&lt;/a>&lt;/p>
+&lt;p>이 절차는 기여 검토 요청부터 승인, 기여 제출까지의 과정을 명확하게 보여주고 있어 프로그램 참여자들이 쉽게 이해하고 따를 수 있습니다.&lt;/p>
+&lt;h2 id="5-프로세스-현행화">5. 프로세스 현행화&lt;/h2>
+&lt;p>프로세스가 문서화만 되어 있고 실제 운영되지 않거나, 업무 상황이나 조직 구성에 맞지 않게 되어 있다면 효과적이지 않습니다. 기업은 프로세스가 회사 내부 조직과 상황에 맞게 항상 최신 상태로 유지되도록 해야 합니다.&lt;/p>
+&lt;p>ISO/IEC 18974 표준은 다음과 같이 프로세스를 주기적으로 검토 및 개선해야 함을 요구합니다:&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.5: Documented Evidence of periodic reviews and changes made to the process;&lt;br>&lt;code>프로세스를 주기적으로 검토하고 개선했음을 나타내는 문서화된 증거&lt;/code>&lt;/li>
+&lt;li>3.1.2.6: Documented verification that these processes are current with company internal best practices and who is assigned to accomplish them.&lt;br>&lt;code>이러한 프로세스는 회사 내부 모범 사례를 반영하여 항상 현행화되어야 하고, 이를 누가 책임지고 수행해야 하는지를 명시한 문서화된 증거&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h3 id="1-정기적인-프로세스-검토">(1) 정기적인 프로세스 검토&lt;/h3>
+&lt;p>오픈소스 프로세스 템플릿에서는 다음과 같이 정기적인 프로세스 검토에 대해 설명하고 있습니다:&lt;/p>
+&lt;pre>&lt;code>OSRB(Open Source Review Board)는 회사의 오픈소스 관리를 위해 오픈소스 프로그램 매니저와 법무팀, 특허팀, 개발팀, 인프라팀 등 관련 조직의 책임자로 구성된 협의체입니다.
+OSRB는 매년 정기적으로 검토하여 정책과 프로세스를 개선합니다. 모든 개선 과정은 문서화하여 기록합니다.
+&lt;/code>&lt;/pre>&lt;h3 id="2-개선-사항-식별-및-구현">(2) 개선 사항 식별 및 구현&lt;/h3>
+&lt;p>프로세스 개선을 위해 다음과 같은 활동을 수행합니다:&lt;/p>
+&lt;ul>
+&lt;li>OSRB는 회사의 프로세스 수행 성과와 미흡한 부분, 모범 사례를 분석합니다.&lt;/li>
+&lt;li>비즈니스 환경 변화를 반영하여 프로세스를 개선합니다.&lt;/li>
+&lt;li>오픈소스 라이선스 컴플라이언스를 위한 정책과 프로세스는 오픈소스 프로그램 매니저가 책임을 갖고 관리합니다.&lt;/li>
+&lt;li>오픈소스 보안 보증을 위한 정책과 프로세스는 보안 담당이 책임을 갖고 관리합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-프로세스-업데이트-문서화">(3) 프로세스 업데이트 문서화&lt;/h3>
+&lt;p>프로세스 개선 및 업데이트 과정을 문서화하여 기록합니다. 이는 다음을 포함해야 합니다:&lt;/p>
+&lt;ul>
+&lt;li>검토 일자 및 참여자&lt;/li>
+&lt;li>식별된 개선 사항&lt;/li>
+&lt;li>구현된 변경 내용&lt;/li>
+&lt;li>변경 사유&lt;/li>
+&lt;li>변경 승인자&lt;/li>
+&lt;/ul>
+&lt;p>이러한 문서화된 기록은 &lt;a href="https://www.atlassian.com/software/jira">Jira&lt;/a>나 &lt;a href="https://www.atlassian.com/software/confluence">Confluence&lt;/a>와 같은 도구를 활용하여 관리할 수 있습니다.&lt;/p>
+&lt;p>프로세스 현행화를 통해 기업은 오픈소스 라이선스 컴플라이언스와 보안 보증 프로그램의 효과성을 지속적으로 개선하고, ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;h2 id="6-summary">6. Summary&lt;/h2>
+&lt;p>여기까지 프로세스를 구축하게 되면 ISO/IEC 5230과 ISO/IEC 18974 표준 규격의 주요 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="./processno.png" alt="">&lt;/p>
+&lt;p>이러한 프로세스 구축을 통해 기업은 다음과 같은 이점을 얻을 수 있습니다:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>오픈소스 라이선스 컴플라이언스 체계 확립&lt;/p>
+&lt;ul>
+&lt;li>공급 소프트웨어의 오픈소스 사용 현황을 정확히 파악&lt;/li>
+&lt;li>라이선스 의무사항을 준수하여 법적 위험 최소화&lt;/li>
+&lt;li>컴플라이언스 산출물의 체계적인 생성 및 관리&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>오픈소스 보안 보증 강화&lt;/p>
+&lt;ul>
+&lt;li>알려진 취약점 및 새로 발견된 취약점에 대한 지속적인 모니터링&lt;/li>
+&lt;li>취약점 평가 및 대응 체계 구축&lt;/li>
+&lt;li>보안 테스트를 통한 사전 위험 예방&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>외부 문의에 대한 효과적인 대응&lt;/p>
+&lt;ul>
+&lt;li>체계적인 외부 문의 처리 프로세스 수립&lt;/li>
+&lt;li>신속하고 정확한 대응을 통한 법적 위험 감소&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>오픈소스 기여 활동의 체계화&lt;/p>
+&lt;ul>
+&lt;li>기여 정책 수립을 통한 일관된 기여 활동 보장&lt;/li>
+&lt;li>기여 검토 및 승인 절차를 통한 지식재산 보호&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>지속적인 프로세스 개선&lt;/p>
+&lt;ul>
+&lt;li>정기적인 프로세스 검토 및 개선을 통한 효율성 향상&lt;/li>
+&lt;li>최신 오픈소스 동향 및 기술 변화에 대한 대응력 강화&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>이러한 프로세스 구축을 통해 기업은 오픈소스 라이선스 컴플라이언스와 보안 보증을 체계적으로 관리하고, 지속적으로 개선할 수 있는 기반을 마련할 수 있습니다. 또한, &lt;a href="https://www.openchainproject.org/">OpenChain Project&lt;/a>와 같은 국제 표준 이니셔티브에 부합하는 프로세스를 갖춤으로써 글로벌 소프트웨어 공급망에서의 신뢰도를 높일 수 있습니다.&lt;/p></description></item><item><title>Docs: 4. 도구</title><link>/docs/opensource_for_enterprise/4-tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/4-tool/</guid><description>
+&lt;h2 id="1-소스-코드-스캔-도구">1. 소스 코드 스캔 도구&lt;/h2>
+&lt;p>오픈소스 프로세스의 오픈소스 식별 및 검사 단계에서는 소스 코드 스캔 도구를 사용할 수 있습니다. 소스 코드 스캔 도구는 공급 소프트웨어에 포함된 오픈소스를 식별하고, 라이선스 및 저작권 정보를 추출하는 데 도움을 줍니다. 이러한 도구는 무료로 사용할 수 있는 오픈소스 기반 도구부터 상용 도구까지 다양합니다. 각 도구는 특장점이 있지만, 어떤 도구도 모든 문제를 해결할 수 있는 완벽한 기능을 제공하지 않습니다. 따라서 기업은 공급 소프트웨어의 특성과 요구사항에 맞는 적합한 도구를 선택해야 합니다.&lt;/p>
+&lt;p>많은 기업이 이러한 자동화된 소스 코드 스캔 도구와 수동 검토를 병행하여 이용합니다. 여기서는 두 가지 주요 오픈소스 소스 코드 스캔 도구를 소개합니다.&lt;/p>
+&lt;h3 id="1-fossology">(1) FOSSology&lt;/h3>
+&lt;p>&lt;a href="https://www.fossology.org/">FOSSology&lt;/a>는 Linux Foundation에서 관리하는 오픈소스 프로젝트로, 라이선스 컴플라이언스 워크플로우를 지원하는 소스 코드 스캔 도구입니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fossology_hu1f7b14a5f6ba93f8dfdcd97738077fe2_13569_900x600_fit_catmullrom_2.png" width="474" height="231">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://www.fossology.org/&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>소스 코드 스캔 및 라이선스 식별&lt;/li>
+&lt;li>라이선스 및 저작권 정보 추출&lt;/li>
+&lt;li>웹 기반 사용자 인터페이스 제공&lt;/li>
+&lt;li>대규모 코드베이스 분석 지원&lt;/li>
+&lt;/ul>
+&lt;p>FOSSology는 기업들이 무료로 사용할 수 있으며, 오픈소스 커뮤니티의 지속적인 개선과 지원을 받고 있습니다.&lt;/p>
+&lt;p>FOSSology의 설치 및 사용 방법은 &lt;a href="https://openchain-project.github.io/OpenChain-KWG/guide/governance_iso5230/appendix/3-tools/fossology/">FOSSology 가이드&lt;/a>를 참조하시기 바랍니다.&lt;/p>
+&lt;h3 id="2-scanoss">(2) SCANOSS&lt;/h3>
+&lt;p>&lt;a href="https://www.scanoss.com/">SCANOSS&lt;/a>는 오픈소스 소프트웨어 구성 요소를 식별하고 관리하기 위한 플랫폼입니다.&lt;/p>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>빠른 소스 코드 스캔 및 오픈소스 컴포넌트 식별&lt;/li>
+&lt;li>라이선스 및 취약점 정보 제공&lt;/li>
+&lt;li>API를 통한 통합 지원&lt;/li>
+&lt;li>SBOM(Software Bill of Materials) 생성&lt;/li>
+&lt;/ul>
+&lt;p>SCANOSS는 무료 버전과 유료 버전을 제공하며, 클라우드 기반 서비스와 온프레미스 솔루션을 모두 지원합니다.&lt;/p>
+&lt;p>이러한 소스 코드 스캔 도구를 활용하여 공급 소프트웨어의 오픈소스 컴포넌트를 효과적으로 식별하고 관리할 수 있습니다. 그러나 도구의 결과만을 전적으로 신뢰하기보다는, 프로그램 참여자의 전문적인 검토와 판단이 함께 이루어져야 합니다.&lt;/p>
+&lt;h2 id="2-dependency-분석-도구">2. Dependency 분석 도구&lt;/h2>
+&lt;p>최근의 소프트웨어 개발에서는 &lt;a href="https://gradle.org/">Gradle&lt;/a>, &lt;a href="https://maven.apache.org/">Maven&lt;/a>과 같은 패키지 관리자를 지원하는 빌드 환경을 사용합니다. 이러한 빌드 환경에서는 소스 코드가 없어도 빌드 타임에 필요한 Dependency 라이브러리를 원격 저장소로부터 받아와 공급 소프트웨어를 구성합니다. 이때의 Dependency 라이브러리는 공급 소프트웨어에는 포함되지만 소스 코드 스캔 도구로는 검출되지 않습니다. 따라서 Dependency 분석을 위한 도구를 활용하는 것이 중요합니다.&lt;/p>
+&lt;h3 id="1-oss-review-toolkit">(1) OSS Review Toolkit&lt;/h3>
+&lt;p>&lt;a href="https://github.com/oss-review-toolkit/ort">OSS Review Toolkit (ORT)&lt;/a>은 오픈소스 라이선스 컴플라이언스를 자동화하기 위한 도구 모음입니다. ORT는 Analyzer라는 Dependency 분석 도구를 제공합니다.&lt;/p>
+&lt;p>Analyzer의 주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>다양한 패키지 관리자 지원 (Maven, Gradle, NPM 등)&lt;/li>
+&lt;li>프로젝트의 종속성 트리 생성&lt;/li>
+&lt;li>라이선스 및 저작권 정보 추출&lt;/li>
+&lt;li>SPDX 형식의 보고서 생성&lt;/li>
+&lt;/ul>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 650px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/ort_hube1128b774f3d17c68febc7698949979_37592_900x600_fit_catmullrom_2.png" width="640" height="144">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://github.com/oss-review-toolkit/ort#analyzer&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="2-fosslight-dependency-scanner">(2) FOSSLight Dependency Scanner&lt;/h3>
+&lt;p>&lt;a href="https://www.lg.com/">LG전자&lt;/a>에서 개발하고 오픈소스로 공개한 &lt;a href="https://github.com/fosslight/fosslight_dependency_scanner">FOSSLight Dependency Scanner&lt;/a>는 다양한 패키지 관리자를 지원하는 종속성 분석 도구입니다.&lt;/p>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>Gradle, Maven, NPM, PIP, Pub, Cocoapods 등 다양한 패키지 관리자 지원&lt;/li>
+&lt;li>오픈소스 라이선스 및 버전 정보 추출&lt;/li>
+&lt;li>SBOM(Software Bill of Materials) 생성&lt;/li>
+&lt;/ul>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 609px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightdependency_hu31e27796df6b3b9446cbf7cbbef6bcbd_144925_900x600_fit_catmullrom_2.png" width="599" height="409">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://fosslight.org/ko/scanner/&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이러한 Dependency 분석 도구를 활용하여 공급 소프트웨어에 포함된 오픈소스 컴포넌트를 정확히 식별하고, SBOM을 생성할 수 있습니다. 이는 ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 충족하는 데 도움이 됩니다.&lt;/p>
+&lt;h2 id="3-오픈소스-거버넌스--sbom-관리-도구">3. 오픈소스 거버넌스 / SBOM 관리 도구&lt;/h2>
+&lt;p>오픈소스 거버넌스와 SBOM(Software Bill of Materials) 관리는 효과적인 오픈소스 라이선스 컴플라이언스와 보안 보증을 위해 필수적입니다. ISO/IEC 5230과 ISO/IEC 18974 규격은 공급 소프트웨어에 포함된 오픈소스 소프트웨어 컴포넌트 기록을 문서화하여 보관할 것을 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.3.1.2 - Open source component records for the supplied software that demonstrates the documented procedure was properly followed.&lt;br>&lt;code>문서화된 절차가 적절히 준수되었음을 보여주는 공급 소프트웨어에 대한 오픈소스 컴포넌트 기록&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.3.1.2: Open Source Software Component Records for the Supplied Software that demonstrates the documented procedure was properly followed.&lt;br>&lt;code>문서화된 절차가 적절히 준수되었음을 보여주는 공급 소프트웨어에 대한 오픈소스 소프트웨어 컴포넌트 기록&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>SBOM은 스프레드시트 프로그램으로도 관리할 수 있지만, 공급 소프트웨어의 수와 버전이 많아질 경우 수동 관리는 어려워집니다. 따라서 자동화된 오픈소스 도구를 도입하는 것이 효율적입니다.&lt;/p>
+&lt;h3 id="1-sw360">(1) SW360&lt;/h3>
+&lt;p>&lt;a href="https://github.com/eclipse-sw360/sw360">SW360&lt;/a>은 Eclipse 재단이 후원하는 오픈소스 프로젝트로, 공급 소프트웨어별 오픈소스 목록을 추적하는 기능을 제공합니다.&lt;/p>
+&lt;p>&lt;img src="sw360project.png" alt="">&lt;/p>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>프로젝트, 컴포넌트, 라이선스 관리&lt;/li>
+&lt;li>SBOM 생성 및 관리&lt;/li>
+&lt;li>취약점 관리&lt;/li>
+&lt;li>라이선스 의무사항 추적&lt;/li>
+&lt;/ul>
+&lt;p>SW360의 설치 및 사용 방법은 &lt;a href="https://openchain-project.github.io/OpenChain-KWG/guide/governance_iso5230/appendix/3-tools/sw360/">SW360 가이드&lt;/a>에서 확인할 수 있습니다.&lt;/p>
+&lt;h3 id="2-fosslight">(2) FOSSLight&lt;/h3>
+&lt;p>&lt;a href="https://fosslight.org/">FOSSLight&lt;/a>는 &lt;a href="https://www.lg.com/">LG전자&lt;/a>가 개발하고 오픈소스로 공개한 종합적인 오픈소스 관리 도구입니다.&lt;/p>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>SBOM 생성 및 관리&lt;/li>
+&lt;li>오픈소스 라이선스 컴플라이언스 검사&lt;/li>
+&lt;li>취약점 관리&lt;/li>
+&lt;li>오픈소스 고지문 생성&lt;/li>
+&lt;/ul>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightproject_hu38334993454753095246ddd418adc9ba_41626_900x600_fit_catmullrom_2.png" width="900" height="289">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://fosslight.org/fosslight-guide/started/2_try/4_project.html&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>LG전자는 FOSSLight를 수년간 사용하여 전사적으로 SBOM을 관리해왔으며, 2021년 6월에 이를 오픈소스로 공개했습니다. 한국어 가이드를 제공하여 국내 기업들의 사용을 돕고 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 849px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslight_hub65fa4fd2ded0b8a62af322a753fc134_83005_900x600_fit_catmullrom_2.png" width="839" height="600">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://fosslight.org/&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이러한 도구들을 활용하여 기업은 효과적으로 오픈소스 거버넌스를 수행하고 SBOM을 관리할 수 있으며, ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;h2 id="4-오픈소스-보안취약점-관리-도구">4. 오픈소스 보안취약점 관리 도구&lt;/h2>
+&lt;p>공급 소프트웨어에 포함된 알려진 취약점 또는 새로 발견된 취약점을 효과적으로 관리하기 위해 기업은 자동화된 도구 환경을 구축해야 합니다. 여기서는 세 가지 주요 오픈소스 보안취약점 관리 도구를 소개합니다.&lt;/p>
+&lt;h3 id="1-owasp-dependency-check">(1) OWASP Dependency-Check&lt;/h3>
+&lt;p>&lt;a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check&lt;/a>는 프로젝트의 종속성을 분석하여 알려진 취약점이 있는지 검출하는 오픈소스 도구입니다.&lt;/p>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>다양한 언어 및 패키지 관리자 지원 (Java, .NET, JavaScript, Ruby 등)&lt;/li>
+&lt;li>CVE(Common Vulnerabilities and Exposures) 데이터베이스와 연동&lt;/li>
+&lt;li>CI/CD 파이프라인과의 쉬운 통합&lt;/li>
+&lt;li>HTML, XML, CSV, JSON 등 다양한 형식의 보고서 생성&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-sw360">(2) SW360&lt;/h3>
+&lt;p>&lt;a href="https://github.com/eclipse/sw360">SW360&lt;/a>은 Eclipse 재단에서 관리하는 오픈소스 소프트웨어 컴포넌트 관리 도구로, 보안 취약점 관리 기능도 제공합니다.&lt;/p>
+&lt;p>주요 기능:&lt;/p>
+&lt;ul>
+&lt;li>등록된 Release에 대한 자동 취약점 확인&lt;/li>
+&lt;li>CVE 정보 주기적 수집 (24시간마다 스케줄링)&lt;/li>
+&lt;li>프로젝트별 보안 취약점 조회&lt;/li>
+&lt;li>새로 공개된 취약점의 기존 제품 영향 추적&lt;/li>
+&lt;/ul>
+&lt;p>SW360으로 보안취약점을 관리하는 방법은 &lt;a href="https://openchain-project.github.io/OpenChain-KWG/guide/governance_iso5230/appendix/3-tools/sw360/">SW360 가이드&lt;/a>를 참고할 수 있습니다.&lt;/p>
+&lt;h3 id="3-fosslight">(3) FOSSLight&lt;/h3>
+&lt;p>&lt;a href="https://fosslight.org/ko/">FOSSLight&lt;/a>도 이와 유사하게 보안취약점 정보를 자동으로 취득하고, 보안취약점이 검출된 프로젝트 정보를 자동으로 확인하여 필요 시 메일 등 알림을 제공합니다.&lt;/p>
+&lt;p>이러한 도구들을 활용하여 기업은 ISO/IEC 18974의 요구사항을 충족하면서 효과적으로 오픈소스 보안 취약점을 관리할 수 있습니다.&lt;/p>
+&lt;h2 id="5-오픈소스-컴플라이언스-산출물-생성-도구">5. 오픈소스 컴플라이언스 산출물 생성 도구&lt;/h2>
+&lt;p>주요 오픈소스 컴플라이언스 산출물인 오픈소스 고지문은 공급 소프트웨어에 포함된 오픈소스의 저작권과 라이선스 정보를 제공하기 위한 문서입니다. 오픈소스 고지문은 수동으로 작성할 수도 있지만, 자동으로 생성하는 도구를 활용하는 것이 효율적입니다.&lt;/p>
+&lt;h3 id="1-onot">(1) onot&lt;/h3>
+&lt;p>&lt;a href="https://www.sktelecom.com/">SK텔레콤&lt;/a>은 사내에서 사용하는 오픈소스 고지문 자동 생성 도구를 &lt;a href="https://github.com/sktelecom/onot">onot&lt;/a>이라는 이름으로 오픈소스로 공개하였습니다. &lt;a href="https://www.kakaocorp.com/">카카오&lt;/a>에서도 주요 기능을 기여하는 방식으로 공동 개발에 참여하였습니다.&lt;/p>
+&lt;p>&lt;img src="onot.png" alt="">&lt;/p>
+&lt;center>&lt;i>onot 설치방법&lt;/i>&lt;/center>&lt;br>
+&lt;p>&lt;code>onot&lt;/code>은 &lt;a href="https://spdx.dev/">SPDX&lt;/a> 문서 형식으로 작성된 SBOM을 자동으로 오픈소스 고지문 형식으로 변환하는 도구입니다. Python 프로그램으로 가볍고 간단하게 사용할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="./noticesample.png" alt="">&lt;/p>
+&lt;center>&lt;i>onot 생성 오픈소스 고지문 샘플&lt;/i>&lt;/center>&lt;br>
+&lt;h3 id="2-fosslight-1">(2) FOSSLight&lt;/h3>
+&lt;p>&lt;a href="https://fosslight.org/">FOSSLight&lt;/a>도 취득한 SBOM을 기반으로 오픈소스 고지문을 자동으로 생성하는 기능을 제공합니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightnotice_hub26133ecb8b043f50cb5cffcf582687c_47692_900x600_fit_catmullrom_2.png" width="900" height="394">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://fosslight.org/fosslight-guide/started/2_try/4_project.html&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이러한 도구들을 활용하면 오픈소스 고지문 생성 과정을 자동화하고 표준화할 수 있어, 오픈소스 라이선스 컴플라이언스 프로세스의 효율성과 정확성을 높일 수 있습니다. 또한 ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 충족하는 데 도움이 됩니다.&lt;/p>
+&lt;h2 id="6-오픈소스-컴플라이언스-산출물-보관">6. 오픈소스 컴플라이언스 산출물 보관&lt;/h2>
+&lt;p>오픈소스 컴플라이언스 산출물을 체계적으로 보관하고 관리하는 것은 오픈소스 라이선스 컴플라이언스를 위해 매우 중요합니다. 특히 GPL, LGPL 등 소스 코드 공개를 요구하는 라이선스의 경우, 공급 소프트웨어 배포 후 최소 3년간 소스 코드를 제공할 수 있어야 합니다.&lt;/p>
+&lt;p>이를 위해 ISO/IEC 5230 표준은 다음과 같이 배포용 소프트웨어의 컴플라이언스 산출물 사본을 보관하기 위한 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.4.1.2 - A documented procedure for archiving copies of the compliance artifacts of the supplied software - where the archive is planned to exist for a reasonable period of time (Determined by domain, legal jurisdiction and/or customer contracts) since the last offer of the supplied software; or as required by the identified licenses (whichever is longer). Records exist that demonstrate the procedure has been properly followed.&lt;br>&lt;code>배포용 소프트웨어의 컴플라이언스 산출물 사본을 보관하기 위한 문서화된 절차 - 산출물 사본은 배포용 소프트웨어의 마지막 배포 이후 합리적인 기간 동안 혹은 식별된 라이선스에서 요구하는 기간 동안 보관해야 한다(둘 중 더 긴 기간을 따름). 이러한 절차가 올바르게 수행되었음을 입증하는 기록이 존재해야 한다. &lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 오픈소스 컴플라이언스 산출물을 안전하게 보관하고 필요시 외부에 공개할 수 있는 시스템을 구축해야 합니다.&lt;/p>
+&lt;h3 id="1-github-pages">(1) GitHub Pages&lt;/h3>
+&lt;p>&lt;a href="https://pages.github.com/">GitHub Pages&lt;/a>는 GitHub 저장소에서 직접 웹사이트를 호스팅할 수 있는 서비스입니다. 이를 활용하여 오픈소스 컴플라이언스 산출물을 보관하고 공개할 수 있습니다.&lt;/p>
+&lt;p>GitHub Pages를 사용하여 오픈소스 컴플라이언스 산출물을 보관하는 방법은 다음과 같습니다:&lt;/p>
+&lt;ol>
+&lt;li>GitHub에 전용 저장소 생성&lt;/li>
+&lt;li>저장소에 오픈소스 고지문 및 소스 코드 업로드&lt;/li>
+&lt;li>GitHub Pages 설정을 통해 웹사이트 활성화&lt;/li>
+&lt;li>공개 URL을 통해 외부에서 접근 가능하도록 설정&lt;/li>
+&lt;/ol>
+&lt;p>GitHub Pages를 사용하면 다음과 같은 이점이 있습니다:&lt;/p>
+&lt;ul>
+&lt;li>무료로 사용 가능&lt;/li>
+&lt;li>버전 관리 기능 제공&lt;/li>
+&lt;li>높은 가용성 및 안정성&lt;/li>
+&lt;li>쉬운 업데이트 및 관리&lt;/li>
+&lt;/ul>
+&lt;p>이러한 도구 환경은 SK텔레콤의 오픈소스 웹사이트에서 참고하실 수 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktcompliance_hue3e4b400473b31cb9330b17ebc2e2045_51427_900x600_fit_catmullrom_2.png" width="900" height="313">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://sktelecom.github.io/compliance/&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>이 웹사이트는 오픈소스로 개발하였고, 소스 코드를 공개하고 있어서 다른 기업들도 쉽게 유사한 환경을 구축할 수 있습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktgithub_huea9391e4744127ce4c1693f784f8a97e_57123_900x600_fit_catmullrom_2.png" width="900" height="352">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://github.com/sktelecom/sktelecom.github.io&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>GitHub Pages를 활용하여 오픈소스 컴플라이언스 산출물을 보관하고 공개함으로써, 기업은 오픈소스 라이선스 의무를 효과적으로 이행하고 투명성을 제고할 수 있습니다.&lt;/p>
+&lt;h2 id="7-지속적-통합배포cicd-도구와의-연동">7. 지속적 통합/배포(CI/CD) 도구와의 연동&lt;/h2>
+&lt;p>오픈소스 컴플라이언스 및 보안 보증 활동을 지속적 통합/배포(CI/CD) 파이프라인에 통합하면 개발 프로세스 전반에 걸쳐 자동화된 검사와 관리가 가능해집니다. 이를 통해 오픈소스 관련 이슈를 조기에 발견하고 해결할 수 있습니다.&lt;/p>
+&lt;h3 id="1-jenkins-플러그인">(1) Jenkins 플러그인&lt;/h3>
+&lt;p>&lt;a href="https://www.jenkins.io/">Jenkins&lt;/a>는 널리 사용되는 오픈소스 자동화 서버로, 다양한 플러그인을 통해 오픈소스 컴플라이언스 및 보안 보증 도구들과 연동할 수 있습니다.&lt;/p>
+&lt;p>주요 Jenkins 플러그인:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://plugins.jenkins.io/fossology/">FOSSology Plugin&lt;/a>: FOSSology 스캔을 Jenkins 파이프라인에 통합합니다.&lt;/li>
+&lt;li>&lt;a href="https://plugins.jenkins.io/dependency-check-jenkins-plugin/">OWASP Dependency-Check Plugin&lt;/a>: 알려진 취약점 또는 새로 발견된 취약점 검사를 자동화합니다.&lt;/li>
+&lt;li>&lt;a href="https://github.com/eclipse/sw360/tree/main/jenkins-pipeline">SW360 Plugin&lt;/a>: SW360와 Jenkins를 연동하여 SBOM 관리를 자동화합니다.&lt;/li>
+&lt;/ul>
+&lt;p>Jenkins 파이프라인 예시:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-groovy" data-lang="groovy">&lt;span style="color:#000">pipeline&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">agent&lt;/span> &lt;span style="color:#000">any&lt;/span>
+&lt;span style="color:#000">stages&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">stage&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;Checkout&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">steps&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">checkout&lt;/span> &lt;span style="color:#000">scm&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000">stage&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;Dependency Scan&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">steps&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">dependencyCheck&lt;/span> &lt;span style="color:#f57900">additionalArguments:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">,&lt;/span> &lt;span style="color:#f57900">odcInstallation:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;Default&amp;#39;&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000">stage&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;License Scan&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">steps&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">fossology&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000">stage&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;SBOM Update&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">steps&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">sw360UpdateProject&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000">post&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">always&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">dependencyCheckPublisher&lt;/span> &lt;span style="color:#f57900">pattern:&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;**/dependency-check-report.xml&amp;#39;&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>이 파이프라인은 소스 코드 체크아웃, 의존성 취약점 검사, 라이선스 스캔, SBOM 업데이트를 순차적으로 수행합니다.&lt;/p>
+&lt;h3 id="2-gitlab-cicd-파이프라인">(2) GitLab CI/CD 파이프라인&lt;/h3>
+&lt;p>&lt;a href="https://docs.gitlab.com/ee/ci/">GitLab CI/CD&lt;/a>는 GitLab에 내장된 지속적 통합/배포 도구로, &lt;code>.gitlab-ci.yml&lt;/code> 파일을 통해 파이프라인을 정의합니다.&lt;/p>
+&lt;p>GitLab CI/CD 파이프라인 예시:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">stages&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">scan&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">analyze&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">report&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">dependency_scan&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">stage&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">scan&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">script&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">docker run --rm -v $(pwd):/src owasp/dependency-check --scan /src --format &amp;#34;ALL&amp;#34; --out /src/reports&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">license_scan&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">stage&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">scan&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">script&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">docker run --rm -v $(pwd):/project fossology/fossology:latest /usr/local/fossology/fo_cli -c /project&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">sbom_update&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">stage&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">analyze&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">script&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">sw360 update-project&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">vulnerability_report&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">stage&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">report&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">script&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">generate_vulnerability_report&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">artifacts&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">reports&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">dependency_scanning&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">reports/dependency-check-report.json&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">license_report&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">stage&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">report&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">script&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">generate_license_report&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">artifacts&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">reports&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">license_scanning&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">reports/license-scan-report.json&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>이 파이프라인은 의존성 취약점 검사, 라이선스 스캔, SBOM 업데이트, 취약점 보고서 및 라이선스 보고서 생성을 수행합니다.&lt;/p>
+&lt;p>CI/CD 파이프라인에 이러한 프로세스를 통합함으로써, 오픈소스 컴플라이언스 및 보안 보증 활동을 자동화하고 개발 워크플로우에 원활하게 통합할 수 있습니다. 이는 ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 효과적으로 충족하는 데 도움이 됩니다.&lt;/p>
+&lt;h2 id="8-summary">8. Summary&lt;/h2>
+&lt;p>여기까지 도구 환경을 구축하게 되면 ISO/IEC 5230과 ISO/IEC 18974 표준 규격의 주요 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="toolno.png" alt="">&lt;/p>
+&lt;p>이러한 도구들을 활용함으로써 다음과 같은 이점을 얻을 수 있습니다:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>소스 코드 스캔 및 Dependency 분석 도구를 통해 공급 소프트웨어에 포함된 오픈소스를 정확히 식별하고 라이선스를 파악할 수 있습니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>오픈소스 거버넌스 및 SBOM 관리 도구를 사용하여 공급 소프트웨어의 오픈소스 컴포넌트를 체계적으로 관리하고 추적할 수 있습니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>오픈소스 보안취약점 관리 도구를 통해 알려진 취약점 또는 새로 발견된 취약점을 지속적으로 모니터링하고 대응할 수 있습니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>오픈소스 컴플라이언스 산출물 생성 및 보관 도구를 활용하여 라이선스 의무사항을 준수하는 데 필요한 문서를 효율적으로 생성하고 관리할 수 있습니다.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>CI/CD 도구와의 연동을 통해 오픈소스 관리 프로세스를 개발 워크플로우에 통합하여 자동화할 수 있습니다.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>이러한 도구 환경 구축을 통해 기업은 오픈소스 라이선스 컴플라이언스와 보안 보증 활동을 체계적이고 효율적으로 수행할 수 있으며, ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 충족하는 데 큰 도움을 받을 수 있습니다.&lt;/p>
+&lt;p>오픈소스 관리 도구를 효과적으로 활용함으로써, 기업은 오픈소스 사용에 따른 법적 위험을 최소화하고, 보안 취약점에 신속하게 대응하며, 투명하고 신뢰할 수 있는 소프트웨어 공급망을 구축할 수 있습니다. 이는 궁극적으로 기업의 경쟁력 향상과 고객 신뢰 증진으로 이어질 것입니다.&lt;/p></description></item><item><title>Docs: 5. 교육</title><link>/docs/opensource_for_enterprise/5-training/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/5-training/</guid><description>
+&lt;h2 id="1-교육">1. 교육&lt;/h2>
+&lt;p>아무리 훌륭한 정책과 프로세스를 구축하였다고 해도 기업의 구성원이 아무도 신경쓰지 않는다면 무용지물일 것입니다. 오픈소스 정책과 오픈소스 프로세스가 기업에서 효과적으로 동작하기 위해서는 구성원 교육이 중요합니다.&lt;/p>
+&lt;p>기업은 모든 프로그램 참여자가 조직 내에 오픈소스 정책이 있다는 것을 인식하고 필요한 활동을 할 수 있도록 교육, 내부 위키 등 실질적인 수단을 제공해야 합니다. 여기서 프로그램 참여자란 기업이 소프트웨어를 개발하고 배포, 기여하는 데 관여하는 모든 직원을 의미하며, 소프트웨어 개발자, 배포 엔지니어, 품질 엔지니어 등을 포함합니다.&lt;/p>
+&lt;p>이를 위해 ISO 표준은 공통적으로 다음과 같이 오픈소스 정책을 알리기 위한 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.1.2 - A documented procedure that makes program participants aware of the existence of the open source policy (e.g., via training, internal wiki, or other practical communication method).&lt;br>&lt;code>프로그램 참여자가 오픈소스 정책의 존재를 알 수 있게 하는 문서화 된 절차 (교육, 내부 위키, 혹은 기타 실질적인 전달 방법 등)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.1.2: A documented procedure to make Program Participants aware of the Security Assurance policy.&lt;br>&lt;code>프로그램 참가자에게 보안 보증 정책을 알리기 위한 문서화된 절차.&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>많은 기업은 오픈소스 정책 문서를 사내 위키 사이트를 통해 공개하여 직원 누구나 필요한 사항을 확인할 수 있게 합니다. 또한, 신규 채용 인원의 입사 연수 시 오픈소스 정책에 대한 교육을 의무화하고, 프로그램 참여자를 대상으로 매년 혹은 2년에 한 번씩 주기적인 교육을 제공함으로써 모든 프로그램 참여자가 오픈소스 정책의 존재를 인식하게 합니다.&lt;/p>
+&lt;p>기업은 이러한 방법들을 다음의 예와 같이 작성하여 오픈소스 정책 문서에 포함해야 합니다.&lt;/p>
+&lt;pre>&lt;code>5. 교육 및 평가
+4장에서 정의한 각 역할을 담당하는 모든 구성원은 [Learning Portal]에서 제공하는 오픈소스 교육 고급 과정을 수강해야 합니다. 이를 통해 오픈소스 정책, 관련 교육 정책 및 조회 방법을 숙지합니다. 교육 이력과 평가 결과는 [Learning Portal]에 최소 3년간 보존합니다.
+&lt;/code>&lt;/pre>&lt;p>기업은 프로그램 참여자가 기업의 오픈소스 정책, 오픈소스 관련 목표, 효과적인 오픈소스 프로그램이 되기 위한 참여자의 기여 방법, 그리고 프로그램 요구사항을 준수하지 않을 경우 미치는 영향에 대해 인식하도록 해야 합니다. 이를 위해 기업은 교육을 제공하고, 프로그램 참여자가 올바르게 인식하였는지 확인하기 위해 평가를 수행하고 평가 결과를 문서화하여 보관해야 합니다.&lt;/p>
+&lt;p>ISO 표준은 공통적으로 다음과 같이 프로그램 참여자의 인식을 평가하였음을 나타내는 문서화된 증거를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.3.1 - Documented evidence of assessed awareness for the program participants - which should include the program&amp;rsquo;s objectives, one&amp;rsquo;s contribution within the program, and implications of program non-conformance.&lt;br>&lt;code>다음 사항에 대한 프로그램 참여자의 인식을 평가하였음을 나타내는 문서화된 증거 : 프로그램의 목표, 프로그램 내에서의 참여자 기여 방법 및 프로그램을 준수하지 않을 경우 미치는 영향&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.3.1: Documented Evidence of assessed awareness for the Program Participants - which should include the Program’s objectives, one’s contribution within the Program, and implications of Program non-conformance.&lt;br>&lt;code>다음 사항에 대한 프로그램 참여자의 인식을 평가하였음을 나타내는 문서화된 증거 : 프로그램의 목표, 프로그램 내에서의 참여자 기여 방법 및 프로그램을 준수하지 않을 경우 미치는 영향.&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>따라서 기업은 아래의 예와 같은 내용을 기업의 오픈소스 정책에 포함할 수 있다.&lt;/p>
+&lt;pre>&lt;code>1. 목적
+(1) 정책의 목적
+이 정책은 OOO 주식회사(이하 &amp;quot;회사&amp;quot;라 함)에서 소프트웨어 개발, 서비스, 배포에 관여하는 전체 조직이 올바르게 오픈소스 소프트웨어(이하 &amp;quot;오픈소스&amp;quot;라 함)를 활용하기 위해 다음과 같은 원칙을 제공합니다.
+1. 오픈소스 컴플라이언스 / 보안 보증 원칙
+2. 외부 오픈소스 프로젝트로의 기여 원칙
+3. 사내 프로젝트를 오픈소스로 공개하기 위한 원칙
+이러한 원칙은 회사의 모든 구성원이 오픈소스의 가치를 이해하고, 오픈소스를 올바르게 사용하며, 오픈소스 커뮤니티에 기여하기 위한 방법을 제공합니다.
+회사의 모든 구성원은 사내 위키의 다음 링크에서 오픈소스 정책을 확인할 수 있습니다 : [internal_link]
+(2) 미준수 시 영향
+이 정책을 준수하지 않는다면 다음과 같은 상황이 발생할 수 있습니다.
+- 외부로부터 오픈소스 라이선스 준수 요구를 받을 수 있습니다.
+- 회사가 개발한 소스 코드를 원치 않게 공개해야 할 수 있습니다.
+- 오픈소스 저작권자로부터 법적 소송을 제기당할 수 있습니다.
+- 저작권 침해 및 계약 위반으로 벌금을 부과받거나, 제품 판매 중지 명령을 받을 수 있습니다.
+- 회사 평판이 손상될 수 있습니다.
+- 공급업체와의 계약 위반이 되어 손해배상 청구를 받을 수 있습니다.
+- 심각한 보안 사고에 노출되어 회사에 막대한 손해를 입힐 수 있습니다.
+이러한 이유로 회사는 오픈소스 정책의 위반을 심각하게 간주하며, 이를 위반하는 구성원이나 조직은 징계 절차에 처할 수 있습니다.
+(3) 구성원의 기여 방법
+회사의 모든 구성원은 이 정책의 근거와 내용을 이해하고 필요한 활동을 충실히 수행함으로써 정책의 효과 및 회사의 컴플라이언스 수준 향상에 기여할 수 있습니다.
+&lt;/code>&lt;/pre>&lt;p>평가에 대해서는 아래에서 한번 더 자세히 설명합니다.&lt;/p>
+&lt;p>오픈소스 교육에는 오픈소스 기여 정책에 대한 내용도 포함됩니다. 오픈소스 기여 정책을 만들었다 해도 사내 구성원이 이에 대한 존재를 알지 못한다면 무분별한 기여 활동으로 개인과 회사에 피해가 발생할 우려가 있습니다.&lt;/p>
+&lt;p>이를 위해 ISO/IEC 5230 표준은 다음과 같이 모든 프로그램 참여자가 오픈소스 기여 정책의 존재를 인식하도록 하는 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.5.1.3 - A documented procedure that makes all program participants aware of the existence of the open source contribution policy (e.g., via training, internal wiki, or other practical communication method).&lt;br>&lt;code>모든 프로그램 참여자가 오픈소스 기여 정책의 존재를 인식하도록 하는 문서화된 절차 (예: 교육, 내부 위키, 또는 기타 실질적인 전달 방법 등)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>따라서 기업은 모든 사내 개발자가 오픈소스 기여 정책의 존재를 알 수 있도록 오픈소스 교육을 제공해야 합니다.&lt;/p>
+&lt;p>교육자료를 새롭게 제작하는 것도 처음 업무를 시작하는 담당자에게는 쉽지 않은 일일 수 있습니다. 이러한 어려움을 돕고자 엔씨소프트는 사내 오픈소스 교육자료를 누구나 사용할 수 있도록 교안(PPT)와 강의 스크립트를 GitHub에 공개했습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/5-training/ncsofttraining_hub642cc500108499b0e5eb4adfb0c803c_81325_900x600_fit_catmullrom_2.png" width="900" height="483">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>https://github.com/ncsoft/oss-basic-training&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>또한, 국내 대표 플랫폼 기업인 카카오도 사내 개발자를 위한 오픈소스 교육자료를 누구나 열람할 수 있도록 공개했습니다.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+&lt;img class="card-img-top" src="/docs/opensource_for_enterprise/5-training/kakaotraining_huf372666c9b5e6e536192bad67bd1d09f_4348095_900x600_fit_catmullrom_2.png" width="900" height="507">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+&lt;center>&lt;i>http://t1.kakaocdn.net/olive/assets/opensource_guide_kakao.pdf&lt;/i>&lt;/center>
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>아직 교육 자료를 만들지 않았다면, 이런 오픈소스 관리 우수 기업들의 오픈소스 교육 자료를 활용하는 것도 좋은 방법입니다.&lt;/p>
+&lt;h2 id="2-평가">2. 평가&lt;/h2>
+&lt;p>기업은 각 역할에 대한 담당자를 지정하였으면, 지정된 담당자가 교육, 훈련 및 경험을 바탕으로 맡은 역할을 수행할 수 있는 자격을 갖추었음을 확인해야 합니다. 역량이 미흡한 프로그램 참여자에게는 충분한 역량을 갖출 수 있도록 교육도 제공해야 합니다. 그리고 기업은 각 참여자가 역량을 갖추고 있는지 평가하고 결과를 보관해야 합니다.&lt;/p>
+&lt;p>이를 위해 ISO 표준은 공통적으로 다음과 같이 프로그램 참여자의 역량을 평가한 문서화된 증거를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.3 - Documented evidence of assessed competence for each program participant.&lt;br>&lt;code>각 프로그램 참여자의 역량을 평가한 문서화된 증거&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.1.2.4 - Documented evidence of assessed competence for each Program Participant; &lt;br>&lt;code>각 프로그램 참여자의 역량을 평가한 문서화된 증거&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>따라서, 기업은 아래와 같이 교육과 평가를 수행하고 결과를 유지해야 합니다.&lt;/p>
+&lt;ol>
+&lt;li>기업은 각 참여자가 필요한 역량을 보유할 수 있도록 교육을 제공합니다.&lt;/li>
+&lt;li>교육 내용을 기반으로 평가를 수행합니다.&lt;/li>
+&lt;li>평가 결과는 기업의 교육 시스템 혹은 HR 부서에서 보관합니다.&lt;/li>
+&lt;/ol>
+&lt;p>프로그램 참여자가 수백 명 이상이어서 교육 제공이 쉽지 않을 경우, 기업의 온라인 교육과 평가 시스템을 이용하는 것도 좋은 방법입니다.&lt;/p>
+&lt;p>이와 같은 내용은 기업의 오픈소스 정책에 다음과 같이 포함할 수 있습니다.&lt;/p>
+&lt;pre>&lt;code>4. 역할, 책임 및 역량
+정책의 효과를 보장하기 위해 다음과 같이 역할과 책임 및 각 역할의 담당자가 갖추어야 할 역량을 정의합니다.
+각 역할의 담당 조직/담당자와 필요 역량 수준은 [부록 1. 담당자 현황]에서 정의합니다.
+5. 교육 및 평가
+4장에서 정의한 각 역할을 담당하는 모든 구성원은 [Learning Portal]에서 제공하는 오픈소스 교육 고급 과정을 수강해야 합니다. 이를 통해 오픈소스 정책, 관련 교육 정책 및 조회 방법을 숙지합니다.
+교육 이력과 평가 결과는 [Learning Portal]에 최소 3년간 보존합니다.
+&lt;/code>&lt;/pre>&lt;h2 id="3-오픈소스-라이선스-가이드">3. 오픈소스 라이선스 가이드&lt;/h2>
+&lt;p>오픈소스 라이선스를 제대로 준수하기 위해서는 오픈소스 라이선스별로 요구하는 사항에 대해 정확히 알고 있어야 합니다. 하지만 개별 소프트웨어 개발자가 이를 일일이 파악하는 것은 어려우므로, 오픈소스 프로그램 매니저는 자주 사용되는 오픈소스 라이선스에 대해 일반적인 사용 사례별 요구사항/주의사항을 정리하여 회사 내부에 공유하는 것이 좋습니다.&lt;/p>
+&lt;p>오픈소스 라이선스 가이드에는 일반적인 오픈소스 라이선스 사용 사례별 요건을 포함하여 개발 부서에서 오픈소스를 사용하면서 올바른 라이선스 의무 준수 활동을 할 수 있게 해야 합니다.&lt;/p>
+&lt;p>이를 위해 ISO/IEC 5230 표준은 다음과 같이 배포용 소프트웨어 내의 오픈소스 컴포넌트에 대해 일반적인 오픈소스 라이선스 사용 사례를 처리하기 위한 문서화된 절차를 요구합니다.&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.3.2.1 - A documented procedure for handling the common open source license use cases for the open source components of the supplied software.&lt;br>&lt;code>배포용 소프트웨어 내의 오픈소스 컴포넌트에 대해 일반적인 오픈소스 라이선스 사용 사례를 처리하기 위한 문서화된 절차&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>오픈소스 라이선스 사용 사례를 처리하기 위해서는 오픈소스 라이선스별로 분류된 라이선스 가이드가 필요합니다. 오픈소스 라이선스에 대한 일반적인 가이드와 라이선스 의무 요약 자료는 한국저작권위원회에서 제공하는 &lt;a href="https://www.olis.or.kr/license/licenseGuide.do">라이선스 가이드&lt;/a>를 참고할 수 있습니다.&lt;/p>
+&lt;p>SK텔레콤의 오픈소스 가이드 내 &lt;a href="https://sktelecom.github.io/guide/use/obligation/">라이선스별 의무사항&lt;/a>항 문서도 좋은 자료입니다.&lt;/p>
+&lt;p>&lt;img src="sktlicenseguide.png" alt="">
+&lt;a href="https://sktelecom.github.io/guide/use/obligation/gpl-2.0/">https://sktelecom.github.io/guide/use/obligation/gpl-2.0/&lt;/a>&lt;/p>
+&lt;p>기업은 구성원이 쉽게 접근하여 참고할 수 있는 공간에 오픈소스 라이선스 가이드를 제공해야 합니다.&lt;/p>
+&lt;h2 id="4-인식-제고-활동">4. 인식 제고 활동&lt;/h2>
+&lt;p>프로그램 참여자의 오픈소스 라이선스 컴플라이언스 및 보안 보증에 대한 인식을 지속적으로 제고하기 위해 다음과 같은 활동을 수행합니다:&lt;/p>
+&lt;h3 id="1-정기적인-뉴스레터-발행">(1) 정기적인 뉴스레터 발행&lt;/h3>
+&lt;ul>
+&lt;li>오픈소스 프로그램 매니저는 월 1회 오픈소스 관련 뉴스레터를 발행합니다.&lt;/li>
+&lt;li>뉴스레터에는 최신 오픈소스 동향, 라이선스 컴플라이언스 사례, 보안 취약점 정보 등을 포함합니다.&lt;/li>
+&lt;li>모든 프로그램 참여자에게 이메일로 배포하고, 사내 인트라넷에도 게시합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-워크샵-및-세미나-개최">(2) 워크샵 및 세미나 개최&lt;/h3>
+&lt;ul>
+&lt;li>분기별로 오픈소스 관련 워크샵 또는 세미나를 개최합니다.&lt;/li>
+&lt;li>외부 전문가를 초청하여 오픈소스 라이선스, 보안, 최신 기술 동향 등에 대한 강연을 진행합니다.&lt;/li>
+&lt;li>프로그램 참여자들의 참여를 독려하고, 참석 기록을 유지합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-오픈소스-기여-장려-프로그램">(3) 오픈소스 기여 장려 프로그램&lt;/h3>
+&lt;ul>
+&lt;li>프로그램 참여자의 외부 오픈소스 프로젝트 기여를 장려하는 프로그램을 운영합니다.&lt;/li>
+&lt;li>기여 활동에 대한 인센티브 제도를 마련하고, 우수 기여자를 분기별로 선정하여 포상합니다.&lt;/li>
+&lt;li>기여 활동 내용을 사내에 공유하고, 성과 평가에 반영합니다.&lt;/li>
+&lt;/ul>
+&lt;h2 id="5-교육-효과성-측정-및-개선">5. 교육 효과성 측정 및 개선&lt;/h2>
+&lt;p>오픈소스 교육 프로그램의 효과성을 지속적으로 측정하고 개선하기 위해 다음과 같은 활동을 수행합니다:&lt;/p>
+&lt;h3 id="1-교육-프로그램-평가-지표">(1) 교육 프로그램 평가 지표&lt;/h3>
+&lt;ul>
+&lt;li>다음과 같은 정량적, 정성적 지표를 설정하여 교육 프로그램을 평가합니다:
+&lt;ul>
+&lt;li>교육 이수율&lt;/li>
+&lt;li>평가 시험 점수&lt;/li>
+&lt;li>라이선스 컴플라이언스 위반 건수 감소율&lt;/li>
+&lt;li>보안 취약점 대응 시간 단축률&lt;/li>
+&lt;li>프로그램 참여자 만족도 점수&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-피드백-수집-및-분석">(2) 피드백 수집 및 분석&lt;/h3>
+&lt;ul>
+&lt;li>모든 교육 프로그램 종료 후 참가자들로부터 피드백을 수집합니다.&lt;/li>
+&lt;li>온라인 설문 조사를 통해 교육 내용, 강사, 교육 방법 등에 대한 의견을 수집합니다.&lt;/li>
+&lt;li>수집된 피드백을 분석하여 개선 포인트를 도출합니다.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-지속적인-개선-계획-수립">(3) 지속적인 개선 계획 수립&lt;/h3>
+&lt;ul>
+&lt;li>평가 지표 결과와 피드백 분석을 바탕으로 반기별로 교육 프로그램 개선 계획을 수립합니다.&lt;/li>
+&lt;li>오픈소스 프로그램 매니저는 개선 계획을 OSRB에 보고하고 승인을 받습니다.&lt;/li>
+&lt;li>승인된 개선 사항을 다음 교육 프로그램에 반영하고, 그 효과를 모니터링합니다.&lt;/li>
+&lt;/ul>
+&lt;p>이러한 활동을 통해 프로그램 참여자의 오픈소스에 대한 인식을 제고하고, 교육 프로그램의 효과성을 지속적으로 향상시킬 수 있습니다.&lt;/p>
+&lt;h2 id="6-summary">6. Summary&lt;/h2>
+&lt;p>여기까지 교육, 평가, 인식 제고 활동 및 교육 효과성 측정과 개선 프로세스를 구축하게 되면 ISO/IEC 5230과 ISO/IEC 18974 표준 규격의 주요 요구사항을 충족할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="trainingno.png" alt="">&lt;/p>
+&lt;p>이러한 교육 및 평가 체계를 통해 기업은 프로그램 참여자들의 오픈소스 라이선스 컴플라이언스와 보안 보증에 대한 이해도를 높이고, 역량을 지속적으로 개선할 수 있습니다. 또한, 정기적인 평가와 개선 활동을 통해 프로그램의 효과성을 지속적으로 향상시킬 수 있습니다.&lt;/p>
+&lt;p>이는 궁극적으로 기업의 오픈소스 관리 수준을 높이고, 오픈소스 사용에 따른 법적 위험을 최소화하며, 보안 취약점에 대한 대응 능력을 강화하는 데 기여할 것입니다.&lt;/p></description></item><item><title>Docs: 6. 준수 선언</title><link>/docs/opensource_for_enterprise/6-conforming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opensource_for_enterprise/6-conforming/</guid><description>
+&lt;p>ISO/IEC 5230과 ISO/IEC 18974의 모든 요구사항을 준수하는 오픈소스 프로그램(오픈소스 정책 / 프로세스 / 도구 / 조직)을 구축한 기업은 다음 두 가지를 문서화하여 명시해야 합니다.&lt;/p>
+&lt;h3 id="1-표준-요구사항-충족-확인">(1) 표준 요구사항 충족 확인&lt;/h3>
+&lt;p>ISO/IEC 5230과 ISO/IEC 18974는 다음과 같이 프로그램이 모든 요구사항을 충족함을 확인하는 문서를 요구합니다:&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.6.1.1 A document affirming the program specified in §3.1.4 satisfies all the requirements of this document.&lt;br>&lt;code>3.1.4조에서 명시한 프로그램이 이 규격의 모든 요구사항을 충족함을 확인하는 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.4.1.1: Documented Evidence affirming the Program specified in §3.1.4 satisfies all the requirements of this document.&lt;br>&lt;code>§3.1.4에 명시된 프로그램이 이 문서의 모든 요구 사항을 충족함을 확인하는 문서화된 증거.&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 다음과 같은 내용을 포함하는 문서를 작성해야 합니다:&lt;/p>
+&lt;pre>&lt;code>[회사명]의 오픈소스 프로그램은 ISO/IEC 5230:2020(오픈소스 라이선스 컴플라이언스)과 ISO/IEC 18974(오픈소스 보안 보증)의 모든 요구사항을 충족합니다.
+이는 다음의 문서와 프로세스를 통해 확인할 수 있습니다:
+1. 오픈소스 정책 문서
+2. 오픈소스 프로세스 문서
+3. 오픈소스 교육 및 평가 기록
+4. SBOM(Software Bill of Materials) 관리 시스템
+5. 오픈소스 라이선스 컴플라이언스 산출물 생성 및 보관 시스템
+6. 오픈소스 보안 취약점 관리 시스템
+7. 외부 문의 대응 프로세스 기록
+[날짜]
+[오픈소스 프로그램 매니저 서명]
+&lt;/code>&lt;/pre>&lt;h3 id="2-지속적-준수-보장-선언">(2) 지속적 준수 보장 선언&lt;/h3>
+&lt;p>ISO/IEC 5230과 ISO/IEC 18974는 또한 적합성 인증 획득 후 18개월 동안 모든 요구사항을 충족하고 있음을 확인하는 문서를 요구합니다:&lt;/p>
+&lt;div class="alert alert-success" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 5230 - License Compliance&lt;/h4>
+&lt;ul>
+&lt;li>3.6.2.1 A document affirming the program meets all the requirements of this document, within the past 18 months of obtaining conformance validation.&lt;br>&lt;code>프로그램이 적합성 인증을 획득한 후 지난 18개월 동안 이 규격 버전(v2.1)의 모든 요구사항을 충족하고 있음을 확인하는 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">ISO/IEC 18974 - Security Assurance&lt;/h4>
+&lt;ul>
+&lt;li>3.4.2.1: A document affirming the Program meets all the requirements of this specification, within the past 18 months of obtaining conformance validation.&lt;br>&lt;code>프로그램이 적합성 인증을 획득한 후 지난 18개월 동안 이 규격의 모든 요구사항을 충족하고 있음을 확인하는 문서&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>이를 위해 기업은 다음과 같은 내용을 포함하는 문서를 작성하고 주기적으로 갱신해야 합니다:&lt;/p>
+&lt;pre>&lt;code>[회사명]은 ISO/IEC 5230:2020(오픈소스 라이선스 컴플라이언스)과 ISO/IEC 18974(오픈소스 보안 보증)의 적합성 인증을 획득한 후 18개월 이상 모든 요구사항을 충족하는 상태를 유지할 것을 보장합니다.
+이를 위해 다음과 같은 활동을 수행합니다:
+1. 최소 6개월마다 내부 감사를 실시하여 모든 요구사항 충족 여부를 확인
+2. 연 1회 이상 외부 전문가의 검토를 받아 프로그램의 효과성 평가
+3. 프로그램 참여자에 대한 지속적인 교육 및 역량 평가 실시
+4. 오픈소스 정책 및 프로세스의 정기적인 검토 및 업데이트
+5. 새로운 기술 동향 및 법적 요구사항 변화에 대한 모니터링 및 대응
+[날짜]
+[오픈소스 프로그램 매니저 서명]
+&lt;/code>&lt;/pre>&lt;p>기업은 이러한 문서를 오픈소스 정책에 포함시키거나, 외부에 공개된 웹사이트를 통해 게재할 수 있습니다. 예를 들어, &lt;a href="https://www.sktelecom.com/">SK텔레콤&lt;/a>은 자사의 오픈소스 포털 사이트에 이러한 내용을 게재하고 있습니다:
+&lt;img src="sktiso.png" alt="">
+&lt;a href="https://sktelecom.github.io/compliance/iso5230/">https://sktelecom.github.io/compliance/iso5230/&lt;/a>
+이러한 문서화를 통해 기업은 ISO/IEC 5230과 ISO/IEC 18974의 모든 요구사항을 충족하게 되며, 오픈소스 라이선스 컴플라이언스와 보안 보증에 대한 지속적인 관리와 개선을 보장할 수 있습니다.&lt;/p>
+&lt;p>&lt;img src="totalno.png" alt="">&lt;/p></description></item></channel></rss>
