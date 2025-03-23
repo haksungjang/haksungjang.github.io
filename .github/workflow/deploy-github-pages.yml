@@ -1,50 +1,48 @@
-name: GitHub Pages
+name: Deployment to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - master  # 배포할 브랜치 설정
-  pull_request:
+      - master  # <-- specify the branch you want to deploy from
+    pull_request:
+
+env:
+  REPO_NAME: ${{ github.event.repository.name }}
+  REPO_OWNER: ${{ github.repository_owner }}
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+    permissions:
+      id-token: write
+      pages: write
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true  # Hugo 테마 가져오기 (true 또는 recursive)
-          fetch-depth: 0    # .GitInfo와 .Lastmod를 위해 모든 히스토리 가져오기
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.119.0'
-          extended: true  # Docsy 테마는 Hugo Extended 버전이 필요합니다
+          hugo-version: '0.125.5'
+          extended: true
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: hugo --minify
+      - run: npm ci
+      - run: hugo --baseURL https://${REPO_OWNER}.github.io/${REPO_NAME} --minify
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.ref == 'refs/heads/master' }} # <-- specify same branch as above here
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
