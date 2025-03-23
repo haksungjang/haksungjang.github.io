@@ -5,7 +5,7 @@ name: smoke
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
   # schedule: # midnight every day
   #   - cron: '0 0 * * *'
