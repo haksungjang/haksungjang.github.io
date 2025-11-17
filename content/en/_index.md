@@ -11,8 +11,8 @@ title: Haksung
 </a> -->
 <!-- <p class="lead mt-5">Porridge temperature assessment &mdash; in the cloud!</p> -->
 
-<p class="lead mt-1">Open Source Program Manager at SK telecom</p>
-<p class="lead mt-1">SK텔레콤 장학성</p>
+<p class="lead mt-1">OpenChain Ambassador: <a href="https://openchainproject.org/openchain-ambassadors" target="_blank">https://openchainproject.org/openchain-ambassadors</a></p>
+<p class="lead mt-1">Open Source Program Manager at SK telecom | SK텔레콤 장학성</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 <!-- 
