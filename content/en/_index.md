@@ -1,8 +1,11 @@
 ---
-title: Haksung
+title: 장학성 | Haksung Jang - 오픈소스 프로그램 매니저
+description: SK텔레콤 오픈소스 프로그램 매니저이자 OpenChain Ambassador 장학성의 공식 웹사이트입니다.
+keywords: 장학성, Haksung Jang, 오픈소스, OpenChain, SK텔레콤, Open Source Program Manager
+author: 장학성
 ---
 
-{{< blocks/cover title="Haksung Jang" image_anchor="top" height="full" >}}
+{{< blocks/cover title="장학성 | Haksung Jang" image_anchor="top" height="full" >}}
 <!-- <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
@@ -15,6 +18,8 @@ title: Haksung
 <p class="lead mt-1"><a href="https://openchainproject.org/openchain-ambassadors" target="_blank">OpenChain Ambassador</a></p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
+
+
 <!-- 
 
 {{% blocks/lead color="primary" %}}
@@ -25,7 +30,6 @@ been eating **your** porridge.
 (Sadly, Goldydocs isn't a real project, but you can use this site as an example
 to create your own real websites with [Docsy](https://docsy.dev))
 {{% /blocks/lead %}}
-
 
 {{% blocks/section color="dark" type="row" %}}
 {{% blocks/feature icon="fa-lightbulb" title="New chair metrics!" %}}
