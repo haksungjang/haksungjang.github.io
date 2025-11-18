@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haksungjang.github.io/sitemap.xml

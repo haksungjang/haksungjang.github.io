@@ -1,5 +1,5 @@
 baseURL: "https://haksungjang.github.io/"
-title: Haksung
+title: 장학성 | Haksung
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -145,7 +145,7 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Haksung Jang | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
+    authors: 장학성 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
     from_year: 2018
 
   # User interface configuration

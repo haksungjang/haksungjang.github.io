@@ -5,7 +5,7 @@ keywords: 장학성, Haksung Jang, 오픈소스, OpenChain, SK텔레콤, Open So
 author: 장학성
 ---
 
-{{< blocks/cover title="장학성 | Haksung Jang" image_anchor="top" height="full" >}}
+{{< blocks/cover title="Haksung Jang | 장학성" image_anchor="top" height="full" >}}
 <!-- <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
@@ -14,7 +14,8 @@ author: 장학성
 </a> -->
 <!-- <p class="lead mt-5">Porridge temperature assessment &mdash; in the cloud!</p> -->
 
-<p class="lead mt-1">Open Source Program Manager at SK telecom | SK텔레콤 장학성</p>
+<p class="lead mt-1">Open Source Program Manager at SK telecom </p>
+<p class="lead mt-1">SK텔레콤 오픈소스 매니저 장학성</p>
 <p class="lead mt-1"><a href="https://openchainproject.org/openchain-ambassadors" target="_blank">OpenChain Ambassador</a></p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
