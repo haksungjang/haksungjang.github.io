@@ -1,14 +1,21 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: '20:00'
-  open-pull-requests-limit: 10
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    time: '20:00'
-  open-pull-requests-limit: 10
+  # 1. NPM 패키지 (Hugo Extended 등)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "20:00"
+    open-pull-requests-limit: 10
+
+  # 2. Go 모듈 (Docsy 테마 등)
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "20:00"
+    open-pull-requests-limit: 10
+    groups:
+       dependencies:
+          patterns:
+            - "*"
