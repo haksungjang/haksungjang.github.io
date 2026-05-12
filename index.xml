@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>장학성 | Haksung Jang - 오픈소스 프로그램 매니저 on Haksung</title><link>https://haksungjang.github.io/</link><description>Recent content in 장학성 | Haksung Jang - 오픈소스 프로그램 매니저 on Haksung</description><generator>Hugo</generator><language>en</language><atom:link href="https://haksungjang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>1. 오픈소스 정책 (샘플)</title><link>https://haksungjang.github.io/docs/governance_iso5230/appendix/1-policy-template/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/docs/governance_iso5230/appendix/1-policy-template/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;Note:&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>장학성 | Haksung Jang - 오픈소스 프로그램 매니저 on Haksung</title><link>https://haksungjang.github.io/</link><description>Recent content in 장학성 | Haksung Jang - 오픈소스 프로그램 매니저 on Haksung</description><generator>Hugo</generator><language>en</language><atom:link href="https://haksungjang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>원본 번역 — Black Duck 체크리스트</title><link>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/source/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/source/</guid><description>&lt;div class="alert alert-secondary" role="alert"&gt;
+&lt;p&gt;이 페이지는 &lt;a href="https://haksungjang.github.io/research/"&gt;EU CRA 취약점 보고 의무 보고서&lt;/a&gt;의 &lt;strong&gt;00단계 산출물&lt;/strong&gt;입니다. 원본 PDF를 국문으로 번역한 것이며, 보강·해석은 추가되지 않았습니다(보강은 &lt;a href="../background/"&gt;배경&lt;/a&gt; / &lt;a href="../trends/"&gt;동향&lt;/a&gt; 페이지 참조).&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="eu-cra-취약점-보고-체크리스트-2026년-9월-의무-사항"&gt;EU CRA 취약점 보고 체크리스트: 2026년 9월 의무 사항&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;(원문 제목: EU CRA Vulnerability Reporting Checklist: Sept &amp;lsquo;26 Obligations)&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;발행&lt;/strong&gt;: Black Duck Software, Inc. &lt;em&gt;(2026년 4월)&lt;/em&gt;
+&lt;strong&gt;문서 위상&lt;/strong&gt;: 업계 분석·실무 체크리스트 (법적 구속력 없음). 1차 출처는 사이버 복원력법(Cyber Resilience Act, CRA) 원문임.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="개요"&gt;개요&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(원문 p.2)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;유럽연합(EU) 사이버 복원력법(Cyber Resilience Act, CRA)은 EU 시장에서 판매되는 소프트웨어·하드웨어 제품에 대해 의무적 사이버보안 요건을 도입한다. 이는 제품 전 생애주기에 걸친 &lt;strong&gt;설계 보안(security by design)&lt;/strong&gt;, &lt;strong&gt;취약점 처리(vulnerability handling)&lt;/strong&gt;, &lt;strong&gt;지속적 유지보수&lt;/strong&gt;를 포괄한다.&lt;/p&gt;</description></item><item><title>1. 오픈소스 정책 (샘플)</title><link>https://haksungjang.github.io/docs/governance_iso5230/appendix/1-policy-template/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/docs/governance_iso5230/appendix/1-policy-template/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;Note:&lt;/div&gt;
 
 
 This sample open source policy was written with reference to the following two materials.
@@ -20,8 +32,106 @@ This sample open source policy was written with reference to the following two m
 &lt;p&gt;&lt;em&gt;&lt;center&gt;&amp;lt; &lt;a href="https://www.fossology.org/"&gt;https://www.fossology.org/&lt;/a&gt; &amp;gt;&lt;/center&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Linux Foundation의 FOSSology 프로젝트는 이러한 스캔 도구를 개발하고 오픈소스로 공개해 누구나 자유롭게 사용할 수 있게 한 도구이다.&lt;/p&gt;
 &lt;h2 id="주요-특징"&gt;주요 특징&lt;/h2&gt;
-&lt;p&gt;FOSSology는 웹기반의 프로그램으로 사용자는 웹사이트에 로그인하여 개별 파일 혹은 소프트웨어 패키지를 업로드할 수 있다. FOSSology는 업로드된 파일 내에 라이선스 텍스트와 Copyright 정보를 검출한다. 개발자는 사용하고자 하는 오픈소스의 라이선스가 무엇인지, Copyright은 어떻게 되는지에 대한 정보를 확인하고자 할때 FOSSology를 이용하는 것이 좋다. FOSSology는 개발자가 업로드한 오픈소스 패키지 내의 모든 파일을 스캔하여 각 파일 내 라이선스 관련 텍스트와 Copyright 정보를 자동으로 검출하고, 이를 리포트로 생성한다. FOSSology 주요 특징에 대한 자세한 내용은 다음 페이지를 참고할 수 있다. : &lt;a href="https://www.fossology.org/features/"&gt;https://www.fossology.org/features/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>SW360</title><link>https://haksungjang.github.io/docs/governance_iso5230/appendix/3-tools/sw360/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/docs/governance_iso5230/appendix/3-tools/sw360/</guid><description>&lt;p&gt;오픈소스를 포함하는 제품을 개발하고 배포하는 기업이라면 각 제품과 릴리스 버전마다 사용한 오픈소스의 버전, 라이선스 등의 정보를 수집하고 추적해야 한다. 이를 통해 기업은 올바른 오픈소스 컴플라이언스 활동을 수행할 수 있다.&lt;/p&gt;
-&lt;p&gt;특히, NVD (https://nvd.nist.gov/vuln)에서 특정 오픈소스 버전에 보안 취약점이 보고 되었을때, 해당 버전을 사용하고 있는 제품이 무엇인지 추적을 할 수 없다면, 그 기업은 어느 제품에 보안 패치를 적용해야 할 지 알 수 없는 상황에 처하게 되고, 그 기업의 제품들은 보안취약점에 그대로 노출이 될 수 밖에 없다.&lt;/p&gt;</description></item><item><title>Rockchip과 FFmpeg의 라이선스 분쟁 사례</title><link>https://haksungjang.github.io/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/</guid><description>&lt;p&gt;안녕하세요.&lt;/p&gt;
+&lt;p&gt;FOSSology는 웹기반의 프로그램으로 사용자는 웹사이트에 로그인하여 개별 파일 혹은 소프트웨어 패키지를 업로드할 수 있다. FOSSology는 업로드된 파일 내에 라이선스 텍스트와 Copyright 정보를 검출한다. 개발자는 사용하고자 하는 오픈소스의 라이선스가 무엇인지, Copyright은 어떻게 되는지에 대한 정보를 확인하고자 할때 FOSSology를 이용하는 것이 좋다. FOSSology는 개발자가 업로드한 오픈소스 패키지 내의 모든 파일을 스캔하여 각 파일 내 라이선스 관련 텍스트와 Copyright 정보를 자동으로 검출하고, 이를 리포트로 생성한다. FOSSology 주요 특징에 대한 자세한 내용은 다음 페이지를 참고할 수 있다. : &lt;a href="https://www.fossology.org/features/"&gt;https://www.fossology.org/features/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>배경 — CRA 입법 경위·이해관계자·표준 매핑</title><link>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/background/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/background/</guid><description>&lt;div class="alert alert-secondary" role="alert"&gt;
+&lt;p&gt;이 페이지는 &lt;a href="https://haksungjang.github.io/research/"&gt;EU CRA 취약점 보고 의무 보고서&lt;/a&gt;의 &lt;strong&gt;01단계 산출물&lt;/strong&gt;입니다. context-researcher 에이전트가 1차 출처(Eur-Lex, EC, ENISA)를 중심으로 조사한 배경 자료입니다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="배경-eu-cra-취약점-보고-의무"&gt;배경: EU CRA 취약점 보고 의무&lt;/h1&gt;
+&lt;h2 id="1-자료-개요"&gt;1. 자료 개요&lt;/h2&gt;
+&lt;p&gt;검토 대상 문서는 블랙덕 소프트웨어(Black Duck Software, Inc.)가 2026년 4월에 발행한 &lt;em&gt;EU CRA Vulnerability Reporting Checklist: Sept &amp;lsquo;26 Obligations&lt;/em&gt;다.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; 블랙덕은 소프트웨어 구성 분석(Software Composition Analysis, SCA), 정적 분석(Static Analysis), 퍼징(Fuzzing) 등 애플리케이션 보안 솔루션을 제공하는 미국 매사추세츠주 기반 상장 기업으로, 2024년 시놉시스(Synopsys)의 소프트웨어 무결성 사업부가 분사되어 설립되었다.&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description></item><item><title>SW360</title><link>https://haksungjang.github.io/docs/governance_iso5230/appendix/3-tools/sw360/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/docs/governance_iso5230/appendix/3-tools/sw360/</guid><description>&lt;p&gt;오픈소스를 포함하는 제품을 개발하고 배포하는 기업이라면 각 제품과 릴리스 버전마다 사용한 오픈소스의 버전, 라이선스 등의 정보를 수집하고 추적해야 한다. 이를 통해 기업은 올바른 오픈소스 컴플라이언스 활동을 수행할 수 있다.&lt;/p&gt;
+&lt;p&gt;특히, NVD (https://nvd.nist.gov/vuln)에서 특정 오픈소스 버전에 보안 취약점이 보고 되었을때, 해당 버전을 사용하고 있는 제품이 무엇인지 추적을 할 수 없다면, 그 기업은 어느 제품에 보안 패치를 적용해야 할 지 알 수 없는 상황에 처하게 되고, 그 기업의 제품들은 보안취약점에 그대로 노출이 될 수 밖에 없다.&lt;/p&gt;</description></item><item><title>최신 동향 — 2025~2026년의 위임법·가이던스·업계 반응</title><link>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/trends/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/trends/</guid><description>&lt;div class="alert alert-secondary" role="alert"&gt;
+&lt;p&gt;이 페이지는 &lt;a href="https://haksungjang.github.io/research/"&gt;EU CRA 취약점 보고 의무 보고서&lt;/a&gt;의 &lt;strong&gt;02단계 산출물&lt;/strong&gt;입니다. trend-analyst 에이전트가 직전 24개월(2024-05 ~ 2026-05)의 1차·2차 출처 41건을 정리한 자료입니다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="최신-동향-eu-cra-취약점-보고-의무"&gt;최신 동향: EU CRA 취약점 보고 의무&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;조사 기준일: 2026-05-12&lt;/em&gt;
+&lt;em&gt;대상 법규: 사이버 복원력법(Cyber Resilience Act, CRA) — Regulation (EU) 2024/2847&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2024년 12월 10일 발효된&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; EU CRA에서 가장 임박한 마감일은 2026년 9월 11일 취약점·중대 사고 보고 의무다. 아래는 그 시점을 앞두고 지난 24개월(2024년 5월 ~ 2026년 5월) 사이 쌓인 1차·2차 자료를 시간순으로 훑어본 기록이다.&lt;/p&gt;</description></item><item><title>참고 자료 카탈로그 — 25건, 카테고리별</title><link>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/references/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/references/</guid><description>&lt;div class="alert alert-secondary" role="alert"&gt;
+&lt;p&gt;이 페이지는 &lt;a href="https://haksungjang.github.io/research/"&gt;EU CRA 취약점 보고 의무 보고서&lt;/a&gt;의 &lt;strong&gt;03단계 산출물&lt;/strong&gt;입니다. 모든 URL은 작성 시점에 WebFetch/WebSearch로 실재가 확인되었습니다. 본문에서는 &lt;code&gt;[A1]&lt;/code&gt;, &lt;code&gt;[B2]&lt;/code&gt; 형식으로 참조합니다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;수집 기준일: 2026-05-12. 총 25건(A: 5 / B: 6 / C: 6 / D: 1 / E: 4 / F: 2 / G: 1). 모든 URL은 작성 시점에 WebFetch/WebSearch로 200 OK 또는 공식 EUR-Lex 색인을 통해 실재가 확인되었다.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;표기 규약&lt;/strong&gt;: 본 카탈로그의 항목은 본문(REPORT/단계별 산출물)에서 &lt;code&gt;[A1]&lt;/code&gt;, &lt;code&gt;[B2]&lt;/code&gt; 형태로 참조한다. footnote(&lt;code&gt;[^N]&lt;/code&gt;)를 사용하지 않는 이유는 Hugo Goldmark가 본문 인용이 없는 footnote 정의를 출력하지 않기 때문이다.&lt;/p&gt;</description></item><item><title>검증 보고서 — URL 점검과 환각 검출 1건</title><link>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/verification/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/verification/</guid><description>&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;이 페이지가 왜 중요한가&lt;/div&gt;
+&lt;p&gt;AI가 생성한 콘텐츠의 가장 큰 리스크는 &lt;strong&gt;그럴듯한 환각&lt;/strong&gt;입니다. 이 워크스페이스는 보고서를 작성한 에이전트와 &lt;strong&gt;별개의 컨텍스트&lt;/strong&gt;에서 사실 검증 에이전트(&lt;code&gt;fact-checker&lt;/code&gt;)를 실행합니다. 검증 결과는 어떤 보고서에서든 영구 보존되며, 본문 수정이 필요하면 즉시 반영됩니다.&lt;/p&gt;
+&lt;p&gt;본 보고서에서는 실제로 &lt;strong&gt;위임법 (EU) 2026/881의 &amp;ldquo;통지 지연 3개 조건&amp;quot;이 잘못 기술된 환각 1건&lt;/strong&gt;이 검증에서 발견되어 정정되었습니다. 그 이력이 아래에 그대로 공개되어 있습니다 — 결과보다 과정의 신뢰성을 보여주는 것이 이 페이지의 목적입니다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="검증-보고서-eu-cra-취약점-보고-의무--2026년-9월-11일-대비"&gt;검증 보고서: EU CRA 취약점 보고 의무 — 2026년 9월 11일 대비&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;판정&lt;/strong&gt;: CONDITIONAL PASS &lt;em&gt;(수정 반영 후 PASS로 갱신)&lt;/em&gt;
+&lt;em&gt;검증 일시: 2026-05-12&lt;/em&gt;&lt;/p&gt;</description></item><item><title>메이킹 — 이 보고서는 어떻게 만들어졌나</title><link>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/meta/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/research/2026-eu-cra-vulnerability-reporting/meta/</guid><description>&lt;div class="alert alert-info" role="alert"&gt;
+&lt;p&gt;이 페이지는 &lt;strong&gt;본 보고서가 만들어진 과정&lt;/strong&gt;을 공개합니다. 결과(보고서)와 별개로, &lt;strong&gt;AI로 신뢰할 만한 콘텐츠를 만드는 절차&lt;/strong&gt; 자체를 투명하게 보여드리려는 목적입니다. 하네스 자체에 대한 더 일반적인 설명은 &lt;a href="../../methodology-claude-code-harness/"&gt;방법론 글&lt;/a&gt;을 참고하세요.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id="한-줄-요약"&gt;한 줄 요약&lt;/h2&gt;
+&lt;p&gt;3쪽 영문 PDF를 8개 AI 에이전트가 30분 만에 32KB 보고서로 만들었습니다. 마지막 검증 단계에서 환각 1건이 잡혀 정정되었습니다.&lt;/p&gt;
+&lt;h2 id="입력과-출력"&gt;입력과 출력&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;항목&lt;/th&gt;
+ &lt;th&gt;내용&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;입력&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Black Duck Software, &lt;em&gt;EU CRA Vulnerability Reporting Checklist: Sept &amp;lsquo;26 Obligations&lt;/em&gt; (3쪽, 2026년 4월)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;출력&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;단계별 산출물 5종 + 통합 보고서 1편 + 검증 보고서 1편 = 7개 마크다운 파일&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;본문 길이&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;32KB (통합 보고서 본문 기준)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;인용 출처&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;25건 (1차 출처 우선)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;도식&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;Mermaid 4개 (적용 흐름·보고 시한·입법 타임라인·이해관계자 상호작용)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;소요&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;약 30분 (병렬 조사 + 검증 포함)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="파이프라인"&gt;파이프라인&lt;/h2&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+ USER[사용자가 PDF를&amp;lt;br/&amp;gt;sources/에 둠]
+ COORD[research-coordinator&amp;lt;br/&amp;gt;총괄 조율]
+ TRANS[source-translator&amp;lt;br/&amp;gt;국문 번역]
+ BG[context-researcher&amp;lt;br/&amp;gt;배경 조사]
+ TR[trend-analyst&amp;lt;br/&amp;gt;최신 동향]
+ REF[reference-collector&amp;lt;br/&amp;gt;근거 자료]
+ SYN[report-synthesizer&amp;lt;br/&amp;gt;보고서 통합]
+ DIA[diagram-designer&amp;lt;br/&amp;gt;도식 생성]
+ FC[fact-checker&amp;lt;br/&amp;gt;사실 검증]
+ REPORT[REPORT.md]
+ VERIF[_verification.md]
+
+ USER --&amp;gt; COORD
+ COORD --&amp;gt; TRANS
+ TRANS --&amp;gt; BG
+ TRANS --&amp;gt; TR
+ TRANS --&amp;gt; REF
+ BG --&amp;gt; SYN
+ TR --&amp;gt; SYN
+ REF --&amp;gt; SYN
+ SYN &amp;lt;--&amp;gt; DIA
+ SYN --&amp;gt; REPORT
+ REPORT --&amp;gt; FC
+ FC --&amp;gt; VERIF
+ FC -.-&amp;gt;|&amp;#34;FAIL 시&amp;lt;br/&amp;gt;최대 2회 재작업&amp;#34;| SYN
+
+ style TRANS fill:#e3f2fd
+ style BG fill:#fff3e0
+ style TR fill:#fff3e0
+ style REF fill:#fff3e0
+ style FC fill:#ffebee,stroke:#c62828,stroke-width:2px
+ style REPORT fill:#e8f5e9&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;그림 1.&lt;/strong&gt; 보고서 생성 파이프라인. 배경·동향·근거 조사는 병렬로 실행되어 시간을 단축.&lt;/p&gt;</description></item><item><title>Rockchip과 FFmpeg의 라이선스 분쟁 사례</title><link>https://haksungjang.github.io/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate><guid>https://haksungjang.github.io/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/</guid><description>&lt;p&gt;안녕하세요.&lt;/p&gt;
 &lt;p&gt;최근 임베디드 리눅스 업계에서 화제가 된 Rockchip과 FFmpeg의 라이선스 분쟁(2025-2026) 사례를
 정리해 보았습니다. 이 사례는 단순히 한 기업의 실수가 아니라, 하드웨어 벤더(SoC Vendor)가
 제공하는 SDK/BSP를 그대로 사용할 때 발생할 수 있는 공급망 리스크를 보여줍니다.&lt;/p&gt;
