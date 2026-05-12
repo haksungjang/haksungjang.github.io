@@ -89,6 +89,10 @@ outputs:
   section: [HTML, print, RSS]
 
 params:
+  # Enable Mermaid diagram rendering for fenced ```mermaid code blocks.
+  mermaid:
+    enable: true
+
   taxonomy:
     # set taxonomyCloud = [] to hide taxonomy clouds
     taxonomyCloud: [tags, categories]
