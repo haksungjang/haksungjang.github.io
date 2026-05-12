@@ -90,8 +90,19 @@ outputs:
 
 params:
   # Enable Mermaid diagram rendering for fenced ```mermaid code blocks.
+  # fontSize/themeVariables는 좁은 폭에서 한글 가독성을 위해 키운 값.
   mermaid:
     enable: true
+    theme: default
+    config:
+      themeVariables:
+        fontSize: "18px"
+      flowchart:
+        useMaxWidth: true
+        htmlLabels: true
+        curve: basis
+      timeline:
+        useMaxWidth: true
 
   taxonomy:
     # set taxonomyCloud = [] to hide taxonomy clouds
