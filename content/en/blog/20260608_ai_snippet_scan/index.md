@@ -1,20 +1,19 @@
 ---
+date: 2026-06-08
 title: "AI가 만든 코드, 오픈소스 검사를 어디까지 해야 할까"
 linkTitle: "AI 코드와 스니펫 검사"
-date: 2026-06-08
-weight: 10
-type: docs
 description: >-
   AI가 작성한 코드에 코드 조각(스니펫) 단위 오픈소스 라이선스 검사가 필요한지, 그 판단 기준을 공개 출처로 정리하고 보안 취약점 측면과의 차이도 구분해 다룬다.
 author: 장학성
-categories: ["research"]
 tags: ["오픈소스", "라이선스 컴플라이언스", "SCA", "스니펫 검사", "AI 코딩", "SBOM", "OpenChain", "SAST", "보안 취약점"]
 ai_generated: true
 ai_generator: "Claude Opus 4.8 via local Claude Code harness"
-ai_pipeline: "웹 출처 조사 → 핵심 사실 교차 검증 → 다회차 표현과 논리 교정"
 verified_at: 2026-06-08
 verification_verdict: "CONDITIONAL PASS"
 sources: "공개 출처 — 법원 소송 자료(Doe v. GitHub), OpenChain ISO/IEC 5230, GitHub와 Microsoft 공식 문서, 법률 해설"
+aliases:
+  - /en/research/2026-snippet-sca-ai-coding/
+  - /research/2026-snippet-sca-ai-coding/
 ---
 
 
