@@ -18,7 +18,7 @@ aliases:
 
 
 {{% alert title="이 글에 대해" color="info" %}}
-이 글은 Claude Code 하네스를 이용해 작성했습니다. 공개 출처를 웹으로 조사하고, 핵심 사실(Copilot 소송 경과, OpenChain ISO/IEC 5230의 요구사항, AI 코딩 도구의 동작)을 1차에 가까운 출처로 교차 검증한 뒤 여러 차례 다듬었습니다. 검증 과정에서 항소심 사건번호 표기의 불일치와 법리 용어(de minimis) 혼동을 바로잡았습니다. 사실 검증 판정은 CONDITIONAL PASS이며, "도입 기업이 AI 코드 사용만으로 피소된 선례가 없다"는 진술은 부재의 증명이라 한정 표현으로 두었습니다.
+이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 공개 출처로 교차 검증했습니다.
 {{% /alert %}}
 
 {{% alert title="고지" color="warning" %}}
