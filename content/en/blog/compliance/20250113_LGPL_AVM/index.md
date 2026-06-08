@@ -20,7 +20,7 @@ resources:
 
 2025년 1월 9일, Software Freedom Conservancy (SFC)는 독일의 네트워크 장비 제조업체 AVM을 상대로 제기한 소송이 마무리되었다고 [발표했습니다](https://sfconservancy.org/news/2025/jan/09/avm-copyleft-lawsuit-resolved-with-install/). 이 소송의 핵심은 GNU Lesser General Public License (LGPL) 버전 2.1에 명시된 사용자의 권리, 특히 설치 정보 제공 의무에 관한 것이었습니다.
 
-![](./featured_AVM.png)
+![AVM LGPL-2.1 소송 대표 이미지](./featured_AVM.png)
 
 Sebastian Steck이라는 독일의 소프트웨어 개발자가 2021년 5월 AVM의 라우터를 구매한 후, AVM이 제공한 소스 코드로는 수정된 소프트웨어를 라우터에 재설치할 수 없다는 사실을 발견했습니다. Steck은 AVM에게 "uClibc, libblkid, libexif 및 libosip2 라이브러리의 완전한 소스 코드와 컴파일 및 설치 스크립트 제공"을 요구했습니다. AVM이 이를 시정하지 않자 Steck은 2023년 7월 베를린 법원에 소송을 제기했습니다.
 

@@ -1,0 +1,13 @@
+{{- /*
+  웹폰트 주입 — Docsy 공식 head 훅(hooks/head-end.html).
+  영문·숫자: Roboto / 한글: Pretendard / 코드: Roboto Mono (ai.google.dev 계열).
+  폰트 스택은 assets/scss/_variables_project.scss($td-fonts-serif)에서 지정한다.
+*/ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+{{- /* 커스텀 SVG favicon — "H" 모노그램. 우선순위가 높아 데스크톱 탭 아이콘이 된다.
+   apple-touch/android PNG는 Docsy 기본(favicons partial)이 폴백으로 유지된다. */ -}}
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">

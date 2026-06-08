@@ -18,7 +18,7 @@ resources:
 
 [Akka](https://github.com/akka/akka)는 JVM에서 여러 개의 thread가 동시에 작업하는 분산 애플리케이션을 [Actor Model](https://doc.akka.io/docs/akka/current/typed/guide/actors-intro.html)을 기반으로 단순화하는 툴킷으로 live chatting 등 주로 고성능이 요구되는 백엔드 플랫폼에 사용된다고 합니다. 
 
-![](./featured_akka.png)
+![Akka 라이선스 변경을 알리는 대표 이미지](./featured_akka.png)
 
 ## 라이선스 변경
 

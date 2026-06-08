@@ -21,7 +21,7 @@ resources:
 
 2021년, 독일의 사진작가 로버트 크네슈케(Robert Kneschke)는 자신의 사진이 [LAION](https://laion.ai/)(Large-scale Artificial Intelligence Open Network)이라는 비영리 단체가 만든 AI 학습용 데이터셋에 무단으로 포함되었다는 사실을 알게 되었습니다.
 
-![](./featured_Laion.jpeg)
+![독일 LAION AI 저작권 판결 대표 이미지](./featured_Laion.jpeg)
 
 AI 학습용 데이터셋이란 인공지능 모델을 훈련시키기 위해 사용되는 대규모 데이터 모음을 말합니다. '[LAION-5B](https://laion.ai/blog/laion-5b/)'라는 데이터셋은 약 58억 개의 이미지와 그에 해당하는 설명 텍스트로 구성되어 있었습니다. 이러한 데이터셋은 AI가 이미지를 인식하고 이해하는 능력을 향상시키는 데 사용됩니다.
 

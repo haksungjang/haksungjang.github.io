@@ -1,0 +1,247 @@
+/*
+  커스텀 스타일 — main.scss 맨 끝에서 로드된다.
+  다크 보정 import + 본문 조판·네비바·검색·TOC·사이드바·문서 마감 톤.
+  (OpenChain-KWG 사이트의 문서 톤을 이식)
+*/
+
+// ── Docsy 다크 모드 보정(EXPERIMENTAL) — $enable-dark-mode 가 true일 때만 효과 ──
+@import 'td/color-adjustments-dark';
+@import 'td/code-dark';
+@import 'td/gcs-search-dark';
+
+// ── 본문 조판: Gemini식 여유로운 가독성 + 제목 크기/굵기 정상화 ──
+.td-content {
+  line-height: 1.7;
+
+  p,
+  li { line-height: 1.7; }
+  > p { margin-bottom: 1.1rem; }
+
+  // Google devsite 표준 px(16px base): h1 28 / h2 22 / h3 16 / h4 14
+  h1 { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
+  h2 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: -0.018em;
+    margin-top: 2.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    margin-top: 2rem;
+  }
+  h4,
+  h5 { font-size: 0.875rem; font-weight: 500; letter-spacing: -0.008em; }
+}
+
+.td-content > h1:first-child,
+h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
+
+// 네비바 텍스트 — Gemini 상단 메뉴는 14px. 브랜드만 약간 키움
+.td-navbar {
+  .navbar-brand__name { font-size: 1.125rem; font-weight: 500; letter-spacing: -0.01em; }
+  // Roboto는 x-height가 작아 14px가 작아 보임 → 15px로 보정(Gemini 체감 크기)
+  .nav-link { font-size: 0.9375rem; font-weight: 400; }
+}
+
+// ── 네비바: 화이트 반투명 + 얇은 보더(홈 cover 위는 기존 투명 유지) ──
+.td-navbar:not(.td-navbar-cover) {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+
+  .nav-link.active { color: $primary; font-weight: 500; }
+}
+[data-bs-theme="dark"] .td-navbar:not(.td-navbar-cover) {
+  background: rgba(20, 22, 24, 0.85);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+// ── 검색: Gemini식 둥근 연회색 박스 ──
+.td-search__input {
+  border-radius: 2rem;
+  border: 1px solid var(--bs-border-color);
+  background-color: var(--bs-tertiary-bg);
+  padding-left: 2.4rem;
+}
+.td-search__input:focus {
+  background-color: var(--bs-body-bg);
+  box-shadow: 0 0 0 3px rgba($primary, 0.15);
+}
+
+// ── 우측 TOC: Gemini 14px + active는 색만(굵기 키우지 않음) ──
+.td-sidebar-toc {
+  font-size: 0.875rem;
+
+  .td-toc {
+    a {
+      border-left: 2px solid transparent;
+      padding-left: 0.75rem;
+      font-weight: 400;
+    }
+    a:hover { color: $primary; }
+    li.active > a,
+    a.active {
+      color: $primary;
+      background: none;
+      border-left-color: $primary;
+      font-weight: 500;
+    }
+  }
+}
+
+// ── 좌측 사이드바: Roboto 보정 15px + 굵기 정상화(항목 regular, 그룹헤더만 medium) ──
+.td-sidebar-nav {
+  font-size: 0.9375rem;
+
+  .td-sidebar-nav__section-title {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    letter-spacing: -0.01em;
+    margin-top: 0.4rem;
+  }
+  .td-sidebar-link {
+    padding-top: 0.18rem;
+    padding-bottom: 0.18rem;
+    font-weight: 400;
+  }
+  .td-sidebar-nav-active-item { color: $primary; font-weight: 500; }
+}
+
+// ── 본문 상단 Tags/Categories 배지: 화살표(clip-path) 제거 → 둥근 pill ──
+.taxonomy-term {
+  -webkit-clip-path: none;
+  clip-path: none;
+  border-radius: 1rem;
+  padding: 0.05rem 0.65rem;
+}
+
+// ── 우측 편집 액션(페이지 보기/편집/이슈 생성/프린트) 숨김 — Gemini식 미니멀 ──
+.td-page-meta { display: none; }
+
+// ── 우측 Tag Cloud 숨김 ──
+// Docsy는 taxonomyCloud=[] 를 falsy로 보고 오히려 전체 taxonomy를 렌더하고,
+// 빈 partial 오버라이드도 폴백되는 경우가 있어 SCSS로 확실히 숨긴다.
+// (본문 상단 Tags 배지 .taxonomy-terms-article 는 유지)
+.td-sidebar-toc .taxonomy-terms-cloud { display: none; }
+
+// ── 섹션 인덱스(하위 페이지 목록) 카드 제목 ──
+// Docsy는 항목 제목을 .section-index .entry h5 로 출력하는데, 본문 h5 축소(14px)의
+// 영향을 받아 작아지므로 카드 제목용 크기(18px)를 별도로 지정한다.
+.section-index .entry {
+  h5 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+
+    a { font-weight: 500; }
+  }
+}
+
+// ── 문서 본문 마감 톤(radius·그림자·transition·teal 액센트) ──
+// 라이트/다크 양쪽에서 동작하도록 var(--bs-*) 사용.
+.td-content {
+  // 코드블록 — 둥근 모서리 + 얇은 보더 + 부드러운 그림자
+  .highlight {
+    border-radius: $border-radius;
+    border: 1px solid var(--bs-border-color);
+    box-shadow: $box-shadow-sm;
+  }
+
+  // 본문 링크 — hover 색 전환
+  a:not(.btn) { transition: color 0.15s ease; }
+
+  // 본문 이미지 — 둥근 모서리 + 미묘한 그림자
+  img {
+    border-radius: $border-radius-sm;
+  }
+
+  // 인용구 — 좌측 teal 액센트 + 연한 배경
+  blockquote {
+    border-left: 3px solid $primary;
+    background: var(--bs-tertiary-bg);
+    border-radius: 0 $border-radius-sm $border-radius-sm 0;
+    padding: 0.6rem 1.2rem;
+  }
+
+  // 표 — header 강조 + row hover (radius는 border-collapse 때문에 생략)
+  table {
+    th { background: var(--bs-tertiary-bg); font-weight: 600; }
+    tbody tr { transition: background 0.12s ease; }
+    tbody tr:hover { background: var(--bs-tertiary-bg); }
+  }
+}
+
+// alert/pageinfo 박스 — 카드 톤(둥근 모서리)
+.td-content .alert,
+.pageinfo {
+  border-radius: $border-radius;
+}
+
+// 문서 내 primary 버튼 — pill·lift 톤
+.td-content .btn-primary {
+  border-radius: 2rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.td-content .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: $box-shadow;
+}
+
+// ── 홈 cover 히어로 — OpenChain KWG 톤(큰 디스플레이 타이틀 + gradient + 배지) ──
+.td-cover-block {
+  // 타이틀: 거대 디스플레이 + 그라데이션 텍스트(white → light blue → soft purple)
+  .display-1 {
+    font-size: clamp(2.6rem, 6vw, 4.25rem);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+    background: linear-gradient(120deg, #ffffff 35%, #bcd7ff 68%, #c3b1f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  // 한글 이름 — 둘째 줄, 작게(그라데이션 영향 차단)
+  .td-cover-title-ko {
+    display: block;
+    font-size: 0.46em;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    letter-spacing: -0.01em;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.72);
+  }
+  // 부제(lead) — OpenChain hero sub 톤
+  .lead p.lead {
+    font-size: $text-xl;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+  }
+}
+
+// 히어로 배지 — OpenChain "OpenChain Project" 링크 형태(pill, 반투명 + backdrop blur)
+.hero-badge {
+  display: inline-block;
+  padding: $space-2 $space-4;
+  margin-bottom: $space-4;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: $text-sm;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.hero-badge:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+  text-decoration: none;
+}

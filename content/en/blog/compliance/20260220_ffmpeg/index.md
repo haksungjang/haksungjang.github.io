@@ -19,7 +19,7 @@ resources:
 정리해 보았습니다. 이 사례는 단순히 한 기업의 실수가 아니라, 하드웨어 벤더(SoC Vendor)가 
 제공하는 SDK/BSP를 그대로 사용할 때 발생할 수 있는 공급망 리스크를 보여줍니다.
 
-![](./featured-image.jpg)
+![Rockchip과 FFmpeg의 라이선스 분쟁을 상징하는 일러스트](./featured-image.jpg)
 
 ## 1. 사건 개요: 2025년 GitHub 리포지토리 강제 중단
 

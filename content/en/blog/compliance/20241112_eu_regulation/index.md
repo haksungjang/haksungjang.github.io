@@ -68,7 +68,7 @@ PLD는 2024년 11월에 발표될 예정이며, 2년 후인 2026년부터 벌금
 
 ## 2. Cyber Resilience Act (CRA)
 
-![](./featured_CRA.png)
+![EU 사이버복원력법(CRA) 등 3대 디지털 규제 대표 이미지](./featured_CRA.png)
 
 ### 2.1 개요
 

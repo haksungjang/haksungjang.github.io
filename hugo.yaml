@@ -88,6 +88,12 @@ markup:
 outputs:
   section: [HTML, print, RSS]
 
+# Google Analytics 4. 측정 ID가 설정되면 Docsy가 gtag.js를 자동 삽입한다.
+# 프로덕션 빌드(hugo)에서만 동작하고, 로컬(hugo server)에서는 추적되지 않는다.
+services:
+  googleAnalytics:
+    id: G-4QCM5VHF7M
+
 params:
   # Enable Mermaid diagram rendering for fenced ```mermaid code blocks.
   # fontSize/themeVariables는 좁은 폭에서 한글 가독성을 위해 키운 값.

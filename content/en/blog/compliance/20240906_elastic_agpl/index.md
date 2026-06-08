@@ -19,7 +19,7 @@ resources:
 Elasticsearch는 오픈소스 프로젝트로 시작했으며, 그동안 여러 번의 라이선스 정책 변경을 겪었습니다. 처음에는 **Apache 2.0 라이선스** 하에 배포되었지만, 2021년 Elastic은 **Elastic License 2.0**과 **Server Side Public License**로 라이선스를 변경했습니다. 이후 2024년 8월 30일에는 다시 **AGPL-3.0**을 추가하는 발표([Elasticsearch is Open Source, Again](https://www.elastic.co/kr/blog/elasticsearch-is-open-source-again))를 하면서 주목을 받고 있습니다.
 
 
-![](./featured_original-elastic-logos.png)
+![Elasticsearch AGPL 라이선스 변경 대표 이미지](./featured_original-elastic-logos.png)
 
 이러한 변화는 오픈소스 커뮤니티뿐만 아니라 이를 사용하는 기업들에도 큰 영향을 미치고 있습니다. 이번 글에서는 Elasticsearch가 왜 다시 라이선스 정책을 변경했는지, 그리고 이를 사용하는 기업들이 어떻게 대응해야 하는지 살펴보겠습니다.
 

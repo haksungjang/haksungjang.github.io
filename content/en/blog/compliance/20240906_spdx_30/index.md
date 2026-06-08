@@ -17,7 +17,7 @@ resources:
 
 SPDX(Software Package Data Exchange)는 소프트웨어 구성 요소, 라이선스, 저작권 및 보안 정보를 표준화된 방식으로 전달하기 위한 오픈 표준입니다. SPDX 3.0은 이 표준의 최신 버전으로, 2024년 4월에 출시되었으며 소프트웨어 공급망의 투명성과 보안을 크게 향상시키는 중요한 업데이트입니다[2].
 
-![](./featured_SPDX30.png)
+![SPDX 3.0 대표 이미지](./featured_SPDX30.png)
 
 ### SPDX의 정의와 목적
 
