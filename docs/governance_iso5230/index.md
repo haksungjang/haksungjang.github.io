@@ -1,0 +1,44 @@
+# 국제표준(ISO/IEC 5230)에 기반한 기업 오픈소스 거버넌스 구축 가이드
+
+> 오픈소스 국제 표준인 ISO/IEC 5230에 기반한 기업의 오픈소스 거버넌스 체계 구축 방법을 설명한다.
+
+---
+
+LLMS index: [llms.txt](/llms.txt)
+
+---
+
+<div class="pageinfo pageinfo-primary">
+
+
+ISO/IEC 5230은 오픈소스 컴플라이언스를 위한 국제 표준으로 소프트웨어를 배포하는 기업이 올바른 오픈소스의 활용을 위해 준수해야 할 최소한의 핵심 요구사항을 정의하였다. 여기에서는 ISO/IEC 5230에 대해 간단히 소개하고, 이를 기반으로 기업이 어떻게 오픈소스 거버넌스 체계를 구축할 수 있을지에 대하여 설명한다. 
+
+이 내용은 2021년 한국저작권위원회 오픈소스 전문가 커뮤니티 연구 주제로 선정하여 연구한 결과이다. 
+
+**Author : 장학성 (haksung@sktelecom.com)**
+
+
+</div>
+
+
+## References
+
+이 가이드는 다음 자료를 참고하였습니다.
+
+1. [OpenChain Project Website](https://www.openchainproject.org/)
+2. [OpenChain Open Source Policy Template](https://www.openchainproject.org/resources)
+3. [Open Source Compliance In The Enterprise](https://www.linuxfoundation.org/compliance-and-security/2018/12/open-source-compliance-in-the-enterprise/)
+
+---
+
+Section pages:
+
+- [1. ISO/IEC 5230 살펴보기](/docs/governance_iso5230/1-whatisopenchain/)
+- [2. 필수 구성 요소](/docs/governance_iso5230/2-essential_elements/)
+- [3. 조직 (담당자)](/docs/governance_iso5230/3-teams/)
+- [4. 정책](/docs/governance_iso5230/4-policy/)
+- [5. 프로세스](/docs/governance_iso5230/5-process/)
+- [6. 도구](/docs/governance_iso5230/6-tool/)
+- [7. 교육/평가](/docs/governance_iso5230/7-training/)
+- [8. 준수 선언](/docs/governance_iso5230/8-conforming/)
+- [Appendix](/docs/governance_iso5230/appendix/)
