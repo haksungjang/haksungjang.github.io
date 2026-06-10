@@ -1,0 +1,47 @@
+{{- /*
+  Hugo 내장 rss.xml을 대체하는 커스텀 RSS 템플릿.
+  - 홈 피드(index.xml)는 blog·research 글만 담는다. (docs 페이지는 date가 없어 0001년으로 섞이던 문제 제거)
+  - <content:encoded>로 본문 전문을 포함한다. 피드 리더와 검색엔진·AI 수집기가 전문을 쓸 수 있다.
+  - 글 수 제한은 hugo.yaml의 services.rss.limit 를 따른다.
+*/ -}}
+{{- $pages := slice -}}
+{{- if .IsHome -}}
+  {{- $pages = (where site.RegularPages "Section" "in" (slice "blog" "research")).ByDate.Reverse -}}
+{{- else -}}
+  {{- $pages = .RegularPages.ByDate.Reverse -}}
+{{- end -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+  {{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ site.Params.description }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with $pages }}{{ with index . 0 }}
+    <lastBuildDate>{{ (.PublishDate | default .Lastmod).Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}{{ end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ (.PublishDate | default .Lastmod).Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      {{- with .Params.author }}
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">{{ . }}</dc:creator>
+      {{- end }}
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Description | default .Summary | plainify | transform.XMLEscape | safeHTML }}</description>
+      <content:encoded><![CDATA[{{ .Content }}]]></content:encoded>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

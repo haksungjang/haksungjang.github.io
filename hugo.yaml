@@ -4,8 +4,9 @@ title: 장학성 | Haksung
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
 # Language settings
+# 콘텐츠 폴더 이름(content/en)과 언어 키(ko)는 무관 — 폴더는 그대로 둔다.
 contentDir: content/en
-defaultContentLanguage: en
+defaultContentLanguage: ko
 defaultContentLanguageInSubdir: false
 # Useful when translating.
 enableMissingTranslationPlaceholders: true
@@ -43,12 +44,17 @@ imaging:
   anchor: smart
 
 # Language configuration
+# 콘텐츠가 사실상 전부 한국어이므로 ko로 선언한다.
+# html lang=ko, og:locale=ko_KR, RSS <language>ko-KR — 검색엔진·AI가 한국어 사이트로 인식한다.
 languages:
-  en:
-    languageName: English
+  ko:
+    languageName: 한국어
+    languageCode: ko-KR
     title: Haksung
     params:
       description: Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤
+      time_format_default: 2006-01-02
+      time_format_blog: 2006-01-02
   # cSpell:disable
   # 'no':
   #   languageName: Norsk
@@ -84,17 +90,28 @@ markup:
 
 # Everything below this are Site Params
 
-# Comment out if you don't want the "print entire section" link enabled.
+# markdown·LLMS 출력은 Docsy 내장 템플릿(all.md, index.llms.txt)을 사용한다.
+# /llms.txt 와 페이지별 index.md 가 생성되어 AI 크롤러가 마크다운 원문을 수집할 수 있다.
 outputs:
-  section: [HTML, print, RSS]
+  home: [HTML, RSS, markdown, LLMS]
+  section: [HTML, print, RSS, markdown]
+  page: [HTML, markdown]
 
 # Google Analytics 4. 측정 ID가 설정되면 Docsy가 gtag.js를 자동 삽입한다.
 # 프로덕션 빌드(hugo)에서만 동작하고, 로컬(hugo server)에서는 추적되지 않는다.
 services:
   googleAnalytics:
     id: G-4QCM5VHF7M
+  rss:
+    limit: 50
 
 params:
+  # 네이버 서치어드바이저·Bing 웹마스터 소유 확인 메타태그 값.
+  # 각 서비스에 사이트를 등록하면 받는 content 값을 넣는다.
+  # head 출력은 layouts/_partials/hooks/head-end.html 에서 처리한다.
+  naver_site_verification: "0f8fd1e446e52bf05a391ca517c84114493b21ce"
+  # bing_site_verification: ""
+
   # Enable Mermaid diagram rendering for fenced ```mermaid code blocks.
   # fontSize/themeVariables는 좁은 폭에서 한글 가독성을 위해 키운 값.
   mermaid:

@@ -51,3 +51,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+
+      # 배포 후 IndexNow로 검색엔진(Bing·네이버 등)에 변경 알림.
+      # 키는 static/<키>.txt 로 사이트에 게시되어 있고,
+      # 저장소 Settings → Secrets and variables → Actions → Variables 에 INDEXNOW_KEY 로 등록한다.
+      - name: Ping IndexNow
+        if: ${{ github.ref == 'refs/heads/master' && vars.INDEXNOW_KEY != '' }}
+        run: |
+          curl -s "https://api.indexnow.org/indexnow?url=https://haksungjang.github.io/&key=${{ vars.INDEXNOW_KEY }}"

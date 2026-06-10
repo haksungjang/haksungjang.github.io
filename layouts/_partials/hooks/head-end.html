@@ -11,3 +11,62 @@
 {{- /* 커스텀 SVG favicon — "H" 모노그램. 우선순위가 높아 데스크톱 탭 아이콘이 된다.
    apple-touch/android PNG는 Docsy 기본(favicons partial)이 폴백으로 유지된다. */ -}}
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+
+{{- /* ---------- SEO: 검색엔진 소유 확인 + canonical + JSON-LD ---------- */ -}}
+{{ with site.Params.naver_site_verification }}<meta name="naver-site-verification" content="{{ . }}">{{ end }}
+{{ with site.Params.bing_site_verification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- $person := dict
+  "@type" "Person"
+  "name" "장학성"
+  "alternateName" "Haksung Jang"
+  "url" site.Home.Permalink
+  "jobTitle" "Open Source Program Manager"
+  "worksFor" (dict "@type" "Organization" "name" "SK telecom")
+  "sameAs" (slice
+    "https://github.com/haksungjang"
+    "https://linkedin.com/in/haksung"
+    "https://twitter.com/haksungjang"
+    "https://www.facebook.com/haksung.jang")
+-}}
+
+{{- if .IsHome }}
+<script type="application/ld+json">{{ dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "name" site.Title
+  "url" site.Home.Permalink
+  "description" site.Params.description
+  "inLanguage" "ko-KR"
+  "author" $person
+  | jsonify | safeJS }}</script>
+<script type="application/ld+json">{{ merge $person (dict "@context" "https://schema.org") | jsonify | safeJS }}</script>
+{{- else if .IsPage }}
+{{- /* blog 글은 BlogPosting, docs·research 등 나머지 글은 TechArticle */ -}}
+{{- $type := cond (eq .Section "blog") "BlogPosting" "TechArticle" -}}
+{{- $ld := dict
+  "@context" "https://schema.org"
+  "@type" $type
+  "headline" .Title
+  "description" (.Description | default .Summary | plainify | truncate 300)
+  "url" .Permalink
+  "inLanguage" "ko-KR"
+  "author" $person
+  "mainEntityOfPage" .Permalink
+-}}
+{{- /* date가 없는 docs 페이지는 0001년이 나오므로 가드한다 */ -}}
+{{- with .PublishDate }}{{ if gt .Year 1 }}{{ $ld = merge $ld (dict "datePublished" (.Format "2006-01-02")) }}{{ end }}{{ end -}}
+{{- with .Lastmod }}{{ if gt .Year 1 }}{{ $ld = merge $ld (dict "dateModified" (.Format "2006-01-02")) }}{{ end }}{{ end -}}
+{{- with .Params.tags }}{{ $ld = merge $ld (dict "keywords" (delimit . ", ")) }}{{ end }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{- $crumbs := slice -}}
+{{- $pos := 1 -}}
+{{- range .Ancestors.Reverse -}}
+  {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos
+      "name" (cond .IsHome site.Title .Title) "item" .Permalink) -}}
+  {{- $pos = add $pos 1 -}}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs | jsonify | safeJS }}</script>
+{{- end }}

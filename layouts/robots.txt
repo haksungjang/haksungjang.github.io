@@ -1,0 +1,72 @@
+# enableRobotsTXT: true 이면 Hugo가 static/robots.txt 대신 이 템플릿을 사용한다.
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# 네이버 검색 크롤러
+User-agent: Yeti
+Allow: /
+
+# AI assistants / AI search — 생성형 AI 노출을 위해 명시적으로 허용
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Everyone else
+User-agent: *
+Allow: /
+# Docsy print 출력은 본문과 중복(이미 noindex)이라 크롤 예산만 아낀다
+Disallow: /_print/
+
+Sitemap: {{ "sitemap.xml" | absURL }}
