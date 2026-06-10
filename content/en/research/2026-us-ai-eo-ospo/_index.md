@@ -2,7 +2,6 @@
 title: "미국 AI 행정명령(2026-06-02)이 기업 오픈소스 관리자에게 의미하는 것"
 linkTitle: "미국 AI 행정명령과 오픈소스 관리"
 date: 2026-06-10
-draft: true
 weight: 10
 type: docs
 description: >-
