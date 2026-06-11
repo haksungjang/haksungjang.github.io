@@ -29,20 +29,17 @@ LLMS index: [llms.txt](/llms.txt)
           </h1>
         <div class="pt-3 lead">
           
+<p class="lead mt-1">Open Source Program Manager at SK telecom </p>
+<p class="lead mt-1">SK텔레콤 오픈소스 매니저 장학성</p>
+
+<div class="mt-4">
 <a class="btn btn-lg btn-primary me-3 mb-3" href="/docs/">
   Guide 보기 <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-outline-light me-3 mb-3" href="/research/">
   Research 보기 <i class="fas fa-book ms-2"></i>
 </a>
-
-<p class="lead mt-1">Open Source Program Manager at SK telecom </p>
-<p class="lead mt-1">SK텔레콤 오픈소스 매니저 장학성</p>
-
-
-
-<a class="btn btn-link text-info" href="#td-block-1" aria-label="더 읽기"><i class="fa-solid fa-circle-chevron-down" style="font-size: 400%"></i></a>
-
+</div>
 </div>
       </div>
     </div>
