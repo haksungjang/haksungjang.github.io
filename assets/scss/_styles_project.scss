@@ -246,6 +246,19 @@ h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
   }
+
+  // 히어로 CTA 버튼 — pill·hover lift(hero는 .td-content 밖이라 별도 정의).
+  // 다크 오버레이 위 대비: primary는 채움, 보조는 outline-light.
+  .btn {
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: $box-shadow;
+  }
+  .btn-outline-light:hover { background: rgba(255, 255, 255, 0.12); }
 }
 
 // 히어로 배지 — OpenChain "OpenChain Project" 링크 형태(pill, 반투명 + backdrop blur)
@@ -270,4 +283,67 @@ h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
   border-color: rgba(255, 255, 255, 0.45);
   color: #fff;
   text-decoration: none;
+}
+
+// ── Research 목록 카드(research 섹션 전용 — layouts/research/list.html) ──
+// 발행일·갱신일·태그를 함께 보여 스캔성을 높인다. 색은 var(--bs-*)로 다크 자동 대응.
+.research-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-5;
+  margin-top: $space-5;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.research-card {
+  display: block;
+  padding: $space-5;
+  border: 1px solid var(--bs-border-color);
+  border-radius: $border-radius;
+  background: var(--bs-body-bg);
+  box-shadow: $box-shadow-sm;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.research-card:hover {
+  transform: translateY(-2px);
+  box-shadow: $box-shadow;
+  border-color: rgba($primary, 0.4);
+  text-decoration: none;
+}
+.research-card__title {
+  font-size: $text-lg;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  margin: 0 0 $space-2;
+  color: var(--bs-body-color);
+}
+.research-card:hover .research-card__title { color: $primary; }
+.research-card__desc {
+  font-size: $text-sm;
+  line-height: 1.6;
+  color: var(--bs-secondary-color);
+  margin: 0 0 $space-3;
+}
+.research-card__meta {
+  font-size: $text-xs;
+  color: var(--bs-secondary-color);
+  margin-bottom: $space-2;
+
+  .research-card__updated { margin-left: $space-1; }
+}
+.research-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-1;
+}
+.research-card__tag {
+  font-size: $text-xs;
+  padding: 0.05rem 0.55rem;
+  border-radius: 1rem;
+  background: var(--bs-tertiary-bg);
+  color: var(--bs-secondary-color);
 }
