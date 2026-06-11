@@ -11,10 +11,11 @@
 
 // ── 본문 조판: Gemini식 여유로운 가독성 + 제목 크기/굵기 정상화 ──
 .td-content {
-  line-height: 1.7;
+  line-height: 1.65;
+  letter-spacing: -0.011em;   // sktelecom 본문 자간과 동일
 
   p,
-  li { line-height: 1.7; }
+  li { line-height: 1.65; }
   > p { margin-bottom: 1.1rem; }
 
   // 타입 스케일(16px base): h1 28 / h2 22 / h3 18 / h4 16
