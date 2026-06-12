@@ -146,13 +146,13 @@ EU 인공지능법(Regulation (EU) 2024/1689)이 첫 번째 축입니다. 단계
 
 세 번째 축인 중국 글로벌 AI 거버넌스 이니셔티브는 2023년 10월 베이징의 일대일로 국제협력 정상포럼 계기에 발표된 정책 선언입니다. EU 인공지능법이나 히로시마 프로세스와 달리 구체적 보고 양식이나 컴플라이언스 산출물을 정의하지 않아, AI SBOM 관점에서 직접 대응되는 의무 항목은 현재 없습니다. 가이드는 이를 신흥 AI 규제의 한 사례로 병렬 언급하는 수준입니다.
 
-형식 표준도 움직였습니다. SPDX는 2024년 4월 SPDX 3.0으로 AI·데이터셋 프로파일을 도입했고, CycloneDX는 2023년 6월 v1.5에서 ML-BOM을 도입한 뒤 2025년 10월 v1.7(ECMA-424 2판)을 1.x 계열의 마지막 릴리스로 냈습니다<a id="b6-ref-2"></a>[B6](#b6)·<a id="b5-ref-2"></a>[B5](#b5). 다만 자동 생성 도구는 아직 성숙 단계가 아니어서, OWASP가 2025년 AIBOM 프로젝트를 출범해 SPDX·CycloneDX가 AI 고유 사용 사례를 충분히 다루지 못하는 공백을 평가하고 있습니다<a id="e6-ref-1"></a>[E6](#e6).
+형식 표준도 움직였습니다. SPDX는 2024년 4월 SPDX 3.0으로 AI·데이터셋 프로파일을 도입했고, CycloneDX는 2023년 6월 v1.5에서 ML-BOM을 도입한 뒤 2025년 10월 v1.7(ECMA-424 2판)을 1.x 계열의 마지막 릴리스로 냈습니다<a id="b6-ref-2"></a>[B6](#b6)·<a id="b5-ref-2"></a>[B5](#b5). 생성 도구도 등장했습니다. OWASP는 2025년 AIBOM 생성기(OWASP AIBOM Generator)를 공개해 허깅페이스(Hugging Face) 모델에서 CycloneDX 형식의 AI SBOM을 자동 생성하고 완전성 점수를 매기며<a id="b7-ref-1"></a>[B7](#b7), CycloneDX의 cdxgen도 AI BOM 전용 모드를 지원합니다<a id="b8-ref-1"></a>[B8](#b8). 다만 이들은 모델 카드에 적힌 라이선스를 옮겨 담을 뿐, 그 정확성까지 보장하지는 못해, OWASP AIBOM 프로젝트는 SPDX·CycloneDX가 AI 고유 사용 사례를 충분히 다루지 못하는 공백을 함께 평가하고 있습니다<a id="e6-ref-1"></a>[E6](#e6).
 
 ## 5. 의의와 한계
 
 이 가이드의 가치는 "AI 공급망 컴플라이언스 프로그램이 갖춰야 할 최소 요구사항"을 ISO 국제표준으로 검증된 방법론 위에 명시했다는 점에 있습니다. 검증 자료와 근거를 모든 절에 붙이는 5230식 구조 덕분에, 조직은 각 요구사항을 자체 점검표로 바꿔 "우리에게 이 산출물이 있는가"를 직접 확인할 수 있습니다. 형식을 SPDX·CycloneDX 등으로 열어두고 절차의 구체를 조직에 위임한 비규범적 설계는, 규제가 관할 구역마다 갈라지는 환경에서 공통 기준점을 제공하는 실용적 선택입니다.
 
-한계도 분명합니다. 가이드가 요구하는 라이선스와 투명성 추적이 현실에서 어렵다는 점입니다. 모델이 다운스트림으로 전파되며 의무가 탈락하는 라이선스 드리프트(license drift)를 정량화한 한 연구는, 모델에서 애플리케이션으로 넘어가는 전이의 약 35.5%가 제한 조항을 잃고 허용 라이선스로 재지정되며, 머신러닝 고유의 의무는 다운스트림 통합 이후 0.4%만 보존된다고 보고합니다<a id="e4-ref-1"></a>[E4](#e4). 책임 있는 AI 라이선스(Responsible AI License, RAIL) 계열과 Llama 커뮤니티 라이선스는 행동 사용 제한(behavioral use clause)을 담아 오픈소스 이니셔티브(Open Source Initiative, OSI)의 오픈소스 정의를 충족하지 못하며, 이런 비표준 라이선스의 준수 여부를 추적할 도구가 아직 부족합니다<a id="e8-ref-1"></a>[E8](#e8)·<a id="e5-ref-1"></a>[E5](#e5). 가이드 3.5절이 코드를 넘어 가중치·데이터셋 라이선스까지 검토하도록 요구한 것은 이 현실을 반영한 설계이지만, 자동 생성·검증 도구가 미성숙한 2026년 현재로서는 요구와 실행 가능성 사이에 간극이 남습니다.
+한계도 분명합니다. 가이드가 요구하는 라이선스와 투명성 추적이 현실에서 어렵다는 점입니다. 모델이 다운스트림으로 전파되며 의무가 탈락하는 라이선스 드리프트(license drift)를 정량화한 한 연구는, 모델에서 애플리케이션으로 넘어가는 전이의 약 35.5%가 제한 조항을 잃고 허용 라이선스로 재지정되며, 머신러닝 고유의 의무는 다운스트림 통합 이후 0.4%만 보존된다고 보고합니다<a id="e4-ref-1"></a>[E4](#e4). 책임 있는 AI 라이선스(Responsible AI License, RAIL) 계열과 Llama 커뮤니티 라이선스는 행동 사용 제한(behavioral use clause)을 담아 오픈소스 이니셔티브(Open Source Initiative, OSI)의 오픈소스 정의를 충족하지 못하며, 이런 비표준 라이선스의 준수 여부를 추적할 도구가 아직 부족합니다<a id="e8-ref-1"></a>[E8](#e8)·<a id="e5-ref-1"></a>[E5](#e5). 가이드 3.5절이 코드를 넘어 가중치·데이터셋 라이선스까지 검토하도록 요구한 것은 이 현실을 반영한 설계입니다. AI SBOM을 자동으로 생성하는 도구는 이미 여럿 나왔지만, 생성된 명세서의 라이선스가 정확한지, 비표준 라이선스의 사용 제한을 지키는지 검증하는 일은 아직 사람과 정책의 몫입니다. 2026년 현재 요구와 실행 가능성 사이에 남은 것은 생성의 간극이 아니라 검증의 간극입니다.
 
 가이드가 스스로를 살아있는 문서로 규정하고 Version 1이라는 번호로 후속 개정을 전제한 점도 한계이자 특징입니다. 규제와 형식 표준이 빠르게 바뀌는 영역인 만큼 가이드 역시 고정된 명세가 아니며, 조사 기준일 현재 차기 개정 일정은 공개되지 않았습니다.
 
@@ -199,6 +199,10 @@ EU 인공지능법(Regulation (EU) 2024/1689)이 첫 번째 축입니다. 단계
 <a id="b5"></a>**B5.** CycloneDX. *Capabilities — Machine Learning Bill of Materials (ML-BOM)*. <https://cyclonedx.org/capabilities/mlbom/> (접속: 2026-06-12). — ML-BOM 규격. v1.5(2023-06) 도입부터 v1.7(2025-10, ECMA-424 2판)까지의 이력. <a href="#b5-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
 
 <a id="b6"></a>**B6.** The Linux Foundation (2024-04-16). *SPDX 3.0 Revolutionizes Software Management in Systems with Enhanced Functionality and Streamlined Use Cases* (보도자료, Seattle). <https://www.linuxfoundation.org/press/spdx-3-revolutionizes-software-management-in-systems-with-enhanced-functionality-and-streamlined-use-cases> (접속: 2026-06-12). — SPDX 3.0 발표일(2024-04-16)과 AI 프로파일 신규 사용 사례의 1차 근거. <a href="#b6-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
+
+<a id="b7"></a>**B7.** OWASP Gen AI Security Project. *OWASP AIBOM Generator*. <https://genai.owasp.org/resource/owasp-aibom-generator/> (접속: 2026-06-12). — 허깅페이스 모델에서 CycloneDX 형식 AI SBOM을 자동 생성하고 완전성 점수를 매기는 공개 도구의 1차 근거. <a href="#b7-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
+
+<a id="b8"></a>**B8.** cdxgen Project (OWASP CycloneDX). *AI/ML-BOM generation (AI_BOM.md)*. GitHub `cdxgen/cdxgen`. <https://github.com/cdxgen/cdxgen/blob/master/docs/AI_BOM.md> (접속: 2026-06-12). — cdxgen의 AI BOM 전용 모드(허깅페이스 URL·Modelfile·GGUF 입력) 사용법의 1차 근거. <a href="#b8-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
 
 ### C. 규제·거버넌스
 
