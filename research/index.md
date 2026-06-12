@@ -23,6 +23,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 Section pages:
 
+- [OpenChain AI SBOM 컴플라이언스 관리 가이드: AI 공급망 컴플라이언스 프로그램의 최소 요구사항](/research/2026-openchain-ai-sbom/): 리눅스 재단 산하 오픈체인 프로젝트의 AI 워크그룹이 작성한 AI SBOM 컴플라이언스 관리 가이드를 1차 출처로 분석한다. ISO/IEC 5230 방법론을 AI 공급망으로 확장해 컴플라이언스 프로그램이 갖춰야 할 최소 요구사항을 정의한 문서의 구조와 요구사항, 규제 동향, 의의와 한계를 다룬다.
 - [미국 AI 행정명령(2026-06-02)이 기업 오픈소스 관리자에게 의미하는 것](/research/2026-us-ai-eo-ospo/): 2026년 6월 2일 서명된 미국 AI 행정명령(Promoting Advanced Artificial Intelligence Innovation and Security)을 1차 출처로 분석한다. AI 사이버보안 클리어링하우스와 자발적 프런티어 모델 체계가 기업 오픈소스 관리자에게 갖는 의미, EU CRA 의무 보고와의 대비, 지금 할 일과 지켜볼 일을 다룬다.
 - [EU 오픈소스 전략: 기술 주권을 위한 오픈소스의 제도화](/research/2026-eu-open-source-strategy/): 유럽연합 집행위원회가 2026년 6월 3일 발표한 EU 오픈소스 전략(COM(2026) 503)을 1차 출처로 정리한다. 네 가지 목표와 7년 20억 유로, 거버넌스 구조, 시민사회 비판, 한국 공공·기업 실무 시사점을 다룬다.
 - [EU 사이버 복원력법(CRA) 취약점 보고 의무 — 2026-09-11 시행 대비 조사보고서](/research/2026-eu-cra-vulnerability-reporting/): EU 사이버 복원력법(CRA)은 2026년 9월 11일부터 제14조 보고 의무를 시행한다. 한국 기업이 24시간·72시간·14일 통지 시한과 SBOM·적합성 평가에 어떻게 대비해야 하는지 1차 출처 중심으로 정리한다.
