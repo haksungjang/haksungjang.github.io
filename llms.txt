@@ -15,7 +15,7 @@
 - [국제표준(ISO/IEC 5230)에 기반한 기업 오픈소스 거버넌스 구축 가이드](https://haksungjang.github.io/docs/governance_iso5230/index.md)
 - [오픈소스 보안 보증: ISO/IEC 18974 기업 도입 및 인증 가이드](https://haksungjang.github.io/docs/isoiec18974_guide/index.md)
 - [OpenChain을 활용한 기업 오픈소스 컴플라이언스 가이드](https://haksungjang.github.io/docs/openchain/index.md)
-- [인수합병(M&A)에서의 오픈 소스 감사](https://haksungjang.github.io/docs/audit_in_ma/index.md)
+- [인수합병(M&A)에서의 오픈소스 감사](https://haksungjang.github.io/docs/audit_in_ma/index.md)
 - [SOFTWARE BILL OF MATERIALS (SBOM)에 대한 기술 가이드라인 (인도 정부 발간)](https://haksungjang.github.io/docs/sbom_guide/index.md)
 - [AI SBOM 컴플라이언스 가이드](https://haksungjang.github.io/docs/ai-sbom_guide/index.md)
 - [Templates](https://haksungjang.github.io/docs/templates/index.md)
