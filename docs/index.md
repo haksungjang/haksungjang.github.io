@@ -12,5 +12,6 @@ Section pages:
 - [OpenChain을 활용한 기업 오픈소스 컴플라이언스 가이드](/docs/openchain/): OpenChain 규격은 오픈소스 컴플라이언스를 위한 유일한 국제 표준(ISO)이다. 이를 활용하여 기업이 오픈소스 컴플라이언스 수준을 높이기 위한 방법을 설명한다.
 - [인수합병(M&A)에서의 오픈 소스 감사](/docs/audit_in_ma/): 인수합병(M&A) 거래에서 오픈소스 감사를 위한 개요와 실무 가이드를 제공한다.
 - [SOFTWARE BILL OF MATERIALS (SBOM)에 대한 기술 가이드라인 (인도 정부 발간)](/docs/sbom_guide/): Technical Guidelines on Software Bill of Materials (SBOM)
+- [AI SBOM 컴플라이언스 가이드](/docs/ai-sbom_guide/): OpenChain AI SBOM 컴플라이언스 가이드(Version 1.0)의 요구사항을 조항별로 풀어 설명하는 기업 실천 가이드다.
 - [Templates](/docs/templates/)
 - [Tools](/docs/tools/)

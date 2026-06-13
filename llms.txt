@@ -17,6 +17,7 @@
 - [OpenChain을 활용한 기업 오픈소스 컴플라이언스 가이드](https://haksungjang.github.io/docs/openchain/index.md)
 - [인수합병(M&A)에서의 오픈 소스 감사](https://haksungjang.github.io/docs/audit_in_ma/index.md)
 - [SOFTWARE BILL OF MATERIALS (SBOM)에 대한 기술 가이드라인 (인도 정부 발간)](https://haksungjang.github.io/docs/sbom_guide/index.md)
+- [AI SBOM 컴플라이언스 가이드](https://haksungjang.github.io/docs/ai-sbom_guide/index.md)
 - [Templates](https://haksungjang.github.io/docs/templates/index.md)
 - [Tools](https://haksungjang.github.io/docs/tools/index.md)
 
