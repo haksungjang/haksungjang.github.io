@@ -1,0 +1,89 @@
+---
+title: "SBOM의 최소 요소"
+linkTitle: "최소 요소"
+weight: 10
+type: docs
+categories: ["guide"]
+tags: ["NTIA", "CISA", "최소 요소", "데이터 필드"]
+description: >
+  NTIA 2021 최소 요소에서 CISA 2025 개정 초안까지, SBOM에 반드시 담아야 할 데이터 필드를 정리합니다.
+---
+
+형식을 정했다면 그 형식 안에 무엇을 반드시 담아야 하는지가 다음 질문입니다. 이 최저선을 정의한
+문서가 미국의 최소 요소(Minimum Elements) 계열입니다. 권고이긴 하지만 연방 조달의 사실상 기준이고,
+EU와 다른 관할권의 SBOM 요건도 대체로 이 골격을 참조합니다.
+
+## 계보: NTIA 2021에서 CISA 2025로
+
+미국 통신정보청(National Telecommunications and Information Administration, NTIA)은 행정명령 14028의
+위임에 따라 2021년 7월 *The Minimum Elements For a Software Bill of Materials (SBOM)*를 발행했습니다.
+이 문서는 최소 요소를 세 범주로 정리했습니다. 구성요소별로 추적할 데이터 필드, 기계 판독 형식을
+요구하는 자동화 지원, 그리고 생성 빈도와 깊이 등을 다루는 관행과 프로세스입니다.
+
+이후 커뮤니티 작업의 주관은 사이버보안·인프라보안국(Cybersecurity and Infrastructure Security
+Agency, CISA)으로 옮겨갔고, 두 갈래의 개정이 나왔습니다. 하나는 속성을 정의하는 참조 문서인
+*Framing Software Component Transparency*의 3판(2024-09)으로, 기준 속성에 라이선스(License)와
+저작권 고지(Copyright Notice)를 추가했습니다. 다른 하나는 최소 요소 문서 자체의 개정으로, CISA는
+2025년 8월 *2025 Minimum Elements for a Software Bill of Materials*를 공개 의견수렴 초안으로 내놓았고
+의견수렴은 2025년 10월 3일 마감됐습니다. 2026년 6월 기준 이 개정안은 아직 초안 상태이며 최종본
+발표일은 확인되지 않았습니다.
+
+## NTIA 2021의 데이터 필드와 세 범주
+
+NTIA 2021 최소 요소가 정한 구성요소별 데이터 필드는 일곱 개입니다.
+
+| 데이터 필드 | 내용 |
+|---|---|
+| 공급자명(Supplier Name) | 구성요소를 제공한 주체 |
+| 구성요소명(Component Name) | 구성요소 또는 라이브러리의 이름 |
+| 버전(Version) | 구성요소의 버전 식별자 |
+| 기타 고유 식별자(Other Unique Identifiers) | PURL, CPE 등 식별자 |
+| 의존 관계(Dependency Relationship) | 상위 구성요소와의 포함 관계 |
+| SBOM 작성자(Author of SBOM Data) | 이 SBOM을 생성한 주체 |
+| 타임스탬프(Timestamp) | 생성 일시 |
+
+세 범주는 다음과 같습니다.
+
+- **데이터 필드**: 위 일곱 항목으로, 구성요소를 추적·식별하기 위한 기본 정보입니다.
+- 자동화 지원: 자동 생성과 기계 판독성을 위한 표준 형식으로 SPDX, CycloneDX, SWID를 명시했습니다.
+- 관행과 프로세스: 생성 빈도, 깊이, 알려진 미상(known unknowns)의 처리, 배포와 전달, 접근 통제,
+  오류 수용 방식을 다룹니다.
+
+## CISA 2025 초안이 더한 것
+
+CISA 2025 최소 요소 초안은 도구가 성숙한 현실을 반영해 데이터 필드를 늘렸습니다. 신규로 추가된
+핵심 요소는 네 가지입니다.
+
+| 신규 필드 | 목적 |
+|---|---|
+| 구성요소 해시(Component Hash) | 암호학적 해시로 무결성과 정확한 식별을 보장 |
+| 라이선스(License) | 법적 컴플라이언스 추적의 1차 데이터 |
+| 도구명(Tool Name) | 어떤 도구로 생성했는지 기록 |
+| 생성 맥락(Generation Context) | 수명주기의 어느 단계에서 만들었는지 기록 |
+
+기존 항목도 손질했습니다. SBOM 작성자(SBOM Author)와 소프트웨어 생산자(Software Producer)의 역할을
+구분하고, "기타 고유 식별자"를 "소프트웨어 식별자(Software Identifiers)"로 갱신했으며, 별도였던
+접근 통제 요소는 배포·전달 항목으로 통합했습니다. 라이선스가 Framing 3판에서 기준 속성으로 들어오고
+2025 초안에서 데이터 필드로 굳어진 흐름은, SBOM이 보안 인벤토리를 넘어 오픈소스 라이선스
+컴플라이언스의 1차 데이터로 자리 잡고 있음을 보여줍니다. 도구명과 생성 맥락, 해시가 함께 들어온
+배경에는 "신뢰할 수 없는 도구가 만든 SBOM은 신뢰할 수 없다"는 문제의식이 있습니다. 도구 무결성은
+[5. 도구와 자동화](../../5-tools/)에서 다룹니다.
+
+## 실무 권고
+
+최소 요소는 말 그대로 최저선입니다. 조직은 자사 용도에 맞춰 필드를 더할 수 있고, 더해야 합니다.
+취약점 식별을 위해 CVE 참조와 패치 상태를, 라이선스 관리를 위해 SPDX 라이선스 식별자와 저작권
+고지를, 수명주기 관리를 위해 출시일과 지원 종료(End-of-Life) 일자를 함께 담아 두면 SBOM 하나로
+여러 운영 질문에 답할 수 있습니다. 새로 SBOM을 도입한다면 NTIA 일곱 필드를 기본으로 하되 CISA
+2025 초안의 네 신규 필드, 특히 해시와 라이선스를 처음부터 포함하는 편이 나중에 다시 만드는 수고를
+줄입니다.
+
+## 출처
+
+NTIA (2021). *The Minimum Elements For a Software Bill of Materials (SBOM)*.
+<https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf>. CISA (2024).
+*Framing Software Component Transparency*, Third Edition.
+<https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024>.
+CISA (2025). *2025 Minimum Elements for a Software Bill of Materials (SBOM)* (공개 의견수렴 초안).
+<https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom>.
+(모두 접속: 2026-06-14)
