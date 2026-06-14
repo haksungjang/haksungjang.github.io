@@ -8,7 +8,7 @@ description: >
 ---
 
 {{% pageinfo %}}
-이 문서는 Linux Foundation이 발행한 *Open Source Audits in Merger and Acquisition Transactions* (Ibrahim Haddad 저)를 장학성이 번역한 것입니다. 원저자는 이 번역을 검토하지 않았습니다. 원문은 [Linux Foundation 사이트](https://www.linuxfoundation.org/en/resources/publications/open-source-audits-in-merger-and-acquisition-transactions/)에서 볼 수 있습니다.
+이 문서는 Linux Foundation이 발행한 *Open Source Audits in Merger and Acquisition Transactions* (Ibrahim Haddad 저, 2018)를 번역한 것입니다. 원저자는 이 번역을 검토하지 않았습니다. 원문은 [원문 PDF](https://www.ibrahimatlinux.com/wp-content/uploads/2022/01/OpenSourceAudits_MergerandAcquisition.pdf)에서 볼 수 있습니다.
 {{% /pageinfo %}}
 
 우리는 소프트웨어가 정의하는 시대에 살고 있습니다. 우리가 하는 거의 모든 일이 어떤 식으로든 소프트웨어로 계획되고, 형성되고, 분석되고, 관리됩니다. 그 거대한 소프트웨어 우산 아래에서 오픈소스 소프트웨어는 단연 으뜸입니다. 모든 산업의 기업이 오픈소스 프로젝트가 제공하는 다양한 이점을 누리려고 앞다투어 오픈소스를 사용하고, 참여하고, 기여하고 있습니다. 출시 시점을 앞당기는 외부 엔지니어링 자원을 활용하는 일부터 더 빠른 혁신에 이르기까지, 그 이점은 다양합니다.

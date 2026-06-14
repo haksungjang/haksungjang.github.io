@@ -9,7 +9,7 @@ description: >
 
 {{% pageinfo %}}
 
-이 문서는 Linux Foundation이 발행한 *Open Source Audits in Merger and Acquisition Transactions: The Basics You Must Know* (Ibrahim Haddad, Ph.D. 저, 2018)를 장학성이 번역한 것입니다. 원저자는 이 번역을 검토하지 않았습니다. 원문은 [Linux Foundation 사이트](https://www.linuxfoundation.org/en/resources/publications/open-source-audits-in-merger-and-acquisition-transactions/)에서 볼 수 있습니다.
+이 문서는 Linux Foundation이 발행한 *Open Source Audits in Merger and Acquisition Transactions: The Basics You Must Know* (Ibrahim Haddad, Ph.D. 저, 2018)를 번역한 것입니다. 원저자는 이 번역을 검토하지 않았습니다. 원문은 [원문 PDF](https://www.ibrahimatlinux.com/wp-content/uploads/2022/01/OpenSourceAudits_MergerandAcquisition.pdf)에서 볼 수 있습니다.
 
 {{% /pageinfo %}}
 
