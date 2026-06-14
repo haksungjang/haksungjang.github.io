@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>공급망 보안 | Haksung</title><link>https://haksungjang.github.io/tags/%EA%B3%B5%EA%B8%89%EB%A7%9D-%EB%B3%B4%EC%95%88/</link><description>Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤</description><generator>Hugo</generator><language>ko-KR</language><lastBuildDate>Sun, 14 Jun 2026 10:30:38 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/tags/%EA%B3%B5%EA%B8%89%EB%A7%9D-%EB%B3%B4%EC%95%88/index.xml" rel="self" type="application/rss+xml"/><item><title>SBOM(Software Bill of Materials) 실무 가이드</title><link>https://haksungjang.github.io/docs/sbom_guide/</link><pubDate>Sun, 14 Jun 2026 10:30:38 +0900</pubDate><guid>https://haksungjang.github.io/docs/sbom_guide/</guid><description>소프트웨어 자재 명세서(SBOM)의 개념부터 표준 형식, 규제 동향, 도입 로드맵, 도구, 취약점 관리, 거버넌스까지 한국 실무자 관점에서 정리한 가이드입니다.</description><content:encoded>&lt;![CDATA[<p>소프트웨어 자재 명세서(Software Bill of Materials, SBOM)는 하나의 소프트웨어가 어떤 구성요소로
+이루어졌고 그 구성요소들이 공급망에서 어떻게 연결되는지를 담은 공식 기록입니다. 미국 행정명령은
+이를 식품 포장의 성분표에 빗댑니다. 성분표가 알레르기 대응의 출발점이듯, SBOM은 취약점 대응과
+라이선스 관리, 자산 관리가 모두 올라서는 데이터 계층입니다. SBOM 자체가 보안 도구는 아니지만,
+SBOM이 없으면 &ldquo;우리 제품 어디에 이 라이브러리가 들어 있는가"라는 질문에 즉답할 수 없습니다.</p><p>이 가이드는 그 데이터 계층을 처음부터 끝까지 다룹니다. 왜 SBOM이 규제와 조달의 전면으로 올라왔는지,
+어떤 표준과 식별자가 그것을 떠받치는지, 조직이 어떤 순서로 도입하고 어떤 도구로 자동화하며,
+취약점과 라이선스를 어떻게 관리하고 공급망을 따라 안전하게 공유하는지를 1차 출처에 근거해 설명합니다.</p><h2 id="대상-독자">대상 독자</h2><ul><li>소프트웨어를 개발하거나 조달하는 조직의 보안, 개발, 조달, 법무 담당자</li><li>EU 사이버 복원력법(Cyber Resilience Act, CRA)이나 미국 연방 조달 요건에 대응해야 하는 실무자</li><li>공급망 투명성과 오픈소스 라이선스 컴플라이언스 체계를 갖추려는 팀</li></ul><h2 id="가이드-구성">가이드 구성</h2><p>여덟 개 절로 나눠 두었습니다. 앞 절은 개념과 표준, 규제를 다루고, 뒤 절은 도입과 운영의 실무를
+다룹니다. 필요한 절만 골라 읽어도 됩니다.</p><table><thead><tr><th>절</th><th>내용</th><th>바로가기</th></tr></thead><tbody><tr><td>1. 개요</td><td>SBOM의 정의, 공급망 위협과 이점, 수준과 분류</td><td><a href="/docs/sbom_guide/1-overview/">바로가기</a></td></tr><tr><td>2. 표준과 형식</td><td>SPDX, CycloneDX, 최소 요소, 식별자와 라이선스</td><td><a href="/docs/sbom_guide/2-standards/">바로가기</a></td></tr><tr><td>3. 규제 동향</td><td>미국, EU CRA, 인도와 한국</td><td><a href="/docs/sbom_guide/3-regulation/">바로가기</a></td></tr><tr><td>4. 도입 로드맵</td><td>기반 다지기에서 운영 성숙까지 단계별 활동</td><td><a href="/docs/sbom_guide/4-adoption/">바로가기</a></td></tr><tr><td>5. 도구와 자동화</td><td>생성, 관리, 스캔 도구와 자동화 성숙도</td><td><a href="/docs/sbom_guide/5-tools/">바로가기</a></td></tr><tr><td>6. 취약점 관리</td><td>SBOM 기반 추적, VEX, CSAF, Log4j 사례</td><td><a href="/docs/sbom_guide/6-vulnerability/">바로가기</a></td></tr><tr><td>7. 공유와 거버넌스</td><td>접근 통제, 공개 범위, 공유 채널, 역할과 책임</td><td><a href="/docs/sbom_guide/7-governance/">바로가기</a></td></tr><tr><td>8. 권장사항과 체크리스트</td><td>핵심 권장사항과 도입 점검표</td><td><a href="/docs/sbom_guide/8-checklist/">바로가기</a></td></tr></tbody></table><h2 id="빠른-출발점">빠른 출발점</h2><p>이미 SBOM을 알고 무엇부터 할지 찾는다면<a href="/docs/sbom_guide/4-adoption/">4. 도입 로드맵</a>과<a href="/docs/sbom_guide/8-checklist/">8. 권장사항과 체크리스트</a>를 먼저 보십시오. 어떤 형식과 도구를 쓸지 고민이라면<a href="/docs/sbom_guide/2-standards/">2. 표준과 형식</a>과<a href="/docs/sbom_guide/5-tools/">5. 도구와 자동화</a>가 출발점입니다. 규제 대응이
+목적이라면<a href="/docs/sbom_guide/3-regulation/">3. 규제 동향</a>에서 관할권별 의무를 확인하십시오.</p><h2 id="출처와-작성-기준">출처와 작성 기준</h2><p>이 가이드는 특정 한 문서의 번역이 아니라, 현행 1차 출처를 종합해 재구성한 것입니다. 미국
+통신정보청(NTIA)의 2021년 최소 요소와 이를 갱신한 사이버보안·인프라보안국(CISA)의 2024년<em>Framing Software Component Transparency</em> 3판 및 2025년 최소 요소 개정 초안, SPDX와 CycloneDX
+표준 사양, EU 사이버 복원력법(Regulation (EU) 2024/2847), 인도 CERT-In과 한국의 공급망 보안
+가이드라인을 근거로 삼았습니다. 초판은 인도 CERT-In의 SBOM 기술 가이드라인 번역에서 출발했으며,
+현재 판은 그 골격을 위 출처들로 갱신하고 범용 실무 관점으로 넓힌 것입니다.</p><p>모든 사실 주장에는 1차 출처를 달았고, 인용한 자료의 접속일자는 2026년 6월 14일입니다.</p><p><strong>Author :<a href="https://haksungjang.github.io/">장학성 (Haksung Jang)</a></strong></p>
+]]></content:encoded></item><item><title>SBOM 개요</title><link>https://haksungjang.github.io/docs/sbom_guide/1-overview/</link><pubDate>Sun, 14 Jun 2026 10:30:38 +0900</pubDate><guid>https://haksungjang.github.io/docs/sbom_guide/1-overview/</guid><description>SBOM이 무엇이고 왜 필요한지, 소프트웨어 공급망 위협과 SBOM이 주는 이점을 정리합니다.</description><content:encoded>&lt;![CDATA[<h2 id="sbom이란-무엇인가">SBOM이란 무엇인가</h2><p>소프트웨어 자재 명세서(Software Bill of Materials, SBOM)는 한 소프트웨어 제품을 구성하는 모든
+구성요소와 라이브러리, 그리고 그것들 사이의 의존 관계를 기계가 읽을 수 있는 형태로 나열한
+목록입니다. 제조업의 부품표(Bill of Materials)를 소프트웨어로 옮긴 개념입니다. 완성차 한 대에
+어떤 부품이 어느 공급사에서 들어왔는지 적은 명세서가 있듯, SBOM은 애플리케이션 하나에 어떤
+오픈소스와 상용 구성요소가 어떤 버전으로 들어갔는지를 기록합니다.</p><p>현대 소프트웨어는 대부분 직접 작성한 코드보다 외부에서 가져온 구성요소로 채워집니다. 그 외부
+구성요소에는 취약점이 있을 수 있고, 라이선스 의무가 따라붙으며, 또 그 구성요소가 다시 다른
+구성요소에 의존합니다. SBOM은 이 의존성의 사슬을 가시화해, 보안과 라이선스 관리와 자산 관리가
+공통으로 참조할 데이터 계층을 제공합니다.</p><h2 id="왜-필요한가-공급망-신뢰의-붕괴">왜 필요한가: 공급망 신뢰의 붕괴</h2><p>SBOM을 정책 의제로 끌어올린 계기는 두 건의 공급망 사건이었습니다. 2020년 12월 드러난
+솔라윈즈(SolarWinds) 사건에서 공격자는 오리온(Orion) 소프트웨어의 정상 업데이트 경로 자체를
+오염시켰습니다. 그 업데이트를 신뢰하고 설치한 수많은 조직에 백도어가 함께 퍼졌습니다. 공급망
+상류 한 곳의 침해가 하류 전체로 번지는 구조였습니다.</p><p>1년 뒤인 2021년 12월에는 자바 로깅 라이브러리 Log4j의 원격 코드 실행 취약점(CVE-2021-44228,
+통칭 Log4Shell)이 공개되었습니다. 이 사건이 드러낸 문제는 침해 자체가 아니라 가시성의 부재였습니다.
+Log4j는 무수한 제품에 간접 의존성으로 깊숙이 박혀 있었던 탓에, 정작 &ldquo;우리 제품 어디에 이
+라이브러리가 들어 있는가"라는 질문에 즉답할 수 있는 조직이 드물었습니다. 모든 소프트웨어가
+구성요소 목록을 기계가 읽을 수 있는 형태로 미리 갖추고 있었다면, 영향 범위 파악은 질의 한 번으로
+끝났을 것입니다. 이 경험이 SBOM 의제에 직접적인 동력을 주었습니다.</p><p>이후 SBOM은 권고를 넘어 제도로 들어왔습니다. 미국은 2021년 행정명령 14028로 연방 납품
+소프트웨어에 SBOM을 요구하는 길을 열었고, 유럽연합은 사이버 복원력법(Cyber Resilience Act, CRA)으로
+SBOM 작성을 법적 의무로 규정했습니다. 자세한 규제 지형은<a href="/docs/sbom_guide/3-regulation/">3. 규제 동향</a>에서
+다룹니다.</p><h2 id="sbom이-주는-이점">SBOM이 주는 이점</h2><p>SBOM의 가치는 보안 한 가지에 그치지 않습니다. 구성요소 목록이라는 같은 데이터를 여러 용도가
+함께 활용합니다.</p><ul><li><strong>취약점 관리와 사고 대응</strong>: 새 취약점이 공개되면 영향받는 구성요소를 즉시 조회해 대응
+우선순위를 정할 수 있습니다.</li><li>공급망 위험 관리: 외부 구성요소의 출처와 신뢰도를 평가해 조달과 공급사 관리에 반영합니다.</li><li>라이선스 컴플라이언스: 각 구성요소의 라이선스를 추적해 의무 위반과 충돌을 미리 방지합니다.</li><li>규제 준수: 투명성 요건을 충족하고, 규제 보고와 감사에 필요한 증빙을 제공합니다.</li><li>자산 관리와 운영 효율: 무엇을 쓰고 있는지 정확히 알게 되어 수명주기 관리가 쉬워집니다.</li></ul><h2 id="누가-만들고-누가-쓰는가">누가 만들고 누가 쓰는가</h2><p>SBOM의 가치는 한 조직이 홀로 만드는 데서 나오지 않고 공급망을 따라 흐를 때 실현됩니다. CISA의<em>Framing Software Component Transparency</em> 3판은 SBOM을 둘러싼 행위자를 세 관점으로 정리합니다.
+소프트웨어를 만드는 생산자(Produce), 어떤 소프트웨어를 쓸지 고르는 선택자(Choose), 그것을 운영하는
+운영자(Operate)입니다. 한 조직이 세 역할을 겸하는 일이 흔합니다. 자사 제품을 개발하면서 외부
+라이브러리를 도입하고 인프라를 운영하는 기업이 그렇습니다.</p><p>이 구도의 핵심은 공급자와 소비자 관계의 연쇄입니다. 상류의 생산자가 SBOM을 만들어 하류로 전달하면,
+하류의 선택자는 그 SBOM으로 도입 전 위험을 평가하고, 운영자는 새 취약점이 공개되었을 때 영향
+범위를 즉시 조회합니다. Log4Shell이 보여준 것은 바로 이 연쇄의 단절이었습니다. 생산자가 구성요소
+목록을 넘기지 않았기에 운영자가 자신의 자산에 어떤 라이브러리가 들었는지 알 수 없었습니다.</p><p>행위자별로 이해는 미묘하게 어긋납니다. 소비자는 더 깊고 완전한 SBOM을 원하고, 생산자는 영업
+비밀과 공격 표면 노출을 우려해 공개 범위를 줄이려 합니다. 규제가 의무의 최저선을 어디에 두는지,
+공개 범위를 어떻게 조정하는지는 이 긴장을 푸는 장치입니다. 공유와 공개 범위 문제는<a href="/docs/sbom_guide/7-governance/">7. 공유와 거버넌스</a>에서 다룹니다.</p><p>다음 절에서는 SBOM이 담는 정보의 깊이에 따른<a href="/docs/sbom_guide/1-overview/1-types/">수준과 분류</a>를 살펴봅니다.</p><h2 id="출처">출처</h2><p>이 절의 사실 근거는 본 가이드의 배경 조사 자료에 정리돼 있습니다. 행정명령 14028(86 FR 26633,
+2021-05-12), CVE-2021-44228(NVD), CISA<em>Framing Software Component Transparency</em> 3판(2024-09-03)을
+1차 출처로 삼았습니다. 전체 출처는<a href="/docs/sbom_guide/3-regulation/">3. 규제 동향</a>과 각 절 하단을 참고하십시오.</p>
+]]></content:encoded></item></channel></rss>

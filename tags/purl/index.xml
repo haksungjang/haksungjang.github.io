@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PURL | Haksung</title><link>https://haksungjang.github.io/tags/purl/</link><description>Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤</description><generator>Hugo</generator><language>ko-KR</language><lastBuildDate>Sun, 14 Jun 2026 10:30:38 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/tags/purl/index.xml" rel="self" type="application/rss+xml"/><item><title>식별자와 라이선스</title><link>https://haksungjang.github.io/docs/sbom_guide/2-standards/2-identifiers/</link><pubDate>Sun, 14 Jun 2026 10:30:38 +0900</pubDate><guid>https://haksungjang.github.io/docs/sbom_guide/2-standards/2-identifiers/</guid><description>구성요소를 일관되게 가리키는 PURL·CPE·SWID 식별자와, SPDX 라이선스 식별자 표기 방법을 정리합니다.</description><content:encoded>&lt;![CDATA[<p>같은 구성요소를 두고 SBOM마다 이름을 다르게 적으면 자동 대조가 무너집니다. &ldquo;Apache Tomcat"과
+&ldquo;tomcat&rdquo;, &ldquo;Apache Software Foundation Tomcat"이 같은 것인지 기계가 알 길이 없기 때문입니다. 그래서
+구성요소를 일관되게 가리키는 식별자 체계와, 라이선스를 표준 코드로 표기하는 규약이 필요합니다.</p><h2 id="세-가지-식별자-purl-cpe-swid">세 가지 식별자: PURL, CPE, SWID</h2><p>실무에서 함께 쓰이는 세 식별자는 역할이 갈립니다. 배타적이지 않으므로, 가능하면 함께 기재하는 것이
+권장됩니다.</p><table><thead><tr><th>식별자</th><th>운영 주체</th><th>주된 용도</th></tr></thead><tbody><tr><td>PURL(Package URL)</td><td>커뮤니티(purl-spec)</td><td>패키지 관리자 생태계 안의 구성요소를 정확히 지목</td></tr><tr><td>CPE(Common Platform Enumeration)</td><td>NIST</td><td>제품을 일관된 이름으로 표기해 해당 CVE를 조회</td></tr><tr><td>SWID(Software Identification Tag)</td><td>ISO/IEC 19770-2</td><td>제품·버전·생산 주체를 구조화한 메타데이터</td></tr></tbody></table><p><strong>표 1.</strong> SBOM에서 함께 쓰이는 식별자<em>(출처: purl-spec, NIST NVD, ISO/IEC 19770-2. 수집일 2026-06-14)</em></p><p>패키지 URL은 다음과 같은 형식으로 패키지 관리자 생태계 안의 구성요소를 가리킵니다.</p><pre tabindex="0"><code>pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1
+pkg:npm/lodash@4.17.21
+pkg:pypi/requests@2.31.0</code></pre><p><code>pkg:</code> 뒤에 생태계 유형(maven, npm, pypi 등), 네임스페이스, 이름, 버전이 이어집니다. 같은 구성요소를
+어디서나 같은 문자열로 가리킬 수 있어, 취약점 데이터베이스나 라이선스 데이터베이스와 자동으로
+연결됩니다.</p><p>CPE는 2000년대 중반 MITRE가 개발해 현재 NIST가 운영합니다. 제품을 정해진 이름 규칙으로 표기해,
+그 제품에 해당하는 취약점(CVE)을 조회하는 데 쓰입니다. SWID는 ISO/IEC 19770-2로 표준화된 태그
+형식으로 제품과 버전, 생산·배포 주체를 구조화해 기술하며 자산 관리에서 주로 활용됩니다. CISA 2025
+최소 요소 초안이 &ldquo;기타 고유 식별자"를 &ldquo;소프트웨어 식별자"로 갱신한 것도 이 식별자 생태계의 성숙을
+반영합니다.</p><h2 id="라이선스-표기-spdx-라이선스-식별자">라이선스 표기: SPDX 라이선스 식별자</h2><p>라이선스 관리는 SBOM의 초기 활용처 가운데 하나입니다. 각 구성요소가 어떤 라이선스로 배포되는지를
+정확히 기록해야 의무 위반과 충돌을 미리 막을 수 있습니다. 자유 서술로 적으면 대조가 안 되므로, 표준
+코드를 씁니다.</p><p><a href="https://spdx.org/licenses/">SPDX 라이선스 식별자</a>는 각 라이선스에<code>Apache-2.0</code>,<code>MIT</code>,<code>GPL-3.0-only</code>
+같은 고유 코드를 부여합니다. 여러 라이선스가 함께 적용될 때는 라이선스 표현식(license expression)으로
+조합합니다.</p><pre tabindex="0"><code>Apache-2.0 OR MIT
+GPL-2.0-only WITH Classpath-exception-2.0
+(MIT AND BSD-3-Clause)</code></pre><p><code>OR</code>는 선택 가능한 복수 라이선스,<code>AND</code>는 동시에 적용되는 복수 라이선스,<code>WITH</code>는 예외 조항과의
+결합을 나타냅니다.</p><p>실무에서 지켜야 할 원칙은 다음과 같습니다.</p><ul><li>제품 전체의 라이선스뿐 아니라 모든 개별 구성요소의 라이선스를 함께 볼 수 있어야 합니다.</li><li>표준 목록에 없는 라이선스를 만나면 출처를 나타내는 접두사를 붙인 식별자(예:<code>LicenseRef-</code> 접두사)를 부여해 추적합니다.</li><li>라이선스 텍스트를 사소하게 수정했더라도 의미가 크게 달라지지 않으면 원본과 같은 식별자를 씁니다.</li><li>라이선스의 호환성을 분석해, 서로 다른 라이선스의 구성요소를 결합할 때 생길 충돌을 미리 식별합니다.</li></ul><p>라이선스 필드가 도구로 자동 추출되더라도 그 정확도는 별개의 문제입니다. 비표준 라이선스의 정확한
+식별, 듀얼 라이선스 처리, 행동 사용 제한이 붙은 라이선스의 준수 여부는 여전히 사람과 정책의 몫입니다.
+자동화의 경계는<a href="/docs/sbom_guide/5-tools/">5. 도구와 자동화</a>에서 다룹니다.</p><h2 id="출처">출처</h2><p>Package URL 명세<a href="https://github.com/package-url/purl-spec">https://github.com/package-url/purl-spec</a>. NIST.<em>Common Platform Enumeration (CPE)</em><a href="https://nvd.nist.gov/products/cpe">https://nvd.nist.gov/products/cpe</a>. ISO/IEC 19770-2:2015. SPDX License List<a href="https://spdx.org/licenses/">https://spdx.org/licenses/</a>. SPDX License Expressions<a href="https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/">https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/</a>. (모두 접속: 2026-06-14)</p>
+]]></content:encoded></item></channel></rss>

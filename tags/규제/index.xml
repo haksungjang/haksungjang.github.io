@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>규제 | Haksung</title><link>https://haksungjang.github.io/tags/%EA%B7%9C%EC%A0%9C/</link><description>Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤</description><generator>Hugo</generator><language>ko-KR</language><lastBuildDate>Sun, 14 Jun 2026 10:30:38 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/tags/%EA%B7%9C%EC%A0%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>규제 동향</title><link>https://haksungjang.github.io/docs/sbom_guide/3-regulation/</link><pubDate>Sun, 14 Jun 2026 10:30:38 +0900</pubDate><guid>https://haksungjang.github.io/docs/sbom_guide/3-regulation/</guid><description>SBOM을 둘러싼 관할권별 규제 위상과, 미국의 행정명령·연방 조달 경로를 정리합니다.</description><content:encoded>&lt;![CDATA[<p>SBOM을 둘러싼 규제는 관할권마다 위상이 다릅니다. 미국은 연방 조달을 지렛대로 삼는 행정명령 경로,
+유럽연합은 직접 효력을 갖는 법률 경로, 그 밖의 국가들은 대체로 권고 가이드라인 단계에 있습니다.
+이 절에서는 미국을 먼저 다루고,<a href="/docs/sbom_guide/3-regulation/1-eu-cra/">EU 사이버 복원력법</a>과<a href="/docs/sbom_guide/3-regulation/2-global/">인도·한국 등 기타
+관할권</a>을 이어서 다룹니다.</p><h2 id="관할권별-위상-한눈에-보기">관할권별 위상 한눈에 보기</h2><table><thead><tr><th>관할권</th><th>문서·법령</th><th>위상</th><th>SBOM 요건</th></tr></thead><tbody><tr><td>미국</td><td>행정명령 14028(2021), CISA 최소 요소</td><td>연방 조달 권고</td><td>연방 납품 소프트웨어에 SBOM 제공</td></tr><tr><td>유럽연합</td><td>사이버 복원력법, Regulation (EU) 2024/2847</td><td>법적 의무(과징금)</td><td>Annex I Part II, 최상위 의존성, 기계 판독</td></tr><tr><td>인도</td><td>CERT-In 기술 가이드라인(2024)</td><td>자발적 권고</td><td>정부·필수 서비스 대상 모범 사례</td></tr><tr><td>한국</td><td>SW 공급망 보안 가이드라인 1.0(2024)</td><td>행정 권고</td><td>SBOM 생성·점검 절차 권고</td></tr></tbody></table><p><strong>표 1.</strong> 주요 관할권의 SBOM 규제 위상<em>(출처: 각 항목 1차 출처. 수집일 2026-06-14)</em></p><h2 id="미국-연방-조달을-지렛대로">미국: 연방 조달을 지렛대로</h2><p>미국의 SBOM 정책은 행정명령에서 출발합니다. 솔라윈즈 사건 직후인 2021년 5월 12일, 행정명령
+14028(&ldquo;Improving the Nation&rsquo;s Cybersecurity&rdquo;)이 서명되어 연방관보 86 FR 26633으로 공포되었습니다.
+이 명령의 Section 10(j)는 SBOM을 &ldquo;소프트웨어를 만드는 데 사용된 다양한 구성요소의 세부 정보와
+공급망 관계를 담은 공식 기록"으로 정의했고, Section 4(f)는 상무부 장관이 NTIA와 협조해 60일 이내에
+SBOM 최소 요소를 발행하도록 지시했습니다. SBOM이 연구 공동체의 권고에서 연방 조달의 요건 후보로
+격상된 순간입니다.</p><p>이 위임에 따라 NTIA가 2021년 7월 최소 요소를 발행했고, 이후 작업 주관은 CISA로 옮겨갔습니다. CISA는
+행정관리예산국(Office of Management and Budget, OMB) 메모 M-22-18에 따라 NTIA 최소 요소를 갱신할
+권한을 갖고, 도구화와 운영화에 초점을 두고 있습니다. 그 결과가 2024년<em>Framing Software Component
+Transparency</em> 3판과 2025년 최소 요소 개정 초안입니다. 두 문서의 데이터 필드 변화는<a href="/docs/sbom_guide/2-standards/1-minimum-elements/">최소 요소</a>에서 다룹니다.</p><p>미국 경로의 성격을 정확히 이해하는 것이 중요합니다. 행정명령 14028은 연방정부에 소프트웨어를
+공급하는 사업자에게 SBOM 제공을 요구하는 지침의 근거이지, 모든 소프트웨어에 적용되는 일반 법령이
+아닙니다. CISA의 두 문서도 스스로 새로운 연방 요건을 창설하지 않는다고 밝힙니다. 규범의 위상은
+여전히 조달 기준과 기술 참조에 머물러 있습니다. 그럼에도 연방 조달이라는 거대한 시장이 작동하는
+탓에, 미국에 소프트웨어를 납품하는 기업에는 사실상의 요건으로 기능합니다.</p><pre class="mermaid">flowchart TD
+A["2021-05&lt;br/&gt;행정명령 14028&lt;br/&gt;SBOM 정의·최소 요소 위임"] --&gt; B["2021-07&lt;br/&gt;NTIA 최소 요소&lt;br/&gt;7개 데이터 필드·3개 범주"]
+B --&gt; C["CISA로 주관 이관&lt;br/&gt;OMB M-22-18 갱신 권한"]
+C --&gt; D["2024-09&lt;br/&gt;Framing 3판&lt;br/&gt;라이선스·저작권 고지 속성 추가"]
+C --&gt; E["2025-08&lt;br/&gt;최소 요소 개정 초안&lt;br/&gt;해시·라이선스·도구명·생성맥락 추가"]</pre><p><strong>그림 1.</strong> 미국 SBOM 정책 문서의 계보<em>(출처: 행정명령 14028, NTIA 2021, CISA 2024·2025. 수집일 2026-06-14)</em></p><h2 id="출처">출처</h2><p>The White House (2021).<em>Executive Order 14028 — Improving the Nation&rsquo;s Cybersecurity</em>, 86 FR 26633.<a href="https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity">https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity</a>.
+OMB (2022).<em>M-22-18</em>.<a href="https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf">https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf</a>. CISA
+SBOM 자료 허브<a href="https://www.cisa.gov/sbom">https://www.cisa.gov/sbom</a>. (모두 접속: 2026-06-14)</p>
+]]></content:encoded></item><item><title>인도·한국 등 기타 관할권</title><link>https://haksungjang.github.io/docs/sbom_guide/3-regulation/2-global/</link><pubDate>Sun, 14 Jun 2026 10:30:38 +0900</pubDate><guid>https://haksungjang.github.io/docs/sbom_guide/3-regulation/2-global/</guid><description>인도 CERT-In과 한국을 비롯한 기타 관할권의 SBOM 권고 가이드라인을 정리합니다.</description><content:encoded>&lt;![CDATA[<p>미국과 유럽연합 밖의 관할권은 대체로 권고 단계에 있습니다. 법적 강제나 제재는 없으나, 조달과 계약
+관행에 영향을 주는 모범 사례로 기능합니다.</p><h2 id="인도-cert-in-기술-가이드라인">인도: CERT-In 기술 가이드라인</h2><p>인도 침해사고대응팀(Indian Computer Emergency Response Team, CERT-In)은 *Technical Guidelines on
+Software Bill of Materials (SBOM)*를 발행했습니다. 정부기관, 공공부문, 필수 서비스, 소프트웨어
+생산·서비스 기업을 대상으로 한 자발적(voluntary) 가이드라인으로, SBOM의 가치와 모범 사례, 최소 요소,
+취약점 추적 절차를 다룹니다. 법적 강제력은 없지만 정부 조달과 계약 관행에 영향을 줍니다.</p><p>CERT-In은 2025년 7월 이 가이드라인을 양자 BOM(QBOM), 암호 BOM(CBOM), AI BOM(AIBOM), 하드웨어
+BOM(HBOM)까지 포괄하도록 확장했습니다. 자재 명세서 개념이 소프트웨어를 넘어 암호와 AI, 하드웨어로
+번지는 흐름을 보여주는 사례입니다. AI BOM으로의 확장은<a href="/docs/sbom_guide/5-tools/">5. 도구와 자동화</a>와 별도
+가이드인<a href="/docs/ai-sbom_guide/">AI SBOM 컴플라이언스 가이드</a>에서 더 다룹니다.</p><p>이 가이드의 초판이 바로 이 CERT-In 문서의 한국어 번역에서 출발했습니다. 현재 판은 그 골격을 미국과
+유럽연합의 현행 1차 출처로 갱신하고 범용 실무 관점으로 넓힌 것입니다.</p><h2 id="한국-sw-공급망-보안-가이드라인">한국: SW 공급망 보안 가이드라인</h2><p>한국은 과학기술정보통신부와 국가정보원, 한국인터넷진흥원(KISA) 등이 2024년 5월 SW 공급망 보안
+가이드라인 1.0을 발표했습니다. SBOM 생성과 취약점 점검 절차, 미국 국립표준기술연구소(NIST)의 안전한
+소프트웨어 개발 프레임워크(Secure Software Development Framework, SSDF) 활용을 권고하는 내용입니다.</p><p>다만 이는 행정 가이드라인 수준이며, EU 사이버 복원력법처럼 제조물 차원의 강제 보고 의무를 부과하는
+법령은 현행 한국 법체계에 아직 없습니다. 그럼에도 EU와 미국에 소프트웨어를 수출하는 한국 기업은
+해당 시장의 요건을 직접 충족해야 하므로, SBOM 역량 확보는 국내 규제와 무관하게 실질적 필요입니다.</p><h2 id="실무-시사점">실무 시사점</h2><p>관할권마다 위상은 다르지만 요구하는 데이터의 골격은 수렴합니다. 한 번 잘 만든 SBOM 체계는 여러
+관할권의 요건을 함께 충족할 수 있습니다. 수출 대상 시장 가운데 가장 엄격한 요건(현재로서는 EU CRA)을
+기준으로 체계를 설계하면, 다른 관할권의 권고는 대체로 그 안에 포섭됩니다.</p><h2 id="출처">출처</h2><p>Indian Computer Emergency Response Team (CERT-In).<em>Technical Guidelines on Software Bill of
+Materials (SBOM)</em>, CIGU-2024-0002.<a href="https://www.cert-in.org.in/">https://www.cert-in.org.in/</a>. 과학기술정보통신부·국가정보원·한국인터넷진흥원
+(2024).<em>SW 공급망 보안 가이드라인 1.0</em>.<a href="https://www.kisa.or.kr/">https://www.kisa.or.kr/</a>. (모두 접속: 2026-06-14)</p>
+]]></content:encoded></item><item><title>EU 사이버 복원력법(CRA)</title><link>https://haksungjang.github.io/docs/sbom_guide/3-regulation/1-eu-cra/</link><pubDate>Sun, 14 Jun 2026 10:30:38 +0900</pubDate><guid>https://haksungjang.github.io/docs/sbom_guide/3-regulation/1-eu-cra/</guid><description>SBOM을 법적 의무로 규정한 최초의 주요 입법인 EU 사이버 복원력법의 SBOM 요건과 시행 일정을 정리합니다.</description><content:encoded>&lt;![CDATA[<p>SBOM을 명시적 법적 의무로 규정한 최초의 주요 입법이 EU 사이버 복원력법(Cyber Resilience Act, CRA,
+Regulation (EU) 2024/2847)입니다. 미국이 연방 조달이라는 시장을 통해 SBOM을 사실상 강제하는 데 비해,
+CRA는 디지털 요소를 갖춘 제품 전반에 수평적으로 적용되는 직접 효력 법률입니다.</p><h2 id="sbom-의무의-법적-위치">SBOM 의무의 법적 위치</h2><p>CRA에서 SBOM 의무는 Annex I Part II(취약점 처리 요건) 제(1)항에 있습니다. 제조자는 제품에 포함된
+취약점과 구성요소를 식별·문서화해야 하며, 그 수단으로 &ldquo;통용되는 기계 판독 가능 형식의, 최소한
+제품의 최상위 의존성(top-level dependencies)을 포괄하는 소프트웨어 자재 명세서를 작성"할 것을
+명시합니다.</p><p>실무에서 중요한 두 가지가 미국 경로와 다릅니다.</p><ul><li><strong>의무 범위가 최상위 의존성이다</strong>: 전체 의존성 트리를 끝까지 펼칠 의무가 아니라, 최소한
+최상위 의존성을 포괄하면 됩니다. 다만 그 이상으로 깊이 작성하는 것이 권장 방향임은 분명합니다.</li><li>공개 의무가 아니라 보관·제출 의무다: SBOM을 일반 공중에 공개할 의무는 없습니다. 시장 감시
+당국(market surveillance authority)이 이유를 제시해 요청할 때 제출할 수 있도록 보관하면 됩니다.</li></ul><p>SBOM 작성이 권고가 아니라 과징금 체계를 갖춘 법적 의무라는 점이 CRA의 핵심입니다.</p><h2 id="시행-일정">시행 일정</h2><pre class="mermaid">flowchart TD
+A["2024-11-20&lt;br/&gt;관보 게재"] --&gt; B["2024-12-10&lt;br/&gt;발효"]
+B --&gt; C["2026-09-11&lt;br/&gt;Article 14&lt;br/&gt;취약점·중대 사고 보고 의무 적용"]
+C --&gt; D["2027-12-11&lt;br/&gt;전면 시행&lt;br/&gt;SBOM 포함 본질 요건·CE 마킹"]</pre><p><strong>그림 1.</strong> EU CRA 단계적 시행 일정<em>(출처: Regulation (EU) 2024/2847. 수집일 2026-06-14)</em></p><p>CRA는 2024년 11월 20일 관보에 게재되어 2024년 12월 10일 발효했습니다. 적용은 단계적입니다.
+Article 14의 악용 취약점과 중대 사고 보고 의무가 2026년 9월 11일부터, SBOM을 포함한 본질적
+사이버보안 요건의 전면 적용이 2027년 12월 11일부터입니다.</p><h2 id="형식-시행규칙의-부재와-실무-참조점">형식 시행규칙의 부재와 실무 참조점</h2><p>CRA 차원의 공식 SBOM 형식 시행규칙은 2026년 6월 현재 발표되지 않았습니다. 어떤 스키마와 필드를
+써야 CRA에 정합하는지를 EU 전역 구속 규범으로 정한 문서는 아직 없다는 뜻입니다.</p><p>현재 실무의 참조점은 독일 연방정보보안청(Bundesamt für Sicherheit in der Informationstechnik, BSI)이
+2025년 8월 발간한 기술 가이드라인 TR-03183-2 v2.1.0입니다. 이 문서는 CycloneDX와 SPDX 양쪽에 대해
+CRA 정합 SBOM의 구체적 필드 매핑을 제공합니다. 다만 이는 독일 가이드라인이지 EU 전역의 구속력 있는
+규범은 아니라는 점에 유의해야 합니다.</p><h2 id="오픈소스에-대한-고려">오픈소스에 대한 고려</h2><p>CRA는 상업적 활동을 적용 기준으로 삼아, 상업 활동 없이 무상으로 배포되는 비상업 오픈소스를 원칙적으로
+제외합니다. 오픈소스 유지보수자에게 제조자 수준의 의무를 그대로 지우지 않으려는 장치입니다. 다만
+오픈소스를 제품에 통합해 상업적으로 공급하는 제조자에게는 의무가 그대로 적용되므로, 오픈소스
+구성요소의 SBOM을 확보하고 관리하는 일은 여전히 제조자의 몫입니다.</p><h2 id="출처">출처</h2><p>European Parliament and Council (2024).<em>Regulation (EU) 2024/2847 — Cyber Resilience Act</em>. OJ L,
+2024/2847, 20.11.2024.<a href="https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng">https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng</a>. European Commission,
+DG CNECT.<em>Cyber Resilience Act</em>.<a href="https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act">https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act</a>.
+BSI.<em>Technical Guideline TR-03183-2</em>. (모두 접속: 2026-06-14)</p>
+]]></content:encoded></item></channel></rss>
