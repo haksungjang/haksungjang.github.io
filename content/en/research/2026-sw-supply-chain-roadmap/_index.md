@@ -1,6 +1,6 @@
 ---
-title: "한국 SW 공급망 보안 로드맵은 무엇을 바꾸려 하나"
-linkTitle: "한국 SW 공급망 보안 로드맵"
+title: "2026 SW 공급망 보안 강화 로드맵 살펴보기"
+linkTitle: "SW 공급망 보안 강화 로드맵"
 date: 2026-06-24
 weight: 10
 type: docs
