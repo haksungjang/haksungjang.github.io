@@ -30,28 +30,18 @@ LLMS index: [llms.txt](/llms.txt)
 
 AI 시스템도 소프트웨어 시스템이므로 SBOM은 AI에도 유효하며, AI를 위한 SBOM의 최소 요소는 일반 SBOM 최소 요소를 대체하지 않고 그 위에 더해집니다<a id="c1-ref-7"></a>[C1](#c1). 문서가 새로 정의한 부분은 구조화된 기록을 일곱 묶음으로 나눈 클러스터(cluster) 체계입니다. 각 클러스터는 AI 시스템 구성요소의 고유한 특징을 포착하는 "요소(element)"를 담습니다. 메타데이터 클러스터는 SBOM 자체에 관한 정보이므로 가장 먼저 제시되고, 나머지 여섯 클러스터는 동등한 비중으로 이어집니다<a id="c1-ref-8"></a>[C1](#c1).
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px'}}}%%
-flowchart TD
-    ROOT["AI를 위한 SBOM<br/>(7개 클러스터)"]
-    META["Metadata 메타데이터<br/>SBOM 자체 정보<br/>(10요소)"]
-    SUB["AI 시스템 구성요소<br/>(6개 클러스터)"]
+| 클러스터 | 계층 | 요소 | 담는 정보 |
+|---|---|---:|---|
+| 메타데이터(Metadata) | SBOM 문서 자체 | 10 | 작성자, 버전, 서명, 타임스탬프 등 |
+| 시스템 수준 속성(SLP) | AI 시스템 구성 | 9 | 시스템과 데이터 흐름 |
+| 모델(Models) | AI 시스템 구성 | 13 | 식별, 가중치, 학습, 라이선스 |
+| 데이터셋 속성(DP) | AI 시스템 구성 | 10 | 정체성, 출처, 민감도 |
+| 인프라(Infrastructure) | AI 시스템 구성 | 2 | SW 의존성, HW(HBOM) |
+| 보안 속성(SP) | AI 시스템 구성 | 4 | 통제, 준수, 취약점 |
+| 핵심성과지표(KPI) | AI 시스템 구성 | 2 | 보안과 운영 지표 |
+| **합계** | | **50** | 7개 클러스터 |
 
-    ROOT --> META
-    ROOT --> SUB
-
-    SUB --> SLP["SLP 시스템 수준 속성<br/>시스템·데이터 흐름 (9)"]
-    SUB --> MOD["Models 모델<br/>식별·가중치·학습·라이선스 (13)"]
-    SUB --> DP["DP 데이터셋 속성<br/>정체성·출처·민감도 (10)"]
-    SUB --> INF["Infrastructure 인프라<br/>SW 의존성·HW(HBOM) (2)"]
-    SUB --> SP["SP 보안 속성<br/>통제·준수·취약점 (4)"]
-    SUB --> KPI["KPI 핵심성과지표<br/>보안·운영 지표 (2)"]
-
-    style META fill:#e0e0e0,stroke:#424242,stroke-width:2px
-    style ROOT fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-```
-
-**그림 1.** AI를 위한 SBOM의 7개 클러스터 구조. 메타데이터는 SBOM 문서 자체를 기술하는 계층(회색)이고, 나머지 6개 클러스터는 AI 시스템을 구성하는 동등한 정보 영역입니다. 괄호 안 숫자는 각 클러스터의 요소 개수. *(G7 Software Bill of Materials for AI — Minimum Elements (2026-05-12); 수집 2026-06-22)*
+**표 1.** AI를 위한 SBOM의 7개 클러스터. 메타데이터는 SBOM 문서 자체를 기술하는 계층이고, 나머지 6개 클러스터는 AI 시스템을 구성하는 동등한 정보 영역입니다. 50개 요소가 7개 클러스터에 나뉩니다. *(G7 Software Bill of Materials for AI — Minimum Elements (2026-05-12); 수집 2026-06-22)*
 
 ### 2.1 메타데이터(Metadata): SBOM 그 자체의 기록
 
@@ -85,7 +75,7 @@ flowchart TD
     style L fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
 ```
 
-**그림 2.** 모델 라이선스 요소의 4구분. G7 최소 요소는 모델 라이선스를 단일 표기가 아니라 가중치·아키텍처·데이터·학습 절차 각각의 개방 여부로 명시하도록 요구합니다. *(G7 Software Bill of Materials for AI — Minimum Elements (2026-05-12); 수집 2026-06-22)*
+**그림 1.** 모델 라이선스 요소의 4구분. G7 최소 요소는 모델 라이선스를 단일 표기가 아니라 가중치·아키텍처·데이터·학습 절차 각각의 개방 여부로 명시하도록 요구합니다. *(G7 Software Bill of Materials for AI — Minimum Elements (2026-05-12); 수집 2026-06-22)*
 
 "오픈 모델"이라는 한 단어로 뭉뚱그려지던 개방성을 네 축으로 분해한 것은, 가중치만 공개되고 학습 데이터·절차는 비공개인 흔한 사례를 SBOM 차원에서 구별하기 위함입니다. 가중치 공개와 학습 데이터 공개는 라이선스·재현성·법적 책임 측면에서 전혀 다른 의미를 갖습니다.
 
@@ -123,7 +113,7 @@ flowchart TD
     style E fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
 ```
 
-**그림 3.** AI를 위한 SBOM 최소 요소의 계보. 2021년 일반 SBOM 최소 요소(NTIA, 파란색)를 토대로 AI 고유 요소를 더해 2026년 발행 문서(주황색)에 이른 누적 과정입니다. 점선은 일반 SBOM 요소가 최종 문서에 그대로 포함됨을 나타냅니다. *(NTIA(2021)·CISA·G7(2025·2026) 종합; 2026-06-22)*
+**그림 2.** AI를 위한 SBOM 최소 요소의 계보. 2021년 일반 SBOM 최소 요소(NTIA, 파란색)를 토대로 AI 고유 요소를 더해 2026년 발행 문서(주황색)에 이른 누적 과정입니다. 점선은 일반 SBOM 요소가 최종 문서에 그대로 포함됨을 나타냅니다. *(NTIA(2021)·CISA·G7(2025·2026) 종합; 2026-06-22)*
 
 일반 SBOM 최소 요소의 기준점은 미국 상무부 통신정보관리청(National Telecommunications and Information Administration, NTIA)이 행정명령 14028의 지시로 2021년 7월 발행한 「The Minimum Elements for a Software Bill of Materials」입니다. 이 문서는 공급자명·구성요소명·버전·고유 식별자·의존 관계·SBOM 작성자·타임스탬프의 일곱 데이터 필드를 제시했고, 이후 SBOM 커뮤니티 작업의 주관은 CISA로 이관되었습니다<a id="c7-ref-1"></a>[C7](#c7). G7 문서가 이 계보를 직접 잇고 있다는 증거는 메타데이터 클러스터의 정의 방식에서 드러납니다. 작성자·버전·데이터 형식·타임스탬프·의존성 관계는 NTIA 데이터 필드를 거의 그대로 AI 맥락에 옮긴 것이고, 모델 식별자가 CPE·PURL을 우선 식별자로 지정하며 CISA의 「Software Identification Ecosystem Option Analysis」(2023)를 인용하는 대목도 같은 뿌리를 보여줍니다<a id="c6-ref-1"></a>[C6](#c6)·<a id="c7-ref-2"></a>[C7](#c7).
 
