@@ -11,10 +11,6 @@ author: 장학성
 categories: ["research"]
 tags: ["SBOM", "AI BOM", "SPDX", "CycloneDX", "공급망 보안", "Dependency-Track"]
 ai_generated: true
-ai_generator: "Claude Opus 4.8 via local Claude Code harness"
-ai_pipeline: "research-coordinator → 표준 합의 매트릭스 → operational 운영 문서 3종 → 도구 세트 전략 → fact-checker"
-verified_at: 2026-06-29
-verification_verdict: "CONDITIONAL PASS"
 ---
 
 {{% alert color="info" %}}
@@ -140,7 +136,7 @@ deny[msg] {
 }
 ```
 
-OSCAL은 보안 통제 표현용이라 SBOM 필드 적합성에는 과중량이고, 검증을 스스로 실행하지 않으므로 채택하지 않습니다. 다만 규제·감사용 상위 산출물(요구사항 카탈로그, 평가 결과 보고)을 연방 친화 포맷으로 남길 필요가 생기면 그 층위에서만 고려합니다.
+OSCAL은 보안 통제 표현용이라 SBOM 필드를 담기에는 과한 도구이고, 검증을 스스로 실행하지 않으므로 채택하지 않습니다. 다만 규제·감사용 상위 산출물(요구사항 카탈로그, 평가 결과 보고)을 연방 친화 포맷으로 남길 필요가 생기면 그때만 고려합니다.
 
 ## 5. 참조 아키텍처와 Dependency-Track 통합
 

@@ -11,17 +11,13 @@ author: 장학성
 categories: ["research"]
 tags: ["SBOM", "AI BOM", "SPDX", "CycloneDX", "공급망 보안", "Dependency-Track"]
 ai_generated: true
-ai_generator: "Claude Opus 4.8 via local Claude Code harness"
-ai_pipeline: "research-coordinator → 표준 합의 매트릭스 → operational 운영 문서 3종 → 도구 세트 전략 → fact-checker"
-verified_at: 2026-06-29
-verification_verdict: "CONDITIONAL PASS"
 ---
 
 {{% alert color="info" %}}
 이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 1차 출처로 교차 검증했습니다.
 {{% /alert %}}
 
-이 문서는 자사에 AI 모델이나 AI 시스템을 공급하는 공급사가 제출해야 하는 AI를 위한 부품 명세서(AI Bill of Materials, AI BOM)의 요구사항을 규정합니다. 기존 소프트웨어 부품 명세서(SBOM) 제출 요구사항을 모델과 데이터셋 층위로 확장한 것이며, 필수 항목은 [「AI BOM 필드 요구사항 매트릭스」]({{< relref "_index.md" >}})의 공급사 열에서 도출했습니다.
+이 문서는 자사에 AI 모델이나 AI 시스템을 공급하는 공급사가 제출해야 하는 AI를 위한 부품 명세서(AI Bill of Materials, AI BOM)의 요구사항을 규정합니다. 기존 소프트웨어 부품 명세서(SBOM) 제출 요구사항을 모델과 데이터셋으로 확장한 것이며, 필수 항목은 [「AI BOM 필드 요구사항 매트릭스」]({{< relref "_index.md" >}})의 공급사 열에서 도출했습니다.
 
 ## 1. 표준 데이터 형식
 
@@ -93,7 +89,7 @@ AI BOM은 기계 판독이 가능한 표준 형식으로 제출해야 합니다.
 - 데이터셋 식별자는 접근 가능한 URL이나 URI를 사용합니다.
 - 식별자가 여럿이면 전부 포함합니다.
 
-## 4. 라이선스, 출처, 민감도 강조
+## 4. 라이선스, 출처, 민감도 요구 강화
 
 기존 소프트웨어 SBOM 요구사항과 달리, AI BOM에서는 다음 세 항목을 특히 엄격하게 요구합니다.
 

@@ -11,10 +11,6 @@ author: 장학성
 categories: ["research"]
 tags: ["SBOM", "AI BOM", "SPDX", "CycloneDX", "공급망 보안", "Dependency-Track"]
 ai_generated: true
-ai_generator: "Claude Opus 4.8 via local Claude Code harness"
-ai_pipeline: "research-coordinator → 표준 합의 매트릭스 → operational 운영 문서 3종 → 도구 세트 전략 → fact-checker"
-verified_at: 2026-06-29
-verification_verdict: "CONDITIONAL PASS"
 ---
 
 {{% alert color="info" %}}
