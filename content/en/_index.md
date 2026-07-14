@@ -16,5 +16,8 @@ author: 장학성
 <a class="btn btn-lg btn-outline-light me-3 mb-3" href="/research/">
   Research 보기 <i class="fas fa-book ms-2"></i>
 </a>
+<a class="btn btn-lg btn-outline-light me-3 mb-3" href="/tools/">
+  Tools 보기 <i class="fas fa-wrench ms-2"></i>
+</a>
 </div>
 {{< /blocks/cover >}}

@@ -286,9 +286,11 @@ h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
   text-decoration: none;
 }
 
-// ── Research 목록 카드(research 섹션 전용 — layouts/research/list.html) ──
-// 발행일·갱신일·태그를 함께 보여 스캔성을 높인다. 색은 var(--bs-*)로 다크 자동 대응.
-.research-cards {
+// ── 목록 카드(research 섹션·tools 섹션 공용) ──
+// research는 발행일·갱신일·태그를, tools는 도구 메타 한 줄을 보여 스캔성을 높인다.
+// 색은 var(--bs-*)로 다크 자동 대응. tool 카드는 .tool-cards/.tool-card로 규칙을 공유한다.
+.research-cards,
+.tool-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: $space-5;
@@ -298,7 +300,8 @@ h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.research-card {
+.research-card,
+.tool-card {
   display: block;
   padding: $space-5;
   border: 1px solid var(--bs-border-color);
@@ -309,33 +312,55 @@ h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
   color: inherit;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
-.research-card:hover {
+.research-card:hover,
+.tool-card:hover {
   transform: translateY(-2px);
   box-shadow: $box-shadow;
   border-color: rgba($primary, 0.4);
   text-decoration: none;
 }
-.research-card__title {
+// tool 카드는 로고 마크 + 제목을 한 줄로 배치한다.
+.tool-card__head {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-3;
+}
+.tool-card__logo {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  // TRUSCA 마크는 배경이 짙어 다크 모드에서 가장자리가 묻힌다. 얇은 테두리로 윤곽을 살린다.
+  border: 1px solid var(--bs-border-color);
+}
+.research-card__title,
+.tool-card__title {
   font-size: $text-lg;
   font-weight: 600;
   letter-spacing: -0.012em;
   margin: 0 0 $space-2;
   color: var(--bs-body-color);
 }
-.research-card:hover .research-card__title { color: $primary; }
-.research-card__desc {
+.tool-card__head .tool-card__title { margin: 0; }
+.research-card:hover .research-card__title,
+.tool-card:hover .tool-card__title { color: $primary; }
+.research-card__desc,
+.tool-card__desc {
   font-size: $text-sm;
   line-height: 1.6;
   color: var(--bs-secondary-color);
   margin: 0 0 $space-3;
 }
-.research-card__meta {
+.research-card__meta,
+.tool-card__meta {
   font-size: $text-xs;
   color: var(--bs-secondary-color);
   margin-bottom: $space-2;
 
   .research-card__updated { margin-left: $space-1; }
 }
+.tool-card__meta { margin-bottom: 0; }
 .research-card__tags {
   display: flex;
   flex-wrap: wrap;
