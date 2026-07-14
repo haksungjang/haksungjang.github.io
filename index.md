@@ -39,6 +39,9 @@ LLMS index: [llms.txt](/llms.txt)
 <a class="btn btn-lg btn-outline-light me-3 mb-3" href="/research/">
   Research 보기 <i class="fas fa-book ms-2"></i>
 </a>
+<a class="btn btn-lg btn-outline-light me-3 mb-3" href="/tools/">
+  Tools 보기 <i class="fas fa-wrench ms-2"></i>
+</a>
 </div>
 </div>
       </div>
@@ -53,5 +56,6 @@ Section pages:
 
 - [Guide](/docs/)
 - [Research](/research/): 오픈소스 규제·정책과 컴플라이언스 실무를 1차 출처에 근거해 분석한 자료입니다. EU CRA, 미국 AI 행정명령, EU 오픈소스 전략 등 최신 동향을 다룹니다.
+- [Tools](/tools/): 제가 참여하는 오픈소스 관리 도구를 소개합니다. SBOM 생성, 오픈소스 위험 분석, 취약점과 라이선스 관리, 고지문 생성 등을 다룹니다.
 - [Blog](/blog/)
 - [Search Results](/search/)
