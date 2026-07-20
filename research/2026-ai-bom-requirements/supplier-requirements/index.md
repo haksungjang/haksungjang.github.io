@@ -15,7 +15,7 @@ LLMS index: [llms.txt](/llms.txt)
 </div>
 
 
-이 문서는 자사에 AI 모델이나 AI 시스템을 공급하는 공급사가 제출해야 하는 AI를 위한 부품 명세서(AI Bill of Materials, AI BOM)의 요구사항을 규정합니다. 기존 소프트웨어 부품 명세서(SBOM) 제출 요구사항을 모델과 데이터셋으로 확장한 것이며, 필수 항목은 [「AI BOM 필드 요구사항 매트릭스」](/research/2026-ai-bom-requirements/)의 공급사 열에서 도출했습니다.
+이 문서는 자사에 AI 모델이나 AI 시스템을 공급하는 공급사가 제출해야 하는 AI를 위한 자재 명세서(AI Bill of Materials, AI BOM)의 요구사항을 규정합니다. 기존 소프트웨어 자재 명세서(SBOM) 제출 요구사항을 모델과 데이터셋으로 확장한 것이며, 필수 항목은 [「AI BOM 필드 요구사항 매트릭스」](/research/2026-ai-bom-requirements/)의 공급사 열에서 도출했습니다.
 
 ## 1. 표준 데이터 형식
 
