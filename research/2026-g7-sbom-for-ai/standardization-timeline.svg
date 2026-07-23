@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="466" viewBox="0 0 840 466">
+  <defs>
+    <filter id="g1" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="840" height="466" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <!-- 축 -->
+    <line x1="176" y1="42" x2="176" y2="392" stroke="#d1d5db" stroke-width="1.5"/>
+
+    <!-- 1 -->
+    <text x="154" y="69" text-anchor="end" font-size="13" fill="#374151">2021-07</text>
+    <circle cx="176" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="36" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="60" font-size="14.5" fill="#111827">NTIA 일반 SBOM 최소 요소</text>
+    <text x="224" y="80" font-size="12.5" fill="#6b7280">데이터 필드 7종을 규정한 출발점</text>
+
+    <!-- 2 -->
+    <text x="154" y="149" text-anchor="end" font-size="13" fill="#374151">이후</text>
+    <circle cx="176" cy="144" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="116" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="140" font-size="14.5" fill="#111827">CISA로 이관</text>
+    <text x="224" y="160" font-size="12.5" fill="#6b7280">SBOM 커뮤니티가 주관, SW 식별 생태계 분석 등</text>
+
+    <!-- 3 -->
+    <text x="154" y="229" text-anchor="end" font-size="13" fill="#374151">2025-06</text>
+    <circle cx="176" cy="224" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="196" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="220" font-size="14.5" fill="#111827">G7 AI를 위한 SBOM 공동 비전</text>
+    <text x="224" y="240" font-size="12.5" fill="#6b7280">고수준 클러스터를 제시</text>
+
+    <!-- 4 -->
+    <text x="154" y="309" text-anchor="end" font-size="13" fill="#374151">2025-08</text>
+    <text x="154" y="327" text-anchor="end" font-size="13" fill="#374151">~ 2026-02</text>
+    <circle cx="176" cy="304" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="276" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="300" font-size="14.5" fill="#111827">G7 작업반이 최소 요소 구체화</text>
+    <text x="224" y="320" font-size="12.5" fill="#6b7280">BSI와 ACN 공동 주도</text>
+
+    <!-- 5 (강조) -->
+    <text x="154" y="389" text-anchor="end" font-size="13" fill="#c2410c">2026-05-12</text>
+    <circle cx="176" cy="384" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="356" width="440" height="56" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#g1)"/>
+    <text x="224" y="380" font-size="14.5" fill="#111827">「AI를 위한 SBOM — 최소 요소」 발행</text>
+    <text x="224" y="400" font-size="12.5" fill="#c2410c">7개 클러스터 50개 요소</text>
+
+    <!-- 누적 관계 -->
+    <path d="M 668 64 L 700 64 L 700 384 L 668 384" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="714" y="200" font-size="13" fill="#4b5563">일반 SBOM 요소</text>
+    <text x="714" y="219" font-size="13" fill="#4b5563">위에 AI 요소를</text>
+    <text x="714" y="238" font-size="13" fill="#4b5563">누적하는 구조</text>
+    <text x="714" y="264" font-size="12" fill="#9ca3af">메타데이터 클러스터는</text>
+    <text x="714" y="282" font-size="12" fill="#9ca3af">NTIA 계통을 그대로</text>
+    <text x="714" y="300" font-size="12" fill="#9ca3af">이어받습니다</text>
+
+    <!-- 주석 -->
+    <line x1="40" y1="436" x2="800" y2="436" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="456" font-size="12.5" fill="#4b5563">요소 단위로 필수와 선택을 구분하지 않고 50개를 모두 최소 요소로 권고한 점이 이 문서의 특징입니다.</text>
+  </g>
+</svg>

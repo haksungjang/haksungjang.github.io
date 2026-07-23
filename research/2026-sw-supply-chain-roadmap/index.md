@@ -28,21 +28,9 @@ LLMS index: [llms.txt](/llms.txt)
 
 로드맵은 "안전하고 책임 있는 공급망 보안 체계의 전환을 통한 사이버 복원력 확보"를 비전으로 내걸고, 이를 예방·복원·기반의 세 축으로 수렴시켰습니다<a id="a1-ref-4"></a>[A1](#a1). 그 아래 세 개 추진 전략과 아홉 개 세부과제가 놓입니다.
 
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': {'fontSize':'19px'}, 'flowchart': {'nodeSpacing': 50, 'rankSpacing': 70}} }%%
-flowchart TB
-    V["비전<br/>SW 공급망<br/>사이버 복원력 확보"]
-    V --> A["예방<br/>위협 예방<br/>역량 강화"]
-    V --> B["복원<br/>신속한 탐지·<br/>대응 체계"]
-    V --> C["기반<br/>정책·제도적<br/>기반 조성"]
+![비전인 SW 공급망 사이버 복원력 확보 아래 예방·복원·기반 세 전략이 놓이고, 각 전략에 안전한 개발 방법론, 공공 SBOM 통합관리, 시범인증 같은 핵심 과제가 배치된 구조](./strategy-structure.png)
 
-    style V fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-    style B fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-    style C fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-```
-
-**그림 1.** 로드맵의 비전과 세 추진 전략 *(본 보고서 정리; 로드맵<a id="a1-ref-5"></a>[A1](#a1) 근거).*
+**그림 1.** 비전과 세 전략, 전략별 핵심 과제 *(본 보고서 정리; 외부 출처는 §5 참조).*
 
 ## 2. 예방 — 보안 내재화와 SBOM 투명성
 
@@ -68,28 +56,7 @@ flowchart TB
 
 글로벌 협력 과제는 두 다자 협력체와 연결됩니다. 글로벌 사이버보안 라벨링 이니셔티브(Global Cybersecurity Labelling Initiative, GCLI)는 IoT 보안인증 라벨의 상호인정과 단일 표준 제정을 논의하는 협력체로, 2025년 10월 23일 싱가포르 국제사이버위크에서 11개 창립 회원으로 출범했고 한국의 과기정통부와 KISA가 창립 회원으로 참여합니다<a id="a10-ref-1"></a>[A10](#a10). 로드맵은 이와 함께 글로벌 정부 전문가 포럼(Global Government Expert Forum, GGEF), 미국 사이버보안·인프라보안청(Cybersecurity and Infrastructure Security Agency, CISA), EU 집행위 정보통신총국(DG CONNECT), 영국 과학혁신기술부(DSIT)와의 협력을 글로벌 진출 지원의 통로로 제시했습니다<a id="a1-ref-24"></a>[A1](#a1).
 
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': {'fontSize':'19px'}, 'flowchart': {'nodeSpacing': 45, 'rankSpacing': 60}} }%%
-flowchart TB
-    G1["미국 NIST SSDF<br/>· EO 14028"]
-    G2["미국 FDA §524B<br/>· EU CRA<br/>(SBOM 의무)"]
-    G3["EU CRA<br/>취약점 보고·CVD"]
-    G4["미국 Cyber Trust Mark<br/>· 영국 PSTI"]
-
-    G1 --> T1["안전한 SW<br/>개발 방법론"]
-    G2 --> T2["SBOM<br/>관리모델"]
-    G3 --> T4["CVD/VDP 확대"]
-    G4 --> T8["시범인증·<br/>MRA·사후관리"]
-
-    style G1 fill:#eceff1,stroke:#455a64,stroke-width:1.5px
-    style G2 fill:#eceff1,stroke:#455a64,stroke-width:1.5px
-    style G3 fill:#eceff1,stroke:#455a64,stroke-width:1.5px
-    style G4 fill:#eceff1,stroke:#455a64,stroke-width:1.5px
-    style T1 fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-    style T2 fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-    style T4 fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-    style T8 fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px
-```
+![수출기업이 마주한 해외 제도 넷과 로드맵이 배치한 국내 과제 넷의 대응 관계. SBOM 제출을 직접 의무로 규정한 FDA와 EU CRA가 SBOM 관리모델로 이어지는 축이 중심이다](./global-to-domestic.png)
 
 **그림 2.** 로드맵이 참조한 글로벌 제도와 정책 과제의 대응 관계 *(본 보고서 정리; 외부 출처는 §5 참조).*
 
@@ -98,6 +65,10 @@ flowchart TB
 ## 5. 글로벌 규제가 만든 배경
 
 로드맵이 SBOM과 시범인증, 상호인정을 핵심 수단으로 삼은 데에는 수출기업이 마주한 해외 규제가 있습니다. 로드맵이 인용한 기업 인터뷰가 이를 단적으로 보여줍니다. 디지털 의료기기 제조기업이 FDA 인허가 단계에서 SBOM 요구로 대응에 곤란을 겪었고, 미국에 진출한 정보보호기업은 연방정부 SW 납품 중 SBOM 관리요건 미충족 시 차년도 계약 불가를 통보받았으며, 인공지능 솔루션 개발기업은 글로벌 금융기업 납품 준비 중 사이버보안 요건 미충족으로 계약이 무산됐습니다<a id="a1-ref-26"></a>[A1](#a1).
+
+![2021년 미국 행정명령 14028부터 2027년 EU 사이버복원력법 전면 적용까지의 연표. 2026년 6월 국내 로드맵 발표 이후 구간이 규제 시한과 겹친다](./regulation-timeline.png)
+
+**그림 3.** 로드맵의 배경이 된 해외 규제와 앞으로의 시한 *(본 보고서 정리; 출처는 §7 참조).*
 
 이들 규제는 대부분 2021~2024년 사이에 확정됐습니다. EU 사이버복원력법(Regulation (EU) 2024/2847)은 디지털 요소를 가진 제품에 수평적 사이버보안 요건을 부과하는 규정으로, 2024년 12월 10일 발효됐습니다<a id="b1-ref-2"></a>[B1](#b1)·<a id="b2-ref-1"></a>[B2](#b2). 제14조 보고 의무는 2026년 9월 11일부터, 적합성 평가와 CE 마킹을 포함한 본질적 의무 전반은 2027년 12월 11일부터 적용됩니다<a id="b2-ref-2"></a>[B2](#b2). 제조사는 디지털 요소를 가진 제품의 SBOM 작성과 생애주기 전반의 취약점 처리, 그리고 적극적으로 악용되는 취약점이나 중대 사고를 인지 후 24시간 안에 조기 경보하고 72시간 안에 통지하는 의무를 집니다<a id="b1-ref-3"></a>[B1](#b1). 위반 시 과징금은 최대 1,500만 유로 또는 전 세계 연 매출의 2.5% 중 높은 금액입니다<a id="b1-ref-4"></a>[B1](#b1). 로드맵이 반복하는 "'27.12 시행 예정"이 이 전면 적용일입니다<a id="a1-ref-27"></a>[A1](#a1).
 

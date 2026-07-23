@@ -65,19 +65,9 @@ AI 시스템도 소프트웨어 시스템이므로 SBOM은 AI에도 유효하며
 
 모델 라이선스(Model license) 요소는 G7 문서의 고유한 기여입니다. 단순히 오픈소스 라이선스 종류를 가리키는 데 그치지 않고, 모델이 open weight, open architecture, open data, open training 중 무엇인지 구분해 명시하도록 요구합니다<a id="c1-ref-16"></a>[C1](#c1).
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px'}}}%%
-flowchart TD
-    L["Model license<br/>모델 개방성 4구분"]
-    L --> W["Open weight<br/>가중치 공개"]
-    L --> A["Open architecture<br/>아키텍처 공개"]
-    L --> D["Open data<br/>학습 데이터 공개"]
-    L --> T["Open training<br/>학습 절차 공개"]
+![모델 라이선스가 요구하는 네 축. 가중치, 아키텍처, 학습 데이터, 학습 절차의 공개 여부를 따로 밝히도록 해, 라이선스 이름만으로는 알 수 없는 실제 개방 범위를 드러낸다](./model-openness.png)
 
-    style L fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-```
-
-**그림 1.** 모델 라이선스 요소의 4구분. G7 최소 요소는 모델 라이선스를 단일 표기가 아니라 가중치와 아키텍처, 데이터, 학습 절차 각각의 개방 여부로 명시하도록 요구합니다. *(G7 Software Bill of Materials for AI — Minimum Elements (2026-05-12); 수집 2026-06-22)*
+**그림 1.** 모델 라이선스가 따로 밝히도록 요구하는 네 축 *(G7 「AI를 위한 SBOM — 최소 요소」 2.3절 기준).*
 
 "오픈 모델"이라는 한 단어로 뭉뚱그려지던 개방성을 네 축으로 분해한 것은, 가중치만 공개되고 학습 데이터나 절차는 비공개인 흔한 사례를 SBOM 차원에서 구별하기 위함입니다. 가중치 공개와 학습 데이터 공개는 라이선스와 재현성, 법적 책임 측면에서 전혀 다른 의미를 갖습니다.
 
@@ -99,23 +89,9 @@ flowchart TD
 
 이 문서가 지금 나온 이유는 두 갈래 계보가 한 지점에서 만났기 때문입니다. 하나는 미국에서 제도화된 일반 SBOM 최소 요소이고, 다른 하나는 G7이 2025년에 그린 AI를 위한 SBOM 비전입니다.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px'}}}%%
-flowchart TD
-    A["2021-07 · NTIA<br/>일반 SBOM 최소 요소<br/>(데이터 필드 7종)"]
-    B["이후 · CISA 이관<br/>SBOM 커뮤니티 주관<br/>(SW 식별 생태계 분석 등)"]
-    C["2025-06 · G7<br/>AI를 위한 SBOM 공동 비전<br/>(고수준 클러스터 제시)"]
-    D["2025-08~2026-02 · G7 작업반<br/>최소 요소 구체화"]
-    E["2026-05-12 · 발행<br/>AI를 위한 SBOM<br/>— 최소 요소 (본 문서)"]
+![2021년 NTIA 일반 SBOM 최소 요소에서 시작해 CISA 이관, 2025년 G7 공동 비전과 작업반 논의를 거쳐 2026년 5월 최소 요소 발행에 이르는 경과. 일반 SBOM 요소 위에 AI 요소를 누적하는 구조](./standardization-timeline.png)
 
-    A --> B --> C --> D --> E
-    A -. "일반 SBOM 요소에<br/>AI 요소를 누적" .-> E
-
-    style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style E fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-```
-
-**그림 2.** AI를 위한 SBOM 최소 요소의 계보. 2021년 일반 SBOM 최소 요소(NTIA, 파란색)를 토대로 AI 고유 요소를 더해 2026년 발행 문서(주황색)에 이른 누적 과정입니다. 점선은 일반 SBOM 요소가 최종 문서에 그대로 포함됨을 나타냅니다. *(NTIA(2021), CISA, G7(2025, 2026) 종합; 2026-06-22)*
+**그림 2.** 일반 SBOM에서 AI SBOM으로 이어진 표준화 경과 *(본 보고서 정리).*
 
 일반 SBOM 최소 요소의 기준점은 미국 상무부 통신정보관리청(National Telecommunications and Information Administration, NTIA)이 행정명령 14028의 지시로 2021년 7월 발행한 「The Minimum Elements for a Software Bill of Materials」입니다. 이 문서는 공급자명과 구성요소명, 버전, 고유 식별자, 의존 관계, SBOM 작성자, 타임스탬프의 일곱 데이터 필드를 제시했고, 이후 SBOM 커뮤니티 작업의 주관은 CISA로 이관되었습니다<a id="c7-ref-1"></a>[C7](#c7). G7 문서가 이 계보를 직접 잇고 있다는 증거는 메타데이터 클러스터의 정의 방식에서 드러납니다. 작성자와 버전, 데이터 형식, 타임스탬프, 의존성 관계는 NTIA 데이터 필드를 거의 그대로 AI 맥락에 옮긴 것이고, 모델 식별자가 CPE와 PURL을 우선 식별자로 지정하며 CISA의 「Software Identification Ecosystem Option Analysis」(2023)를 인용하는 대목도 같은 뿌리를 보여줍니다<a id="c6-ref-1"></a>[C6](#c6)·<a id="c7-ref-2"></a>[C7](#c7).
 
