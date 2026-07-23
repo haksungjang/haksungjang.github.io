@@ -142,21 +142,9 @@ OSCAL은 보안 통제 표현용이라 SBOM 필드를 담기에는 과한 도구
 
 AI 시스템의 BOM은 소프트웨어 의존성 계층과 모델·데이터셋 계층으로 갈립니다. Dependency-Track은 앞 계층을 지금 바로 처리하고, 뒤 계층은 아직 1급으로 받지 못합니다(이슈 #4361은 조사 시점에 open 상태이며 추후 변경될 수 있습니다). 그래서 계층을 나눠 통합합니다.
 
-```mermaid
-%%{init: {'theme':'neutral','themeVariables':{'fontSize':'18px'}}}%%
-flowchart TD
-    GEN["생성<br/>cdxgen aibom<br/>CycloneDX 1.6"]
-    SEC["보강<br/>ModelScan 스캔<br/>sigstore 서명"]
-    POL["검증<br/>역할별 정책<br/>sbomqs, Rego"]
-    DT["저장·취약점<br/>Dependency-Track<br/>SW 계층 매칭"]
-    INV["모델·데이터 계층<br/>properties 우회<br/>또는 분류자 대기"]
-    GEN --> SEC
-    SEC --> POL
-    POL --> DT
-    POL --> INV
-```
+![공통 파이프라인은 생성, 보강, 검증 세 단계이며 검증 이후 두 계층으로 갈린다. 소프트웨어 계층은 Dependency-Track이 그대로 받지만, 모델·데이터셋 계층은 분류자 지원이 없어 일반 컴포넌트로 올리고 properties로 우회한다](./toolchain-layers.png)
 
-**그림 2.** AI BOM 도구 파이프라인과 계층 분리 *(조사 종합)*
+**그림 4.** 공통 파이프라인과 검증 이후 갈리는 두 계층 *(조사 종합)*
 
 소프트웨어 계층은 추가 작업이 거의 없습니다. cdxgen이 ML 프로젝트의 PyPI나 npm 의존성을 CycloneDX로 만들어 Dependency-Track에 올리면, OSV와 NVD로 취약점을 상관하고 "이 컴포넌트를 쓰는 프로젝트는?" 영향분석까지 제공합니다. huntr가 ML 라이브러리에 발급한 CVE도 NVD를 거쳐 잡힙니다.
 

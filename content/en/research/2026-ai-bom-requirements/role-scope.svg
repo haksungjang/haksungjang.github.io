@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470">
+  <defs>
+    <filter id="r1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="820" height="470" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <!-- 기준선: 합의 판정 -->
+    <rect x="40" y="34" width="740" height="52" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="60" y="56" font-size="14" fill="#111827">합의 판정 — 표준 5곳의 요구를 집계한 기준</text>
+    <text x="60" y="76" font-size="12.5" fill="#6b7280">50개 요소 중 필수 20 · 선택 30</text>
+
+    <!-- 세 역할이 이 기준을 각자 조정 -->
+    <line x1="410" y1="86" x2="410" y2="112" stroke="#9ca3af" stroke-width="1.5"/>
+    <text x="424" y="106" font-size="12.5" fill="#6b7280">역할마다 필수의 경계를 다시 긋습니다</text>
+
+    <!-- 생산 -->
+    <rect x="40" y="122" width="740" height="98" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="60" y="148" font-size="15" fill="#111827">생산</text>
+    <text x="60" y="170" font-size="12.5" fill="#6b7280">자사가 만들 때. 정보 접근성이 가장 좋으므로</text>
+    <text x="60" y="188" font-size="12.5" fill="#6b7280">합의 필수를 그대로 두고 나머지를 폭넓게 권장</text>
+    <text x="60" y="208" font-size="12.5" fill="#9ca3af">필수 20 · 권장 29 · 선택 1</text>
+    <rect x="470" y="150" width="290" height="34" rx="5" fill="#fdf1e9" stroke="#e8c4a8"/>
+    <text x="615" y="172" text-anchor="middle" font-size="13" fill="#c2410c">합의 필수 20 그대로</text>
+
+    <!-- 도입 -->
+    <rect x="40" y="234" width="740" height="98" rx="8" fill="#fff" stroke="#c2410c" stroke-width="1.8" filter="url(#r1)"/>
+    <text x="60" y="260" font-size="15" fill="#111827">도입</text>
+    <text x="60" y="282" font-size="12.5" fill="#6b7280">외부 모델을 들여올 때. 문서 메타데이터는 내리고</text>
+    <text x="60" y="300" font-size="12.5" fill="#6b7280">위험 판단에 쓰는 필드를 올립니다</text>
+    <text x="60" y="320" font-size="12.5" fill="#9ca3af">필수 15 · 권장 24 · 선택 11</text>
+    <rect x="470" y="248" width="140" height="34" rx="5" fill="#fdf1e9" stroke="#e8c4a8"/>
+    <text x="540" y="270" text-anchor="middle" font-size="13" fill="#c2410c">합의 필수 12</text>
+    <rect x="618" y="248" width="142" height="34" rx="5" fill="#fff" stroke="#c2410c" stroke-dasharray="4 3"/>
+    <text x="689" y="270" text-anchor="middle" font-size="13" fill="#c2410c">승격 3</text>
+    <text x="470" y="304" font-size="12" fill="#6b7280">내림 8 — 작성자, 형식, 타임스탬프 등</text>
+    <text x="470" y="322" font-size="12" fill="#6b7280">올림 3 — 모델 설명, 데이터셋 민감도, 취약점 참조</text>
+
+    <!-- 공급사 -->
+    <rect x="40" y="346" width="740" height="98" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="60" y="372" font-size="15" fill="#111827">공급사 요구</text>
+    <text x="60" y="394" font-size="12.5" fill="#6b7280">계약으로 강제할 수준. 합의 필수를 거의 유지하고</text>
+    <text x="60" y="412" font-size="12.5" fill="#6b7280">위험 판단 필드 둘을 더합니다</text>
+    <text x="60" y="432" font-size="12.5" fill="#9ca3af">필수 20 · 권장 24 · 선택 6</text>
+    <rect x="470" y="360" width="196" height="34" rx="5" fill="#fdf1e9" stroke="#e8c4a8"/>
+    <text x="568" y="382" text-anchor="middle" font-size="13" fill="#c2410c">합의 필수 18</text>
+    <rect x="674" y="360" width="86" height="34" rx="5" fill="#fff" stroke="#c2410c" stroke-dasharray="4 3"/>
+    <text x="717" y="382" text-anchor="middle" font-size="13" fill="#c2410c">승격 2</text>
+    <text x="470" y="416" font-size="12" fill="#6b7280">올림 2 — 데이터셋 민감도, 취약점 참조</text>
+  </g>
+</svg>
