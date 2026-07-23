@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="368" viewBox="0 0 820 368">
+  <defs>
+    <filter id="o1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="820" height="368" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <text x="40" y="30" font-size="14" fill="#111827">모델 라이선스는 네 가지를 따로 밝히도록 요구합니다</text>
+    <text x="40" y="52" font-size="12.5" fill="#6b7280">라이선스 이름만으로는 무엇이 공개됐는지 알 수 없기 때문입니다. 네 축은 독립이며 일부만 공개하는 경우가 흔합니다.</text>
+
+    <!-- 4개 축 -->
+    <rect x="40" y="74" width="180" height="130" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#o1)"/>
+    <text x="60" y="102" font-size="14" fill="#111827">Open weight</text>
+    <text x="60" y="124" font-size="12.5" fill="#6b7280">학습된 가중치를</text>
+    <text x="60" y="142" font-size="12.5" fill="#6b7280">내려받아 쓸 수 있는가</text>
+    <line x1="60" y1="158" x2="200" y2="158" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="60" y="180" font-size="12" fill="#9ca3af">가장 흔히 공개되는 축</text>
+
+    <rect x="234" y="74" width="180" height="130" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#o1)"/>
+    <text x="254" y="102" font-size="14" fill="#111827">Open architecture</text>
+    <text x="254" y="124" font-size="12.5" fill="#6b7280">모델 구조와 설계를</text>
+    <text x="254" y="142" font-size="12.5" fill="#6b7280">공개하는가</text>
+    <line x1="254" y1="158" x2="394" y2="158" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="254" y="180" font-size="12" fill="#9ca3af">재현과 검증의 전제</text>
+
+    <rect x="428" y="74" width="180" height="130" rx="8" fill="#fff" stroke="#c2410c" stroke-width="1.8" filter="url(#o1)"/>
+    <text x="448" y="102" font-size="14" fill="#111827">Open data</text>
+    <text x="448" y="124" font-size="12.5" fill="#6b7280">학습에 쓴 데이터를</text>
+    <text x="448" y="142" font-size="12.5" fill="#6b7280">공개하는가</text>
+    <line x1="448" y1="158" x2="588" y2="158" stroke="#fdf1e9" stroke-width="1"/>
+    <text x="448" y="180" font-size="12" fill="#c2410c">저작권·개인정보 판단의 근거</text>
+
+    <rect x="622" y="74" width="158" height="130" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#o1)"/>
+    <text x="642" y="102" font-size="14" fill="#111827">Open training</text>
+    <text x="642" y="124" font-size="12.5" fill="#6b7280">학습 절차와 방법을</text>
+    <text x="642" y="142" font-size="12.5" fill="#6b7280">공개하는가</text>
+    <line x1="642" y1="158" x2="762" y2="158" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="642" y="180" font-size="12" fill="#9ca3af">재학습 가능성을 좌우</text>
+
+    <!-- 예시 -->
+    <rect x="40" y="228" width="740" height="82" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="60" y="254" font-size="13" fill="#111827">왜 나눠서 밝혀야 하는가</text>
+    <text x="60" y="278" font-size="12.5" fill="#6b7280">가중치만 공개하고 학습 데이터는 밝히지 않는 모델이 "오픈"으로 불리는 경우가 많습니다. 네 축을 따로 적으면</text>
+    <text x="60" y="296" font-size="12.5" fill="#6b7280">도입하는 쪽이 무엇을 검증할 수 있고 무엇을 확인할 수 없는지 구분할 수 있습니다.</text>
+
+    <!-- 주석 -->
+    <line x1="40" y1="332" x2="780" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="352" font-size="12.5" fill="#4b5563">모델 클러스터 13개 요소 가운데 하나입니다. G7 문서가 기존 SBOM 표준에 더한 고유한 기여로 꼽힙니다.</text>
+  </g>
+</svg>

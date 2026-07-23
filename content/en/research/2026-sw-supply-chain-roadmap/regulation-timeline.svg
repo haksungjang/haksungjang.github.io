@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="588" viewBox="0 0 860 588">
+  <defs>
+    <filter id="t1" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="860" height="588" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <!-- 축 -->
+    <line x1="152" y1="42" x2="152" y2="546" stroke="#d1d5db" stroke-width="1.5"/>
+    <line x1="152" y1="342" x2="152" y2="546" stroke="#c2410c" stroke-width="3.5"/>
+
+    <!-- 1 -->
+    <text x="130" y="69" text-anchor="end" font-size="13" fill="#374151">2021-05</text>
+    <circle cx="152" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="36" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="60" font-size="14.5" fill="#111827">미국 행정명령 14028 서명</text>
+    <text x="200" y="80" font-size="12.5" fill="#6b7280">SBOM을 연방 조달 요건으로 제도화, NIST에 SSDF 정리 지시</text>
+
+    <!-- 2 -->
+    <text x="130" y="145" text-anchor="end" font-size="13" fill="#374151">2023-03</text>
+    <circle cx="152" cy="140" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="112" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="136" font-size="14.5" fill="#111827">미국 FD&amp;C Act 제524B조 발효</text>
+    <text x="200" y="156" font-size="12.5" fill="#6b7280">의료기기 시판전 신청에 SBOM 제출 의무</text>
+
+    <!-- 3 -->
+    <text x="130" y="221" text-anchor="end" font-size="13" fill="#374151">2024-04</text>
+    <circle cx="152" cy="216" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="188" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="212" font-size="14.5" fill="#111827">영국 제품보안통신인프라법 발효</text>
+    <text x="200" y="232" font-size="12.5" fill="#6b7280">같은 해 3월 미국 사이버 신뢰 마크 의결</text>
+
+    <!-- 4 -->
+    <text x="130" y="297" text-anchor="end" font-size="13" fill="#374151">2024-12</text>
+    <circle cx="152" cy="292" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="264" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="288" font-size="14.5" fill="#111827">EU 사이버복원력법 발효</text>
+    <text x="200" y="308" font-size="12.5" fill="#6b7280">디지털 요소를 가진 제품에 SBOM과 취약점 처리 의무</text>
+
+    <!-- 5 로드맵 (강조) -->
+    <text x="130" y="373" text-anchor="end" font-size="13" fill="#c2410c">2026-06-24</text>
+    <circle cx="152" cy="368" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="180" y="340" width="500" height="56" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#t1)"/>
+    <text x="200" y="364" font-size="14.5" fill="#111827">국내 로드맵 발표</text>
+    <text x="200" y="384" font-size="12.5" fill="#c2410c">행정계획 성격. 개별 과제는 법·제도 정비를 거쳐야 규범력을 얻습니다</text>
+
+    <!-- 6 -->
+    <text x="130" y="449" text-anchor="end" font-size="13" fill="#374151">2026-09-11</text>
+    <circle cx="152" cy="444" r="5" fill="#ffffff" stroke="#c2410c" stroke-width="2"/>
+    <rect x="180" y="416" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="440" font-size="14.5" fill="#111827">사이버복원력법 제14조 적용</text>
+    <text x="200" y="460" font-size="12.5" fill="#6b7280">악용 취약점·중대 사고를 24시간 경보, 72시간 통지</text>
+
+    <!-- 7 -->
+    <text x="130" y="525" text-anchor="end" font-size="13" fill="#374151">2027-12-11</text>
+    <circle cx="152" cy="520" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="180" y="492" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="516" font-size="14.5" fill="#111827">사이버복원력법 전면 적용</text>
+    <text x="200" y="536" font-size="12.5" fill="#6b7280">적합성 평가와 CE 마킹 포함. 정부의 제도화 목표 시점과 겹칩니다</text>
+
+    <!-- 브래킷 -->
+    <path d="M 704 368 L 722 368 L 722 520 L 704 520" fill="none" stroke="#c2410c" stroke-width="1.6"/>
+    <text x="736" y="428" font-size="13" fill="#c2410c">로드맵 3년과</text>
+    <text x="736" y="447" font-size="13" fill="#c2410c">규제 시한이</text>
+    <text x="736" y="466" font-size="14.5" font-weight="600" fill="#c2410c">겹치는 구간</text>
+  </g>
+</svg>

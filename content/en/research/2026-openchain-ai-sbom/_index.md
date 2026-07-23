@@ -57,54 +57,9 @@ AI 시스템에서는 추적해야 할 대상이 코드를 넘어섭니다. 모�
 
 요구사항을 의미별로 묶으면 두 계열로 나뉩니다. 하나는 ISO/IEC 5230에서 그대로 물려받은 프로그램 거버넌스 골격(정책, 역량, 인지, 범위, 자원, 접근)이고, 다른 하나는 AI 때문에 새로 확장된 영역(라이선스 의무, 투명성 의무, AI SBOM, AI 거버넌스)입니다. 그림 1이 이 군집 구조를 보여줍니다.
 
-```mermaid
-%%{init: {"theme": "neutral", "themeVariables": {"fontSize": "18px"}}}%%
-flowchart TB
-    ROOT["OpenChain AI SBOM 가이드<br/>본문 10개 요구사항"]
+![열 개 요구사항을 ISO/IEC 5230에서 이어받은 여섯과 AI로 확장한 넷으로 나눈 구조. 확장된 넷은 라이선스 의무, 투명성 의무, AI SBOM, 거버넌스다](./requirement-structure.png)
 
-    ROOT --> G1
-    ROOT --> G2
-    ROOT --> G3
-    ROOT --> G4
-
-    subgraph G1["프로그램 기반 (ISO/IEC 5230 계승)"]
-        direction TB
-        R31["3.1 정책<br/>(Policy)"]
-        R32["3.2 역량<br/>(Competence)"]
-        R33["3.3 인지<br/>(Awareness)"]
-        R34["3.4 프로그램 범위<br/>(Program scope)"]
-        R38["3.8 효과적 자원 배분<br/>(Effectively resourced)"]
-        R31 --> R32 --> R33 --> R34 --> R38
-    end
-
-    subgraph G2["외부 대응"]
-        direction TB
-        R37["3.7 접근<br/>(Access)"]
-    end
-
-    subgraph G3["AI 특화 컴플라이언스 (AI 확장)"]
-        direction TB
-        R35["3.5 라이선스 의무<br/>(License obligations)"]
-        R36["3.6 투명성 의무<br/>(Transparency obligations)"]
-        R39["3.9 AI SBOM"]
-        R35 --> R36 --> R39
-    end
-
-    subgraph G4["AI 거버넌스 (AI 확장)"]
-        direction TB
-        R310["3.10 거버넌스<br/>(Governance)"]
-    end
-
-    classDef inherited fill:#eef3f7,stroke:#5a7184,stroke-width:1px,color:#1a2630;
-    classDef extended fill:#fbf3e6,stroke:#9c7a3c,stroke-width:1px,color:#2e2410;
-    classDef root fill:#ffffff,stroke:#333,stroke-width:2px,color:#000;
-
-    class ROOT root;
-    class R31,R32,R33,R34,R38,R37 inherited;
-    class R35,R36,R39,R310 extended;
-```
-
-**그림 1.** OpenChain AI SBOM 가이드의 요구사항 군집 구조 *(OpenChain AI SBOM Compliance Guide 본문 3.1~3.10 기준, 작성일 2026-06-12)*
+**그림 1.** 계승한 여섯과 AI로 확장한 넷 *(OpenChain AI SBOM Compliance Guide 본문 3.1~3.10 기준, 작성일 2026-06-12)*
 
 각 요구사항의 핵심은 표 1과 같습니다. 표의 "강제 수준"은 가이드 본문이 쓴 RFC 2119 키워드(shall, should 등)를 옮긴 것으로, 정의는 가이드 2장이 IETF RFC 2119에서 가져왔습니다<a id="a1-ref-7"></a>[A1](#a1)·<a id="a6-ref-1"></a>[A6](#a6).
 
