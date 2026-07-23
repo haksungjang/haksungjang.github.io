@@ -14,6 +14,14 @@ resources:
     byline: ""
 ---
 
+{{% alert color="info" %}}
+이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 1차 출처로 교차 검증했습니다.
+{{% /alert %}}
+
+{{% alert title="고지" color="warning" %}}
+이 글은 작성자 개인의 분석과 정리이며, 법률 자문이 아닙니다. 인용한 사실은 공개 출처에 근거해 확인했으나, 침해 성립 여부와 같은 법적 판단은 다투어질 수 있는 사안이므로 구체적 사안의 판단은 변호사 등 전문가의 검토를 받으시기 바랍니다.
+{{% /alert %}}
+
 안녕하세요.
 
 임베디드 리눅스 업계에서 화제가 된 Rockchip과 FFmpeg의 라이선스 분쟁을 정리해 보았습니다. 
@@ -405,5 +413,4 @@ Rockchip 사례는 소스를 공개하는 것과 오픈소스 라이선스를 �
 - [CNX Software: Allwinner CedarX GPL/LGPL Compliance Update (2015-03-23)](https://www.cnx-software.com/2015/03/23/allwinner-cedarx-media-codec-library-gpl-lgpl-compliance-update/)
 - [nyanmisaka/ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip)
 
-*이 글은 2026년 7월 23일 후속 경과를 반영해 개정했습니다. 사실 확인은 GitHub API와 저장소 
-원본, 법령 원문을 직접 대조하는 방식으로 진행했으며, AI 도구의 도움을 받았습니다.*
+*2026년 7월 23일 후속 경과를 반영해 개정했습니다.*
