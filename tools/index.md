@@ -1,6 +1,6 @@
 # Tools
 
-> 제가 참여하는 오픈소스 관리 도구를 소개합니다. SBOM 생성, 오픈소스 위험 분석, 취약점과 라이선스 관리, 고지문 생성 등을 다룹니다.
+> 개발에 참여하고 있는 오픈소스 관리 도구입니다. SBOM 생성, 오픈소스 위험 분석, 취약점과 라이선스 관리, 고지문 생성을 다룹니다.
 
 ---
 
@@ -8,7 +8,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-제가 참여하는 오픈소스 관리 도구를 모았습니다. 각 카드를 누르면 GitHub 저장소로 이동합니다.
+개발에 참여하고 있는 오픈소스 관리 도구입니다. 각 카드를 누르면 GitHub 저장소로 이동합니다.
 
 <div class="tool-cards">
   <a class="tool-card" href="https://github.com/sktelecom/bomlens" target="_blank" rel="noopener">
