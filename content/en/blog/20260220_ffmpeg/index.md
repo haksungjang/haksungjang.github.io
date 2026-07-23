@@ -44,19 +44,7 @@ LGPL 2.1이던 코드를 Apache-2.0으로 재배포했습니다.
 
 ### 경과
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px'}}}%%
-flowchart TD
-    A["2024-02-23<br/>FFmpeg 공개 지적<br/>MPP 이슈 530 개설"]
-    B["약 22개월<br/>응답은 있었으나<br/>시정되지 않음"]
-    C["2025-12-18<br/>DMCA 통지<br/>12개 파일 지목"]
-    D["2025-12-26경<br/>저장소 비활성화"]
-    E["2025-12-29<br/>LGPL 헤더 복원"]
-    F["2026-01-15 ~ 02-12<br/>세 코덱 파서 교체"]
-    G["2026-03-06 ~ 03-11<br/>저장소 복구"]
-
-    A --> B --> C --> D --> E --> F --> G
-```
+![2024년 2월 FFmpeg의 공개 지적 이후 약 22개월간 시정되지 않다가, 2025년 12월 DMCA 통지로 저장소가 내려가고 약 10주 뒤인 2026년 3월 초 복구되기까지의 경과](./dispute-timeline.png)
 
 **그림 1.** 분쟁 경과 *(출처: DMCA 통지서, MPP 커밋 이력, 이슈 530·73, Internet Archive. 2026-07-23 확인)*
 
@@ -322,20 +310,7 @@ Apache-2.0 표기로 돌아갔습니다. 두 커밋의 작성 시각은 같은 �
 리눅스 커널은 하드웨어 가속을 위해 V4L2(Video for Linux 2)라는 표준 인터페이스를 제공합니다. 
 FFmpeg는 사용자 공간에 수정 없이 두고, 하드웨어 의존 코드는 커널 드라이버로 분리하는 구조입니다.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px'}}}%%
-flowchart TD
-    subgraph 문제가 된 구조
-        A1["응용 프로그램"] --> A2["MPP 라이브러리<br/>FFmpeg 코드 직접 복사"]
-        A2 --> A3["Rockchip VPU 하드웨어"]
-    end
-
-    subgraph 표준을 따르는 구조
-        B1["응용 프로그램"] --> B2["FFmpeg<br/>수정 없이 사용"]
-        B2 --> B3["커널 V4L2 인터페이스"]
-        B3 --> B4["Rockchip VPU 하드웨어"]
-    end
-```
+![문제가 된 구조는 응용 프로그램이 FFmpeg 코드를 복사해 내장한 MPP 라이브러리를 거쳐 하드웨어에 닿는 반면, 표준을 따르는 구조는 수정하지 않은 FFmpeg가 커널 V4L2 인터페이스를 통해 같은 하드웨어를 호출한다](./architecture-comparison.png)
 
 **그림 2.** 하드웨어 가속 연동 구조 비교
 
