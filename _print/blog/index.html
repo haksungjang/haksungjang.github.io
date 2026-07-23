@@ -17,17 +17,7 @@ Files in these directories will be listed in reverse chronological order."><link
 왔다는 것입니다. 단순히 가져다 쓴 것이 문제가 아니라, 세 가지 행위가 겹치면서 컴플라이언스
 위반이 되었습니다. 원본의 저작권 고지를 삭제했고, Rockchip이 저작자인 것처럼 헤더를 바꿨으며,
 LGPL 2.1이던 코드를 Apache-2.0으로 재배포했습니다.</p><p>통지서는 이 세 가지를 그대로 적시하면서, 침해 근거로 &ldquo;코드 구조와 동일한 주석에서 분명히
-드러나며, 원래 이름 그대로 주석 처리된 FFmpeg 내부 함수 호출까지 있다"고 밝혔습니다.</p><h3 id=경과>경과</h3><pre class=mermaid>%%{init: {&#39;theme&#39;:&#39;base&#39;, &#39;themeVariables&#39;: {&#39;fontSize&#39;:&#39;18px&#39;}}}%%
-flowchart TD
-    A[&#34;2024-02-23&lt;br/&gt;FFmpeg 공개 지적&lt;br/&gt;MPP 이슈 530 개설&#34;]
-    B[&#34;약 22개월&lt;br/&gt;응답은 있었으나&lt;br/&gt;시정되지 않음&#34;]
-    C[&#34;2025-12-18&lt;br/&gt;DMCA 통지&lt;br/&gt;12개 파일 지목&#34;]
-    D[&#34;2025-12-26경&lt;br/&gt;저장소 비활성화&#34;]
-    E[&#34;2025-12-29&lt;br/&gt;LGPL 헤더 복원&#34;]
-    F[&#34;2026-01-15 ~ 02-12&lt;br/&gt;세 코덱 파서 교체&#34;]
-    G[&#34;2026-03-06 ~ 03-11&lt;br/&gt;저장소 복구&#34;]
-
-    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F --&gt; G</pre><p><strong>그림 1.</strong> 분쟁 경과 <em>(출처: DMCA 통지서, MPP 커밋 이력, 이슈 530·73, Internet Archive. 2026-07-23 확인)</em></p><p>저장소가 다시 열린 정확한 날짜는 공개되지 않았습니다. Internet Archive 스냅샷이
+드러나며, 원래 이름 그대로 주석 처리된 FFmpeg 내부 함수 호출까지 있다"고 밝혔습니다.</p><h3 id=경과>경과</h3><p><img src=/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/dispute-timeline.png alt="2024년 2월 FFmpeg의 공개 지적 이후 약 22개월간 시정되지 않다가, 2025년 12월 DMCA 통지로 저장소가 내려가고 약 10주 뒤인 2026년 3월 초 복구되기까지의 경과"></p><p><strong>그림 1.</strong> 분쟁 경과 <em>(출처: DMCA 통지서, MPP 커밋 이력, 이슈 530·73, Internet Archive. 2026-07-23 확인)</em></p><p>저장소가 다시 열린 정확한 날짜는 공개되지 않았습니다. Internet Archive 스냅샷이
 2026년 3월 6일까지 HTTP 451(법적 사유로 이용 불가)을 반환하다가, 3월 11일부터 새 포크가
 생기기 시작한 것으로 미루어 그 사이로 봅니다. 비활성 기간은 약 10주입니다.</p><p>DMCA에 대해 한 가지 짚어둘 것이 있습니다. 통지가 들어오면 정해진 시간 안에 차단해야 한다는
 설명이 흔히 돌아다니지만, 미국 저작권법 17 U.S.C. §512(c)(1)(C)에는 &ldquo;신속히&rdquo;(expeditiously)라는
@@ -149,18 +139,7 @@ Apache-2.0 표기로 돌아갔습니다. 두 커밋의 작성 시각은 같은 �
 아니라 실제 코드의 출처가 의무를 결정하기 때문입니다.</p><p>위반 행위별로 어떤 조항에 걸리는지 정리하면 이렇습니다.</p><table><thead><tr><th style=text-align:left>행위</th><th style=text-align:left>LGPL 2.1 관련 조항</th></tr></thead><tbody><tr><td style=text-align:left>저작권 고지 삭제</td><td style=text-align:left>Section 1 — 라이선스와 보증 부인 관련 고지를 원상 유지</td></tr><tr><td style=text-align:left>수정 사실 미고지</td><td style=text-align:left>Section 2(b) — 변경한 파일에 변경 사실과 날짜 표시</td></tr><tr><td style=text-align:left>저작물 전체의 라이선스 미적용</td><td style=text-align:left>Section 2(c) — 저작물 전체를 이 라이선스 조건으로 제공</td></tr><tr><td style=text-align:left>Apache-2.0으로 재라이선싱</td><td style=text-align:left>Section 3(GPL로의 전환만 허용) 및 Section 8(그 밖의 처분은 무효, 권리 자동 소멸)</td></tr></tbody></table><p>저작자 표시를 허위로 바꾼 행위는 나라에 따라 다르게 다뤄집니다. 한국과 프랑스에서는
 저작인격권 중 성명표시권 침해가 성립합니다. 미국 저작권법에는 일반적 저작인격권이 없고,
 시각예술저작물권리법(VARA)이 시각예술에 한정해 적용될 뿐입니다.</p><h3 id=올바른-구조는-어떤-모습인가>올바른 구조는 어떤 모습인가</h3><p>리눅스 커널은 하드웨어 가속을 위해 V4L2(Video for Linux 2)라는 표준 인터페이스를 제공합니다.
-FFmpeg는 사용자 공간에 수정 없이 두고, 하드웨어 의존 코드는 커널 드라이버로 분리하는 구조입니다.</p><pre class=mermaid>%%{init: {&#39;theme&#39;:&#39;base&#39;, &#39;themeVariables&#39;: {&#39;fontSize&#39;:&#39;18px&#39;}}}%%
-flowchart TD
-    subgraph 문제가 된 구조
-        A1[&#34;응용 프로그램&#34;] --&gt; A2[&#34;MPP 라이브러리&lt;br/&gt;FFmpeg 코드 직접 복사&#34;]
-        A2 --&gt; A3[&#34;Rockchip VPU 하드웨어&#34;]
-    end
-
-    subgraph 표준을 따르는 구조
-        B1[&#34;응용 프로그램&#34;] --&gt; B2[&#34;FFmpeg&lt;br/&gt;수정 없이 사용&#34;]
-        B2 --&gt; B3[&#34;커널 V4L2 인터페이스&#34;]
-        B3 --&gt; B4[&#34;Rockchip VPU 하드웨어&#34;]
-    end</pre><p><strong>그림 2.</strong> 하드웨어 가속 연동 구조 비교</p><p>FFmpeg와 커널 드라이버가 사용자 공간과 커널 공간으로 명확히 나뉘므로, 벤더가 FFmpeg 코드
+FFmpeg는 사용자 공간에 수정 없이 두고, 하드웨어 의존 코드는 커널 드라이버로 분리하는 구조입니다.</p><p><img src=/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/architecture-comparison.png alt="문제가 된 구조는 응용 프로그램이 FFmpeg 코드를 복사해 내장한 MPP 라이브러리를 거쳐 하드웨어에 닿는 반면, 표준을 따르는 구조는 수정하지 않은 FFmpeg가 커널 V4L2 인터페이스를 통해 같은 하드웨어를 호출한다"></p><p><strong>그림 2.</strong> 하드웨어 가속 연동 구조 비교</p><p>FFmpeg와 커널 드라이버가 사용자 공간과 커널 공간으로 명확히 나뉘므로, 벤더가 FFmpeg 코드
 자체를 뜯어고쳐 배포할 이유가 사라집니다.</p><p>이 방향의 진전은 Rockchip이 아니라 Collabora가 이끌었습니다. RK3588의 VDPU381과 RK3576의
 VDPU383 디코더 지원이 2026년 2월 메인라인에 병합되어 리눅스 7.0(2026년 4월)에 들어갔습니다.
 현재 범위는 H.264와 H.265이며, AV1과 VP9, 멀티코어 디코딩은 후속 과제로 남아 있습니다.</p><p>한 가지 주의할 점이 있습니다. Rockchip 하드웨어를 쓰는 개발자들이 흔히 대안으로 거론하는
