@@ -79,7 +79,7 @@ SBOM이 없으면 &ldquo;우리 제품 어디에 이 라이브러리가 들어 �
 표준 사양, EU 사이버 복원력법(Regulation (EU) 2024/2847), 인도 CERT-In과 한국의 공급망 보안
 가이드라인을 근거로 삼았습니다. 초판은 인도 CERT-In의 SBOM 기술 가이드라인 번역에서 출발했으며,
 현재 판은 그 골격을 위 출처들로 갱신하고 범용 실무 관점으로 넓힌 것입니다.</p><p>모든 사실 주장에는 1차 출처를 달았고, 인용한 자료의 접속일자는 2026년 6월 14일입니다.</p><p><strong>Author :<a href="https://haksungjang.github.io/">장학성 (Haksung Jang)</a></strong></p>
-]]></content:encoded></item><item><title>3.9 AI SBOM</title><link>https://haksungjang.github.io/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/</link><pubDate>Sat, 13 Jun 2026 23:47:21 +0900</pubDate><guid>https://haksungjang.github.io/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/</guid><description>AI SBOM을 생성·관리하는 절차와 형식, 자동화 도구, 그리고 도구로 메우기 어려운 검증 영역을 안내한다.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">구축 단계</div><p>이 조항은<strong>Phase 2 — AI 확장 프로세스</strong> 단계에서 구축한다.<a href="/docs/ai-sbom_guide/#%eb%8b%a8%ea%b3%84%eb%b3%84-%ea%b5%ac%ec%b6%95-%eb%a1%9c%eb%93%9c%eb%a7%b5">전체 구축 로드맵 보기</a></p></div><h2 id="1-조항-개요">1. 조항 개요</h2><p>AI SBOM(AI System Bill of Materials)은 AI 시스템을 구성하는 요소와 그 정보를 담은 목록이다.
+]]></content:encoded></item><item><title>3.9 AI SBOM</title><link>https://haksungjang.github.io/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/</link><pubDate>Fri, 24 Jul 2026 06:10:48 +0900</pubDate><guid>https://haksungjang.github.io/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/</guid><description>AI SBOM을 생성·관리하는 절차와 형식, 자동화 도구, 그리고 도구로 메우기 어려운 검증 영역을 안내한다.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">구축 단계</div><p>이 조항은<strong>Phase 2 — AI 확장 프로세스</strong> 단계에서 구축한다.<a href="/docs/ai-sbom_guide/#%eb%8b%a8%ea%b3%84%eb%b3%84-%ea%b5%ac%ec%b6%95-%eb%a1%9c%eb%93%9c%eb%a7%b5">전체 구축 로드맵 보기</a></p></div><h2 id="1-조항-개요">1. 조항 개요</h2><p>AI SBOM(AI System Bill of Materials)은 AI 시스템을 구성하는 요소와 그 정보를 담은 목록이다.
 전통적 SBOM이 소프트웨어 컴포넌트를 기록한다면, AI SBOM은 여기에 모델, 가중치, 데이터셋,
 하이퍼파라미터를 더한다. 3.9는 AI SBOM을 생성하고 관리하는 절차를 갖출 것을 요구한다.</p><p>형식은 정해두지 않는다. 규격은 SPDX, CycloneDX, 또는 그 밖의 형식 등 어떤 것이든 무방하다고
 명시한다. 다만 한 가지 의무가 있다. AI SBOM은 제3자로부터 유입되는 자재(inbound materials)를
@@ -91,22 +91,7 @@ CycloneDX, or another format. The AI SBOM shall account for inbound materials fr
 information related to the components of an AI system (e.g., model, datasets, etc).</li><li>Records for the supplied system that demonstrates the documented procedure was properly followed.</li></ul></blockquote></details><h2 id="4-입증자료별-준수-방법-및-샘플">4. 입증자료별 준수 방법 및 샘플</h2><h3 id="391-ai-sbom-관리-절차-식별-추적-검토-승인-보관">3.9.1 AI SBOM 관리 절차 (식별, 추적, 검토, 승인, 보관)</h3><p><strong>준수 방법</strong></p><p>AI SBOM 절차는 생성, 검토, 승인, 보관의 네 단계로 설계한다. 생성 단계는 도구로 자동화하고,
 검토와 승인 단계는 사람이 맡는다. 도구가 모델 카드의 라이선스 필드를 그대로 옮겨 적더라도,
 그 라이선스가 실제 사용 사례에 맞는지, 누락이나 오기재는 없는지는 도구가 판단하지 못하기
-때문이다.</p><p>아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.</p><pre class="mermaid">flowchart TD
-A([AI 시스템 자재]) --&gt; B[생성: SBOM 도구 실행\ncdxgen·OWASP AIBOM Generator]
-B --&gt; C[형식 산출\nSPDX 3.0 AI Profile\n또는 CycloneDX ML-BOM]
-C --&gt; D{인바운드 자재\n포함?}
-D --&gt;|누락| E[제3자 모델·데이터셋\n추가 수집]
-E --&gt; C
-D --&gt;|포함| F[검토: 라이선스·출처\n필드 사람 확인]
-F --&gt; G{정확·완전?}
-G --&gt;|아니오| H[보강 또는 정정]
-H --&gt; F
-G --&gt;|예| I[승인: 거버넌스 책임자]
-I --&gt; J([보관: 버전·이력 관리\n취약점 모니터링])
-style A fill:#2d3748,color:#fff
-style B fill:#2b6cb0,color:#fff
-style F fill:#744210,color:#fff
-style J fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> AI SBOM 생성에서 보관까지의 절차</p><p><strong>도구 매핑</strong></p><p>각 단계에 활용할 수 있는 오픈소스 도구다. &ldquo;자동화 수준"은 그 작업을 도구가 어디까지 대신하는지를
+때문이다.</p><p>아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.</p><p><img src="/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/aisbom-lifecycle.png" alt="AI SBOM을 생성하고 인바운드 자재 포함과 정확성을 확인해 승인·보관하는 절차. 누락과 부정확은 앞 단계로 되돌아간다"/><p><strong>그림 1.</strong> AI SBOM 생성에서 보관까지의 절차</p><p><strong>도구 매핑</strong></p><p>각 단계에 활용할 수 있는 오픈소스 도구다. &ldquo;자동화 수준"은 그 작업을 도구가 어디까지 대신하는지를
 나타낸다.</p><table><thead><tr><th>단계</th><th>작업</th><th>자동화 수준</th><th>대표 도구</th></tr></thead><tbody><tr><td>생성</td><td>코드·의존성 BOM</td><td>성숙</td><td>cdxgen, Syft</td></tr><tr><td>생성</td><td>모델·메타데이터 AIBOM</td><td>도구 등장</td><td>OWASP AIBOM Generator, cdxgen<code>aibom</code></td></tr><tr><td>분석</td><td>모델 바이너리 정적 검사</td><td>도구 등장</td><td>Lab700x AI SBOM Scanner</td></tr><tr><td>관리</td><td>SBOM 저장·취약점 모니터링</td><td>성숙</td><td>Dependency-Track, SW360</td></tr><tr><td>검토</td><td>라이선스·출처 정확성 판단</td><td>사람·정책</td><td>도구 보완 단계</td></tr></tbody></table><p>각 도구의 설치와 사용법, 실행 화면은<a href="/docs/ai-sbom_guide/5-tools/">도구</a> 절에서 자세히 다룬다(<a href="/docs/ai-sbom_guide/5-tools/1-aibom-generator/">OWASP AIBOM
 Generator</a>,<a href="/docs/ai-sbom_guide/5-tools/2-cdxgen/">cdxgen</a>,<a href="/docs/ai-sbom_guide/5-tools/3-scanners/">모델·컨테이너 스캐너</a>).</p><p>cdxgen으로 AI BOM을 생성하는 명령은 다음과 같다. Hugging Face 모델 URL과 purl, Modelfile,
 GGUF 아티팩트를 직접 입력할 수 있다(<a href="https://github.com/cdxgen/cdxgen/blob/master/docs/AI_BOM.md">cdxgen AI-BOM 문서</a>).</p><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># AI 프로젝트 디렉토리에서 AI BOM 생성</span></span></span><span style="display:flex;"><span>cdxgen -t ai -o aibom.json .</span></span><span style="display:flex;"><span/></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># AI/ML 메타데이터(formulation)를 포함해 생성</span></span></span><span style="display:flex;"><span>cdxgen -t ai --include-formulation -o aibom.json .</span></span></code></pre></div><p>OWASP AIBOM Generator는 Hugging Face 모델을 입력받아 CycloneDX 형식 AIBOM을 만들고 완전성

@@ -20,25 +20,7 @@ restrictions, and rights granted by each identified license, as appropriate.</li
 있다. 그러나 모델 가중치와 데이터셋의 라이선스, 그리고 모델 트리의 파생 관계는 이런 도구의
 적용 범위 밖이거나 정확도가 낮다. 비표준 라이선스의 사용 목적 제한은 사람의 해석이 필요하다.
 따라서 자동 스캔으로 1차 식별하고, 모델과 데이터셋과 비표준 라이선스는 법무 또는 거버넌스
-검토로 넘기는 분업 구조가 현실적이다.</p><p>아래 그림은 자재가 들어올 때 라이선스 의무를 판단하는 의사결정 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([AI 시스템 자재 입력]) --&gt; B{자재 유형}
-    B --&gt;|코드·의존성| C[자동 SCA 스캔\nScanCode·ORT]
-    B --&gt;|모델·데이터셋| D[라이선스 메타데이터 확인\n모델 카드·데이터시트]
-    C --&gt; E{라이선스 식별?}
-    D --&gt; E
-    E --&gt;|표준 허용 라이선스| F[의무·제한·권리 분류]
-    E --&gt;|비표준·불명확| G[법무·거버넌스 검토\n사용 목적 제한 해석]
-    G --&gt; F
-    F --&gt; H{의도된 용도와\n충돌?}
-    H --&gt;|예| I[위험 완화 또는\n자재 교체]
-    H --&gt;|아니오| J[AI SBOM에 기록\n업스트림·다운스트림 의무]
-    I --&gt; J
-    J --&gt; K([정기 재검토])
-
-    style A fill:#2d3748,color:#fff
-    style G fill:#744210,color:#fff
-    style I fill:#c53030,color:#fff
-    style J fill:#2b6cb0,color:#fff</pre><p><strong>그림 1.</strong> 라이선스 의무 검토 의사결정 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>인입 게이트에서 메타데이터 강제</strong>: 라이선스 의무가 누락되는 가장 큰 원인은 모델이 다운스트림
+검토로 넘기는 분업 구조가 현실적이다.</p><p>아래 그림은 자재가 들어올 때 라이선스 의무를 판단하는 의사결정 흐름이다.</p><p><img src=/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/license-decision.png alt="AI 자재를 코드와 모델로 나눠 라이선스를 식별하고 의도된 용도와 충돌하는지 판정해 AI SBOM에 기록하는 의사결정 흐름"></p><p><strong>그림 1.</strong> 라이선스 의무 검토 의사결정 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>인입 게이트에서 메타데이터 강제</strong>: 라이선스 의무가 누락되는 가장 큰 원인은 모델이 다운스트림
 으로 전파되며 출처와 라이선스 정보가 소실되는 라이선스 드리프트(license drift)다. 한 연구는
 모델에서 애플리케이션으로 넘어가는 전이에서 제한 조항의 상당수가 사라진다고 보고한다
 (<a href=https://arxiv.org/abs/2509.09873>arXiv:2509.09873</a>). 다운스트림에서 복원하려 애쓰기보다,
@@ -84,21 +66,7 @@ risk mitigation measures should be undertaken.</p><p><strong>Verification materi
 각 규제가 요구하는 공개 항목을 도출하고, 그 항목을 AI SBOM이나 모델 카드에 반영한다. 라이선스
 의무와 달리 투명성 의무는 &ldquo;공개"가 핵심이므로, 산출물이 외부에 전달될 수 있는 형태로 정리되어야
 한다.</p><p>아래 표는 AI SBOM과 교차하는 주요 투명성 의무다. 규제 일정과 전체 맥락은
-<a href=/docs/ai-sbom_guide/4-governance/1-governance/>3.10 거버넌스</a>의 규제 매트릭스에서 함께 관리한다.</p><p><strong>표 1.</strong> AI SBOM과 교차하는 투명성 의무 (2026-06 기준)</p><table><thead><tr><th>출처</th><th>투명성 의무</th><th>AI SBOM·모델 카드 반영</th></tr></thead><tbody><tr><td>EU 인공지능법 Article 53 (GPAI)</td><td>학습 데이터 요약 공개, 저작권 옵트아웃 존중</td><td>데이터셋 출처와 라이선스, 옵트아웃 처리 기록</td></tr><tr><td>EU 인공지능법 Article 50</td><td>AI 생성 콘텐츠 라벨링, AI 상호작용 고지</td><td>출력물 표시 정책</td></tr><tr><td>한국 AI 기본법</td><td>고영향·생성형 AI 표시 의무, 학습 데이터 출처 공개</td><td>모델 카드의 표시와 출처 항목</td></tr><tr><td>라이선스 유래 표기</td><td>&ldquo;Built with Llama&rdquo; 표기, 파생 모델명 명시 등</td><td>라이선스 의무(3.5)와 함께 추적</td></tr></tbody></table><p>다음 그림은 자재의 의도된 용도에서 투명성 의무를 도출하는 검토 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([모델·데이터셋과 의도된 용도]) --&gt; B[적용 규제 식별\nEU 인공지능법·한국 AI 기본법 등]
-    B --&gt; C{투명성 의무\n존재?}
-    C --&gt;|없음| D[검토 결과 기록\n의무 없음 근거]
-    C --&gt;|있음| E[공개 항목 도출\n데이터 요약·라벨링·출처]
-    E --&gt; F{다운스트림\n공개 쟁점?}
-    F --&gt;|있음| G[위험 완화 조치\n요약 공개·계약 고지]
-    F --&gt;|없음| H[AI SBOM·모델 카드에 반영]
-    G --&gt; H
-    H --&gt; I([조치 문서화\n정기 갱신])
-
-    style A fill:#2d3748,color:#fff
-    style E fill:#2b6cb0,color:#fff
-    style G fill:#744210,color:#fff
-    style I fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> 투명성 의무 검토 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>데이터셋 출처가 핵심</strong>: 투명성 의무의 다수가 학습 데이터에 걸린다. 데이터셋의 출처와
+<a href=/docs/ai-sbom_guide/4-governance/1-governance/>3.10 거버넌스</a>의 규제 매트릭스에서 함께 관리한다.</p><p><strong>표 1.</strong> AI SBOM과 교차하는 투명성 의무 (2026-06 기준)</p><table><thead><tr><th>출처</th><th>투명성 의무</th><th>AI SBOM·모델 카드 반영</th></tr></thead><tbody><tr><td>EU 인공지능법 Article 53 (GPAI)</td><td>학습 데이터 요약 공개, 저작권 옵트아웃 존중</td><td>데이터셋 출처와 라이선스, 옵트아웃 처리 기록</td></tr><tr><td>EU 인공지능법 Article 50</td><td>AI 생성 콘텐츠 라벨링, AI 상호작용 고지</td><td>출력물 표시 정책</td></tr><tr><td>한국 AI 기본법</td><td>고영향·생성형 AI 표시 의무, 학습 데이터 출처 공개</td><td>모델 카드의 표시와 출처 항목</td></tr><tr><td>라이선스 유래 표기</td><td>&ldquo;Built with Llama&rdquo; 표기, 파생 모델명 명시 등</td><td>라이선스 의무(3.5)와 함께 추적</td></tr></tbody></table><p>다음 그림은 자재의 의도된 용도에서 투명성 의무를 도출하는 검토 흐름이다.</p><p><img src=/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/transparency-decision.png alt="적용 규제를 식별해 투명성 의무 유무와 다운스트림 공개 쟁점을 판정하고 AI SBOM과 모델 카드에 반영하는 흐름"></p><p><strong>그림 1.</strong> 투명성 의무 검토 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>데이터셋 출처가 핵심</strong>: 투명성 의무의 다수가 학습 데이터에 걸린다. 데이터셋의 출처와
 라이선스가 AI SBOM에 기록되어 있어야 공개 의무를 이행할 수 있다. AI SBOM(3.9)과 직접 연결된다.</li><li><strong>의도된 용도가 기준</strong>: 같은 모델이라도 사용 사례에 따라 투명성 의무가 달라진다. 고위험
 용도나 일반 공중 대상 서비스는 의무가 무거워진다.</li><li><strong>다운스트림 공개 의무</strong>: 외부에 모델이나 시스템을 공급할 때 수령자에게 알려야 할 정보가
 있는지 검토한다. 위험 완화는 학습 데이터 요약 공개나 계약상 고지로 이행할 수 있다.</li><li><strong>규제 변화 반영</strong>: EU 인공지능법은 2026년 8월부터 투명성 의무를 적용하므로, 시점에 맞춰
@@ -136,23 +104,7 @@ CycloneDX, or another format. The AI SBOM shall account for inbound materials fr
 information related to the components of an AI system (e.g., model, datasets, etc).</li><li>Records for the supplied system that demonstrates the documented procedure was properly followed.</li></ul></blockquote></details><h2 id=4-입증자료별-준수-방법-및-샘플>4. 입증자료별 준수 방법 및 샘플</h2><h3 id=391-ai-sbom-관리-절차-식별-추적-검토-승인-보관>3.9.1 AI SBOM 관리 절차 (식별, 추적, 검토, 승인, 보관)</h3><p><strong>준수 방법</strong></p><p>AI SBOM 절차는 생성, 검토, 승인, 보관의 네 단계로 설계한다. 생성 단계는 도구로 자동화하고,
 검토와 승인 단계는 사람이 맡는다. 도구가 모델 카드의 라이선스 필드를 그대로 옮겨 적더라도,
 그 라이선스가 실제 사용 사례에 맞는지, 누락이나 오기재는 없는지는 도구가 판단하지 못하기
-때문이다.</p><p>아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([AI 시스템 자재]) --&gt; B[생성: SBOM 도구 실행\ncdxgen·OWASP AIBOM Generator]
-    B --&gt; C[형식 산출\nSPDX 3.0 AI Profile\n또는 CycloneDX ML-BOM]
-    C --&gt; D{인바운드 자재\n포함?}
-    D --&gt;|누락| E[제3자 모델·데이터셋\n추가 수집]
-    E --&gt; C
-    D --&gt;|포함| F[검토: 라이선스·출처\n필드 사람 확인]
-    F --&gt; G{정확·완전?}
-    G --&gt;|아니오| H[보강 또는 정정]
-    H --&gt; F
-    G --&gt;|예| I[승인: 거버넌스 책임자]
-    I --&gt; J([보관: 버전·이력 관리\n취약점 모니터링])
-
-    style A fill:#2d3748,color:#fff
-    style B fill:#2b6cb0,color:#fff
-    style F fill:#744210,color:#fff
-    style J fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> AI SBOM 생성에서 보관까지의 절차</p><p><strong>도구 매핑</strong></p><p>각 단계에 활용할 수 있는 오픈소스 도구다. &ldquo;자동화 수준"은 그 작업을 도구가 어디까지 대신하는지를
+때문이다.</p><p>아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.</p><p><img src=/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/aisbom-lifecycle.png alt="AI SBOM을 생성하고 인바운드 자재 포함과 정확성을 확인해 승인·보관하는 절차. 누락과 부정확은 앞 단계로 되돌아간다"></p><p><strong>그림 1.</strong> AI SBOM 생성에서 보관까지의 절차</p><p><strong>도구 매핑</strong></p><p>각 단계에 활용할 수 있는 오픈소스 도구다. &ldquo;자동화 수준"은 그 작업을 도구가 어디까지 대신하는지를
 나타낸다.</p><table><thead><tr><th>단계</th><th>작업</th><th>자동화 수준</th><th>대표 도구</th></tr></thead><tbody><tr><td>생성</td><td>코드·의존성 BOM</td><td>성숙</td><td>cdxgen, Syft</td></tr><tr><td>생성</td><td>모델·메타데이터 AIBOM</td><td>도구 등장</td><td>OWASP AIBOM Generator, cdxgen <code>aibom</code></td></tr><tr><td>분석</td><td>모델 바이너리 정적 검사</td><td>도구 등장</td><td>Lab700x AI SBOM Scanner</td></tr><tr><td>관리</td><td>SBOM 저장·취약점 모니터링</td><td>성숙</td><td>Dependency-Track, SW360</td></tr><tr><td>검토</td><td>라이선스·출처 정확성 판단</td><td>사람·정책</td><td>도구 보완 단계</td></tr></tbody></table><p>각 도구의 설치와 사용법, 실행 화면은 <a href=/docs/ai-sbom_guide/5-tools/>도구</a> 절에서 자세히 다룬다(<a href=/docs/ai-sbom_guide/5-tools/1-aibom-generator/>OWASP AIBOM
 Generator</a>, <a href=/docs/ai-sbom_guide/5-tools/2-cdxgen/>cdxgen</a>,
 <a href=/docs/ai-sbom_guide/5-tools/3-scanners/>모델·컨테이너 스캐너</a>).</p><p>cdxgen으로 AI BOM을 생성하는 명령은 다음과 같다. Hugging Face 모델 URL과 purl, Modelfile,

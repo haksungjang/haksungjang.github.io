@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>접근 | Haksung</title><link>https://haksungjang.github.io/tags/%EC%A0%91%EA%B7%BC/</link><description>Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤</description><generator>Hugo</generator><language>ko-KR</language><lastBuildDate>Sat, 13 Jun 2026 23:47:21 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/tags/%EC%A0%91%EA%B7%BC/index.xml" rel="self" type="application/rss+xml"/><item><title>3.7 접근</title><link>https://haksungjang.github.io/docs/ai-sbom_guide/3-relevant-tasks/1-access/</link><pubDate>Sat, 13 Jun 2026 23:47:21 +0900</pubDate><guid>https://haksungjang.github.io/docs/ai-sbom_guide/3-relevant-tasks/1-access/</guid><description>제3자가 AI SBOM 컴플라이언스 문의를 할 수 있는 공개 수단을 명시하고, 내부에서 대응하는 절차를 안내한다.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">구축 단계</div><p>이 조항은<strong>Phase 3 — 운영 체계</strong> 단계에서 구축한다.<a href="/docs/ai-sbom_guide/#%eb%8b%a8%ea%b3%84%eb%b3%84-%ea%b5%ac%ec%b6%95-%eb%a1%9c%eb%93%9c%eb%a7%b5">전체 구축 로드맵 보기</a></p></div><h2 id="1-조항-개요">1. 조항 개요</h2><p>공급망에서 AI 시스템을 주고받는 조직은 서로의 컴플라이언스를 확인해야 한다. 그러려면 외부에서
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>접근 | Haksung</title><link>https://haksungjang.github.io/tags/%EC%A0%91%EA%B7%BC/</link><description>Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤</description><generator>Hugo</generator><language>ko-KR</language><lastBuildDate>Fri, 24 Jul 2026 06:10:48 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/tags/%EC%A0%91%EA%B7%BC/index.xml" rel="self" type="application/rss+xml"/><item><title>3.7 접근</title><link>https://haksungjang.github.io/docs/ai-sbom_guide/3-relevant-tasks/1-access/</link><pubDate>Fri, 24 Jul 2026 06:10:48 +0900</pubDate><guid>https://haksungjang.github.io/docs/ai-sbom_guide/3-relevant-tasks/1-access/</guid><description>제3자가 AI SBOM 컴플라이언스 문의를 할 수 있는 공개 수단을 명시하고, 내부에서 대응하는 절차를 안내한다.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">구축 단계</div><p>이 조항은<strong>Phase 3 — 운영 체계</strong> 단계에서 구축한다.<a href="/docs/ai-sbom_guide/#%eb%8b%a8%ea%b3%84%eb%b3%84-%ea%b5%ac%ec%b6%95-%eb%a1%9c%eb%93%9c%eb%a7%b5">전체 구축 로드맵 보기</a></p></div><h2 id="1-조항-개요">1. 조항 개요</h2><p>공급망에서 AI 시스템을 주고받는 조직은 서로의 컴플라이언스를 확인해야 한다. 그러려면 외부에서
 문의할 창구가 공개되어 있고, 그 문의에 조직이 대응할 준비가 되어 있어야 한다. 접근은 이
 양방향을 보장한다.</p><p>3.7은 두 가지를 요구한다. 제3자가 AI SBOM 컴플라이언스 문의를 할 수 있는 수단을 공개적으로
 명시하는 것과, 그 문의에 효과적으로 대응하는 내부 절차를 유지하는 것이다. AI에서는 모델과
@@ -12,19 +12,7 @@ identify a means by which a third party can make an AI SBOM Compliance inquiry.<
 문의를 받습니다. 접수 후 영업일 기준 14일 이내에 1차 회신을 드립니다.
 (게시 위치: 제품 고지문, 회사 웹사이트 AI 정책 페이지, 모델 카드 연락처)</code></pre><hr><h3 id="372-내부-문의-대응-절차">3.7.2 내부 문의 대응 절차</h3><p><strong>준수 방법</strong></p><p>외부 문의를 접수해 답변하기까지의 내부 절차를 문서화한다. 접수, 분류, 담당 배정, 검토, 회신,
 기록의 단계를 정하고 각 단계의 기한을 둔다. AI SBOM 문의는 모델 카드나 라이선스 검토 기록을
-참조해야 하므로, AI SBOM 검증 담당과 라이선스 검토 담당이 함께 대응한다.</p><p>아래 그림은 외부 문의 대응 흐름이다.</p><pre class="mermaid">flowchart TD
-A([외부 문의 접수\nai-compliance@]) --&gt; B[분류\nAI SBOM·라이선스·투명성]
-B --&gt; C[담당 배정\n검증·법무 담당]
-C --&gt; D[검토\nAI SBOM·모델 카드 확인]
-D --&gt; E{법무 검토\n필요?}
-E --&gt;|예| F[법무 자문]
-E --&gt;|아니오| G[회신 작성]
-F --&gt; G
-G --&gt; H([발송·종결\n이력 기록])
-style A fill:#2d3748,color:#fff
-style D fill:#2b6cb0,color:#fff
-style F fill:#744210,color:#fff
-style H fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> 외부 AI SBOM 컴플라이언스 문의 대응 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>기한 설정</strong>: 1차 회신 기한(예: 14일)과 최종 답변 기한(예: 60일)을 정한다.</li><li><strong>AI 고유 정보 보호</strong>: 문의에 답하며 모델 가중치나 학습 데이터 같은 민감 정보를 어디까지
+참조해야 하므로, AI SBOM 검증 담당과 라이선스 검토 담당이 함께 대응한다.</p><p>아래 그림은 외부 문의 대응 흐름이다.</p><p><img src="/docs/ai-sbom_guide/3-relevant-tasks/1-access/access-workflow.png" alt="외부 문의를 접수해 분류·배정·검토하고 법무 검토 필요 여부를 판정해 회신하는 흐름"/><p><strong>그림 1.</strong> 외부 AI SBOM 컴플라이언스 문의 대응 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>기한 설정</strong>: 1차 회신 기한(예: 14일)과 최종 답변 기한(예: 60일)을 정한다.</li><li><strong>AI 고유 정보 보호</strong>: 문의에 답하며 모델 가중치나 학습 데이터 같은 민감 정보를 어디까지
 공개할지 기준을 둔다. 영업 비밀과 투명성 의무(3.6) 사이의 경계를 정한다.<em>([본 가이드 권고])</em></li><li><strong>이력 보관</strong>: 문의 내용과 회신, 처리 기간을 기록해 입증자료로 보존한다.</li></ul><p><strong>샘플 (대응 절차 개요)</strong></p><pre tabindex="0"><code>## AI SBOM 컴플라이언스 문의 대응 절차
 1. 접수: ai-compliance@ 로 들어온 문의를 등록한다.
 2. 분류: AI SBOM 요청 / 라이선스 문의 / 투명성 의무 문의로 분류한다.

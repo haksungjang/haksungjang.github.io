@@ -37,14 +37,7 @@ SBOM이라고 다 같은 SBOM이 아닙니다. 얼마나 깊은 의존성까지 
 Development Life Cycle, SDLC)의 단계에 맞춰 여섯 유형으로 구분합니다. 같은 제품이라도 어느 시점에
 만들었는가에 따라 담기는 정보와 정확도가 달라집니다.
 
-```mermaid
-flowchart TD
-    A["Design SBOM<br/>설계 단계<br/>계획된 구성요소를 기록"] --> B["Source SBOM<br/>개발 환경<br/>소스 파일과 의존성"]
-    B --> C["Build SBOM<br/>빌드 과정<br/>소스·의존성·사전빌드 구성요소"]
-    C --> D["Analyzed SBOM<br/>빌드 후 산출물 검사<br/>최종 결과물 분석"]
-    D --> E["Deployed SBOM<br/>설치·구성 시점<br/>배포 환경 반영"]
-    E --> F["Runtime SBOM<br/>실행 중 모니터링<br/>동적 로드 의존성 포함"]
-```
+![설계·소스·빌드·분석·배포·런타임 여섯 단계의 SBOM이 소프트웨어 생애주기 순서로 이어지며 뒤로 갈수록 더 많은 정보를 담는다](./sbom-types.png)
 
 **그림 1.** SDLC 단계에 따른 SBOM 분류 *(출처: CISA Types of Software Bill of Materials (SBOM), 2023)*
 

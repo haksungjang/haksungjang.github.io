@@ -81,23 +81,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 다음 그림은 자재의 의도된 용도에서 투명성 의무를 도출하는 검토 흐름이다.
 
-```mermaid
-flowchart TD
-    A([모델·데이터셋과 의도된 용도]) --> B[적용 규제 식별\nEU 인공지능법·한국 AI 기본법 등]
-    B --> C{투명성 의무\n존재?}
-    C -->|없음| D[검토 결과 기록\n의무 없음 근거]
-    C -->|있음| E[공개 항목 도출\n데이터 요약·라벨링·출처]
-    E --> F{다운스트림\n공개 쟁점?}
-    F -->|있음| G[위험 완화 조치\n요약 공개·계약 고지]
-    F -->|없음| H[AI SBOM·모델 카드에 반영]
-    G --> H
-    H --> I([조치 문서화\n정기 갱신])
-
-    style A fill:#2d3748,color:#fff
-    style E fill:#2b6cb0,color:#fff
-    style G fill:#744210,color:#fff
-    style I fill:#22543d,color:#fff
-```
+![적용 규제를 식별해 투명성 의무 유무와 다운스트림 공개 쟁점을 판정하고 AI SBOM과 모델 카드에 반영하는 흐름](./transparency-decision.png)
 
 **그림 1.** 투명성 의무 검토 흐름
 

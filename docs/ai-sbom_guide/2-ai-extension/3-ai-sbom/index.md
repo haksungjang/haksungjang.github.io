@@ -71,25 +71,7 @@ AI SBOM 절차는 생성, 검토, 승인, 보관의 네 단계로 설계한다. 
 
 아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.
 
-```mermaid
-flowchart TD
-    A([AI 시스템 자재]) --> B[생성: SBOM 도구 실행\ncdxgen·OWASP AIBOM Generator]
-    B --> C[형식 산출\nSPDX 3.0 AI Profile\n또는 CycloneDX ML-BOM]
-    C --> D{인바운드 자재\n포함?}
-    D -->|누락| E[제3자 모델·데이터셋\n추가 수집]
-    E --> C
-    D -->|포함| F[검토: 라이선스·출처\n필드 사람 확인]
-    F --> G{정확·완전?}
-    G -->|아니오| H[보강 또는 정정]
-    H --> F
-    G -->|예| I[승인: 거버넌스 책임자]
-    I --> J([보관: 버전·이력 관리\n취약점 모니터링])
-
-    style A fill:#2d3748,color:#fff
-    style B fill:#2b6cb0,color:#fff
-    style F fill:#744210,color:#fff
-    style J fill:#22543d,color:#fff
-```
+![AI SBOM을 생성하고 인바운드 자재 포함과 정확성을 확인해 승인·보관하는 절차. 누락과 부정확은 앞 단계로 되돌아간다](./aisbom-lifecycle.png)
 
 **그림 1.** AI SBOM 생성에서 보관까지의 절차
 

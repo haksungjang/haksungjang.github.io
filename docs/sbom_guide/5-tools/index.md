@@ -14,12 +14,7 @@ SBOM 워크플로우는 단일 도구로 완결되지 않습니다. 생성, 취�
 
 ## 생성·관리·스캔의 분업
 
-```mermaid
-flowchart TD
-    A["생성<br/>소스·빌드·이미지를 스캔해<br/>SBOM 작성<br/>Syft · cdxgen"] --> B["관리<br/>SBOM 저장·버전관리<br/>포트폴리오 모니터링<br/>Dependency-Track · SW360"]
-    B --> C["대조·스캔<br/>SBOM을 취약점 DB와 대조<br/>Grype · Trivy"]
-    C --> B
-```
+![생성·관리·대조 세 부류의 SBOM 도구가 역할을 나누며 관리와 대조가 새 취약점마다 오가는 구조](./tool-roles.png)
 
 **그림 1.** SBOM 도구의 세 역할 *(출처: 도구 비교 분석 정리, 2026-01. 수집일 2026-06-14)*
 

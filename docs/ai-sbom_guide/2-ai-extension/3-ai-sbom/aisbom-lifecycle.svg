@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="612" viewBox="0 0 760 612">
+  <defs>
+    <filter id="s1" x="-25%" y="-30%" width="150%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="760" height="612" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">AI SBOM을 만들고 검토해 보관하기까지</text>
+
+    <rect x="250" y="42" width="260" height="44" rx="8" fill="#eef2f6" stroke="#9fb3c4"/>
+    <text x="380" y="70" text-anchor="middle" font-size="13.5" fill="#1a2630">AI 시스템 자재</text>
+    <line x1="380" y1="86" x2="380" y2="102" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+
+    <rect x="220" y="110" width="320" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="240" y="134" font-size="13.5" fill="#111827">생성 — SBOM 도구 실행</text>
+    <text x="240" y="154" font-size="12" fill="#6b7280">cdxgen · OWASP AIBOM Generator</text>
+    <line x1="380" y1="166" x2="380" y2="182" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+
+    <rect x="220" y="190" width="320" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="240" y="214" font-size="13.5" fill="#111827">형식 산출</text>
+    <text x="240" y="234" font-size="12" fill="#6b7280">SPDX 3.0 AI Profile 또는 CycloneDX ML-BOM</text>
+    <line x1="380" y1="246" x2="380" y2="266" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+
+    <rect x="296" y="266" width="168" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#s1)"/>
+    <text x="380" y="294" text-anchor="middle" font-size="13" fill="#111827">인바운드 자재 포함?</text>
+
+    <path d="M 464 289 L 620 289 L 620 210 L 544 210" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+    <text x="628" y="255" font-size="11.5" fill="#9ca3af">누락 — 제3자</text>
+    <text x="628" y="273" font-size="11.5" fill="#9ca3af">모델·데이터셋</text>
+    <text x="628" y="291" font-size="11.5" fill="#9ca3af">추가 수집</text>
+    <path d="M 380 312 L 380 340" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+    <text x="392" y="330" font-size="11.5" fill="#9ca3af">포함</text>
+
+    <rect x="220" y="348" width="320" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="240" y="372" font-size="13.5" fill="#111827">검토 — 라이선스·출처</text>
+    <text x="240" y="392" font-size="12" fill="#6b7280">필드를 사람이 확인</text>
+    <line x1="380" y1="404" x2="380" y2="424" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+
+    <rect x="312" y="424" width="136" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#s1)"/>
+    <text x="380" y="452" text-anchor="middle" font-size="13" fill="#111827">정확·완전?</text>
+
+    <path d="M 312 447 L 150 447 L 150 376 L 216 376" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+    <text x="90" y="415" font-size="11.5" fill="#9ca3af">아니오 — 보강</text>
+    <path d="M 380 470 L 380 498" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+    <text x="392" y="488" font-size="11.5" fill="#9ca3af">예</text>
+
+    <rect x="240" y="506" width="280" height="44" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="380" y="534" text-anchor="middle" font-size="13.5" fill="#111827">승인 — 거버넌스 책임자</text>
+    <line x1="380" y1="550" x2="380" y2="566" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+
+    <rect x="230" y="570" width="300" height="42" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#s1)"/>
+    <text x="380" y="596" text-anchor="middle" font-size="13" fill="#111827">보관 — 버전·이력 관리, 취약점 모니터링</text>
+  </g>
+</svg>

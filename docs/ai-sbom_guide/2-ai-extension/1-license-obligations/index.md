@@ -75,27 +75,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 아래 그림은 자재가 들어올 때 라이선스 의무를 판단하는 의사결정 흐름이다.
 
-```mermaid
-flowchart TD
-    A([AI 시스템 자재 입력]) --> B{자재 유형}
-    B -->|코드·의존성| C[자동 SCA 스캔\nScanCode·ORT]
-    B -->|모델·데이터셋| D[라이선스 메타데이터 확인\n모델 카드·데이터시트]
-    C --> E{라이선스 식별?}
-    D --> E
-    E -->|표준 허용 라이선스| F[의무·제한·권리 분류]
-    E -->|비표준·불명확| G[법무·거버넌스 검토\n사용 목적 제한 해석]
-    G --> F
-    F --> H{의도된 용도와\n충돌?}
-    H -->|예| I[위험 완화 또는\n자재 교체]
-    H -->|아니오| J[AI SBOM에 기록\n업스트림·다운스트림 의무]
-    I --> J
-    J --> K([정기 재검토])
-
-    style A fill:#2d3748,color:#fff
-    style G fill:#744210,color:#fff
-    style I fill:#c53030,color:#fff
-    style J fill:#2b6cb0,color:#fff
-```
+![AI 자재를 코드와 모델로 나눠 라이선스를 식별하고 의도된 용도와 충돌하는지 판정해 AI SBOM에 기록하는 의사결정 흐름](./license-decision.png)
 
 **그림 1.** 라이선스 의무 검토 의사결정 흐름
 

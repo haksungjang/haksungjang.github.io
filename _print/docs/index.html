@@ -910,12 +910,7 @@ SBOM 작성을 법적 의무로 규정했습니다. 자세한 규제 지형은 <
 의존성(top-level dependencies)을 포괄하는&rdquo; SBOM을 요구합니다. 전체 의존성 트리를 끝까지 펼칠
 의무는 아니지만, 그것이 권장 관행의 방향임은 분명합니다.</p><h2 id=생성-시점에-따른-분류>생성 시점에 따른 분류</h2><p>미국 CISA의 <em>Types of Software Bill of Materials (SBOM)</em> 문서는 SBOM을 소프트웨어 개발 수명주기(Software
 Development Life Cycle, SDLC)의 단계에 맞춰 여섯 유형으로 구분합니다. 같은 제품이라도 어느 시점에
-만들었는가에 따라 담기는 정보와 정확도가 달라집니다.</p><pre class=mermaid>flowchart TD
-    A[&#34;Design SBOM&lt;br/&gt;설계 단계&lt;br/&gt;계획된 구성요소를 기록&#34;] --&gt; B[&#34;Source SBOM&lt;br/&gt;개발 환경&lt;br/&gt;소스 파일과 의존성&#34;]
-    B --&gt; C[&#34;Build SBOM&lt;br/&gt;빌드 과정&lt;br/&gt;소스·의존성·사전빌드 구성요소&#34;]
-    C --&gt; D[&#34;Analyzed SBOM&lt;br/&gt;빌드 후 산출물 검사&lt;br/&gt;최종 결과물 분석&#34;]
-    D --&gt; E[&#34;Deployed SBOM&lt;br/&gt;설치·구성 시점&lt;br/&gt;배포 환경 반영&#34;]
-    E --&gt; F[&#34;Runtime SBOM&lt;br/&gt;실행 중 모니터링&lt;br/&gt;동적 로드 의존성 포함&#34;]</pre><p><strong>그림 1.</strong> SDLC 단계에 따른 SBOM 분류 <em>(출처: CISA Types of Software Bill of Materials (SBOM), 2023)</em></p><ul><li><strong>Design SBOM</strong>: 구성요소가 실제로 존재하기 전 설계 단계에서 계획된 구성요소를 기록합니다.</li><li>Source SBOM: 개발 환경을 반영하며 소스 파일과 의존성을 담습니다.</li><li>Build SBOM: 빌드 과정에서 생성되며 소스, 의존성, 사전 빌드된 구성요소 정보를 포함합니다.</li><li>Analyzed SBOM: 빌드 후 최종 산출물을 검사해 생성합니다.</li><li>Deployed SBOM: 특정 시스템에 설치·구성된 소프트웨어 목록으로, 배포 환경을 함께 고려합니다.</li><li>Runtime SBOM: 실행 중인 구성요소를 모니터링해, 동적으로 로드되는 의존성과 외부 상호작용까지 담습니다.</li></ul><p>빌드 시점에 생성하는 Build SBOM이 정확도와 자동화 면에서 가장 널리 권장됩니다. 빌드 도구가
+만들었는가에 따라 담기는 정보와 정확도가 달라집니다.</p><p><img src=/docs/sbom_guide/1-overview/1-types/sbom-types.png alt="설계·소스·빌드·분석·배포·런타임 여섯 단계의 SBOM이 소프트웨어 생애주기 순서로 이어지며 뒤로 갈수록 더 많은 정보를 담는다"></p><p><strong>그림 1.</strong> SDLC 단계에 따른 SBOM 분류 <em>(출처: CISA Types of Software Bill of Materials (SBOM), 2023)</em></p><ul><li><strong>Design SBOM</strong>: 구성요소가 실제로 존재하기 전 설계 단계에서 계획된 구성요소를 기록합니다.</li><li>Source SBOM: 개발 환경을 반영하며 소스 파일과 의존성을 담습니다.</li><li>Build SBOM: 빌드 과정에서 생성되며 소스, 의존성, 사전 빌드된 구성요소 정보를 포함합니다.</li><li>Analyzed SBOM: 빌드 후 최종 산출물을 검사해 생성합니다.</li><li>Deployed SBOM: 특정 시스템에 설치·구성된 소프트웨어 목록으로, 배포 환경을 함께 고려합니다.</li><li>Runtime SBOM: 실행 중인 구성요소를 모니터링해, 동적으로 로드되는 의존성과 외부 상호작용까지 담습니다.</li></ul><p>빌드 시점에 생성하는 Build SBOM이 정확도와 자동화 면에서 가장 널리 권장됩니다. 빌드 도구가
 실제로 무엇을 묶었는지를 그대로 기록하기 때문입니다. 생성 시점과 자동화는
 <a href=/docs/sbom_guide/5-tools/>5. 도구와 자동화</a>에서 자세히 다룹니다.</p><h2 id=출처>출처</h2><p>CISA (2023). <em>Types of Software Bill of Materials (SBOM)</em>.
 <a href=https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom>https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom</a> (접속: 2026-06-14).
@@ -1017,11 +1012,7 @@ Transparency</em> 3판과 2025년 최소 요소 개정 초안입니다. 두 문�
 공급하는 사업자에게 SBOM 제공을 요구하는 지침의 근거이지, 모든 소프트웨어에 적용되는 일반 법령이
 아닙니다. CISA의 두 문서도 스스로 새로운 연방 요건을 창설하지 않는다고 밝힙니다. 규범의 위상은
 여전히 조달 기준과 기술 참조에 머물러 있습니다. 그럼에도 연방 조달이라는 거대한 시장이 작동하는
-탓에, 미국에 소프트웨어를 납품하는 기업에는 사실상의 요건으로 기능합니다.</p><pre class=mermaid>flowchart TD
-    A[&#34;2021-05&lt;br/&gt;행정명령 14028&lt;br/&gt;SBOM 정의·최소 요소 위임&#34;] --&gt; B[&#34;2021-07&lt;br/&gt;NTIA 최소 요소&lt;br/&gt;7개 데이터 필드·3개 범주&#34;]
-    B --&gt; C[&#34;CISA로 주관 이관&lt;br/&gt;OMB M-22-18 갱신 권한&#34;]
-    C --&gt; D[&#34;2024-09&lt;br/&gt;Framing 3판&lt;br/&gt;라이선스·저작권 고지 속성 추가&#34;]
-    C --&gt; E[&#34;2025-08&lt;br/&gt;최소 요소 개정 초안&lt;br/&gt;해시·라이선스·도구명·생성맥락 추가&#34;]</pre><p><strong>그림 1.</strong> 미국 SBOM 정책 문서의 계보 <em>(출처: 행정명령 14028, NTIA 2021, CISA 2024·2025. 수집일 2026-06-14)</em></p><h2 id=출처>출처</h2><p>The White House (2021). <em>Executive Order 14028 — Improving the Nation&rsquo;s Cybersecurity</em>, 86 FR 26633.
+탓에, 미국에 소프트웨어를 납품하는 기업에는 사실상의 요건으로 기능합니다.</p><p><img src=/docs/sbom_guide/3-regulation/us-policy-lineage.png alt="2021년 행정명령 14028과 NTIA 최소 요소에서 시작해 CISA 이관 후 2024년 Framing 3판과 2025년 최소 요소 개정 초안으로 갈라지는 미국 SBOM 정책 계보"></p><p><strong>그림 1.</strong> 미국 SBOM 정책 문서의 계보 <em>(출처: 행정명령 14028, NTIA 2021, CISA 2024·2025. 수집일 2026-06-14)</em></p><h2 id=출처>출처</h2><p>The White House (2021). <em>Executive Order 14028 — Improving the Nation&rsquo;s Cybersecurity</em>, 86 FR 26633.
 <a href=https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity>https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity</a>.
 OMB (2022). <em>M-22-18</em>. <a href=https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf>https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf</a>. CISA
 SBOM 자료 허브 <a href=https://www.cisa.gov/sbom>https://www.cisa.gov/sbom</a>. (모두 접속: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-4f623a49a5747be99862b6994450fff8>6.3.1 - EU 사이버 복원력법(CRA)</h1><div class=lead>SBOM을 법적 의무로 규정한 최초의 주요 입법인 EU 사이버 복원력법의 SBOM 요건과 시행 일정을 정리합니다.</div><p>SBOM을 명시적 법적 의무로 규정한 최초의 주요 입법이 EU 사이버 복원력법(Cyber Resilience Act, CRA,
@@ -1031,10 +1022,7 @@ CRA는 디지털 요소를 갖춘 제품 전반에 수평적으로 적용되는 
 제품의 최상위 의존성(top-level dependencies)을 포괄하는 소프트웨어 자재 명세서를 작성"할 것을
 명시합니다.</p><p>실무에서 중요한 두 가지가 미국 경로와 다릅니다.</p><ul><li><strong>의무 범위가 최상위 의존성이다</strong>: 전체 의존성 트리를 끝까지 펼칠 의무가 아니라, 최소한
 최상위 의존성을 포괄하면 됩니다. 다만 그 이상으로 깊이 작성하는 것이 권장 방향임은 분명합니다.</li><li>공개 의무가 아니라 보관·제출 의무다: SBOM을 일반 공중에 공개할 의무는 없습니다. 시장 감시
-당국(market surveillance authority)이 이유를 제시해 요청할 때 제출할 수 있도록 보관하면 됩니다.</li></ul><p>SBOM 작성이 권고가 아니라 과징금 체계를 갖춘 법적 의무라는 점이 CRA의 핵심입니다.</p><h2 id=시행-일정>시행 일정</h2><pre class=mermaid>flowchart TD
-    A[&#34;2024-11-20&lt;br/&gt;관보 게재&#34;] --&gt; B[&#34;2024-12-10&lt;br/&gt;발효&#34;]
-    B --&gt; C[&#34;2026-09-11&lt;br/&gt;Article 14&lt;br/&gt;취약점·중대 사고 보고 의무 적용&#34;]
-    C --&gt; D[&#34;2027-12-11&lt;br/&gt;전면 시행&lt;br/&gt;SBOM 포함 본질 요건·CE 마킹&#34;]</pre><p><strong>그림 1.</strong> EU CRA 단계적 시행 일정 <em>(출처: Regulation (EU) 2024/2847. 수집일 2026-06-14)</em></p><p>CRA는 2024년 11월 20일 관보에 게재되어 2024년 12월 10일 발효했습니다. 적용은 단계적입니다.
+당국(market surveillance authority)이 이유를 제시해 요청할 때 제출할 수 있도록 보관하면 됩니다.</li></ul><p>SBOM 작성이 권고가 아니라 과징금 체계를 갖춘 법적 의무라는 점이 CRA의 핵심입니다.</p><h2 id=시행-일정>시행 일정</h2><p><img src=/docs/sbom_guide/3-regulation/1-eu-cra/cra-timeline.png alt="2024년 관보 게재와 발효를 거쳐 2026년 9월 보고 의무, 2027년 12월 전면 시행으로 이어지는 EU CRA 단계적 시행 일정"></p><p><strong>그림 1.</strong> EU CRA 단계적 시행 일정 <em>(출처: Regulation (EU) 2024/2847. 수집일 2026-06-14)</em></p><p>CRA는 2024년 11월 20일 관보에 게재되어 2024년 12월 10일 발효했습니다. 적용은 단계적입니다.
 Article 14의 악용 취약점과 중대 사고 보고 의무가 2026년 9월 11일부터, SBOM을 포함한 본질적
 사이버보안 요건의 전면 적용이 2027년 12월 11일부터입니다.</p><h2 id=형식-시행규칙의-부재와-실무-참조점>형식 시행규칙의 부재와 실무 참조점</h2><p>CRA 차원의 공식 SBOM 형식 시행규칙은 2026년 6월 현재 발표되지 않았습니다. 어떤 스키마와 필드를
 써야 CRA에 정합하는지를 EU 전역 구속 규범으로 정한 문서는 아직 없다는 뜻입니다.</p><p>현재 실무의 참조점은 독일 연방정보보안청(Bundesamt für Sicherheit in der Informationstechnik, BSI)이
@@ -1065,9 +1053,7 @@ Materials (SBOM)</em>, CIGU-2024-0002. <a href=https://www.cert-in.org.in/>https
 (2024). <em>SW 공급망 보안 가이드라인 1.0</em>. <a href=https://www.kisa.or.kr/>https://www.kisa.or.kr/</a>. (모두 접속: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-05f43f4dfdebeb5713056d33999c916b>6.4 - 도입 로드맵</h1><div class=lead>기반 다지기에서 운영 성숙까지, 조직이 SBOM 체계를 단계적으로 구축하는 활동을 정리합니다.</div><p>조직에 SBOM 체계를 들이는 일은 한 번에 끝나지 않습니다. 기반을 세우고(기초), 생성과 통합을
 정착시키고(발전), 운영을 성숙시키는(확장) 단계적 접근이 현실적입니다. 아래 단계 구분은 미국 NTIA와
 인도 CERT-In 가이드라인이 공통으로 제시하는 골격이며, 활동의 순서는 예시일 뿐 조직의 보안 요구와
-일정, 자원에 맞춰 조정할 수 있습니다.</p><pre class=mermaid>flowchart TD
-    A[&#34;1단계 기초&lt;br/&gt;중요 자산 식별&lt;br/&gt;형식·최소 요구사항 결정&lt;br/&gt;조달 과정에서 SBOM 확보&#34;] --&gt; B[&#34;2단계 발전&lt;br/&gt;고유 식별자 부여&lt;br/&gt;공급사·내부 SBOM 매핑&lt;br/&gt;SSDLC와 CI/CD 통합&#34;]
-    B --&gt; C[&#34;3단계 확장&lt;br/&gt;취약점 추적 강화&lt;br/&gt;사고 대응 통합&lt;br/&gt;정기 검토·인식 유지&#34;]</pre><p><strong>그림 1.</strong> SBOM 도입 3단계 <em>(출처: NTIA 2021, CERT-In 기술 가이드라인 재구성. 수집일 2026-06-14)</em></p><h2 id=1단계-기초-다지기>1단계: 기초 다지기</h2><p>첫 SBOM은 대개 조달 과정에서 공급사로부터 받게 됩니다. 이 단계의 목적은 조직 안에서 SBOM을 다루는
+일정, 자원에 맞춰 조정할 수 있습니다.</p><p><img src=/docs/sbom_guide/4-adoption/adoption-stages.png alt="기초·발전·확장 세 단계로 SBOM 도입을 넓혀 가는 성숙도 경로"></p><p><strong>그림 1.</strong> SBOM 도입 3단계 <em>(출처: NTIA 2021, CERT-In 기술 가이드라인 재구성. 수집일 2026-06-14)</em></p><h2 id=1단계-기초-다지기>1단계: 기초 다지기</h2><p>첫 SBOM은 대개 조달 과정에서 공급사로부터 받게 됩니다. 이 단계의 목적은 조직 안에서 SBOM을 다루는
 방법 자체를 수립하는 것입니다.</p><ul><li><strong>중요 자산 식별과 계획 수립</strong>: 역할과 책임, 일정, 자원 요구를 정의하는 계획을 세우고, 새 프로세스에
 대한 이해관계자의 동의를 얻습니다.</li><li>형식과 최소 요구사항 결정: SBOM을 만들기 전에 형식(SPDX 또는 CycloneDX)과 최소 데이터 요구를
 정합니다. 공급망 전반에서 일관되게 처리할 표준 구조를 보장하기 위해서입니다.</li><li>보안 요구와 저장소·도구 식별: 분류와 처리 절차를 정하고, SBOM을 위한 안전한 저장소를 마련합니다.</li><li>조달 과정에서 SBOM 확보: 구매 주문서나 계약서에 공급사의 SBOM 제공 요구를 명시하고, 어떤 요소를
@@ -1087,10 +1073,7 @@ SSDLC)와 지속적 통합·배포(CI/CD) 파이프라인에 SBOM 생성을 통�
 Guidelines on Software Bill of Materials (SBOM)</em>. CISA SBOM 자료 허브 <a href=https://www.cisa.gov/sbom>https://www.cisa.gov/sbom</a>.
 (모두 접속: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-606b5ee697e1f6c600257e2133589c1e>6.5 - 도구와 자동화</h1><div class=lead>SBOM 생성·관리·스캔 도구와 자동화가 어디까지 되고 어디부터 사람의 몫인지를 정리합니다.</div><p>SBOM 워크플로우는 단일 도구로 완결되지 않습니다. 생성, 취약점 대조, 수명주기 관리의 세 역량이 서로
 다른 도구로 나뉘며, 어느 하나도 세 영역을 완벽히 덮지 못한다는 것이 최근 도구 비교 분석의 공통
-결론입니다. 도구를 조합해 파이프라인을 구성한다고 보는 편이 정확합니다.</p><h2 id=생성관리스캔의-분업>생성·관리·스캔의 분업</h2><pre class=mermaid>flowchart TD
-    A[&#34;생성&lt;br/&gt;소스·빌드·이미지를 스캔해&lt;br/&gt;SBOM 작성&lt;br/&gt;Syft · cdxgen&#34;] --&gt; B[&#34;관리&lt;br/&gt;SBOM 저장·버전관리&lt;br/&gt;포트폴리오 모니터링&lt;br/&gt;Dependency-Track · SW360&#34;]
-    B --&gt; C[&#34;대조·스캔&lt;br/&gt;SBOM을 취약점 DB와 대조&lt;br/&gt;Grype · Trivy&#34;]
-    C --&gt; B</pre><p><strong>그림 1.</strong> SBOM 도구의 세 역할 <em>(출처: 도구 비교 분석 정리, 2026-01. 수집일 2026-06-14)</em></p><p>생성 영역에서는 Anchore의 Syft가 &ldquo;SBOM 생성 한 가지를 가장 잘하는 전용 도구"로 평가받습니다. 서명
+결론입니다. 도구를 조합해 파이프라인을 구성한다고 보는 편이 정확합니다.</p><h2 id=생성관리스캔의-분업>생성·관리·스캔의 분업</h2><p><img src=/docs/sbom_guide/5-tools/tool-roles.png alt="생성·관리·대조 세 부류의 SBOM 도구가 역할을 나누며 관리와 대조가 새 취약점마다 오가는 구조"></p><p><strong>그림 1.</strong> SBOM 도구의 세 역할 <em>(출처: 도구 비교 분석 정리, 2026-01. 수집일 2026-06-14)</em></p><p>생성 영역에서는 Anchore의 Syft가 &ldquo;SBOM 생성 한 가지를 가장 잘하는 전용 도구"로 평가받습니다. 서명
 도구 cosign과 결합한 증명(attestation) 워크플로우가 성숙해 있습니다. OWASP CycloneDX의 cdxgen은 다중
 언어와 컨테이너 이미지를 폭넓게 지원하고, AI BOM 전용 모드를 갖춘 점이 특징입니다.</p><p>관리 영역에서는 OWASP Dependency-Track이 조직 전체 애플리케이션 포트폴리오의 구성요소 사용 현황과
 보안·라이선스 컴플라이언스를 모니터링하는 플랫폼으로 자리 잡았습니다. 라이선스 컴플라이언스 중심의
@@ -1122,11 +1105,7 @@ Security. <em>Trivy</em> <a href=https://github.com/aquasecurity/trivy>https://g
 가능하게 구조화한 표준으로, VEX 프로파일을 포함합니다. OASIS가 2022년 11월 정식 표준으로 승인했습니다.
 VEX가 악용 가능성 상태를 알린다면, CSAF는 취약점 설명, 영향받는 버전, 심각도 평가(CVSS 점수), 권장
 완화 단계까지 담은 상세 권고를 전달합니다.</p><p>채택의 실질적 전환점은 Red Hat이었습니다. Red Hat 제품보안팀은 2023년 자사 데이터베이스의 모든 CVE에
-대해 CSAF·VEX 파일을 공개하기 시작했고, 이후 정식 운영으로 전환해 상시 발행합니다.</p><h2 id=사례-log4shell>사례: Log4Shell</h2><p>2021년 12월 공개된 Log4j 취약점(Log4Shell)은 SBOM과 VEX, CSAF가 어떻게 맞물리는지를 보여주는 사례입니다.</p><pre class=mermaid>flowchart TD
-    A[&#34;2021-12&lt;br/&gt;취약점 발견&lt;br/&gt;Log4j RCE (CVE-2021-44228)&#34;] --&gt; B[&#34;VEX 발행&lt;br/&gt;관리자가 악용 가능 상태 명시&#34;]
-    B --&gt; C[&#34;CSAF 권고&lt;br/&gt;설명·영향 버전·CVSS 10.0&lt;br/&gt;완화 단계 제공&#34;]
-    C --&gt; D[&#34;패치·완화 안내&lt;br/&gt;패치 버전 업데이트 지침&#34;]
-    D --&gt; E[&#34;SBOM 통합&lt;br/&gt;영향받는 시스템 식별&lt;br/&gt;대응 우선순위 결정&#34;]</pre><p><strong>그림 1.</strong> Log4Shell 대응에서 SBOM·VEX·CSAF의 연계 <em>(출처: CERT-In 기술 가이드라인 재구성. 수집일 2026-06-14)</em></p><p>취약점이 공개되자 관리자는 악용 가능 상태를 알리는 VEX를 냈고, 이어 취약점 설명과 영향받는 버전,
+대해 CSAF·VEX 파일을 공개하기 시작했고, 이후 정식 운영으로 전환해 상시 발행합니다.</p><h2 id=사례-log4shell>사례: Log4Shell</h2><p>2021년 12월 공개된 Log4j 취약점(Log4Shell)은 SBOM과 VEX, CSAF가 어떻게 맞물리는지를 보여주는 사례입니다.</p><p><img src=/docs/sbom_guide/6-vulnerability/vulnerability-response.png alt="Log4j 취약점 발견부터 VEX, CSAF 권고, 패치 안내를 거쳐 SBOM으로 영향 시스템을 찾아 대응하는 흐름"></p><p><strong>그림 1.</strong> Log4Shell 대응에서 SBOM·VEX·CSAF의 연계 <em>(출처: CERT-In 기술 가이드라인 재구성. 수집일 2026-06-14)</em></p><p>취약점이 공개되자 관리자는 악용 가능 상태를 알리는 VEX를 냈고, 이어 취약점 설명과 영향받는 버전,
 CVSS 10.0(최고 심각도), 완화 단계를 담은 CSAF 권고를 발표했습니다. Log4j를 구성요소로 포함한 조직은
 이 VEX와 CSAF 데이터를 자신의 SBOM에 통합해, 시스템의 영향받는 부분을 식별하고 대응 우선순위를
 정했습니다. SBOM이 미리 갖춰져 있었다면 &ldquo;어디에 Log4j가 있는가"를 질의 한 번으로 답할 수 있었다는
@@ -1359,25 +1338,7 @@ restrictions, and rights granted by each identified license, as appropriate.</li
 있다. 그러나 모델 가중치와 데이터셋의 라이선스, 그리고 모델 트리의 파생 관계는 이런 도구의
 적용 범위 밖이거나 정확도가 낮다. 비표준 라이선스의 사용 목적 제한은 사람의 해석이 필요하다.
 따라서 자동 스캔으로 1차 식별하고, 모델과 데이터셋과 비표준 라이선스는 법무 또는 거버넌스
-검토로 넘기는 분업 구조가 현실적이다.</p><p>아래 그림은 자재가 들어올 때 라이선스 의무를 판단하는 의사결정 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([AI 시스템 자재 입력]) --&gt; B{자재 유형}
-    B --&gt;|코드·의존성| C[자동 SCA 스캔\nScanCode·ORT]
-    B --&gt;|모델·데이터셋| D[라이선스 메타데이터 확인\n모델 카드·데이터시트]
-    C --&gt; E{라이선스 식별?}
-    D --&gt; E
-    E --&gt;|표준 허용 라이선스| F[의무·제한·권리 분류]
-    E --&gt;|비표준·불명확| G[법무·거버넌스 검토\n사용 목적 제한 해석]
-    G --&gt; F
-    F --&gt; H{의도된 용도와\n충돌?}
-    H --&gt;|예| I[위험 완화 또는\n자재 교체]
-    H --&gt;|아니오| J[AI SBOM에 기록\n업스트림·다운스트림 의무]
-    I --&gt; J
-    J --&gt; K([정기 재검토])
-
-    style A fill:#2d3748,color:#fff
-    style G fill:#744210,color:#fff
-    style I fill:#c53030,color:#fff
-    style J fill:#2b6cb0,color:#fff</pre><p><strong>그림 1.</strong> 라이선스 의무 검토 의사결정 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>인입 게이트에서 메타데이터 강제</strong>: 라이선스 의무가 누락되는 가장 큰 원인은 모델이 다운스트림
+검토로 넘기는 분업 구조가 현실적이다.</p><p>아래 그림은 자재가 들어올 때 라이선스 의무를 판단하는 의사결정 흐름이다.</p><p><img src=/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/license-decision.png alt="AI 자재를 코드와 모델로 나눠 라이선스를 식별하고 의도된 용도와 충돌하는지 판정해 AI SBOM에 기록하는 의사결정 흐름"></p><p><strong>그림 1.</strong> 라이선스 의무 검토 의사결정 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>인입 게이트에서 메타데이터 강제</strong>: 라이선스 의무가 누락되는 가장 큰 원인은 모델이 다운스트림
 으로 전파되며 출처와 라이선스 정보가 소실되는 라이선스 드리프트(license drift)다. 한 연구는
 모델에서 애플리케이션으로 넘어가는 전이에서 제한 조항의 상당수가 사라진다고 보고한다
 (<a href=https://arxiv.org/abs/2509.09873>arXiv:2509.09873</a>). 다운스트림에서 복원하려 애쓰기보다,
@@ -1423,21 +1384,7 @@ risk mitigation measures should be undertaken.</p><p><strong>Verification materi
 각 규제가 요구하는 공개 항목을 도출하고, 그 항목을 AI SBOM이나 모델 카드에 반영한다. 라이선스
 의무와 달리 투명성 의무는 &ldquo;공개"가 핵심이므로, 산출물이 외부에 전달될 수 있는 형태로 정리되어야
 한다.</p><p>아래 표는 AI SBOM과 교차하는 주요 투명성 의무다. 규제 일정과 전체 맥락은
-<a href=/docs/ai-sbom_guide/4-governance/1-governance/>3.10 거버넌스</a>의 규제 매트릭스에서 함께 관리한다.</p><p><strong>표 1.</strong> AI SBOM과 교차하는 투명성 의무 (2026-06 기준)</p><table><thead><tr><th>출처</th><th>투명성 의무</th><th>AI SBOM·모델 카드 반영</th></tr></thead><tbody><tr><td>EU 인공지능법 Article 53 (GPAI)</td><td>학습 데이터 요약 공개, 저작권 옵트아웃 존중</td><td>데이터셋 출처와 라이선스, 옵트아웃 처리 기록</td></tr><tr><td>EU 인공지능법 Article 50</td><td>AI 생성 콘텐츠 라벨링, AI 상호작용 고지</td><td>출력물 표시 정책</td></tr><tr><td>한국 AI 기본법</td><td>고영향·생성형 AI 표시 의무, 학습 데이터 출처 공개</td><td>모델 카드의 표시와 출처 항목</td></tr><tr><td>라이선스 유래 표기</td><td>&ldquo;Built with Llama&rdquo; 표기, 파생 모델명 명시 등</td><td>라이선스 의무(3.5)와 함께 추적</td></tr></tbody></table><p>다음 그림은 자재의 의도된 용도에서 투명성 의무를 도출하는 검토 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([모델·데이터셋과 의도된 용도]) --&gt; B[적용 규제 식별\nEU 인공지능법·한국 AI 기본법 등]
-    B --&gt; C{투명성 의무\n존재?}
-    C --&gt;|없음| D[검토 결과 기록\n의무 없음 근거]
-    C --&gt;|있음| E[공개 항목 도출\n데이터 요약·라벨링·출처]
-    E --&gt; F{다운스트림\n공개 쟁점?}
-    F --&gt;|있음| G[위험 완화 조치\n요약 공개·계약 고지]
-    F --&gt;|없음| H[AI SBOM·모델 카드에 반영]
-    G --&gt; H
-    H --&gt; I([조치 문서화\n정기 갱신])
-
-    style A fill:#2d3748,color:#fff
-    style E fill:#2b6cb0,color:#fff
-    style G fill:#744210,color:#fff
-    style I fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> 투명성 의무 검토 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>데이터셋 출처가 핵심</strong>: 투명성 의무의 다수가 학습 데이터에 걸린다. 데이터셋의 출처와
+<a href=/docs/ai-sbom_guide/4-governance/1-governance/>3.10 거버넌스</a>의 규제 매트릭스에서 함께 관리한다.</p><p><strong>표 1.</strong> AI SBOM과 교차하는 투명성 의무 (2026-06 기준)</p><table><thead><tr><th>출처</th><th>투명성 의무</th><th>AI SBOM·모델 카드 반영</th></tr></thead><tbody><tr><td>EU 인공지능법 Article 53 (GPAI)</td><td>학습 데이터 요약 공개, 저작권 옵트아웃 존중</td><td>데이터셋 출처와 라이선스, 옵트아웃 처리 기록</td></tr><tr><td>EU 인공지능법 Article 50</td><td>AI 생성 콘텐츠 라벨링, AI 상호작용 고지</td><td>출력물 표시 정책</td></tr><tr><td>한국 AI 기본법</td><td>고영향·생성형 AI 표시 의무, 학습 데이터 출처 공개</td><td>모델 카드의 표시와 출처 항목</td></tr><tr><td>라이선스 유래 표기</td><td>&ldquo;Built with Llama&rdquo; 표기, 파생 모델명 명시 등</td><td>라이선스 의무(3.5)와 함께 추적</td></tr></tbody></table><p>다음 그림은 자재의 의도된 용도에서 투명성 의무를 도출하는 검토 흐름이다.</p><p><img src=/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/transparency-decision.png alt="적용 규제를 식별해 투명성 의무 유무와 다운스트림 공개 쟁점을 판정하고 AI SBOM과 모델 카드에 반영하는 흐름"></p><p><strong>그림 1.</strong> 투명성 의무 검토 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>데이터셋 출처가 핵심</strong>: 투명성 의무의 다수가 학습 데이터에 걸린다. 데이터셋의 출처와
 라이선스가 AI SBOM에 기록되어 있어야 공개 의무를 이행할 수 있다. AI SBOM(3.9)과 직접 연결된다.</li><li><strong>의도된 용도가 기준</strong>: 같은 모델이라도 사용 사례에 따라 투명성 의무가 달라진다. 고위험
 용도나 일반 공중 대상 서비스는 의무가 무거워진다.</li><li><strong>다운스트림 공개 의무</strong>: 외부에 모델이나 시스템을 공급할 때 수령자에게 알려야 할 정보가
 있는지 검토한다. 위험 완화는 학습 데이터 요약 공개나 계약상 고지로 이행할 수 있다.</li><li><strong>규제 변화 반영</strong>: EU 인공지능법은 2026년 8월부터 투명성 의무를 적용하므로, 시점에 맞춰
@@ -1475,23 +1422,7 @@ CycloneDX, or another format. The AI SBOM shall account for inbound materials fr
 information related to the components of an AI system (e.g., model, datasets, etc).</li><li>Records for the supplied system that demonstrates the documented procedure was properly followed.</li></ul></blockquote></details><h2 id=4-입증자료별-준수-방법-및-샘플>4. 입증자료별 준수 방법 및 샘플</h2><h3 id=391-ai-sbom-관리-절차-식별-추적-검토-승인-보관>3.9.1 AI SBOM 관리 절차 (식별, 추적, 검토, 승인, 보관)</h3><p><strong>준수 방법</strong></p><p>AI SBOM 절차는 생성, 검토, 승인, 보관의 네 단계로 설계한다. 생성 단계는 도구로 자동화하고,
 검토와 승인 단계는 사람이 맡는다. 도구가 모델 카드의 라이선스 필드를 그대로 옮겨 적더라도,
 그 라이선스가 실제 사용 사례에 맞는지, 누락이나 오기재는 없는지는 도구가 판단하지 못하기
-때문이다.</p><p>아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([AI 시스템 자재]) --&gt; B[생성: SBOM 도구 실행\ncdxgen·OWASP AIBOM Generator]
-    B --&gt; C[형식 산출\nSPDX 3.0 AI Profile\n또는 CycloneDX ML-BOM]
-    C --&gt; D{인바운드 자재\n포함?}
-    D --&gt;|누락| E[제3자 모델·데이터셋\n추가 수집]
-    E --&gt; C
-    D --&gt;|포함| F[검토: 라이선스·출처\n필드 사람 확인]
-    F --&gt; G{정확·완전?}
-    G --&gt;|아니오| H[보강 또는 정정]
-    H --&gt; F
-    G --&gt;|예| I[승인: 거버넌스 책임자]
-    I --&gt; J([보관: 버전·이력 관리\n취약점 모니터링])
-
-    style A fill:#2d3748,color:#fff
-    style B fill:#2b6cb0,color:#fff
-    style F fill:#744210,color:#fff
-    style J fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> AI SBOM 생성에서 보관까지의 절차</p><p><strong>도구 매핑</strong></p><p>각 단계에 활용할 수 있는 오픈소스 도구다. &ldquo;자동화 수준"은 그 작업을 도구가 어디까지 대신하는지를
+때문이다.</p><p>아래 그림은 AI SBOM 생성에서 보관까지의 흐름이다.</p><p><img src=/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/aisbom-lifecycle.png alt="AI SBOM을 생성하고 인바운드 자재 포함과 정확성을 확인해 승인·보관하는 절차. 누락과 부정확은 앞 단계로 되돌아간다"></p><p><strong>그림 1.</strong> AI SBOM 생성에서 보관까지의 절차</p><p><strong>도구 매핑</strong></p><p>각 단계에 활용할 수 있는 오픈소스 도구다. &ldquo;자동화 수준"은 그 작업을 도구가 어디까지 대신하는지를
 나타낸다.</p><table><thead><tr><th>단계</th><th>작업</th><th>자동화 수준</th><th>대표 도구</th></tr></thead><tbody><tr><td>생성</td><td>코드·의존성 BOM</td><td>성숙</td><td>cdxgen, Syft</td></tr><tr><td>생성</td><td>모델·메타데이터 AIBOM</td><td>도구 등장</td><td>OWASP AIBOM Generator, cdxgen <code>aibom</code></td></tr><tr><td>분석</td><td>모델 바이너리 정적 검사</td><td>도구 등장</td><td>Lab700x AI SBOM Scanner</td></tr><tr><td>관리</td><td>SBOM 저장·취약점 모니터링</td><td>성숙</td><td>Dependency-Track, SW360</td></tr><tr><td>검토</td><td>라이선스·출처 정확성 판단</td><td>사람·정책</td><td>도구 보완 단계</td></tr></tbody></table><p>각 도구의 설치와 사용법, 실행 화면은 <a href=/docs/ai-sbom_guide/5-tools/>도구</a> 절에서 자세히 다룬다(<a href=/docs/ai-sbom_guide/5-tools/1-aibom-generator/>OWASP AIBOM
 Generator</a>, <a href=/docs/ai-sbom_guide/5-tools/2-cdxgen/>cdxgen</a>,
 <a href=/docs/ai-sbom_guide/5-tools/3-scanners/>모델·컨테이너 스캐너</a>).</p><p>cdxgen으로 AI BOM을 생성하는 명령은 다음과 같다. Hugging Face 모델 URL과 purl, Modelfile,
@@ -1590,20 +1521,7 @@ identify a means by which a third party can make an AI SBOM Compliance inquiry.<
 (게시 위치: 제품 고지문, 회사 웹사이트 AI 정책 페이지, 모델 카드 연락처)
 </code></pre><hr><h3 id=372-내부-문의-대응-절차>3.7.2 내부 문의 대응 절차</h3><p><strong>준수 방법</strong></p><p>외부 문의를 접수해 답변하기까지의 내부 절차를 문서화한다. 접수, 분류, 담당 배정, 검토, 회신,
 기록의 단계를 정하고 각 단계의 기한을 둔다. AI SBOM 문의는 모델 카드나 라이선스 검토 기록을
-참조해야 하므로, AI SBOM 검증 담당과 라이선스 검토 담당이 함께 대응한다.</p><p>아래 그림은 외부 문의 대응 흐름이다.</p><pre class=mermaid>flowchart TD
-    A([외부 문의 접수\nai-compliance@]) --&gt; B[분류\nAI SBOM·라이선스·투명성]
-    B --&gt; C[담당 배정\n검증·법무 담당]
-    C --&gt; D[검토\nAI SBOM·모델 카드 확인]
-    D --&gt; E{법무 검토\n필요?}
-    E --&gt;|예| F[법무 자문]
-    E --&gt;|아니오| G[회신 작성]
-    F --&gt; G
-    G --&gt; H([발송·종결\n이력 기록])
-
-    style A fill:#2d3748,color:#fff
-    style D fill:#2b6cb0,color:#fff
-    style F fill:#744210,color:#fff
-    style H fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> 외부 AI SBOM 컴플라이언스 문의 대응 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>기한 설정</strong>: 1차 회신 기한(예: 14일)과 최종 답변 기한(예: 60일)을 정한다.</li><li><strong>AI 고유 정보 보호</strong>: 문의에 답하며 모델 가중치나 학습 데이터 같은 민감 정보를 어디까지
+참조해야 하므로, AI SBOM 검증 담당과 라이선스 검토 담당이 함께 대응한다.</p><p>아래 그림은 외부 문의 대응 흐름이다.</p><p><img src=/docs/ai-sbom_guide/3-relevant-tasks/1-access/access-workflow.png alt="외부 문의를 접수해 분류·배정·검토하고 법무 검토 필요 여부를 판정해 회신하는 흐름"></p><p><strong>그림 1.</strong> 외부 AI SBOM 컴플라이언스 문의 대응 흐름</p><p><strong>고려사항</strong></p><ul><li><strong>기한 설정</strong>: 1차 회신 기한(예: 14일)과 최종 답변 기한(예: 60일)을 정한다.</li><li><strong>AI 고유 정보 보호</strong>: 문의에 답하며 모델 가중치나 학습 데이터 같은 민감 정보를 어디까지
 공개할지 기준을 둔다. 영업 비밀과 투명성 의무(3.6) 사이의 경계를 정한다. <em>([본 가이드 권고])</em></li><li><strong>이력 보관</strong>: 문의 내용과 회신, 처리 기간을 기록해 입증자료로 보존한다.</li></ul><p><strong>샘플 (대응 절차 개요)</strong></p><pre tabindex=0><code>## AI SBOM 컴플라이언스 문의 대응 절차
 
 1. 접수: ai-compliance@ 로 들어온 문의를 등록한다.
@@ -1679,22 +1597,7 @@ the framework periodically.</li></ul></blockquote></details><h2 id=4-입증자�
 히로시마 AI 프로세스는 자발적 투명성 보고를 운영하며, 중국 이니셔티브는 정책 선언에 가깝다.
 거버넌스는 이 차이를 구분해 각각을 추적한다.</p><p>아래 표는 AI SBOM 관점에서 추적해야 할 주요 규제다. 전체 규제 매트릭스와 ISO/IEC 42001 맥락은
 <a href=https://openchain-project.github.io/OpenChain-KWG/guide/iso42001_guide/1-context-leadership/>ISO/IEC 42001 가이드 — 조직 맥락과 리더십</a>에서 다룬다.</p><p><strong>표 1.</strong> AI SBOM과 교차하는 주요 AI 규제 (2026-06 기준)</p><table><thead><tr><th>규제·이니셔티브</th><th>시점</th><th>AI SBOM 관점 핵심 의무</th><th>거버넌스 반영</th></tr></thead><tbody><tr><td>EU 인공지능법 Article 11 + Annex IV</td><td>2027 (고위험)</td><td>기술 문서화 의무</td><td>AI SBOM을 기술 문서의 핵심 요소로 산출</td></tr><tr><td>EU 인공지능법 Article 53 (GPAI)</td><td>2026-08</td><td>학습 데이터 요약 공개, 저작권 옵트아웃 존중</td><td>데이터셋 출처와 라이선스 추적</td></tr><tr><td>EU 인공지능법 Article 50</td><td>2026-08</td><td>AI 생성 콘텐츠 라벨링</td><td>투명성 의무(3.6)와 연계</td></tr><tr><td>히로시마 AI 프로세스</td><td>2025 출범, 보고 2.0(2026-05)</td><td>자발적 투명성 보고</td><td>OECD 보고 프레임워크 참여 검토</td></tr><tr><td>중국 글로벌 AI 거버넌스 이니셔티브</td><td>2023 발표</td><td>정책 선언(구체 산출물 없음)</td><td>동향 모니터링</td></tr><tr><td>한국 AI 기본법</td><td>2026-01 시행</td><td>고영향 AI 영향 평가, 표시 의무, 학습 데이터 출처 공개</td><td>AI SBOM과 모델 카드 작성</td></tr></tbody></table><p>수명주기 모니터링은 개발에서 폐기까지의 흐름에 거버넌스 점검점을 두는 것이다. 아래 그림은 AI
-SBOM을 축으로 한 수명주기 거버넌스를 보여준다.</p><pre class=mermaid>flowchart TD
-    A([모델·데이터셋 도입]) --&gt; B[개발: AI SBOM 생성\n라이선스·출처 기록]
-    B --&gt; C[검토: 의무·위험·규제 적합성\n거버넌스 책임자 승인]
-    C --&gt; D[배포: 공급 시스템에\nAI SBOM 동반]
-    D --&gt; E[운영 모니터링\n취약점·라이선스 변경 감시]
-    E --&gt; F{변화 발생?}
-    F --&gt;|모델 트리 변경| B
-    F --&gt;|신규 규제 시행| G[프레임워크 갱신]
-    F --&gt;|이상 없음| E
-    G --&gt; H([정기 검토\n분기·연간])
-    H --&gt; C
-
-    style A fill:#2d3748,color:#fff
-    style C fill:#744210,color:#fff
-    style G fill:#c53030,color:#fff
-    style H fill:#22543d,color:#fff</pre><p><strong>그림 1.</strong> AI SBOM을 축으로 한 수명주기 거버넌스</p><p><strong>고려사항</strong></p><ul><li><strong>규제 추적 책임 지정</strong>: 신흥 규제를 누가 추적하고 의무를 도출하는지 거버넌스에 명시한다.
+SBOM을 축으로 한 수명주기 거버넌스를 보여준다.</p><p><img src=/docs/ai-sbom_guide/4-governance/1-governance/governance-cycle.png alt="모델 도입부터 개발·검토·배포·운영 모니터링을 거쳐 변화 유형에 따라 개발이나 검토로 되도는 거버넌스 주기"></p><p><strong>그림 1.</strong> AI SBOM을 축으로 한 수명주기 거버넌스</p><p><strong>고려사항</strong></p><ul><li><strong>규제 추적 책임 지정</strong>: 신흥 규제를 누가 추적하고 의무를 도출하는지 거버넌스에 명시한다.
 EU 인공지능법은 2026년 8월과 2027년에 단계적으로 의무가 확대되므로 시점을 관리한다.</li><li><strong>모델 트리 변경 관리</strong>: 도입 모델이 새 버전으로 바뀌거나 상위 모델이 교체되면 라이선스
 의무가 달라질 수 있다. 변경을 거버넌스 검토 사건으로 등록한다. <em>([본 가이드 권고])</em></li><li><strong>OSAID 분류 갱신</strong>: &ldquo;오픈소스 AI"와 &ldquo;오픈 웨이트(Open Weight)&ldquo;의 구분(OSAID 1.0)은 모델
 라이선스 판단에 영향을 준다. 분류 기준 변화를 정기 검토에 포함한다.</li><li><strong>검토 주기 명시</strong>: 분기 단위로 모델과 데이터셋 변경을, 연 단위로 규제와 프레임워크 전반을

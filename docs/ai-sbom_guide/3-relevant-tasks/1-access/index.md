@@ -86,22 +86,7 @@ AI 컴플라이언스 문의: ai-compliance@company.com
 
 아래 그림은 외부 문의 대응 흐름이다.
 
-```mermaid
-flowchart TD
-    A([외부 문의 접수\nai-compliance@]) --> B[분류\nAI SBOM·라이선스·투명성]
-    B --> C[담당 배정\n검증·법무 담당]
-    C --> D[검토\nAI SBOM·모델 카드 확인]
-    D --> E{법무 검토\n필요?}
-    E -->|예| F[법무 자문]
-    E -->|아니오| G[회신 작성]
-    F --> G
-    G --> H([발송·종결\n이력 기록])
-
-    style A fill:#2d3748,color:#fff
-    style D fill:#2b6cb0,color:#fff
-    style F fill:#744210,color:#fff
-    style H fill:#22543d,color:#fff
-```
+![외부 문의를 접수해 분류·배정·검토하고 법무 검토 필요 여부를 판정해 회신하는 흐름](./access-workflow.png)
 
 **그림 1.** 외부 AI SBOM 컴플라이언스 문의 대응 흐름
 
