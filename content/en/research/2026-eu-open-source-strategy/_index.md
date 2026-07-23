@@ -37,21 +37,7 @@ source_pdf: "1차 출처 — COM(2026) 503 final (European Commission), 유럽�
 
 전략은 두 갈래 조치를 결합합니다. EU 커뮤니티와 기업이 고품질 오픈소스 구성요소를 개발하고 유지보수하도록 돕는 공급측 조치와, 민간과 공공의 도입을 가속하는 수요측 조치입니다. 공공 자금과 시장·수요 주도 조치를 함께 묶었고, 위원회의 증거 수집 요청(call for evidence)에 접수된 1,600건 이상의 의견을 토대로 만들어졌습니다.<a id="a1-ref-5"></a>[A1](#a1)·<a id="b3-ref-1"></a>[B3](#b3)
 
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': {'fontSize':'18px'}, 'flowchart': {'nodeSpacing': 45, 'rankSpacing': 55}} }%%
-flowchart TD
-    ROOT["EU 오픈소스 전략<br/>COM(2026) 503"]
-    O1["목표 (i)<br/>주권을 위한<br/>오픈소스 활용"]
-    O2["목표 (ii)<br/>활기찬 생태계<br/>강화·진흥"]
-    O3["목표 (iii)<br/>공공행정의<br/>개방·상호운용"]
-    O4["목표 (iv)<br/>표준·국제<br/>협력 강화"]
-    ROOT --> O1 & O2 & O3 & O4
-    O1 --> AC1["오픈 인터넷 스택, EUID/EBW<br/>오픈소스화, 2030년 3,000만 사용자"]
-    O2 --> AC2["비즈니스 액셀러레이터, 스튜어드십<br/>툴킷, 오픈소스 유지보수 수단"]
-    O3 --> AC3["public money, public code<br/>조달 개혁, OSPO 네트워크 강화"]
-    O4 --> AC4["표준화 규정 개정,<br/>Team Europe 국제 협력"]
-    style ROOT fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-```
+![오픈소스 전략의 네 목표와 대표 조치. 주권, 생태계, 공공행정, 표준·국제협력 순이며 첫 목표만 2030년 이용자 3,000만 명이라는 수치 목표를 달았다](./strategy-goals.png)
 
 **그림 1.** 오픈소스 전략의 4대 목표와 대표 조치 *(출처: COM(2026) 503 final 제4장, 2026-06-03)*
 
@@ -70,17 +56,9 @@ flowchart TD
 
 전략은 새 기구를 만들기보다 기존 거버넌스 자산을 엮습니다. 세 축이 맞물립니다.
 
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': {'fontSize':'18px'}, 'flowchart': {'nodeSpacing': 45, 'rankSpacing': 50}} }%%
-flowchart TD
-    EC["집행위원회 OSPO<br/>(2020 설치)"] --> NET["EU 공공부문 OSPO 네트워크<br/>(11개국 25회원)"]
-    EDIC["디지털 공유재 EDIC<br/>(2025-10-29 설립)"] --> FND["유럽 디지털 공공 인프라 재단<br/>(설립 추진)"]
-    NET --> FND
-    FND --> ASSET["EUID, EBW 등 전략 오픈소스 자산<br/>장기 스튜어드십"]
-    style FND fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-```
+![집행위원회 OSPO에서 이어진 공공부문 OSPO 네트워크와 2025년 설립된 디지털 공유재 EDIC가 유럽 디지털 공공 인프라 재단으로 모이는 구조](./governance-bodies.png)
 
-**그림 2.** 오픈소스 전략의 거버넌스 기구 연결 *(출처: COM(2026) 503 final 제4장 및 부속서 II, 2026-06-03. OSPO 네트워크 회원 수는 2026-05 기준)*
+**그림 2.** 오픈소스 전략의 거버넌스 기구 연결 *(출처: COM(2026) 503 final 제4장 및 부속서 II, 2026-06-03)*
 
 집행위원회 OSPO(2020년 설치)와 11개국 25개 회원의 EU 공공부문 OSPO 네트워크가 공공행정 축을 맡고, 2025년 10월 29일 설립된 디지털 공유재 EDIC이 다국가 협력 축을 맡습니다.<a id="a1-ref-17"></a>[A1](#a1)·<a id="a5-ref-1"></a>[A5](#a5) 이 둘은 설립을 추진 중인 유럽 디지털 공공 인프라 재단으로 수렴하며, 재단이 EUID와 EBW 같은 전략 자산의 장기 스튜어드십을 맡게 됩니다.<a id="a1-ref-18"></a>[A1](#a1)
 
@@ -96,17 +74,7 @@ flowchart TD
 
 발표가 며칠 전이어서, 동향은 발표 직후의 반응과 앞으로 예정된 절차로 모입니다.
 
-```mermaid
-%%{init: {'theme':'default', 'themeVariables': {'fontSize':'18px'}, 'flowchart': {'nodeSpacing': 35, 'rankSpacing': 45}} }%%
-flowchart TD
-    J["<b>2026-01-12</b> &nbsp; 증거 수집 요청 개시"]
-    F["<b>2026-02-03</b> &nbsp; 요청 마감 (1,600건 이상 접수)"]
-    P["<b>2026-06-03</b> &nbsp; COM(2026) 503 발표"]
-    D["<b>2026-12</b> &nbsp; 국가 로드맵 개정"]
-    S["<b>이후</b> &nbsp; 표준화 규정 개정 제안"]
-    J --> F --> P --> D --> S
-    style P fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-```
+![2026년 1월 증거 수집 요청 개시부터 6월 전략 발표, 12월 국가 로드맵 개정, 이후 표준화 규정 개정 제안으로 이어지는 일정](./rollout-schedule.png)
 
 **그림 3.** EU 오픈소스 전략 추진 일정 *(출처: COM(2026) 503 final 및 집행위원회 공지, 2026-06-05 기준)*
 

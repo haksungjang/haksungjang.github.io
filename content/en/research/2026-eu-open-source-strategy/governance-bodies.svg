@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="400" viewBox="0 0 820 400">
+  <defs>
+    <filter id="e2" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="eb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="400" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">기존 조직과 신설 기구가 하나의 재단으로 모입니다</text>
+
+    <rect x="40" y="44" width="330" height="66" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e2)"/>
+    <text x="60" y="70" font-size="13.5" fill="#111827">집행위원회 OSPO</text>
+    <text x="60" y="92" font-size="12" fill="#6b7280">2020년 설치</text>
+    <line x1="205" y1="110" x2="205" y2="136" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#eb)"/>
+
+    <rect x="450" y="44" width="330" height="66" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e2)"/>
+    <text x="470" y="70" font-size="13.5" fill="#111827">디지털 공유재 EDIC</text>
+    <text x="470" y="92" font-size="12" fill="#6b7280">2025-10-29 설립</text>
+
+    <rect x="40" y="144" width="330" height="66" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e2)"/>
+    <text x="60" y="170" font-size="13.5" fill="#111827">EU 공공부문 OSPO 네트워크</text>
+    <text x="60" y="192" font-size="12" fill="#6b7280">11개국 25개 회원</text>
+
+    <path d="M 205 210 L 205 238 L 410 238 L 410 262" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#eb)"/>
+    <path d="M 615 110 L 615 238 L 410 238" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+
+    <rect x="230" y="270" width="360" height="66" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#e2)"/>
+    <text x="410" y="296" text-anchor="middle" font-size="14" fill="#111827">유럽 디지털 공공 인프라 재단</text>
+    <text x="410" y="318" text-anchor="middle" font-size="12" fill="#c2410c">설립 추진 중 — EUID·EBW의 장기 스튜어드십</text>
+
+    <line x1="40" y1="366" x2="780" y2="366" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="386" font-size="12.5" fill="#4b5563">전략 자산을 누가 오래 맡을 것인가가 이 구조의 핵심 질문입니다. 재단은 아직 설립 단계입니다.</text>
+  </g>
+</svg>

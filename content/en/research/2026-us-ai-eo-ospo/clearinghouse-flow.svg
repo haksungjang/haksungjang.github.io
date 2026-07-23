@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="452" viewBox="0 0 820 452">
+  <defs>
+    <filter id="u3" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="ub" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+    <marker id="ub2" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 9 1 L 0 5 L 9 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="452" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <rect x="40" y="34" width="330" height="76" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u3)"/>
+    <text x="60" y="60" font-size="13.5" fill="#111827">AI 사이버보안 클리어링하우스</text>
+    <text x="60" y="82" font-size="12" fill="#6b7280">재무부 주도, NSA·CISA·국가사이버국장 협의</text>
+    <text x="60" y="100" font-size="12" fill="#9ca3af">2026-07-02까지 구성</text>
+
+    <line x1="370" y1="72" x2="446" y2="72" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ub)" marker-start="url(#ub2)"/>
+    <text x="382" y="62" font-size="11" fill="#9ca3af">스캔 조율 · 검증</text>
+
+    <rect x="454" y="34" width="326" height="76" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u3)"/>
+    <text x="474" y="60" font-size="13.5" fill="#111827">자발적 참여자</text>
+    <text x="474" y="82" font-size="12" fill="#6b7280">취약점 발견 역량을 가진 AI 개발사</text>
+    <text x="474" y="100" font-size="12" fill="#6b7280">핵심 인프라 운영자</text>
+
+    <line x1="617" y1="110" x2="617" y2="140" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ub)"/>
+    <text x="630" y="132" font-size="11.5" fill="#9ca3af">조정 공개로 보고</text>
+
+    <rect x="454" y="148" width="326" height="66" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u3)"/>
+    <text x="474" y="174" font-size="13.5" fill="#111827">오픈소스 유지보수자</text>
+    <text x="474" y="196" font-size="12" fill="#6b7280">보고를 받아 패치를 만듭니다</text>
+
+    <line x1="617" y1="214" x2="617" y2="244" stroke="#c2410c" stroke-width="1.8" marker-end="url(#ub)"/>
+    <text x="630" y="236" font-size="11.5" fill="#c2410c">패치 공개</text>
+
+    <rect x="454" y="252" width="326" height="86" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#u3)"/>
+    <text x="474" y="278" font-size="14" fill="#111827">기업 오픈소스 관리자</text>
+    <text x="474" y="300" font-size="12" fill="#c2410c">패치를 받아 적용하는 쪽</text>
+    <text x="474" y="322" font-size="12" fill="#6b7280">SBOM으로 영향 범위 파악, CVD 절차 운영</text>
+
+    <path d="M 205 110 L 205 295 L 450 295" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ub)"/>
+    <text x="60" y="200" font-size="12" fill="#6b7280">권고와 배포 조정</text>
+    <text x="60" y="220" font-size="11.5" fill="#9ca3af">운영 방식은 공개되지</text>
+    <text x="60" y="238" font-size="11.5" fill="#9ca3af">않았습니다</text>
+
+    <line x1="40" y1="382" x2="780" y2="382" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="402" font-size="12.5" fill="#4b5563">행정명령은 정부와 AI 개발사 사이를 정할 뿐, 패치를 받는 기업의 의무는 정하지 않습니다. 그럼에도 발견이 늘면</text>
+    <text x="40" y="422" font-size="12.5" fill="#4b5563">패치 수요가 몰리는 쪽은 기업입니다.</text>
+    <text x="40" y="444" font-size="12" fill="#9ca3af">"오픈소스"라는 말이 행정명령 본문에 한 번도 나오지 않는데도 영향은 오픈소스 공급망을 타고 옵니다.</text>
+  </g>
+</svg>
