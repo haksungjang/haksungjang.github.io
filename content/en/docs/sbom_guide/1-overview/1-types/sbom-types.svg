@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470">
+  <defs>
+    <filter id="t1" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="ta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="470" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">소프트웨어 생애주기 단계마다 다른 SBOM이 나옵니다</text>
+
+    <rect x="40" y="42" width="740" height="58" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="60" y="68" font-size="14" fill="#111827">Design SBOM &#183; 설계 단계</text>
+    <text x="60" y="88" font-size="12.5" fill="#6b7280">아직 만들기 전, 계획된 구성요소를 기록</text>
+    <line x1="410" y1="100" x2="410" y2="116" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="40" y="118" width="740" height="58" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="60" y="144" font-size="14" fill="#111827">Source SBOM &#183; 개발 환경</text>
+    <text x="60" y="164" font-size="12.5" fill="#6b7280">소스 파일과 선언된 의존성</text>
+    <line x1="410" y1="176" x2="410" y2="192" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="40" y="194" width="740" height="58" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#t1)"/>
+    <text x="60" y="220" font-size="14" fill="#111827">Build SBOM &#183; 빌드 과정</text>
+    <text x="60" y="240" font-size="12.5" fill="#c2410c">소스와 의존성, 사전 빌드된 구성요소까지 — 가장 널리 쓰입니다</text>
+    <line x1="410" y1="252" x2="410" y2="268" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="40" y="270" width="740" height="58" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="60" y="296" font-size="14" fill="#111827">Analyzed SBOM &#183; 빌드 후 산출물 검사</text>
+    <text x="60" y="316" font-size="12.5" fill="#6b7280">완성된 결과물을 역으로 분석 — 소스 없이도 만들 수 있습니다</text>
+    <line x1="410" y1="328" x2="410" y2="344" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="40" y="346" width="360" height="58" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="60" y="372" font-size="14" fill="#111827">Deployed SBOM</text>
+    <text x="60" y="392" font-size="12.5" fill="#6b7280">설치·구성 시점의 배포 환경 반영</text>
+
+    <rect x="420" y="346" width="360" height="58" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="440" y="372" font-size="14" fill="#111827">Runtime SBOM</text>
+    <text x="440" y="392" font-size="12.5" fill="#6b7280">실행 중 동적 로드 의존성까지 포함</text>
+
+    <line x1="40" y1="430" x2="780" y2="430" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="450" font-size="12.5" fill="#4b5563">뒤로 갈수록 더 많은 것을 담지만 만들기도 어렵습니다. 어느 단계의 SBOM인지에 따라 담긴 정보의 범위가 다릅니다.</text>
+  </g>
+</svg>

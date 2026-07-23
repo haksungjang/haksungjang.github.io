@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="286" viewBox="0 0 820 286">
+  <defs>
+    <filter id="a1" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="286" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">한 번에 갖추기보다 단계적으로 넓혀 갑니다</text>
+
+    <rect x="40" y="46" width="240" height="180" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#a1)"/>
+    <text x="60" y="74" font-size="12" fill="#9ca3af">1단계</text>
+    <text x="60" y="98" font-size="15" fill="#111827">기초</text>
+    <text x="60" y="128" font-size="12.5" fill="#6b7280">중요 자산 식별</text>
+    <text x="60" y="150" font-size="12.5" fill="#6b7280">형식과 최소 요구사항 결정</text>
+    <text x="60" y="172" font-size="12.5" fill="#6b7280">조달 과정에서 SBOM 확보</text>
+
+    <line x1="288" y1="136" x2="308" y2="136" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#aa)"/>
+
+    <rect x="316" y="46" width="240" height="180" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#a1)"/>
+    <text x="336" y="74" font-size="12" fill="#9ca3af">2단계</text>
+    <text x="336" y="98" font-size="15" fill="#111827">발전</text>
+    <text x="336" y="128" font-size="12.5" fill="#6b7280">고유 식별자 부여</text>
+    <text x="336" y="150" font-size="12.5" fill="#6b7280">공급사·내부 SBOM 매핑</text>
+    <text x="336" y="172" font-size="12.5" fill="#6b7280">SSDLC와 CI/CD에 통합</text>
+
+    <line x1="564" y1="136" x2="584" y2="136" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#aa)"/>
+
+    <rect x="592" y="46" width="240" height="180" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#a1)"/>
+    <text x="612" y="74" font-size="12" fill="#c2410c">3단계</text>
+    <text x="612" y="98" font-size="15" fill="#111827">확장</text>
+    <text x="612" y="128" font-size="12.5" fill="#6b7280">취약점 추적 강화</text>
+    <text x="612" y="150" font-size="12.5" fill="#6b7280">사고 대응에 통합</text>
+    <text x="612" y="172" font-size="12.5" fill="#6b7280">정기 검토와 인식 유지</text>
+
+    <line x1="40" y1="256" x2="780" y2="256" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="276" font-size="12.5" fill="#4b5563">각 단계는 앞 단계 위에 쌓입니다. 조직 여건에 맞춰 어느 단계에서 시작할지 정합니다.</text>
+  </g>
+</svg>

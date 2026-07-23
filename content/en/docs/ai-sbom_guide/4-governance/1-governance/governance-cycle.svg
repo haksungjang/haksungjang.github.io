@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="586" viewBox="0 0 800 586">
+  <defs>
+    <filter id="g1" x="-25%" y="-30%" width="150%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="ga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="800" height="586" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">도입부터 운영·재검토까지 도는 거버넌스 주기</text>
+
+    <rect x="260" y="42" width="240" height="44" rx="8" fill="#eef2f6" stroke="#9fb3c4"/>
+    <text x="380" y="70" text-anchor="middle" font-size="13.5" fill="#1a2630">모델·데이터셋 도입</text>
+    <line x1="380" y1="86" x2="380" y2="102" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+
+    <rect x="240" y="110" width="280" height="52" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="260" y="134" font-size="13.5" fill="#111827">개발 — AI SBOM 생성</text>
+    <text x="260" y="152" font-size="12" fill="#6b7280">라이선스·출처 기록</text>
+    <line x1="380" y1="162" x2="380" y2="182" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+
+    <rect x="240" y="190" width="280" height="52" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="260" y="214" font-size="13.5" fill="#111827">검토 — 의무·위험·규제 적합성</text>
+    <text x="260" y="232" font-size="12" fill="#6b7280">거버넌스 책임자 승인</text>
+    <line x1="380" y1="242" x2="380" y2="262" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+
+    <rect x="240" y="270" width="280" height="52" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="260" y="294" font-size="13.5" fill="#111827">배포 — AI SBOM 동반</text>
+    <text x="260" y="312" font-size="12" fill="#6b7280">공급 시스템에 함께 전달</text>
+    <line x1="380" y1="322" x2="380" y2="342" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+
+    <rect x="240" y="350" width="280" height="52" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#g1)"/>
+    <text x="260" y="374" font-size="13.5" fill="#111827">운영 모니터링</text>
+    <text x="260" y="392" font-size="12" fill="#c2410c">취약점·라이선스 변경 감시</text>
+    <line x1="380" y1="402" x2="380" y2="422" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+
+    <rect x="312" y="422" width="136" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#g1)"/>
+    <text x="380" y="450" text-anchor="middle" font-size="13" fill="#111827">변화 발생?</text>
+
+    <path d="M 448 445 L 660 445 L 660 136 L 524 136" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+    <text x="668" y="290" font-size="11.5" fill="#9ca3af">모델 트리 변경</text>
+    <text x="668" y="308" font-size="11.5" fill="#9ca3af">— 개발부터 다시</text>
+
+    <path d="M 380 468 L 380 508" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+    <text x="392" y="492" font-size="11.5" fill="#9ca3af">이상 없음 — 운영 유지</text>
+
+    <path d="M 312 445 L 130 445 L 130 250 L 236 250" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ga)"/>
+    <text x="70" y="360" font-size="11.5" fill="#9ca3af">신규 규제</text>
+    <text x="70" y="378" font-size="11.5" fill="#9ca3af">시행 — 프레임</text>
+    <text x="70" y="396" font-size="11.5" fill="#9ca3af">워크 갱신 후</text>
+    <text x="70" y="414" font-size="11.5" fill="#9ca3af">검토로</text>
+
+    <rect x="256" y="512" width="248" height="44" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="380" y="540" text-anchor="middle" font-size="13" fill="#111827">정기 검토 — 분기·연간</text>
+
+    <line x1="130" y1="445" x2="130" y2="250" stroke="none"/>
+  </g>
+</svg>

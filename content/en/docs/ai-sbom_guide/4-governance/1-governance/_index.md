@@ -88,24 +88,7 @@ AI Governance Initiative) 같은 신흥 AI 법령의 준수를 강조하며, 윤
 수명주기 모니터링은 개발에서 폐기까지의 흐름에 거버넌스 점검점을 두는 것이다. 아래 그림은 AI
 SBOM을 축으로 한 수명주기 거버넌스를 보여준다.
 
-```mermaid
-flowchart TD
-    A([모델·데이터셋 도입]) --> B[개발: AI SBOM 생성\n라이선스·출처 기록]
-    B --> C[검토: 의무·위험·규제 적합성\n거버넌스 책임자 승인]
-    C --> D[배포: 공급 시스템에\nAI SBOM 동반]
-    D --> E[운영 모니터링\n취약점·라이선스 변경 감시]
-    E --> F{변화 발생?}
-    F -->|모델 트리 변경| B
-    F -->|신규 규제 시행| G[프레임워크 갱신]
-    F -->|이상 없음| E
-    G --> H([정기 검토\n분기·연간])
-    H --> C
-
-    style A fill:#2d3748,color:#fff
-    style C fill:#744210,color:#fff
-    style G fill:#c53030,color:#fff
-    style H fill:#22543d,color:#fff
-```
+![모델 도입부터 개발·검토·배포·운영 모니터링을 거쳐 변화 유형에 따라 개발이나 검토로 되도는 거버넌스 주기](./governance-cycle.png)
 
 **그림 1.** AI SBOM을 축으로 한 수명주기 거버넌스
 
