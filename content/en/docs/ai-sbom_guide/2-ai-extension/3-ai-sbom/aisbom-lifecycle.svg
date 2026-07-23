@@ -7,8 +7,8 @@
   <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
     <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">AI SBOM을 만들고 검토해 보관하기까지</text>
 
-    <rect x="250" y="42" width="260" height="44" rx="8" fill="#eef2f6" stroke="#9fb3c4"/>
-    <text x="380" y="70" text-anchor="middle" font-size="13.5" fill="#1a2630">AI 시스템 자재</text>
+    <rect x="250" y="42" width="260" height="44" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="380" y="70" text-anchor="middle" font-size="13.5" fill="#111827">AI 시스템 자재</text>
     <line x1="380" y1="86" x2="380" y2="102" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
 
     <rect x="220" y="110" width="320" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>

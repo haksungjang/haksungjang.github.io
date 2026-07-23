@@ -7,8 +7,8 @@
   <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
     <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">AI 자재의 라이선스 의무를 가려내는 절차</text>
 
-    <rect x="310" y="42" width="200" height="46" rx="8" fill="#eef2f6" stroke="#9fb3c4"/>
-    <text x="410" y="70" text-anchor="middle" font-size="13.5" fill="#1a2630">AI 시스템 자재 입력</text>
+    <rect x="310" y="42" width="200" height="46" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="410" y="70" text-anchor="middle" font-size="13.5" fill="#111827">AI 시스템 자재 입력</text>
 
     <path d="M 410 88 L 410 104 L 200 104 L 200 124" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
     <path d="M 410 104 L 620 104 L 620 124" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
