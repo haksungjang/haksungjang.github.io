@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Transparency | Haksung</title><link>https://haksungjang.github.io/en/tags/transparency/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/transparency/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Extension Process</title><link>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/</guid><description>The stage of building AI-specific license, transparency, and SBOM processes that extend beyond code to cover models, weights, and datasets.</description><content:encoded>&lt;![CDATA[<p>This is stage 2 of the implementation roadmap. It is the area where the AI SBOM guide extends most significantly
+beyond ISO/IEC 5230, covering licensing obligations (3.5), transparency obligations (3.6), and AI SBOM
+generation and management (3.9).</p>
+]]></content:encoded></item><item><title>3.6 Transparency Obligations</title><link>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/</guid><description>Explains the procedure for reviewing transparency obligations imposed by regulation and applying risk mitigation measures to issues such as disclosure of training data.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">Implementation Stage</div><p>This clause is established during<strong>Phase 2 — AI Extension Process</strong>.<a href="/en/docs/ai-sbom_guide/#phased-implementation-roadmap">View the full implementation roadmap</a></p></div><h2 id="1-clause-overview">1. Clause Overview</h2><p>If license obligations (3.5) ask &ldquo;do we have the right to use this material,&rdquo; transparency
+obligations ask &ldquo;what must we disclose about this material.&rdquo; The two obligations come from
+different sources. License obligations are imposed by the rights holder through a contract;
+transparency obligations are imposed by regulation through law.</p><p>3.6 requires having a procedure to review whether there are transparency obligations imposed by
+regulation. The scope of review includes training, testing, and verification datasets, taking into
+account the model&rsquo;s intended use. If the use case for the training data creates a transparency
+issue (e.g., a disclosure obligation to downstream recipients), appropriate risk mitigation measures
+must be taken. As the EU Artificial Intelligence Act begins full enforcement of transparency
+obligations from August 2026, the practical weight of this clause is growing.</p><h2 id="2-required-activities">2. Required Activities</h2><ul><li>Maintain a procedure to identify the transparency regulations that apply to AI systems being
+adopted or developed.</li><li>Review whether training, testing, and verification datasets carry disclosure obligations, based
+on their intended use.</li><li>Determine risk mitigation measures where a disclosure obligation to downstream recipients exists.</li><li>Document the transparency measures taken.</li><li>Regularly update and reflect the latest transparency obligations set by regulators.<em>([Recommendation of this guide])</em></li></ul><h2 id="3-requirements-and-verification-material">3. Requirements and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement (EN)</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.6</td><td>A process shall exist for reviewing if there are any transparency obligations from regulations including but not limited to training, testing, and verification datasets, taking into account the intended use of the model. If the use case for the training data creates a relevant issue (e.g., disclosure obligations to downstream recipients) in the context of transparency, then appropriate risk mitigation measures should be undertaken.</td><td><strong>3.6.1</strong> A documented procedure to review and document the transparency measures undertaken</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.6 Transparency obligations</strong>
+A process shall exist for reviewing if there are any transparency obligations from regulations
+including but not limited to training, testing, and verification datasets, taking into account the
+intended use of the model. If the use case for the training data creates a relevant issue (e.g.,
+disclosure obligations to downstream recipients) in the context of transparency, then appropriate
+risk mitigation measures should be undertaken.</p><p><strong>Verification material(s):</strong></p><ul><li>A documented procedure to review and document the transparency measures undertaken.</li></ul></blockquote></details><h2 id="4-compliance-methods-and-samples-by-verification-material">4. Compliance Methods and Samples by Verification Material</h2><h3 id="361-procedure-to-review-and-document-transparency-obligations">3.6.1 Procedure to review and document transparency obligations</h3><p><strong>Compliance Method</strong></p><p>Transparency obligations differ by regulation, so first identify which regulations apply. Once the
+applicable regulations are determined, derive the disclosure items each one requires and reflect
+those items in the AI SBOM or model card. Unlike license obligations, transparency obligations
+center on &ldquo;disclosure,&rdquo; so the output must be organized in a form that can be delivered externally.</p><p>The table below lists the main transparency obligations that intersect with the AI SBOM. The
+regulatory timeline and broader context are managed together in the regulatory matrix in<a href="/en/docs/ai-sbom_guide/4-governance/1-governance/">3.10 Governance</a>.</p><p><strong>Table 1.</strong> Transparency obligations that intersect with the AI SBOM (as of June 2026)</p><table><thead><tr><th>Source</th><th>Transparency Obligation</th><th>Reflected in AI SBOM / Model Card</th></tr></thead><tbody><tr><td>EU Artificial Intelligence Act Article 53 (GPAI)</td><td>Public summary of training data, honoring copyright opt-outs</td><td>Dataset provenance and license, opt-out handling records</td></tr><tr><td>EU Artificial Intelligence Act Article 50</td><td>Labeling AI-generated content, notice of AI interaction</td><td>Output labeling policy</td></tr><tr><td>Korea&rsquo;s AI Basic Act</td><td>Labeling obligation for high-impact and generative AI, disclosure of training data provenance</td><td>Model card labeling and provenance fields</td></tr><tr><td>License-derived notices</td><td>Notices such as &ldquo;Built with Llama,&rdquo; naming of derivative models</td><td>Tracked together with license obligations (3.5)</td></tr></tbody></table><p>The figure below shows the review flow that derives transparency obligations from a material&rsquo;s
+intended use.</p><p><img src="/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/transparency-decision.png" alt="A flow that identifies applicable regulations, determines whether transparency obligations and downstream disclosure issues exist, and reflects them in the AI SBOM and model card"/><p><strong>Figure 1.</strong> Transparency obligation review flow</p><p><strong>Considerations</strong></p><ul><li><strong>Dataset provenance is central</strong>: Most transparency obligations attach to training data. A
+dataset&rsquo;s provenance and license must be recorded in the AI SBOM to fulfill disclosure
+obligations. This connects directly to the AI SBOM (3.9).</li><li><strong>Intended use is the criterion</strong>: The same model can carry different transparency obligations
+depending on the use case. High-risk uses or services aimed at the general public carry heavier
+obligations.</li><li><strong>Downstream disclosure obligations</strong>: When supplying a model or system externally, review what
+information the recipient must be told. Risk mitigation can be fulfilled through a public summary
+of training data or contractual notice.</li><li><strong>Reflect regulatory change</strong>: Since the EU Artificial Intelligence Act applies transparency
+obligations from August 2026, update the procedure to match the timeline. Responsibility for the
+update is managed by governance (3.10).</li></ul><p><strong>Sample (Transparency Obligation Review Procedure)</strong></p><p>Below is a sample of the core part of a transparency obligation review procedure document. This
+procedure document becomes verification material 3.6.1.</p><pre tabindex="0"><code>## Transparency Obligation Review Procedure
+### 1. Identify Applicable Regulations
+Identify applicable regulations based on the AI system's intended use and deployment
+region.
+(e.g., EU market deployment → EU Artificial Intelligence Act; domestic high-impact AI →
+Korea's AI Basic Act)
+### 2. Derive Disclosure Items
+Organize each regulation's transparency obligations into disclosure items.
+- Training data summary (EU Artificial Intelligence Act Article 53)
+- AI-generated / interaction labeling (EU Artificial Intelligence Act Article 50, Korea's
+AI Basic Act)
+- Data provenance disclosure (Korea's AI Basic Act)
+### 3. Downstream Review
+Review the information to be conveyed to recipients on external supply, and determine the
+necessary risk mitigation measures.
+### 4. Reflection and Documentation
+Reflect the derived disclosure items in the AI SBOM and model card, and record the
+measures taken.
+### 5. Responsibility and Cycle
+- Review: Legal and AI governance lead
+- Update: On changes to regulatory enforcement timelines, and at least semiannually</code></pre><h2 id="5-see-also">5. See Also</h2><ul><li>Distinction from license obligations:<a href="/en/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/">3.5 License Obligations</a></li><li>AI SBOM to hold disclosure items:<a href="/en/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/">3.9 AI SBOM</a></li><li>Regulatory timeline and governance:<a href="/en/docs/ai-sbom_guide/4-governance/1-governance/">3.10 Governance</a></li><li>AI model licenses and labeling obligations:<a href="https://openchain-project.github.io/OpenChain-KWG/guide/opensource_for_enterprise/7-ai-compliance/">Enterprise Open Source Management Guide — AI Compliance</a></li></ul>
+]]></content:encoded></item></channel></rss>

@@ -1,0 +1,28 @@
+# Haksung
+
+> The official website of Haksung Jang, Open Source Program Manager at SK telecom and OpenChain Ambassador.
+
+## Site index
+
+- [Home page](https://haksungjang.github.io/en/index.md)
+- [Guide](https://haksungjang.github.io/en/docs/index.md)
+- [Research](https://haksungjang.github.io/en/research/index.md): Analysis of open source regulation, policy, and compliance practice grounded in primary sources. Covers recent developments such as the EU Cyber Resilience Act, the US AI executive order, and the EU open source strategy.
+- [Tools](https://haksungjang.github.io/en/tools/index.md): Open source management tools I contribute to. They cover SBOM generation, open source risk analysis, vulnerability and license management, and notice generation.
+- [Blog](https://haksungjang.github.io/en/blog/index.md)
+
+## Documentation index
+
+- [[2025] Enterprise Open Source Management Guide Based on ISO Standards](https://haksungjang.github.io/en/docs/opensource_for_enterprise/index.md)
+- [A Guide to Building Enterprise Open Source Governance Based on the International Standard ISO/IEC 5230](https://haksungjang.github.io/en/docs/governance_iso5230/index.md)
+- [Open Source Security Assurance: A Guide to Enterprise Adoption and Certification of ISO/IEC 18974](https://haksungjang.github.io/en/docs/isoiec18974_guide/index.md)
+- [Enterprise Open Source Compliance Guide Using OpenChain](https://haksungjang.github.io/en/docs/openchain/index.md)
+- [Open Source Audits in Merger and Acquisition (M&A) Transactions](https://haksungjang.github.io/en/docs/audit_in_ma/index.md)
+- [A Practical Guide to SBOM (Software Bill of Materials)](https://haksungjang.github.io/en/docs/sbom_guide/index.md)
+- [AI SBOM Compliance Guide](https://haksungjang.github.io/en/docs/ai-sbom_guide/index.md)
+- [Templates](https://haksungjang.github.io/en/docs/templates/index.md)
+- [Tools](https://haksungjang.github.io/en/docs/tools/index.md)
+
+## Site locales
+
+- [한국어](https://haksungjang.github.io/index.md)
+- [English](https://haksungjang.github.io/en/index.md)

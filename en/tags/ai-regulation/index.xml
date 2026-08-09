@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI Regulation | Haksung</title><link>https://haksungjang.github.io/en/tags/ai-regulation/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/ai-regulation/index.xml" rel="self" type="application/rss+xml"/><item><title>3.6 Transparency Obligations</title><link>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/</guid><description>Explains the procedure for reviewing transparency obligations imposed by regulation and applying risk mitigation measures to issues such as disclosure of training data.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">Implementation Stage</div><p>This clause is established during<strong>Phase 2 — AI Extension Process</strong>.<a href="/en/docs/ai-sbom_guide/#phased-implementation-roadmap">View the full implementation roadmap</a></p></div><h2 id="1-clause-overview">1. Clause Overview</h2><p>If license obligations (3.5) ask &ldquo;do we have the right to use this material,&rdquo; transparency
+obligations ask &ldquo;what must we disclose about this material.&rdquo; The two obligations come from
+different sources. License obligations are imposed by the rights holder through a contract;
+transparency obligations are imposed by regulation through law.</p><p>3.6 requires having a procedure to review whether there are transparency obligations imposed by
+regulation. The scope of review includes training, testing, and verification datasets, taking into
+account the model&rsquo;s intended use. If the use case for the training data creates a transparency
+issue (e.g., a disclosure obligation to downstream recipients), appropriate risk mitigation measures
+must be taken. As the EU Artificial Intelligence Act begins full enforcement of transparency
+obligations from August 2026, the practical weight of this clause is growing.</p><h2 id="2-required-activities">2. Required Activities</h2><ul><li>Maintain a procedure to identify the transparency regulations that apply to AI systems being
+adopted or developed.</li><li>Review whether training, testing, and verification datasets carry disclosure obligations, based
+on their intended use.</li><li>Determine risk mitigation measures where a disclosure obligation to downstream recipients exists.</li><li>Document the transparency measures taken.</li><li>Regularly update and reflect the latest transparency obligations set by regulators.<em>([Recommendation of this guide])</em></li></ul><h2 id="3-requirements-and-verification-material">3. Requirements and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement (EN)</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.6</td><td>A process shall exist for reviewing if there are any transparency obligations from regulations including but not limited to training, testing, and verification datasets, taking into account the intended use of the model. If the use case for the training data creates a relevant issue (e.g., disclosure obligations to downstream recipients) in the context of transparency, then appropriate risk mitigation measures should be undertaken.</td><td><strong>3.6.1</strong> A documented procedure to review and document the transparency measures undertaken</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.6 Transparency obligations</strong>
+A process shall exist for reviewing if there are any transparency obligations from regulations
+including but not limited to training, testing, and verification datasets, taking into account the
+intended use of the model. If the use case for the training data creates a relevant issue (e.g.,
+disclosure obligations to downstream recipients) in the context of transparency, then appropriate
+risk mitigation measures should be undertaken.</p><p><strong>Verification material(s):</strong></p><ul><li>A documented procedure to review and document the transparency measures undertaken.</li></ul></blockquote></details><h2 id="4-compliance-methods-and-samples-by-verification-material">4. Compliance Methods and Samples by Verification Material</h2><h3 id="361-procedure-to-review-and-document-transparency-obligations">3.6.1 Procedure to review and document transparency obligations</h3><p><strong>Compliance Method</strong></p><p>Transparency obligations differ by regulation, so first identify which regulations apply. Once the
+applicable regulations are determined, derive the disclosure items each one requires and reflect
+those items in the AI SBOM or model card. Unlike license obligations, transparency obligations
+center on &ldquo;disclosure,&rdquo; so the output must be organized in a form that can be delivered externally.</p><p>The table below lists the main transparency obligations that intersect with the AI SBOM. The
+regulatory timeline and broader context are managed together in the regulatory matrix in<a href="/en/docs/ai-sbom_guide/4-governance/1-governance/">3.10 Governance</a>.</p><p><strong>Table 1.</strong> Transparency obligations that intersect with the AI SBOM (as of June 2026)</p><table><thead><tr><th>Source</th><th>Transparency Obligation</th><th>Reflected in AI SBOM / Model Card</th></tr></thead><tbody><tr><td>EU Artificial Intelligence Act Article 53 (GPAI)</td><td>Public summary of training data, honoring copyright opt-outs</td><td>Dataset provenance and license, opt-out handling records</td></tr><tr><td>EU Artificial Intelligence Act Article 50</td><td>Labeling AI-generated content, notice of AI interaction</td><td>Output labeling policy</td></tr><tr><td>Korea&rsquo;s AI Basic Act</td><td>Labeling obligation for high-impact and generative AI, disclosure of training data provenance</td><td>Model card labeling and provenance fields</td></tr><tr><td>License-derived notices</td><td>Notices such as &ldquo;Built with Llama,&rdquo; naming of derivative models</td><td>Tracked together with license obligations (3.5)</td></tr></tbody></table><p>The figure below shows the review flow that derives transparency obligations from a material&rsquo;s
+intended use.</p><p><img src="/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/transparency-decision.png" alt="A flow that identifies applicable regulations, determines whether transparency obligations and downstream disclosure issues exist, and reflects them in the AI SBOM and model card"/><p><strong>Figure 1.</strong> Transparency obligation review flow</p><p><strong>Considerations</strong></p><ul><li><strong>Dataset provenance is central</strong>: Most transparency obligations attach to training data. A
+dataset&rsquo;s provenance and license must be recorded in the AI SBOM to fulfill disclosure
+obligations. This connects directly to the AI SBOM (3.9).</li><li><strong>Intended use is the criterion</strong>: The same model can carry different transparency obligations
+depending on the use case. High-risk uses or services aimed at the general public carry heavier
+obligations.</li><li><strong>Downstream disclosure obligations</strong>: When supplying a model or system externally, review what
+information the recipient must be told. Risk mitigation can be fulfilled through a public summary
+of training data or contractual notice.</li><li><strong>Reflect regulatory change</strong>: Since the EU Artificial Intelligence Act applies transparency
+obligations from August 2026, update the procedure to match the timeline. Responsibility for the
+update is managed by governance (3.10).</li></ul><p><strong>Sample (Transparency Obligation Review Procedure)</strong></p><p>Below is a sample of the core part of a transparency obligation review procedure document. This
+procedure document becomes verification material 3.6.1.</p><pre tabindex="0"><code>## Transparency Obligation Review Procedure
+### 1. Identify Applicable Regulations
+Identify applicable regulations based on the AI system's intended use and deployment
+region.
+(e.g., EU market deployment → EU Artificial Intelligence Act; domestic high-impact AI →
+Korea's AI Basic Act)
+### 2. Derive Disclosure Items
+Organize each regulation's transparency obligations into disclosure items.
+- Training data summary (EU Artificial Intelligence Act Article 53)
+- AI-generated / interaction labeling (EU Artificial Intelligence Act Article 50, Korea's
+AI Basic Act)
+- Data provenance disclosure (Korea's AI Basic Act)
+### 3. Downstream Review
+Review the information to be conveyed to recipients on external supply, and determine the
+necessary risk mitigation measures.
+### 4. Reflection and Documentation
+Reflect the derived disclosure items in the AI SBOM and model card, and record the
+measures taken.
+### 5. Responsibility and Cycle
+- Review: Legal and AI governance lead
+- Update: On changes to regulatory enforcement timelines, and at least semiannually</code></pre><h2 id="5-see-also">5. See Also</h2><ul><li>Distinction from license obligations:<a href="/en/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/">3.5 License Obligations</a></li><li>AI SBOM to hold disclosure items:<a href="/en/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/">3.9 AI SBOM</a></li><li>Regulatory timeline and governance:<a href="/en/docs/ai-sbom_guide/4-governance/1-governance/">3.10 Governance</a></li><li>AI model licenses and labeling obligations:<a href="https://openchain-project.github.io/OpenChain-KWG/guide/opensource_for_enterprise/7-ai-compliance/">Enterprise Open Source Management Guide — AI Compliance</a></li></ul>
+]]></content:encoded></item><item><title>3.10 Governance</title><link>https://haksungjang.github.io/en/docs/ai-sbom_guide/4-governance/1-governance/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/ai-sbom_guide/4-governance/1-governance/</guid><description>Explains how to establish a governance framework spanning the full AI system lifecycle and review it periodically to reflect emerging AI regulation.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">Implementation Phase</div><p>This clause is built during<strong>Phase 4 — Governance</strong>.<a href="/en/docs/ai-sbom_guide/#phased-implementation-roadmap">View the full implementation roadmap</a></p></div><h2 id="1-clause-overview">1. Clause Overview</h2><p>Governance is the framework that ties all the preceding clauses together to ensure the AI
+system&rsquo;s lifecycle is developed, deployed, and managed responsibly from end to end. Where policy
+(3.1) sets the principles and license obligations (3.5) and the AI SBOM (3.9) build individual
+processes, governance manages these so they keep operating consistently through regulatory change
+and model replacement.</p><p>3.10 requires an AI governance framework, policies, and practices. The specification emphasizes
+compliance with emerging AI laws such as the EU AI Act, the Hiroshima AI Process, and China&rsquo;s
+Global AI Governance Initiative, and addresses ethical considerations, risk management, and
+transparency together. The core is to review a framework, once built, periodically so it reflects
+the latest regulation and model changes.</p><h2 id="2-activities-to-perform">2. Activities to Perform</h2><ul><li>Write a governance framework document that spans the full AI system lifecycle.</li><li>Include emerging AI regulation tracking, risk management, transparency, and ethical
+considerations in the framework.</li><li>Have a procedure for periodically reviewing and updating the framework.</li><li>Monitor the risks that come with the ongoing use of AI systems and training data.</li><li>Reflect events such as model tree changes, regulatory enforcement, and OSAID classification
+changes in governance.<em>([Guide Recommendation])</em></li></ul><h2 id="3-requirement-and-verification-material">3. Requirement and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.10</td><td>The organization shall have an AI governance framework, policies, and practices that help ensure AI systems are developed, deployed, and managed responsibly. This shall emphasize compliance with emerging AI laws (the EU AI Act, the Hiroshima AI Process, China&rsquo;s initiative) and address ethical considerations, risk management, and transparency.</td><td><strong>3.10.1</strong> A documented AI governance framework for the AI system lifecycle, including a procedure for periodically reviewing the framework</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.10 Governance</strong>
+An organization shall have a governance framework for AI, policies, and practices to help ensure
+that AI systems are developed, deployed, and managed responsibly. Governance emphasizes compliance
+with emerging AI laws and regulations, such as the EU AI Act, Hiroshima AI process or Global AI
+Governance Initiative (China), and addresses ethical considerations, risk management, and
+transparency. For example, understand the risks associated with ongoing use of AI Systems and
+training data in the context of their intended Programs. This could include the ability to monitor
+the lifecycle of the AI system and perform ongoing analysis of its intended uses.</p><p><strong>Verification material(s):</strong></p><ul><li>A documented AI governance framework for the lifecycle of an AI system with a process to review
+the framework periodically.</li></ul></blockquote></details><h2 id="4-how-to-comply-with-each-verification-material-with-samples">4. How to Comply with Each Verification Material, with Samples</h2><h3 id="3101-ai-governance-framework-and-periodic-review-procedure">3.10.1 AI Governance Framework and Periodic Review Procedure</h3><p><strong>How to Comply</strong></p><p>The governance framework covers three things: tracking emerging regulation to derive obligations,
+monitoring the AI system lifecycle, and a procedure for periodically reviewing the framework
+itself. Because regulation changes quickly, the framework must be a living system built for
+updates, not a fixed document.</p><p>The three axes the specification names differ in character. The EU AI Act imposes concrete,
+article-level obligations; the Hiroshima AI Process runs voluntary transparency reporting; and
+China&rsquo;s initiative is closer to a policy declaration. Governance distinguishes these differences
+and tracks each accordingly.</p><p>The table below lists the major regulations to track from an AI SBOM perspective. The full
+regulatory matrix and its ISO/IEC 42001 context are covered in<a href="https://openchain-project.github.io/OpenChain-KWG/guide/iso42001_guide/1-context-leadership/">ISO/IEC 42001 Guide —
+Organizational Context and
+Leadership</a>.</p><p><strong>Table 1.</strong> Major AI regulations intersecting with AI SBOM (as of 2026-06)</p><table><thead><tr><th>Regulation/Initiative</th><th>Timing</th><th>Core AI SBOM-Relevant Obligation</th><th>Governance Reflection</th></tr></thead><tbody><tr><td>EU AI Act Article 11 + Annex IV</td><td>2027 (high-risk)</td><td>Technical documentation obligation</td><td>Produce the AI SBOM as a core element of the technical documentation</td></tr><tr><td>EU AI Act Article 53 (GPAI)</td><td>2026-08</td><td>Disclosure of a training data summary, respecting copyright opt-outs</td><td>Track dataset provenance and licensing</td></tr><tr><td>EU AI Act Article 50</td><td>2026-08</td><td>Labeling of AI-generated content</td><td>Links to the transparency obligation (3.6)</td></tr><tr><td>Hiroshima AI Process</td><td>Launched 2025, Reporting 2.0 (2026-05)</td><td>Voluntary transparency reporting</td><td>Consider participating in the OECD reporting framework</td></tr><tr><td>China&rsquo;s Global AI Governance Initiative</td><td>Announced 2023</td><td>Policy declaration (no concrete deliverable)</td><td>Monitor trends</td></tr><tr><td>Korea&rsquo;s AI Basic Act</td><td>Effective 2026-01</td><td>High-impact AI impact assessment, labeling obligation, disclosure of training data provenance</td><td>AI SBOM and model card production</td></tr></tbody></table><p>Lifecycle monitoring means placing governance checkpoints along the flow from development to
+retirement. The figure below shows lifecycle governance built around the AI SBOM.</p><p><img src="/docs/ai-sbom_guide/4-governance/1-governance/governance-cycle.png" alt="Governance cycle that runs from model intake through development, review, deployment, and operational monitoring, looping back to development or review depending on the type of change"/><p><strong>Figure 1.</strong> Lifecycle governance built around the AI SBOM</p><p><strong>Considerations</strong></p><ul><li><strong>Assign regulatory-tracking responsibility</strong>: Specify in governance who tracks emerging
+regulation and derives obligations from it. The EU AI Act&rsquo;s obligations expand in stages in
+August 2026 and 2027, so manage the timing.</li><li><strong>Manage model tree changes</strong>: When an imported model moves to a new version or a parent model
+is replaced, license obligations can change. Register the change as a governance review event.<em>([Guide Recommendation])</em></li><li><strong>Update OSAID classification</strong>: The distinction between &ldquo;open source AI&rdquo; and &ldquo;open weight&rdquo;
+(OSAID 1.0) affects model licensing judgments. Include classification changes in the periodic
+review.</li><li><strong>State the review cycle</strong>: Review model and dataset changes quarterly, and regulation and the
+overall framework annually. Record the review completion date and reviewer.</li><li><strong>Connect to other clauses</strong>: Governance ties together the regulatory review under the
+transparency obligation (3.6) and the lifecycle management under the AI SBOM (3.9) from above.
+Connect them rather than building duplicate procedures.</li></ul><p><strong>Sample (Governance Framework and Annual Review Plan)</strong></p><p>Below is a sample of the core part of a governance framework document and periodic review plan.
+This document becomes verification material 3.10.1.</p><pre tabindex="0"><code>## AI Governance Framework
+### 1. Scope and Purpose
+Manages licensing, transparency, risk, and regulatory compliance across the full
+lifecycle of an AI system — intake, development, deployment, operation, and
+retirement.
+### 2. Governance Structure
+- AI Governance Lead: approves the framework, makes the final call on regulatory obligations
+- Regulatory Tracking Owner: monitors emerging AI regulation, derives obligations
+- AI SBOM Verification Owner: runs the generation, review, and approval procedure
+- Legal: interprets non-standard licenses and regulation
+### 3. Periodic Review Plan
+| Frequency | Review Item | Owner | Deliverable |
+|------|----------|------|--------|
+| Quarterly | Model/dataset changes, model tree licensing | AI SBOM Verification Owner | Change review record |
+| Semiannual | Non-standard license classification, OSAID updates | Legal | Updated classification |
+| Annual | Regulatory enforcement schedule, overall framework, policy alignment | AI Governance Lead | Revised framework |
+### 4. Change Management
+When a model tree change, new regulation taking effect, or a license policy change
+occurs, convene an ad hoc review rather than waiting for the periodic review. Record
+the review outcome and action taken in the change history.</code></pre><h2 id="5-references">5. References</h2><ul><li>Policy foundation:<a href="/en/docs/ai-sbom_guide/1-program-foundation/1-policy/">3.1 Policy</a></li><li>Transparency obligations and regulatory review:<a href="/en/docs/ai-sbom_guide/2-ai-extension/2-transparency-obligations/">3.6 Transparency Obligations</a></li><li>AI SBOM lifecycle management:<a href="/en/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/">3.9 AI SBOM</a></li><li>Full regulatory matrix and ISO/IEC 42001 context:<a href="https://openchain-project.github.io/OpenChain-KWG/guide/iso42001_guide/1-context-leadership/">ISO/IEC 42001 Guide — Organizational Context and Leadership</a></li></ul>
+]]></content:encoded></item></channel></rss>

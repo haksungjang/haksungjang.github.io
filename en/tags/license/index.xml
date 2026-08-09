@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>License | Haksung</title><link>https://haksungjang.github.io/en/tags/license/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/license/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Extension Process</title><link>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/</guid><description>The stage of building AI-specific license, transparency, and SBOM processes that extend beyond code to cover models, weights, and datasets.</description><content:encoded>&lt;![CDATA[<p>This is stage 2 of the implementation roadmap. It is the area where the AI SBOM guide extends most significantly
+beyond ISO/IEC 5230, covering licensing obligations (3.5), transparency obligations (3.6), and AI SBOM
+generation and management (3.9).</p>
+]]></content:encoded></item><item><title>3.5 License Obligations</title><link>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/</guid><description>Explains the procedure for reviewing the licenses of an AI system's code, weights, datasets, and model tree to determine obligations, restrictions, and rights.</description><content:encoded>&lt;![CDATA[<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">Implementation Phase</div><p>This clause is built during<strong>Phase 2 — AI Extension Processes</strong>.<a href="/en/docs/ai-sbom_guide/#phased-implementation-roadmap">View the full implementation roadmap</a></p></div><h2 id="1-clause-overview">1. Clause Overview</h2><p>License obligations are where the AI SBOM Guide expands most on ISO/IEC 5230. Where traditional
+open source compliance reviewed the licenses of code, AI expands the review to four fronts: an AI
+system&rsquo;s code, model weights, datasets (including training, testing, and validation datasets),
+and the license of the AI system itself. It is common for a model to be derived from several
+other models, so each parent model sitting in the Model Tree can carry its own distinct license.</p><p>3.5 requires a procedure for reviewing these licenses to determine, in light of the AI system&rsquo;s
+intended use, the obligations, restrictions, and rights each license grants. The review covers
+both obligations inherited from upstream and obligations passed downstream.</p><h2 id="2-activities-to-perform">2. Activities to Perform</h2><ul><li>Establish a procedure for identifying the licenses of code, weights, datasets, and the AI
+system itself.</li><li>Track the license of each parent model in the model tree, and document the obligations,
+restrictions, and rights of each license.</li><li>Perform an initial identification pass on source code and dependencies with automated scanning
+tools.<em>([Guide Recommendation])</em></li><li>Route model weights, datasets, and non-standard licenses to legal or governance review.<em>([Guide Recommendation])</em></li><li>Set up an intake procedure that requires license metadata to accompany any model or dataset
+brought in from outside.<em>([Guide Recommendation])</em></li><li>Record the review results (obligations, restrictions, rights) in the AI SBOM for tracking.</li></ul><h2 id="3-requirement-and-verification-material">3. Requirement and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.5</td><td>A procedure shall exist for reviewing the licenses of an AI system&rsquo;s code, weights, datasets, and the AI system itself to determine, taking the intended use into account, the obligations, restrictions, and rights each license grants. Note that parent models in the model tree may each carry their own distinct license.</td><td><strong>3.5.1</strong> A documented procedure for properly reviewing and documenting the upstream and downstream obligations, restrictions, and rights granted by each identified license</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.5 License obligations</strong>
+A process shall exist for reviewing the relevant identified licenses for an AI system&rsquo;s code,
+weights, and datasets (including but not limited to training, testing, and verification datasets)
+as well as the license for the AI system itself to determine the obligations, restrictions, and
+rights granted by each license, taking into account the intended use of the AI system. Note that
+it&rsquo;s often the case that an AI system is trained on multiple other AI systems that may be
+identified in the AI system Model Tree for example; each of these may have their own licenses.</p><p><strong>Verification material(s):</strong></p><ul><li>A documented procedure to review and document upstream and downstream obligations,
+restrictions, and rights granted by each identified license, as appropriate.</li></ul></blockquote></details><h2 id="4-how-to-comply-with-each-verification-material-with-samples">4. How to Comply with Each Verification Material, with Samples</h2><h3 id="351-license-obligation-review-and-documentation-procedure">3.5.1 License Obligation Review and Documentation Procedure</h3><p><strong>How to Comply</strong></p><p>Design the review procedure around the premise that the level of automation differs by material
+type. Source code and dependency licenses can be identified to a large degree with automated
+scanning tools such as FOSSology, ScanCode, and the OSS Review Toolkit. But the licensing of
+model weights and datasets, and the derivation relationships in the model tree, fall outside the
+reach of these tools or are identified with low accuracy. The usage-purpose restrictions of
+non-standard licenses require human interpretation. A realistic division of labor is therefore to
+do an initial identification pass with automated scanning, and route models, datasets, and
+non-standard licenses to legal or governance review.</p><p>The figure below shows the decision flow for determining license obligations as materials come
+in.</p><p><img src="/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/license-decision.png" alt="Decision flow that splits incoming AI materials into code and models, identifies their licenses, determines whether they conflict with the intended use, and records the result in the AI SBOM"/><p><strong>Figure 1.</strong> Decision flow for license obligation review</p><p><strong>Considerations</strong></p><ul><li><strong>Enforce metadata at the intake gate</strong>: The largest cause of missed license obligations is
+license drift — the loss of provenance and license information as a model propagates
+downstream. One study reports that a substantial share of restriction clauses disappear in the
+transition from model to application (<a href="https://arxiv.org/abs/2509.09873">arXiv:2509.09873</a>).
+Rather than trying to reconstruct this downstream, it is more effective to block the intake of
+materials lacking license metadata at the internal model/dataset registry.<em>([Guide Recommendation])</em></li><li><strong>Decide non-standard licenses through policy in advance</strong>: The behavioral use restrictions of
+the Llama Community License or the OpenRAIL family are hard to track automatically for
+compliance after the fact. Decide them at intake time using the allowed/prohibited lists in<a href="/en/docs/ai-sbom_guide/1-program-foundation/1-policy/">3.1 Policy</a>.<em>([Guide Recommendation])</em></li><li><strong>Trace the model tree</strong>: Check the model card to see which parent model an incoming model was
+derived from, and review whether the parent model&rsquo;s license obligations propagate downstream.</li><li><strong>Check dataset usage restrictions</strong>: Check whether a non-commercial-licensed dataset such as
+CC-BY-NC was used to train a commercial product. Dataset license omissions and misstatements
+are common, so cross-check against the original text.</li><li><strong>Recognize the limits of automation</strong>: Do not treat automated scan results as the final
+judgment. Tools help with identification; people handle the interpretation of obligations and
+conflict determination.</li></ul><p><strong>Sample</strong></p><p>Below is a sample of the core part of a license obligation review procedure document. This
+procedure document becomes verification material 3.5.1.</p><pre tabindex="0"><code>## AI License Obligation Review Procedure
+### 1. Scope of Review
+- AI system code and dependencies
+- Model weights (imported models, fine-tuned models)
+- Datasets (training, testing, validation)
+- Licenses of parent models in the model tree
+### 2. Review Steps
+1) Automated identification: scan code and dependencies for licenses using an SCA tool.
+2) Metadata collection: collect licenses for models and datasets from model cards and
+datasheets. Hold intake if metadata is missing.
+3) Classification: check identified licenses against the policy's allowed/conditional/
+prohibited lists.
+4) Legal review: route non-standard or unclear licenses to legal/governance review to
+interpret the obligations.
+5) Recording: record upstream and downstream obligations, restrictions, and rights in
+the AI SBOM.
+### 3. Responsibility and Frequency
+- Initial identification: development staff
+- Interpreting obligations: legal / AI governance lead
+- Re-review: when a model or dataset is replaced, and at least once a quarter</code></pre><h2 id="5-references">5. References</h2><ul><li>Policy for allowed/prohibited license lists:<a href="/en/docs/ai-sbom_guide/1-program-foundation/1-policy/">3.1 Policy</a></li><li>AI SBOM for recording review results:<a href="/en/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/">3.9 AI SBOM</a></li><li>Automated scanning tools:<a href="https://openchain-project.github.io/OpenChain-KWG/guide/tools/1-fossology/">Tools — FOSSology</a>,<a href="https://openchain-project.github.io/OpenChain-KWG/guide/tools/9-scanoss/">SCANOSS</a></li><li>AI model/dataset licensing strategy:<a href="https://openchain-project.github.io/OpenChain-KWG/guide/opensource_for_enterprise/7-ai-compliance/">Enterprise Open Source Management Guide — AI Compliance</a></li></ul>
+]]></content:encoded></item></channel></rss>

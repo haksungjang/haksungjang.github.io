@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sharing | Haksung</title><link>https://haksungjang.github.io/en/tags/sharing/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/sharing/index.xml" rel="self" type="application/rss+xml"/><item><title>Sharing and Governance</title><link>https://haksungjang.github.io/en/docs/sbom_guide/7-governance/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/7-governance/</guid><description>Summarizes SBOM access control and disclosure scope, secure sharing channels, and roles-and-responsibilities governance.</description><content:encoded>&lt;![CDATA[<p>An SBOM creates value only when it is delivered along the supply chain, but it is also sensitive
+material that contains trade secrets and attack surface. Without governance that determines who
+shares what, and how, excessive disclosure heightens risk, and excessive restriction forfeits value.</p><h2 id="access-control-and-disclosure-scope">Access Control and Disclosure Scope</h2><p>Access to SBOM data is managed through Role-Based Access Control (RBAC). Because access needs
+differ by stakeholder, general users are granted read-only access, administrators are granted edit
+and update access, and sensitive information is granted restricted access.</p><p>For disclosure scope, maintaining two versions is common practice.</p><ul><li><strong>Public SBOM</strong>: Contains non-sensitive information that can be shared with all stakeholders.</li><li>Private SBOM: Contains sensitive information, such as vulnerabilities, and only approved parties can access it.</li></ul><p>Regulation reflects this distinction as well. The EU Cyber Resilience Act does not require an SBOM
+to be disclosed to the general public, but requires it to be retained in case market surveillance
+authorities request it. Amid the tension between consumers wanting a more complete SBOM and
+producers wanting to reduce disclosure, the public/private split is a practical device that
+reconciles the two.</p><h2 id="secure-sharing-channels">Secure Sharing Channels</h2><p>When delivering an SBOM, both integrity and confidentiality need to be preserved.</p><ul><li>Use a secure protocol such as HTTPS for transmission, and ensure integrity and confidentiality through digital signatures or encryption.</li><li>Use a sharing platform equipped with access control and audit capabilities.</li><li>Use API integration for automated exchange between systems, and dedicated repositories for industry- or community-level sharing.</li></ul><p>Attach a digital signature to the document so recipients can verify its authenticity and check for
+tampering, and clearly mark which information is public and which is private.</p><h2 id="roles-and-responsibilities">Roles and Responsibilities</h2><p>An SBOM program works only when multiple departments share responsibility for it. It should
+include an executive sponsor, project leads, systems and design engineers, procurement
+specialists, and operations personnel, adding IT, cybersecurity, and maintenance staff as security
+needs require. When roles are scattered, responsibility scatters with them, so establishing clear
+ownership is the starting point.</p><p>The key activities in building governance are as follows.</p><ul><li>Identify key stakeholders: Include representatives from development, IT operations, security,
+procurement, legal, and business leadership, and be sure to include a cybersecurity expert.</li><li>Define responsibilities and assign ownership: Decide who will handle SBOM generation and
+consumption, vulnerability monitoring, supplier engagement, and security data management, and
+designate a cybersecurity expert as the program owner or co-owner.</li><li>Establish a governance structure: A governance body with participation from stakeholders across
+the organization develops policies, standards, and processes, and implements data protection
+controls.</li><li>Train and monitor: Train personnel on SBOM security requirements and secure data handling, and
+continuously assess the program&rsquo;s security posture through regular audits, adjusting it to
+evolving threats and compliance requirements.</li></ul><h2 id="sources">Sources</h2><p>CISA (2024).<em>Framing Software Component Transparency</em>, Third Edition. CERT-In.<em>Technical Guidelines
+on Software Bill of Materials (SBOM)</em>. Regulation (EU) 2024/2847 — Cyber Resilience Act, Annex I
+Part II. (all accessed: June 14, 2026)</p>
+]]></content:encoded></item></channel></rss>

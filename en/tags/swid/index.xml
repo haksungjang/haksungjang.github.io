@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>SWID | Haksung</title><link>https://haksungjang.github.io/en/tags/swid/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/swid/index.xml" rel="self" type="application/rss+xml"/><item><title>Identifiers and Licenses</title><link>https://haksungjang.github.io/en/docs/sbom_guide/2-standards/2-identifiers/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/2-standards/2-identifiers/</guid><description>Covers the PURL, CPE, and SWID identifiers used to consistently point to components, and how to notate SPDX license identifiers.</description><content:encoded>&lt;![CDATA[<p>If the same component is named differently across SBOMs, automated matching breaks down, because
+there is no way for a machine to know that &ldquo;Apache Tomcat,&rdquo; &ldquo;tomcat,&rdquo; and &ldquo;Apache Software
+Foundation Tomcat&rdquo; are the same thing. This is why an identifier system that consistently points
+to components, and a convention for notating licenses with standard codes, are both necessary.</p><h2 id="three-identifiers-purl-cpe-swid">Three Identifiers: PURL, CPE, SWID</h2><p>The three identifiers used together in practice serve different roles. They are not mutually
+exclusive, so recording them together where possible is recommended.</p><table><thead><tr><th>Identifier</th><th>Maintained by</th><th>Primary use</th></tr></thead><tbody><tr><td>PURL (Package URL)</td><td>Community (purl-spec)</td><td>Precisely points to a component within a package manager ecosystem</td></tr><tr><td>CPE (Common Platform Enumeration)</td><td>NIST</td><td>Notates a product with a consistent name to look up its CVEs</td></tr><tr><td>SWID (Software Identification Tag)</td><td>ISO/IEC 19770-2</td><td>Structured metadata for product, version, and producing entity</td></tr></tbody></table><p><strong>Table 1.</strong> Identifiers used together in an SBOM<em>(source: purl-spec, NIST NVD,
+ISO/IEC 19770-2. Retrieved 2026-06-14)</em></p><p>A Package URL points to a component within a package manager ecosystem in the following format.</p><pre tabindex="0"><code>pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1
+pkg:npm/lodash@4.17.21
+pkg:pypi/requests@2.31.0</code></pre><p>After<code>pkg:</code> come the ecosystem type (maven, npm, pypi, etc.), namespace, name, and version.
+Because the same component can be pointed to with the same string everywhere, it links
+automatically to vulnerability databases and license databases.</p><p>CPE was developed by MITRE in the mid-2000s and is now maintained by NIST. It notates products
+under a fixed naming rule and is used to look up the vulnerabilities (CVEs) corresponding to a
+product. SWID is a tag format standardized as ISO/IEC 19770-2 that structurally describes a
+product&rsquo;s version and producing/distributing entity, and it is mainly used in asset management.
+The CISA 2025 minimum elements draft updating &ldquo;Other Unique Identifiers&rdquo; to &ldquo;Software
+Identifiers&rdquo; also reflects the maturing of this identifier ecosystem.</p><h2 id="license-notation-spdx-license-identifiers">License Notation: SPDX License Identifiers</h2><p>License management is one of the earliest use cases for an SBOM. Recording exactly which license
+each component is distributed under is what prevents obligation violations and conflicts in
+advance. Free-text descriptions cannot be matched automatically, so standard codes are used.</p><p><a href="https://spdx.org/licenses/">SPDX license identifiers</a> assign each license a unique code such as<code>Apache-2.0</code>,<code>MIT</code>, or<code>GPL-3.0-only</code>. When multiple licenses apply together, they are combined
+with a license expression.</p><pre tabindex="0"><code>Apache-2.0 OR MIT
+GPL-2.0-only WITH Classpath-exception-2.0
+(MIT AND BSD-3-Clause)</code></pre><p><code>OR</code> indicates a choice among multiple licenses,<code>AND</code> indicates multiple licenses applying
+simultaneously, and<code>WITH</code> indicates combination with an exception clause.</p><p>The principles to follow in practice are as follows.</p><ul><li>The license of every individual component, not just the license of the product as a whole,
+must be visible.</li><li>When encountering a license not on the standard list, assign it an identifier with a prefix
+indicating its source (for example, a<code>LicenseRef-</code> prefix) to track it.</li><li>If the license text has been trivially modified but its meaning has not changed materially,
+use the same identifier as the original.</li><li>Analyze license compatibility to identify in advance the conflicts that can arise when
+combining components under different licenses.</li></ul><p>Even when a license field is auto-extracted by a tool, its accuracy is a separate matter.
+Precisely identifying non-standard licenses, handling dual licensing, and confirming compliance
+with licenses that carry field-of-use restrictions remain the responsibility of people and
+policy. The boundary of automation is covered in<a href="/en/docs/sbom_guide/5-tools/">5. Tools and Automation</a>.</p><h2 id="sources">Sources</h2><p>Package URL specification<a href="https://github.com/package-url/purl-spec">https://github.com/package-url/purl-spec</a>. NIST.<em>Common Platform Enumeration (CPE)</em><a href="https://nvd.nist.gov/products/cpe">https://nvd.nist.gov/products/cpe</a>. ISO/IEC 19770-2:2015.
+SPDX License List<a href="https://spdx.org/licenses/">https://spdx.org/licenses/</a>. SPDX License Expressions<a href="https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/">https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/</a>. (All retrieved: 2026-06-14)</p>
+]]></content:encoded></item></channel></rss>

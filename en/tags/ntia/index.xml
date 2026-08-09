@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>NTIA | Haksung</title><link>https://haksungjang.github.io/en/tags/ntia/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/ntia/index.xml" rel="self" type="application/rss+xml"/><item><title>Minimum Elements of an SBOM</title><link>https://haksungjang.github.io/en/docs/sbom_guide/2-standards/1-minimum-elements/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/2-standards/1-minimum-elements/</guid><description>Covers the data fields an SBOM must contain, from the NTIA 2021 minimum elements to the CISA 2025 revision draft.</description><content:encoded>&lt;![CDATA[<p>Once a format is chosen, the next question is what that format must contain. The documents that
+define this floor are the US Minimum Elements series. Though they are recommendations, they
+function as the de facto standard for federal procurement, and SBOM requirements in the EU and
+other jurisdictions largely reference this same framework.</p><h2 id="lineage-from-ntia-2021-to-cisa-2025">Lineage: From NTIA 2021 to CISA 2025</h2><p>The National Telecommunications and Information Administration (NTIA) published<em>The Minimum
+Elements For a Software Bill of Materials (SBOM)</em> in July 2021, under the delegation of
+Executive Order 14028. The document organized the minimum elements into three categories: the
+data fields to track per component, automation support requiring a machine-readable format, and
+practices and processes covering generation frequency, depth, and the like.</p><p>Stewardship of the community&rsquo;s work then moved to the Cybersecurity and Infrastructure Security
+Agency (CISA), and two lines of revision followed. One was the third edition (September 2024) of<em>Framing Software Component Transparency</em>, a reference document that defines attributes, which
+added License and Copyright Notice to the baseline attributes. The other was a revision of the
+minimum elements document itself: CISA released<em>2025 Minimum Elements for a Software Bill of
+Materials</em> as a public comment draft in August 2025, with the comment period closing on
+October 3, 2025. As of June 2026, this revision remains in draft status, and the date of a final
+version has not been confirmed.</p><h2 id="the-data-fields-and-three-categories-of-ntia-2021">The Data Fields and Three Categories of NTIA 2021</h2><p>The NTIA 2021 minimum elements set seven per-component data fields.</p><table><thead><tr><th>Data field</th><th>Description</th></tr></thead><tbody><tr><td>Supplier Name</td><td>The entity that supplied the component</td></tr><tr><td>Component Name</td><td>The name of the component or library</td></tr><tr><td>Version</td><td>The version identifier of the component</td></tr><tr><td>Other Unique Identifiers</td><td>Identifiers such as PURL, CPE</td></tr><tr><td>Dependency Relationship</td><td>The inclusion relationship with the parent component</td></tr><tr><td>Author of SBOM Data</td><td>The entity that generated this SBOM</td></tr><tr><td>Timestamp</td><td>The date and time of generation</td></tr></tbody></table><p>The three categories are as follows.</p><ul><li><strong>Data fields</strong>: The seven items above — the basic information for tracking and identifying
+components.</li><li>Automation support: Specified SPDX, CycloneDX, and SWID as standard formats for automated
+generation and machine readability.</li><li>Practices and processes: Covers generation frequency, depth, handling of known unknowns,
+distribution and delivery, access control, and how errors are accommodated.</li></ul><h2 id="what-the-cisa-2025-draft-adds">What the CISA 2025 Draft Adds</h2><p>The CISA 2025 minimum elements draft expanded the data fields to reflect the maturing state of
+tooling. Four core elements were newly added.</p><table><thead><tr><th>New field</th><th>Purpose</th></tr></thead><tbody><tr><td>Component Hash</td><td>Ensures integrity and precise identification through a cryptographic hash</td></tr><tr><td>License</td><td>Primary data for tracking legal compliance</td></tr><tr><td>Tool Name</td><td>Records which tool generated it</td></tr><tr><td>Generation Context</td><td>Records at which stage of the lifecycle it was created</td></tr></tbody></table><p>Existing items were also revised. The roles of SBOM Author and Software Producer were
+distinguished, &ldquo;Other Unique Identifiers&rdquo; was updated to &ldquo;Software Identifiers,&rdquo; and the access
+control element, previously separate, was folded into the distribution and delivery item. The
+trajectory of License — entering as a baseline attribute in Framing 3rd edition and hardening
+into a data field in the 2025 draft — shows that the SBOM is establishing itself as primary data
+for open source license compliance, beyond a security inventory. Behind adding Tool Name,
+Generation Context, and Hash together lies the concern that an SBOM produced by an untrustworthy
+tool cannot itself be trusted. Tool integrity is covered in<a href="/en/docs/sbom_guide/5-tools/">5. Tools and Automation</a>.</p><h2 id="practical-recommendations">Practical Recommendations</h2><p>The minimum elements are, as the name says, a floor. Organizations can, and should, add fields
+suited to their own purposes. Carrying CVE references and patch status for vulnerability
+identification, SPDX license identifiers and copyright notices for license management, and
+release and End-of-Life dates for lifecycle management, together in one SBOM, lets a single SBOM
+answer multiple operational questions. If you are introducing an SBOM for the first time,
+starting with the NTIA seven fields as a base but including the four new fields from the CISA
+2025 draft — especially hash and license — from the outset saves the effort of rebuilding it
+later.</p><h2 id="sources">Sources</h2><p>NTIA (2021).<em>The Minimum Elements For a Software Bill of Materials (SBOM)</em>.<a href="https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf">https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf</a>. CISA (2024).<em>Framing Software Component Transparency</em>, Third Edition.<a href="https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024">https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024</a>.
+CISA (2025).<em>2025 Minimum Elements for a Software Bill of Materials (SBOM)</em> (public comment
+draft).<a href="https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom">https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom</a>.
+(All retrieved: 2026-06-14)</p>
+]]></content:encoded></item></channel></rss>

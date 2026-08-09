@@ -1,0 +1,437 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=en class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=canonical type=text/html href=https://haksungjang.github.io/en/docs/sbom_guide/><link rel=alternate type=application/rss+xml href=https://haksungjang.github.io/en/docs/sbom_guide/index.xml><link rel=alternate type=text/markdown href=https://haksungjang.github.io/en/docs/sbom_guide/index.md><meta name=robots content="noindex, nofollow"><link rel="shortcut icon" href=/favicons/favicon.ico><link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192><title>A Practical Guide to SBOM (Software Bill of Materials) | Haksung</title><meta name=description content="A guide covering the Software Bill of Materials (SBOM), from its concepts and standard formats to regulatory trends, adoption roadmap, tools, vulnerability management, and governance, organized from the perspective of practitioners in Korea."><meta property="og:url" content="https://haksungjang.github.io/en/docs/sbom_guide/"><meta property="og:site_name" content="Haksung"><meta property="og:title" content="A Practical Guide to SBOM (Software Bill of Materials)"><meta property="og:description" content="A guide covering the Software Bill of Materials (SBOM), from its concepts and standard formats to regulatory trends, adoption roadmap, tools, vulnerability management, and governance, organized from the perspective of practitioners in Korea."><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta itemprop=name content="A Practical Guide to SBOM (Software Bill of Materials)"><meta itemprop=description content="A guide covering the Software Bill of Materials (SBOM), from its concepts and standard formats to regulatory trends, adoption roadmap, tools, vulnerability management, and governance, organized from the perspective of practitioners in Korea."><meta itemprop=dateModified content="2026-08-09T17:03:59+09:00"><meta itemprop=wordCount content="550"><meta itemprop=keywords content="SBOM,Supply Chain Security,SPDX,CycloneDX,VEX,CRA"><meta name=twitter:card content="summary"><meta name=twitter:title content="A Practical Guide to SBOM (Software Bill of Materials)"><meta name=twitter:description content="A guide covering the Software Bill of Materials (SBOM), from its concepts and standard formats to regulatory trends, adoption roadmap, tools, vulnerability management, and governance, organized from the perspective of practitioners in Korea."><link rel=preload href=/scss/main.min.91d4f447cbf297bb8747fa0898880b01ec6759b131c3bffe8c0cb68a7de6f684.css as=style integrity="sha256-kdT0R8vyl7uHR/oImIgLAexnWbExw7/+jAy2in3m9oQ=" crossorigin=anonymous><link href=/scss/main.min.91d4f447cbf297bb8747fa0898880b01ec6759b131c3bffe8c0cb68a7de6f684.css rel=stylesheet integrity="sha256-kdT0R8vyl7uHR/oImIgLAexnWbExw7/+jAy2in3m9oQ=" crossorigin=anonymous><script src=https://code.jquery.com/jquery-3.7.1.min.js integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preconnect href=https://cdn.jsdelivr.net crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap"><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css><link rel=icon type=image/svg+xml href=/favicon.svg><meta name=naver-site-verification content="0f8fd1e446e52bf05a391ca517c84114493b21ce"><link rel=canonical href=https://haksungjang.github.io/en/docs/sbom_guide/><link rel=alternate hreflang=ko-KR href=https://haksungjang.github.io/docs/sbom_guide/><link rel=alternate hreflang=en-US href=https://haksungjang.github.io/en/docs/sbom_guide/><link rel=alternate hreflang=x-default href=https://haksungjang.github.io/docs/sbom_guide/><script async src="https://www.googletagmanager.com/gtag/js?id=G-4QCM5VHF7M"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4QCM5VHF7M")}</script></head><body class=td-section><header><nav class="td-navbar js-navbar-scroll"><div class="td-navbar-container container-fluid flex-column flex-md-row"><a class=navbar-brand href=/en/><span class="navbar-brand__logo navbar-logo"></span><span class=navbar-brand__name>Haksung</span></a><div class="td-navbar__main td-navbar-nav-scroll td-navbar-nav-scroll--indicator" id=main_navbar><div class="scroll-indicator scroll-left"></div><ul class=navbar-nav><li class=nav-item><a class="nav-link active" href=/en/docs/><span>Guide</span></a></li><li class=nav-item><a class=nav-link href=/en/research/><span>Research</span></a></li><li class=nav-item><a class=nav-link href=/en/tools/><span>Tools</span></a></li><li class=nav-item><a class=nav-link href=/en/blog/><span>Blog</span></a></li><li class="nav-item td-navbar__lang-menu"><div class="td-lang-menu dropdown"><a class="nav-link dropdown-toggle td-lang-menu__title" href=# role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false><span class=td-lang-menu__title-text>English</span>
+<span class=td-lang-menu__title-code>EN</span></a><ul class=dropdown-menu><li><a class=dropdown-item href=/docs/sbom_guide/>한국어</a></li><li><span class="dropdown-item active">English</span></li></ul></div></li></ul><div class="scroll-indicator scroll-right"></div></div><div class="td-navbar__search d-none d-lg-block"><div class=td-search><div class=td-search__icon></div><input type=search name=q class="td-search__input form-control td-search-input" placeholder='Search this site…' aria-label='Search this site…' autocomplete=off></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This is the multi-page printable view of this section.
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/en/docs/sbom_guide/>Return to the regular view of this page</a>.</p></div><h1 class=title>A Practical Guide to SBOM (Software Bill of Materials)</h1><div class=lead>A guide covering the Software Bill of Materials (SBOM), from its concepts and standard formats to regulatory trends, adoption roadmap, tools, vulnerability management, and governance, organized from the perspective of practitioners in Korea.</div><ul><li>1: <a href=#pg-5c4b43014adfc5092a47faa85760a330>SBOM Overview</a></li><ul><li>1.1: <a href=#pg-75e70af64ae92f82bf5f837c14e976be>SBOM Levels and Classification</a></li><ul></ul></ul><li>2: <a href=#pg-cd091d9c56b1ed54346a89e4b917795f>Standards and Formats</a></li><ul><li>2.1: <a href=#pg-ec1a988e2381ea6484d3a8a32c93f1f7>Minimum Elements of an SBOM</a></li><ul></ul><li>2.2: <a href=#pg-b31749271897aba5422ca5b90a0e6593>Identifiers and Licenses</a></li><ul></ul></ul><li>3: <a href=#pg-b910a898efc163c0bedebc4f848d577f>Regulatory Trends</a></li><ul><li>3.1: <a href=#pg-ef397b27a643517fe4e7ea4fbab71db1>EU Cyber Resilience Act (CRA)</a></li><ul></ul><li>3.2: <a href=#pg-4d07bb788af35c6e71317653ee5f6cbe>India, Korea, and Other Jurisdictions</a></li><ul></ul></ul><li>4: <a href=#pg-0ddfd0893744d1f37a03d92c8e8e7671>Adoption Roadmap</a></li><ul></ul><li>5: <a href=#pg-c185097f72a8525b2edc4bd0f78bd5a4>Tools and Automation</a></li><ul></ul><li>6: <a href=#pg-48bc58de78eabc75520083a606fcb233>Vulnerability Management and VEX</a></li><ul></ul><li>7: <a href=#pg-c04e4ef2d99c890502db63473ee6093e>Sharing and Governance</a></li><ul></ul><li>8: <a href=#pg-5a0c221cc7635c85b2d6d3e07df82b90>Recommendations and Checklist</a></li><ul></ul></ul><div class=content><p>A Software Bill of Materials (SBOM) is a formal record of what components make up a piece of
+software and how those components connect within the supply chain. A US executive order compares
+it to the ingredient list on food packaging. Just as an ingredient list is the starting point for
+responding to allergies, an SBOM is the data layer on which vulnerability response, license
+management, and asset management all rest. An SBOM is not a security tool in itself, but without
+one, an organization cannot immediately answer the question, &ldquo;Where in our product is this library
+used?&rdquo;</p><p>This guide covers that data layer from beginning to end. Drawing on primary sources, it explains
+why SBOM has moved to the forefront of regulation and procurement, what standards and identifiers
+underpin it, in what order organizations adopt it and with what tools they automate it, how they
+manage vulnerabilities and licenses, and how they share it securely across the supply chain.</p><h2 id=intended-audience>Intended Audience</h2><ul><li>Security, development, procurement, and legal staff at organizations that develop or procure
+software</li><li>Practitioners who must respond to the EU Cyber Resilience Act (CRA) or US federal procurement
+requirements</li><li>Teams seeking to establish supply chain transparency and open source license compliance systems</li></ul><h2 id=guide-structure>Guide Structure</h2><p>The guide is divided into eight sections. The earlier sections cover concepts, standards, and
+regulation, while the later sections cover the practicalities of adoption and operation. You can
+read only the sections you need.</p><table><thead><tr><th>Section</th><th>Content</th><th>Link</th></tr></thead><tbody><tr><td>1. Overview</td><td>SBOM definition, supply chain threats and benefits, levels and classification</td><td><a href=/en/docs/sbom_guide/1-overview/>View</a></td></tr><tr><td>2. Standards and Formats</td><td>SPDX, CycloneDX, minimum elements, identifiers and licenses</td><td><a href=/en/docs/sbom_guide/2-standards/>View</a></td></tr><tr><td>3. Regulatory Trends</td><td>United States, EU CRA, India, and Korea</td><td><a href=/en/docs/sbom_guide/3-regulation/>View</a></td></tr><tr><td>4. Adoption Roadmap</td><td>Step-by-step activities from building the foundation to operational maturity</td><td><a href=/en/docs/sbom_guide/4-adoption/>View</a></td></tr><tr><td>5. Tools and Automation</td><td>Generation, management, and scanning tools, and automation maturity</td><td><a href=/en/docs/sbom_guide/5-tools/>View</a></td></tr><tr><td>6. Vulnerability Management</td><td>SBOM-based tracking, VEX, CSAF, the Log4j case</td><td><a href=/en/docs/sbom_guide/6-vulnerability/>View</a></td></tr><tr><td>7. Sharing and Governance</td><td>Access control, disclosure scope, sharing channels, roles and responsibilities</td><td><a href=/en/docs/sbom_guide/7-governance/>View</a></td></tr><tr><td>8. Recommendations and Checklist</td><td>Key recommendations and an adoption checklist</td><td><a href=/en/docs/sbom_guide/8-checklist/>View</a></td></tr></tbody></table><h2 id=quick-starting-points>Quick Starting Points</h2><p>If you already understand SBOM and are looking for where to start, see
+<a href=/en/docs/sbom_guide/4-adoption/>4. Adoption Roadmap</a> and <a href=/en/docs/sbom_guide/8-checklist/>8. Recommendations and Checklist</a> first.
+If you are deciding which format and tools to use, <a href=/en/docs/sbom_guide/2-standards/>2. Standards and Formats</a> and
+<a href=/en/docs/sbom_guide/5-tools/>5. Tools and Automation</a> are good starting points. If your goal is regulatory
+compliance, check the jurisdiction-specific obligations in <a href=/en/docs/sbom_guide/3-regulation/>3. Regulatory Trends</a>.</p><h2 id=sources-and-editorial-basis>Sources and Editorial Basis</h2><p>This guide is not a translation of any single document; it is a reconstruction that synthesizes
+current primary sources. It draws on the National Telecommunications and Information
+Administration (NTIA)&rsquo;s 2021 minimum elements and its update by the Cybersecurity and
+Infrastructure Security Agency (CISA) — the 2024 <em>Framing Software Component Transparency</em>, Third
+Edition, and the 2025 draft revision of the minimum elements — as well as the SPDX and CycloneDX
+standard specifications, the EU Cyber Resilience Act (Regulation (EU) 2024/2847), and the supply
+chain security guidelines of India&rsquo;s CERT-In and Korea. The first edition began as a translation of
+CERT-In&rsquo;s SBOM technical guidelines; the current edition updates that framework with the sources
+above and broadens it to a general practitioner&rsquo;s perspective.</p><p>Every factual claim is cited to a primary source, and the materials cited were accessed on
+June 14, 2026.</p><p><strong>Author : <a href=https://haksungjang.github.io/>Haksung Jang</a></strong></p></div></div><div class=td-content style=page-break-before:always><h1 id=pg-5c4b43014adfc5092a47faa85760a330>1 - SBOM Overview</h1><div class=lead>An overview of what an SBOM is and why it is needed, covering software supply chain threats and the benefits an SBOM provides.</div><h2 id=what-is-an-sbom>What Is an SBOM</h2><p>A Software Bill of Materials (SBOM) is a machine-readable list of all the components and
+libraries that make up a software product, along with the dependency relationships among them.
+It carries over the manufacturing concept of a Bill of Materials into software. Just as a
+finished vehicle has a specification sheet recording which parts came from which supplier, an
+SBOM records which open source and commercial components, at which versions, went into an
+application.</p><p>Most modern software is filled more with components brought in from outside than with code
+written in-house. Those external components can carry vulnerabilities, come with license
+obligations attached, and in turn depend on still other components. An SBOM makes this chain of
+dependencies visible, providing a common data layer that security, license management, and asset
+management can all reference.</p><h2 id=why-it-matters-the-collapse-of-supply-chain-trust>Why It Matters: The Collapse of Supply Chain Trust</h2><p>Two supply chain incidents raised the SBOM onto the policy agenda. In the SolarWinds incident
+that came to light in December 2020, attackers poisoned the legitimate update path of the Orion
+software itself. A backdoor spread along with that update to the many organizations that trusted
+and installed it. It was a structure in which a compromise at a single point upstream in the
+supply chain spread across the entire downstream.</p><p>A year later, in December 2021, a remote code execution vulnerability in the Java logging
+library Log4j (CVE-2021-44228, commonly known as Log4Shell) was disclosed. What this incident
+exposed was not a breach itself but an absence of visibility. Log4j was buried deep as an
+indirect dependency in countless products, so few organizations could give an immediate answer
+to the question, &ldquo;where in our products does this library exist?&rdquo; If every piece of software had
+already had a machine-readable component list in place, determining the scope of impact would
+have taken a single query. This experience gave direct momentum to the SBOM agenda.</p><p>After that, the SBOM moved beyond recommendation into regulation. The United States opened a
+path to requiring SBOMs for software delivered to the federal government through Executive Order
+14028 in 2021, and the European Union made producing an SBOM a legal obligation through the
+Cyber Resilience Act (CRA). The detailed regulatory landscape is covered in
+<a href=/en/docs/sbom_guide/3-regulation/>3. Regulatory Landscape</a>.</p><h2 id=benefits-of-an-sbom>Benefits of an SBOM</h2><p>The value of an SBOM is not limited to security alone. The same data — a component list — serves
+multiple purposes at once.</p><ul><li><strong>Vulnerability management and incident response</strong>: When a new vulnerability is disclosed,
+affected components can be looked up immediately to set response priorities.</li><li>Supply chain risk management: The provenance and trustworthiness of external components are
+assessed and reflected in procurement and supplier management.</li><li>License compliance: Tracking the license of each component prevents obligation violations and
+conflicts in advance.</li><li>Regulatory compliance: Meets transparency requirements and provides the evidence needed for
+regulatory reporting and audits.</li><li>Asset management and operational efficiency: Knowing exactly what is in use makes lifecycle
+management easier.</li></ul><h2 id=who-creates-and-uses-it>Who Creates and Uses It</h2><p>The value of an SBOM does not come from a single organization producing it alone; it is realized
+when it flows along the supply chain. The third edition of CISA&rsquo;s <em>Framing Software Component
+Transparency</em> organizes the actors around an SBOM into three perspectives: producers (Produce)
+who make software, choosers (Choose) who select which software to use, and operators (Operate)
+who run it. It is common for a single organization to hold all three roles at once, as with a
+company that develops its own products while also bringing in external libraries and operating
+infrastructure.</p><p>The core of this structure is the chain of supplier-consumer relationships. When an upstream
+producer creates an SBOM and passes it downstream, the downstream chooser uses it to assess risk
+before adoption, and the operator looks up the scope of impact immediately when a new
+vulnerability is disclosed. What Log4Shell showed was precisely a break in this chain. Because
+producers had not passed along a component list, operators could not know what libraries existed
+in their own assets.</p><p>Interests diverge subtly across actors. Consumers want a deeper, more complete SBOM, while
+producers, concerned about trade secrets and attack surface exposure, want to narrow the scope of
+disclosure. Where regulation sets the floor of obligation, and how it adjusts the scope of
+disclosure, are the mechanisms that resolve this tension. Sharing and disclosure scope are
+covered in <a href=/en/docs/sbom_guide/7-governance/>7. Sharing and Governance</a>.</p><p>The next section looks at <a href=/en/docs/sbom_guide/1-overview/1-types/>levels and types</a> according to the depth of information
+an SBOM carries.</p><h2 id=sources>Sources</h2><p>The factual basis for this section is compiled in this guide&rsquo;s background research materials.
+Executive Order 14028 (86 FR 26633, May 12, 2021), CVE-2021-44228 (NVD), and the third edition
+of CISA&rsquo;s <em>Framing Software Component Transparency</em> (September 3, 2024) were used as primary
+sources. For the full set of sources, see <a href=/en/docs/sbom_guide/3-regulation/>3. Regulatory Landscape</a> and the
+bottom of each section.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-75e70af64ae92f82bf5f837c14e976be>1.1 - SBOM Levels and Classification</h1><div class=lead>Summarizes SBOM levels based on the depth of information they contain, and classification based on when they are generated.</div><p>Not all SBOMs are the same. They are divided into levels based on how deep a dependency chain they
+cover, and classified based on the point in the software lifecycle at which they were created.
+Distinguishing these two axes makes it possible to clearly decide &ldquo;which SBOM to require and which
+SBOM to produce.&rdquo;</p><h2 id=levels-by-depth-of-information>Levels by Depth of Information</h2><table><thead><tr><th>Level</th><th>Description</th></tr></thead><tbody><tr><td>Top-Level SBOM</td><td>A summary of the components directly integrated into or used by the product. Contains essential information such as component name and version.</td></tr><tr><td>Transitive SBOM</td><td>Includes not only direct dependencies but also the indirect (transitive) dependencies that those dependencies rely on in turn.</td></tr><tr><td>n-Level SBOM</td><td>Contains information hierarchically to an arbitrary depth (N levels), beyond the top-level overview.</td></tr><tr><td>Delivery SBOM</td><td>Describes all components and libraries included in a release or distribution package.</td></tr><tr><td>Complete SBOM</td><td>A complete inventory of all components, dependencies, and metadata present in a system.</td></tr></tbody></table><p>An organization does not need to commit to a single level. A common approach is to tailor the SBOM
+delivered to consumers to a level that omits sensitive information while still meeting security
+requirements, while internally maintaining a complete-level SBOM to track vulnerability updates.
+This reduces the risk of exposing trade secrets and intellectual property while securing both
+supply chain transparency and internal resilience.</p><p>The regulatory floor for obligations is also expressed in the language of levels. The EU Cyber
+Resilience Act requires an SBOM that &ldquo;cover[s] at the very least the top-level dependencies of the
+product.&rdquo; There is no obligation to expand the entire dependency tree, but that is clearly the
+direction of recommended practice.</p><h2 id=classification-by-point-of-generation>Classification by Point of Generation</h2><p>The US CISA document <em>Types of Software Bill of Materials (SBOM)</em> divides SBOM into six types
+aligned with the stages of the Software Development Life Cycle (SDLC). For the same product, the
+information captured and its accuracy differ depending on when the SBOM was generated.</p><p><img src=/docs/sbom_guide/1-overview/1-types/sbom-types.png alt="The six SBOM stages — Design, Source, Build, Analyzed, Deployed, and Runtime — follow the order of the software lifecycle, with later stages containing more information"></p><p><strong>Figure 1.</strong> SBOM classification by SDLC stage <em>(source: CISA, Types of Software Bill of Materials
+(SBOM), 2023)</em></p><ul><li><strong>Design SBOM</strong>: Records the components planned at the design stage, before the components
+actually exist.</li><li>Source SBOM: Reflects the development environment and contains source files and dependencies.</li><li>Build SBOM: Generated during the build process and includes information on source, dependencies,
+and pre-built components.</li><li>Analyzed SBOM: Generated by inspecting the final artifact after the build.</li><li>Deployed SBOM: A list of software installed and configured on a specific system, taking the
+deployment environment into account as well.</li><li>Runtime SBOM: Monitors components while running, capturing dynamically loaded dependencies and
+external interactions as well.</li></ul><p>The Build SBOM, generated at build time, is the most widely recommended in terms of accuracy and
+automation, because it records exactly what the build tool actually assembled. Generation timing
+and automation are covered in detail in <a href=/en/docs/sbom_guide/5-tools/>5. Tools and Automation</a>.</p><h2 id=sources>Sources</h2><p>CISA (2023). <em>Types of Software Bill of Materials (SBOM)</em>.
+<a href=https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom>https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom</a> (accessed:
+June 14, 2026). This is the primary basis for the classification of the six SBOM types (Design,
+Source, Build, Analyzed, Deployed, Runtime). For attributes and maturity stages, see CISA (2024).
+<em>Framing Software Component Transparency</em>, Third Edition.
+<a href=https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024>https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024</a>. The
+EU Cyber Resilience Act&rsquo;s top-level dependency requirement is based on Regulation (EU) 2024/2847,
+Annex I Part II(1).</p></div><div class=td-content style=page-break-before:always><h1 id=pg-cd091d9c56b1ed54346a89e4b917795f>2 - Standards and Formats</h1><div class=lead>Compares SPDX and CycloneDX, the two standard formats for expressing an SBOM in a machine-readable form.</div><p>Since an SBOM requires machine readability, a standard format is necessary. Among the three
+formats specified by the US NTIA minimum elements, SPDX and CycloneDX split practical use between
+them. The third, the SWID tag, is used mainly in asset management; its role as an identifier is
+covered in <a href=/en/docs/sbom_guide/2-standards/2-identifiers/>Identifiers and Licenses</a>.</p><h2 id=spdx>SPDX</h2><p>SPDX (System Package Data Exchange) is a project under the Linux Foundation. Version 2.2.1
+became an international standard as ISO/IEC 5962:2021 in August 2021. It is worth noting that
+the current ISO standard refers strictly to version 2.2.1.</p><p>The Linux Foundation released SPDX 3.0 on April 16, 2024, introducing a structure of
+purpose-specific profiles. The approach layers Security, Build, Dataset, and AI profiles on top
+of a core model. The AI profile carries model training and characterization information, the
+Dataset profile carries data provenance and licensing, and the Security profile carries
+vulnerability identification, severity, exploitability, and mitigation plans. A patch release,
+3.0.1, followed in December of the same year. Whether SPDX 3.x is being re-standardized with ISO
+had not been confirmed as of June 2026.</p><h2 id=cyclonedx>CycloneDX</h2><p>CycloneDX is a full-stack BOM standard that originated at OWASP (Open Worldwide Application
+Security Project). Its distinguishing feature is native support for Vulnerability Exploitability
+eXchange (VEX) within the format itself. International standardization proceeded through Ecma
+International&rsquo;s technical committee TC54. Version 1.6 was published as ECMA-424 1st edition in
+June 2024, adding a Cryptographic Bill of Materials (CBOM) and CycloneDX Attestations, and v1.7
+was announced in October 2025 and standardized as ECMA-424 2nd edition in December 2025. v1.7
+added post-quantum cryptography readiness, structured citations, and support for patent objects.</p><p>CycloneDX can express software (SBOM), hardware (HBOM), services (SaaSBOM), and machine learning
+models (ML-BOM) all within a single format.</p><h2 id=comparing-the-two-formats>Comparing the Two Formats</h2><table><thead><tr><th></th><th>SPDX</th><th>CycloneDX</th></tr></thead><tbody><tr><td>Steward</td><td>Linux Foundation</td><td>OWASP / Ecma TC54</td></tr><tr><td>International standard</td><td>ISO/IEC 5962:2021 (based on v2.2.1)</td><td>ECMA-424 1st edition (v1.6, 2024-06), 2nd edition (v1.7, 2025-12)</td></tr><tr><td>Latest specification</td><td>3.0 (2024-04), 3.0.1 (2024-12)</td><td>1.7 (2025-10)</td></tr><tr><td>Extension mechanism</td><td>Purpose-specific profiles (Security, Build, Dataset, AI)</td><td>Component types and auxiliary objects, native VEX</td></tr><tr><td>Strengths</td><td>License expression and legal compliance history</td><td>Vulnerability/VEX integration, security-operations friendly</td></tr></tbody></table><p><strong>Table 1.</strong> Comparison of the two major SBOM standard formats <em>(source: ISO/IEC 5962:2021,
+Linux Foundation 2024, Ecma International ECMA-424. Retrieved 2026-06-14)</em></p><p>The two standards differ in design philosophy. SPDX extends its scope of application through
+profiles, while CycloneDX expresses it through component types and auxiliary objects. Both,
+however, target the same problem in that they carry component identification, licensing, and
+dependency relationships. Whichever you choose, conversion tools exist between the two formats,
+so you can choose based on the format your trading partners require and the format your own tool
+chain supports well. If license compliance is the focus, SPDX is the familiar starting point; if
+vulnerability operations is the focus, CycloneDX is.</p><p>Next, we look at the <a href=/en/docs/sbom_guide/2-standards/1-minimum-elements/>minimum elements</a> that define what a format must
+contain, and <a href=/en/docs/sbom_guide/2-standards/2-identifiers/>identifiers and licenses</a> for consistently pointing to
+components.</p><h2 id=sources>Sources</h2><p>ISO/IEC (2021). <em>ISO/IEC 5962:2021 — SPDX Specification V2.2.1</em>. The Linux Foundation (2024).
+<em>SPDX 3.0 Release</em>. <a href=https://www.linuxfoundation.org/press/spdx-3-revolutionizes-software-management-in-systems-with-enhanced-functionality-and-streamlined-use-cases>https://www.linuxfoundation.org/press/spdx-3-revolutionizes-software-management-in-systems-with-enhanced-functionality-and-streamlined-use-cases</a>.
+Ecma International. <em>ECMA-424 — CycloneDX Bill of Materials Specification</em>.
+<a href=https://ecma-international.org/publications-and-standards/standards/ecma-424/>https://ecma-international.org/publications-and-standards/standards/ecma-424/</a>. CycloneDX (2025).
+<em>CycloneDX v1.7 Released</em>. <a href=https://cyclonedx.org/news/cyclonedx-v1.7-released/>https://cyclonedx.org/news/cyclonedx-v1.7-released/</a>. (All retrieved: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-ec1a988e2381ea6484d3a8a32c93f1f7>2.1 - Minimum Elements of an SBOM</h1><div class=lead>Covers the data fields an SBOM must contain, from the NTIA 2021 minimum elements to the CISA 2025 revision draft.</div><p>Once a format is chosen, the next question is what that format must contain. The documents that
+define this floor are the US Minimum Elements series. Though they are recommendations, they
+function as the de facto standard for federal procurement, and SBOM requirements in the EU and
+other jurisdictions largely reference this same framework.</p><h2 id=lineage-from-ntia-2021-to-cisa-2025>Lineage: From NTIA 2021 to CISA 2025</h2><p>The National Telecommunications and Information Administration (NTIA) published <em>The Minimum
+Elements For a Software Bill of Materials (SBOM)</em> in July 2021, under the delegation of
+Executive Order 14028. The document organized the minimum elements into three categories: the
+data fields to track per component, automation support requiring a machine-readable format, and
+practices and processes covering generation frequency, depth, and the like.</p><p>Stewardship of the community&rsquo;s work then moved to the Cybersecurity and Infrastructure Security
+Agency (CISA), and two lines of revision followed. One was the third edition (September 2024) of
+<em>Framing Software Component Transparency</em>, a reference document that defines attributes, which
+added License and Copyright Notice to the baseline attributes. The other was a revision of the
+minimum elements document itself: CISA released <em>2025 Minimum Elements for a Software Bill of
+Materials</em> as a public comment draft in August 2025, with the comment period closing on
+October 3, 2025. As of June 2026, this revision remains in draft status, and the date of a final
+version has not been confirmed.</p><h2 id=the-data-fields-and-three-categories-of-ntia-2021>The Data Fields and Three Categories of NTIA 2021</h2><p>The NTIA 2021 minimum elements set seven per-component data fields.</p><table><thead><tr><th>Data field</th><th>Description</th></tr></thead><tbody><tr><td>Supplier Name</td><td>The entity that supplied the component</td></tr><tr><td>Component Name</td><td>The name of the component or library</td></tr><tr><td>Version</td><td>The version identifier of the component</td></tr><tr><td>Other Unique Identifiers</td><td>Identifiers such as PURL, CPE</td></tr><tr><td>Dependency Relationship</td><td>The inclusion relationship with the parent component</td></tr><tr><td>Author of SBOM Data</td><td>The entity that generated this SBOM</td></tr><tr><td>Timestamp</td><td>The date and time of generation</td></tr></tbody></table><p>The three categories are as follows.</p><ul><li><strong>Data fields</strong>: The seven items above — the basic information for tracking and identifying
+components.</li><li>Automation support: Specified SPDX, CycloneDX, and SWID as standard formats for automated
+generation and machine readability.</li><li>Practices and processes: Covers generation frequency, depth, handling of known unknowns,
+distribution and delivery, access control, and how errors are accommodated.</li></ul><h2 id=what-the-cisa-2025-draft-adds>What the CISA 2025 Draft Adds</h2><p>The CISA 2025 minimum elements draft expanded the data fields to reflect the maturing state of
+tooling. Four core elements were newly added.</p><table><thead><tr><th>New field</th><th>Purpose</th></tr></thead><tbody><tr><td>Component Hash</td><td>Ensures integrity and precise identification through a cryptographic hash</td></tr><tr><td>License</td><td>Primary data for tracking legal compliance</td></tr><tr><td>Tool Name</td><td>Records which tool generated it</td></tr><tr><td>Generation Context</td><td>Records at which stage of the lifecycle it was created</td></tr></tbody></table><p>Existing items were also revised. The roles of SBOM Author and Software Producer were
+distinguished, &ldquo;Other Unique Identifiers&rdquo; was updated to &ldquo;Software Identifiers,&rdquo; and the access
+control element, previously separate, was folded into the distribution and delivery item. The
+trajectory of License — entering as a baseline attribute in Framing 3rd edition and hardening
+into a data field in the 2025 draft — shows that the SBOM is establishing itself as primary data
+for open source license compliance, beyond a security inventory. Behind adding Tool Name,
+Generation Context, and Hash together lies the concern that an SBOM produced by an untrustworthy
+tool cannot itself be trusted. Tool integrity is covered in
+<a href=/en/docs/sbom_guide/5-tools/>5. Tools and Automation</a>.</p><h2 id=practical-recommendations>Practical Recommendations</h2><p>The minimum elements are, as the name says, a floor. Organizations can, and should, add fields
+suited to their own purposes. Carrying CVE references and patch status for vulnerability
+identification, SPDX license identifiers and copyright notices for license management, and
+release and End-of-Life dates for lifecycle management, together in one SBOM, lets a single SBOM
+answer multiple operational questions. If you are introducing an SBOM for the first time,
+starting with the NTIA seven fields as a base but including the four new fields from the CISA
+2025 draft — especially hash and license — from the outset saves the effort of rebuilding it
+later.</p><h2 id=sources>Sources</h2><p>NTIA (2021). <em>The Minimum Elements For a Software Bill of Materials (SBOM)</em>.
+<a href=https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf>https://www.ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf</a>. CISA (2024).
+<em>Framing Software Component Transparency</em>, Third Edition.
+<a href=https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024>https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024</a>.
+CISA (2025). <em>2025 Minimum Elements for a Software Bill of Materials (SBOM)</em> (public comment
+draft). <a href=https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom>https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom</a>.
+(All retrieved: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-b31749271897aba5422ca5b90a0e6593>2.2 - Identifiers and Licenses</h1><div class=lead>Covers the PURL, CPE, and SWID identifiers used to consistently point to components, and how to notate SPDX license identifiers.</div><p>If the same component is named differently across SBOMs, automated matching breaks down, because
+there is no way for a machine to know that &ldquo;Apache Tomcat,&rdquo; &ldquo;tomcat,&rdquo; and &ldquo;Apache Software
+Foundation Tomcat&rdquo; are the same thing. This is why an identifier system that consistently points
+to components, and a convention for notating licenses with standard codes, are both necessary.</p><h2 id=three-identifiers-purl-cpe-swid>Three Identifiers: PURL, CPE, SWID</h2><p>The three identifiers used together in practice serve different roles. They are not mutually
+exclusive, so recording them together where possible is recommended.</p><table><thead><tr><th>Identifier</th><th>Maintained by</th><th>Primary use</th></tr></thead><tbody><tr><td>PURL (Package URL)</td><td>Community (purl-spec)</td><td>Precisely points to a component within a package manager ecosystem</td></tr><tr><td>CPE (Common Platform Enumeration)</td><td>NIST</td><td>Notates a product with a consistent name to look up its CVEs</td></tr><tr><td>SWID (Software Identification Tag)</td><td>ISO/IEC 19770-2</td><td>Structured metadata for product, version, and producing entity</td></tr></tbody></table><p><strong>Table 1.</strong> Identifiers used together in an SBOM <em>(source: purl-spec, NIST NVD,
+ISO/IEC 19770-2. Retrieved 2026-06-14)</em></p><p>A Package URL points to a component within a package manager ecosystem in the following format.</p><pre tabindex=0><code>pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1
+pkg:npm/lodash@4.17.21
+pkg:pypi/requests@2.31.0
+</code></pre><p>After <code>pkg:</code> come the ecosystem type (maven, npm, pypi, etc.), namespace, name, and version.
+Because the same component can be pointed to with the same string everywhere, it links
+automatically to vulnerability databases and license databases.</p><p>CPE was developed by MITRE in the mid-2000s and is now maintained by NIST. It notates products
+under a fixed naming rule and is used to look up the vulnerabilities (CVEs) corresponding to a
+product. SWID is a tag format standardized as ISO/IEC 19770-2 that structurally describes a
+product&rsquo;s version and producing/distributing entity, and it is mainly used in asset management.
+The CISA 2025 minimum elements draft updating &ldquo;Other Unique Identifiers&rdquo; to &ldquo;Software
+Identifiers&rdquo; also reflects the maturing of this identifier ecosystem.</p><h2 id=license-notation-spdx-license-identifiers>License Notation: SPDX License Identifiers</h2><p>License management is one of the earliest use cases for an SBOM. Recording exactly which license
+each component is distributed under is what prevents obligation violations and conflicts in
+advance. Free-text descriptions cannot be matched automatically, so standard codes are used.</p><p><a href=https://spdx.org/licenses/>SPDX license identifiers</a> assign each license a unique code such as
+<code>Apache-2.0</code>, <code>MIT</code>, or <code>GPL-3.0-only</code>. When multiple licenses apply together, they are combined
+with a license expression.</p><pre tabindex=0><code>Apache-2.0 OR MIT
+GPL-2.0-only WITH Classpath-exception-2.0
+(MIT AND BSD-3-Clause)
+</code></pre><p><code>OR</code> indicates a choice among multiple licenses, <code>AND</code> indicates multiple licenses applying
+simultaneously, and <code>WITH</code> indicates combination with an exception clause.</p><p>The principles to follow in practice are as follows.</p><ul><li>The license of every individual component, not just the license of the product as a whole,
+must be visible.</li><li>When encountering a license not on the standard list, assign it an identifier with a prefix
+indicating its source (for example, a <code>LicenseRef-</code> prefix) to track it.</li><li>If the license text has been trivially modified but its meaning has not changed materially,
+use the same identifier as the original.</li><li>Analyze license compatibility to identify in advance the conflicts that can arise when
+combining components under different licenses.</li></ul><p>Even when a license field is auto-extracted by a tool, its accuracy is a separate matter.
+Precisely identifying non-standard licenses, handling dual licensing, and confirming compliance
+with licenses that carry field-of-use restrictions remain the responsibility of people and
+policy. The boundary of automation is covered in <a href=/en/docs/sbom_guide/5-tools/>5. Tools and Automation</a>.</p><h2 id=sources>Sources</h2><p>Package URL specification <a href=https://github.com/package-url/purl-spec>https://github.com/package-url/purl-spec</a>. NIST.
+<em>Common Platform Enumeration (CPE)</em> <a href=https://nvd.nist.gov/products/cpe>https://nvd.nist.gov/products/cpe</a>. ISO/IEC 19770-2:2015.
+SPDX License List <a href=https://spdx.org/licenses/>https://spdx.org/licenses/</a>. SPDX License Expressions
+<a href=https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/>https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/</a>. (All retrieved: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-b910a898efc163c0bedebc4f848d577f>3 - Regulatory Trends</h1><div class=lead>Summarizes the regulatory standing of SBOM across jurisdictions, and the US executive order and federal procurement pathway.</div><p>The regulatory standing of SBOM differs by jurisdiction. The United States takes an executive-order
+pathway that leverages federal procurement, the European Union takes a directly effective
+legislative pathway, and most other countries remain at the stage of advisory guidelines. This
+section covers the United States first, followed by the
+<a href=/en/docs/sbom_guide/3-regulation/1-eu-cra/>EU Cyber Resilience Act</a> and
+<a href=/en/docs/sbom_guide/3-regulation/2-global/>other jurisdictions such as India and Korea</a>.</p><h2 id=regulatory-standing-by-jurisdiction-at-a-glance>Regulatory Standing by Jurisdiction at a Glance</h2><table><thead><tr><th>Jurisdiction</th><th>Document/Legislation</th><th>Standing</th><th>SBOM Requirement</th></tr></thead><tbody><tr><td>United States</td><td>Executive Order 14028 (2021), CISA minimum elements</td><td>Federal procurement recommendation</td><td>SBOM provision for software delivered to the federal government</td></tr><tr><td>European Union</td><td>Cyber Resilience Act, Regulation (EU) 2024/2847</td><td>Legal obligation (with fines)</td><td>Annex I Part II, top-level dependencies, machine-readable</td></tr><tr><td>India</td><td>CERT-In Technical Guidelines (2024)</td><td>Voluntary recommendation</td><td>Best practices for government and essential services</td></tr><tr><td>Korea</td><td>Software Supply Chain Security Guideline 1.0 (2024)</td><td>Administrative recommendation</td><td>Recommended SBOM generation and review procedures</td></tr></tbody></table><p><strong>Table 1.</strong> SBOM regulatory standing in major jurisdictions <em>(source: primary source for each
+item; collected June 14, 2026)</em></p><h2 id=united-states-leveraging-federal-procurement>United States: Leveraging Federal Procurement</h2><p>US SBOM policy originates from an executive order. On May 12, 2021, shortly after the SolarWinds
+incident, Executive Order 14028 (&ldquo;Improving the Nation&rsquo;s Cybersecurity&rdquo;) was signed and published
+in the Federal Register as 86 FR 26633. Section 10(j) of the order defined SBOM as &ldquo;a formal record
+containing the details and supply chain relationships of various components used in building
+software,&rdquo; and Section 4(f) directed the Secretary of Commerce, working with NTIA, to publish
+minimum elements for an SBOM within 60 days. This was the moment SBOM was elevated from a
+recommendation of the research community to a candidate requirement for federal procurement.</p><p>Under this mandate, NTIA published the minimum elements in July 2021, and responsibility for the
+work subsequently moved to CISA. Under Office of Management and Budget (OMB) Memorandum M-22-18,
+CISA holds the authority to update the NTIA minimum elements and has focused on tooling and
+operationalization. The results are the 2024 <em>Framing Software Component Transparency</em>, Third
+Edition, and the 2025 draft revision of the minimum elements. Changes in the data fields between
+the two documents are covered in <a href=/en/docs/sbom_guide/2-standards/1-minimum-elements/>Minimum Elements</a>.</p><p>It is important to understand the exact nature of the US pathway. Executive Order 14028 is the
+basis for guidance requiring vendors that supply software to the federal government to provide an
+SBOM; it is not a general statute that applies to all software. CISA&rsquo;s two documents themselves
+state that they do not create new federal requirements. The normative standing remains that of a
+procurement criterion and technical reference. Nonetheless, because the vast federal procurement
+market operates on this basis, it functions as a de facto requirement for companies that supply
+software to the US government.</p><p><img src=/docs/sbom_guide/3-regulation/us-policy-lineage.png alt="The lineage of US SBOM policy, starting from Executive Order 14028 and the NTIA minimum elements in 2021, transferring to CISA, and branching into the 2024 Framing Third Edition and the 2025 draft revision of the minimum elements"></p><p><strong>Figure 1.</strong> Lineage of US SBOM policy documents <em>(source: Executive Order 14028, NTIA 2021, CISA
+2024 and 2025; collected June 14, 2026)</em></p><h2 id=sources>Sources</h2><p>The White House (2021). <em>Executive Order 14028 — Improving the Nation&rsquo;s Cybersecurity</em>, 86 FR
+26633.
+<a href=https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity>https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity</a>.
+OMB (2022). <em>M-22-18</em>.
+<a href=https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf>https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf</a>. CISA SBOM Resource Hub
+<a href=https://www.cisa.gov/sbom>https://www.cisa.gov/sbom</a>. (all accessed: June 14, 2026)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-ef397b27a643517fe4e7ea4fbab71db1>3.1 - EU Cyber Resilience Act (CRA)</h1><div class=lead>Summarizes the SBOM requirements and implementation timeline of the EU Cyber Resilience Act, the first major legislation to establish SBOM as a legal obligation.</div><p>The first major piece of legislation to establish SBOM as an explicit legal obligation is the EU
+Cyber Resilience Act (CRA, Regulation (EU) 2024/2847). Whereas the United States effectively
+mandates SBOM through the market of federal procurement, the CRA is a directly effective law that
+applies horizontally across products with digital elements.</p><h2 id=legal-basis-of-the-sbom-obligation>Legal Basis of the SBOM Obligation</h2><p>In the CRA, the SBOM obligation appears in Annex I, Part II (vulnerability handling requirements),
+point (1). Manufacturers must identify and document the vulnerabilities and components contained
+in a product, and as a means of doing so, the CRA specifies that they must &ldquo;draw up a software
+bill of materials, in a commonly used and machine-readable format, covering at the very least the
+top-level dependencies of the product.&rdquo;</p><p>Two points that matter in practice differ from the US pathway.</p><ul><li><strong>The scope of the obligation is top-level dependencies</strong>: There is no obligation to expand the
+entire dependency tree; covering at least the top-level dependencies is sufficient. That said,
+going deeper than this is clearly the recommended direction.</li><li>It is an obligation to retain and submit, not to disclose: There is no obligation to disclose the
+SBOM to the general public. It is sufficient to retain it so that it can be submitted when a
+market surveillance authority makes a reasoned request.</li></ul><p>The core of the CRA is that producing an SBOM is not a recommendation but a legal obligation backed
+by a system of fines.</p><h2 id=implementation-timeline>Implementation Timeline</h2><p><img src=/docs/sbom_guide/3-regulation/1-eu-cra/cra-timeline.png alt="The phased EU CRA implementation timeline, running from publication and entry into force in 2024, through the reporting obligation in September 2026, to full application in December 2027"></p><p><strong>Figure 1.</strong> Phased implementation timeline of the EU CRA <em>(source: Regulation (EU) 2024/2847;
+collected June 14, 2026)</em></p><p>The CRA was published in the Official Journal on November 20, 2024, and entered into force on
+December 10, 2024. Its application is staged: the Article 14 obligation to report exploited
+vulnerabilities and severe incidents applies from September 11, 2026, and full application of the
+essential cybersecurity requirements, including SBOM, begins on December 11, 2027.</p><h2 id=absence-of-format-implementing-rules-and-a-practical-reference-point>Absence of Format Implementing Rules and a Practical Reference Point</h2><p>As of June 2026, no official CRA-level implementing rule for SBOM format has been published. This
+means there is not yet a document that establishes, as an EU-wide binding norm, which schema and
+fields must be used to conform to the CRA.</p><p>The current practical reference point is Technical Guideline TR-03183-2 v2.1.0, published in
+August 2025 by Germany&rsquo;s Federal Office for Information Security (Bundesamt für Sicherheit in der
+Informationstechnik, BSI). This document provides specific field mappings for CRA-conformant SBOM
+for both CycloneDX and SPDX. Note, however, that this is a German guideline, not an EU-wide binding
+norm.</p><h2 id=considerations-for-open-source>Considerations for Open Source</h2><p>The CRA uses commercial activity as its applicability criterion, and in principle excludes
+non-commercial open source that is distributed free of charge without commercial activity. This is
+a mechanism to avoid imposing manufacturer-level obligations directly on open source maintainers.
+However, the obligations still apply in full to manufacturers who integrate open source into a
+product and supply it commercially, so obtaining and managing SBOMs for open source components
+remains the manufacturer&rsquo;s responsibility.</p><h2 id=sources>Sources</h2><p>European Parliament and Council (2024). <em>Regulation (EU) 2024/2847 — Cyber Resilience Act</em>. OJ L,
+2024/2847, 20.11.2024. <a href=https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng>https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng</a>. European Commission,
+DG CNECT. <em>Cyber Resilience Act</em>.
+<a href=https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act>https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act</a>. BSI. <em>Technical Guideline
+TR-03183-2</em>. (all accessed: June 14, 2026)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-4d07bb788af35c6e71317653ee5f6cbe>3.2 - India, Korea, and Other Jurisdictions</h1><div class=lead>Summarizes SBOM recommendation guidelines from India&rsquo;s CERT-In and other jurisdictions, including Korea.</div><p>Jurisdictions outside the United States and the European Union are generally at the recommendation
+stage. There is no legal enforcement or sanction, but these function as best practices that
+influence procurement and contracting practices.</p><h2 id=india-cert-in-technical-guidelines>India: CERT-In Technical Guidelines</h2><p>The Indian Computer Emergency Response Team (CERT-In) published the <em>Technical Guidelines on
+Software Bill of Materials (SBOM)</em>. This is a voluntary guideline aimed at government agencies,
+the public sector, essential services, and software producing and service companies, covering the
+value of SBOMs, best practices, minimum elements, and vulnerability tracking procedures. It has no
+legal force, but it influences government procurement and contracting practices.</p><p>In July 2025, CERT-In expanded this guideline to also cover Quantum BOM (QBOM), Cryptography BOM
+(CBOM), AI BOM (AIBOM), and Hardware BOM (HBOM). This is an example of how the bill of materials
+concept is spreading beyond software into cryptography, AI, and hardware. The expansion into AI
+BOM is covered further in <a href=/en/docs/sbom_guide/5-tools/>5. Tools and Automation</a> and in the separate
+<a href=/en/docs/ai-sbom_guide/>AI SBOM Compliance Guide</a>.</p><p>The first edition of this guide began as a Korean translation of this CERT-In document. The
+current edition updates that skeleton with current primary sources from the United States and the
+European Union, and broadens it to a general practitioner&rsquo;s perspective.</p><h2 id=korea-software-supply-chain-security-guidelines>Korea: Software Supply Chain Security Guidelines</h2><p>In Korea, the Ministry of Science and ICT, the National Intelligence Service, and the Korea
+Internet & Security Agency (KISA), among others, published the Software Supply Chain Security
+Guidelines 1.0 in May 2024. It recommends SBOM generation and vulnerability inspection procedures,
+and the use of the National Institute of Standards and Technology (NIST) Secure Software
+Development Framework (SSDF).</p><p>However, this is only an administrative guideline, and Korea&rsquo;s current legal system does not yet
+have legislation that imposes a mandatory reporting obligation at the product level, as the EU
+Cyber Resilience Act does. Even so, Korean companies exporting software to the EU and the United
+States must directly meet the requirements of those markets, so building SBOM capability is a
+practical necessity regardless of domestic regulation.</p><h2 id=practical-implications>Practical Implications</h2><p>The legal standing differs by jurisdiction, but the skeleton of the data required converges. A
+well-built SBOM system, built once, can satisfy the requirements of multiple jurisdictions at the
+same time. If the system is designed around the strictest requirement among your export markets
+(currently the EU CRA), the recommendations of other jurisdictions are largely subsumed within it.</p><h2 id=sources>Sources</h2><p>Indian Computer Emergency Response Team (CERT-In). <em>Technical Guidelines on Software Bill of
+Materials (SBOM)</em>, CIGU-2024-0002. <a href=https://www.cert-in.org.in/>https://www.cert-in.org.in/</a>. Ministry of Science and ICT,
+National Intelligence Service, Korea Internet & Security Agency (2024). <em>Software Supply Chain
+Security Guidelines 1.0</em>. <a href=https://www.kisa.or.kr/>https://www.kisa.or.kr/</a>. (all accessed: June 14, 2026)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-0ddfd0893744d1f37a03d92c8e8e7671>4 - Adoption Roadmap</h1><div class=lead>Summarizes the activities organizations undertake to build an SBOM program in stages, from establishing the foundation to operational maturity.</div><p>Introducing an SBOM program into an organization is not a one-time effort. A staged approach is
+more realistic: establish the foundation (Foundational), settle generation and integration into
+practice (Developing), and mature operations (Scaling). The stage breakdown below is the common
+framework presented by both the US NTIA and India&rsquo;s CERT-In guidelines; the order of activities is
+only illustrative and can be adjusted to fit an organization&rsquo;s security needs, timeline, and
+resources.</p><p><img src=/docs/sbom_guide/4-adoption/adoption-stages.png alt="A maturity path that expands SBOM adoption through three stages — Foundational, Developing, and Scaling"></p><p><strong>Figure 1.</strong> The three stages of SBOM adoption <em>(source: reconstructed from NTIA 2021 and CERT-In
+technical guidelines; collected June 14, 2026)</em></p><h2 id=stage-1-building-the-foundation>Stage 1: Building the Foundation</h2><p>The first SBOM an organization encounters is usually one received from a supplier during
+procurement. The purpose of this stage is to establish how the organization handles SBOM in the
+first place.</p><ul><li><strong>Identify critical assets and establish a plan</strong>: Develop a plan that defines roles and
+responsibilities, timelines, and resource requirements, and obtain stakeholder buy-in for the new
+process.</li><li>Decide on the format and minimum requirements: Before creating SBOMs, determine the format (SPDX
+or CycloneDX) and the minimum data requirements. This ensures a standard structure that can be
+processed consistently across the supply chain.</li><li>Identify security requirements, storage, and tools: Define classification and handling
+procedures, and set up a secure repository for SBOMs.</li><li>Obtain SBOMs through procurement: Specify the requirement for suppliers to provide SBOMs in
+purchase orders or contracts, and specify which elements are to be provided, when, and by what
+method.</li></ul><h2 id=stage-2-generation-and-integration>Stage 2: Generation and Integration</h2><p>This stage involves establishing secure configuration management, consistently referencing
+components with unique identifiers, and embedding generation itself into the development process.</p><ul><li>Assign unique identifiers: Pin each component with
+<a href=/en/docs/sbom_guide/2-standards/2-identifiers/>an identifier such as PURL</a> so that traceability is not lost even
+if a supplier or component name changes, or a different version is released under the same name.</li><li>Map supplier SBOMs to internal SBOMs: Create internal SBOMs based on the SBOMs suppliers provide,
+and record the author and timestamp to manage integrity and update history.</li><li><strong>Integrate with the SSDLC and CI/CD</strong>: Integrate SBOM generation into the Secure Software
+Development Life Cycle (SSDLC) and continuous integration/continuous deployment (CI/CD) pipeline.
+Generating SBOMs automatically at build time improves both accuracy and timeliness. See
+<a href=/en/docs/sbom_guide/5-tools/>5. Tools and Automation</a> for tool selection.</li><li>Secure configuration management: Apply access control, encryption, and regular audits to manage
+SBOMs securely.</li></ul><h2 id=stage-3-operational-maturity-and-scaling>Stage 3: Operational Maturity and Scaling</h2><p>The final stage involves fully weaving SBOM into vulnerability management and incident response,
+and continuously updating the program.</p><ul><li>Strengthen vulnerability tracking: Establish a process for cross-referencing SBOM components
+against vulnerability databases to assess impact and mitigation. Detailed methods are covered in
+<a href=/en/docs/sbom_guide/6-vulnerability/>6. Vulnerability Management</a>.</li><li>Integrate incident response: Establish a process for using SBOM to quickly determine, for a newly
+disclosed vulnerability, whether the organization is affected or has already been compromised.</li><li>Maintain regular review and awareness: Periodically check that components and dependencies match
+the latest records, and keep the organization aware of new formats, data elements, and industry
+trends.</li></ul><h2 id=choosing-a-starting-point>Choosing a Starting Point</h2><p>Follow the three stages in order, but there is no need to aim for perfection from the start. A
+realistic first step is to pick one or two of the most important products, automatically generate
+SBOMs in the build pipeline, and feed them into a vulnerability scanner. Once you confirm the
+program works for one product, expanding it across the full portfolio reduces the cost of trial and
+error.</p><h2 id=sources>Sources</h2><p>NTIA (2021). <em>The Minimum Elements For a Software Bill of Materials (SBOM)</em>. CERT-In. <em>Technical
+Guidelines on Software Bill of Materials (SBOM)</em>. CISA SBOM Resource Hub
+<a href=https://www.cisa.gov/sbom>https://www.cisa.gov/sbom</a>. (all accessed: June 14, 2026)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-c185097f72a8525b2edc4bd0f78bd5a4>5 - Tools and Automation</h1><div class=lead>Covers SBOM generation, management, and scanning tools, and where automation ends and human responsibility begins.</div><p>An SBOM workflow is not completed by a single tool. The three capabilities of generation,
+vulnerability matching, and lifecycle management are split across different tools, and the
+common conclusion of recent tool comparison analyses is that no single tool covers all three
+areas completely. It is more accurate to think of it as assembling a pipeline from a combination
+of tools.</p><h2 id=the-division-of-labor-among-generation-management-and-scanning>The Division of Labor Among Generation, Management, and Scanning</h2><p><img src=/docs/sbom_guide/5-tools/tool-roles.png alt="Three categories of SBOM tools — generation, management, and matching — divide roles, with management and matching exchanging data on every new vulnerability"></p><p><strong>Figure 1.</strong> The three roles of SBOM tools <em>(source: compiled from tool comparison analyses,
+2026-01. Retrieved 2026-06-14)</em></p><p>In the generation space, Anchore&rsquo;s Syft is regarded as &ldquo;the dedicated tool that does SBOM
+generation, and only that, best.&rdquo; Its attestation workflow, combined with the signing tool
+cosign, is mature. OWASP CycloneDX&rsquo;s cdxgen is distinguished by broad support for multiple
+languages and container images, and by a dedicated AI BOM mode.</p><p>In the management space, OWASP Dependency-Track has established itself as a platform for
+monitoring component usage and security/license compliance across an organization&rsquo;s entire
+application portfolio. Eclipse SW360 is another option centered on license compliance.</p><p>In the scanning space, Grype takes an SBOM as input and matches it against vulnerabilities,
+while Aqua Security&rsquo;s Trivy is both a scanner and an SBOM generator.</p><table><thead><tr><th>Role</th><th>Representative open source tools</th><th>Characteristics</th></tr></thead><tbody><tr><td>Generation</td><td>Syft, cdxgen</td><td>Syft is generation-only with mature attestation; cdxgen offers multi-language support and an AI BOM mode</td></tr><tr><td>Management</td><td>Dependency-Track, SW360</td><td>Portfolio monitoring, license and vulnerability tracking</td></tr><tr><td>Matching/Scanning</td><td>Grype, Trivy</td><td>Matches an SBOM against a vulnerability database</td></tr></tbody></table><p><strong>Table 1.</strong> Classification of SBOM tools by role <em>(source: compiled from tool comparison
+analyses, 2026-01. Retrieved 2026-06-14)</em></p><h2 id=how-far-does-automation-go>How Far Does Automation Go</h2><p>It is important to honestly distinguish between areas where automation works well and areas that
+people must fill in.</p><table><thead><tr><th>Task</th><th>Automation maturity</th></tr></thead><tbody><tr><td>Code/dependency SBOM generation</td><td>Mature</td></tr><tr><td>Container image component identification</td><td>Mature</td></tr><tr><td>SBOM storage and vulnerability monitoring</td><td>Mature</td></tr><tr><td>Automated license identifier extraction</td><td>Partial (requires review)</td></tr><tr><td>Interpreting non-standard licenses and tracking compliance</td><td>Immature (people/policy)</td></tr></tbody></table><p><strong>Table 2.</strong> Automation maturity of SBOM tasks <em>(source: compiled from tool comparison analyses.
+Retrieved 2026-06-14)</em></p><p>Tools do generation well. Put Syft or cdxgen into the build pipeline, and the component list
+fills in automatically. But whether the license field of a generated SBOM is accurate, whether
+the obligations of a non-standard license are met, and whether obligations propagate downstream
+without omission are things no tool guarantees automatically. This area is filled by policy and
+human review.</p><h2 id=the-tool-itself-is-an-attack-surface>The Tool Itself Is an Attack Surface</h2><p>Before trusting an automation tool, its own integrity must be verified. In January 2026, a case
+was reported in which an SBOM tool was implicated in two supply chain attacks within a short
+period, with the damage spreading to downstream projects. On this basis, some pipeline operators
+removed the tool in question.</p><p>The fact that an SBOM generation tool can itself become a target of supply chain risk requires
+combining hashes, signatures, and attestations at the generation and verification stages. This
+same concern lies behind CISA&rsquo;s 2025 minimum elements draft adding Tool Name, Generation Context,
+and Component Hash as new fields. Avoiding the paradox that &ldquo;an SBOM made by an untrustworthy
+tool cannot be trusted&rdquo; requires pinning tool versions, verifying provenance, and signing the
+output.</p><h2 id=sources>Sources</h2><p>Anchore. <em>Syft</em> <a href=https://github.com/anchore/syft>https://github.com/anchore/syft</a>, <em>Grype</em> <a href=https://github.com/anchore/grype>https://github.com/anchore/grype</a>.
+OWASP. <em>cdxgen</em> <a href=https://github.com/CycloneDX/cdxgen>https://github.com/CycloneDX/cdxgen</a>, <em>Dependency-Track</em>
+<a href=https://dependencytrack.org/>https://dependencytrack.org/</a>. Aqua Security. <em>Trivy</em>
+<a href=https://github.com/aquasecurity/trivy>https://github.com/aquasecurity/trivy</a>. Eclipse <em>SW360</em> <a href=https://www.eclipse.org/sw360/>https://www.eclipse.org/sw360/</a>.
+(All retrieved: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-48bc58de78eabc75520083a606fcb233>6 - Vulnerability Management and VEX</h1><div class=lead>Covers how to link an SBOM to vulnerability data for tracking, and the VEX/CSAF framework for exchanging exploitability information.</div><p>The most direct use of an SBOM is vulnerability management. With a component list in hand,
+affected assets can be looked up immediately when a new vulnerability is disclosed. But listing
+components in an SBOM brings along every past CVE for those components, creating a problem of
+exploding false positives. Vulnerability Exploitability eXchange (VEX) is what solves this
+problem.</p><h2 id=sbom-based-vulnerability-tracking>SBOM-Based Vulnerability Tracking</h2><p>The basic flow of tracking is simple. Each component in an SBOM is matched against vulnerability
+databases (NVD, CVE) using an <a href=/en/docs/sbom_guide/2-standards/2-identifiers/>identifier such as PURL or CPE</a> to
+map known vulnerabilities. A supplier can pre-map vulnerability information into an SBOM and
+provide customers with an enriched SBOM, while a consumer can link its own SBOM to vulnerability
+data through an API or data feed to set response priorities.</p><p>To increase effectiveness, a shift-left approach that moves checks earlier in development is
+recommended. Integrating security tools into the development pipeline and automatically
+analyzing SBOM data at early stages such as build and packaging catches vulnerabilities before
+release.</p><h2 id=vex-sorting-out-exploitability>VEX: Sorting Out Exploitability</h2><p>VEX is a document in which a manufacturer asserts &ldquo;is this vulnerability actually exploitable in
+our product,&rdquo; helping consumers make priority judgments. Where an SBOM answers &ldquo;what is inside,&rdquo;
+VEX answers &ldquo;does a known vulnerability inside actually affect this product.&rdquo; Even if a
+component has a vulnerability, it may be unexploitable if the affected code path is never
+invoked; VEX states this status explicitly, reducing unnecessary response effort.</p><p>A VEX document notates the vulnerability status of a specific product using the following four
+states.</p><ul><li><strong>Not affected</strong>: No remediation is needed for this vulnerability.</li><li>Affected: A fix or mitigating action is recommended.</li><li>Fixed: The vulnerability fix is included in the given product version.</li><li>Under Investigation: Whether the product is affected has not yet been confirmed and will be
+updated later.</li></ul><p>VEX is not a single format; CSAF VEX, OpenVEX, and CycloneDX VEX coexist. CycloneDX is
+distinguished by expressing VEX natively within the format itself.</p><h2 id=csaf-structuring-advisories>CSAF: Structuring Advisories</h2><p>Common Security Advisory Framework (CSAF) 2.0 is a standard that structures security advisories
+in a machine-readable form, and it includes a VEX profile. OASIS approved it as a formal
+standard in November 2022. Where VEX communicates exploitability status, CSAF delivers a
+detailed advisory that includes a vulnerability description, affected versions, a severity
+assessment (CVSS score), and recommended mitigation steps.</p><p>The practical turning point for adoption was Red Hat. Red Hat&rsquo;s Product Security team began
+publishing CSAF/VEX files for every CVE in its database in 2023, and has since moved to full
+production, publishing them on an ongoing basis.</p><h2 id=case-study-log4shell>Case Study: Log4Shell</h2><p>The Log4j vulnerability (Log4Shell), disclosed in December 2021, is a case that shows how SBOM,
+VEX, and CSAF interlock.</p><p><img src=/docs/sbom_guide/6-vulnerability/vulnerability-response.png alt="The flow from discovering the Log4j vulnerability through VEX, a CSAF advisory, and patch guidance, to using an SBOM to locate and respond to affected systems"></p><p><strong>Figure 1.</strong> The interplay of SBOM, VEX, and CSAF in the Log4Shell response <em>(source:
+reconstructed from CERT-In technical guidelines. Retrieved 2026-06-14)</em></p><p>When the vulnerability was disclosed, maintainers issued a VEX stating the exploitable status,
+followed by a CSAF advisory containing the vulnerability description, affected versions, CVSS
+10.0 (the highest severity), and mitigation steps. Organizations that included Log4j as a
+component integrated this VEX and CSAF data into their own SBOMs, identifying the affected parts
+of their systems and setting response priorities. The core point of this case is that, had an
+SBOM already been in place, &ldquo;where is Log4j&rdquo; could have been answered with a single query.</p><h2 id=sources>Sources</h2><p>OASIS Open (2022). <em>CSAF 2.0</em>. <a href=https://www.oasis-open.org/2022/11/21/new-version-of-csaf-standard/>https://www.oasis-open.org/2022/11/21/new-version-of-csaf-standard/</a>.
+CISA. <em>Vulnerability Exploitability eXchange (VEX)</em>. <a href=https://www.cisa.gov/sbom>https://www.cisa.gov/sbom</a>. OpenVEX
+<a href=https://github.com/openvex>https://github.com/openvex</a>. NVD. <em>CVE-2021-44228</em>. <a href=https://nvd.nist.gov/vuln/detail/CVE-2021-44228>https://nvd.nist.gov/vuln/detail/CVE-2021-44228</a>.
+Red Hat (2023). <em>VEX files now available</em>. (All retrieved: 2026-06-14)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-c04e4ef2d99c890502db63473ee6093e>7 - Sharing and Governance</h1><div class=lead>Summarizes SBOM access control and disclosure scope, secure sharing channels, and roles-and-responsibilities governance.</div><p>An SBOM creates value only when it is delivered along the supply chain, but it is also sensitive
+material that contains trade secrets and attack surface. Without governance that determines who
+shares what, and how, excessive disclosure heightens risk, and excessive restriction forfeits value.</p><h2 id=access-control-and-disclosure-scope>Access Control and Disclosure Scope</h2><p>Access to SBOM data is managed through Role-Based Access Control (RBAC). Because access needs
+differ by stakeholder, general users are granted read-only access, administrators are granted edit
+and update access, and sensitive information is granted restricted access.</p><p>For disclosure scope, maintaining two versions is common practice.</p><ul><li><strong>Public SBOM</strong>: Contains non-sensitive information that can be shared with all stakeholders.</li><li>Private SBOM: Contains sensitive information, such as vulnerabilities, and only approved parties can access it.</li></ul><p>Regulation reflects this distinction as well. The EU Cyber Resilience Act does not require an SBOM
+to be disclosed to the general public, but requires it to be retained in case market surveillance
+authorities request it. Amid the tension between consumers wanting a more complete SBOM and
+producers wanting to reduce disclosure, the public/private split is a practical device that
+reconciles the two.</p><h2 id=secure-sharing-channels>Secure Sharing Channels</h2><p>When delivering an SBOM, both integrity and confidentiality need to be preserved.</p><ul><li>Use a secure protocol such as HTTPS for transmission, and ensure integrity and confidentiality through digital signatures or encryption.</li><li>Use a sharing platform equipped with access control and audit capabilities.</li><li>Use API integration for automated exchange between systems, and dedicated repositories for industry- or community-level sharing.</li></ul><p>Attach a digital signature to the document so recipients can verify its authenticity and check for
+tampering, and clearly mark which information is public and which is private.</p><h2 id=roles-and-responsibilities>Roles and Responsibilities</h2><p>An SBOM program works only when multiple departments share responsibility for it. It should
+include an executive sponsor, project leads, systems and design engineers, procurement
+specialists, and operations personnel, adding IT, cybersecurity, and maintenance staff as security
+needs require. When roles are scattered, responsibility scatters with them, so establishing clear
+ownership is the starting point.</p><p>The key activities in building governance are as follows.</p><ul><li>Identify key stakeholders: Include representatives from development, IT operations, security,
+procurement, legal, and business leadership, and be sure to include a cybersecurity expert.</li><li>Define responsibilities and assign ownership: Decide who will handle SBOM generation and
+consumption, vulnerability monitoring, supplier engagement, and security data management, and
+designate a cybersecurity expert as the program owner or co-owner.</li><li>Establish a governance structure: A governance body with participation from stakeholders across
+the organization develops policies, standards, and processes, and implements data protection
+controls.</li><li>Train and monitor: Train personnel on SBOM security requirements and secure data handling, and
+continuously assess the program&rsquo;s security posture through regular audits, adjusting it to
+evolving threats and compliance requirements.</li></ul><h2 id=sources>Sources</h2><p>CISA (2024). <em>Framing Software Component Transparency</em>, Third Edition. CERT-In. <em>Technical Guidelines
+on Software Bill of Materials (SBOM)</em>. Regulation (EU) 2024/2847 — Cyber Resilience Act, Annex I
+Part II. (all accessed: June 14, 2026)</p></div><div class=td-content style=page-break-before:always><h1 id=pg-5a0c221cc7635c85b2d6d3e07df82b90>8 - Recommendations and Checklist</h1><div class=lead>Collects the key recommendations from the preceding sections and provides a checklist for reviewing SBOM adoption.</div><p>This section organizes the content covered in the preceding sections into practical
+recommendations and a checklist. Organizations adopting SBOM for the first time can follow the
+checklist in order, while organizations already operating one can use it to check for missing
+items.</p><h2 id=key-recommendations>Key Recommendations</h2><h3 id=procurement-and-generation>Procurement and Generation</h3><ul><li>When procuring software, specify the SBOM provision requirement in contracts and purchase terms.
+Specify which elements are to be provided, in what format, and when.</li><li>Generate SBOMs in the SPDX or CycloneDX format, choosing based on your counterparty&rsquo;s
+requirements and your own toolchain.</li><li>Automatically generate SBOMs at build time within the SSDLC and CI/CD pipeline to ensure
+accuracy and timeliness.</li><li>Put in place a workflow to regenerate the SBOM whenever a new component is introduced or an
+existing component is updated.</li></ul><h3 id=data-quality>Data Quality</h3><ul><li>Include complete metadata such as component name, version, license, and unique identifier.
+Because the minimum elements are only a floor, add fields to fit your own use case.</li><li>Pin components with <a href=/en/docs/sbom_guide/2-standards/2-identifiers/>PURL or CPE</a> so that traceability is not lost
+even when names or versions change.</li><li>Pin the version of the generation tool, verify its provenance, and attach hashes and signatures
+to the output to ensure integrity.</li></ul><h3 id=vulnerabilities-and-licenses>Vulnerabilities and Licenses</h3><ul><li>Link the SBOM to vulnerability databases and advisories to maintain continuous visibility into
+security posture.</li><li>Reflect any applied patches or mitigations in your own SBOM.</li><li>Exchange vulnerability exploitability status using VEX and CSAF, and prioritize response based on
+risk.</li><li>Analyze the license compatibility of all components to identify conflicts that may arise from
+combining them, in advance.</li></ul><h3 id=storage-and-operations>Storage and Operations</h3><ul><li>Store and transmit SBOMs securely using encryption and access control, and clearly distinguish
+between public and private scope.</li><li>Check the accuracy and completeness of SBOMs through regular audits.</li><li>Run training and awareness programs on the role of SBOM, from developers to the security team.</li></ul><h2 id=adoption-checklist>Adoption Checklist</h2><p>A checklist for reviewing what has been done at each stage.</p><table><thead><tr><th>Stage</th><th>Checklist Item</th></tr></thead><tbody><tr><td>Foundational</td><td>Identify critical assets and establish an adoption plan</td></tr><tr><td>Foundational</td><td>Decide on the SBOM format (SPDX/CycloneDX) and minimum data requirements</td></tr><tr><td>Foundational</td><td>Select a secure repository and tools</td></tr><tr><td>Foundational</td><td>Reflect the SBOM provision requirement in procurement contracts</td></tr><tr><td>Developing</td><td>Assign unique identifiers to components</td></tr><tr><td>Developing</td><td>Map supplier SBOMs to internal SBOMs</td></tr><tr><td>Developing</td><td>Integrate automatic SBOM generation into the build pipeline (CI/CD)</td></tr><tr><td>Developing</td><td>Apply secure configuration management, including access control and encryption</td></tr><tr><td>Scaling</td><td>Track SBOM linked with vulnerability databases</td></tr><tr><td>Scaling</td><td>Integrate VEX/CSAF-based exploitability management with incident response</td></tr><tr><td>Scaling</td><td>Run regular review, audits, and awareness programs</td></tr></tbody></table><h2 id=next-steps>Next Steps</h2><p>If you develop AI systems or exchange them across the supply chain, you need to add an AI-specific
+layer — models, datasets, and training compute — on top of the SBOM capabilities covered in this
+guide. The component, license, and vulnerability management practices of a general SBOM carry over
+directly into the software layer of an AI BOM. This is covered in detail in the separate
+<a href=/en/docs/ai-sbom_guide/>AI SBOM Compliance Guide</a>.</p><h2 id=sources>Sources</h2><p>NTIA (2021). <em>The Minimum Elements For a Software Bill of Materials (SBOM)</em>. CISA (2024). <em>Framing
+Software Component Transparency</em>, Third Edition. CERT-In. <em>Technical Guidelines on Software Bill of
+Materials (SBOM)</em>. Regulation (EU) 2024/2847 — Cyber Resilience Act. (all accessed:
+June 14, 2026)</p></div></main></div></div><footer class="td-footer row d-print-none"><div class=container-fluid><div class="row mx-md-2"><div class="td-footer__left col-6 col-sm-4 order-sm-1"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title="User mailing list" aria-label="User mailing list"><a href=mailto:hakssung@gmail.com aria-label="User mailing list" target=_blank rel=noopener><i class="fa fa-envelope"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Twitter aria-label=Twitter><a href=https://twitter.com/haksungjang aria-label=Twitter target=_blank rel=noopener><i class="fab fa-twitter"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Facebook aria-label=Facebook><a href=https://www.facebook.com/haksung.jang aria-label=Facebook target=_blank rel=noopener><i class="fab fa-facebook"></i></a></li></ul></div><div class="td-footer__right col-6 col-sm-4 order-sm-3"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title=GitHub aria-label=GitHub><a href=https://github.com/haksungjang aria-label=GitHub target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=LinkedIn aria-label=LinkedIn><a href=https://linkedin.com/in/haksung aria-label=LinkedIn target=_blank rel=noopener><i class="fab fa-linkedin"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="Developer mailing list" aria-label="Developer mailing list"><a href=mailto:haksung@sk.com aria-label="Developer mailing list" target=_blank rel=noopener><i class="fa fa-envelope"></i></a></li></ul></div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2"><span class=td-footer__copyright>&copy;
+2018&ndash;2026
+<span class=td-footer__authors>장학성 | <a href=https://creativecommons.org/licenses/by/4.0>CC BY 4.0</a> |</span></span><span class=td-footer__all_rights_reserved>All Rights Reserved</span></div></div></div></footer></div><script src=/js/main.min.a849afb56344a53e8045345f73462783658f04df59b2048fb32e1223ea12387b.js integrity="sha256-qEmvtWNEpT6ARTRfc0Yng2WPBN9ZsgSPsy4SI+oSOHs=" crossorigin=anonymous></script><script defer src=/js/click-to-copy.min.24576ff9fe9f85bb1948ecae52ce227cafce53757a3ad52301f2a79260f6b97d.js integrity="sha256-JFdv+f6fhbsZSOyuUs4ifK/OU3V6OtUjAfKnkmD2uX0=" crossorigin=anonymous></script><script src=/js/tabpane-persist.js></script></body></html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Standards | Haksung</title><link>https://haksungjang.github.io/en/tags/standards/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/standards/index.xml" rel="self" type="application/rss+xml"/><item><title>Standards and Formats</title><link>https://haksungjang.github.io/en/docs/sbom_guide/2-standards/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/2-standards/</guid><description>Compares SPDX and CycloneDX, the two standard formats for expressing an SBOM in a machine-readable form.</description><content:encoded>&lt;![CDATA[<p>Since an SBOM requires machine readability, a standard format is necessary. Among the three
+formats specified by the US NTIA minimum elements, SPDX and CycloneDX split practical use between
+them. The third, the SWID tag, is used mainly in asset management; its role as an identifier is
+covered in<a href="/en/docs/sbom_guide/2-standards/2-identifiers/">Identifiers and Licenses</a>.</p><h2 id="spdx">SPDX</h2><p>SPDX (System Package Data Exchange) is a project under the Linux Foundation. Version 2.2.1
+became an international standard as ISO/IEC 5962:2021 in August 2021. It is worth noting that
+the current ISO standard refers strictly to version 2.2.1.</p><p>The Linux Foundation released SPDX 3.0 on April 16, 2024, introducing a structure of
+purpose-specific profiles. The approach layers Security, Build, Dataset, and AI profiles on top
+of a core model. The AI profile carries model training and characterization information, the
+Dataset profile carries data provenance and licensing, and the Security profile carries
+vulnerability identification, severity, exploitability, and mitigation plans. A patch release,
+3.0.1, followed in December of the same year. Whether SPDX 3.x is being re-standardized with ISO
+had not been confirmed as of June 2026.</p><h2 id="cyclonedx">CycloneDX</h2><p>CycloneDX is a full-stack BOM standard that originated at OWASP (Open Worldwide Application
+Security Project). Its distinguishing feature is native support for Vulnerability Exploitability
+eXchange (VEX) within the format itself. International standardization proceeded through Ecma
+International&rsquo;s technical committee TC54. Version 1.6 was published as ECMA-424 1st edition in
+June 2024, adding a Cryptographic Bill of Materials (CBOM) and CycloneDX Attestations, and v1.7
+was announced in October 2025 and standardized as ECMA-424 2nd edition in December 2025. v1.7
+added post-quantum cryptography readiness, structured citations, and support for patent objects.</p><p>CycloneDX can express software (SBOM), hardware (HBOM), services (SaaSBOM), and machine learning
+models (ML-BOM) all within a single format.</p><h2 id="comparing-the-two-formats">Comparing the Two Formats</h2><table><thead><tr><th/><th>SPDX</th><th>CycloneDX</th></tr></thead><tbody><tr><td>Steward</td><td>Linux Foundation</td><td>OWASP / Ecma TC54</td></tr><tr><td>International standard</td><td>ISO/IEC 5962:2021 (based on v2.2.1)</td><td>ECMA-424 1st edition (v1.6, 2024-06), 2nd edition (v1.7, 2025-12)</td></tr><tr><td>Latest specification</td><td>3.0 (2024-04), 3.0.1 (2024-12)</td><td>1.7 (2025-10)</td></tr><tr><td>Extension mechanism</td><td>Purpose-specific profiles (Security, Build, Dataset, AI)</td><td>Component types and auxiliary objects, native VEX</td></tr><tr><td>Strengths</td><td>License expression and legal compliance history</td><td>Vulnerability/VEX integration, security-operations friendly</td></tr></tbody></table><p><strong>Table 1.</strong> Comparison of the two major SBOM standard formats<em>(source: ISO/IEC 5962:2021,
+Linux Foundation 2024, Ecma International ECMA-424. Retrieved 2026-06-14)</em></p><p>The two standards differ in design philosophy. SPDX extends its scope of application through
+profiles, while CycloneDX expresses it through component types and auxiliary objects. Both,
+however, target the same problem in that they carry component identification, licensing, and
+dependency relationships. Whichever you choose, conversion tools exist between the two formats,
+so you can choose based on the format your trading partners require and the format your own tool
+chain supports well. If license compliance is the focus, SPDX is the familiar starting point; if
+vulnerability operations is the focus, CycloneDX is.</p><p>Next, we look at the<a href="/en/docs/sbom_guide/2-standards/1-minimum-elements/">minimum elements</a> that define what a format must
+contain, and<a href="/en/docs/sbom_guide/2-standards/2-identifiers/">identifiers and licenses</a> for consistently pointing to
+components.</p><h2 id="sources">Sources</h2><p>ISO/IEC (2021).<em>ISO/IEC 5962:2021 — SPDX Specification V2.2.1</em>. The Linux Foundation (2024).<em>SPDX 3.0 Release</em>.<a href="https://www.linuxfoundation.org/press/spdx-3-revolutionizes-software-management-in-systems-with-enhanced-functionality-and-streamlined-use-cases">https://www.linuxfoundation.org/press/spdx-3-revolutionizes-software-management-in-systems-with-enhanced-functionality-and-streamlined-use-cases</a>.
+Ecma International.<em>ECMA-424 — CycloneDX Bill of Materials Specification</em>.<a href="https://ecma-international.org/publications-and-standards/standards/ecma-424/">https://ecma-international.org/publications-and-standards/standards/ecma-424/</a>. CycloneDX (2025).<em>CycloneDX v1.7 Released</em>.<a href="https://cyclonedx.org/news/cyclonedx-v1.7-released/">https://cyclonedx.org/news/cyclonedx-v1.7-released/</a>. (All retrieved: 2026-06-14)</p>
+]]></content:encoded></item></channel></rss>

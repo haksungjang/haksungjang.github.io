@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>VEX | Haksung</title><link>https://haksungjang.github.io/en/tags/vex/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/vex/index.xml" rel="self" type="application/rss+xml"/><item><title>Vulnerability Management and VEX</title><link>https://haksungjang.github.io/en/docs/sbom_guide/6-vulnerability/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/6-vulnerability/</guid><description>Covers how to link an SBOM to vulnerability data for tracking, and the VEX/CSAF framework for exchanging exploitability information.</description><content:encoded>&lt;![CDATA[<p>The most direct use of an SBOM is vulnerability management. With a component list in hand,
+affected assets can be looked up immediately when a new vulnerability is disclosed. But listing
+components in an SBOM brings along every past CVE for those components, creating a problem of
+exploding false positives. Vulnerability Exploitability eXchange (VEX) is what solves this
+problem.</p><h2 id="sbom-based-vulnerability-tracking">SBOM-Based Vulnerability Tracking</h2><p>The basic flow of tracking is simple. Each component in an SBOM is matched against vulnerability
+databases (NVD, CVE) using an<a href="/en/docs/sbom_guide/2-standards/2-identifiers/">identifier such as PURL or CPE</a> to
+map known vulnerabilities. A supplier can pre-map vulnerability information into an SBOM and
+provide customers with an enriched SBOM, while a consumer can link its own SBOM to vulnerability
+data through an API or data feed to set response priorities.</p><p>To increase effectiveness, a shift-left approach that moves checks earlier in development is
+recommended. Integrating security tools into the development pipeline and automatically
+analyzing SBOM data at early stages such as build and packaging catches vulnerabilities before
+release.</p><h2 id="vex-sorting-out-exploitability">VEX: Sorting Out Exploitability</h2><p>VEX is a document in which a manufacturer asserts &ldquo;is this vulnerability actually exploitable in
+our product,&rdquo; helping consumers make priority judgments. Where an SBOM answers &ldquo;what is inside,&rdquo;
+VEX answers &ldquo;does a known vulnerability inside actually affect this product.&rdquo; Even if a
+component has a vulnerability, it may be unexploitable if the affected code path is never
+invoked; VEX states this status explicitly, reducing unnecessary response effort.</p><p>A VEX document notates the vulnerability status of a specific product using the following four
+states.</p><ul><li><strong>Not affected</strong>: No remediation is needed for this vulnerability.</li><li>Affected: A fix or mitigating action is recommended.</li><li>Fixed: The vulnerability fix is included in the given product version.</li><li>Under Investigation: Whether the product is affected has not yet been confirmed and will be
+updated later.</li></ul><p>VEX is not a single format; CSAF VEX, OpenVEX, and CycloneDX VEX coexist. CycloneDX is
+distinguished by expressing VEX natively within the format itself.</p><h2 id="csaf-structuring-advisories">CSAF: Structuring Advisories</h2><p>Common Security Advisory Framework (CSAF) 2.0 is a standard that structures security advisories
+in a machine-readable form, and it includes a VEX profile. OASIS approved it as a formal
+standard in November 2022. Where VEX communicates exploitability status, CSAF delivers a
+detailed advisory that includes a vulnerability description, affected versions, a severity
+assessment (CVSS score), and recommended mitigation steps.</p><p>The practical turning point for adoption was Red Hat. Red Hat&rsquo;s Product Security team began
+publishing CSAF/VEX files for every CVE in its database in 2023, and has since moved to full
+production, publishing them on an ongoing basis.</p><h2 id="case-study-log4shell">Case Study: Log4Shell</h2><p>The Log4j vulnerability (Log4Shell), disclosed in December 2021, is a case that shows how SBOM,
+VEX, and CSAF interlock.</p><p><img src="/docs/sbom_guide/6-vulnerability/vulnerability-response.png" alt="The flow from discovering the Log4j vulnerability through VEX, a CSAF advisory, and patch guidance, to using an SBOM to locate and respond to affected systems"/><p><strong>Figure 1.</strong> The interplay of SBOM, VEX, and CSAF in the Log4Shell response<em>(source:
+reconstructed from CERT-In technical guidelines. Retrieved 2026-06-14)</em></p><p>When the vulnerability was disclosed, maintainers issued a VEX stating the exploitable status,
+followed by a CSAF advisory containing the vulnerability description, affected versions, CVSS
+10.0 (the highest severity), and mitigation steps. Organizations that included Log4j as a
+component integrated this VEX and CSAF data into their own SBOMs, identifying the affected parts
+of their systems and setting response priorities. The core point of this case is that, had an
+SBOM already been in place, &ldquo;where is Log4j&rdquo; could have been answered with a single query.</p><h2 id="sources">Sources</h2><p>OASIS Open (2022).<em>CSAF 2.0</em>.<a href="https://www.oasis-open.org/2022/11/21/new-version-of-csaf-standard/">https://www.oasis-open.org/2022/11/21/new-version-of-csaf-standard/</a>.
+CISA.<em>Vulnerability Exploitability eXchange (VEX)</em>.<a href="https://www.cisa.gov/sbom">https://www.cisa.gov/sbom</a>. OpenVEX<a href="https://github.com/openvex">https://github.com/openvex</a>. NVD.<em>CVE-2021-44228</em>.<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">https://nvd.nist.gov/vuln/detail/CVE-2021-44228</a>.
+Red Hat (2023).<em>VEX files now available</em>. (All retrieved: 2026-06-14)</p>
+]]></content:encoded></item><item><title>A Practical Guide to SBOM (Software Bill of Materials)</title><link>https://haksungjang.github.io/en/docs/sbom_guide/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/</guid><description>A guide covering the Software Bill of Materials (SBOM), from its concepts and standard formats to regulatory trends, adoption roadmap, tools, vulnerability management, and governance, organized from the perspective of practitioners in Korea.</description><content:encoded>&lt;![CDATA[<p>A Software Bill of Materials (SBOM) is a formal record of what components make up a piece of
+software and how those components connect within the supply chain. A US executive order compares
+it to the ingredient list on food packaging. Just as an ingredient list is the starting point for
+responding to allergies, an SBOM is the data layer on which vulnerability response, license
+management, and asset management all rest. An SBOM is not a security tool in itself, but without
+one, an organization cannot immediately answer the question, &ldquo;Where in our product is this library
+used?&rdquo;</p><p>This guide covers that data layer from beginning to end. Drawing on primary sources, it explains
+why SBOM has moved to the forefront of regulation and procurement, what standards and identifiers
+underpin it, in what order organizations adopt it and with what tools they automate it, how they
+manage vulnerabilities and licenses, and how they share it securely across the supply chain.</p><h2 id="intended-audience">Intended Audience</h2><ul><li>Security, development, procurement, and legal staff at organizations that develop or procure
+software</li><li>Practitioners who must respond to the EU Cyber Resilience Act (CRA) or US federal procurement
+requirements</li><li>Teams seeking to establish supply chain transparency and open source license compliance systems</li></ul><h2 id="guide-structure">Guide Structure</h2><p>The guide is divided into eight sections. The earlier sections cover concepts, standards, and
+regulation, while the later sections cover the practicalities of adoption and operation. You can
+read only the sections you need.</p><table><thead><tr><th>Section</th><th>Content</th><th>Link</th></tr></thead><tbody><tr><td>1. Overview</td><td>SBOM definition, supply chain threats and benefits, levels and classification</td><td><a href="/en/docs/sbom_guide/1-overview/">View</a></td></tr><tr><td>2. Standards and Formats</td><td>SPDX, CycloneDX, minimum elements, identifiers and licenses</td><td><a href="/en/docs/sbom_guide/2-standards/">View</a></td></tr><tr><td>3. Regulatory Trends</td><td>United States, EU CRA, India, and Korea</td><td><a href="/en/docs/sbom_guide/3-regulation/">View</a></td></tr><tr><td>4. Adoption Roadmap</td><td>Step-by-step activities from building the foundation to operational maturity</td><td><a href="/en/docs/sbom_guide/4-adoption/">View</a></td></tr><tr><td>5. Tools and Automation</td><td>Generation, management, and scanning tools, and automation maturity</td><td><a href="/en/docs/sbom_guide/5-tools/">View</a></td></tr><tr><td>6. Vulnerability Management</td><td>SBOM-based tracking, VEX, CSAF, the Log4j case</td><td><a href="/en/docs/sbom_guide/6-vulnerability/">View</a></td></tr><tr><td>7. Sharing and Governance</td><td>Access control, disclosure scope, sharing channels, roles and responsibilities</td><td><a href="/en/docs/sbom_guide/7-governance/">View</a></td></tr><tr><td>8. Recommendations and Checklist</td><td>Key recommendations and an adoption checklist</td><td><a href="/en/docs/sbom_guide/8-checklist/">View</a></td></tr></tbody></table><h2 id="quick-starting-points">Quick Starting Points</h2><p>If you already understand SBOM and are looking for where to start, see<a href="/en/docs/sbom_guide/4-adoption/">4. Adoption Roadmap</a> and<a href="/en/docs/sbom_guide/8-checklist/">8. Recommendations and Checklist</a> first.
+If you are deciding which format and tools to use,<a href="/en/docs/sbom_guide/2-standards/">2. Standards and Formats</a> and<a href="/en/docs/sbom_guide/5-tools/">5. Tools and Automation</a> are good starting points. If your goal is regulatory
+compliance, check the jurisdiction-specific obligations in<a href="/en/docs/sbom_guide/3-regulation/">3. Regulatory Trends</a>.</p><h2 id="sources-and-editorial-basis">Sources and Editorial Basis</h2><p>This guide is not a translation of any single document; it is a reconstruction that synthesizes
+current primary sources. It draws on the National Telecommunications and Information
+Administration (NTIA)&rsquo;s 2021 minimum elements and its update by the Cybersecurity and
+Infrastructure Security Agency (CISA) — the 2024<em>Framing Software Component Transparency</em>, Third
+Edition, and the 2025 draft revision of the minimum elements — as well as the SPDX and CycloneDX
+standard specifications, the EU Cyber Resilience Act (Regulation (EU) 2024/2847), and the supply
+chain security guidelines of India&rsquo;s CERT-In and Korea. The first edition began as a translation of
+CERT-In&rsquo;s SBOM technical guidelines; the current edition updates that framework with the sources
+above and broadens it to a general practitioner&rsquo;s perspective.</p><p>Every factual claim is cited to a primary source, and the materials cited were accessed on
+June 14, 2026.</p><p><strong>Author :<a href="https://haksungjang.github.io/">Haksung Jang</a></strong></p>
+]]></content:encoded></item></channel></rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>CERT-In | Haksung</title><link>https://haksungjang.github.io/en/tags/cert-in/</link><description>Haksung Jang — Open Source Program Manager at SK telecom</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 17:03:59 +0900</lastBuildDate><atom:link href="https://haksungjang.github.io/en/tags/cert-in/index.xml" rel="self" type="application/rss+xml"/><item><title>India, Korea, and Other Jurisdictions</title><link>https://haksungjang.github.io/en/docs/sbom_guide/3-regulation/2-global/</link><pubDate>Sun, 09 Aug 2026 17:03:59 +0900</pubDate><guid>https://haksungjang.github.io/en/docs/sbom_guide/3-regulation/2-global/</guid><description>Summarizes SBOM recommendation guidelines from India's CERT-In and other jurisdictions, including Korea.</description><content:encoded>&lt;![CDATA[<p>Jurisdictions outside the United States and the European Union are generally at the recommendation
+stage. There is no legal enforcement or sanction, but these function as best practices that
+influence procurement and contracting practices.</p><h2 id="india-cert-in-technical-guidelines">India: CERT-In Technical Guidelines</h2><p>The Indian Computer Emergency Response Team (CERT-In) published the<em>Technical Guidelines on
+Software Bill of Materials (SBOM)</em>. This is a voluntary guideline aimed at government agencies,
+the public sector, essential services, and software producing and service companies, covering the
+value of SBOMs, best practices, minimum elements, and vulnerability tracking procedures. It has no
+legal force, but it influences government procurement and contracting practices.</p><p>In July 2025, CERT-In expanded this guideline to also cover Quantum BOM (QBOM), Cryptography BOM
+(CBOM), AI BOM (AIBOM), and Hardware BOM (HBOM). This is an example of how the bill of materials
+concept is spreading beyond software into cryptography, AI, and hardware. The expansion into AI
+BOM is covered further in<a href="/en/docs/sbom_guide/5-tools/">5. Tools and Automation</a> and in the separate<a href="/en/docs/ai-sbom_guide/">AI SBOM Compliance Guide</a>.</p><p>The first edition of this guide began as a Korean translation of this CERT-In document. The
+current edition updates that skeleton with current primary sources from the United States and the
+European Union, and broadens it to a general practitioner&rsquo;s perspective.</p><h2 id="korea-software-supply-chain-security-guidelines">Korea: Software Supply Chain Security Guidelines</h2><p>In Korea, the Ministry of Science and ICT, the National Intelligence Service, and the Korea
+Internet &amp; Security Agency (KISA), among others, published the Software Supply Chain Security
+Guidelines 1.0 in May 2024. It recommends SBOM generation and vulnerability inspection procedures,
+and the use of the National Institute of Standards and Technology (NIST) Secure Software
+Development Framework (SSDF).</p><p>However, this is only an administrative guideline, and Korea&rsquo;s current legal system does not yet
+have legislation that imposes a mandatory reporting obligation at the product level, as the EU
+Cyber Resilience Act does. Even so, Korean companies exporting software to the EU and the United
+States must directly meet the requirements of those markets, so building SBOM capability is a
+practical necessity regardless of domestic regulation.</p><h2 id="practical-implications">Practical Implications</h2><p>The legal standing differs by jurisdiction, but the skeleton of the data required converges. A
+well-built SBOM system, built once, can satisfy the requirements of multiple jurisdictions at the
+same time. If the system is designed around the strictest requirement among your export markets
+(currently the EU CRA), the recommendations of other jurisdictions are largely subsumed within it.</p><h2 id="sources">Sources</h2><p>Indian Computer Emergency Response Team (CERT-In).<em>Technical Guidelines on Software Bill of
+Materials (SBOM)</em>, CIGU-2024-0002.<a href="https://www.cert-in.org.in/">https://www.cert-in.org.in/</a>. Ministry of Science and ICT,
+National Intelligence Service, Korea Internet &amp; Security Agency (2024).<em>Software Supply Chain
+Security Guidelines 1.0</em>.<a href="https://www.kisa.or.kr/">https://www.kisa.or.kr/</a>. (all accessed: June 14, 2026)</p>
+]]></content:encoded></item></channel></rss>

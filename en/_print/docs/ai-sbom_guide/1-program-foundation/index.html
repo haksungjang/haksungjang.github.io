@@ -1,0 +1,209 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=en class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=canonical type=text/html href=https://haksungjang.github.io/en/docs/ai-sbom_guide/1-program-foundation/><link rel=alternate type=application/rss+xml href=https://haksungjang.github.io/en/docs/ai-sbom_guide/1-program-foundation/index.xml><link rel=alternate type=text/markdown href=https://haksungjang.github.io/en/docs/ai-sbom_guide/1-program-foundation/index.md><meta name=robots content="noindex, nofollow"><link rel="shortcut icon" href=/favicons/favicon.ico><link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192><title>Program Foundation | Haksung</title><meta name=description content="The stage of establishing the foundation of an AI SBOM compliance program. Covers policy, competency, awareness, and scope."><meta property="og:url" content="https://haksungjang.github.io/en/docs/ai-sbom_guide/1-program-foundation/"><meta property="og:site_name" content="Haksung"><meta property="og:title" content="Program Foundation"><meta property="og:description" content="The stage of establishing the foundation of an AI SBOM compliance program. Covers policy, competency, awareness, and scope."><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta itemprop=name content="Program Foundation"><meta itemprop=description content="The stage of establishing the foundation of an AI SBOM compliance program. Covers policy, competency, awareness, and scope."><meta itemprop=dateModified content="2026-08-09T17:03:59+09:00"><meta itemprop=wordCount content="36"><meta itemprop=keywords content="AI SBOM,Program Foundation"><meta name=twitter:card content="summary"><meta name=twitter:title content="Program Foundation"><meta name=twitter:description content="The stage of establishing the foundation of an AI SBOM compliance program. Covers policy, competency, awareness, and scope."><link rel=preload href=/scss/main.min.91d4f447cbf297bb8747fa0898880b01ec6759b131c3bffe8c0cb68a7de6f684.css as=style integrity="sha256-kdT0R8vyl7uHR/oImIgLAexnWbExw7/+jAy2in3m9oQ=" crossorigin=anonymous><link href=/scss/main.min.91d4f447cbf297bb8747fa0898880b01ec6759b131c3bffe8c0cb68a7de6f684.css rel=stylesheet integrity="sha256-kdT0R8vyl7uHR/oImIgLAexnWbExw7/+jAy2in3m9oQ=" crossorigin=anonymous><script src=https://code.jquery.com/jquery-3.7.1.min.js integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preconnect href=https://cdn.jsdelivr.net crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap"><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css><link rel=icon type=image/svg+xml href=/favicon.svg><meta name=naver-site-verification content="0f8fd1e446e52bf05a391ca517c84114493b21ce"><link rel=canonical href=https://haksungjang.github.io/en/docs/ai-sbom_guide/1-program-foundation/><link rel=alternate hreflang=ko-KR href=https://haksungjang.github.io/docs/ai-sbom_guide/1-program-foundation/><link rel=alternate hreflang=en-US href=https://haksungjang.github.io/en/docs/ai-sbom_guide/1-program-foundation/><link rel=alternate hreflang=x-default href=https://haksungjang.github.io/docs/ai-sbom_guide/1-program-foundation/><script async src="https://www.googletagmanager.com/gtag/js?id=G-4QCM5VHF7M"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4QCM5VHF7M")}</script></head><body class=td-section><header><nav class="td-navbar js-navbar-scroll"><div class="td-navbar-container container-fluid flex-column flex-md-row"><a class=navbar-brand href=/en/><span class="navbar-brand__logo navbar-logo"></span><span class=navbar-brand__name>Haksung</span></a><div class="td-navbar__main td-navbar-nav-scroll td-navbar-nav-scroll--indicator" id=main_navbar><div class="scroll-indicator scroll-left"></div><ul class=navbar-nav><li class=nav-item><a class="nav-link active" href=/en/docs/><span>Guide</span></a></li><li class=nav-item><a class=nav-link href=/en/research/><span>Research</span></a></li><li class=nav-item><a class=nav-link href=/en/tools/><span>Tools</span></a></li><li class=nav-item><a class=nav-link href=/en/blog/><span>Blog</span></a></li><li class="nav-item td-navbar__lang-menu"><div class="td-lang-menu dropdown"><a class="nav-link dropdown-toggle td-lang-menu__title" href=# role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false><span class=td-lang-menu__title-text>English</span>
+<span class=td-lang-menu__title-code>EN</span></a><ul class=dropdown-menu><li><a class=dropdown-item href=/docs/ai-sbom_guide/1-program-foundation/>한국어</a></li><li><span class="dropdown-item active">English</span></li></ul></div></li></ul><div class="scroll-indicator scroll-right"></div></div><div class="td-navbar__search d-none d-lg-block"><div class=td-search><div class=td-search__icon></div><input type=search name=q class="td-search__input form-control td-search-input" placeholder='Search this site…' aria-label='Search this site…' autocomplete=off></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This is the multi-page printable view of this section.
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/en/docs/ai-sbom_guide/1-program-foundation/>Return to the regular view of this page</a>.</p></div><h1 class=title>Program Foundation</h1><div class=lead>The stage of establishing the foundation of an AI SBOM compliance program. Covers policy, competency, awareness, and scope.</div><ul><li>1: <a href=#pg-1923c57fb5cfce1216612869d9e175d5>3.1 Policy</a></li><ul></ul><li>2: <a href=#pg-460dd9f45d165f589cf555d6e2d7071d>3.2 Competence</a></li><ul></ul><li>3: <a href=#pg-f595f4bf506e0365c6bb916f96f82500>3.3 Awareness</a></li><ul></ul><li>4: <a href=#pg-68aa1a4fa425e5dde72eaf14fc580179>3.4 Program Scope</a></li><ul></ul></ul><div class=content><p>This is stage 1 of the implementation roadmap. It defines the program&rsquo;s scope (3.4), establishes policy (3.1),
+and secures the competency and awareness of participants (3.2, 3.3). All subsequent clauses operate on top of
+this foundation.</p></div></div><div class=td-content><h1 id=pg-1923c57fb5cfce1216612869d9e175d5>1 - 3.1 Policy</h1><div class=lead>Explains how to establish and communicate a written policy that governs AI SBOM compliance.</div><div class="alert alert-info" role=alert><div class="h4 alert-heading" role=heading>Implementation Phase</div><p>This clause is built during <strong>Phase 1 — Program Foundation</strong>.
+<a href=/en/docs/ai-sbom_guide/#phased-implementation-roadmap>View the full implementation roadmap</a></p></div><h2 id=1-clause-overview>1. Clause Overview</h2><p>Without an AI SBOM policy, an organization ends up deploying AI systems while developers remain
+unaware of the licensing obligations attached to models and datasets. In AI, what needs to be
+tracked goes beyond code. Model weights, training datasets, and the model tree derived from other
+models each carry their own license, and non-standard licenses that restrict the purpose of use —
+such as the Llama Community License or the RAIL family — are common. Missing these obligations
+leads to copyright disputes, violations of usage restrictions, and terminated business contracts.</p><p>To prevent this risk, 3.1 requires establishing a documented policy that governs AI SBOM
+compliance and communicating it so that program participants are aware of its existence. This
+policy must reflect business strategy, the legal requirements of relevant jurisdictions, and the
+level of risk appropriate to the use case. All subsequent clauses (competence, license
+obligations, AI SBOM, governance, and so on) operate on top of this policy.</p><h2 id=2-activities-to-perform>2. Activities to Perform</h2><ul><li>Draft and formalize a policy document that governs AI SBOM compliance.</li><li>Define the scope of application in the policy (AI systems deployed externally, external
+models/datasets brought in, internal models released publicly, etc.).</li><li>Reflect business strategy, the legal requirements of relevant jurisdictions, and the risk level
+for each use case in the policy.</li><li>Include in the policy a list of licenses allowed or prohibited for models and datasets.
+<em>([Guide Recommendation] Because compliance with non-standard licenses is hard to track
+automatically after the fact, decide it through policy at intake time.)</em></li><li>Establish and document a procedure for communicating the policy to program participants
+(development, legal, security, data staff, etc.).</li><li>Retain records that prove the policy was communicated (training completion, notice history, etc.).</li><li>Include in the policy a procedure for periodically reviewing it and re-communicating it when it
+changes.</li></ul><h2 id=3-requirement-and-verification-material>3. Requirement and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.1</td><td>A written policy shall exist that governs AI SBOM compliance, and it shall be communicated internally. The policy shall reflect business strategy, the legal requirements of relevant jurisdictions, and the level of risk appropriate to the use case.</td><td><strong>3.1.1</strong> A documented policy meeting the above requirement<br><strong>3.1.2</strong> A documented procedure that makes program participants aware of the existence of the policy (e.g., training, an internal wiki, or another practical communication method)</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.1 Policy</strong>
+A written policy shall exist that governs AI System Bill of Materials (AI SBOM) compliance.
+The policy shall be internally communicated, and informed by business strategy, legal
+requirements in the relevant jurisdictions, and the level of risk appropriate for the use case.</p><p><strong>Verification material(s):</strong></p><ul><li>A documented policy meeting the above requirements</li><li>A documented procedure that makes program participants aware of the existence of the policy
+(e.g. via training, internal wiki or other practical communication method)</li></ul></blockquote></details><h2 id=4-how-to-comply-with-each-verification-material-with-samples>4. How to Comply with Each Verification Material, with Samples</h2><h3 id=311-documented-ai-sbom-policy>3.1.1 Documented AI SBOM Policy</h3><p><strong>How to Comply</strong></p><p>The AI SBOM policy is a formal document that captures the principles and procedures by which the
+organization manages the licensing and transparency obligations of its AI systems. The policy
+should include its purpose, scope, roles and responsibilities, principles for reviewing model and
+dataset licenses, AI SBOM management, how transparency obligations are addressed, and the review
+cycle. Because this document itself is verification material 3.1.1, manage it as a formal
+document with recorded version and approval history.</p><p>For an organization that already has an ISO/IEC 5230 open source policy, it is more efficient to
+add an AI-related section to the existing policy than to create a separate new one. Add that
+models and datasets fall within the scope of license review, how non-standard licenses are
+handled, and what format is used to manage the AI SBOM.</p><p>A policy is not a document to be written once and left alone. Because the AI regulatory landscape
+changes quickly, conduct a periodic review at least once a year and record the change history.</p><p><strong>Considerations</strong></p><ul><li><strong>State the AI-specific scope explicitly</strong>: Clearly state in the policy that license review
+covers not only code but also model weights, training/testing/validation datasets, and the
+derivation relationships in the model tree.</li><li><strong>Allowed/prohibited license lists</strong>: Divide model and dataset licenses into allowed and
+prohibited lists, based on whether commercial use is permitted and whether there are behavioral
+use restrictions, and set this in the policy in advance. <em>([Guide Recommendation])</em></li><li><strong>Approval procedure</strong>: Have the legal team or the AI governance lead give final approval, and
+record the approval date and approver.</li><li><strong>Version control</strong>: Maintain the document version and change history so that previous versions
+can be compared during an audit.</li><li><strong>Periodic review</strong>: Review at least once a year, and record the review completion date and
+reviewer.</li></ul><p><strong>Sample</strong></p><p>Below is a sample of the scope of application and the allowed/prohibited license lists for an AI
+SBOM policy. This text becomes a core component of verification material 3.1.1. Check the actual
+terms of each license against its original text, then classify it to fit the organization&rsquo;s use
+case.</p><pre tabindex=0><code>## 1. Purpose and Scope
+
+This policy defines the compliance principles and procedures for the company to
+develop and deploy AI systems safely and responsibly. It is designed to satisfy
+the requirements of ISO/IEC 5230 (open source license compliance) and the
+OpenChain AI SBOM Compliance Guide.
+
+Scope:
+- All AI systems, models, and services distributed externally.
+- Pre-trained models and datasets brought in from outside.
+- Activities that release internal models to the outside.
+
+## 2. Model/Dataset License Classification
+
+Licenses for models and datasets being brought in are reviewed against the
+classification below. A license not in this classification goes through review
+by the AI governance lead before being brought in.
+
+- Allowed (commercial use permitted, no behavioral restrictions): Apache-2.0, MIT, BSD, CC-BY-4.0, etc.
+- Conditionally allowed (use after review): licenses with restrictions on purpose or
+  scale of use, such as the Llama Community License, the Gemma Terms of Use,
+  and the OpenRAIL family
+- Prohibited (non-commercial only, etc.): using a CC-BY-NC dataset in a commercial product, etc.
+</code></pre><hr><h3 id=312-policy-awareness-procedure>3.1.2 Policy Awareness Procedure</h3><p><strong>How to Comply</strong></p><p>Writing the policy document alone is not enough. A communication procedure must be established
+and documented so that program participants actually become aware the policy exists. This
+communication procedure document itself is verification material 3.1.2. Because AI systems
+involve not just developers but also data staff, legal, and security, design the channel so the
+policy reaches all of them.</p><p>Include AI SBOM policy guidance in onboarding for new hires, and use internal wiki postings and
+email notices for existing employees. To prove that the policy was communicated, retain evidence
+such as notice history and training completion records for at least three years.</p><p><strong>Considerations</strong></p><ul><li><strong>Use multiple channels</strong>: Use two or more channels, such as an internal wiki, email notices,
+and onboarding training.</li><li><strong>Include AI-related roles</strong>: Include dataset owners and model operators as recipients as well.</li><li><strong>When the policy changes</strong>: Have a separate procedure to notify participants of changes
+immediately.</li><li><strong>Retain evidence</strong>: Keep notice history and training completion certificates for at least
+three years.</li></ul><p><strong>Sample</strong></p><p>Below is a sample policy communication notice email. Retaining the send history serves as
+evidence for verification material 3.1.2.</p><pre tabindex=0><code>Subject: [AI Compliance] AI SBOM Policy Notice and Acknowledgment Request
+
+To: Employees involved in AI system development, operations, and data
+From: AI Compliance Officer
+
+Hello,
+
+Our AI SBOM compliance policy has been established (or revised).
+All employees involved in using, bringing in, or deploying AI models and
+datasets are asked to review and familiarize themselves with the policy
+document below.
+
+- Policy document: [internal portal link]
+- Key contents: model/dataset license classification, license obligation
+             review procedure, AI SBOM management, transparency obligation response
+- Policy version: v1.0 (effective date: YYYY-MM-DD)
+
+Contact: AI Compliance Officer (ai-compliance@company.com)
+</code></pre><h2 id=5-references>5. References</h2><ul><li>License obligation review procedure: <a href=/en/docs/ai-sbom_guide/2-ai-extension/1-license-obligations/>3.5 License Obligations</a></li><li>Basic structure of an open source policy: <a href=https://openchain-project.github.io/OpenChain-KWG/guide/iso5230_guide/1-program-foundation/1-policy/>ISO/IEC 5230 Compliance Guide — 3.1.1 Policy</a></li><li>AI license management strategy: <a href=https://openchain-project.github.io/OpenChain-KWG/guide/opensource_for_enterprise/7-ai-compliance/>Enterprise Open Source Management Guide — AI Compliance</a></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-460dd9f45d165f589cf555d6e2d7071d>2 - 3.2 Competence</h1><div class=lead>Explains how to define the roles and responsibilities of an AI SBOM compliance program and identify and assess the competence required for each role.</div><div class="alert alert-info" role=alert><div class="h4 alert-heading" role=heading>Implementation Phase</div><p>This clause is built during <strong>Phase 1 — Program Foundation</strong>.
+<a href=/en/docs/ai-sbom_guide/#phased-implementation-roadmap>View the full implementation roadmap</a></p></div><h2 id=1-clause-overview>1. Clause Overview</h2><p>If policy (3.1) defines what must be done, competence ensures there are people who can do it. AI
+SBOM compliance demands broader knowledge than open source compliance, which dealt only with code
+licensing. It requires judgment on the licensing of model weights and datasets, interpreting
+model cards, emerging AI regulation, and the usage restrictions of non-standard licenses.</p><p>3.2 requires identifying the roles and responsibilities that affect the program&rsquo;s performance,
+determining the competence each role needs, and ensuring participants have it. The specification
+specifies competence in governance, security, safety, privacy, development, and supplier
+management functions where relevant to the use case.</p><h2 id=2-activities-to-perform>2. Activities to Perform</h2><ul><li>Identify and document the roles that affect the program&rsquo;s performance and their responsibilities.</li><li>Define the competence required for each role (governance, security, safety, privacy,
+development, supplier management).</li><li>Add AI-specific competence (model/dataset licensing, model card interpretation, AI regulation)
+to the role-level competence definitions.</li><li>Ensure participants are competent on the basis of education, training, and experience.</li><li>Retain competence assessment evidence, and periodically check that the list stays up to date.</li></ul><h2 id=3-requirement-and-verification-material>3. Requirement and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.2</td><td>The organization shall identify the roles and responsibilities that affect the program&rsquo;s execution and effectiveness, determine the competence required for each role, and ensure participants have it. Where relevant to the use case, competence shall be secured in the governance, security, safety, privacy, development, and supplier management functions.</td><td><strong>3.2.1</strong> A documented list of roles with the responsibilities of each participant<br><strong>3.2.2</strong> A document identifying the competence for each role<br><strong>3.2.3</strong> Documented evidence of assessed competence for each participant (including periodic checks to keep the list up to date)</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.2 Competence</strong>
+The organisation shall identify the roles and the corresponding responsibilities of those roles
+that affect the performance and effectiveness of the program; determine the necessary competence
+of program participants fulfilling each role (Governance, Security, Safety, Privacy, Development,
+Supplier management if relevant to the use case); ensure that program participants are competent on
+the basis of appropriate education, training, and/or experience; and retain appropriate documented
+information as evidence of competence.</p><p><strong>Verification material(s):</strong></p><ul><li>A documented list of roles with corresponding responsibilities for the different participants in
+the program.</li><li>A document that identifies the competencies for each role.</li><li>Documented evidence of assessed competence for each program participant, with periodic checks to
+keep the list up-to-date.</li></ul></blockquote></details><h2 id=4-how-to-comply-with-each-verification-material-with-samples>4. How to Comply with Each Verification Material, with Samples</h2><h3 id=321-list-of-roles-and-responsibilities>3.2.1 List of Roles and Responsibilities</h3><p><strong>How to Comply</strong></p><p>Document the roles involved in the program and the responsibilities of each. In addition to the
+usual open source roles, an AI SBOM program includes an AI governance role and roles that review
+models and datasets. Writing responsibilities out specifically makes the later work of defining
+competence (3.2.2) and assigning accountability (3.8.4) clearer.</p><p><strong>Sample</strong></p><pre tabindex=0><code>| Role | Responsibility |
+|------|------|
+| AI Governance Lead | Approves the framework, determines regulatory obligations, chairs periodic reviews |
+| AI SBOM Verification Owner | Generates, reviews, and approves the AI SBOM; reflects inbound materials |
+| License Review Owner | Determines licensing obligations for models, datasets, and the model tree |
+| Data Owner | Manages the provenance and licensing of training/validation datasets |
+</code></pre><hr><h3 id=322-competence-required-per-role>3.2.2 Competence Required per Role</h3><p><strong>How to Comply</strong></p><p>Define the competence each role must have. Of the six functions the specification lists
+(governance, security, safety, privacy, development, supplier management), select the ones that
+apply to the role and use case, and add AI-specific competence. For example, the license review
+owner needs the competence to interpret the usage restrictions of non-standard licenses (Llama
+Community, OpenRAIL).</p><p><strong>Sample</strong></p><pre tabindex=0><code>| Role | Required Competence |
+|------|----------|
+| AI Governance Lead | Governance, understanding of AI regulation (EU AI Act, Korea&#39;s AI Basic Act), risk management |
+| AI SBOM Verification Owner | Development, SPDX/CycloneDX formats, model card interpretation, generation tool operation |
+| License Review Owner | Supplier management, interpreting open source and non-standard licenses, model tree tracing |
+| Data Owner | Privacy, dataset licensing, provenance management |
+</code></pre><hr><h3 id=323-competence-assessment-evidence>3.2.3 Competence Assessment Evidence</h3><p><strong>How to Comply</strong></p><p>Assess whether each participant actually has the competence their role requires, and retain the
+evidence. Training completion, qualifications, and hands-on experience serve as the basis. Since
+AI regulation and licensing change quickly, periodically check the list to keep it current.</p><p><strong>Considerations</strong></p><ul><li><strong>Diversify the basis for assessment</strong>: Use not only training completion but also practical
+work products (e.g., license review records) as competence evidence.</li><li><strong>Periodic checks</strong>: Re-review competence requirements when new regulation takes effect or new
+license types emerge.</li><li><strong>Fill gaps</strong>: When an assessment reveals a competence gap, close it with training or outside
+expertise (<a href=/en/docs/ai-sbom_guide/3-relevant-tasks/2-resourced/>3.8 Effectively Resourced</a>).</li></ul><p><strong>Sample (Competence Assessment Log)</strong></p><pre tabindex=0><code>| Participant (Role) | Role | Assessment Item | Basis | Result | Assessment Date |
+|-------------|------|----------|----------|------|--------|
+| Lee, OO | AI SBOM Verification Owner | Writing CycloneDX ML-BOM | Internal training + work products | Met | 2026-03-10 |
+| Park, OO | License Review Owner | Interpreting non-standard licenses | 5 years of OSS legal experience | Met | 2026-03-10 |
+</code></pre><h2 id=5-references>5. References</h2><ul><li>Procedure for attaching resources to roles: <a href=/en/docs/ai-sbom_guide/3-relevant-tasks/2-resourced/>3.8 Effectively Resourced</a></li><li>Securing participant awareness: <a href=/en/docs/ai-sbom_guide/1-program-foundation/3-awareness/>3.3 Awareness</a></li><li>ISO/IEC 5230 competence model: <a href=https://openchain-project.github.io/OpenChain-KWG/guide/iso5230_guide/1-program-foundation/2-competence/>ISO/IEC 5230 Compliance Guide — 3.1.2 Competence</a></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-f595f4bf506e0365c6bb916f96f82500>3 - 3.3 Awareness</h1><div class=lead>Explains how to ensure that program participants are aware of the AI SBOM policy and objectives, their own contribution, and the implications of non-conformance.</div><div class="alert alert-info" role=alert><div class="h4 alert-heading" role=heading>Implementation Stage</div><p>This clause is established during <strong>Phase 1 — Program Foundation</strong>.
+<a href=/en/docs/ai-sbom_guide/#phased-implementation-roadmap>View the full implementation roadmap</a></p></div><h2 id=1-clause-overview>1. Clause Overview</h2><p>If competence (3.2) addresses &ldquo;can they do it,&rdquo; awareness addresses &ldquo;do they know why they should.&rdquo;
+It is not enough for participants to merely know that a policy exists. Compliance functions in
+practice only when participants also know how their own work contributes to the program and what
+happens if they fail to follow it.</p><p>3.3 requires ensuring that program participants are aware of four things: the AI SBOM policy,
+relevant business objectives, their own contribution to the program&rsquo;s effectiveness, and the
+implications of not following the program&rsquo;s requirements. In AI, the implications of
+non-conformance extend beyond copyright disputes to regulatory violations and breaches of usage
+restrictions, so participants must clearly recognize this.</p><h2 id=2-required-activities>2. Required Activities</h2><ul><li>Ensure participants know the AI SBOM policy and where to find it.</li><li>Communicate relevant business objectives (building trust, regulatory compliance, meeting
+supply-chain requirements).</li><li>Inform participants how their own work contributes to the program.</li><li>Inform participants of the implications of non-conformance (regulatory violations, contract
+termination, breaches of usage restrictions).</li><li>Assess participants&rsquo; awareness and preserve evidence of that assessment.</li></ul><h2 id=3-requirements-and-verification-material>3. Requirements and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement (EN)</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.3</td><td>The organisation shall ensure that the program participants are aware of the AI SBOM policy, relevant business objectives, their contribution to the effectiveness of the program, and the implications of not following the Program&rsquo;s requirements.</td><td><strong>3.3.1</strong> Documented evidence of assessed awareness for the program participants, which should include: the program&rsquo;s objectives; one&rsquo;s contribution within the program; and the implications of program non-conformance</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.3 Awareness</strong>
+The organisation shall ensure that the program participants are aware of: the AI SBOM policy;
+relevant business objectives; their contribution to the effectiveness of the program; and the
+implications of not following the Program&rsquo;s requirements.</p><p><strong>Verification material(s):</strong></p><ul><li>Documented evidence of assessed awareness for the program participants, which should include: the
+program&rsquo;s objectives; one&rsquo;s contribution within the program; and the implications of program
+non-conformance.</li></ul></blockquote></details><h2 id=4-compliance-methods-and-samples-by-verification-material>4. Compliance Methods and Samples by Verification Material</h2><h3 id=331-evidence-of-assessed-participant-awareness>3.3.1 Evidence of assessed participant awareness</h3><p><strong>Compliance Method</strong></p><p>Assess whether participants actually understand the four awareness elements and keep evidence of
+that assessment. If policy dissemination (3.1.2) proves that participants &ldquo;were informed,&rdquo; the
+awareness assessment proves that they &ldquo;understood.&rdquo; Assess through post-training comprehension
+quizzes, acknowledgment signatures, or interviews. Make sure the assessment does not omit the three
+elements the standard specifies in its verification material: the program&rsquo;s objectives, one&rsquo;s own
+contribution, and the implications of non-conformance.</p><p><strong>Considerations</strong></p><ul><li><strong>Cover all four elements</strong>: In addition to policy awareness, include objectives, contribution,
+and the implications of non-conformance in the assessment. Omitting even one can be flagged during
+a certification audit.</li><li><strong>Emphasize AI-specific implications</strong>: Include regulatory violations (the EU Artificial
+Intelligence Act, Korea&rsquo;s AI Basic Act) and breaches of non-standard license usage restrictions
+among the implications of non-conformance.</li><li><strong>Differentiate by role</strong>: Data staff and developers contribute differently, so tailor the
+assessment content to each role.</li><li><strong>Retain evidence</strong>: Preserve assessment results and acknowledgment signatures for use as
+verification material.</li></ul><p><strong>Sample (Awareness Assessment Log)</strong></p><pre tabindex=0><code>| Participant (Role) | Policy Awareness | Objectives Awareness | Contribution Awareness | Non-conformance Awareness | Assessment Method | Assessment Date |
+|-------------|:--------:|:--------:|:--------:|:---------------:|----------|--------|
+| Lee OO (Development) | Met | Met | Met | Met | Post-training check | 2026-03-10 |
+| Park OO (Data) | Met | Met | Met | Met | Interview + signature | 2026-03-11 |
+</code></pre><p>Sample acknowledgment signature form:</p><pre tabindex=0><code>I have been informed of and understand our company&#39;s AI SBOM compliance policy, the program&#39;s
+objectives, my own contribution, and the implications of non-conformance (regulatory violations,
+license usage restriction breaches, contract termination).
+
+Name: ____  Role: ____  Signature: ____  Date: ____
+</code></pre><h2 id=5-see-also>5. See Also</h2><ul><li>Policy and dissemination procedure: <a href=/en/docs/ai-sbom_guide/1-program-foundation/1-policy/>3.1 Policy</a></li><li>Competence by role: <a href=/en/docs/ai-sbom_guide/1-program-foundation/2-competence/>3.2 Competence</a></li><li>ISO/IEC 5230 awareness example: <a href=https://openchain-project.github.io/OpenChain-KWG/guide/iso5230_guide/1-program-foundation/3-awareness/>ISO/IEC 5230 Compliance Guide — 3.1.3 Awareness</a></li></ul></div><div class=td-content style=page-break-before:always><h1 id=pg-68aa1a4fa425e5dde72eaf14fc580179>4 - 3.4 Program Scope</h1><div class=lead>Explains how to clearly declare the scope and limits to which the AI SBOM compliance program applies.</div><div class="alert alert-info" role=alert><div class="h4 alert-heading" role=heading>Implementation Stage</div><p>This clause is established during <strong>Phase 1 — Program Foundation</strong>.
+<a href=/en/docs/ai-sbom_guide/#phased-implementation-roadmap>View the full implementation roadmap</a></p></div><h2 id=1-clause-overview>1. Clause Overview</h2><p>Program scope determines how far compliance extends. If the scope is ambiguous, it becomes unclear
+which AI systems need an SBOM and which models&rsquo; licenses need review. Scope must be declared first
+so that every subsequent clause knows what it applies to.</p><p>3.4 requires declaring the scope of application for each program. Scope can differ by organization.
+Some organizations cover a single product line; others cover an entire department or the whole
+organization. In AI, scope determination covers not only self-developed models but also externally
+sourced models and datasets, and the external release of in-house models.</p><h2 id=2-required-activities>2. Required Activities</h2><ul><li>Define what the program applies to (externally deployed AI systems, externally sourced models and
+datasets, external release of in-house models, and so on).</li><li>Record what is excluded from application and the rationale for the exclusion.</li><li>Keep the scope statement consistent with the scope of application in the policy document.</li><li>Review and update the scope periodically as the business environment changes.</li></ul><h2 id=3-requirements-and-verification-material>3. Requirements and Verification Material</h2><table><thead><tr><th>Clause</th><th>Requirement (EN)</th><th>Verification Material</th></tr></thead><tbody><tr><td>3.4</td><td>Different programs may be governed by different levels of scope. For example, a program could govern a single product line, an entire department, or an entire organisation. The scope designation needs to be declared for each program.</td><td><strong>3.4.1</strong> A written statement that clearly defines the scope and limits of the program</td></tr></tbody></table><details><summary>View original English text</summary><blockquote><p><strong>3.4 Program scope</strong>
+Different programs may be governed by different levels of scope. For example, a program could govern
+a single product line, an entire department, or an entire organisation. The scope designation needs
+to be declared for each program.</p><p><strong>Verification material(s):</strong></p><ul><li>A written statement that clearly defines the scope and limits of the program.</li></ul></blockquote></details><h2 id=4-compliance-methods-and-samples-by-verification-material>4. Compliance Methods and Samples by Verification Material</h2><h3 id=341-program-scope-statement>3.4.1 Program scope statement</h3><p><strong>Compliance Method</strong></p><p>State the program&rsquo;s scope and limits in writing. Clearly note what is included, what is excluded,
+and if excluded, on what grounds. An AI SBOM program becomes clearer when it declares what it
+applies to by breaking it down into material types and activities. The table below is an example of
+organizing scope.</p><p><strong>Table 1.</strong> Example of an AI SBOM program scope declaration</p><table><thead><tr><th>Category</th><th>Applies</th><th>Notes</th></tr></thead><tbody><tr><td>AI systems, models, and services deployed externally</td><td>Yes</td><td>AI SBOM generation and license review obligations</td></tr><tr><td>Pretrained models sourced externally</td><td>Yes</td><td>Reflected in the AI SBOM as inbound material</td></tr><tr><td>Datasets sourced externally</td><td>Yes</td><td>License and provenance review</td></tr><tr><td>External release of in-house models</td><td>Yes</td><td>Review of public-release license and transparency obligations</td></tr><tr><td>Internal experimental models (not deployed externally)</td><td>Conditionally excluded</td><td>Applicability determined by separate review</td></tr></tbody></table><p><strong>Considerations</strong></p><ul><li><strong>Consistency with policy</strong>: The scope statement should not conflict with the scope of
+application in <a href=/en/docs/ai-sbom_guide/1-program-foundation/1-policy/>3.1 Policy</a>.</li><li><strong>Grounds for exclusion</strong>: Record the rationale for excluded items. Even an internal
+experimental model falls into scope once it moves to external deployment, so put a review
+procedure in place for that transition point. <em>([Recommendation of this guide])</em></li><li><strong>Periodic review</strong>: Update the scope whenever a new product line or new AI service is
+introduced.</li></ul><p><strong>Sample (Scope Statement)</strong></p><pre tabindex=0><code>## AI SBOM Compliance Program Scope
+
+### Applies To
+This program applies to all AI systems, models, and services that the company deploys
+externally, and to pretrained models and datasets sourced externally. It also covers
+activities that release in-house models externally.
+
+### Excluded
+Models used solely for internal experimentation or research and not deployed externally
+are excluded. However, if such a model transitions to external deployment, it is brought
+into scope through the intake review procedure.
+
+### Review Cycle
+Scope is reviewed and updated at least once a year, or as the business environment
+changes.
+</code></pre><h2 id=5-see-also>5. See Also</h2><ul><li>Scope of application in the policy: <a href=/en/docs/ai-sbom_guide/1-program-foundation/1-policy/>3.1 Policy</a></li><li>AI SBOM for material within scope: <a href=/en/docs/ai-sbom_guide/2-ai-extension/3-ai-sbom/>3.9 AI SBOM</a></li><li>ISO/IEC 5230 scope example: <a href=https://openchain-project.github.io/OpenChain-KWG/guide/iso5230_guide/1-program-foundation/4-scope/>ISO/IEC 5230 Compliance Guide — 3.1.4 Program Scope</a></li></ul></div></main></div></div><footer class="td-footer row d-print-none"><div class=container-fluid><div class="row mx-md-2"><div class="td-footer__left col-6 col-sm-4 order-sm-1"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title="User mailing list" aria-label="User mailing list"><a href=mailto:hakssung@gmail.com aria-label="User mailing list" target=_blank rel=noopener><i class="fa fa-envelope"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Twitter aria-label=Twitter><a href=https://twitter.com/haksungjang aria-label=Twitter target=_blank rel=noopener><i class="fab fa-twitter"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Facebook aria-label=Facebook><a href=https://www.facebook.com/haksung.jang aria-label=Facebook target=_blank rel=noopener><i class="fab fa-facebook"></i></a></li></ul></div><div class="td-footer__right col-6 col-sm-4 order-sm-3"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title=GitHub aria-label=GitHub><a href=https://github.com/haksungjang aria-label=GitHub target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=LinkedIn aria-label=LinkedIn><a href=https://linkedin.com/in/haksung aria-label=LinkedIn target=_blank rel=noopener><i class="fab fa-linkedin"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="Developer mailing list" aria-label="Developer mailing list"><a href=mailto:haksung@sk.com aria-label="Developer mailing list" target=_blank rel=noopener><i class="fa fa-envelope"></i></a></li></ul></div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2"><span class=td-footer__copyright>&copy;
+2018&ndash;2026
+<span class=td-footer__authors>장학성 | <a href=https://creativecommons.org/licenses/by/4.0>CC BY 4.0</a> |</span></span><span class=td-footer__all_rights_reserved>All Rights Reserved</span></div></div></div></footer></div><script src=/js/main.min.a849afb56344a53e8045345f73462783658f04df59b2048fb32e1223ea12387b.js integrity="sha256-qEmvtWNEpT6ARTRfc0Yng2WPBN9ZsgSPsy4SI+oSOHs=" crossorigin=anonymous></script><script defer src=/js/click-to-copy.min.24576ff9fe9f85bb1948ecae52ce227cafce53757a3ad52301f2a79260f6b97d.js integrity="sha256-JFdv+f6fhbsZSOyuUs4ifK/OU3V6OtUjAfKnkmD2uX0=" crossorigin=anonymous></script><script src=/js/tabpane-persist.js></script></body></html>

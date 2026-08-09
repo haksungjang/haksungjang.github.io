@@ -25,3 +25,4 @@
 ## Site locales
 
 - [한국어](https://haksungjang.github.io/index.md)
+- [English](https://haksungjang.github.io/en/index.md)
