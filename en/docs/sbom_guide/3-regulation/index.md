@@ -52,7 +52,7 @@ procurement criterion and technical reference. Nonetheless, because the vast fed
 market operates on this basis, it functions as a de facto requirement for companies that supply
 software to the US government.
 
-![The lineage of US SBOM policy, starting from Executive Order 14028 and the NTIA minimum elements in 2021, transferring to CISA, and branching into the 2024 Framing Third Edition and the 2025 draft revision of the minimum elements](./us-policy-lineage.png)
+![The lineage of US SBOM policy, starting from Executive Order 14028 and the NTIA minimum elements in 2021, transferring to CISA, and branching into the 2024 Framing Third Edition and the 2025 draft revision of the minimum elements](./us-policy-lineage-en.png)
 
 **Figure 1.** Lineage of US SBOM policy documents *(source: Executive Order 14028, NTIA 2021, CISA
 2024 and 2025; collected June 14, 2026)*

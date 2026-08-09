@@ -35,7 +35,7 @@ by a system of fines.
 
 ## Implementation Timeline
 
-![The phased EU CRA implementation timeline, running from publication and entry into force in 2024, through the reporting obligation in September 2026, to full application in December 2027](./cra-timeline.png)
+![The phased EU CRA implementation timeline, running from publication and entry into force in 2024, through the reporting obligation in September 2026, to full application in December 2027](./cra-timeline-en.png)
 
 **Figure 1.** Phased implementation timeline of the EU CRA *(source: Regulation (EU) 2024/2847;
 collected June 14, 2026)*

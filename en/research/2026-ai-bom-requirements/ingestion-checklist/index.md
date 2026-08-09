@@ -79,7 +79,7 @@ The following are checked additionally when the risk level is high or the use ca
 
 ## 7. Ingestion Determination
 
-![A flow that passes through five required checks in sequence before splitting into ingestion approved and ingestion held. Any one of license conflict, unclear provenance, undisclosed sensitive data, or an unacceptable vulnerability results in a hold](./ingestion-decision.png)
+![A flow that passes through five required checks in sequence before splitting into ingestion approved and ingestion held. Any one of license conflict, unclear provenance, undisclosed sensitive data, or an unacceptable vulnerability results in a hold](./ingestion-decision-en.png)
 
 **Figure 5.** Ingestion determination flow *(synthesized from research)*
 

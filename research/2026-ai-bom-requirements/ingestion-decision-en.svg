@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="536" viewBox="0 0 780 536">
+  <defs>
+    <filter id="i1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="ia" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="780" height="536" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <text x="240" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">FIVE MANDATORY CHECKS</text>
+
+    <!-- 1 -->
+    <rect x="240" y="42" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="62" font-size="13.5" fill="#111827">AI BOM presence and format</text>
+    <text x="262" y="80" font-size="12" fill="#6b7280">SPDX 3.0 or CycloneDX 1.6</text>
+    <line x1="390" y1="88" x2="390" y2="98" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 2 -->
+    <rect x="240" y="104" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="124" font-size="13.5" fill="#111827">Identity and version</text>
+    <text x="262" y="142" font-size="12" fill="#6b7280">Name, identifier, version, producer</text>
+    <line x1="390" y1="150" x2="390" y2="160" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 3 -->
+    <rect x="240" y="166" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="186" font-size="13.5" fill="#111827">Licensing</text>
+    <text x="262" y="204" font-size="12" fill="#6b7280">Model and dataset licenses, use terms</text>
+    <line x1="390" y1="212" x2="390" y2="222" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 4 -->
+    <rect x="240" y="228" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="248" font-size="13.5" fill="#111827">Data lawfulness and risk</text>
+    <text x="262" y="266" font-size="12" fill="#6b7280">Dataset provenance, sensitivity</text>
+    <line x1="390" y1="274" x2="390" y2="284" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 5 -->
+    <rect x="240" y="290" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="310" font-size="13.5" fill="#111827">Security risk</text>
+    <text x="262" y="328" font-size="12" fill="#6b7280">Vulnerability references, model file checks</text>
+
+    <!-- branches -->
+    <path d="M 390 336 L 390 356 L 190 356 L 190 378" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+    <path d="M 390 356 L 590 356 L 590 378" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- cleared -->
+    <rect x="40" y="386" width="300" height="96" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="62" y="414" font-size="15" fill="#111827">Cleared for adoption</text>
+    <text x="62" y="440" font-size="12.5" fill="#6b7280">All five checks satisfied</text>
+    <text x="62" y="462" font-size="12.5" fill="#6b7280">Record identifier, version, decision date</text>
+
+    <!-- on hold (highlight) -->
+    <rect x="440" y="386" width="300" height="96" rx="8" fill="#fff" stroke="#c2410c" stroke-width="1.8" filter="url(#i1)"/>
+    <text x="462" y="414" font-size="15" font-weight="600" fill="#c2410c">Adoption on hold</text>
+    <text x="462" y="438" font-size="12" fill="#6b7280">License conflict · unclear provenance</text>
+    <text x="462" y="456" font-size="12" fill="#6b7280">Unmarked sensitive data · open vulnerability</text>
+    <text x="462" y="474" font-size="12" fill="#c2410c">Any one of the four puts it on hold</text>
+
+    <!-- note -->
+    <line x1="40" y1="502" x2="740" y2="502" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="522" font-size="12.5" fill="#4b5563">On hold, ask the supplier to remedy it or look at another model. The record feeds reassessment and traceability.</text>
+  </g>
+</svg>

@@ -87,7 +87,7 @@ regulatory timeline and broader context are managed together in the regulatory m
 The figure below shows the review flow that derives transparency obligations from a material's
 intended use.
 
-![A flow that identifies applicable regulations, determines whether transparency obligations and downstream disclosure issues exist, and reflects them in the AI SBOM and model card](./transparency-decision.png)
+![A flow that identifies applicable regulations, determines whether transparency obligations and downstream disclosure issues exist, and reflects them in the AI SBOM and model card](./transparency-decision-en.png)
 
 **Figure 1.** Transparency obligation review flow
 

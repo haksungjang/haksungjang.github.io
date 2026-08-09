@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="316" viewBox="0 0 820 316">
+  <defs>
+    <filter id="o1" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="oa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="316" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">THREE KINDS OF TOOLS SPLIT THE WORK</text>
+
+    <rect x="40" y="60" width="230" height="120" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#o1)"/>
+    <text x="60" y="88" font-size="15" fill="#111827">Generate</text>
+    <text x="60" y="116" font-size="12.5" fill="#6b7280">Scan source, builds and</text>
+    <text x="60" y="134" font-size="12.5" fill="#6b7280">images to write an SBOM</text>
+    <text x="60" y="162" font-size="12.5" fill="#9ca3af">Syft · cdxgen</text>
+
+    <line x1="270" y1="120" x2="298" y2="120" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#oa)"/>
+
+    <rect x="306" y="60" width="230" height="120" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#o1)"/>
+    <text x="326" y="88" font-size="15" fill="#111827">Manage</text>
+    <text x="326" y="116" font-size="12.5" fill="#6b7280">Store and version</text>
+    <text x="326" y="134" font-size="12.5" fill="#6b7280">Monitor the portfolio</text>
+    <text x="326" y="162" font-size="12.5" fill="#c2410c">Dependency-Track · SW360</text>
+
+    <line x1="536" y1="108" x2="564" y2="108" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#oa)"/>
+    <path d="M 564 148 L 536 148" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#oa)"/>
+
+    <rect x="572" y="60" width="230" height="120" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#o1)"/>
+    <text x="592" y="88" font-size="15" fill="#111827">Match and scan</text>
+    <text x="592" y="116" font-size="12.5" fill="#6b7280">Match the SBOM against</text>
+    <text x="592" y="134" font-size="12.5" fill="#6b7280">vulnerability databases</text>
+    <text x="592" y="162" font-size="12.5" fill="#9ca3af">Grype · Trivy</text>
+
+    <text x="551" y="200" text-anchor="middle" font-size="11.5" fill="#9ca3af">New findings go back to management</text>
+
+    <line x1="40" y1="256" x2="780" y2="256" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="276" font-size="12.5" fill="#4b5563">Managing and matching go back and forth. Each new vulnerability sends the stored SBOM through matching again.</text>
+    <text x="40" y="298" font-size="12" fill="#9ca3af">One tool often covers several roles. The names here are representative examples.</text>
+  </g>
+</svg>

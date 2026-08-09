@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1686" height="1526" viewBox="0 0 1686 1526" font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+  <rect width="1686" height="1526" fill="#ffffff"/>
+
+  <!-- column backgrounds -->
+  <rect x="310" y="125" width="345" height="1401" fill="#dfeacf"/>
+  <rect x="655" y="125" width="350" height="1401" fill="#ccd8ee"/>
+  <rect x="1005" y="125" width="340" height="1401" fill="#f7f7f7"/>
+  <rect x="1345" y="125" width="341" height="1401" fill="#eee2c8"/>
+
+  <!-- headers -->
+  <rect x="0" y="0" width="310" height="125" fill="#3d76b8"/>
+  <text x="155" y="52" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">New vulnerability</text>
+  <text x="155" y="84" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">response process</text>
+
+  <rect x="310" y="0" width="1376" height="125" fill="#57912f"/>
+  <text x="998" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">R&amp;R by stage and organization</text>
+  <text x="482" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Business unit</text>
+  <text x="830" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Open Source Program Manager</text>
+  <text x="1175" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Infrastructure</text>
+  <text x="1515" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Security</text>
+
+  <!-- start -->
+  <circle cx="155" cy="215" r="58" fill="#c0761f" stroke="#94590f" stroke-width="2"/>
+  <text x="155" y="200" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">New flaw</text>
+  <text x="155" y="222" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">disclosed</text>
+  <line x1="155" y1="273" x2="155" y2="340" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <!-- steps -->
+  <rect x="20" y="345" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="392" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">1. Monitoring</text>
+  <line x1="155" y1="421" x2="155" y2="450" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="455" width="270" height="185" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="556" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">2. First response</text>
+  <line x1="155" y1="640" x2="155" y2="670" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="675" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="722" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">3. Issue resolution</text>
+  <line x1="155" y1="751" x2="155" y2="775" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="780" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="827" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">4. Review</text>
+  <line x1="155" y1="856" x2="155" y2="885" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="890" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="937" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">5. Approval</text>
+  <line x1="155" y1="966" x2="155" y2="990" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="995" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="1042" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">6. Registration</text>
+  <line x1="155" y1="1071" x2="155" y2="1100" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="1105" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="1152" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">7. Notice</text>
+  <line x1="155" y1="1181" x2="155" y2="1205" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <rect x="20" y="1210" width="270" height="76" rx="10" fill="#fdeec8" stroke="#d2a63c" stroke-width="2"/>
+  <text x="155" y="1257" text-anchor="middle" font-size="23" font-weight="700" fill="#1f2937">8. Release</text>
+  <line x1="155" y1="1286" x2="155" y2="1345" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+
+  <!-- end -->
+  <circle cx="155" cy="1408" r="58" fill="#c0761f" stroke="#94590f" stroke-width="2"/>
+  <text x="155" y="1416" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Case closed</text>
+
+  <!-- infrastructure monitoring and the alert arrow -->
+  <rect x="1040" y="345" width="270" height="76" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1175" y="392" text-anchor="middle" font-size="20" fill="#1f2937">Monitoring</text>
+  <path d="M 1036 383 L 482 383 L 482 450" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#sa)"/>
+  <text x="830" y="330" text-anchor="middle" font-size="19" fill="#1f2937">Alert on a new vulnerability</text>
+  <text x="830" y="356" text-anchor="middle" font-size="19" fill="#1f2937">(Jira ticket created)</text>
+
+  <!-- business unit -->
+  <rect x="347" y="455" width="270" height="76" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="482" y="490" text-anchor="middle" font-size="20" fill="#1f2937">Confirm the issue, plan</text>
+  <text x="482" y="516" text-anchor="middle" font-size="20" fill="#1f2937">the response</text>
+
+  <rect x="347" y="565" width="270" height="76" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="482" y="612" text-anchor="middle" font-size="20" fill="#1f2937">Notify covered customers</text>
+
+  <rect x="347" y="675" width="270" height="76" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="482" y="722" text-anchor="middle" font-size="20" fill="#1f2937">Fix the vulnerability</text>
+
+  <rect x="347" y="1105" width="270" height="76" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="482" y="1140" text-anchor="middle" font-size="20" fill="#1f2937">Apply the open source</text>
+  <text x="482" y="1166" text-anchor="middle" font-size="20" fill="#1f2937">notice to the product</text>
+
+  <rect x="347" y="1210" width="270" height="76" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="482" y="1245" text-anchor="middle" font-size="20" fill="#1f2937">Release the software</text>
+  <text x="482" y="1271" text-anchor="middle" font-size="20" fill="#1f2937">with the fix</text>
+
+  <!-- OSPO -->
+  <rect x="695" y="1105" width="270" height="76" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="830" y="1152" text-anchor="middle" font-size="20" fill="#1f2937">Hand over the notice</text>
+
+  <!-- infrastructure -->
+  <rect x="1040" y="675" width="270" height="76" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1175" y="710" text-anchor="middle" font-size="20" fill="#1f2937">Analyze open source,</text>
+  <text x="1175" y="736" text-anchor="middle" font-size="20" fill="#1f2937">check whether it is fixed</text>
+
+  <rect x="1040" y="995" width="270" height="76" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1175" y="1042" text-anchor="middle" font-size="20" fill="#1f2937">Register the BOM</text>
+
+  <rect x="1040" y="1105" width="270" height="76" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1175" y="1152" text-anchor="middle" font-size="20" fill="#1f2937">Update the release site</text>
+
+  <rect x="1040" y="1210" width="270" height="76" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1175" y="1245" text-anchor="middle" font-size="20" fill="#1f2937">Publish the identified risk</text>
+  <text x="1175" y="1271" text-anchor="middle" font-size="20" fill="#1f2937">(post it on the site)</text>
+
+  <!-- security -->
+  <rect x="1380" y="455" width="270" height="76" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1515" y="502" text-anchor="middle" font-size="20" fill="#1f2937">Vulnerability response guide</text>
+
+  <rect x="1380" y="780" width="270" height="76" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1515" y="827" text-anchor="middle" font-size="20" fill="#1f2937">Review whether it is fixed</text>
+
+  <rect x="1380" y="890" width="270" height="76" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1515" y="925" text-anchor="middle" font-size="20" fill="#1f2937">Approve the fix or leaving</text>
+  <text x="1515" y="951" text-anchor="middle" font-size="20" fill="#1f2937">it as it stands</text>
+
+  <rect x="1380" y="1210" width="270" height="76" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1515" y="1257" text-anchor="middle" font-size="20" fill="#1f2937">Identify the risk</text>
+</svg>

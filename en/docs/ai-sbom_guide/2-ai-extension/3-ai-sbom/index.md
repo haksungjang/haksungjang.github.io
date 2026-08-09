@@ -78,7 +78,7 @@ license actually fits the use case, or whether something is missing or misstated
 
 The figure below shows the flow from AI SBOM generation to archiving.
 
-![Procedure that generates an AI SBOM, checks inbound material inclusion and accuracy, then approves and archives it. Omissions and inaccuracies loop back to an earlier stage](./aisbom-lifecycle.png)
+![Procedure that generates an AI SBOM, checks inbound material inclusion and accuracy, then approves and archives it. Omissions and inaccuracies loop back to an earlier stage](./aisbom-lifecycle-en.png)
 
 **Figure 1.** Procedure from AI SBOM generation to archiving
 

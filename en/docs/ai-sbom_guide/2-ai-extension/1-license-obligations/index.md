@@ -82,7 +82,7 @@ non-standard licenses to legal or governance review.
 The figure below shows the decision flow for determining license obligations as materials come
 in.
 
-![Decision flow that splits incoming AI materials into code and models, identifies their licenses, determines whether they conflict with the intended use, and records the result in the AI SBOM](./license-decision.png)
+![Decision flow that splits incoming AI materials into code and models, identifies their licenses, determines whether they conflict with the intended use, and records the result in the AI SBOM](./license-decision-en.png)
 
 **Figure 1.** Decision flow for license obligation review
 

@@ -40,7 +40,7 @@ The US CISA document *Types of Software Bill of Materials (SBOM)* divides SBOM i
 aligned with the stages of the Software Development Life Cycle (SDLC). For the same product, the
 information captured and its accuracy differ depending on when the SBOM was generated.
 
-![The six SBOM stages — Design, Source, Build, Analyzed, Deployed, and Runtime — follow the order of the software lifecycle, with later stages containing more information](./sbom-types.png)
+![The six SBOM stages — Design, Source, Build, Analyzed, Deployed, and Runtime — follow the order of the software lifecycle, with later stages containing more information](./sbom-types-en.png)
 
 **Figure 1.** SBOM classification by SDLC stage *(source: CISA, Types of Software Bill of Materials
 (SBOM), 2023)*

@@ -48,7 +48,7 @@ The body of the guide (Chapter 3, Guidance) consists of ten requirement sections
 
 Grouping the requirements by meaning yields two families. One is the program governance skeleton inherited directly from ISO/IEC 5230 (Policy, Competence, Awareness, Scope, Resources, Access); the other is the territory newly extended because of AI (License Obligations, Transparency Obligations, AI SBOM, AI Governance). Figure 1 shows this cluster structure.
 
-![Structure dividing the ten requirements into six inherited from ISO/IEC 5230 and four extended for AI. The four extended are License Obligations, Transparency Obligations, AI SBOM, and Governance](./requirement-structure.png)
+![Structure dividing the ten requirements into six inherited from ISO/IEC 5230 and four extended for AI. The four extended are License Obligations, Transparency Obligations, AI SBOM, and Governance](./requirement-structure-en.png)
 
 **Figure 1.** Six inherited, four extended for AI *(based on OpenChain AI SBOM Compliance Guide body 3.1-3.10, as of 2026-06-12)*
 

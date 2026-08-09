@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="286" viewBox="0 0 820 286">
+  <defs>
+    <filter id="a1" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="286" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">WIDEN IT IN STAGES RATHER THAN ALL AT ONCE</text>
+
+    <rect x="40" y="46" width="240" height="180" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#a1)"/>
+    <text x="60" y="74" font-size="12" fill="#9ca3af">Stage 1</text>
+    <text x="60" y="98" font-size="15" fill="#111827">Foundation</text>
+    <text x="60" y="128" font-size="12.5" fill="#6b7280">Identify critical assets</text>
+    <text x="60" y="150" font-size="12.5" fill="#6b7280">Decide format and minimums</text>
+    <text x="60" y="172" font-size="12.5" fill="#6b7280">Obtain SBOMs in procurement</text>
+
+    <line x1="288" y1="136" x2="308" y2="136" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#aa)"/>
+
+    <rect x="316" y="46" width="240" height="180" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#a1)"/>
+    <text x="336" y="74" font-size="12" fill="#9ca3af">Stage 2</text>
+    <text x="336" y="98" font-size="15" fill="#111827">Development</text>
+    <text x="336" y="128" font-size="12.5" fill="#6b7280">Assign unique identifiers</text>
+    <text x="336" y="150" font-size="12.5" fill="#6b7280">Map supplier and own SBOMs</text>
+    <text x="336" y="172" font-size="12.5" fill="#6b7280">Integrate into SSDLC and CI/CD</text>
+
+    <line x1="564" y1="136" x2="584" y2="136" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#aa)"/>
+
+    <rect x="592" y="46" width="240" height="180" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#a1)"/>
+    <text x="612" y="74" font-size="12" fill="#c2410c">Stage 3</text>
+    <text x="612" y="98" font-size="15" fill="#111827">Expansion</text>
+    <text x="612" y="128" font-size="12.5" fill="#6b7280">Stronger vulnerability tracking</text>
+    <text x="612" y="150" font-size="12.5" fill="#6b7280">Integrate into incident response</text>
+    <text x="612" y="172" font-size="12.5" fill="#6b7280">Regular review, keep awareness</text>
+
+    <line x1="40" y1="256" x2="780" y2="256" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="276" font-size="12.5" fill="#4b5563">Each stage builds on the one before. Where to start depends on what the organization already has in place.</text>
+  </g>
+</svg>

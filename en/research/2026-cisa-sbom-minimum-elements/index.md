@@ -45,7 +45,7 @@ The assessment screen can be viewed directly in the [public demo](https://sktele
 
 The minimum elements fall into two categories. Seventeen data fields are the values actually carried in the SBOM document; six operational practices govern how an organization handles SBOMs.
 
-![The composition of the 23 CISA 2026 minimum elements. The 17 data fields split into 9 SBOM metadata items and 8 component data items, with 6 operational practices alongside them. Seven of the 10 new elements are concentrated on the metadata side](./elements-structure.png)
+![The composition of the 23 CISA 2026 minimum elements. The 17 data fields split into 9 SBOM metadata items and 8 component data items, with 6 operational practices alongside them. Seven of the 10 new elements are concentrated on the metadata side](./elements-structure-en.png)
 
 **Figure 1.** The composition of the CISA 2026 SBOM minimum elements *(source: 2026 Minimum Elements for a SBOM, 2026-07-29)*
 
@@ -108,7 +108,7 @@ The three actions the document recommends to organizations point the same way: r
 
 Sorting the 23 elements by who fills them clarifies what preparation actually involves.
 
-![The four domains that fill the 23 minimum elements. On the left are the items handled by the SBOM generation tool; on the right are the three domains outside the tool — the build pipeline, the signing infrastructure, and organizational policy](./who-fills-what.png)
+![The four domains that fill the 23 minimum elements. On the left are the items handled by the SBOM generation tool; on the right are the three domains outside the tool — the build pipeline, the signing infrastructure, and organizational policy](./who-fills-what-en.png)
 
 **Figure 2.** The four domains that fill the 23 minimum elements *(source: compiled from the element definitions in the original document)*
 

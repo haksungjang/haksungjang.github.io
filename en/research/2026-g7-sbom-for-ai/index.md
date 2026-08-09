@@ -65,7 +65,7 @@ Model training properties spans pretraining and post-training, fine-tuning, and 
 
 The Model license element is a distinctive contribution of the G7 document. Rather than merely naming the type of open source license, it requires stating separately which of open weight, open architecture, open data, and open training the model qualifies as<a id="c1-ref-16"></a>[C1](#c1).
 
-![The four axes required by model license. Requiring the openness of weights, architecture, training data, and training procedure to be disclosed separately reveals the actual scope of openness that a license name alone cannot show](./model-openness.png)
+![The four axes required by model license. Requiring the openness of weights, architecture, training data, and training procedure to be disclosed separately reveals the actual scope of openness that a license name alone cannot show](./model-openness-en.png)
 
 **Figure 1.** The four axes that model license requires to be disclosed separately *(based on Section 2.3 of the G7 "Software Bill of Materials for AI — Minimum Elements").*
 
@@ -89,7 +89,7 @@ The Key Performance Indicators (KPI) cluster is a grouping unique to G7 that has
 
 This document exists now because two separate lineages converged at a single point. One is the general SBOM minimum elements institutionalized in the United States, and the other is the vision for an SBOM for AI that the G7 sketched out in 2025.
 
-![The progression starting from the 2021 NTIA general SBOM minimum elements, through the handover to CISA, the 2025 G7 shared vision and working-group discussion, to the May 2026 publication of the minimum elements. A structure that accumulates AI elements on top of the general SBOM elements](./standardization-timeline.png)
+![The progression starting from the 2021 NTIA general SBOM minimum elements, through the handover to CISA, the 2025 G7 shared vision and working-group discussion, to the May 2026 publication of the minimum elements. A structure that accumulates AI elements on top of the general SBOM elements](./standardization-timeline-en.png)
 
 **Figure 2.** The standardization progression from general SBOM to AI SBOM *(compiled for this report).*
 
