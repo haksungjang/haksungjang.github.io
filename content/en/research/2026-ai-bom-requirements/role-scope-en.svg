@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470">
+  <defs>
+    <filter id="r1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="820" height="470" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <!-- baseline: consensus judgment -->
+    <rect x="40" y="34" width="740" height="52" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="60" y="56" font-size="14" fill="#111827">Consensus judgment — the baseline aggregated from five standards</text>
+    <text x="60" y="76" font-size="12.5" fill="#6b7280">Of 50 elements, 20 required and 30 optional</text>
+
+    <!-- three roles adjust it -->
+    <line x1="410" y1="86" x2="410" y2="112" stroke="#9ca3af" stroke-width="1.5"/>
+    <text x="424" y="106" font-size="12.5" fill="#6b7280">Each role redraws the line of what is required</text>
+
+    <!-- production -->
+    <rect x="40" y="122" width="740" height="98" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="60" y="148" font-size="15" fill="#111827">Production</text>
+    <text x="60" y="170" font-size="12.5" fill="#6b7280">Building it in house. Access to the information is best here, so</text>
+    <text x="60" y="188" font-size="12.5" fill="#6b7280">the consensus set stays and the rest is broadly recommended</text>
+    <text x="60" y="208" font-size="12.5" fill="#9ca3af">20 required · 29 recommended · 1 optional</text>
+    <rect x="470" y="150" width="290" height="34" rx="5" fill="#fdf1e9" stroke="#e8c4a8"/>
+    <text x="615" y="172" text-anchor="middle" font-size="13" fill="#c2410c">Consensus 20, unchanged</text>
+
+    <!-- adoption -->
+    <rect x="40" y="234" width="740" height="98" rx="8" fill="#fff" stroke="#c2410c" stroke-width="1.8" filter="url(#r1)"/>
+    <text x="60" y="260" font-size="15" fill="#111827">Adoption</text>
+    <text x="60" y="282" font-size="12.5" fill="#6b7280">Bringing in an outside model. Document metadata comes down</text>
+    <text x="60" y="300" font-size="12.5" fill="#6b7280">and the fields used to judge risk move up</text>
+    <text x="60" y="320" font-size="12.5" fill="#9ca3af">15 required · 24 recommended · 11 optional</text>
+    <rect x="470" y="248" width="140" height="34" rx="5" fill="#fdf1e9" stroke="#e8c4a8"/>
+    <text x="540" y="270" text-anchor="middle" font-size="13" fill="#c2410c">Consensus 12</text>
+    <rect x="618" y="248" width="142" height="34" rx="5" fill="#fff" stroke="#c2410c" stroke-dasharray="4 3"/>
+    <text x="689" y="270" text-anchor="middle" font-size="13" fill="#c2410c">Promoted 3</text>
+    <text x="470" y="304" font-size="12" fill="#6b7280">Down 8 — author, format, timestamp</text>
+    <text x="470" y="322" font-size="12" fill="#6b7280">Up 3 — description, sensitivity, vuln reference</text>
+
+    <!-- supplier requirements -->
+    <rect x="40" y="346" width="740" height="98" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="60" y="372" font-size="15" fill="#111827">Supplier requirements</text>
+    <text x="60" y="394" font-size="12.5" fill="#6b7280">The level to enforce by contract. Keeps almost all of the consensus</text>
+    <text x="60" y="412" font-size="12.5" fill="#6b7280">set and adds two fields used to judge risk</text>
+    <text x="60" y="432" font-size="12.5" fill="#9ca3af">20 required · 24 recommended · 6 optional</text>
+    <rect x="470" y="360" width="196" height="34" rx="5" fill="#fdf1e9" stroke="#e8c4a8"/>
+    <text x="568" y="382" text-anchor="middle" font-size="13" fill="#c2410c">Consensus 18</text>
+    <rect x="674" y="360" width="86" height="34" rx="5" fill="#fff" stroke="#c2410c" stroke-dasharray="4 3"/>
+    <text x="717" y="382" text-anchor="middle" font-size="13" fill="#c2410c">Promoted 2</text>
+    <text x="470" y="416" font-size="12" fill="#6b7280">Up 2 — dataset sensitivity, vuln reference</text>
+  </g>
+</svg>

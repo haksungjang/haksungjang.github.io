@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1037" height="832" viewBox="0 0 1037 832" font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#1f2937"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="1037" height="832" fill="#ffffff"/>
+
+  <!-- column backgrounds -->
+  <rect x="14" y="72" width="218" height="740" fill="#f1efe9"/>
+  <rect x="232" y="72" width="190" height="740" fill="#dde8d4"/>
+  <rect x="422" y="72" width="190" height="740" fill="#ccd8ee"/>
+  <rect x="612" y="72" width="190" height="740" fill="#eee2c8"/>
+  <rect x="802" y="72" width="221" height="740" fill="#f7f7f7"/>
+
+  <!-- headers -->
+  <rect x="14" y="14" width="218" height="58" fill="#2f6cb5"/>
+  <text x="123" y="42" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">External Inquiry</text>
+  <text x="123" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Response Process</text>
+
+  <rect x="232" y="14" width="791" height="58" fill="#57912f"/>
+  <text x="627" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">R&amp;R by stage and organization</text>
+  <text x="327" y="62" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Development team</text>
+  <text x="517" y="62" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Open Source Program Manager</text>
+  <text x="707" y="62" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Legal</text>
+  <text x="912" y="62" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">OSRB</text>
+
+  <!-- start -->
+  <circle cx="123" cy="136" r="46" fill="#d98325" stroke="#a9631a" stroke-width="1.5"/>
+  <text x="123" y="132" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Inquiry</text>
+  <text x="123" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">received</text>
+  <line x1="123" y1="182" x2="123" y2="204" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- steps 1-7 -->
+  <rect x="40" y="206" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">1. Receipt notice</text>
+  <line x1="123" y1="248" x2="123" y2="272" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="40" y="276" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="302" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">2. Investigation notice</text>
+  <line x1="123" y1="318" x2="123" y2="342" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="40" y="346" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="372" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">3. Internal investigation</text>
+  <line x1="123" y1="388" x2="123" y2="412" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="40" y="416" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">4. Report to requester</text>
+  <line x1="123" y1="458" x2="123" y2="482" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="40" y="486" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="512" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">5. Remediation, notice</text>
+  <line x1="123" y1="528" x2="123" y2="552" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="40" y="556" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="582" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">6. Resolution notice</text>
+  <line x1="123" y1="598" x2="123" y2="622" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="40" y="626" width="166" height="42" rx="6" fill="#fdeec8" stroke="#d2a63c" stroke-width="1.3"/>
+  <text x="123" y="652" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2937">7. Process improvement</text>
+  <line x1="123" y1="668" x2="123" y2="694" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- end -->
+  <circle cx="123" cy="742" r="46" fill="#d98325" stroke="#a9631a" stroke-width="1.5"/>
+  <text x="123" y="747" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Case closed</text>
+
+  <!-- no-issue shortcut -->
+  <path d="M 40 437 L 22 437 L 22 742 L 74 742" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="16" y="762" font-size="11" fill="#1f2937">No issue</text>
+
+  <!-- development team -->
+  <rect x="248" y="346" width="158" height="42" rx="6" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.3"/>
+  <text x="327" y="372" text-anchor="middle" font-size="12.5" fill="#1f2937">Internal investigation</text>
+  <path d="M 327 388 L 327 420 L 434 420" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ar)"/>
+  <text x="340" y="412" font-size="11" fill="#1f2937">Report results</text>
+
+  <rect x="248" y="486" width="158" height="48" rx="6" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.3"/>
+  <text x="327" y="506" text-anchor="middle" font-size="12.5" fill="#1f2937">Carry out everything</text>
+  <text x="327" y="524" text-anchor="middle" font-size="12.5" fill="#1f2937">needed to resolve it</text>
+  <path d="M 327 534 L 327 560 L 434 560" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ar)"/>
+  <text x="340" y="552" font-size="11" fill="#1f2937">Report results</text>
+
+  <!-- OSPO -->
+  <rect x="438" y="204" width="158" height="46" rx="6" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.3"/>
+  <text x="517" y="222" text-anchor="middle" font-size="12" fill="#1f2937">Confirm receipt to the</text>
+  <text x="517" y="240" text-anchor="middle" font-size="12" fill="#1f2937">requester at once</text>
+
+  <rect x="438" y="274" width="158" height="46" rx="6" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.3"/>
+  <text x="517" y="292" text-anchor="middle" font-size="12" fill="#1f2937">Tell the requester the</text>
+  <text x="517" y="310" text-anchor="middle" font-size="12" fill="#1f2937">investigation has begun</text>
+
+  <rect x="438" y="346" width="158" height="42" rx="6" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.3"/>
+  <text x="517" y="364" text-anchor="middle" font-size="12" fill="#1f2937">Ask the business unit</text>
+  <text x="517" y="380" text-anchor="middle" font-size="12" fill="#1f2937">to investigate</text>
+  <path d="M 434 367 L 410 367" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ar)"/>
+
+  <rect x="438" y="416" width="158" height="46" rx="6" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.3"/>
+  <text x="517" y="434" text-anchor="middle" font-size="12" fill="#1f2937">Report the findings</text>
+  <text x="517" y="452" text-anchor="middle" font-size="12" fill="#1f2937">to the requester</text>
+
+  <rect x="438" y="552" width="158" height="46" rx="6" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.3"/>
+  <text x="517" y="570" text-anchor="middle" font-size="12" fill="#1f2937">Tell the requester the</text>
+  <text x="517" y="588" text-anchor="middle" font-size="12" fill="#1f2937">issue has been resolved</text>
+
+  <rect x="438" y="622" width="158" height="46" rx="6" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.3"/>
+  <text x="517" y="640" text-anchor="middle" font-size="12" fill="#1f2937">Improve the process so</text>
+  <text x="517" y="658" text-anchor="middle" font-size="12" fill="#1f2937">it does not recur</text>
+
+  <!-- legal -->
+  <rect x="628" y="346" width="158" height="42" rx="6" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.3"/>
+  <text x="707" y="372" text-anchor="middle" font-size="12.5" fill="#1f2937">Legal advice</text>
+
+  <!-- OSRB -->
+  <rect x="818" y="622" width="190" height="46" rx="6" fill="#f4dbe6" stroke="#b2597d" stroke-width="1.3"/>
+  <text x="913" y="650" text-anchor="middle" font-size="12.5" fill="#1f2937">Discuss process improvement</text>
+
+  <!-- conditional band -->
+  <line x1="14" y1="474" x2="1023" y2="474" stroke="#b9b9b9" stroke-width="1.2" stroke-dasharray="7 5"/>
+  <line x1="14" y1="686" x2="1023" y2="686" stroke="#b9b9b9" stroke-width="1.2" stroke-dasharray="7 5"/>
+  <path d="M 766 686 L 766 486" fill="none" stroke="#c9c9c9" stroke-width="1.2" stroke-dasharray="6 5" marker-end="url(#arg)"/>
+  <text x="786" y="546" font-size="12" fill="#9ca3af">This part runs only when the internal</text>
+  <text x="786" y="564" font-size="12" fill="#9ca3af">investigation finds a problem.</text>
+</svg>

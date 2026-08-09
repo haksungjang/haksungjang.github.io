@@ -89,7 +89,7 @@ AI SBOM verification lead and the license review lead respond together.
 
 The figure below shows the external inquiry response flow.
 
-![A flow that receives an external inquiry, classifies and assigns it, reviews it, determines whether legal review is needed, and replies](./access-workflow.png)
+![A flow that receives an external inquiry, classifies and assigns it, reviews it, determines whether legal review is needed, and replies](./access-workflow-en.png)
 
 **Figure 1.** External AI SBOM compliance inquiry response flow
 

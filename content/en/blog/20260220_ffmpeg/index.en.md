@@ -41,7 +41,7 @@ The notice specified exactly these three acts, and stated as grounds for infring
 
 ### Timeline
 
-![The timeline from FFmpeg's public callout in February 2024, which went uncorrected for about 22 months, through the DMCA notice in December 2025 that took the repository down, to its restoration roughly 10 weeks later in early March 2026](./dispute-timeline.png)
+![The timeline from FFmpeg's public callout in February 2024, which went uncorrected for about 22 months, through the DMCA notice in December 2025 that took the repository down, to its restoration roughly 10 weeks later in early March 2026](./dispute-timeline-en.png)
 
 **Figure 1.** Dispute timeline *(Source: DMCA notice, MPP commit history, Issues 530 and 73, Internet Archive. Verified 2026-07-23.)*
 
@@ -245,7 +245,7 @@ Falsely altering attribution is treated differently depending on the country. In
 
 The Linux kernel provides a standard interface called V4L2 (Video for Linux 2) for hardware acceleration. In this structure, FFmpeg is left unmodified in user space, and hardware-dependent code is kept separate in the kernel driver.
 
-![In the problematic structure, an application reaches the hardware through the MPP library, which embeds copied FFmpeg code, whereas in the standards-compliant structure, unmodified FFmpeg calls the same hardware through the kernel's V4L2 interface](./architecture-comparison.png)
+![In the problematic structure, an application reaches the hardware through the MPP library, which embeds copied FFmpeg code, whereas in the standards-compliant structure, unmodified FFmpeg calls the same hardware through the kernel's V4L2 interface](./architecture-comparison-en.png)
 
 **Figure 2.** Comparison of hardware acceleration integration structures
 

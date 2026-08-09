@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="336" viewBox="0 0 800 336">
+  <defs>
+    <filter id="c1" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="ca" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="800" height="336" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <line x1="176" y1="42" x2="176" y2="288" stroke="#d1d5db" stroke-width="1.5"/>
+    <line x1="176" y1="150" x2="176" y2="288" stroke="#c2410c" stroke-width="3.5"/>
+
+    <text x="154" y="69" text-anchor="end" font-size="13" fill="#374151">2024-11-20</text>
+    <circle cx="176" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="42" width="470" height="44" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#c1)"/>
+    <text x="224" y="70" font-size="14" fill="#111827">Published in the Official Journal</text>
+
+    <text x="154" y="141" text-anchor="end" font-size="13" fill="#374151">2024-12-10</text>
+    <circle cx="176" cy="136" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="114" width="470" height="44" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#c1)"/>
+    <text x="224" y="142" font-size="14" fill="#111827">Enters into force</text>
+
+    <text x="154" y="213" text-anchor="end" font-size="13" fill="#c2410c">2026-09-11</text>
+    <circle cx="176" cy="208" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="186" width="470" height="44" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#c1)"/>
+    <text x="224" y="214" font-size="14" fill="#111827">Article 14 reporting duties start to apply</text>
+
+    <text x="154" y="285" text-anchor="end" font-size="13" fill="#374151">2027-12-11</text>
+    <circle cx="176" cy="280" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="258" width="470" height="44" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#c1)"/>
+    <text x="224" y="286" font-size="14" fill="#111827">Full application — essential requirements and CE marking</text>
+  </g>
+</svg>

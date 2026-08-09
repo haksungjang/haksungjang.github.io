@@ -36,7 +36,7 @@ The same matrix is applied differently across three enterprise usage contexts.
 - Ingestion: the fields that must be checked to assess transparency and risk when bringing in and using an external model or dataset.
 - Supplier requirements: the fields to require submission of from suppliers that provide AI models to the organization.
 
-![How each of the three roles redraws the boundary of required starting from the consensus determination. Production keeps the 20 consensus-required elements as is; ingestion lowers document metadata but raises a set of risk-judgment fields to reach 15 required; supplier requirements raises two more to reach 20 required](./role-scope.png)
+![How each of the three roles redraws the boundary of required starting from the consensus determination. Production keeps the 20 consensus-required elements as is; ingestion lowers document metadata but raises a set of risk-judgment fields to reach 15 required; supplier requirements raises two more to reach 20 required](./role-scope-en.png)
 
 **Figure 1.** How the boundary of required shifts by role for the same matrix *(compiled from research)*
 
@@ -58,7 +58,7 @@ A field is determined required if two or more sources require the field's existe
 
 Requiring existence here means class-level required cardinality (the required properties of SPDX's `AIPackage`/`DatasetPackage`), document-root requirements (CycloneDX's `bomFormat`/`specVersion`), the seven NTIA baseline fields, and OpenChain's shall-level process. Conditional requirements enforced only when an object is created — for example, the algorithm and value inside a hash object, or the name inside a component object — are not requirements to include the object itself, so they were not counted as existence requirements. However, these conditional requirements and items of high integrity or security value were left optional while being marked recommended in the role-based application.
 
-![Of the five sources, G7 always gives one vote to every element, so the determination in practice comes down to whether any one of the remaining four — SPDX, CycloneDX, NTIA, or OpenChain — requires it](./consensus-rule.png)
+![Of the five sources, G7 always gives one vote to every element, so the determination in practice comes down to whether any one of the remaining four — SPDX, CycloneDX, NTIA, or OpenChain — requires it](./consensus-rule-en.png)
 
 **Figure 2.** The consensus determination rule and G7's role in it *(compiled from research)*
 
@@ -83,7 +83,7 @@ The distribution of required and optional elements by cluster is as follows.
 | Key Performance Indicators | 2 | 0 | 2 |
 | Total | 50 | 20 | 30 |
 
-![Horizontal bars showing the distribution of required and optional elements by cluster. Metadata, System, Model, and Dataset each contain required elements, but Infrastructure, Security Attributes, and Key Performance Indicators have none](./cluster-distribution.png)
+![Horizontal bars showing the distribution of required and optional elements by cluster. Metadata, System, Model, and Dataset each contain required elements, but Infrastructure, Security Attributes, and Key Performance Indicators have none](./cluster-distribution-en.png)
 
 **Figure 3.** Required/optional distribution by cluster *(compiled from research)*
 

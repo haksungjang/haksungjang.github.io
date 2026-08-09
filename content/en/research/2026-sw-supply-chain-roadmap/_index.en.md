@@ -38,7 +38,7 @@ The announcement followed an already-signaled path. When the government released
 
 The roadmap declares its vision as "securing cyber resilience through a transition to a safe and responsible supply chain security system," converging this into three pillars: prevention, recovery, and foundation<a id="a1-ref-4"></a>[A1](#a1). Beneath these sit three implementation strategies and nine detailed tasks.
 
-![Under the vision of securing software supply chain cyber resilience sit the three strategies of prevention, recovery, and foundation, each populated with core tasks such as a secure development methodology, integrated public-sector SBOM management, and pilot certification](./strategy-structure.png)
+![Under the vision of securing software supply chain cyber resilience sit the three strategies of prevention, recovery, and foundation, each populated with core tasks such as a secure development methodology, integrated public-sector SBOM management, and pilot certification](./strategy-structure-en.png)
 
 **Figure 1.** The vision, the three strategies, and each strategy's core tasks *(compiled for this report; see §5 for external sources).*
 
@@ -66,7 +66,7 @@ The changes on the public procurement side are also clear. SBOM submission and v
 
 The global cooperation task connects to two multilateral bodies. The Global Cybersecurity Labelling Initiative (GCLI), a coalition that discusses mutual recognition of IoT security certification labels and the establishment of a single standard, launched with 11 founding members at Singapore International Cyber Week on October 23, 2025, with Korea's Ministry of Science and ICT and KISA participating as founding members<a id="a10-ref-1"></a>[A10](#a10). Alongside this, the roadmap presents cooperation with the Global Government Expert Forum (GGEF), the U.S. Cybersecurity and Infrastructure Security Agency (CISA), the European Commission's Directorate-General for Communications Networks, Content and Technology (DG CONNECT), and the UK Department for Science, Innovation and Technology (DSIT) as channels for supporting global expansion<a id="a1-ref-24"></a>[A1](#a1).
 
-![The correspondence between four overseas regimes facing exporting companies and the four domestic tasks the roadmap sets against them. The axis running from the FDA and the EU CRA, which directly mandate SBOM submission, to the SBOM management model sits at the center](./global-to-domestic.png)
+![The correspondence between four overseas regimes facing exporting companies and the four domestic tasks the roadmap sets against them. The axis running from the FDA and the EU CRA, which directly mandate SBOM submission, to the SBOM management model sits at the center](./global-to-domestic-en.png)
 
 **Figure 2.** The correspondence between the global regimes the roadmap references and its policy tasks *(compiled for this report; see §5 for external sources).*
 
@@ -76,7 +76,7 @@ The roadmap separates its response to emerging technologies into a distinct rese
 
 Behind the roadmap's choice of SBOM, pilot certification, and mutual recognition as its core instruments lies the overseas regulation exporting companies face. A company interview the roadmap quotes shows this plainly. A digital medical device manufacturer struggled to respond to SBOM requirements during the FDA approval process; a security company that had entered the U.S. market was notified, while supplying software to the federal government, that failing to meet SBOM management requirements would make it ineligible for next year's contract; and an AI solution developer lost a contract during preparations to supply a global financial company because it failed to meet cybersecurity requirements<a id="a1-ref-26"></a>[A1](#a1).
 
-![A timeline from the U.S. Executive Order 14028 in 2021 to the full application of the EU Cyber Resilience Act in 2027. The period following the domestic roadmap's announcement in June 2026 overlaps with these regulatory deadlines](./regulation-timeline.png)
+![A timeline from the U.S. Executive Order 14028 in 2021 to the full application of the EU Cyber Resilience Act in 2027. The period following the domestic roadmap's announcement in June 2026 overlaps with these regulatory deadlines](./regulation-timeline-en.png)
 
 **Figure 3.** The overseas regulation behind the roadmap and the deadlines ahead *(compiled for this report; see §7 for sources).*
 

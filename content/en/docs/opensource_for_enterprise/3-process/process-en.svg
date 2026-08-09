@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1844" height="1662" viewBox="0 0 1844 1662" font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+  <rect width="1844" height="1662" fill="#ffffff"/>
+
+  <!-- column backgrounds -->
+  <rect x="480" y="125" width="340" height="1537" fill="#dfeacf"/>
+  <rect x="820" y="125" width="340" height="1537" fill="#ccd8ee"/>
+  <rect x="1160" y="125" width="340" height="1537" fill="#f7f7f7"/>
+  <rect x="1500" y="125" width="344" height="1537" fill="#eee2c8"/>
+
+  <!-- headers -->
+  <rect x="0" y="0" width="480" height="125" fill="#3d76b8"/>
+  <text x="80" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">Development</text>
+  <text x="80" y="80" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">process</text>
+  <text x="320" y="76" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">Open source process</text>
+
+  <rect x="480" y="0" width="1364" height="125" fill="#57912f"/>
+  <text x="1162" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">R&amp;R by stage and organization</text>
+  <text x="650" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Business unit</text>
+  <text x="990" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Open Source Program Manager</text>
+  <text x="1330" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Infrastructure</text>
+  <text x="1672" y="98" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Security</text>
+
+  <!-- column 1: development process -->
+  <rect x="14" y="145" width="132" height="72" rx="10" fill="#ededed" stroke="#375623" stroke-width="2.2"/>
+  <text x="80" y="189" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">Planning</text>
+
+  <rect x="14" y="255" width="132" height="72" rx="10" fill="#ededed" stroke="#375623" stroke-width="2.2"/>
+  <text x="80" y="290" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">Require-</text>
+  <text x="80" y="314" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">ments</text>
+
+  <rect x="14" y="350" width="132" height="550" rx="10" fill="#ededed" stroke="#375623" stroke-width="2.2"/>
+  <text x="80" y="612" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">Design and</text>
+  <text x="80" y="638" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">build</text>
+
+  <rect x="14" y="920" width="132" height="620" rx="10" fill="#ededed" stroke="#375623" stroke-width="2.2"/>
+  <text x="80" y="1238" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">Test</text>
+
+  <rect x="14" y="1565" width="132" height="80" rx="10" fill="#ededed" stroke="#375623" stroke-width="2.2"/>
+  <text x="80" y="1600" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">Mainte-</text>
+  <text x="80" y="1624" text-anchor="middle" font-size="21" font-weight="700" fill="#375623">nance</text>
+
+  <!-- column 2: open source process -->
+  <rect x="170" y="265" width="300" height="300" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="405" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">1. Open source</text>
+  <text x="320" y="435" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">identification</text>
+
+  <rect x="170" y="595" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="628" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">2. Source code</text>
+  <text x="320" y="656" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">inspection</text>
+
+  <rect x="170" y="705" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="753" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">3. Issue resolution</text>
+
+  <rect x="170" y="815" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="863" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">4. Review</text>
+
+  <rect x="170" y="920" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="968" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">5. Approval</text>
+
+  <rect x="170" y="1030" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="1078" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">6. Registration</text>
+
+  <rect x="170" y="1135" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="1183" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">7. Notice</text>
+
+  <rect x="170" y="1245" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="1293" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">8. Pre-release check</text>
+
+  <rect x="170" y="1350" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="1398" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">9. Release</text>
+
+  <rect x="170" y="1460" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="1508" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">10. Final check</text>
+
+  <rect x="170" y="1565" width="300" height="80" rx="12" fill="#fdeec8" stroke="#d2a63c" stroke-width="2.2"/>
+  <text x="320" y="1613" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">11. Monitoring</text>
+
+  <!-- business unit -->
+  <rect x="510" y="145" width="280" height="80" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="178" text-anchor="middle" font-size="20" fill="#1f2937">Check the open source</text>
+  <text x="650" y="204" text-anchor="middle" font-size="20" fill="#1f2937">policy and process</text>
+
+  <rect x="510" y="265" width="280" height="88" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="300" text-anchor="middle" font-size="20" fill="#1f2937">Identify open source,</text>
+  <text x="650" y="326" text-anchor="middle" font-size="20" fill="#1f2937">design around licenses</text>
+
+  <rect x="510" y="378" width="280" height="88" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="413" text-anchor="middle" font-size="20" fill="#1f2937">Mark copyright and</text>
+  <text x="650" y="439" text-anchor="middle" font-size="20" fill="#1f2937">licenses in the source</text>
+
+  <rect x="510" y="490" width="280" height="88" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="525" text-anchor="middle" font-size="20" fill="#1f2937">Check licenses, ask for</text>
+  <text x="650" y="551" text-anchor="middle" font-size="20" fill="#1f2937">review where needed</text>
+
+  <rect x="510" y="595" width="280" height="80" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="643" text-anchor="middle" font-size="20" fill="#1f2937">Request an inspection</text>
+
+  <rect x="510" y="705" width="280" height="190" rx="10" fill="#dbecce" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="790" text-anchor="middle" font-size="20" fill="#1f2937">Resolve license and</text>
+  <text x="650" y="816" text-anchor="middle" font-size="20" fill="#1f2937">vulnerability issues</text>
+
+  <rect x="510" y="1135" width="280" height="88" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="1170" text-anchor="middle" font-size="20" fill="#1f2937">Include the notice, collect</text>
+  <text x="650" y="1196" text-anchor="middle" font-size="20" fill="#1f2937">the source to publish</text>
+
+  <rect x="510" y="1245" width="280" height="80" rx="10" fill="#dff0d2" stroke="#5d9b3c" stroke-width="1.8"/>
+  <text x="650" y="1293" text-anchor="middle" font-size="20" fill="#1f2937">Submit the artifacts</text>
+
+  <!-- OSPO -->
+  <rect x="850" y="145" width="280" height="80" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="178" text-anchor="middle" font-size="20" fill="#1f2937">Set up the process,</text>
+  <text x="990" y="204" text-anchor="middle" font-size="20" fill="#1f2937">write the guide</text>
+
+  <rect x="850" y="265" width="280" height="88" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="300" text-anchor="middle" font-size="20" fill="#1f2937">Provide the open source</text>
+  <text x="990" y="326" text-anchor="middle" font-size="20" fill="#1f2937">license guide</text>
+
+  <rect x="850" y="378" width="280" height="88" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="413" text-anchor="middle" font-size="20" fill="#1f2937">Explain the copyright and</text>
+  <text x="990" y="439" text-anchor="middle" font-size="20" fill="#1f2937">license marking rules</text>
+
+  <rect x="850" y="490" width="280" height="88" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="525" text-anchor="middle" font-size="20" fill="#1f2937">Analyze the licenses and</text>
+  <text x="990" y="551" text-anchor="middle" font-size="20" fill="#1f2937">provide guidance</text>
+
+  <rect x="850" y="595" width="280" height="80" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="628" text-anchor="middle" font-size="20" fill="#1f2937">Review the results,</text>
+  <text x="990" y="654" text-anchor="middle" font-size="20" fill="#1f2937">confirm the issues</text>
+
+  <rect x="850" y="815" width="280" height="80" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="848" text-anchor="middle" font-size="20" fill="#1f2937">Confirm whether the</text>
+  <text x="990" y="874" text-anchor="middle" font-size="20" fill="#1f2937">issues are resolved</text>
+
+  <rect x="850" y="920" width="280" height="80" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="968" text-anchor="middle" font-size="20" fill="#1f2937">Final approval or refusal</text>
+
+  <rect x="850" y="1135" width="280" height="88" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="1170" text-anchor="middle" font-size="20" fill="#1f2937">Hand over the notice, guide</text>
+  <text x="990" y="1196" text-anchor="middle" font-size="20" fill="#1f2937">the source collection</text>
+
+  <rect x="850" y="1245" width="280" height="80" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="1293" text-anchor="middle" font-size="20" fill="#1f2937">Review the artifacts</text>
+
+  <rect x="850" y="1460" width="280" height="80" rx="10" fill="#d6e4f7" stroke="#3f76bd" stroke-width="1.8"/>
+  <text x="990" y="1508" text-anchor="middle" font-size="20" fill="#1f2937">Confirm the artifacts</text>
+
+  <rect x="850" y="1565" width="280" height="80" rx="10" fill="#1f4e79" stroke="#12385a" stroke-width="1.8"/>
+  <text x="990" y="1600" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">External inquiry</text>
+  <text x="990" y="1626" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">response process</text>
+
+  <!-- infrastructure -->
+  <rect x="1190" y="590" width="280" height="315" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1330" y="700" text-anchor="middle" font-size="20" fill="#1f2937">Analyze open source,</text>
+  <text x="1330" y="726" text-anchor="middle" font-size="20" fill="#1f2937">identify and report license</text>
+  <text x="1330" y="752" text-anchor="middle" font-size="20" fill="#1f2937">and vulnerability findings</text>
+  <text x="1330" y="806" text-anchor="middle" font-size="20" fill="#4b5563">(re-analyzed after fixes)</text>
+
+  <rect x="1190" y="1030" width="280" height="80" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1330" y="1078" text-anchor="middle" font-size="20" fill="#1f2937">Register the BOM</text>
+
+  <rect x="1190" y="1350" width="280" height="80" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1330" y="1383" text-anchor="middle" font-size="20" fill="#1f2937">Register on the open</text>
+  <text x="1330" y="1409" text-anchor="middle" font-size="20" fill="#1f2937">source release site</text>
+
+  <rect x="1190" y="1565" width="280" height="80" rx="10" fill="#e4dcf2" stroke="#7a5ca8" stroke-width="1.8"/>
+  <text x="1330" y="1598" text-anchor="middle" font-size="20" fill="#1f2937">Auto-monitor newly</text>
+  <text x="1330" y="1624" text-anchor="middle" font-size="20" fill="#1f2937">disclosed vulnerabilities</text>
+
+  <!-- security -->
+  <rect x="1530" y="265" width="284" height="88" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1672" y="316" text-anchor="middle" font-size="20" fill="#1f2937">Provide the assurance policy</text>
+
+  <rect x="1530" y="595" width="284" height="80" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1672" y="628" text-anchor="middle" font-size="20" fill="#1f2937">Advise how to fix the</text>
+  <text x="1672" y="654" text-anchor="middle" font-size="20" fill="#1f2937">vulnerabilities found</text>
+
+  <rect x="1530" y="815" width="284" height="80" rx="10" fill="#f5cfa3" stroke="#d08b3a" stroke-width="1.8"/>
+  <text x="1672" y="848" text-anchor="middle" font-size="20" fill="#1f2937">Confirm the vulnerabilities</text>
+  <text x="1672" y="874" text-anchor="middle" font-size="20" fill="#1f2937">are resolved</text>
+
+  <rect x="1530" y="1565" width="284" height="80" rx="10" fill="#843c0c" stroke="#5e2a08" stroke-width="1.8"/>
+  <text x="1672" y="1600" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">New vulnerability</text>
+  <text x="1672" y="1626" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">response process</text>
+</svg>

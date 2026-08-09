@@ -85,7 +85,7 @@ The more these two overlap, the greater the chance that a latent obligation surf
 
 Placing the two conditions above on two axes yields four quadrants.
 
-![A quadrant chart with two axes: whether code is delivered outside the company, and whether it undergoes external verification. Snippet scanning matters most only when both apply; when code is not delivered, it matters little regardless of verification](./snippet-decision-matrix.png)
+![A quadrant chart with two axes: whether code is delivered outside the company, and whether it undergoes external verification. Snippet scanning matters most only when both apply; when code is not delivered, it matters little regardless of verification](./snippet-decision-matrix-en.png)
 
 **Figure 1.** How much weight snippet scanning deserves, by condition
 
@@ -109,7 +109,7 @@ This setting overlaps in purpose with after-the-fact snippet scanning. One finds
 
 Putting the inflow paths and inspection methods covered so far in one place looks like this.
 
-![Three paths through which code enters, and the methods that catch each one. Code declared through a package manager is caught by dependency-level SCA, but fragments that entered via copy-paste or AI generation, and embedded code copied in as raw source without a manifest, are caught only by snippet matching](./code-inflow-coverage.png)
+![Three paths through which code enters, and the methods that catch each one. Code declared through a package manager is caught by dependency-level SCA, but fragments that entered via copy-paste or AI generation, and embedded code copied in as raw source without a manifest, are caught only by snippet matching](./code-inflow-coverage-en.png)
 
 **Figure 2.** Code inflow paths and the methods that catch them
 

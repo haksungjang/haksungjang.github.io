@@ -18,7 +18,7 @@ of tools.
 
 ## The Division of Labor Among Generation, Management, and Scanning
 
-![Three categories of SBOM tools — generation, management, and matching — divide roles, with management and matching exchanging data on every new vulnerability](./tool-roles.png)
+![Three categories of SBOM tools — generation, management, and matching — divide roles, with management and matching exchanging data on every new vulnerability](./tool-roles-en.png)
 
 **Figure 1.** The three roles of SBOM tools *(source: compiled from tool comparison analyses,
 2026-01. Retrieved 2026-06-14)*

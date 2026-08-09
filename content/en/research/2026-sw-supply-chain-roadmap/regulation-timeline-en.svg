@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="588" viewBox="0 0 860 588">
+  <defs>
+    <filter id="t1" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="860" height="588" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <!-- axis -->
+    <line x1="152" y1="42" x2="152" y2="546" stroke="#d1d5db" stroke-width="1.5"/>
+    <line x1="152" y1="342" x2="152" y2="546" stroke="#c2410c" stroke-width="3.5"/>
+
+    <!-- 1 -->
+    <text x="130" y="69" text-anchor="end" font-size="13" fill="#374151">2021-05</text>
+    <circle cx="152" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="36" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="60" font-size="14.5" fill="#111827">U.S. Executive Order 14028 signed</text>
+    <text x="200" y="80" font-size="12.5" fill="#6b7280">Makes SBOM a federal procurement requirement; directs NIST to write the SSDF</text>
+
+    <!-- 2 -->
+    <text x="130" y="145" text-anchor="end" font-size="13" fill="#374151">2023-03</text>
+    <circle cx="152" cy="140" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="112" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="136" font-size="14.5" fill="#111827">U.S. FD&amp;C Act Section 524B takes effect</text>
+    <text x="200" y="156" font-size="12.5" fill="#6b7280">SBOM required with premarket submissions for medical devices</text>
+
+    <!-- 3 -->
+    <text x="130" y="221" text-anchor="end" font-size="13" fill="#374151">2024-04</text>
+    <circle cx="152" cy="216" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="188" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="212" font-size="14.5" fill="#111827">UK PSTI Act takes effect</text>
+    <text x="200" y="232" font-size="12.5" fill="#6b7280">Product security law; U.S. Cyber Trust Mark approved in March that year</text>
+
+    <!-- 4 -->
+    <text x="130" y="297" text-anchor="end" font-size="13" fill="#374151">2024-12</text>
+    <circle cx="152" cy="292" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="180" y="264" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="288" font-size="14.5" fill="#111827">EU Cyber Resilience Act enters into force</text>
+    <text x="200" y="308" font-size="12.5" fill="#6b7280">SBOM and vulnerability handling duties for products with digital elements</text>
+
+    <!-- 5 roadmap (highlight) -->
+    <text x="130" y="373" text-anchor="end" font-size="13" fill="#c2410c">2026-06-24</text>
+    <circle cx="152" cy="368" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="180" y="340" width="500" height="56" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#t1)"/>
+    <text x="200" y="364" font-size="14.5" fill="#111827">Domestic roadmap announced</text>
+    <text x="200" y="384" font-size="12.5" fill="#c2410c">An administrative plan; each task needs legal changes to carry force</text>
+
+    <!-- 6 -->
+    <text x="130" y="449" text-anchor="end" font-size="13" fill="#374151">2026-09-11</text>
+    <circle cx="152" cy="444" r="5" fill="#ffffff" stroke="#c2410c" stroke-width="2"/>
+    <rect x="180" y="416" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="440" font-size="14.5" fill="#111827">CRA Article 14 starts to apply</text>
+    <text x="200" y="460" font-size="12.5" fill="#6b7280">24-hour warning and 72-hour notification for exploited vulnerabilities</text>
+
+    <!-- 7 -->
+    <text x="130" y="525" text-anchor="end" font-size="13" fill="#374151">2027-12-11</text>
+    <circle cx="152" cy="520" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="180" y="492" width="500" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="200" y="516" font-size="14.5" fill="#111827">CRA applies in full</text>
+    <text x="200" y="536" font-size="12.5" fill="#6b7280">Includes conformity assessment and CE marking, overlapping the target date</text>
+
+    <!-- bracket -->
+    <path d="M 704 368 L 722 368 L 722 520 L 704 520" fill="none" stroke="#c2410c" stroke-width="1.6"/>
+    <text x="736" y="428" font-size="13" fill="#c2410c">Where the roadmap's</text>
+    <text x="736" y="447" font-size="13" fill="#c2410c">three years overlap</text>
+    <text x="736" y="466" font-size="14.5" font-weight="600" fill="#c2410c">the deadlines</text>
+  </g>
+</svg>

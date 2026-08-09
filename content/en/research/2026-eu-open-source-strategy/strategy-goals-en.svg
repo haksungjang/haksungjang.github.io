@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="410" viewBox="0 0 820 410">
+  <defs><filter id="e1" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter></defs>
+  <rect width="820" height="410" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">FOUR GOALS OF COM(2026) 503 AND THEIR HEADLINE MEASURES</text>
+
+    <rect x="40" y="44" width="368" height="146" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#e1)"/>
+    <text x="62" y="72" font-size="12" fill="#c2410c">Goal i</text>
+    <text x="62" y="96" font-size="14.5" fill="#111827">Open source for sovereignty</text>
+    <line x1="62" y1="110" x2="386" y2="110" stroke="#efd7c4" stroke-width="1"/>
+    <text x="62" y="132" font-size="12.5" fill="#6b7280">Build an open internet stack</text>
+    <text x="62" y="152" font-size="12.5" fill="#6b7280">Release EUID and EBW as open source</text>
+    <text x="62" y="174" font-size="12.5" fill="#c2410c">30 million users by 2030</text>
+
+    <rect x="424" y="44" width="356" height="146" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e1)"/>
+    <text x="446" y="72" font-size="12" fill="#9ca3af">Goal ii</text>
+    <text x="446" y="96" font-size="14.5" fill="#111827">Strengthening the ecosystem</text>
+    <line x1="446" y1="110" x2="758" y2="110" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="446" y="132" font-size="12.5" fill="#6b7280">Business accelerator</text>
+    <text x="446" y="152" font-size="12.5" fill="#6b7280">Stewardship toolkit</text>
+    <text x="446" y="172" font-size="12.5" fill="#6b7280">Instruments to support maintenance</text>
+
+    <rect x="40" y="206" width="368" height="146" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e1)"/>
+    <text x="62" y="234" font-size="12" fill="#9ca3af">Goal iii</text>
+    <text x="62" y="258" font-size="14.5" fill="#111827">Open, interoperable public sector</text>
+    <line x1="62" y1="272" x2="386" y2="272" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="62" y="294" font-size="12.5" fill="#6b7280">Publicly funded code is published</text>
+    <text x="62" y="314" font-size="12.5" fill="#6b7280">Procurement reform</text>
+    <text x="62" y="334" font-size="12.5" fill="#6b7280">A stronger OSPO Network</text>
+
+    <rect x="424" y="206" width="356" height="146" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e1)"/>
+    <text x="446" y="234" font-size="12" fill="#9ca3af">Goal iv</text>
+    <text x="446" y="258" font-size="14.5" fill="#111827">Standards and cooperation</text>
+    <line x1="446" y1="272" x2="758" y2="272" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="446" y="294" font-size="12.5" fill="#6b7280">Revision of the Standardisation Regulation</text>
+    <text x="446" y="314" font-size="12.5" fill="#6b7280">International cooperation, Team Europe style</text>
+
+    <line x1="40" y1="380" x2="780" y2="380" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="400" font-size="12.5" fill="#4b5563">Only the first goal carries a numeric target. The other three name instruments but set no measure of achievement.</text>
+  </g>
+</svg>

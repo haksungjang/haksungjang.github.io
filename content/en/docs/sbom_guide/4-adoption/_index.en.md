@@ -17,7 +17,7 @@ framework presented by both the US NTIA and India's CERT-In guidelines; the orde
 only illustrative and can be adjusted to fit an organization's security needs, timeline, and
 resources.
 
-![A maturity path that expands SBOM adoption through three stages — Foundational, Developing, and Scaling](./adoption-stages.png)
+![A maturity path that expands SBOM adoption through three stages — Foundational, Developing, and Scaling](./adoption-stages-en.png)
 
 **Figure 1.** The three stages of SBOM adoption *(source: reconstructed from NTIA 2021 and CERT-In
 technical guidelines; collected June 14, 2026)*

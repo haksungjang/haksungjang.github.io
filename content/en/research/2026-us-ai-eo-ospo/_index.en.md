@@ -40,7 +40,7 @@ Section 3 addresses the safe deployment of frontier models. Within 60 days, it e
 
 Section 4 addresses investigation and enforcement. The Attorney General prioritizes enforcement of existing federal criminal law — including `18 U.S.C. 1030` (Computer Fraud and Abuse Act) — against unauthorized computer access and damage carried out using AI, and other crimes committed in the process <a id="a1-ref-5"></a>[A1](#a1).
 
-![Policy timeline from the 2023 Executive Order 14110 to the 60-day deadline in August 2026. Following the June 2, 2026 signing of this executive order, clearinghouse formation and framework design follow within two months](./policy-timeline.png)
+![Policy timeline from the 2023 Executive Order 14110 to the 60-day deadline in August 2026. Following the June 2, 2026 signing of this executive order, clearinghouse formation and framework design follow within two months](./policy-timeline-en.png)
 
 **Figure 1.** Policy timeline before and after the executive order *(source: official White House documents)*
 
@@ -68,7 +68,7 @@ Open source foundations have also stayed quiet so far. As of the search conducte
 
 The clearinghouse's three functions — coordinating scans, discovering and verifying vulnerabilities, and prioritizing patch deployment — overlap precisely with the vulnerability management systems that corporate open source organizations (OSPOs or product security teams) already operate <a id="a1-ref-10"></a>[A1](#a1).
 
-![The clearinghouse coordinates scans with voluntary participants, and discovered vulnerabilities flow through open source maintainers into published patches, which corporate open source managers then receive and apply](./clearinghouse-flow.png)
+![The clearinghouse coordinates scans with voluntary participants, and discovered vulnerabilities flow through open source maintainers into published patches, which corporate open source managers then receive and apply](./clearinghouse-flow-en.png)
 
 **Figure 2.** Where the corporate open source manager sits in the clearinghouse and vulnerability information flow *(source: Executive Order Sec. 2(d))*
 

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="462" viewBox="0 0 780 462">
+  <rect width="780" height="462" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <!-- legend -->
+    <rect x="190" y="26" width="14" height="14" rx="2" fill="#c2410c"/>
+    <text x="212" y="38" font-size="13" fill="#4b5563">20 required</text>
+    <rect x="316" y="26" width="14" height="14" rx="2" fill="#e5e7eb" stroke="#d1d5db"/>
+    <text x="338" y="38" font-size="13" fill="#4b5563">30 optional</text>
+
+    <!-- gridlines -->
+    <line x1="190" y1="60" x2="190" y2="404" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="360" y1="60" x2="360" y2="404" stroke="#f3f4f6" stroke-width="1"/>
+    <line x1="530" y1="60" x2="530" y2="404" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="190" y="422" text-anchor="middle" font-size="11.5" fill="#9ca3af">0</text>
+    <text x="360" y="422" text-anchor="middle" font-size="11.5" fill="#9ca3af">5</text>
+    <text x="530" y="422" text-anchor="middle" font-size="11.5" fill="#9ca3af">10</text>
+
+    <!-- metadata 10 = 5+5 -->
+    <text x="175" y="83" text-anchor="end" font-size="13.5" fill="#374151">Metadata</text>
+    <rect x="190" y="66" width="170" height="24" fill="#c2410c"/>
+    <rect x="360" y="66" width="170" height="24" fill="#e5e7eb"/>
+    <text x="546" y="83" font-size="12.5" fill="#6b7280">5 / 5</text>
+
+    <!-- system-level properties 9 = 4+5 -->
+    <text x="175" y="129" text-anchor="end" font-size="13.5" fill="#374151">System-level properties</text>
+    <rect x="190" y="112" width="136" height="24" fill="#c2410c"/>
+    <rect x="326" y="112" width="170" height="24" fill="#e5e7eb"/>
+    <text x="512" y="129" font-size="12.5" fill="#6b7280">4 / 5</text>
+
+    <!-- model 13 = 6+7 -->
+    <text x="175" y="175" text-anchor="end" font-size="13.5" fill="#374151">Model</text>
+    <rect x="190" y="158" width="204" height="24" fill="#c2410c"/>
+    <rect x="394" y="158" width="238" height="24" fill="#e5e7eb"/>
+    <text x="648" y="175" font-size="12.5" fill="#6b7280">6 / 7</text>
+
+    <!-- dataset properties 10 = 5+5 -->
+    <text x="175" y="221" text-anchor="end" font-size="13.5" fill="#374151">Dataset properties</text>
+    <rect x="190" y="204" width="170" height="24" fill="#c2410c"/>
+    <rect x="360" y="204" width="170" height="24" fill="#e5e7eb"/>
+    <text x="546" y="221" font-size="12.5" fill="#6b7280">5 / 5</text>
+
+    <!-- infrastructure 2 = 0+2 -->
+    <text x="175" y="267" text-anchor="end" font-size="13.5" fill="#374151">Infrastructure</text>
+    <rect x="190" y="250" width="68" height="24" fill="#e5e7eb"/>
+    <text x="274" y="267" font-size="12.5" fill="#6b7280">0 / 2</text>
+
+    <!-- security properties 4 = 0+4 -->
+    <text x="175" y="313" text-anchor="end" font-size="13.5" fill="#374151">Security properties</text>
+    <rect x="190" y="296" width="136" height="24" fill="#e5e7eb"/>
+    <text x="342" y="313" font-size="12.5" fill="#6b7280">0 / 4</text>
+
+    <!-- key performance indicators 2 = 0+2 -->
+    <text x="175" y="359" text-anchor="end" font-size="13.5" fill="#374151">Performance indicators</text>
+    <rect x="190" y="342" width="68" height="24" fill="#e5e7eb"/>
+    <text x="274" y="359" font-size="12.5" fill="#6b7280">0 / 2</text>
+
+    <!-- note -->
+    <line x1="40" y1="440" x2="740" y2="440" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="458" font-size="12.5" fill="#4b5563">The bottom three clusters have no required element: only G7 lists them, and no other standard compels their presence.</text>
+  </g>
+</svg>

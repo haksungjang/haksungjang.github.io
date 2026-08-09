@@ -97,7 +97,7 @@ Lifecycle monitoring means placing governance checkpoints along the flow from de
 retirement. The figure below shows lifecycle governance built around the AI SBOM.
 
 ![Governance cycle that runs from model intake through development, review, deployment, and
-operational monitoring, looping back to development or review depending on the type of change](./governance-cycle.png)
+operational monitoring, looping back to development or review depending on the type of change](./governance-cycle-en.png)
 
 **Figure 1.** Lifecycle governance built around the AI SBOM
 

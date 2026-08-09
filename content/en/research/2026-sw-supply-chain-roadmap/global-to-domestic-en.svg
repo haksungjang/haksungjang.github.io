@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="420" viewBox="0 0 820 420">
+  <defs>
+    <filter id="m2" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">OVERSEAS REGIMES FACING EXPORTERS</text>
+    <text x="450" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">DOMESTIC TASKS IN THE ROADMAP</text>
+
+    <!-- 1 -->
+    <rect x="40" y="44" width="330" height="68" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#m2)"/>
+    <text x="60" y="70" font-size="13.5" fill="#111827">U.S. NIST SSDF · Executive Order 14028</text>
+    <text x="60" y="92" font-size="12" fill="#6b7280">Secure practices required for federal purchases</text>
+    <line x1="370" y1="78" x2="442" y2="78" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ma)"/>
+    <rect x="450" y="44" width="330" height="68" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#m2)"/>
+    <text x="470" y="70" font-size="13.5" fill="#111827">Secure development method</text>
+    <text x="470" y="92" font-size="12" fill="#6b7280">Security activities from design through release</text>
+
+    <!-- 2 (highlight) -->
+    <rect x="40" y="128" width="330" height="68" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.6" filter="url(#m2)"/>
+    <text x="60" y="154" font-size="13.5" fill="#111827">U.S. FDA §524B · EU Cyber Resilience Act</text>
+    <text x="60" y="176" font-size="12" fill="#c2410c">Make SBOM submission a direct obligation</text>
+    <line x1="370" y1="162" x2="442" y2="162" stroke="#c2410c" stroke-width="1.8" marker-end="url(#ma)"/>
+    <rect x="450" y="128" width="330" height="68" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.6" filter="url(#m2)"/>
+    <text x="470" y="154" font-size="13.5" fill="#111827">SBOM management model</text>
+    <text x="470" y="176" font-size="12" fill="#c2410c">Applied first to exporters and key sectors</text>
+
+    <!-- 3 -->
+    <rect x="40" y="212" width="330" height="68" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#m2)"/>
+    <text x="60" y="238" font-size="13.5" fill="#111827">EU CRA vulnerability reporting</text>
+    <text x="60" y="260" font-size="12" fill="#6b7280">24-hour early warning, 72-hour notification</text>
+    <line x1="370" y1="246" x2="442" y2="246" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ma)"/>
+    <rect x="450" y="212" width="330" height="68" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#m2)"/>
+    <text x="470" y="238" font-size="13.5" fill="#111827">Wider CVD and VDP</text>
+    <text x="470" y="260" font-size="12" fill="#6b7280">Broader bug bounty, Network Act amendment</text>
+
+    <!-- 4 -->
+    <rect x="40" y="296" width="330" height="68" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#m2)"/>
+    <text x="60" y="322" font-size="13.5" fill="#111827">U.S. Cyber Trust Mark · UK PSTI</text>
+    <text x="60" y="344" font-size="12" fill="#6b7280">Security labelling for consumer devices</text>
+    <line x1="370" y1="330" x2="442" y2="330" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ma)"/>
+    <rect x="450" y="296" width="330" height="68" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#m2)"/>
+    <text x="470" y="322" font-size="13.5" fill="#111827">Pilot certification, mutual recognition</text>
+    <text x="470" y="344" font-size="12" fill="#6b7280">SSS Verified issued, MRAs where regimes exist</text>
+
+    <!-- note -->
+    <line x1="40" y1="386" x2="780" y2="386" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="406" font-size="12.5" fill="#4b5563">The SBOM line is the center. Regulation demands it directly, so for exporters it is already a condition of market entry.</text>
+  </g>
+</svg>

@@ -33,7 +33,7 @@ An enterprise must establish an open source process for license compliance and s
 
 The image below is a sample open source process that an enterprise can commonly adopt and use.
 
-![](./process.png) 
+![](./process-en.png) 
 
 The procedures to be taken at each stage, in line with the open source process above, are as follows.
 
@@ -347,7 +347,7 @@ In addition, to check whether a newly published Known Vulnerability exists in so
 
 Below is a sample process for responding when a new security vulnerability is discovered.
 
-![](./securityprocess.png)
+![](./securityprocess-en.png)
 <center><i>New Security Vulnerability Response Process (Sample)</i></center><br>
 
 ### (1) Monitoring Known Vulnerabilities and Newly Discovered Vulnerabilities
@@ -485,7 +485,7 @@ The ISO standards commonly require an internal documented procedure for respondi
 
 The figure below is a sample process an enterprise should have in place to respond to external inquiries.  
 
-![](general-inquiry-process.png)
+![](general-inquiry-process-en.png)
 
 <center><i>External Inquiry Response Process (Sample)</i></center><br>
 
@@ -590,7 +590,7 @@ Through this process, an organization can effectively manage contributions to ex
 The [open source contribution procedure](https://sktelecom.github.io/guide/contribute/process/) published by [SK telecom](https://www.sktelecom.com/) is a good example:
 
 
-![](contribution.png)
+![](contribution-en.png)
 
 [https://sktelecom.github.io/guide/contribute/process/](https://sktelecom.github.io/guide/contribute/process/)
 

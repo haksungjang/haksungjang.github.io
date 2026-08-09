@@ -37,7 +37,7 @@ The problem the strategy seeks to address is clear. The Draghi Report noted that
 
 The strategy combines two tracks of measures: supply-side measures that help EU communities and companies develop and maintain high-quality open source components, and demand-side measures that accelerate adoption in the private and public sectors. It bundles public funding together with market- and demand-driven measures, and was built on more than 1,600 responses received through the Commission's call for evidence.<a id="a1-ref-5"></a>[A1](#a1)·<a id="b3-ref-1"></a>[B3](#b3)
 
-![The four goals of the Open Source Strategy and their representative measures, in order: sovereignty, ecosystem, public administration, and standards/international cooperation. Only the first goal carries a numeric target — 30 million users by 2030](./strategy-goals.png)
+![The four goals of the Open Source Strategy and their representative measures, in order: sovereignty, ecosystem, public administration, and standards/international cooperation. Only the first goal carries a numeric target — 30 million users by 2030](./strategy-goals-en.png)
 
 **Figure 1.** The four goals of the Open Source Strategy and their representative measures *(Source: COM(2026) 503 final, Chapter 4, 2026-06-03)*
 
@@ -56,7 +56,7 @@ The strategy combines two tracks of measures: supply-side measures that help EU 
 
 Rather than creating new bodies, the strategy weaves together existing governance assets. Three pillars interlock.
 
-![The structure in which the Public Sector OSPO Network, descended from the Commission's OSPO, and the Digital Commons EDIC established in 2025, converge into the European Digital Public Infrastructure Foundation](./governance-bodies.png)
+![The structure in which the Public Sector OSPO Network, descended from the Commission's OSPO, and the Digital Commons EDIC established in 2025, converge into the European Digital Public Infrastructure Foundation](./governance-bodies-en.png)
 
 **Figure 2.** How the governance bodies of the Open Source Strategy connect *(Source: COM(2026) 503 final, Chapter 4 and Annex II, 2026-06-03)*
 
@@ -74,7 +74,7 @@ The "public money, public code" principle originated in a campaign launched by t
 
 As the announcement was only days ago, developments center on the immediate reactions and the procedures scheduled ahead.
 
-![The timeline from the January 2026 launch of the call for evidence, through the June strategy announcement and the December revision of national roadmaps, to the subsequent proposed revision of the Standardisation Regulation](./rollout-schedule.png)
+![The timeline from the January 2026 launch of the call for evidence, through the June strategy announcement and the December revision of national roadmaps, to the subsequent proposed revision of the Standardisation Regulation](./rollout-schedule-en.png)
 
 **Figure 3.** Rollout timeline of the EU Open Source Strategy *(Source: COM(2026) 503 final and Commission announcements, as of 2026-06-05)*
 
