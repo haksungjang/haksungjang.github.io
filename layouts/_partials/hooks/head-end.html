@@ -17,6 +17,19 @@
 {{ with site.Params.bing_site_verification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{- /* 다국어 hreflang. Docsy는 언어 간 alternate를 내보내지 않으므로 직접 출력한다.
+   번역이 있는 페이지에서만 나가며, x-default는 기본 언어(한국어)판을 가리킨다. */ -}}
+{{- if .IsTranslated }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+{{- end }}
+{{- /* x-default는 defaultContentLanguage(ko)판으로 고정한다.
+   site.Home은 현재 언어의 홈이라 영어 페이지에서 영어를 가리키게 되므로 쓰지 않는다. */ -}}
+{{- with index (where .AllTranslations "Language.Lang" "ko") 0 }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+
 {{- $person := dict
   "@type" "Person"
   "name" "장학성"
@@ -38,7 +51,7 @@
   "name" site.Title
   "url" site.Home.Permalink
   "description" site.Params.description
-  "inLanguage" "ko-KR"
+  "inLanguage" site.Language.Locale
   "author" $person
   | jsonify | safeJS }}</script>
 <script type="application/ld+json">{{ merge $person (dict "@context" "https://schema.org") | jsonify | safeJS }}</script>
@@ -51,7 +64,7 @@
   "headline" .Title
   "description" (.Description | default .Summary | plainify | truncate 300)
   "url" .Permalink
-  "inLanguage" "ko-KR"
+  "inLanguage" site.Language.Locale
   "author" $person
   "mainEntityOfPage" .Permalink
 -}}

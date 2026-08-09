@@ -44,17 +44,29 @@ imaging:
   anchor: smart
 
 # Language configuration
-# 콘텐츠가 사실상 전부 한국어이므로 ko로 선언한다.
-# html lang=ko, og:locale=ko_KR, RSS <language>ko-KR — 검색엔진·AI가 한국어 사이트로 인식한다.
+# 한국어가 기본 언어다. defaultContentLanguageInSubdir: false 이므로
+# 한국어는 기존 URL 그대로 유지되고 영어만 /en/ 하위에 생성된다.
+# 영어판은 같은 페이지 번들 안에 파일명 접미사(index.en.md)로 둔다.
+# 폴더를 나누지 않으므로 이미지 등 페이지 리소스를 두 언어가 공유한다.
 languages:
   ko:
-    languageName: 한국어
-    languageCode: ko-KR
+    label: 한국어
+    locale: ko-KR
+    weight: 1
     title: Haksung
     params:
       description: Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤
       time_format_default: 2006-01-02
       time_format_blog: 2006-01-02
+  en:
+    label: English
+    locale: en-US
+    weight: 2
+    title: Haksung
+    params:
+      description: Haksung Jang — Open Source Program Manager at SK telecom
+      time_format_default: January 2, 2006
+      time_format_blog: January 2, 2006
   # cSpell:disable
   # 'no':
   #   languageName: Norsk
