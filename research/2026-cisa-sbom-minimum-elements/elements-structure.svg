@@ -12,7 +12,7 @@
 
   <!-- 최상위 -->
   <rect x="340" y="28" width="320" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#sh)"/>
-  <text x="500" y="55" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">CISA 2026 SBOM 최소요소</text>
+  <text x="500" y="55" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">CISA 2026 SBOM 최소 요소</text>
   <text x="500" y="77" text-anchor="middle" font-size="15" fill="#64748b">모두 23개 요소</text>
 
   <!-- 분기선 -->

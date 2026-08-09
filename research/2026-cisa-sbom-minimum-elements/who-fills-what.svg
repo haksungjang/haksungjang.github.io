@@ -12,7 +12,7 @@
 
   <!-- 최상위 -->
   <rect x="320" y="24" width="360" height="58" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#sh2)"/>
-  <text x="500" y="50" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">최소요소 23개를 채우려면</text>
+  <text x="500" y="50" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">최소 요소 23개를 채우려면</text>
   <text x="500" y="71" text-anchor="middle" font-size="14" fill="#64748b">네 갈래가 함께 맞물려야 합니다</text>
 
   <path d="M500,82 L500,104" stroke="#94a3b8" stroke-width="1.4" fill="none"/>
