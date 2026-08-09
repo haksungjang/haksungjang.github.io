@@ -111,7 +111,7 @@ content/en/blog/20240906_spdx_30/index.en.md                       ← 영어판
 |---|---|
 | 자재 명세서 | Bill of Materials |
 | 소프트웨어 자재 명세서 | Software Bill of Materials (SBOM) |
-| 최소요소 | minimum elements |
+| 최소 요소 | minimum elements |
 | 데이터 필드 | data fields |
 | 운영 원칙 | operational practices |
 | 전이 의존성 | transitive dependencies |
