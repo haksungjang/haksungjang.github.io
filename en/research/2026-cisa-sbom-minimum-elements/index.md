@@ -189,19 +189,19 @@ How the absence of a value is handled matters from the minimum elements perspect
 
 ### 5.3 Assessing Received SBOMs Against the Minimum Elements
 
-The tool can also inspect supplier-submitted SBOMs against all 23 elements. Results come out in three branches.
+The tool can also inspect supplier-submitted SBOMs against all 23 elements. Results come out in three branches. The screen below comes from the public demo, where a single CycloneDX 1.6 document received from outside is inspected.
 
-![The regulatory comparison table in a BomLens conformance report. The US SBOM minimum elements row shows 13 met, 6 not met, 0 failed, and 4 requiring human review out of 23 total elements](./bomlens-conformance.png)
+![The regulatory crosswalk on the BomLens SBOM conformance screen. The US SBOM minimum elements row shows 11 present, 8 gap, 0 failed, and 4 needing review out of 23 total elements](./bomlens-conformance-en.png)
 
-**Figure 3.** The conformance assessment screen. All 23 elements are assessed, with the 4 the tool cannot judge separated out for human review *(BomLens 1.10.3 output, 2026-08-09)*
+**Figure 3.** The conformance assessment screen in the public demo. All 23 elements are assessed, with the 4 the tool cannot judge separated out for human review *(BomLens public demo, FlaskDataService 3.2.0)*
 
-- Met, 13 — the 11 data fields plus 2 operational practices.
-- Not met, 6 — the items covered in section 5.2.
+- Present, 11 — six SBOM metadata fields (author, data format name and version, timestamp, tool name, SBOM version), four component data fields (name, version, hash algorithm, dependency relationship), and one operational practice (machine-processable data).
+- Gap, 8 — author signature, generation context, tool version, component producer, component identifiers, component license, component hash value, and the explicit marking of unknown information.
 - Human review, 4 — Coverage, Accommodation of Updates to SBOM Data, Distribution and Delivery, and Frequency. These are decided by the organization, so the tool passes them to a person rather than judging them.
 
 Not treating what it cannot judge as a pass is what makes this useful in practice. The four items marked for human review are the same organizational decisions covered in section 2.
 
-The same screen can be opened directly in the [public demo](https://sktelecom.github.io/bomlens/demo/#/scan/FlaskDataService_3.2.0/conformance). It runs in a browser with nothing to install, and each element carries a note on what is missing and how to fill it. Note that the demo shows the result of inspecting a supplier-submitted SBOM, so its subject differs from the figure above.
+The same screen can be opened directly in the [public demo](https://sktelecom.github.io/bomlens/demo/#/scan/FlaskDataService_3.2.0/conformance). It runs in a browser with nothing to install, and each element carries a note on what is missing and how to fill it.
 
 ### 5.4 What Remains
 
