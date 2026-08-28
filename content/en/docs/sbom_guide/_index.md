@@ -7,7 +7,7 @@ categories: ["guide"]
 tags: ["SBOM", "공급망 보안", "SPDX", "CycloneDX", "VEX", "CRA"]
 description: >
   소프트웨어 자재 명세서(SBOM)의 개념부터 표준 형식, 규제 동향, 도입 로드맵, 도구, 취약점 관리,
-  거버넌스까지 한국 실무자 관점에서 정리한 가이드입니다.
+  거버넌스까지 한국 실무자 관점에서 정리한 가이드다.
 ---
 
 소프트웨어 자재 명세서(Software Bill of Materials, SBOM)는 하나의 소프트웨어가 어떤 구성요소로
