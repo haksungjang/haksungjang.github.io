@@ -14,17 +14,20 @@
 {{- $isRemote := or (strings.HasPrefix $dest "http://") (strings.HasPrefix $dest "https://") -}}
 {{- $image := "" -}}
 {{- if not $isRemote -}}
-  {{- with $page.Resources.Get $dest -}}
+  {{/* goldmark은 Destination을 원문 그대로(퍼센트 인코딩 포함) 넘긴다.
+       실제 파일명(공백 등)과 맞춰 보려면 먼저 디코딩해야 한다. */ -}}
+  {{- $decoded := (urls.Parse $dest).Path | default $dest -}}
+  {{- with $page.Resources.Get $decoded -}}
     {{- $image = . -}}
   {{- end -}}
   {{- if not $image -}}
-    {{- $base := path.Base $dest -}}
+    {{- $base := path.Base $decoded -}}
     {{- with $page.Resources.GetMatch $base -}}
       {{- $image = . -}}
     {{- end -}}
   {{- end -}}
   {{- if and (not $image) $page.Parent -}}
-    {{- $base := path.Base $dest -}}
+    {{- $base := path.Base $decoded -}}
     {{- with $page.Parent.Resources.GetMatch $base -}}
       {{- $image = . -}}
     {{- end -}}
