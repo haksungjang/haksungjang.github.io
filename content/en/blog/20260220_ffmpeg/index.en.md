@@ -12,6 +12,7 @@ resources:
   title: "Image #:counter"
   params:
     byline: ""
+images: ["architecture-comparison-en.png"]
 ---
 
 {{% alert title="Note" color="info" %}}

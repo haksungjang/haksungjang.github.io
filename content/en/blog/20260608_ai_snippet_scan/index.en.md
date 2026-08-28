@@ -11,6 +11,7 @@ ai_generator: "Claude Opus 4.8 via local Claude Code harness"
 verified_at: 2026-06-08
 verification_verdict: "CONDITIONAL PASS"
 sources: "Public sources — court litigation records (Doe v. GitHub), OpenChain ISO/IEC 5230, official GitHub and Microsoft documentation, legal commentary"
+images: ["snippet-decision-matrix-en.png"]
 aliases:
   - /en/research/2026-snippet-sca-ai-coding/
   - /research/2026-snippet-sca-ai-coding/

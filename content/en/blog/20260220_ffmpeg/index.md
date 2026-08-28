@@ -12,6 +12,7 @@ resources:
   title: "Image #:counter"
   params:
     byline: ""
+images: ["architecture-comparison.png"]
 ---
 
 {{% alert title="안내" color="info" %}}
