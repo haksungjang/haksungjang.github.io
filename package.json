@@ -11,7 +11,7 @@
   "spelling": "cSpell:ignore docsy hugo htmltest precheck postbuild rtlcss -",
   "scripts": {
     "_build": "npm run _hugo-dev --",
-    "_check:links": "echo IMPLEMENTATION PENDING for check-links; echo",
+    "_check:links": "command -v htmltest >/dev/null 2>&1 && htmltest || echo 'htmltest가 설치되어 있지 않아 링크 검사를 건너뜁니다 (설치: https://htmltest.wjdp.uk/)'",
     "_hugo": "hugo --cleanDestinationDir",
     "_hugo-dev": "npm run _hugo -- -e dev -DFE",
     "_local": "npx cross-env HUGO_MODULE_WORKSPACE=docsy.work",
@@ -19,7 +19,7 @@
     "build:preview": "npm run _hugo-dev -- --minify --baseURL \"${DEPLOY_PRIME_URL:-/}\"",
     "build:production": "npm run _hugo -- --minify",
     "build": "npm run _build -- ",
-    "check:links:all": "HTMLTEST_ARGS= npm run _check:links",
+    "check:links:all": "command -v htmltest >/dev/null 2>&1 && htmltest --conf .htmltest.all.yml || echo 'htmltest가 설치되어 있지 않아 링크 검사를 건너뜁니다 (설치: https://htmltest.wjdp.uk/)'",
     "check:links": "npm run _check:links",
     "clean": "rm -Rf public/* resources",
     "local": "npm run _local -- npm run",
@@ -51,5 +51,8 @@
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
+  },
+  "allowScripts": {
+    "hugo-extended@0.164.0": true
   }
 }

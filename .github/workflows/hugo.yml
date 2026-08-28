@@ -35,6 +35,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # htmltest를 PATH에 설치한다(버전 고정). 이후 build:production이 끝나면
+      # postbuild:production 훅(npm run check:links)이 자동으로 링크를 검사한다.
+      - name: Install htmltest
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/wjdp/htmltest/master/godownloader.sh | bash -s -- -b "$PWD/bin" v0.17.0
+          echo "$PWD/bin" >> "$GITHUB_PATH"
+
       - name: Build with Hugo
         # peaceiris/actions-hugo로 전역 Hugo를 따로 설치하지 않는다. npm ci가
         # package.json에 고정된 hugo-extended 버전을 node_modules/.bin/hugo에
