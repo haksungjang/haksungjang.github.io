@@ -233,34 +233,34 @@ params:
       enable: false
 
   links:
-    # End user relevant links. These will show up on left side of footer and in the community page if you have one.
+    # 개인 연락 채널. 푸터 왼쪽에 노출된다.
     user:
-      - name: User mailing list
+      - name: 이메일 문의
         url: "mailto:hakssung@gmail.com"
         icon: fa fa-envelope
-        desc: Discussion and help from your fellow users
+        desc: 개인 이메일로 문의하기
       - name: Twitter
         url: https://twitter.com/haksungjang
         icon: fab fa-twitter
-        desc: Follow us on Twitter to get the latest news!
+        desc: X(트위터)에서 소식 받아보기
       - name: Facebook
         url: https://www.facebook.com/haksung.jang
         icon: fab fa-facebook
-        desc: Follow me on Facebook!
-    # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+        desc: 페이스북 팔로우하기
+    # 업무 관련 채널. 푸터 오른쪽에 노출된다.
     developer:
       - name: GitHub
         url: https://github.com/haksungjang
         icon: fab fa-github
-        desc: Development takes place here!
+        desc: GitHub 프로필
       - name: LinkedIn
         url: https://linkedin.com/in/haksung
         icon: fab fa-linkedin
-        desc: Follow me on LinkedIn!
-      - name: Developer mailing list
+        desc: LinkedIn 팔로우하기
+      - name: 업무 문의
         url: mailto:haksung@sk.com
         icon: fa fa-envelope
-        desc: Discuss development issues around the project
+        desc: SK텔레콤 오픈소스 관련 업무 이메일로 문의하기
 
 module:
   # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
