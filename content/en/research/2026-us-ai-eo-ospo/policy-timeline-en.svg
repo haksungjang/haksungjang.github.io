@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="676" viewBox="0 0 860 676">
+  <defs><filter id="u2" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter></defs>
+  <rect width="860" height="676" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <line x1="176" y1="42" x2="176" y2="628" stroke="#d1d5db" stroke-width="1.5"/>
+    <line x1="176" y1="352" x2="176" y2="628" stroke="#c2410c" stroke-width="3.5"/>
+
+    <text x="154" y="69" text-anchor="end" font-size="13" fill="#374151">2023-10-30</text>
+    <circle cx="176" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="40" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="70" font-size="14" fill="#111827">Executive Order 14110 — the first broad AI framework</text>
+
+    <text x="154" y="141" text-anchor="end" font-size="13" fill="#374151">2025-01</text>
+    <circle cx="176" cy="136" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="112" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="136" font-size="14" fill="#111827">14110 revoked, 14179 signed</text>
+    <text x="224" y="154" font-size="12" fill="#6b7280">Revoked on inauguration day (01-20), new order signed (01-23)</text>
+
+    <text x="154" y="213" text-anchor="end" font-size="13" fill="#374151">2025-07-23</text>
+    <circle cx="176" cy="208" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="184" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="208" font-size="14" fill="#111827">America's AI Action Plan released</text>
+    <text x="224" y="226" font-size="12" fill="#6b7280">Includes a section encouraging open source and open weights</text>
+
+    <text x="154" y="285" text-anchor="end" font-size="13" fill="#374151">2026-04-07</text>
+    <circle cx="176" cy="280" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="256" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="286" font-size="14" fill="#111827">Anthropic announces Mythos Preview and Project Glasswing</text>
+
+    <text x="154" y="357" text-anchor="end" font-size="13" fill="#c2410c">2026-06-02</text>
+    <circle cx="176" cy="352" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="328" width="470" height="48" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#u2)"/>
+    <text x="224" y="352" font-size="14" fill="#111827">This executive order signed</text>
+    <text x="224" y="370" font-size="12" fill="#c2410c">Glasswing expanded to 150 organizations</text>
+
+    <text x="154" y="429" text-anchor="end" font-size="13" fill="#374151">2026-06-05</text>
+    <circle cx="176" cy="424" r="5" fill="#ffffff" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="400" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="430" font-size="14" fill="#111827">NSPM-11 — memorandum on AI for national security</text>
+
+    <text x="154" y="501" text-anchor="end" font-size="13" fill="#374151">2026-07-02</text>
+    <circle cx="176" cy="496" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="472" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="496" font-size="14" fill="#111827">30-day deadline</text>
+    <text x="224" y="514" font-size="12" fill="#6b7280">Stand up the clearinghouse, defend federal systems</text>
+
+    <text x="154" y="573" text-anchor="end" font-size="13" fill="#374151">2026-08-01</text>
+    <circle cx="176" cy="568" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="544" width="470" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u2)"/>
+    <text x="224" y="568" font-size="14" fill="#111827">60-day deadline</text>
+    <text x="224" y="586" font-size="12" fill="#6b7280">Classified benchmarking and a voluntary framework</text>
+
+    <path d="M 698 352 L 716 352 L 716 568 L 698 568" fill="none" stroke="#c2410c" stroke-width="1.6"/>
+    <text x="730" y="446" font-size="13" fill="#c2410c">Within two months</text>
+    <text x="730" y="465" font-size="13" fill="#c2410c">of signing, the</text>
+    <text x="730" y="484" font-size="14" font-weight="600" fill="#c2410c">structure stands</text>
+
+    <line x1="40" y1="652" x2="820" y2="652" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="670" font-size="12.5" fill="#4b5563">The deadlines apply to organizing inside government; no deadline is imposed on private companies.</text>
+  </g>
+</svg>

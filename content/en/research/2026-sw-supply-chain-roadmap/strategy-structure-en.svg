@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="410" viewBox="0 0 820 410">
+  <defs>
+    <filter id="s1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="820" height="410" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <!-- vision -->
+    <rect x="240" y="24" width="340" height="56" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.6" filter="url(#s1)"/>
+    <text x="410" y="48" text-anchor="middle" font-size="12" letter-spacing="1.4" fill="#c2410c">VISION</text>
+    <text x="410" y="70" text-anchor="middle" font-size="15" fill="#111827">Cyber resilience in the software supply chain</text>
+
+    <!-- branches -->
+    <path d="M 410 80 L 410 100 L 150 100 L 150 122" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+    <path d="M 410 100 L 410 122" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+    <path d="M 410 100 L 670 100 L 670 122" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#sa)"/>
+
+    <!-- prevention -->
+    <rect x="24" y="130" width="252" height="228" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="44" y="156" font-size="15" fill="#111827">Prevention</text>
+    <text x="44" y="176" font-size="12" fill="#9ca3af">Stronger threat prevention</text>
+    <line x1="44" y1="188" x2="256" y2="188" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="44" y="210" font-size="12.5" fill="#4b5563">Secure development method</text>
+    <text x="44" y="228" font-size="11.5" fill="#9ca3af">Based on NIST SSDF, security by phase</text>
+    <text x="44" y="254" font-size="12.5" fill="#4b5563">Supply chain guideline 2.0</text>
+    <text x="44" y="272" font-size="11.5" fill="#9ca3af">Extends from licensing to security</text>
+    <text x="44" y="298" font-size="12.5" fill="#4b5563">SBOM management model</text>
+    <text x="44" y="316" font-size="11.5" fill="#9ca3af">Exporters and key sectors first</text>
+    <text x="44" y="340" font-size="11.5" fill="#9ca3af">Left open — trust checks, distribution</text>
+
+    <!-- recovery -->
+    <rect x="284" y="130" width="252" height="228" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="304" y="156" font-size="15" fill="#111827">Recovery</text>
+    <text x="304" y="176" font-size="12" fill="#9ca3af">Fast detection and response</text>
+    <line x1="304" y1="188" x2="516" y2="188" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="304" y="210" font-size="12.5" fill="#4b5563">Wider bug bounty, CVD, VDP</text>
+    <text x="304" y="228" font-size="11.5" fill="#9ca3af">Network Act amendment planned</text>
+    <text x="304" y="254" font-size="12.5" fill="#4b5563">Integrated public SBOM</text>
+    <text x="304" y="272" font-size="11.5" fill="#9ca3af">With VEX, a vulnerability database</text>
+    <text x="304" y="298" font-size="12.5" fill="#4b5563">Shorter C-Clean response</text>
+    <text x="304" y="316" font-size="11.5" fill="#9ca3af">From over four months to three days</text>
+    <text x="304" y="340" font-size="11.5" fill="#9ca3af">SME consulting 2026, tools 2027</text>
+
+    <!-- foundation -->
+    <rect x="544" y="130" width="252" height="228" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#s1)"/>
+    <text x="564" y="156" font-size="15" fill="#111827">Foundation</text>
+    <text x="564" y="176" font-size="12" fill="#9ca3af">Policy and institutional base</text>
+    <line x1="564" y1="188" x2="776" y2="188" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="564" y="210" font-size="12.5" fill="#4b5563">Cross-government council</text>
+    <text x="564" y="228" font-size="11.5" fill="#9ca3af">Science Ministry and NIS, five groups</text>
+    <text x="564" y="254" font-size="12.5" fill="#4b5563">Pilot certification</text>
+    <text x="564" y="272" font-size="11.5" fill="#9ca3af">Layered onto ISMS and CSAP</text>
+    <text x="564" y="298" font-size="12.5" fill="#4b5563">SBOM in public procurement</text>
+    <text x="564" y="316" font-size="11.5" fill="#9ca3af">Tied to security suitability review</text>
+    <text x="564" y="340" font-size="11.5" fill="#9ca3af">Global — GCLI, CISA, DG CONNECT</text>
+
+    <!-- note -->
+    <line x1="24" y1="380" x2="796" y2="380" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="24" y="400" font-size="12.5" fill="#4b5563">Security models for AI and other new technology were split into a separate research task after 2027, outside this roadmap.</text>
+  </g>
+</svg>

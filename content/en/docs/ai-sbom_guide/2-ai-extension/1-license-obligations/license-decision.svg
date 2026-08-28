@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="592" viewBox="0 0 820 592">
+  <defs>
+    <filter id="l1" x="-25%" y="-30%" width="150%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="la" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="592" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">AI 자재의 라이선스 의무를 가려내는 절차</text>
+
+    <rect x="310" y="42" width="200" height="46" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="410" y="70" text-anchor="middle" font-size="13.5" fill="#111827">AI 시스템 자재 입력</text>
+
+    <path d="M 410 88 L 410 104 L 200 104 L 200 124" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <path d="M 410 104 L 620 104 L 620 124" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <text x="250" y="100" font-size="11.5" fill="#9ca3af">코드·의존성</text>
+    <text x="560" y="100" font-size="11.5" fill="#9ca3af">모델·데이터셋</text>
+
+    <rect x="80" y="132" width="240" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#l1)"/>
+    <text x="100" y="156" font-size="13.5" fill="#111827">자동 SCA 스캔</text>
+    <text x="100" y="176" font-size="12" fill="#6b7280">ScanCode · ORT</text>
+
+    <rect x="500" y="132" width="240" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#l1)"/>
+    <text x="520" y="156" font-size="13.5" fill="#111827">라이선스 메타데이터 확인</text>
+    <text x="520" y="176" font-size="12" fill="#6b7280">모델 카드 · 데이터시트</text>
+
+    <path d="M 200 188 L 200 210 L 380 210" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <path d="M 620 188 L 620 210 L 440 210" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+
+    <rect x="330" y="200" width="160" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#l1)"/>
+    <text x="410" y="228" text-anchor="middle" font-size="13.5" fill="#111827">라이선스 식별?</text>
+
+    <path d="M 330 223 L 200 223 L 200 260" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <text x="210" y="245" font-size="11.5" fill="#9ca3af">비표준·불명확</text>
+    <path d="M 410 246 L 410 348" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <text x="422" y="300" font-size="11.5" fill="#9ca3af">표준 허용</text>
+
+    <rect x="80" y="268" width="240" height="60" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#l1)"/>
+    <text x="100" y="294" font-size="13.5" fill="#111827">법무·거버넌스 검토</text>
+    <text x="100" y="314" font-size="12" fill="#6b7280">사용 목적 제한 해석</text>
+    <path d="M 200 328 L 200 360 L 380 360" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+
+    <rect x="310" y="356" width="200" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#l1)"/>
+    <text x="410" y="384" text-anchor="middle" font-size="13.5" fill="#111827">의무·제한·권리 분류</text>
+    <path d="M 410 402 L 410 424" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+
+    <rect x="326" y="424" width="168" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#l1)"/>
+    <text x="410" y="452" text-anchor="middle" font-size="13" fill="#111827">의도된 용도와 충돌?</text>
+
+    <path d="M 326 447 L 160 447 L 160 478" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <text x="170" y="440" font-size="11.5" fill="#9ca3af">예</text>
+    <path d="M 410 470 L 410 508" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+    <text x="422" y="494" font-size="11.5" fill="#9ca3af">아니오</text>
+
+    <rect x="40" y="486" width="240" height="52" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#l1)"/>
+    <text x="60" y="510" font-size="13" fill="#111827">위험 완화 또는 자재 교체</text>
+    <text x="60" y="528" font-size="11.5" fill="#6b7280">완화 후 다시 기록으로</text>
+    <path d="M 280 512 L 320 512 L 320 522" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#la)"/>
+
+    <rect x="310" y="508" width="200" height="52" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#l1)"/>
+    <text x="410" y="532" text-anchor="middle" font-size="13.5" fill="#111827">AI SBOM에 기록</text>
+    <text x="410" y="551" text-anchor="middle" font-size="11.5" fill="#c2410c">상·하류 의무 명시, 정기 재검토</text>
+  </g>
+</svg>

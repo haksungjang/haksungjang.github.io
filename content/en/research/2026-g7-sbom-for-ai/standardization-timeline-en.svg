@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="466" viewBox="0 0 840 466">
+  <defs>
+    <filter id="g1" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="840" height="466" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+
+    <!-- axis -->
+    <line x1="176" y1="42" x2="176" y2="392" stroke="#d1d5db" stroke-width="1.5"/>
+
+    <!-- 1 -->
+    <text x="154" y="69" text-anchor="end" font-size="13" fill="#374151">2021-07</text>
+    <circle cx="176" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="36" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="60" font-size="14.5" fill="#111827">NTIA minimum elements for a general SBOM</text>
+    <text x="224" y="80" font-size="12.5" fill="#6b7280">The starting point, defining seven data fields</text>
+
+    <!-- 2 -->
+    <text x="154" y="149" text-anchor="end" font-size="13" fill="#374151">Later</text>
+    <circle cx="176" cy="144" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="116" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="140" font-size="14.5" fill="#111827">Transferred to CISA</text>
+    <text x="224" y="160" font-size="12.5" fill="#6b7280">Run by the SBOM community; software identification analysis</text>
+
+    <!-- 3 -->
+    <text x="154" y="229" text-anchor="end" font-size="13" fill="#374151">2025-06</text>
+    <circle cx="176" cy="224" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="196" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="220" font-size="14.5" fill="#111827">G7 joint vision on SBOM for AI</text>
+    <text x="224" y="240" font-size="12.5" fill="#6b7280">Set out high-level clusters</text>
+
+    <!-- 4 -->
+    <text x="154" y="309" text-anchor="end" font-size="13" fill="#374151">2025-08</text>
+    <text x="154" y="327" text-anchor="end" font-size="13" fill="#374151">– 2026-02</text>
+    <circle cx="176" cy="304" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="276" width="440" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#g1)"/>
+    <text x="224" y="300" font-size="14.5" fill="#111827">G7 working group fills in the minimum elements</text>
+    <text x="224" y="320" font-size="12.5" fill="#6b7280">Co-led by BSI and ACN</text>
+
+    <!-- 5 (highlight) -->
+    <text x="154" y="389" text-anchor="end" font-size="13" fill="#c2410c">2026-05-12</text>
+    <circle cx="176" cy="384" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="356" width="440" height="56" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#g1)"/>
+    <text x="224" y="380" font-size="14.5" fill="#111827">"SBOM for AI — Minimum Elements" published</text>
+    <text x="224" y="400" font-size="12.5" fill="#c2410c">Seven clusters, 50 elements</text>
+
+    <!-- cumulative relation -->
+    <path d="M 668 64 L 700 64 L 700 384 L 668 384" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="714" y="200" font-size="13" fill="#4b5563">AI elements stack</text>
+    <text x="714" y="219" font-size="13" fill="#4b5563">on top of general</text>
+    <text x="714" y="238" font-size="13" fill="#4b5563">SBOM elements</text>
+    <text x="714" y="264" font-size="12" fill="#9ca3af">The metadata cluster</text>
+    <text x="714" y="282" font-size="12" fill="#9ca3af">inherits the NTIA</text>
+    <text x="714" y="300" font-size="12" fill="#9ca3af">lineage as it stands</text>
+
+    <!-- note -->
+    <line x1="40" y1="436" x2="800" y2="436" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="456" font-size="12.5" fill="#4b5563">What marks this document is that it recommends all 50 as minimum elements, with no split into required and optional.</text>
+  </g>
+</svg>

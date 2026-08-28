@@ -1,0 +1,62 @@
+{{/*
+  Docsy docs/list.html 오버라이드.
+  원본과 동일하되, 하위 글 목록만 섹션에 따라 분기한다.
+  - research 섹션: 카드 그리드(발행일·갱신일·태그 노출). 스타일은 _styles_project.scss(.research-card*).
+  - 그 외 docs 하위 섹션: 원본과 동일하게 partial "section-index.html"(텍스트 리스트) 유지.
+  section-index.html partial 자체는 건드리지 않으므로 다른 docs 섹션 동작은 불변이다.
+  research 글들은 weight 동률이라 카드 정렬은 .ByDate.Reverse(최신 먼저)로 한다.
+*/}}
+{{ define "main" }}
+<div class="td-content">
+	<h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+	<header class="article-meta">
+		{{ partial "taxonomy_terms_article_wrapper.html" . -}}
+		{{ if (and (not .Params.hide_readingtime) (.Site.Params.ui.readingtime.enable)) -}}
+			{{ partial "reading-time.html" . -}}
+		{{ end -}}
+	</header>
+	{{ .Render "_td-content-after-header" -}}
+	{{ .Content }}
+	{{ if eq .Section "research" -}}
+		{{ $page := . -}}
+		{{ $pages := (where .Site.Pages "Section" .Section).ByDate.Reverse -}}
+		{{ $pages = (where $pages "Type" "!=" "search") -}}
+		{{ $pages = (where $pages ".Params.hide_summary" "!=" true) -}}
+		{{ $pages = (where $pages ".Parent" "!=" nil) -}}
+		{{ $pages = (where $pages ".Parent.File" "!=" nil) -}}
+		{{ if $page.File -}}
+			{{ $pages = (where $pages "Parent.File.UniqueID" "==" $page.File.UniqueID) -}}
+		{{ end -}}
+		{{ if gt (len $pages) 0 -}}
+		<div class="research-cards">
+			{{ range $pages -}}
+				<a class="research-card" href="{{ .RelPermalink }}">
+					<h2 class="research-card__title">{{ .Title }}</h2>
+					{{ with .Description }}<p class="research-card__desc">{{ . | markdownify | plainify | truncate 140 }}</p>{{ end }}
+					<div class="research-card__meta">
+						<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+						{{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) -}}
+							<span class="research-card__updated">(갱신 {{ .Lastmod.Format "2006-01-02" }})</span>
+						{{- end }}
+					</div>
+					{{ with .Params.tags }}
+						<div class="research-card__tags">
+							{{ range first 3 . }}<span class="research-card__tag">{{ . }}</span>{{ end }}
+						</div>
+					{{ end }}
+				</a>
+			{{ end -}}
+		</div>
+		{{ end -}}
+	{{- else -}}
+		{{ partial "section-index.html" . -}}
+	{{- end }}
+	{{ partial "feedback.html" . -}}
+	{{ if (.Site.Config.Services.Disqus.Shortname) -}}
+		<br />
+		{{- partial "disqus-comment.html" . -}}
+	{{ end -}}
+	{{ partial "page-meta-lastmod.html" . -}}
+</div>
+{{ end -}}

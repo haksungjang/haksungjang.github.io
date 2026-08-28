@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="536" viewBox="0 0 780 536">
+  <defs>
+    <filter id="i1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="ia" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="780" height="536" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <text x="240" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">필수 확인 다섯 단계</text>
+
+    <!-- 1 -->
+    <rect x="240" y="42" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="62" font-size="13.5" fill="#111827">AI BOM 존재와 형식</text>
+    <text x="262" y="80" font-size="12" fill="#6b7280">SPDX 3.0 또는 CycloneDX 1.6</text>
+    <line x1="390" y1="88" x2="390" y2="98" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 2 -->
+    <rect x="240" y="104" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="124" font-size="13.5" fill="#111827">식별과 버전</text>
+    <text x="262" y="142" font-size="12" fill="#6b7280">이름, 식별자, 버전, 생산자</text>
+    <line x1="390" y1="150" x2="390" y2="160" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 3 -->
+    <rect x="240" y="166" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="186" font-size="13.5" fill="#111827">라이선스</text>
+    <text x="262" y="204" font-size="12" fill="#6b7280">모델·데이터셋 라이선스와 사용 조건</text>
+    <line x1="390" y1="212" x2="390" y2="222" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 4 -->
+    <rect x="240" y="228" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="248" font-size="13.5" fill="#111827">데이터 적법성과 위험</text>
+    <text x="262" y="266" font-size="12" fill="#6b7280">데이터셋 출처, 민감도</text>
+    <line x1="390" y1="274" x2="390" y2="284" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 5 -->
+    <rect x="240" y="290" width="300" height="46" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="262" y="310" font-size="13.5" fill="#111827">보안 위험</text>
+    <text x="262" y="328" font-size="12" fill="#6b7280">취약점 참조, 모델 파일 점검</text>
+
+    <!-- 분기 -->
+    <path d="M 390 336 L 390 356 L 190 356 L 190 378" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+    <path d="M 390 356 L 590 356 L 590 378" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ia)"/>
+
+    <!-- 도입 가능 -->
+    <rect x="40" y="386" width="300" height="96" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#i1)"/>
+    <text x="62" y="414" font-size="15" fill="#111827">도입 가능</text>
+    <text x="62" y="440" font-size="12.5" fill="#6b7280">다섯 단계를 모두 충족</text>
+    <text x="62" y="462" font-size="12.5" fill="#6b7280">식별자, 버전, 판정 일자를 기록</text>
+
+    <!-- 도입 보류 (강조) -->
+    <rect x="440" y="386" width="300" height="96" rx="8" fill="#fff" stroke="#c2410c" stroke-width="1.8" filter="url(#i1)"/>
+    <text x="462" y="414" font-size="15" font-weight="600" fill="#c2410c">도입 보류</text>
+    <text x="462" y="438" font-size="12" fill="#6b7280">라이선스 충돌 · 출처 불명확</text>
+    <text x="462" y="456" font-size="12" fill="#6b7280">민감 데이터 미표기 · 수용 불가 취약점</text>
+    <text x="462" y="474" font-size="12" fill="#c2410c">넷 중 하나라도 해당하면 보류</text>
+
+    <!-- 주석 -->
+    <line x1="40" y1="502" x2="740" y2="502" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="522" font-size="12.5" fill="#4b5563">보류 시 공급처에 보완을 요청하거나 대체 모델을 검토합니다. 판정 기록은 이후 재평가와 공급망 추적에 씁니다.</text>
+  </g>
+</svg>

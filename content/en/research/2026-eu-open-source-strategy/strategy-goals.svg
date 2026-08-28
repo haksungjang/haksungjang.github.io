@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="410" viewBox="0 0 820 410">
+  <defs><filter id="e1" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter></defs>
+  <rect width="820" height="410" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">COM(2026) 503이 세운 네 목표와 대표 조치</text>
+
+    <rect x="40" y="44" width="368" height="146" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#e1)"/>
+    <text x="62" y="72" font-size="12" fill="#c2410c">목표 i</text>
+    <text x="62" y="96" font-size="14.5" fill="#111827">주권을 위한 오픈소스 활용</text>
+    <line x1="62" y1="110" x2="386" y2="110" stroke="#efd7c4" stroke-width="1"/>
+    <text x="62" y="132" font-size="12.5" fill="#6b7280">오픈 인터넷 스택 구축</text>
+    <text x="62" y="152" font-size="12.5" fill="#6b7280">EUID와 EBW를 오픈소스로 공개</text>
+    <text x="62" y="174" font-size="12.5" fill="#c2410c">2030년까지 이용자 3,000만 명</text>
+
+    <rect x="424" y="44" width="356" height="146" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e1)"/>
+    <text x="446" y="72" font-size="12" fill="#9ca3af">목표 ii</text>
+    <text x="446" y="96" font-size="14.5" fill="#111827">생태계 강화와 진흥</text>
+    <line x1="446" y1="110" x2="758" y2="110" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="446" y="132" font-size="12.5" fill="#6b7280">비즈니스 액셀러레이터</text>
+    <text x="446" y="152" font-size="12.5" fill="#6b7280">스튜어드십 툴킷</text>
+    <text x="446" y="172" font-size="12.5" fill="#6b7280">오픈소스 유지보수 지원 수단</text>
+
+    <rect x="40" y="206" width="368" height="146" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e1)"/>
+    <text x="62" y="234" font-size="12" fill="#9ca3af">목표 iii</text>
+    <text x="62" y="258" font-size="14.5" fill="#111827">공공행정의 개방과 상호운용</text>
+    <line x1="62" y1="272" x2="386" y2="272" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="62" y="294" font-size="12.5" fill="#6b7280">공공 자금으로 만든 코드는 공개</text>
+    <text x="62" y="314" font-size="12.5" fill="#6b7280">조달 개혁</text>
+    <text x="62" y="334" font-size="12.5" fill="#6b7280">OSPO 네트워크 강화</text>
+
+    <rect x="424" y="206" width="356" height="146" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e1)"/>
+    <text x="446" y="234" font-size="12" fill="#9ca3af">목표 iv</text>
+    <text x="446" y="258" font-size="14.5" fill="#111827">표준과 국제 협력</text>
+    <line x1="446" y1="272" x2="758" y2="272" stroke="#f3f4f6" stroke-width="1"/>
+    <text x="446" y="294" font-size="12.5" fill="#6b7280">표준화 규정 개정</text>
+    <text x="446" y="314" font-size="12.5" fill="#6b7280">Team Europe 방식의 국제 협력</text>
+
+    <line x1="40" y1="380" x2="780" y2="380" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="400" font-size="12.5" fill="#4b5563">첫 목표만 수치 목표를 달았습니다. 나머지 셋은 수단을 제시하되 달성 기준은 두지 않았습니다.</text>
+  </g>
+</svg>

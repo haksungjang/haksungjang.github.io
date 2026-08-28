@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="452" viewBox="0 0 840 452">
+  <defs><filter id="e3" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter></defs>
+  <rect width="840" height="452" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+    <line x1="176" y1="42" x2="176" y2="388" stroke="#d1d5db" stroke-width="1.5"/>
+    <line x1="176" y1="224" x2="176" y2="388" stroke="#c2410c" stroke-width="3.5"/>
+
+    <text x="154" y="69" text-anchor="end" font-size="13" fill="#374151">2026-01-12</text>
+    <circle cx="176" cy="64" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="40" width="480" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e3)"/>
+    <text x="224" y="70" font-size="14" fill="#111827">증거 수집 요청 개시</text>
+
+    <text x="154" y="149" text-anchor="end" font-size="13" fill="#374151">2026-02-03</text>
+    <circle cx="176" cy="144" r="5" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <rect x="204" y="120" width="480" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e3)"/>
+    <text x="224" y="144" font-size="14" fill="#111827">요청 마감</text>
+    <text x="224" y="162" font-size="12" fill="#6b7280">1,600건 이상 접수</text>
+
+    <text x="154" y="229" text-anchor="end" font-size="13" fill="#c2410c">2026-06-03</text>
+    <circle cx="176" cy="224" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="200" width="480" height="48" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#e3)"/>
+    <text x="224" y="230" font-size="14" fill="#111827">COM(2026) 503 발표</text>
+
+    <text x="154" y="309" text-anchor="end" font-size="13" fill="#374151">2026-12</text>
+    <circle cx="176" cy="304" r="5" fill="#ffffff" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="280" width="480" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e3)"/>
+    <text x="224" y="310" font-size="14" fill="#111827">회원국 국가 로드맵 개정</text>
+
+    <text x="154" y="389" text-anchor="end" font-size="13" fill="#374151">이후</text>
+    <circle cx="176" cy="384" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/>
+    <rect x="204" y="360" width="480" height="48" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#e3)"/>
+    <text x="224" y="390" font-size="14" fill="#111827">표준화 규정 개정 제안</text>
+
+    <line x1="40" y1="424" x2="800" y2="424" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="444" font-size="12.5" fill="#4b5563">전략은 발표됐으나 구속력 있는 입법은 표준화 규정 개정부터입니다. 그 전까지는 회원국 로드맵이 실행 축입니다.</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="410" viewBox="0 0 820 410">
+  <defs>
+    <filter id="r1" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="ra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="820" height="410" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">HOW THE U.S. TURNED SBOM INTO POLICY</text>
+
+    <rect x="240" y="42" width="340" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="260" y="66" font-size="13.5" fill="#111827">2021-05 Executive Order 14028</text>
+    <text x="260" y="86" font-size="12" fill="#6b7280">Defines SBOM and delegates the minimum elements</text>
+    <line x1="410" y1="98" x2="410" y2="114" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ra)"/>
+
+    <rect x="240" y="116" width="340" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="260" y="140" font-size="13.5" fill="#111827">2021-07 NTIA minimum elements</text>
+    <text x="260" y="160" font-size="12" fill="#6b7280">Seven data fields and three categories</text>
+    <line x1="410" y1="172" x2="410" y2="188" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ra)"/>
+
+    <rect x="240" y="190" width="340" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="260" y="214" font-size="13.5" fill="#111827">Ownership moves to CISA</text>
+    <text x="260" y="234" font-size="12" fill="#6b7280">OMB M-22-18 grants authority to update</text>
+
+    <path d="M 410 246 L 410 266 L 210 266 L 210 286" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ra)"/>
+    <path d="M 410 266 L 610 266 L 610 286" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ra)"/>
+
+    <rect x="40" y="294" width="340" height="66" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#r1)"/>
+    <text x="60" y="318" font-size="13.5" fill="#111827">2024-09 Framing, third edition</text>
+    <text x="60" y="340" font-size="12" fill="#6b7280">Adds license and copyright notice attributes</text>
+
+    <rect x="440" y="294" width="340" height="66" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#r1)"/>
+    <text x="460" y="318" font-size="13.5" fill="#111827">2025-08 draft revision of the elements</text>
+    <text x="460" y="340" font-size="12" fill="#c2410c">Adds hash, license, tool name, generation context</text>
+
+    <line x1="40" y1="384" x2="780" y2="384" stroke="#e5e7eb" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <filter id="u1" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <marker id="ua" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="800" height="430" fill="#ffffff"/>
+  <g font-family="'Apple SD Gothic Neo','Noto Sans CJK KR','Malgun Gothic',sans-serif">
+
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">집계 대상 출처 다섯 곳</text>
+
+    <!-- G7 (항상 1표) -->
+    <rect x="40" y="44" width="212" height="76" rx="8" fill="#fdf1e9" stroke="#e8c4a8" filter="url(#u1)"/>
+    <text x="58" y="70" font-size="14" fill="#111827">G7 AI SBOM 최소 요소</text>
+    <text x="58" y="92" font-size="12.5" fill="#c2410c">50개 요소 전부를 권고</text>
+    <text x="58" y="110" font-size="12.5" fill="#c2410c">모든 요소에 언제나 1표</text>
+
+    <!-- 나머지 4곳 -->
+    <rect x="272" y="44" width="120" height="76" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u1)"/>
+    <text x="332" y="70" text-anchor="middle" font-size="13.5" fill="#111827">SPDX 3.0.1</text>
+    <text x="332" y="92" text-anchor="middle" font-size="12" fill="#6b7280">명세의</text>
+    <text x="332" y="108" text-anchor="middle" font-size="12" fill="#6b7280">카디널리티</text>
+
+    <rect x="402" y="44" width="120" height="76" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u1)"/>
+    <text x="462" y="70" text-anchor="middle" font-size="13.5" fill="#111827">CycloneDX 1.6</text>
+    <text x="462" y="92" text-anchor="middle" font-size="12" fill="#6b7280">스키마의</text>
+    <text x="462" y="108" text-anchor="middle" font-size="12" fill="#6b7280">required 배열</text>
+
+    <rect x="532" y="44" width="110" height="76" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u1)"/>
+    <text x="587" y="70" text-anchor="middle" font-size="13.5" fill="#111827">NTIA</text>
+    <text x="587" y="92" text-anchor="middle" font-size="12" fill="#6b7280">일곱 개</text>
+    <text x="587" y="108" text-anchor="middle" font-size="12" fill="#6b7280">기준 데이터 필드</text>
+
+    <rect x="652" y="44" width="108" height="76" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u1)"/>
+    <text x="706" y="70" text-anchor="middle" font-size="13.5" fill="#111827">OpenChain</text>
+    <text x="706" y="92" text-anchor="middle" font-size="12" fill="#6b7280">라이선스</text>
+    <text x="706" y="108" text-anchor="middle" font-size="12" fill="#6b7280">프로세스 강제</text>
+
+    <!-- 규칙 -->
+    <line x1="400" y1="120" x2="400" y2="150" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ua)"/>
+    <rect x="120" y="158" width="560" height="76" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="400" y="186" text-anchor="middle" font-size="15" fill="#111827">존재를 요구하는 출처가 둘 이상이면 필수</text>
+    <text x="400" y="212" text-anchor="middle" font-size="12.5" fill="#6b7280">G7이 언제나 1표를 주므로, 실제로는 나머지 네 곳 가운데 한 곳이라도 요구하는가로 귀결됩니다</text>
+
+    <!-- 두 갈래 -->
+    <path d="M 400 234 L 400 254 L 250 254 L 250 276" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ua)"/>
+    <path d="M 400 234 L 400 254 L 550 254 L 550 276" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ua)"/>
+
+    <rect x="110" y="284" width="280" height="86" rx="8" fill="#fff" stroke="#c2410c" stroke-width="1.8" filter="url(#u1)"/>
+    <text x="250" y="314" text-anchor="middle" font-size="15" font-weight="600" fill="#c2410c">필수 20</text>
+    <text x="250" y="340" text-anchor="middle" font-size="12.5" fill="#6b7280">G7에 더해 다른 표준</text>
+    <text x="250" y="358" text-anchor="middle" font-size="12.5" fill="#6b7280">한 곳 이상이 요구</text>
+
+    <rect x="410" y="284" width="280" height="86" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#u1)"/>
+    <text x="550" y="314" text-anchor="middle" font-size="15" fill="#111827">선택 30</text>
+    <text x="550" y="340" text-anchor="middle" font-size="12.5" fill="#6b7280">G7만 최소 요소로 들고</text>
+    <text x="550" y="358" text-anchor="middle" font-size="12.5" fill="#6b7280">다른 표준은 강제하지 않음</text>
+
+    <!-- 주석 -->
+    <line x1="40" y1="396" x2="760" y2="396" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="416" font-size="12.5" fill="#4b5563">객체를 만들 때만 강제되는 조건부 필수는 존재 요구로 세지 않았습니다. 규제 근거는 집계에 넣지 않고 별도 축으로 표시합니다.</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560">
+  <defs>
+    <filter id="t1" x="-25%" y="-30%" width="150%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.10"/></filter>
+    <marker id="ta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#9ca3af"/></marker>
+  </defs>
+  <rect width="760" height="560" fill="#ffffff"/>
+  <g font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">
+    <text x="40" y="28" font-size="12" letter-spacing="1.6" fill="#6b7280">DECIDING WHETHER TRANSPARENCY DUTIES APPLY</text>
+
+    <rect x="230" y="42" width="300" height="46" rx="8" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="380" y="70" text-anchor="middle" font-size="13.5" fill="#111827">Models, datasets and intended use</text>
+    <line x1="380" y1="88" x2="380" y2="104" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="220" y="112" width="320" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="240" y="136" font-size="13.5" fill="#111827">Identify the applicable regulation</text>
+    <text x="240" y="156" font-size="12" fill="#6b7280">EU AI Act, Korea's AI Framework Act and others</text>
+    <line x1="380" y1="168" x2="380" y2="188" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="296" y="188" width="168" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#t1)"/>
+    <text x="380" y="216" text-anchor="middle" font-size="13" fill="#111827">Duty applies?</text>
+
+    <path d="M 296 211 L 130 211 L 130 250" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+    <text x="140" y="204" font-size="11.5" fill="#9ca3af">None</text>
+    <path d="M 380 234 L 380 274" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+    <text x="392" y="258" font-size="11.5" fill="#9ca3af">Yes</text>
+
+    <rect x="40" y="258" width="180" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="60" y="282" font-size="13" fill="#111827">Record the review</text>
+    <text x="60" y="302" font-size="12" fill="#6b7280">Grounds for no duty</text>
+
+    <rect x="230" y="274" width="300" height="56" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="250" y="298" font-size="13.5" fill="#111827">Derive what has to be disclosed</text>
+    <text x="250" y="318" font-size="12" fill="#6b7280">Data summary, labelling, provenance</text>
+    <line x1="380" y1="330" x2="380" y2="350" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="296" y="350" width="168" height="46" rx="23" fill="#fff" stroke="#c2410c" stroke-width="1.6" filter="url(#t1)"/>
+    <text x="380" y="378" text-anchor="middle" font-size="13" fill="#111827">Downstream issue?</text>
+
+    <path d="M 296 373 L 130 373 L 130 412" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+    <text x="140" y="366" font-size="11.5" fill="#9ca3af">Yes</text>
+    <path d="M 380 396 L 380 452" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+    <text x="392" y="428" font-size="11.5" fill="#9ca3af">No</text>
+
+    <rect x="40" y="420" width="180" height="60" rx="8" fill="#fff" stroke="#d1d5db" filter="url(#t1)"/>
+    <text x="60" y="444" font-size="13" fill="#111827">Mitigate the risk</text>
+    <text x="60" y="464" font-size="12" fill="#6b7280">Summary release, notice</text>
+    <path d="M 130 480 L 130 502 L 296 502" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#ta)"/>
+
+    <rect x="256" y="452" width="248" height="52" rx="8" fill="#fdf1e9" stroke="#c2410c" stroke-width="1.8" filter="url(#t1)"/>
+    <text x="380" y="476" text-anchor="middle" font-size="13.5" fill="#111827">Reflect in AI SBOM and model card</text>
+    <text x="380" y="495" text-anchor="middle" font-size="11.5" fill="#c2410c">Document the action, refresh regularly</text>
+
+    <line x1="40" y1="528" x2="720" y2="528" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="40" y="548" font-size="12.5" fill="#4b5563">Even a finding of no duty gets recorded. What matters later is that the review happened at all.</text>
+  </g>
+</svg>
