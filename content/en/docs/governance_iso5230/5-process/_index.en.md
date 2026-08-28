@@ -38,7 +38,7 @@ To determine whether open source can be used, it is first necessary to identify 
 2. Any questions are directed to the Open Source Program Manager, and if necessary, the Open Source Program Manager requests advice from an external legal expert.
 3. All internal and external decision results and related grounds are retained.
 
-The Identification, Auditing, Resolving Issues, Review, and Approval steps in "[Appendix 2. Sample Open Source Compliance Process](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)"'s [1. Identification of Open Source](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84subidentification-of-open-sourcesub) are an example of a documented procedure for reviewing and recording the obligations and restrictions imposed by each identified license.
+The Identification, Auditing, Resolving Issues, Review, and Approval steps in "[Appendix 2. Sample Open Source Compliance Process](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)"'s [1. Identification of Open Source](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84identification-of-open-source) are an example of a documented procedure for reviewing and recording the obligations and restrictions imposed by each identified license.
 
 ![](identification.png)
 
@@ -63,7 +63,7 @@ The most fundamental part of open source compliance activities is understanding 
 
 All open source must be reviewed and approved before being integrated into Supplied Software. A prior review is needed not only for the function and quality of the open source but also for whether its origin and license requirements can be met. This requires a process of review request → review → approval.
 
-[Appendix 2. Sample Open Source Compliance Process](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4) describes the entire process for a company's open source compliance. The BOM is created and managed through the steps from [1. Identification of Open Source](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84subidentification-of-open-sourcesub) to [6. Registration](https://haksungjang.github.io/docs/openchain/#6-%EB%93%B1%EB%A1%9Dsubregistrationsub).
+[Appendix 2. Sample Open Source Compliance Process](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4) describes the entire process for a company's open source compliance. The BOM is created and managed through the steps from [1. Identification of Open Source](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84identification-of-open-source) to [6. Registration](https://haksungjang.github.io/docs/openchain/#6-%EB%93%B1%EB%A1%9Dregistration).
 
 Tools for managing the open source BOM are explained in detail in "[6. Tools](../6-tool/)".
 
