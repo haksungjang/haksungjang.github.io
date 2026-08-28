@@ -1,0 +1,46 @@
+{{- /*
+  마크다운 이미지(![]())를 처리하는 렌더 훅.
+  - 원본이 최대 폭(1200px)보다 크면 리사이즈해 과도한 원본 해상도 전송을 막는다.
+  - width/height를 명시해 레이아웃 이동(layout shift)을 막는다.
+  - loading="lazy"를 붙여 화면 밖 이미지 로드를 늦춘다.
+  - 리소스를 못 찾거나(외부 URL, static/ 파일 등) SVG인 경우는 가공하지 않고 그대로 통과시킨다.
+  - 페이지 자신의 리소스가 아니면(예: 상위 브랜치 번들이 소유한 이미지를 "../foo.png"나
+    "/section/foo.png"로 참조하는 경우) 파일명 기준으로 부모 페이지 리소스에서도 찾는다.
+*/ -}}
+{{- $page := .Page -}}
+{{- $dest := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+{{- $isRemote := or (strings.HasPrefix $dest "http://") (strings.HasPrefix $dest "https://") -}}
+{{- $image := "" -}}
+{{- if not $isRemote -}}
+  {{- with $page.Resources.Get $dest -}}
+    {{- $image = . -}}
+  {{- end -}}
+  {{- if not $image -}}
+    {{- $base := path.Base $dest -}}
+    {{- with $page.Resources.GetMatch $base -}}
+      {{- $image = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (not $image) $page.Parent -}}
+    {{- $base := path.Base $dest -}}
+    {{- with $page.Parent.Resources.GetMatch $base -}}
+      {{- $image = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $image -}}
+  {{- if eq $image.MediaType.SubType "svg" -}}
+<img src="{{ $image.RelPermalink }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy">
+  {{- else -}}
+    {{- $maxWidth := 1200 -}}
+    {{- $resized := $image -}}
+    {{- if gt $image.Width $maxWidth -}}
+      {{- $resized = $image.Resize (printf "%dx" $maxWidth) -}}
+    {{- end -}}
+<img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy">
+  {{- end -}}
+{{- else -}}
+<img src="{{ $dest | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}
