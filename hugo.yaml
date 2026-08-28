@@ -53,7 +53,7 @@ languages:
     label: 한국어
     locale: ko-KR
     weight: 1
-    title: Haksung
+    title: 장학성 Haksung Jang
     params:
       description: Haksung's Homepage 장학성 오픈소스 프로그램 매니저 / SK텔레콤
       time_format_default: 2006-01-02
@@ -62,7 +62,7 @@ languages:
     label: English
     locale: en-US
     weight: 2
-    title: Haksung
+    title: Haksung Jang
     params:
       description: Haksung Jang — Open Source Program Manager at SK telecom
       time_format_default: January 2, 2006
