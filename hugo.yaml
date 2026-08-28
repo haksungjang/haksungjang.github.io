@@ -186,10 +186,10 @@ params:
   github_branch: master
 
   # Google Custom Search Engine ID. Remove or comment out to disable search.
-  gcs_engine_id: 044e5f1b127c4a360
+  # gcs_engine_id: 044e5f1b127c4a360
 
   # Enable Lunr.js offline search
-  offlineSearch: false
+  offlineSearch: true
 
   # Enable syntax highlighting and copy buttons on code blocks with Prism
   prism_syntax_highlighting: false
