@@ -373,3 +373,17 @@ h1.td-title { font-size: 1.75rem; font-weight: 500; letter-spacing: -0.022em; }
   background: var(--bs-tertiary-bg);
   color: var(--bs-secondary-color);
 }
+
+// 링크가 색상만으로 구분되지 않도록 키보드 포커스 시에도 밑줄 표시 (WCAG 1.4.1)
+a:focus-visible {
+  text-decoration: underline;
+}
+
+// Inline SVG icons (Font Awesome 웹폰트 대체용, 사용하는 곳에서 fill로 색을 물려받음)
+.td-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
