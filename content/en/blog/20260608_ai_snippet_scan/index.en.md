@@ -17,12 +17,8 @@ aliases:
 ---
 
 
-{{% alert color="info" %}}
-This post was written using Claude Code, and the key facts cited were cross-checked against public sources.
-{{% /alert %}}
-
-{{% alert title="Notice" color="warning" %}}
-This post reflects the author's personal analysis and is not legal advice. The facts cited were verified against public sources, but specific matters should be reviewed by a lawyer or other qualified professional.
+{{% alert title="Note" color="info" %}}
+This post was written using Claude Code, and the key facts cited were cross-checked against public sources. It reflects the author's personal analysis and is not legal advice, so specific matters should be reviewed by a lawyer or other qualified professional.
 {{% /alert %}}
 
 ## One point to clarify first
