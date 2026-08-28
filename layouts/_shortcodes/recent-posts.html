@@ -1,0 +1,43 @@
+{{/*
+  홈페이지용 "최근 글" 섹션. blog 섹션의 최신 글을 카드 목록으로 보여준다.
+  파라미터: count(기본 6), heading, more_label(모두 문자열, 언어별로 홈페이지에서 직접 전달).
+  카드 마크업은 Docsy 자체 블로그 목록(_vendor/.../layouts/blog/list.html)의
+  td-blog-posts / td-blog-posts-list 클래스를 그대로 재사용해 별도 CSS 없이 기존 스타일과 맞춘다.
+*/ -}}
+{{ $count := .Get "count" | default 6 | int -}}
+{{ $heading := .Get "heading" | default "Recent posts" -}}
+{{ $moreLabel := .Get "more_label" | default "View all posts" -}}
+{{ $posts := where site.RegularPages "Section" "blog" -}}
+{{ $posts = $posts.ByDate.Reverse -}}
+{{ $posts = first $count $posts -}}
+
+<div><a id="td-block-recent-posts" class="td-anchor-no-extra-offset"></a></div>
+<section class="row td-box td-box--white td-box--height-auto">
+<div class="col">
+<div class="container">
+<h2 class="text-center mb-4">{{ $heading }}</h2>
+{{ if $posts -}}
+<div class="td-blog-posts">
+<ul class="td-blog-posts-list">
+  {{ range $posts -}}
+  <li class="td-blog-posts-list__item">
+    <div class="td-blog-posts-list__body">
+      <h5 class="mt-0 mb-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
+      <p class="mb-2"><small class="text-body-secondary">
+        {{- .Date.Format (site.Params.time_format_blog | default "January 2, 2006") -}}
+      </small></p>
+      {{- partial "featured-image.html" (dict "p" . "w" 250 "h" 125 "class" "float-start me-3 pt-1 d-none d-md-block") -}}
+      <p class="pt-0 mt-0">{{ .Plain | safeHTML | truncate 200 }}</p>
+    </div>
+  </li>
+  {{ end -}}
+</ul>
+</div>
+<div class="text-center mt-3">
+  <a class="btn btn-outline-primary" href="/blog/">{{ $moreLabel }}</a>
+</div>
+{{ end -}}
+</div>
+</div>
+</section>
+{{/**/ -}}

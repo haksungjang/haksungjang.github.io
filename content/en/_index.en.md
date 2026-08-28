@@ -21,3 +21,5 @@ author: Haksung Jang
 </a>
 </div>
 {{< /blocks/cover >}}
+
+{{< recent-posts count="6" heading="Recent posts" more_label="View all posts" >}}

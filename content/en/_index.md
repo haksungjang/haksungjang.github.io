@@ -21,3 +21,5 @@ author: 장학성
 </a>
 </div>
 {{< /blocks/cover >}}
+
+{{< recent-posts count="6" heading="최근 글" more_label="블로그 전체 보기" >}}
