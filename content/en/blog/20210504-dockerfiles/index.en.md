@@ -62,29 +62,26 @@ Docker is a technology for installing and distributing programs in containers. I
 A preconfigured container can be distributed as a "Docker image," which, in addition to the base program, may also include applications, dependencies as program code, and, where necessary, utilities and configuration files. A Docker image can be distributed individually, but it can also be distributed through a public repository such as "Docker Hub." The same applies to what is known as a "Base Image," which includes essential system components such as C libraries, a package manager, a shell, and a directory tree, and which refers to a specific Linux distribution. On top of this Base image, additional functionality can be distributed separately as individual archive files, but it can also be added as so-called "layers" that are built on top of one another to form a complete Docker image.
 
 
-<figure class="image">
-  <img src="./image-layer.png" alt="image-layer" width="600">
-  <figcaption><i>Layer storage method: https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker정리/</i><figcaption>
-</figure>
+![Diagram showing layers stacking on an ubuntu base image (nginx, then a web app layer) to form a Docker image, and a read/write (R/W) layer being added on top to form a Docker container](./image-layer.png)
+
+*Layer storage method: https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker정리/*
 
 ### Dockerfile
 
 A "Dockerfile" is a text file that, similar to a script, contains step-by-step instructions for building a Docker image. A Dockerfile generally can have its own license that applies only to the Dockerfile itself, and this license does not apply to the programs included in the Docker container. 
 
-<figure class="image">
-  <img src="./featured-dockerfile-ex.png" alt="featured-dockerfile-ex.png" width="600">
-  <figcaption><i>Dockerfile : https://www.slideshare.net/vincenzoferme/using-docker-containers-to-improve-reproducibility-in-software-and-web-engineering</i></figcaption>
-</figure>
+![Example Dockerfile showing a FROM instruction for the base image, RUN instructions to install dependencies, a COPY instruction, and ENTRYPOINT/CMD instructions to define the startup command](./featured-dockerfile-ex.png)
+
+*Dockerfile: https://www.slideshare.net/vincenzoferme/using-docker-containers-to-improve-reproducibility-in-software-and-web-engineering*
 
 
 ### The Docker Engine
 
 The "Docker Engine," the management software for Docker containers, processes the instructions in a Dockerfile sequentially to generate a Docker image. Typically, each component for the Base image or the individual layers is downloaded from an internal or external repository. This means that it is possible for a provider to supply a Dockerfile without transmitting the physical program code, and this is in fact common practice. Using the Dockerfile they receive, customers can build a Docker container by independently obtaining all or part of the program code from a public repository. 
 
-<figure class="image">
-  <img src="./docker.jpg" alt="docker.jpg" width="600">
-  <figcaption><i>https://cultivatehq.com/posts/docker/</i></figcaption>
-</figure>
+![Hand-drawn diagram showing a Dockerfile built with docker build into a Docker image, then run with docker run to launch multiple Docker containers](./docker.jpg)
+
+*https://cultivatehq.com/posts/docker/*
 
 
 This raises the question of whether, and which, license obligations the Dockerfile provider must comply with for the FOSS included in a Docker image built using such a Dockerfile. 
