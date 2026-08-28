@@ -25,7 +25,7 @@ Modern software development has become a far more complex process than it was in
 
 The "Software Supply Chain" is already highly complex. Whereas software used to be delivered to customers on physical media such as CDs, today's software (both OSS and proprietary software alike) is stored in "repositories" and distributed remotely on demand through a Project Dependency Manager (PDM) or Package Manager.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/UFqIj_ywPKiBf0csdt91M6rzRSU.png)
+![Diagram of today's software supply chain, distributed remotely via repositories and package managers](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/UFqIj_ywPKiBf0csdt91M6rzRSU.png)
 
 Most of the recent attention paid to security in the software supply chain has focused on the Developer, the first link in the chain, or the End User, the last link, but vulnerabilities exist at every level. Consider the following incidents.
 
@@ -189,11 +189,11 @@ As a result, many stakeholders who rely on the CVE and NVD programs, including n
 
 Given their position at the very end of the software supply chain, end users would seem to have the least control over security.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/FO95cqN6sfQpgXkxjSfHnZnJRog.png)
+![Diagram showing End Users at the far end of the software supply chain, with the least control over security](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/FO95cqN6sfQpgXkxjSfHnZnJRog.png)
 
 However, the picture changes if you think of the supply chain as a loop.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/uG9Vz6BGSxxkyT2FHCYrJATMwbM.png)
+![Diagram depicting the software supply chain as a closed loop](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/uG9Vz6BGSxxkyT2FHCYrJATMwbM.png)
 
 End users will typically use a technology vendor's solution, and in that case, they cannot make decisions about the choice of PDM or OSS packages. However, end users do control "acquisition requirements" (although many users do not make full use of this leverage).
 

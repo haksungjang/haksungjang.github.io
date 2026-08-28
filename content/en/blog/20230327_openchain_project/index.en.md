@@ -15,12 +15,12 @@ Using open source has become almost essential to modern software development, to
 
 On March 27, 2023, [Shane Coughlan](https://github.com/shanecoughlan), General Manager of the OpenChain Project, visited SK telecom for a session explaining the OpenChain Project's major activities, international standards related to open source, and global trends.
 
-![Untitled](Untitled.png)
+![Shane Coughlan visiting SK telecom to explain OpenChain Project activities](Untitled.png)
 
 
 Members of SK telecom's [OSRB](https://sktelecom.github.io/about/osrb/) and the SK Group open source council (SK Planet, SK Shieldus, SK Inc., the Supex Council, and others) took part and exchanged various opinions.
 
-![Untitled](featured_meeting.png)
+![Meeting photo with SK telecom OSRB and SK Group open source council members](featured_meeting.png)
 
 On this day, Shane introduced the OpenChain Project and explained how it jointly resolves open source management issues in the software supply chain through global collaboration. This article introduces the main points.
 
@@ -30,13 +30,13 @@ Multiple global companies collaborate through the OpenChain Project to manage so
 
 ### Platinum Members
 
-![Untitled](Untitled_2.png)
+![Logos of OpenChain Project Platinum Member companies](Untitled_2.png)
 
 ### Community Structure
 
 The OpenChain Project has [numerous Work Groups](https://www.openchainproject.org/participate), and each Work Group develops standards for open source management and jointly builds automation tools. There are also Work Groups organized by country.
 
-![Untitled](Untitled_3.png)
+![Diagram of the OpenChain Project's Work Group community structure](Untitled_3.png)
 
 ## OpenChain Standard
 
@@ -46,19 +46,19 @@ The most visible outcome is the development of the first international standard 
 
 These standards define the core requirements companies need to manage open source. By complying with the requirements of these standards, a company can transparently demonstrate that open source management is taking place within its software supply chain.
 
-![Untitled](Untitled_4.png)
+![Slide explaining the ISO/IEC 5230 and ISO/IEC DIS 18974 standards](Untitled_4.png)
 
 ### Self-Certification
 
 The OpenChain Project also provides a checklist for [Self-Certification](https://github.com/OpenChain-Project/Reference-Material/tree/master/Self-Certification). Companies can raise their level of open source management by working through the checklist items one by one.
 
-![Untitled](Untitled_5.png)
+![Slide explaining the OpenChain Self-Certification checklist](Untitled_5.png)
 
 ### Adoption of OpenChain ISO/IEC 5230:2020
 
 A company that complies with every item on the checklist can declare itself compliant with ISO/IEC 5230. The list of companies that have declared adoption of ISO/IEC 5230 includes several Korean companies as well, such as LG Electronics, Kakao, Samsung Electronics, Naver, SK telecom, NCSOFT, and Hyundai Motor Group.
 
-![Untitled](Untitled_6.png)
+![List of companies that declared ISO/IEC 5230 conformance](Untitled_6.png)
 
 ## Other Interesting Items
 
@@ -66,17 +66,17 @@ A company that complies with every item on the checklist can declare itself comp
 
 The OpenChain Project continues to hold [online webinars](https://www.openchainproject.org/webinars) on open source management.
 
-![Untitled](Untitled_7.png)
+![Slide about OpenChain Project's online webinars](Untitled_7.png)
 
 ### Training Courses
 
 A [free training course](https://www.openchainproject.org/resources) for open source license compliance is provided, and a badge can also be earned upon completion.
 
-![Untitled](Untitled_8.png)
+![Slide about the OpenChain Free Training Course and its completion badge](Untitled_8.png)
 
 This training course is put to various uses, such as companies requiring their employees or suppliers to complete it.
 
-![Untitled](Untitled_9.png)
+![Slide on companies requiring the Training Course for staff or suppliers](Untitled_9.png)
 
 ## Update on China and Japan
 
@@ -114,6 +114,6 @@ The OpenChain Project is a community for applying the open source approach of sh
 
 After the meeting session with Shane, we enjoyed a nice lunch sponsored by SK telecom's Tech HR team. (Thank you, [Sangki](https://kr.linkedin.com/in/ksangki)~ ^^)
 
-![Untitled](Untitled_10.png)
+![Lunch hosted by SK telecom's Tech HR team after the meeting with Shane Coughlan](Untitled_10.png)
 
 Thank you.

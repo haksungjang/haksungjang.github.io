@@ -83,7 +83,7 @@ conda config --set channel_priority strict
 
 Anaconda사의 CEO인 Peter Wang은 Miniconda를 다운 받아서 conda config를 conda-forge로 변경할 경우, 무료로 사용할 수 있다고 직접 밝힌 바 [있습니다](https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/). 
 
-![](./pwang.png)
+![Anaconda CEO Peter Wang이 Miniconda와 conda-forge 조합은 무료로 쓸 수 있다고 밝힌 Reddit 댓글 캡처](./pwang.png)
 
 [https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/](https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/)
 

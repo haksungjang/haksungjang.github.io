@@ -15,12 +15,12 @@ resources:
 
 2023년 3월 27일, OpenChain Project의 General Manager인 [Shane Coughlan](https://github.com/shanecoughlan)이 SK텔레콤을 방문하여 OpenChain Project의 주요 활동, 오픈소스 관련 국제 표준 및 글로벌 동향에 관해 설명하는 시간을 가졌습니다. 
 
-![Untitled](Untitled.png)
+![Shane Coughlan이 SK텔레콤을 방문해 OpenChain Project 활동을 설명하는 모습](Untitled.png)
 
 
 이 자리에는 SK텔레콤 [OSRB](https://sktelecom.github.io/about/osrb/)와 SK그룹 오픈소스 협의체 멤버(SK플래닛, SK쉴더스, SK(주), Supex추구협의회 등)가 참여하여 다양한 의견을 나누었는데요, 
 
-![Untitled](featured_meeting.png)
+![SK텔레콤 OSRB와 SK그룹 오픈소스 협의체 멤버들이 함께한 미팅 사진](featured_meeting.png)
 
 이날 Shane은 OpenChain Project에 대해 소개하고, 어떻게 글로벌 협력을 통해 Software Supply Chain에서의 오픈소스 관리 이슈를 공동으로 해결해 가는지 설명하였습니다. 이 글에서는 주요 내용을 소개하려고 합니다. 
 
@@ -30,13 +30,13 @@ Software Supply Chain 이슈 관리를 위해 OpenChain Project를 통해 여러
 
 ### Platinum Members
 
-![Untitled](Untitled_2.png)
+![OpenChain Project Platinum Member 기업 로고 목록](Untitled_2.png)
 
 ### Community Structure
 
 OpenChain Project에는 [다수의 Work Group](https://www.openchainproject.org/participate)이 있으며, 각 Work Group에서는 오픈소스 관리를 위한 표준을 만들고 자동화 도구를 함께 개발하고 있습니다. 또한 국가별로 Work Group이 결성되어 있습니다. 
 
-![Untitled](Untitled_3.png)
+![OpenChain Project의 Work Group 커뮤니티 구조도](Untitled_3.png)
 
 ## OpenChain Standard
 
@@ -46,19 +46,19 @@ OpenChain Project에는 [다수의 Work Group](https://www.openchainproject.org/
 
 이들 표준은 기업이 오픈소스를 관리하는데 꼭 필요한 핵심 요구사항을 정의하고 있습니다. 기업은 이 표준의 요구사항을 준수함으로 Software Supply Chain 내에서 오픈소스 관리가 이뤄지고 있음을 투명하게 나타낼 수 있습니다. 
 
-![Untitled](Untitled_4.png)
+![ISO/IEC 5230과 ISO/IEC DIS 18974 표준을 설명하는 슬라이드](Untitled_4.png)
 
 ### Self-Certification
 
 OpenChain Project에서는 [Self-Certification](https://github.com/OpenChain-Project/Reference-Material/tree/master/Self-Certification)을 위한 Checklist도 제공하는데요. 기업은 Checklist 항목을 하나하나 준수해 가면서 기업의 오픈소스 관리 수준을 높일 수 있습니다. 
 
-![Untitled](Untitled_5.png)
+![OpenChain Self-Certification Checklist를 설명하는 슬라이드](Untitled_5.png)
 
 ### Adoption of OpenChain ISO/IEC 5230:2020
 
 Checklist의 모든 항목을 준수하는 기업이라면, ISO/IEC 5230 준수 기업으로 선언할 수 있게 됩니다. ISO/IEC 5230을 채택하였다고 선언한 기업 리스트는 다음과 같습니다. LG전자, 카카오, 삼성전자, 네이버, SK텔레콤, NCSOFT, 현대자동차그룹 등 여러 국내 기업도 볼 수 있습니다. 
 
-![Untitled](Untitled_6.png)
+![ISO/IEC 5230 준수를 선언한 기업 목록 슬라이드](Untitled_6.png)
 
 ## Other Interesting Items
 
@@ -66,17 +66,17 @@ Checklist의 모든 항목을 준수하는 기업이라면, ISO/IEC 5230 준수 
 
 OpenChain Project에서는 오픈소스 관리에 대한 [온라인 웨비나](https://www.openchainproject.org/webinars)를 계속하고 있습니다. 
 
-![Untitled](Untitled_7.png)
+![OpenChain Project 온라인 웨비나 안내 슬라이드](Untitled_7.png)
 
 ### Training Courses
 
 오픈소스 라이선스 컴플라이언스를 위한 [Free Training Course](https://www.openchainproject.org/resources)가 제공되고 있으며, 이수 시 Badge도 취득할 수 있습니다. 
 
-![Untitled](Untitled_8.png)
+![OpenChain Free Training Course와 이수 배지 안내 슬라이드](Untitled_8.png)
 
 이러한 Training Course는 여러 기업이 소속 직원 혹은 Supplier에게 이수를 요구하는 등 다양하게 활용되기도 합니다. 
 
-![Untitled](Untitled_9.png)
+![기업이 소속 직원·공급사에 Training Course 이수를 요구한 사례를 정리한 슬라이드](Untitled_9.png)
 
 ## Update on China and Japan
 
@@ -114,6 +114,6 @@ OpenChain Project는 기업의 오픈소스 관리 영역도 오픈소스의 공
 
 Shane과의 미팅 세션 이후에는 SK텔레콤 Tech HR팀의 후원으로 맛있는 점심을 즐겼습니다. ([상기](https://kr.linkedin.com/in/ksangki)님 감사합니다~ ^^ )
 
-![Untitled](Untitled_10.png)
+![Shane Coughlan과의 미팅 후 SK텔레콤 Tech HR팀이 마련한 점심 식사 사진](Untitled_10.png)
 
 감사합니다.
