@@ -53,7 +53,7 @@ FOSSology를 설치할 수 있는 시스템 구축이 곤란한 상황이라면,
 * Password: fossy
 {{< /alert  >}}
 
-![](../fossology2.png)
+![FOSSology 테스트 서버의 로그인 화면과 업로드·라이선스 스캔·저작권 검출 등 주요 기능 소개](../fossology2.png)
 
 ## Basic Workflow
 
@@ -62,25 +62,25 @@ FOSSology의 기본 사용 절차는 다음과 같다.
 * 사용하고자 하는 오픈소스의 라이선스와 Copyright 정보를 확인하기 위해 오픈소스의 소스 코드를 하나의 파일로 압축하여 FOSSology에 업로드한다. 
 * 이를 위해 메뉴 &gt; Upload &gt; From File을 선택합니다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
+![FOSSology 메뉴에서 Upload > From File을 선택해 압축한 소스 코드를 업로드하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
 
 * 업로드할 파일을 선택하고 Upload 버튼을 클릭한다. 
 * 업로드가 완료되면 Job Agent에 의해 자동으로 분석을 수행한다. 
 * 메뉴 &gt; Jobs &gt; My Recent Jobs에서 분석 중인 Status를 확인할 수 있다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
+![FOSSology의 Jobs > My Recent Jobs 메뉴에서 업로드한 파일의 분석 진행 상태를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
 
 * 분석이 완료되면 메뉴 &gt; Browse에서 분석 결과를 확인할 수 있다.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
+![FOSSology의 Browse 메뉴에서 완료된 라이선스 분석 결과를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
 
 * 개별 파일을 선택하면 FOSSology가 검출한 라이선스 관련 텍스트가 무엇인지 확인할 수 있다.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
+![개별 파일을 선택해 FOSSology가 검출한 라이선스 관련 텍스트를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
 
 * 메뉴 &gt; Browser &gt; 파일 혹은 디렉터리를 선택 &gt;  Copyright/Email/Url/Author에서는 FOSSology가 검출한 Copyright/Email/Url/Author 정보를 보여다.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
+![FOSSology의 Copyright/Email/Url/Author 메뉴에서 검출된 저작권·이메일·URL·저자 정보를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
 
 사용자는 FOSSology는 이렇게 분석한 결과가 유효한지 여부에 대해 확인 후 잘못 검출된 항목에 대해서는 분석 결과에서 제외시키는 작업을 할 수 있다. FOSSology는 이를 Clearing 과정이라고 설명하며, 자세한 사항은 다음 페이지를 참고할 수 있다. : [https://www.fossology.org/get-started/basic-workflow/](https://www.fossology.org/get-started/basic-workflow/)
 
