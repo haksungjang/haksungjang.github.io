@@ -18,7 +18,7 @@ description: >
 
 다음 페이지에서 ISO/IEC 5230의 요구사항을 충족하는 샘플 오픈소스 정책 문서를 제공한다. : “[부록 1. 샘플 오픈소스 정책](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-1-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%A0%95%EC%B1%85)” 
 
-![](samplepolicy.png)
+![회사의 오픈소스 컴플라이언스 원칙, 기여 원칙, 공개 원칙을 명시한 샘플 오픈소스 정책 문서 부록](samplepolicy.png)
 
 각 기업은 이 샘플 정책을 기반으로 회사의 비즈니스 전략과 환경에 맞게 수정하여 사용할 수 있다.
 
@@ -100,7 +100,7 @@ description: >
 
 기업 오픈소스 프로그램 사무소의 대표 이메일 주소는 제품 및 서비스와 동봉하는 오픈소스 고지문에 포함하여 공개하는 것도 좋은 방법이다.
 
-![](ossnotice.png)
+![제품에 포함된 오픈소스 소프트웨어 목록과 라이선스 조건을 안내하는 오픈소스 소프트웨어 고지문 샘플](ossnotice.png)
 
 
 이러한 내용은 아래의 예시와 같이 오픈소스 정책에 반영할 수 있다. 
@@ -272,7 +272,7 @@ OpenChain 파트너로 등록된 법무법인은 OpenChain 프로젝트에서 �
 
 이러한 오픈소스 기여에 대한 정책은 NIPA OpenChain 해설서 [부록 1. 샘플 오픈소스 정책](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-1-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%A0%95%EC%B1%85)의 [7. 오픈소스 기여](https://haksungjang.github.io/docs/openchain/#7-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC)를 참고할 수 있다.
 
-![](samplecontribution.png)
+![외부 오픈소스 프로젝트 기여 시 리뷰 요청과 승인 절차를 규정한 정책 문서의 기여 조항](samplecontribution.png)
 
 
 이와 같이 수행한다면 ISO/IEC 5230에서 요구하는 다음 입증 자료를 준비할 수 있다. 
@@ -289,4 +289,4 @@ OpenChain 파트너로 등록된 법무법인은 OpenChain 프로젝트에서 �
 
 위와 같은 내용을 포함하는 오픈소스 정책까지 수립하게 되면 ISO/IEC 5230 요구사항 중 다음의 사항을 만족하게 된다. 
 
-![](policynumber.png)
+![ISO/IEC 5230 요구사항 중 정책 문서와 관련된 조항 번호(3.1.1.1, 3.1.2.1, 3.1.4.1 등)가 강조 표시된 조항 체계표](policynumber.png)
