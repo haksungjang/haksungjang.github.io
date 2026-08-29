@@ -14,7 +14,7 @@ A company that has built an open source program (open source policy / process / 
 A company can either include the above content in its open source policy or publish it on a publicly available website.
 
 As shown in the image below, you can refer to how SK telecom published this content on its open source portal site.
-![](sktiso.png)
+![SK Telecom's compliance page stating that it meets all requirements of the ISO/IEC 5230:2020 OpenChain Specification](sktiso.png)
 [https://sktelecom.github.io/compliance/iso5230/](https://sktelecom.github.io/compliance/iso5230/)
  
 
@@ -35,4 +35,4 @@ By documenting in this way that all requirements of ISO/IEC 5230 are guaranteed 
 |  | Do you have documentation confirming that your Program conformance was reviewed within the last 18 months? |
 
 Once this is completed, a company finally meets all the requirements of ISO/IEC 5230.
-![](totalno.png)
+![Cover of ISO/IEC 5230:2020 alongside a clause map with every requirement highlighted in green](totalno.png)
