@@ -113,11 +113,11 @@ SK텔레콤은 OSRB를 구성하여 기업 내 오픈소스 정책과 프로세�
 
 아래의 테이블은 오픈소스 관련 조직과 담당자의 역할 및 요구되는 필요 역량을 명시한 샘플 담당자 현황이다. 기업은 이를 참고하여 오픈소스 조직을 구성하여 문서화할 수 있다. 
 
-![](rolelist.png)
+![오픈소스 프로그램 매니저, 법무, 인프라, 보안, 개발 문화 등 담당자 역할별 책임과 필요 역량, 담당 조직을 정리한 표](rolelist.png)
 
 이 내용은 다음 페이지에서도 확인할 수 있다. : [https://haksungjang.github.io/docs/openchain/#appendix-1-담당자-현황](https://haksungjang.github.io/docs/openchain/#appendix-1-%EB%8B%B4%EB%8B%B9%EC%9E%90-%ED%98%84%ED%99%A9)
 
 
 이렇게 조직을 구성하면 ISO/IEC 5230의 요구 사항 중 아래와 같이 세가지 요구사항을 충족하게 된다. 
 
-![](spec3121.png)
+![ISO/IEC 5230 요구사항 3.1.2.1, 3.1.2.2, 3.2.2.1 조항 번호가 강조 표시된 조항 체계표](spec3121.png)

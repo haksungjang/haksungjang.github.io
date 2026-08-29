@@ -18,7 +18,7 @@ As the use of open source software has spread widely, the legal issues surroundi
 
 In 2009, Wangjing developed a converged communication smart gateway product called "OfficeTen."
 
-![](./1800.png)
+![Photo of the OfficeTen SDG 1800 converged communication smart gateway developed by Wangjing](./1800.png)
 
 > OfficeTen SDG 1800 by Wangjing - [http://www.cncr-it.com/product_detail.php?sid=26&cid=133&id=388](http://www.cncr-it.com/product_detail.php?sid=26&cid=133&id=388)
 
@@ -117,7 +117,7 @@ Finally, this ruling delivers an important message to both the open source commu
 
 *SKT customers can use Perplexity Pro for free for one year: [https://perplexity.sktadotevent.com/](https://perplexity.sktadotevent.com/)*
 
-![](./perplexity.png)
+![Perplexity and SKT ADOT logos](./perplexity.png)
 
 
 </div>

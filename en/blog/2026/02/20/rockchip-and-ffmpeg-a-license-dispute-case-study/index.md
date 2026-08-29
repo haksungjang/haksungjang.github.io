@@ -4,17 +4,10 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">Note</div>
 
 
-This article was written using Claude Code, and the key facts cited were cross-verified against primary sources.
-</div>
-
-
-<div class="alert alert-warning" role="alert"><div class="h4 alert-heading" role="heading">Notice</div>
-
-
-This article reflects the author's personal analysis and summary, and does not constitute legal advice. The facts cited have been verified based on publicly available sources, but legal determinations such as whether infringement has occurred are matters that can be disputed, so please have specific matters reviewed by an attorney or other expert.
+This article was written using Claude Code, and the key facts cited were cross-verified against primary sources. It reflects the author's personal analysis and summary, not legal advice, and legal determinations such as whether infringement occurred can be disputed, so please have specific matters reviewed by an attorney or other expert.
 </div>
 
 

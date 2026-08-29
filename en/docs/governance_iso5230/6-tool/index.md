@@ -81,7 +81,7 @@ Clause 3.3.1.2 of the ISO/IEC 5230 specification requires that the open source B
 
 [SW360](https://projects.eclipse.org/proposals/sw360), an open source project sponsored by the Eclipse Foundation, provides functionality to track the list of open source included in each Supplied Software.
 
-![](sw360project.png)
+![SW360 tool screen showing clearing state and vulnerability status for each release of the zlib component](sw360project.png)
 
 
 For how to install and use SW360, refer to [Appendix 3. Open Source Tools](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-3-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%8F%84%EA%B5%AC).
@@ -172,7 +172,7 @@ Registering the open source BOM in FOSSLight automatically generates the open so
 
 In addition, SK telecom plans to release its internal open source notice auto-generation tool as open source, so using it in the future would also be a good option.
 
-![](ossnoticegenerator.png)
+![OSS Notice Generator tool screen for entering the software name, notice intro/body/closing text, and copyright line to generate a notice](ossnoticegenerator.png)
 
 ## Archiving Open Source Artifacts
 
@@ -233,4 +233,4 @@ Building such a tool environment allows a company to prepare the following evide
 
 Building the tool environment up to this point results in compliance with the ISO/IEC 5230 requirements as shown below.
 
-![](toolno.png)
+![Cover of ISO/IEC 5230:2020 alongside a clause map with most tool-related requirements highlighted in green](toolno.png)

@@ -16,7 +16,7 @@ A typical open source policy includes the following.
 
 The following page provides a sample open source policy document that satisfies the ISO/IEC 5230 requirements: "[Appendix 1. Sample Open Source Policy](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-1-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%A0%95%EC%B1%85)"
 
-![](samplepolicy.png)
+![Sample open source policy appendix stating a company's compliance, contribution, and release principles](samplepolicy.png)
 
 Each company can modify this sample policy to fit its own business strategy and environment.
 
@@ -108,7 +108,7 @@ The ways in which external parties can make open source-related inquiries to a c
 
 It is also good practice to publish the representative email address of the company's open source program office in the open source notice that accompanies its products and services.
 
-![](ossnotice.png)
+![Sample open source software notice listing included OSS components and their license terms](ossnotice.png)
 
 
 This content can be reflected in the open source policy as shown in the example below.
@@ -315,7 +315,7 @@ Global software companies value not only using open source to build products and
 
 For this open source contribution policy, you can refer to [7. Open Source Contribution](https://haksungjang.github.io/docs/openchain/#7-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EA%B8%B0%EC%97%AC) in the NIPA OpenChain Guide's [Appendix 1. Sample Open Source Policy](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-1-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%A0%95%EC%B1%85).
 
-![](samplecontribution.png)
+![Policy clause defining the review and approval process for contributing to external open source projects](samplecontribution.png)
 
 
 Doing so allows a company to prepare the following evidence required by ISO/IEC 5230.
@@ -335,4 +335,4 @@ Doing so allows a company to prepare the following evidence required by ISO/IEC 
 
 Once a company establishes an open source policy that includes the content above, it satisfies the following ISO/IEC 5230 requirements.
 
-![](policynumber.png)
+![Clause map of ISO/IEC 5230 with policy-related requirements highlighted (3.1.1.1, 3.1.2.1, 3.1.4.1, etc.)](policynumber.png)

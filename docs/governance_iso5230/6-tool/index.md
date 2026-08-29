@@ -81,7 +81,7 @@ ISO/IEC 5230 규격의 3.3.1.2에서는 배포용 소프트웨어에 포함된 �
 
 Eclipse 재단에서 후원하는 오픈소스 프로젝트인 [SW360](https://projects.eclipse.org/proposals/sw360)은 배포용 소프트웨어별로 포함하고 있는 오픈소스 목록을 트래킹할 수 있는 기능을 제공한다. 
 
-![](sw360project.png)
+![SW360 도구에서 zlib 컴포넌트의 릴리스별 정리 상태(Clearing State)와 취약점 현황을 보여주는 화면](sw360project.png)
 
 
 SW360의 설치 및 사용 방법은 [부록 3. 오픈소스 도구](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-3-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%8F%84%EA%B5%AC)를 참고할 수 있다.
@@ -172,7 +172,7 @@ FOSSLight에 오픈소스 BOM을 등록하면 자동으로 오픈소스 고지�
 
 또한 SK텔레콤은 사내에서 사용하는 오픈소스 고지문 자동 생성 도구를 오픈소스로 공개할 예정이어서 추후 이를 활용하는 것도 좋은 방법이다. 
 
-![](ossnoticegenerator.png)
+![OSS Notice Generator 도구에서 소프트웨어명, 오픈소스 고지문 서두·본문·맺음말, 저작권 표시를 입력해 고지문을 생성하는 화면](ossnoticegenerator.png)
 
 ## 오픈소스 산출물 보관
 
@@ -233,4 +233,4 @@ SK텔레콤의 오픈소스 웹사이트를 참고할 수 있다.
 
 이렇게 도구 환경까지 구축하게 되면 ISO/IEC 5230 요구사항을 아래와 같이 준수하게 된다. 
 
-![](toolno.png)
+![ISO/IEC 5230:2020 표지와 함께, 도구 관련 요구사항 대부분이 초록색으로 강조 표시된 조항 체계표](toolno.png)

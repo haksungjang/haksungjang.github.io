@@ -38,7 +38,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 아래의 이미지는 기업이 일반적으로 채택하여 사용할 수 있는 샘플 오픈소스 프로세스입니다.
 
-![](./process.png) 
+![오픈소스 식별부터 모니터링까지 11단계 오픈소스 프로세스와 사업 부서·오픈소스 프로그램 매니저·인프라·보안 담당의 단계별 역할을 정리한 표](./process.png) 
 
 위 오픈소스 프로세스에 맞춰서 각 단계별로 취해야 할 절차는 다음과 같습니다.
 
@@ -194,7 +194,7 @@ IT 담당은 확정된 SBOM을 시스템에 등록합니다. SBOM에는 공급 �
 오픈소스 프로그램 매니저는 공급 소프트웨어의 버전별 오픈소스 사용 목록을 추적하기 위한 SBOM을 확정합니다.
 ```
 
-SBOM 관리를 위한 도구에 대해서는 "[SBOM 관리 도구](../4-tool/#3-sbom-관리-도구)"에서 자세히 설명합니다.
+SBOM 관리를 위한 도구에 대해서는 "[SBOM 관리 도구](../4-tool/#3-오픈소스-거버넌스--sbom-관리-도구)"에서 자세히 설명합니다.
 
 또 이와 같은 오픈소스 프로세스의 모든 과정과 결과는 문서화가 되어야 합니다. 이메일을 사용하는 것보다는 [Jira](https://www.atlassian.com/software/jira), [Bugzilla](https://www.bugzilla.org/) 등의 이슈 트래킹 시스템을 이용하는 것이 이러한 과정을 효율적으로 문서화 할 수 있습니다.
 
@@ -218,7 +218,7 @@ ISO/IEC 5230 표준은 다음과 같이 컴플라이언스 산출물을 준비�
 
 1. 오픈소스 고지문: 오픈소스 라이선스 전문과 저작권 정보 제공을 위한 문서
 
-    ![](ossnotice.png)
+    ![Activity, AgoraIO 등 컴포넌트별 이름·버전·라이선스를 나열한 오픈소스 고지문 예시](ossnotice.png)
 
 
 * 도구를 활용하여 취합한 SBOM에 해당하는 오픈소스 고지문을 생성하는 방법에 대해 "[오픈소스 컴플라이언스 산출물 생성 도구](../4-tool/#5-오픈소스-컴플라이언스-산출물-생성-도구)"에서 추가로 설명합니다.  
@@ -367,7 +367,7 @@ The Program demonstrates a sound and robust handling procedures of Known Vulnera
 
 아래는 신규 보안 취약점 발견 시 대응을 위한 프로세스 샘플입니다.
 
-![](./securityprocess.png)
+![신규 보안취약점 공개부터 모니터링, 초기 대응, 문제 해결, 검토, 승인, 배포까지 이어지는 신규 보안취약점 대응 프로세스 흐름도](./securityprocess.png)
 <center><i>신규 보안 취약점 대응 프로세스 (샘플)</i></center><br>
 
 ### (1) 알려진 취약점 및 새로 발견된 취약점 모니터링
@@ -511,7 +511,7 @@ ISO 표준은 공통적으로 다음과 같이 제3자의 문의에 대응하기
 
 아래 그림은 외부 문의 대응을 위해 기업이 갖춰야할 프로세스 샘플입니다.  
 
-![](general-inquiry-process.png)
+![외부 문의 접수부터 내부 조사, 법무 자문, 결과 보고, 프로세스 개선까지 이어지는 외부 문의 대응 프로세스 흐름도](general-inquiry-process.png)
 
 <center><i>외부 문의 대응 프로세스 (샘플)</i></center><br>
 
@@ -619,7 +619,7 @@ ISO/IEC 5230 표준은 다음과 같이 오픈소스 기여를 관리하는 문�
 [SK텔레콤](https://www.sktelecom.com/)에서 공개한 [오픈소스 기여 절차](https://sktelecom.github.io/guide/contribute/process/)는 좋은 예시입니다:
 
 
-![](contribution.png)
+![OSPO 내부 승인과 리뷰 요청부터 프로젝트 기여문서 검토, 기여 규칙 확인, GitHub 기여 제출까지 이어지는 오픈소스 기여 절차도](contribution.png)
 
 [https://sktelecom.github.io/guide/contribute/process/](https://sktelecom.github.io/guide/contribute/process/)
 
@@ -679,7 +679,7 @@ OSRB는 매년 정기적으로 검토하여 정책과 프로세스를 개선합�
 
 여기까지 프로세스를 구축하게 되면 ISO/IEC 5230과 ISO/IEC 18974 표준 규격의 주요 요구사항을 충족할 수 있습니다.
 
-![](./processno.png)
+![ISO/IEC 5230(라이선스 컴플라이언스)과 ISO/IEC DIS 18974(보안 보증) 요구사항을 나란히 놓고 프로세스 관련 조항을 색으로 강조한 대조표](./processno.png)
 
  이러한 프로세스 구축을 통해 기업은 다음과 같은 이점을 얻을 수 있습니다:
 

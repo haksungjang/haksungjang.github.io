@@ -134,7 +134,7 @@ SBOM은 스프레드시트 프로그램으로도 관리할 수 있지만, 공급
 
 [SW360](https://github.com/eclipse-sw360/sw360)은 Eclipse 재단이 후원하는 오픈소스 프로젝트로, 공급 소프트웨어별 오픈소스 목록을 추적하는 기능을 제공합니다.
 
-![](sw360project.png)
+![SW360 도구에서 zlib 컴포넌트의 릴리스별 정리 상태(Clearing State)와 취약점 현황을 보여주는 화면](sw360project.png)
 
 주요 기능:
 - 프로젝트, 컴포넌트, 라이선스 관리
@@ -230,14 +230,14 @@ SW360으로 보안취약점을 관리하는 방법은 [SW360 가이드](https://
 
 [SK텔레콤](https://www.sktelecom.com/)은 사내에서 사용하는 오픈소스 고지문 자동 생성 도구를 [onot](https://github.com/sktelecom/onot)이라는 이름으로 오픈소스로 공개하였습니다. [카카오](https://www.kakaocorp.com/)에서도 주요 기능을 기여하는 방식으로 공동 개발에 참여하였습니다.
 
-![](onot.png)
+![SPDX 문서 기반으로 오픈소스 고지문을 자동 생성하는 도구 onot의 소개와 pip·소스 코드 설치 방법 안내](onot.png)
 
 <center><i>onot 설치방법</i></center><br>
 
 `onot`은 [SPDX](https://spdx.dev/) 문서 형식으로 작성된 SBOM을 자동으로 오픈소스 고지문 형식으로 변환하는 도구입니다. Python 프로그램으로 가볍고 간단하게 사용할 수 있습니다.
 
 
-![](./noticesample.png)
+![glibc, Saxon, zlib 등 컴포넌트별 이름·라이선스·저작권 정보를 표로 정리한 샘플 애플리케이션 오픈소스 고지문](./noticesample.png)
 <center><i>onot 생성 오픈소스 고지문 샘플</i></center><br>
 
 ### (2) FOSSLight
@@ -433,7 +433,7 @@ CI/CD 파이프라인에 이러한 프로세스를 통합함으로써, 오픈소
 
 여기까지 도구 환경을 구축하게 되면 ISO/IEC 5230과 ISO/IEC 18974 표준 규격의 주요 요구사항을 충족할 수 있습니다. 
 
-![](toolno.png)
+![ISO/IEC 5230(라이선스 컴플라이언스)과 ISO/IEC DIS 18974(보안 보증) 요구사항을 나란히 놓고 도구 관련 조항을 색으로 강조한 대조표](toolno.png)
 
 이러한 도구들을 활용함으로써 다음과 같은 이점을 얻을 수 있습니다:
 

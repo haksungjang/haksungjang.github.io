@@ -38,7 +38,7 @@ An enterprise must establish an open source process for license compliance and s
 
 The image below is a sample open source process that an enterprise can commonly adopt and use.
 
-![](./process-en.png) 
+![Eleven-step OSS process from identification to monitoring, mapped to the roles of the business unit, OSS program manager, infra team, and security team](./process-en.png) 
 
 The procedures to be taken at each stage, in line with the open source process above, are as follows.
 
@@ -218,7 +218,7 @@ Compliance artifacts are broadly divided into two types:
 
 1. Open source notice: a document providing the full text of open source licenses and copyright information
 
-    ![](ossnotice.png)
+    ![Sample open source notice listing components such as Activity and AgoraIO with their names, versions, and licenses](ossnotice.png)
 
 
 * How to generate an open source notice corresponding to an SBOM compiled using a tool is further explained in "[Open Source Compliance Artifact Generation Tools](../4-tool/#5-open-source-compliance-artifact-generation-tools)".  
@@ -367,7 +367,7 @@ In addition, to check whether a newly published Known Vulnerability exists in so
 
 Below is a sample process for responding when a new security vulnerability is discovered.
 
-![](./securityprocess-en.png)
+![Flow of the new-vulnerability response process, from disclosure through monitoring, initial response, remediation, review, approval, and release](./securityprocess-en.png)
 <center><i>New Security Vulnerability Response Process (Sample)</i></center><br>
 
 ### (1) Monitoring Known Vulnerabilities and Newly Discovered Vulnerabilities
@@ -511,7 +511,7 @@ The ISO standards commonly require an internal documented procedure for respondi
 
 The figure below is a sample process an enterprise should have in place to respond to external inquiries.  
 
-![](general-inquiry-process-en.png)
+![Flow of the external inquiry response process, from intake through internal investigation, legal review, reporting, and process improvement](general-inquiry-process-en.png)
 
 <center><i>External Inquiry Response Process (Sample)</i></center><br>
 
@@ -619,7 +619,7 @@ Through this process, an organization can effectively manage contributions to ex
 The [open source contribution procedure](https://sktelecom.github.io/guide/contribute/process/) published by [SK telecom](https://www.sktelecom.com/) is a good example:
 
 
-![](contribution-en.png)
+![Contribution workflow from internal approval and OSPO review to project contribution-guide review, rule check, and submission on GitHub](contribution-en.png)
 
 [https://sktelecom.github.io/guide/contribute/process/](https://sktelecom.github.io/guide/contribute/process/)
 
@@ -679,7 +679,7 @@ By keeping its processes current, an enterprise can continuously improve the eff
 
 By establishing the processes described so far, an enterprise can meet the key requirements of the ISO/IEC 5230 and ISO/IEC 18974 standards.
 
-![](./processno.png)
+![Side-by-side clause comparison of ISO/IEC 5230 (license compliance) and ISO/IEC DIS 18974 (security assurance) with process-related clauses highlighted](./processno.png)
 
  Through establishing these processes, an enterprise can gain the following benefits:
 

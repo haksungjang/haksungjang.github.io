@@ -1,12 +1,15 @@
 # Blog
 
+> 오픈소스 라이선스·컴플라이언스·보안과 관련해 실무에서 마주치는 사례와 최신 동향을 정리한 글 모음이다.
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-This is the **blog** section. 
-
-Files in these directories will be listed in reverse chronological order.
+오픈소스 라이선스, 컴플라이언스, 보안, 정책 동향과 관련해 실무에서 마주치는 사례와
+최신 소식을 정리한다. 최신 글부터 차례로 나열된다.
 
 ---
 

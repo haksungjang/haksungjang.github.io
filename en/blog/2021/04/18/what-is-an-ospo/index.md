@@ -21,10 +21,9 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<figure class="image">
-  <img src="./featured-todogroup.png" alt="image-layer">
-  <figcaption><i>TODO group : https://todogroup.org/</i><figcaption>
-</figure>
+![TODO Group logo: a green circle with two white slashes next to the word TODO](./featured-todogroup.png)
+
+*TODO Group: https://todogroup.org/*
 
 - [Definition of an OSPO](#definition-of-an-ospo)
   - [Legal Risk Mitigation](#legal-risk-mitigation)

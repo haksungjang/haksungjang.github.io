@@ -59,29 +59,26 @@ Docker는 컨테이너에 프로그램을 설치하고 배포하는 기술이다
 사전에 구성된 컨테이너는 "Docker image"로 배포될 수 있으며, 기본 프로그램 외에 애플리케이션, 프로그램 코드로서의 Dependency, 필요한 경우 유틸리티 및 구성 파일도 포함할 수 있다. Docker image는 개별적으로 배포될 수 있지만 "Docker Hub"와 같은 공용 Repository를 통해서도 배포될 수 있다. 이는 C 라이브러리, Package Manager, Shell 및 디렉터리 트리와 같은 필수 시스템 구성 요소를 포함하고 특정 Linux 배포를 참조하는 이른바 "Base Image"에도 해당된다. 이 Base image 위에, 추가 기능은 개별 보관 파일로 별도로 배포될 수 있지만 서로 빌드되어 완전한 Docker image를 형성하는 이른바 "레이어"로 추가될 수 있다.
 
 
-<figure class="image">
-  <img src="./image-layer.png" alt="image-layer" width="600">
-  <figcaption><i>레이어 저장방식 : https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker정리/</i><figcaption>
-</figure>
+![ubuntu 베이스 이미지 위에 nginx, web app 레이어가 차례로 쌓여 Docker 이미지를 이루고, 여기에 읽기·쓰기(R/W) 레이어가 더해져 Docker 컨테이너가 되는 과정을 보여주는 다이어그램](./image-layer.png)
+
+*레이어 저장방식: https://cultivo-hy.github.io/docker/image/usage/2019/03/14/Docker정리/*
 
 ### Dockerfile
 
 "Dockerfile"은 스크립트와 유사하게 Docker image를 만들기 위한 단계별 명령을 포함하는 텍스트 파일이다. Dockerfile은 일반적으로 Dockerfile 자체에만 적용되는 자체 라이선스를 가질 수 있으며, 이 라이선스는 Docker 컨테이너에 포함되는 프로그램에는 적용되지 않는다. 
 
-<figure class="image">
-  <img src="./featured-dockerfile-ex.png" alt="featured-dockerfile-ex.png" width="600">
-  <figcaption><i>Dockerfile : https://www.slideshare.net/vincenzoferme/using-docker-containers-to-improve-reproducibility-in-software-and-web-engineering</i></figcaption>
-</figure>
+![Dockerfile 예시. FROM으로 베이스 이미지를 지정하고, RUN으로 의존성을 설치하며, COPY로 파일을 복사하고, ENTRYPOINT·CMD로 시작 명령을 지정하는 구조를 보여준다](./featured-dockerfile-ex.png)
+
+*Dockerfile: https://www.slideshare.net/vincenzoferme/using-docker-containers-to-improve-reproducibility-in-software-and-web-engineering*
 
 
 ### Docker 엔진
 
-Docker 컨테이너용 관리 소프트웨어인 "Docker 엔진"은 Dockerfile의 명령을 순차적으로 처리하여 Docker image를 생성한다. 일반적으로, Base image나 개별 레이어를 위한 각 컴포넌트는 내부 또는 외부 저장소에서 다운로드된다. 이는 제공자가 Dockerfile을 제공하더라도 물리적인 프로그램 코드를 전달하지 않는 것이 가능함을 의미하고, 이런 일은 실제로 관례적이다. 고객은 전달받은 Dockerfile을 가지고 자체적으로 공개 저장소로부터 전체 혹은 일부 프로그램 코드를 받아와서 Docker 컨테이너를 구축할 수 있다. 
+Docker 컨테이너용 관리 소프트웨어인 "Docker 엔진"은 Dockerfile의 명령을 순차적으로 처리하여 Docker image를 생성한다. 일반적으로, Base image나 개별 레이어를 위한 각 컴포넌트는 내부 또는 외부 저장소에서 다운로드된다. 즉 제공자가 Dockerfile을 제공하더라도 물리적인 프로그램 코드는 전달하지 않을 수 있으며, 실제로 이런 방식이 관례적이다. 고객은 전달받은 Dockerfile을 가지고 자체적으로 공개 저장소로부터 전체 혹은 일부 프로그램 코드를 받아와서 Docker 컨테이너를 구축할 수 있다. 
 
-<figure class="image">
-  <img src="./docker.jpg" alt="docker.jpg" width="600">
-  <figcaption><i>https://cultivatehq.com/posts/docker/</i></figcaption>
-</figure>
+![Dockerfile을 docker build로 빌드해 Docker 이미지를 만들고, docker run으로 여러 개의 Docker 컨테이너를 실행하는 과정을 손그림으로 보여준다](./docker.jpg)
+
+*https://cultivatehq.com/posts/docker/*
 
 
 여기서 이러한 Dockerfile을 사용하여 빌드한 Docker image에 포함된 FOSS의 라이선스 의무를 Dockerfile 제공자가 준수해야 하는지 여부와 어떤 라이선스 의무를 준수해야 하는지에 대한 의문이 제기될 수 있다. 
@@ -160,7 +157,7 @@ Dockerfile의 제공자가 Dockerfile이 참조하는 소프트웨어를 배포�
 
 추가 레이어를 사용하면 이미 설치된 프로그램도 수정할 수 있다. 이 경우, Docker 컨테이너는 수정되지 않은 프로그램을 한 레이어에 포함하고 수정한 프로그램을 다른 레이어에 포함하여 수정된 프로그램이 실행되도록 한다. 이러한 상황에서도 Dockerfile에는 적용될 수정사항이 정의되어 있기 때문에 Dockerfile 제공자는 "필수적 역할"의 책임을 맡아야 한다. 따라서, Dockerfile 제공자가 수정사항에 대한 라이선스 의무를 준수해야 한다.
 
-이는 두 버전이 모두 수신자에게 배포되기 때문에 (수정된 버전만 실제 사용되더라도) 수정된 버전 뿐만 아니라 원 버전에도 적용된다는 사실에 주의해야 한다<sup><a name="footnote_9_return"></a>[9](#footnote_9)</sup>. 프로그램이 새 레이어에 의해 제거되더라도 Docker image에 물리적으로 여전히 포함된 경우에도 마찬가지이다.
+이는 두 버전이 모두 수신자에게 배포되기 때문에 (수정된 버전만 실제 사용되더라도) 수정된 버전 뿐만 아니라 원 버전에도 적용된다는 사실에 주의해야 한다<sup><a name="footnote_9_return"></a>[9](#footnote_9)</sup>. 새 레이어가 프로그램을 제거하더라도 Docker image에 물리적으로 여전히 포함된 경우에도 마찬가지이다.
 
 
 ### 4.3 시스템 요구 사항 및 Base image
@@ -189,7 +186,7 @@ Base image도 시스템 요구 사항으로 간주할 수 있을까? 일반적�
 
 지금까지 제시된 견해에 따르면, Base image의 Repository 운영자와 제공자는 Base image의 배포에 필수적인 역할을 하는 반면, Dockerfile이 단지 참조하는 Base image는 시스템 요구 사항을 쉽게 취득하게 하기 위한 것이다. 그러므로, Repository의 운영자가 일반 대중에게 전달하는 행위를 수행하는 것이고, Repository 운영자는, 최소한 이러한 제공이 합법적이라면, 포함된 FOSS의 라이선스 의무를 단독으로 준수해야 한다.
 
-위에서 언급한 해석은 본 연구 저자의 법적 의견이다. 일반적으로 컴퓨터 프로그램 및 특히 Dockerfile에 대한 이러한 특정 상황에 관한 판례는 없다. 다른 해석들도 분명 논쟁의 여지가 있다(특히 Base image를 포함하는 모든 참조 레이어가 Dockerfile의 제공자에 의해 배포되는 경우). 
+위에서 언급한 해석은 본 연구 저자의 법적 의견이다. 일반적으로 컴퓨터 프로그램 및 특히 Dockerfile에 대한 이러한 특정 상황에 관한 판례는 없다. 다른 해석들도 분명 논쟁의 여지가 있다(특히 Dockerfile 제공자가 Base image를 포함하는 모든 참조 레이어를 배포하는 경우). 
 
 한가지 언급해야 할 사항은 현재 수많은 Repository 운영자들이 FOSS의 라이선스 의무를 올바르게 준수하지 않고 있으며 (예: GPL 및 LGPL 구성 요소의 소스 코드를 적절하게 제공하지 않음), 이는 저작권 침해의 책임이 있다는 점이다. 이 경우, 만약 Dockerfile의 제공자가 라이선스 위반을 알고 있다면 혹은 알고 있어야 한다면, 라이선스를 위반하는 참조를 포함하는 Dockerfile을 제공하는 것은 독립적인 배포 행위로 간주되거나 최소한 기여 저작권 침해(즉, 라이선스 위반에 대한 선동 또는 방조)로 간주될 수 있다. 따라서 Dockerfile 제공자는 지정된 Repository에서 제공하는 Base image가 라이선스를 준수하는지 여부를 검토해야 한다<sup><a name="footnote_11_return"></a>[11](#footnote_11)</sup>. 
 

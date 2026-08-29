@@ -196,7 +196,7 @@ For general guidance on open source licenses and summarized license obligation m
 
 The [License Obligations](https://sktelecom.github.io/guide/use/obligation/) document in SK telecom's open source guide is also a good resource.
 
-![](sktlicenseguide.png)
+![SK Telecom's open source guide site explaining notice and modification obligations when redistributing GPL-2.0 source](sktlicenseguide.png)
 [https://sktelecom.github.io/guide/use/obligation/gpl-2.0/](https://sktelecom.github.io/guide/use/obligation/gpl-2.0/)
 
 
@@ -218,4 +218,4 @@ Providing such an open source license guide allows a company to prepare the foll
 
 Building the environment for training, assessment, and guide provision up to this point results in compliance with the ISO/IEC 5230 requirements as shown below.
 
-![](trainingno.png)
+![Cover of ISO/IEC 5230:2020 alongside a clause map with most requirements highlighted in green, except clause 3.6](trainingno.png)

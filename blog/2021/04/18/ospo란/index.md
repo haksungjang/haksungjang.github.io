@@ -21,10 +21,9 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<figure class="image">
-  <img src="./featured-todogroup.png" alt="image-layer">
-  <figcaption><i>TODO group : https://todogroup.org/</i><figcaption>
-</figure>
+![초록색 원 안에 흰색 슬래시 두 개가 있는 로고 옆에 TODO라는 글자가 쓰인 TODO Group 로고](./featured-todogroup.png)
+
+*TODO Group: https://todogroup.org/*
 
 - [OSPO의 정의](#ospo의-정의)
   - [법적 위험 완화](#법적-위험-완화)

@@ -131,7 +131,7 @@ $ vagrant up
 
 Running the box configures Liferay, PostgreSQL, and CouchDB. If it runs without issue, you can access the Liferay screen at [https://localhost:8443/](https://localhost:8443/).
 
-![](https://lh6.googleusercontent.com/leof_ntxQlxjDeD91E7ZfwWY0ftUlD0D_L58AkeNJb_bEFFzKvuL28yzb4iIA6-bAuSfQydo-gVBlnn5EVGGBKcPh0-6Y7p2Qbar74qpB4uwa_nibrV535NJwEIpWXZPFeNUSRd-)
+![SW360's initial Liferay screen after starting the Vagrant box](https://lh6.googleusercontent.com/leof_ntxQlxjDeD91E7ZfwWY0ftUlD0D_L58AkeNJb_bEFFzKvuL28yzb4iIA6-bAuSfQydo-gVBlnn5EVGGBKcPh0-6Y7p2Qbar74qpB4uwa_nibrV535NJwEIpWXZPFeNUSRd-)
 
 ### 5\) Deploying the SW360 Layout
 
@@ -144,7 +144,7 @@ After that, follow the instructions on the following site to deploy the layout. 
 
 Once the deployment is complete, you will see a screen like the following.
 
-![](https://lh5.googleusercontent.com/INu1-WWi1-SA9P61IMNlgZhugTXbiwbSKUOu2eWq_d5sIIp8NfqxQntwId41ZDmTG6_5Ope8GdU1J2S0adaJDolM09dtfkwIbOE2gTDC4MZXMxhX9kN28E4Yj8a3deBUHBL7yCqj)
+![Screen after the SW360 layout has been deployed to Liferay](https://lh5.googleusercontent.com/INu1-WWi1-SA9P61IMNlgZhugTXbiwbSKUOu2eWq_d5sIIp8NfqxQntwId41ZDmTG6_5Ope8GdU1J2S0adaJDolM09dtfkwIbOE2gTDC4MZXMxhX9kN28E4Yj8a3deBUHBL7yCqj)
 
 ## Basic Workflow
 
@@ -160,15 +160,15 @@ The first time you install SW360, you must register the open source licenses you
 
 Selecting Menu &gt; Licenses &gt; Add License takes you to the Create License screen, shown below.
 
-![](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
+![Create License screen for registering a license via the Licenses > Add License menu](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
 
 Registering licenses one by one this way can be quite tedious, but fortunately SW360 provides a feature to import the entire SPDX License List at once. Click Menu &gt; Admin &lt; Import SPDX Information.
 
-![](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
+![Importing the SPDX License List in one batch via the Admin > Import SPDX Information menu](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
 
 The SPDX License List is then registered automatically. You can confirm that 338 licenses have been registered under Menu &gt; Licenses.
 
-![](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
+![Licenses menu showing 338 licenses registered after the SPDX List import completed](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
 
 ### 2\) Registering Components and Releases
 
@@ -199,19 +199,19 @@ A Release includes the following information.
 
 For example, to register zlib-1.2.8, you would first register zlib as a Component, and then register zlib 1.2.8 as a Release. Selecting Menu &gt; Components &gt; Add Component takes you to the Create Component screen, where you can register information about zlib.
 
-![](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
+![Create Component screen for registering the zlib component via Components > Add Component](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
 
 Once you have created the Component, you can register information for the zlib-1.2.8 version at Components &gt; Releases &gt; Add Release.
 
-![](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
+![Registering zlib-1.2.8 version details via Components > Releases > Add Release](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
 
 After registering versions 1.2.8 and 1.2.11 as separate Releases under the single Component zlib, the Release Overview screen shows the following two Releases.
 
-![](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
+![Release Overview screen showing two releases, 1.2.8 and 1.2.11, under the zlib component](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
 
 SW360 also provides a feature for importing information for multiple Components at once. You can enter the Component information you want to register into the CSV template under Menu &gt; Admin &gt; Import / Export and import it.
 
-![](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
+![Bulk-importing component information from a CSV template via Admin > Import / Export](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
 
 Note that, as of February 2020, this feature may not yet work reliably.
 
@@ -227,29 +227,29 @@ When creating a Project, you register the following information.
 
 You can create a Project via Menu &gt; Projects &gt; Add Project.
 
-![](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
+![Create Project screen for creating a project via the Projects > Add Project menu](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
 
 After creating a Project, register the Releases or sub-Projects it includes. Selecting the Project under Menu &gt; Projects lets you register Linked Projects and Linked Releases under "Linked Releases and Projects."
 
-![](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
+![Registering linked releases and sub-projects for a project in its Linked Releases and Projects section](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
 
 The following is the screen after registering OpenSSL 1.0.1 and zlib 1.2.8 as Linked Releases under a Project called SuperCalc.
 
-![](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
+![SuperCalc project with OpenSSL 1.0.1 and zlib 1.2.8 registered as Linked Releases](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
 
 ## 4. Security Vulnerability Management
 
 SW360 can automatically check whether a registered Release has a security vulnerability. To do this, SW360 provides a feature for scheduling periodic collection of CVE information. Under Menu &gt; Admin &gt; Schedule, you can set up a schedule to collect CVE SEARCH information every 24 hours.
 
-![](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
+![Scheduling CVE information to be collected every 24 hours via the Admin > Schedule menu](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
 
 With this schedule set, SW360 collects CVE information at the scheduled time from the CVE Search site \([https://cve.circl.lu/](https://cve.circl.lu/)\). The collected CVE information can be viewed under Menu &gt; Vulnerabilities.
 
-![](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
+![Viewing collected CVE vulnerability entries in the Vulnerabilities menu](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
 
 Once Vulnerabilities information has been collected, you can check whether a created Project has any security vulnerabilities. In the SuperCalc Project created above, you can see that 85 security vulnerabilities have been reported.
 
-![](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
+![SuperCalc project showing 85 reported security vulnerabilities](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
 
 By registering and managing the software a company develops and distributes in SW360 this way, it becomes possible to manage not only open source compliance but also security vulnerability risk in a way that minimizes it.
 

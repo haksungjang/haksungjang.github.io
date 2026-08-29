@@ -113,11 +113,11 @@ By doing this, a company can prepare the following evidence materials required b
 
 The table below is a sample personnel roster specifying the roles of the open source-related organization and personnel, along with the required competencies. A company can refer to this to organize and document its open source organization.
 
-![](rolelist.png)
+![Table of sample roles such as OSS program manager, legal, infrastructure, and security, with their responsibilities and required competencies](rolelist.png)
 
 This content can also be found on the following page. : [https://haksungjang.github.io/docs/openchain/#appendix-1-담당자-현황](https://haksungjang.github.io/docs/openchain/#appendix-1-%EB%8B%B4%EB%8B%B9%EC%9E%90-%ED%98%84%ED%99%A9)
 
 
 Organizing in this way satisfies the following three requirements of ISO/IEC 5230.
 
-![](spec3121.png)
+![Clause map of ISO/IEC 5230 with requirements 3.1.2.1, 3.1.2.2, and 3.2.2.1 highlighted](spec3121.png)

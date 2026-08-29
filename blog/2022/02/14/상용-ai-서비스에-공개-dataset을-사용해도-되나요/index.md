@@ -150,7 +150,7 @@ Copilot은 GitHub에 개발자의 코드 작성을 돕기 위해 공개된 sourc
 
 * [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)를 예로 들면, 라이선스 및 원출처에 대한 내용을 다음과 같이 기록해 둘 수 있다. 
 
-![](./provenance_record.png)
+![CIFAR-10 Dataset의 라이선스와 원출처를 기록한 예시 표](./provenance_record.png)
 
 #### (Step 3) Lineage extraction
 
@@ -159,7 +159,7 @@ Copilot은 GitHub에 개발자의 코드 작성을 돕기 위해 공개된 sourc
     - 이를 별도로 기록해둔다. (위 테이블의 “Description of the data collection process” 필드 참조)
     - 만약, Data Source 내에 또 다른 Data Source가 있다는 것을 알게 되면 해당 Data Source도 찾아서 기록한다. (재귀적으로 반복)
     - 예를 들어, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)는 [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/)라는 다른 dataset의 subset이다. 논문을 통해 이 Dataset에는 Google, Flickr, Ask, Altavista, Picsearch, Webshots 및 Cydral의 7가지 Data Source가 있다는 것을 알 수 있다.
-    ![](./datasource.png)
+    ![CIFAR-10의 상위 Dataset인 80 Million Tiny Images가 사용한 7가지 Data Source(Google, Flickr, Ask, Altavista, Picsearch, Webshots, Cydral) 목록](./datasource.png)
 2. (Sub-step 2) Data Source의 공식 출처를 찾는다. (웹사이트, 검색 엔진 등 활용)
     - 예를 들어, [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/) 웹사이트에서는 Dataset이 더 이상 제공되지 않는다. 이 경우, 가능한 아카이브 버전을 찾는다. (예: [http://web.archive.org/web/20100601000000*/http://groups.csail.mit.edu/vision/TinyImages/](http://web.archive.org/web/20100601000000*/http://groups.csail.mit.edu/vision/TinyImages/))
     - 그런 다음, 위에 나열한 7가지 Data Source 각각에 대한 공식 웹사이트를 알아낸다.
@@ -212,7 +212,7 @@ Copilot은 GitHub에 개발자의 코드 작성을 돕기 위해 공개된 sourc
          - Model
        - Model Reverse Engineer
 
-![](./enhanced_mdl.png)
+![Enhanced MDL의 Benchmark, Research, Publish, Internal Use, Commercialization(Output, Model), Model Reverse Engineer 항목 구조도](./enhanced_mdl.png)
 
 #### (Step 2) License compatibility analysis
 
@@ -277,7 +277,7 @@ Case Study에서는 인기도와 상업적으로 사용될 가능성이 높은 6
 
 이러한 사용 시나리오에 대한 각 Dataset의 연구 결과는 다음과 같다. 
 
-![](./scenario.png)
+![DD·RPEAI·CAI 세 가지 사용 시나리오별 Dataset 연구 결과 표](./scenario.png)
 - A - Provide a link to license CC-BY-NC 4.0
 - B - Provide a link to the license CC-BY 4.0
 - C - Provide a link to license CC-By-NC-SA 4.0

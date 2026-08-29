@@ -36,7 +36,7 @@ Among these elements, to build an open source governance system that fully meets
 
 
 1. [Organization (Personnel)](../3-teams)
-2. [Policy](../4-polic)
+2. [Policy](../4-policy)
 3. [Process](../5-process)
 4. [Tools](../6-tool)
 5. [Training/Assessment](../7-training)

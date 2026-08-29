@@ -12,7 +12,7 @@ ISO/IEC 5230 규격의 6조를 제외한 모든 요구사항을 준수하는 오
 기업은 위의 내용을 오픈소스 정책에 포함시킬 수도 있고, 외부에 공개되어 있는 웹사이트를 통해 게재할 수도 있다. 
 
 아래 이미지와 같이 SK텔레콤에서 오픈소스 포털사이트에 이에 대한 내용을 게재한 것을 참고할 수 있다. 
-![](sktiso.png)
+![SK텔레콤 Compliance 페이지에서 ISO/IEC 5230:2020 OpenChain 규격의 모든 요구 사항을 충족한다고 안내하는 화면](sktiso.png)
 [https://sktelecom.github.io/compliance/iso5230/](https://sktelecom.github.io/compliance/iso5230/)
  
 
@@ -36,4 +36,4 @@ ISO/IEC 5230 규격의 6조를 제외한 모든 요구사항을 준수하는 오
 |  | Do you have documentation confirming that your Program conformance was reviewed within the last 18 months? |
 
 여기까지 완료하면 기업은 드디어 ISO/IEC 5230의 모든 요구사항을 충족하게 된다. 
-![](totalno.png)
+![ISO/IEC 5230:2020 표지와 함께, 모든 요구사항이 빠짐없이 초록색으로 강조 표시된 조항 체계표](totalno.png)

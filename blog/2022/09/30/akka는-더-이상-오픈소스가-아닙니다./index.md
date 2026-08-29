@@ -21,7 +21,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 미국의 Ligntbend 사는 2022년 9월 Akka의 라이선스를 [변경](https://akka.io/)하였습니다. 
 
-![](./akka_license_change.png)
+![Lightbend가 Akka 2.7부터 라이선스를 Apache 2.0에서 BSL v1.1로 바꾼다고 공지한 화면](./akka_license_change.png)
 
 라이선스 변경의 주요 내용은 다음과 같습니다. 
 
@@ -67,7 +67,7 @@ BUSL-1.1 또 다른 특징은 `Change Date`와 `Change License`입니다. BUSL-1
 
 [Akka의 BUSL-1.1](https://www.lightbend.com/akka/license)의 경우 `Change Date`는 릴리즈 후 3년이며, `Change License`는 Apache-2.0입니다.
 
-![](./akka_busl.png)
+![Akka BUSL-1.1 라이선스의 Change Date(릴리즈 후 3년)와 Change License(Apache 2.0) 조항 표](./akka_busl.png)
 
 예를 들어, Akka 2.8이 2023년 1월 1일에 릴리즈되었다면, 3년이 지난 후, 2026년 1월 1일부터는 Apache-2.0이 적용되어 기업도 무료로 사용이 가능합니다. BUSL-1.1은 이러한 `Change License` 조항을 제공하여 신규 버전을 사용하려면 돈을 내고 써야 하지만 오래된 버전은 상용 목적의 사용이라고 하더라도 무료로 사용할 수 있게 하였습니다. 이는 소프트웨어의 Heavy user인 대기업에는 비용을 청구하겠다는 의지로 보입니다. 
 

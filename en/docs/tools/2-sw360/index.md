@@ -111,7 +111,7 @@ CONTAINER ID   IMAGE                 COMMAND                  CREATED         ST
 
 At this point, accessing `http://localhost:8080/` takes you to the following screen.
 
-![](./liferay.png)
+![Initial screen shown when accessing http://localhost:8080/ after starting the SW360 containers with docker-compose](./liferay.png)
 
 
 ## Configuration
@@ -127,37 +127,37 @@ Log in with the following account to perform the configuration.
 
 Once you log in, a Not Found message appears as shown below.
 
-![](./liferay1.png)
+![Not Found screen shown right after logging in with the setup account](./liferay1.png)
 
 Click the item icon (cube shape) in the upper right of the screen and select the `Control Panel` tab.
 
-![](./liferay2.png)
+![Clicking the item icon at the top right and selecting the Control Panel tab](./liferay2.png)
 
 Enable `SECURITY` > `Password Policies` > `Default Password Policy` > `PASSWORD CHANGES` > `Change Requried`.
 
-![](./liferay3.png)
+![Enabling Change Required under Control Panel's SECURITY > Password Policies](./liferay3.png)
 
 Then, back in the `Control Panel` tab, select `CONFIGURATION` > `Instance Settings`. This shows the `PLATFORM` menu.
 
-![](./liferay4.png)
+![Control Panel's CONFIGURATION > Instance Settings showing the PLATFORM menu](./liferay4.png)
 
 There, select `Users`. Then go into the `Default User Associations` menu, check `Apply to Existing Users`, and `Save`.
 
-![](./liferay5.png)
+![Checking Apply to Existing Users under Instance Settings > Users > Default User Associations](./liferay5.png)
 
 Now, under `Instance Settings` > `PLATFORM`, select `User Authentication`. Go into `General` and uncheck all items. (You can check and enable any items needed for administrative purposes.) Then `Save`.
 
-![](./liferay6.png)
+![Unchecking all items under Instance Settings > User Authentication > General](./liferay6.png)
 
 Finally, you need to enable jQuery and Font Awesome. To do this, go into `CONFIGURATION` > `System Settings` in the `Control Panel` tab, where you can find `Third Party` under `PLATFORM`.
 
-![](./liferay7.png)
+![Control Panel's CONFIGURATION > System Settings showing the Third Party menu under PLATFORM](./liferay7.png)
 
 Go into `Third Party` and enable `JQuery` and `Font Awesome` respectively.
 
-![](./liferay8.png)
+![Enabling JQuery in the Third Party menu](./liferay8.png)
 
-![](./liferay9.png)
+![Enabling Font Awesome in the Third Party menu](./liferay9.png)
 
 Restart your browser for the changes to take effect.
 
@@ -165,64 +165,64 @@ Restart your browser for the changes to take effect.
 
 To configure SW360, you need to import the `*.lar` files. To do this, you need to go into the menu, and the menu button is in the upper left of the screen.
 
-![](./liferay10.png)
+![Location of the menu button at the top left of the screen](./liferay10.png)
 
 In the menu, go into `Publishing` > `Import`.
 
-![](./liferay11.png)
+![Navigating to Publishing > Import from the menu](./liferay11.png)
 
 Click the `+` button on the right to upload a LAR file. The LAR files are located under the `frontend/configuration` folder in the SW360 source files. (e.g., https://github.com/haksungjang/sw360/tree/docker_build/frontend/configuration)
 
 First, upload the `Public_Pages_7_4_3_18_GA18.lar` file and click the `Continue` button.
 
-![](./liferay12.png)
+![Uploading the Public_Pages LAR file and clicking Continue](./liferay12.png)
 
 On the File Summary screen, you can see the details of the uploaded LAR file.
 
-![](./liferay13.png)
+![File Summary screen showing details of the uploaded LAR file](./liferay13.png)
 
 Change `AUTHORSHIP OF THE CONTENT` at the bottom to `Use the Current User as Author` and click the `Import` button.
 
-![](./liferay14.png)
+![Setting AUTHORSHIP OF THE CONTENT to Use the Current User as Author and clicking Import](./liferay14.png)
 
 You can then see that the import completed successfully.
 
-![](./liferay15.png)
+![Confirmation that the LAR file import completed successfully](./liferay15.png)
 
 Similarly, import the `Private_Pages_7_4_3_18_GA18.lar` file. On the File Summary screen, change `PAGES` > `Private Pages` as shown below.
 
-![](./liferay16.png)
+![Changing PAGES to Private Pages in the File Summary for the Private_Pages LAR file](./liferay16.png)
 
 Then select the `PERMISSIONS`, `UPDATE DATA`, and `AUTHORSHIP OF THE CONTENT` items as shown in the image below, and click the `Import` button to perform the import.
 
-![](./liferay17.png)
+![Setting the PERMISSIONS, UPDATE DATA, and AUTHORSHIP OF THE CONTENT options before running Import](./liferay17.png)
 
 After completing this, click the `Home` button at the top of the menu.
 
-![](./liferay18.png)
+![Clicking the Home button at the top of the menu after finishing setup](./liferay18.png)
 
 This takes you to the `Welcome to SW360!` screen shown below.
 
-![](./liferay19.png)
+![The Welcome to SW360! screen](./liferay19.png)
 
 Click the `Start` button to go into the SW360 main screen. (All items are empty at this point.)
 
-![](./liferay20.png)
+![SW360's initial screen with all items empty, reached by clicking Start](./liferay20.png)
 
 ### 3. User Account Configuration (for Testing)
 
 In the SW360 menu, select `Admin` > `User`.
 
-![](./liferay21.png)
+![Selecting Admin > User from the SW360 menu](./liferay21.png)
 
 In the `UPLOAD USERS` menu at the bottom of the screen, upload the user list for testing. (The user list for testing can be downloaded here. : [test_users_with_passwords_12345.csv](https://github.com/haksungjang/sw360/blob/main/frontend/configuration/test_users_with_passwords_12345.csv) )
 
 
-![](./liferay22.png)
+![Uploading a test user list CSV file via the UPLOAD USERS menu](./liferay22.png)
 
 You can then see that a list of 9 users has been uploaded, as shown below.
 
-![](./liferay23.png)
+![Screen showing 9 test users successfully uploaded](./liferay23.png)
 
 Try logging in again with the `user@@sw360.org` account, one of the users shown in the list. The password is `12345`.
 
@@ -241,15 +241,15 @@ When you first install SW360, you need to first register the open source license
 
 Selecting Menu &gt; Licenses &gt; Add License takes you to the Create License screen shown below.
 
-![](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
+![Create License screen for registering a license via the Licenses > Add License menu](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
 
 Registering licenses one by one manually like this can be quite tedious, but fortunately SW360 provides a feature to import the SPDX License List all at once. Click Menu &gt; Admin &lt; Import SPDX Information.
 
-![](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
+![Importing the SPDX License List in one batch via the Admin > Import SPDX Information menu](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
 
 The SPDX License List is then automatically registered shortly after. At Menu &gt; Licenses, you can confirm that 338 licenses have been registered.
 
-![](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
+![Licenses menu showing 338 licenses registered after the SPDX List import completed](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
 
 ### 2. Registering Components and Releases
 
@@ -280,19 +280,19 @@ A Release includes the following information.
 
 For example, if you need to register zlib-1.2.8, you first register zlib as a Component, then register zlib 1.2.8 as a Release. Selecting Menu &gt; Components &gt; Add Component takes you to the Create Component screen, where you can register information about zlib.
 
-![](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
+![Create Component screen for registering the zlib component via Components > Add Component](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
 
 Once you create the Component, you can register information for the zlib-1.2.8 version at Components &gt; Releases &gt; Add Release.
 
-![](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
+![Registering zlib-1.2.8 version details via Components > Releases > Add Release](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
 
 When versions 1.2.8 and 1.2.11 are each registered as Releases under the single zlib Component, the Release Overview screen shows 2 Releases existing, as below.
 
-![](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
+![Release Overview screen showing two releases, 1.2.8 and 1.2.11, under the zlib component](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
 
 SW360 provides a feature for importing information for multiple Components at once. At Menu &gt; Admin &gt; Import / Export, you can enter the Component information you want to register into the CSV template and then import it.
 
-![](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
+![Bulk-importing component information from a CSV template via Admin > Import / Export](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
 
 Note that, as of February 2020, this feature may not yet work reliably.
 
@@ -308,29 +308,29 @@ When creating a Project, you register the following information.
 
 You can create a Project via Menu &gt; Projects &gt; Add Project.
 
-![](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
+![Create Project screen for creating a project via the Projects > Add Project menu](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
 
 Once you create the Project, register the Releases or sub-Projects it includes. Selecting the Project at Menu &gt; Projects lets you register Linked Projects and Linked Releases under "Linked Releases and Projects."
 
-![](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
+![Registering linked releases and sub-projects for a project in its Linked Releases and Projects section](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
 
 The following is the screen after registering OpenSSL 1.0.1 and zlib 1.2.8 as Linked Releases in a Project named SuperCalc.
 
-![](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
+![SuperCalc project with OpenSSL 1.0.1 and zlib 1.2.8 registered as Linked Releases](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
 
 ### 4. Security Vulnerability Management
 
 SW360 can automatically check whether registered Releases have security vulnerabilities. To do this, SW360 provides a feature for scheduling periodic collection of CVE information. At Menu &gt; Admin &gt; Schedule, you can set a schedule to collect CVE SEARCH information every 24 hours.
 
-![](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
+![Scheduling CVE information to be collected every 24 hours via the Admin > Schedule menu](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
 
 Once this schedule is set, SW360 collects CVE information from the CVE Search site \([https://cve.circl.lu/](https://cve.circl.lu/)\) at the scheduled time. The collected CVE information can be checked at Menu &gt; Vulnerabilities.
 
-![](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
+![Viewing collected CVE vulnerability entries in the Vulnerabilities menu](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
 
 Once the Vulnerabilities information has been collected, you can query whether a created Project has security vulnerabilities. In the SuperCalc Project created above, you can confirm that 85 security vulnerabilities were reported.
 
-![](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
+![SuperCalc project showing 85 reported security vulnerabilities](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
 
 By registering and managing the software a company develops and distributes in SW360 this way, you can manage it in a form that minimizes risk not only for open source compliance but also for security vulnerabilities.
 

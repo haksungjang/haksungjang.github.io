@@ -1881,7 +1881,7 @@ Test server URL: [https://fossology.osuosl.org/](https://fossology.osuosl.org/)
 </div>
 
 
-![](../fossology2.png)
+![FOSSology test server login screen introducing key features such as upload, license scanning, and copyright detection](../fossology2.png)
 
 #### Basic Workflow
 
@@ -1890,25 +1890,25 @@ The basic usage procedure for FOSSology is as follows.
 * To check the license and copyright information of the open source to be used, compress the open source's source code into a single file and upload it to FOSSology.
 * To do this, select Menu &gt; Upload &gt; From File.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
+![Uploading a compressed source archive via FOSSology's Upload > From File menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
 
 * Select the file to upload and click the Upload button.
 * Once the upload is complete, the Job Agent automatically performs the analysis.
 * The analysis status can be checked at Menu &gt; Jobs &gt; My Recent Jobs.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
+![Checking analysis progress for an uploaded file in FOSSology's Jobs > My Recent Jobs menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
 
 * Once the analysis is complete, the results can be checked at Menu &gt; Browse.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
+![Viewing completed license analysis results in FOSSology's Browse menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
 
 * Selecting an individual file shows the license-related text detected by FOSSology.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
+![Viewing the license-related text FOSSology detected for an individual file](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
 
 * At Menu &gt; Browser &gt; select a file or directory &gt; Copyright/Email/Url/Author, you can see the Copyright/Email/Url/Author information detected by FOSSology.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
+![Viewing copyright, email, URL, and author information FOSSology detected, in the Copyright/Email/Url/Author menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
 
 After checking whether the results analyzed by FOSSology are valid, users can exclude any incorrectly detected items from the analysis results. FOSSology calls this the Clearing process; for more details, see the following page. : [https://www.fossology.org/get-started/basic-workflow/](https://www.fossology.org/get-started/basic-workflow/)
 
@@ -2055,7 +2055,7 @@ $ vagrant up
 
 Running the box configures Liferay, PostgreSQL, and CouchDB. If it runs without issue, the Liferay screen can be accessed at [https://localhost:8443/](https://localhost:8443/).
 
-![](https://lh6.googleusercontent.com/leof_ntxQlxjDeD91E7ZfwWY0ftUlD0D_L58AkeNJb_bEFFzKvuL28yzb4iIA6-bAuSfQydo-gVBlnn5EVGGBKcPh0-6Y7p2Qbar74qpB4uwa_nibrV535NJwEIpWXZPFeNUSRd-)
+![SW360's initial Liferay screen after starting the Vagrant box](https://lh6.googleusercontent.com/leof_ntxQlxjDeD91E7ZfwWY0ftUlD0D_L58AkeNJb_bEFFzKvuL28yzb4iIA6-bAuSfQydo-gVBlnn5EVGGBKcPh0-6Y7p2Qbar74qpB4uwa_nibrV535NJwEIpWXZPFeNUSRd-)
 
 ##### 5) Deploying the SW360 Layout
 
@@ -2068,7 +2068,7 @@ Then follow the instructions on the following site to deploy the layout. [https:
 
 Once the deployment is complete, you will see a screen like the following.
 
-![](https://lh5.googleusercontent.com/INu1-WWi1-SA9P61IMNlgZhugTXbiwbSKUOu2eWq_d5sIIp8NfqxQntwId41ZDmTG6_5Ope8GdU1J2S0adaJDolM09dtfkwIbOE2gTDC4MZXMxhX9kN28E4Yj8a3deBUHBL7yCqj)
+![Screen after the SW360 layout has been deployed to Liferay](https://lh5.googleusercontent.com/INu1-WWi1-SA9P61IMNlgZhugTXbiwbSKUOu2eWq_d5sIIp8NfqxQntwId41ZDmTG6_5Ope8GdU1J2S0adaJDolM09dtfkwIbOE2gTDC4MZXMxhX9kN28E4Yj8a3deBUHBL7yCqj)
 
 #### Basic Workflow
 
@@ -2084,15 +2084,15 @@ When SW360 is first installed, commonly used open source licenses must be regist
 
 Selecting Menu &gt; Licenses &gt; Add License opens the Create License screen shown below.
 
-![](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
+![Create License screen for registering a license via the Licenses > Add License menu](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
 
 Registering licenses one by one this way can be quite tedious. Fortunately, SW360 provides a function to import the SPDX License List all at once. Click Menu &gt; Admin &lt; Import SPDX Information.
 
-![](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
+![Importing the SPDX License List in one batch via the Admin > Import SPDX Information menu](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
 
 The SPDX License List will then be automatically registered. At Menu &gt; Licenses, you can confirm that 338 licenses have been registered.
 
-![](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
+![Licenses menu showing 338 licenses registered after the SPDX List import completed](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
 
 ##### 2) Registering Components and Releases
 
@@ -2123,19 +2123,19 @@ A Release includes the following information.
 
 For example, to register zlib-1.2.8, first register zlib as a Component, and then register zlib 1.2.8 as a Release. Selecting Menu &gt; Components &gt; Add Component opens the Create Component screen, where information about zlib can be registered.
 
-![](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
+![Create Component screen for registering the zlib component via Components > Add Component](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
 
 Once the Component is created, information about the zlib-1.2.8 version can be registered at Components &gt; Releases &gt; Add Release.
 
-![](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
+![Registering zlib-1.2.8 version details via Components > Releases > Add Release](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
 
 Having registered versions 1.2.8 and 1.2.11 as separate Releases under the zlib Component, the Release Overview screen shows the following two Releases.
 
-![](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
+![Release Overview screen showing two releases, 1.2.8 and 1.2.11, under the zlib component](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
 
 SW360 provides a function to import a large number of Component records at once. At Menu &gt; Admin &gt; Import / Export, you can enter Component information into the CSV template and import it.
 
-![](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
+![Bulk-importing component information from a CSV template via Admin > Import / Export](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
 
 Note that, as of February 2020, this function may not yet work reliably.
 
@@ -2151,29 +2151,29 @@ When creating a Project, the following information is registered.
 
 A Project can be created via Menu &gt; Projects &gt; Add Project.
 
-![](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
+![Create Project screen for creating a project via the Projects > Add Project menu](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
 
 Once the Project is created, the included Releases or sub-Projects are registered. Selecting the Project at Menu &gt; Projects lets you register Linked Projects and Linked Releases under "Linked Releases and Projects."
 
-![](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
+![Registering linked releases and sub-projects for a project in its Linked Releases and Projects section](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
 
 The following screen shows the state after OpenSSL 1.0.1 and zlib 1.2.8 have been registered as Linked Releases in the SuperCalc Project.
 
-![](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
+![SuperCalc project with OpenSSL 1.0.1 and zlib 1.2.8 registered as Linked Releases](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
 
 ##### 4) Security Vulnerability Management
 
 SW360 can automatically check whether there is a security vulnerability for a registered Release. To do this, SW360 provides a function to schedule periodic collection of CVE information. At Menu &gt; Admin &gt; Schedule, you can set the CVE SEARCH information to be collected every 24 hours.
 
-![](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
+![Scheduling CVE information to be collected every 24 hours via the Admin > Schedule menu](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
 
 Once this schedule is set, SW360 collects CVE information from the CVE Search site ([https://cve.circl.lu/](https://cve.circl.lu/)) at the scheduled time. The collected CVE information can be checked at Menu &gt; Vulnerabilities.
 
-![](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
+![Viewing collected CVE vulnerability entries in the Vulnerabilities menu](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
 
 Once the vulnerability information has been collected, you can check whether the created Project has any security vulnerabilities. The SuperCalc Project created above shows 85 reported security vulnerabilities.
 
-![](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
+![SuperCalc project showing 85 reported security vulnerabilities](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
 
 By registering and managing software developed and distributed by a company in SW360 this way, it becomes possible to manage the risk not only of open source compliance but also of security vulnerabilities.
 

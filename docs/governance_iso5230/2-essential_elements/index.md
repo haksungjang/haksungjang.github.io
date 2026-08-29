@@ -36,7 +36,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 1. [조직 (담당자)](../3-teams)
-2. [정책](../4-polic)
+2. [정책](../4-policy)
 3. [프로세스](../5-process)
 4. [도구](../6-tool)
 5. [교육/평가](../7-training)

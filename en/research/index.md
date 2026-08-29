@@ -8,7 +8,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-This is a collection of analysis on the regulatory and policy landscape of open source management and on compliance practice, grounded in primary sources. The topics covered are as follows.
+Topics covered include:
 
 - Open source license compliance
 - Open source security management and the software supply chain

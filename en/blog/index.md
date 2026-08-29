@@ -1,12 +1,15 @@
 # Blog
 
+> A collection of posts on open source license compliance, security, and policy trends drawn from real-world practice.
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-This is the **blog** section. 
-
-Files in these directories will be listed in reverse chronological order.
+Posts on open source license compliance, security, and policy trends, drawn from
+cases and news encountered in day-to-day practice. Listed newest first.
 
 ---
 

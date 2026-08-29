@@ -140,7 +140,7 @@ OSCAL is a tool built for expressing security controls, which makes it more than
 
 The BOM for an AI system splits into a software dependency layer and a model/dataset layer. Dependency-Track handles the former layer right now, and does not yet accept the latter as a first-class citizen (issue #4361 is open as of this research and may change later). Integration is therefore split by layer.
 
-![The common pipeline has three stages — generation, enrichment, and validation — after which it splits into two layers. The software layer is ingested by Dependency-Track as-is, but the model/dataset layer, lacking classifier support, is uploaded as a generic component and routed around via properties](./toolchain-layers-en.png)
+![The common pipeline has three stages — generation, enrichment, and validation — after which it splits into two layers. The software layer is ingested by Dependency-Track as-is, but the model/dataset layer, lacking classifier support, is uploaded as a generic component and routed around via properties](/research/2026-ai-bom-requirements/toolchain-layers-en.png)
 
 **Figure 4.** The common pipeline and the two layers it splits into after validation *(compiled from the survey)*
 

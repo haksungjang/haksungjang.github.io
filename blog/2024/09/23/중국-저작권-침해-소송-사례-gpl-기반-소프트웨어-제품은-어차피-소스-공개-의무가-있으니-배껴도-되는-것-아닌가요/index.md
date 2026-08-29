@@ -18,7 +18,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 2009년, 왕징은 'OfficeTen'이라는 융합 통신 스마트 게이트웨이 제품을 개발했습니다. 
 
-![](./1800.png)
+![왕징이 개발한 OfficeTen SDG 1800 융합 통신 스마트 게이트웨이 제품 사진](./1800.png)
 
 > OfficeTen SDG 1800 by Wangjing - [http://www.cncr-it.com/product_detail.php?sid=26&cid=133&id=388](http://www.cncr-it.com/product_detail.php?sid=26&cid=133&id=388)
 
@@ -117,7 +117,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 *SKT고객은 Perplexicy Pro를 1년간 무료로 이용할 수 있습니다.: [https://perplexity.sktadotevent.com/](https://perplexity.sktadotevent.com/)*
 
-![](./perplexity.png)
+![Perplexity와 SKT ADOT 로고](./perplexity.png)
 
 
 </div>

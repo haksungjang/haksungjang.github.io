@@ -6,12 +6,12 @@ LLMS index: [llms.txt](/llms.txt)
 
 Section pages:
 
-- [[2025] ISO 표준 기반 기업 오픈소스 관리 가이드](/docs/opensource_for_enterprise/): ISO 국제 표준에 기반하여 기업이 오픈소스를 효과적으로 관리하기 위한 방안을 소개합니다.
+- [[2025] ISO 표준 기반 기업 오픈소스 관리 가이드](/docs/opensource_for_enterprise/): ISO 국제 표준에 기반하여 기업이 오픈소스를 효과적으로 관리하기 위한 방안을 소개한다.
 - [국제표준(ISO/IEC 5230)에 기반한 기업 오픈소스 거버넌스 구축 가이드](/docs/governance_iso5230/): 오픈소스 국제 표준인 ISO/IEC 5230에 기반한 기업의 오픈소스 거버넌스 체계 구축 방법을 설명한다.
 - [오픈소스 보안 보증: ISO/IEC 18974 기업 도입 및 인증 가이드](/docs/isoiec18974_guide/): 기업이 ISO/IEC 18974를 충족하여 오픈소스 보안 보증 체계를 구축하기 위한 방법을 설명한다.
 - [OpenChain을 활용한 기업 오픈소스 컴플라이언스 가이드](/docs/openchain/): OpenChain 규격은 오픈소스 컴플라이언스를 위한 유일한 국제 표준(ISO)이다. 이를 활용하여 기업이 오픈소스 컴플라이언스 수준을 높이기 위한 방법을 설명한다.
-- [인수합병(M&A)에서의 오픈소스 감사](/docs/audit_in_ma/): 인수합병(M&A) 거래에서 오픈소스 감사를 위한 개요와 실무 가이드를 제공합니다.
-- [SBOM(Software Bill of Materials) 실무 가이드](/docs/sbom_guide/): 소프트웨어 자재 명세서(SBOM)의 개념부터 표준 형식, 규제 동향, 도입 로드맵, 도구, 취약점 관리, 거버넌스까지 한국 실무자 관점에서 정리한 가이드입니다.
+- [인수합병(M&A)에서의 오픈소스 감사](/docs/audit_in_ma/): 인수합병(M&A) 거래에서 오픈소스 감사를 위한 개요와 실무 가이드를 제공한다.
+- [SBOM(Software Bill of Materials) 실무 가이드](/docs/sbom_guide/): 소프트웨어 자재 명세서(SBOM)의 개념부터 표준 형식, 규제 동향, 도입 로드맵, 도구, 취약점 관리, 거버넌스까지 한국 실무자 관점에서 정리한 가이드다.
 - [AI SBOM 컴플라이언스 가이드](/docs/ai-sbom_guide/): OpenChain AI SBOM 컴플라이언스 가이드(Version 1.0)의 요구사항을 조항별로 풀어 설명하는 기업 실천 가이드다.
-- [Templates](/docs/templates/)
-- [Tools](/docs/tools/)
+- [Templates](/docs/templates/): 기업이 오픈소스 관리를 위해 필요한 정책·프로세스 문서 템플릿을 제공한다.
+- [Tools](/docs/tools/): 오픈소스 관리를 위해 필요한 도구를 소개하고 사용법을 안내한다.

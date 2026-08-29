@@ -8,17 +8,10 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert"><div class="h4 alert-heading" role="heading">안내</div>
 
 
-이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 공개 출처로 교차 검증했습니다.
-</div>
-
-
-<div class="alert alert-warning" role="alert"><div class="h4 alert-heading" role="heading">고지</div>
-
-
-이 글은 작성자 개인의 분석과 정리이며, 법률 자문이 아닙니다. 인용한 사실은 공개 출처에 근거해 확인했으나, 구체적 사안의 판단은 변호사 등 전문가의 검토를 받으시기 바랍니다.
+이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 공개 출처로 교차 검증했습니다. 다만 작성자 개인의 분석과 정리이며 법률 자문이 아니므로, 구체적 사안의 판단은 변호사 등 전문가의 검토를 받으시기 바랍니다.
 </div>
 
 

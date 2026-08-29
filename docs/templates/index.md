@@ -1,5 +1,9 @@
 # Templates
 
+> 기업이 오픈소스 관리를 위해 필요한 정책·프로세스 문서 템플릿을 제공한다.
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---

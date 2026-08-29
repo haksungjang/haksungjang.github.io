@@ -1,4 +1,4 @@
-# Haksung
+# Haksung Jang
 
 > The official website of Haksung Jang, Open Source Program Manager at SK telecom and OpenChain Ambassador.
 
@@ -8,7 +8,7 @@
 - [Guide](https://haksungjang.github.io/en/docs/index.md)
 - [Research](https://haksungjang.github.io/en/research/index.md): Analysis of open source regulation, policy, and compliance practice grounded in primary sources. Covers recent developments such as the EU Cyber Resilience Act, the US AI executive order, and the EU open source strategy.
 - [Tools](https://haksungjang.github.io/en/tools/index.md): Open source management tools I contribute to. They cover SBOM generation, open source risk analysis, vulnerability and license management, and notice generation.
-- [Blog](https://haksungjang.github.io/en/blog/index.md)
+- [Blog](https://haksungjang.github.io/en/blog/index.md): A collection of posts on open source license compliance, security, and policy trends drawn from real-world practice.
 
 ## Documentation index
 

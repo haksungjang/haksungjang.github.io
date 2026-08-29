@@ -150,7 +150,7 @@ Here, provenance means the original source of the dataset.
 
 * Taking [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) as an example, information about its license and original source can be recorded as follows.
 
-![](./provenance_record.png)
+![Example record of CIFAR-10's license and original source](./provenance_record.png)
 
 #### (Step 3) Lineage extraction
 
@@ -159,7 +159,7 @@ Many publicly available datasets, including computer vision and NLP datasets, ar
     - Record this separately (see the "Description of the data collection process" field in the table above).
     - If it turns out that a data source itself contains another data source, find and record that data source as well (repeat recursively).
     - For example, [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) is a subset of another dataset called [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/). The paper reveals that this dataset draws on seven data sources: Google, Flickr, Ask, Altavista, Picsearch, Webshots, and Cydral.
-    ![](./datasource.png)
+    ![List of the seven data sources (Google, Flickr, Ask, Altavista, Picsearch, Webshots, Cydral) used by 80 Million Tiny Images, the parent dataset of CIFAR-10](./datasource.png)
 2. (Sub-step 2) Find the official source for each data source (using websites, search engines, etc.).
     - For example, the dataset is no longer available on the [80 Million Tiny Images](https://groups.csail.mit.edu/vision/TinyImages/) website. In this case, look for a possible archived version (e.g., [http://web.archive.org/web/20100601000000*/http://groups.csail.mit.edu/vision/TinyImages/](http://web.archive.org/web/20100601000000*/http://groups.csail.mit.edu/vision/TinyImages/))
     - Then determine the official website for each of the seven data sources listed above.
@@ -212,7 +212,7 @@ Here, the legal professional looks at the license of the dataset and its data an
          - Model
        - Model Reverse Engineer
 
-![](./enhanced_mdl.png)
+![Diagram of the Enhanced MDL categories: Benchmark, Research, Publish, Internal Use, Commercialization (Output, Model), and Model Reverse Engineer](./enhanced_mdl.png)
 
 #### (Step 2) License compatibility analysis
 
@@ -277,7 +277,7 @@ The most common usage scenarios for image datasets can be seen as the following 
 
 The research results for each dataset against these usage scenarios are as follows.
 
-![](./scenario.png)
+![Table of dataset research findings for the three use scenarios: DD, RPEAI, and CAI](./scenario.png)
 - A - Provide a link to license CC-BY-NC 4.0
 - B - Provide a link to the license CC-BY 4.0
 - C - Provide a link to license CC-By-NC-SA 4.0

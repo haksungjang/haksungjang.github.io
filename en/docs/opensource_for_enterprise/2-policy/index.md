@@ -479,13 +479,13 @@ Responding to external open source inquiries promptly and accurately can greatly
 [SK telecom](https://www.sktelecom.com/) includes an open source notice in all of its supplied software. The open source notice provides the address of the SK telecom open source website together with an email address for contacting the open source program office.
 
 
-![](./ossnotice.png)
+![Sample open source notice showing the source-code offer clause and the opensource@sk.com contact](./ossnotice.png)
 <center><i>SK telecom open source notice</i></center><br>
 
 The [SK telecom open source website](https://sktelecom.github.io/) also provides an email address for contacting the open source program office.
 
 
-![](./website_email.jpg)
+![SK Telecom's open source site with the OSPO contact-mail button highlighted](./website_email.jpg)
 <center><i>SK telecom open source website</i></center><br>
 
 
@@ -583,6 +583,6 @@ An open source policy must include the following core elements:
 
 Establishing and documenting an open source policy that includes these elements makes it possible to meet the key requirements of the ISO/IEC 5230 and ISO/IEC 18974 standards.
 
-![](./spec_number_02.png)
+![Side-by-side clause comparison of ISO/IEC 5230 (license compliance) and ISO/IEC DIS 18974 (security assurance) with policy-related clauses highlighted](./spec_number_02.png)
 
 A policy must not stop at documentation alone; it must actually be implemented within the organization. This requires regular review and updates, along with training for program participants. An effective open source policy will help systematically manage the organization's use of and contribution to open source, and minimize potential legal and security risks.

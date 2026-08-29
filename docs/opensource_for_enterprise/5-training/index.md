@@ -229,7 +229,7 @@ ISO 표준은 공통적으로 다음과 같이 프로그램 참여자의 인식�
 SK텔레콤의 오픈소스 가이드 내 [라이선스별 의무사항](https://sktelecom.github.io/guide/use/obligation/)항 문서도 좋은 자료입니다.
 
 
-![](sktlicenseguide.png)
+![SK텔레콤 오픈소스 가이드 사이트에서 GPL-2.0 소스 재배포 시 고지 의무와 수정 시 의무 사항을 설명하는 화면](sktlicenseguide.png)
 [https://sktelecom.github.io/guide/use/obligation/gpl-2.0/](https://sktelecom.github.io/guide/use/obligation/gpl-2.0/)
 
 기업은 구성원이 쉽게 접근하여 참고할 수 있는 공간에 오픈소스 라이선스 가이드를 제공해야 합니다.
@@ -288,7 +288,7 @@ SK텔레콤의 오픈소스 가이드 내 [라이선스별 의무사항](https:/
 
 여기까지 교육, 평가, 인식 제고 활동 및 교육 효과성 측정과 개선 프로세스를 구축하게 되면 ISO/IEC 5230과 ISO/IEC 18974 표준 규격의 주요 요구사항을 충족할 수 있습니다. 
 
-![](trainingno.png)
+![ISO/IEC 5230과 ISO/IEC DIS 18974 요구사항을 나란히 놓고, 정책·인지·교육 관련 조항(3.1.1.2, 3.1.2.3, 3.1.3.1, 3.5.1.3 등)을 하늘색으로 강조한 대조표](trainingno.png)
 
 
 이러한 교육 및 평가 체계를 통해 기업은 프로그램 참여자들의 오픈소스 라이선스 컴플라이언스와 보안 보증에 대한 이해도를 높이고, 역량을 지속적으로 개선할 수 있습니다. 또한, 정기적인 평가와 개선 활동을 통해 프로그램의 효과성을 지속적으로 향상시킬 수 있습니다.
