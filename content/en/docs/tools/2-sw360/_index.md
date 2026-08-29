@@ -113,7 +113,7 @@ CONTAINER ID   IMAGE                 COMMAND                  CREATED         ST
 
 이 상태에서 `http://localhost:8080/`로 접근하면 다음과 같은 화면에 진입한다. 
 
-![](./liferay.png)
+![docker-compose로 SW360 컨테이너 실행 후 http://localhost:8080/ 접속 시 나타나는 초기 화면](./liferay.png)
 
 
 ## 설정
@@ -129,37 +129,37 @@ SW360을 정상적으로 설치한 후에는 아래의 절차대로 초기 설�
 
 로그인을 하면 아래와 같이 Not Found라는 표시가 나타나게 된다. 
 
-![](./liferay1.png)
+![setup 계정으로 로그인한 직후 표시되는 Not Found 화면](./liferay1.png)
 
 화면 우상단의 아이템 아이콘(큐브 모양)을 클릭하고 `Control Panel` 탭을 선택한다. 
 
-![](./liferay2.png)
+![화면 우상단 아이템 아이콘을 클릭해 Control Panel 탭을 선택하는 화면](./liferay2.png)
 
 `SECURITY` > `Password Policies` > `Default Password Policy` > `PASSWORD CHANGES` > `Change Requried`를 활성화한다. 
 
-![](./liferay3.png)
+![Control Panel의 SECURITY > Password Policies에서 Change Required를 활성화하는 화면](./liferay3.png)
 
 그리고, 다시 `Control Panel`탭에서 `CONFIGURATION` > `Instance Settings`을 선택한다. 그러면, `PLATFORM`메뉴를 볼 수 있다. 
 
-![](./liferay4.png)
+![Control Panel의 CONFIGURATION > Instance Settings에서 PLATFORM 메뉴가 보이는 화면](./liferay4.png)
 
 거기서 `Users`를 선택한다. 그리고, `Default User Associations` 메뉴로 진입하고, `Apply to Existing Users`를 체크한다. 그리고 `Save`한다. 
 
-![](./liferay5.png)
+![Instance Settings > Users > Default User Associations에서 Apply to Existing Users를 체크하는 화면](./liferay5.png)
 
 이번에는 `Instance Settings` > `PLATFORM`에서 `User Authentication`를 선택한다. `General`로 진입하여 모든 항목을 Uncheck한다. (관리 목적상 필요한 항목은 Check하여 활성화할 수 있다.) 그리고 `Save`한다. 
 
-![](./liferay6.png)
+![Instance Settings > User Authentication > General에서 모든 항목을 Uncheck하는 화면](./liferay6.png)
 
 끝으로, jquery와 font awesome을 활성화시켜야 한다. 이를 위해 `Control Panel` 탭에서 `CONFIGURATION` > `System Settings`으로 진입하면 `PLATFORM` 하위에 `Third Party`를 볼 수 있다. 
 
-![](./liferay7.png)
+![Control Panel의 CONFIGURATION > System Settings에서 PLATFORM 하위 Third Party 메뉴가 보이는 화면](./liferay7.png)
 
 `Third Party`에 진입하여 `JQuery`와 `Font Awesome`을 각각 Enable시킨다. 
 
-![](./liferay8.png)
+![Third Party 메뉴에서 JQuery를 Enable하는 화면](./liferay8.png)
 
-![](./liferay9.png)
+![Third Party 메뉴에서 Font Awesome을 Enable하는 화면](./liferay9.png)
 
 브라우저를 새로 실행하면 변경 사항이 적용된다. 
 
@@ -167,64 +167,64 @@ SW360을 정상적으로 설치한 후에는 아래의 절차대로 초기 설�
 
 SW360 설정을 위해서는 `*.lar` 파일들을 import해야 한다. 이를 설정하기 위해서는 메뉴로 진입해야 하는데, 메뉴 버튼은 화면 좌측 상단에 있다. 
 
-![](./liferay10.png)
+![화면 좌측 상단의 메뉴 버튼 위치를 보여주는 화면](./liferay10.png)
 
 메뉴에서 `Publishing` > `Import`에 진입한다.
 
-![](./liferay11.png)
+![메뉴에서 Publishing > Import로 진입하는 화면](./liferay11.png)
 
 우측의 `+` 버튼을 눌러 LAR 파일을 업로드 할 수 있는데, LAR 파일은 SW360 소스 파일 내 `frontend/configuration` 폴더 하위에 있다. (예: https://github.com/haksungjang/sw360/tree/docker_build/frontend/configuration)
 
 먼저, `Public_Pages_7_4_3_18_GA18.lar` 파일을 업로드하고 `Continue` 버튼을 누른다. 
 
-![](./liferay12.png)
+![Public_Pages LAR 파일을 업로드하고 Continue 버튼을 누르는 화면](./liferay12.png)
 
 File Summary 화면에서 업로드된 LAR 파일 세부 내용을 볼 수 있다. 
 
-![](./liferay13.png)
+![File Summary 화면에서 업로드된 LAR 파일의 세부 내용을 보여주는 화면](./liferay13.png)
 
 제일 아래의 `AUTHORSHIP OF THE CONTENT`를 `Use the Current User as Author`로 변경하고 `Import` 버튼을 누른다. 
 
-![](./liferay14.png)
+![AUTHORSHIP OF THE CONTENT를 Use the Current User as Author로 변경하고 Import 버튼을 누르는 화면](./liferay14.png)
 
 그러면 Import가 성공적으로 완료된 걸 볼 수 있다. 
 
-![](./liferay15.png)
+![LAR 파일 Import가 성공적으로 완료된 것을 보여주는 화면](./liferay15.png)
 
 이와 유사하게 `Private_Pages_7_4_3_18_GA18.lar` 파일을 Import한다. File Summary 화면에서 아래와 같이 `PAGES` > `Private Pages`로 변경한다. 
 
-![](./liferay16.png)
+![Private_Pages LAR 파일의 File Summary에서 PAGES를 Private Pages로 변경하는 화면](./liferay16.png)
 
 그리고, `PERMISSIONS`, `UPDATE DATA`, `AUTHORSHIP OF THE CONTENT` 항목을 각각 아래 이미지와 같이 선택하고, `Import`버튼을 눌러 Import를 수행한다. 
 
-![](./liferay17.png)
+![PERMISSIONS, UPDATE DATA, AUTHORSHIP OF THE CONTENT 항목을 설정하고 Import를 수행하는 화면](./liferay17.png)
 
 여기까지 수행을 마친 후 메뉴 상단의 `Home` 버튼을 누른다. 
 
-![](./liferay18.png)
+![설정을 마친 뒤 메뉴 상단의 Home 버튼을 누르는 화면](./liferay18.png)
 
 그럼 아래와 같이 `Welcome to SW360!` 화면에 진입한다. 
 
-![](./liferay19.png)
+![Welcome to SW360! 초기 화면](./liferay19.png)
 
 `Start` 버튼을 눌러 SW360 첫 화면에 진입할 수 있다. (모든 항목이 비어있다.)
 
-![](./liferay20.png)
+![Start 버튼을 눌러 진입한, 모든 항목이 비어있는 SW360 첫 화면](./liferay20.png)
 
 ### 3. User Account 설정 (테스트용)
 
 SW360 메뉴에서 `Admin` > `User`를 선택한다. 
 
-![](./liferay21.png)
+![SW360 메뉴에서 Admin > User를 선택하는 화면](./liferay21.png)
 
 화면 하단의 `UPLOAD USERS` 메뉴에서 테스트를 위한 User 리스트를 업로드 한다. (테스트를 위한 User 리스트는 여기에서 다운 받을 수 있다. : [test_users_with_passwords_12345.csv](https://github.com/haksungjang/sw360/blob/main/frontend/configuration/test_users_with_passwords_12345.csv) )
 
 
-![](./liferay22.png)
+![UPLOAD USERS 메뉴에서 테스트용 User 리스트 CSV 파일을 업로드하는 화면](./liferay22.png)
 
 그러면 다음과 같이 9개의 User 리스트가 업로드 된 것을 볼 수 있다. 
 
-![](./liferay23.png)
+![테스트용 User 9명의 목록이 업로드 완료된 화면](./liferay23.png)
 
 여기서 보이는 User 리스트 중 하나인 `user@@sw360.org` 계정으로 다시 로그인을 시도한다. Password는 `12345`이다. 
 
@@ -243,15 +243,15 @@ SW360을 처음 설치하면 먼저 자주 사용하는 오픈소스 라이선�
 
 메뉴 &gt; Licenses &gt; Add License를 선택하면 다음과 같이 Create License 화면으로 진입한다. 
 
-![](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
+![메뉴 Licenses > Add License에서 라이선스를 등록하는 Create License 화면](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
 
 이와 같이 라이선스를 하나씩 수동으로 등록하는 일은 상당히 수고스러울 수 있는데, 다행히 SW360은 SPDX License List를 한 번에 Import 하는 기능을 제공한다. 메뉴 &gt; Admin &lt; Import SPDX Information을 클릭한다.  
 
-![](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
+![메뉴 Admin > Import SPDX Information에서 SPDX License List를 한 번에 불러오는 화면](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
 
 그러면, 곧 SPDX License List가 자동으로 등록됩니다. 메뉴 &gt; Licenses에서 338개의 License가 등록된 것을 확인할 수 있다. 
 
-![](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
+![SPDX License List Import가 완료되어 338개 라이선스가 등록된 Licenses 메뉴 화면](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
 
 ### 2. Component 및 Release 등록
 
@@ -282,19 +282,19 @@ Release는 다음과 같은 정보들을 포함한다.
 
 예를 들어, zlib-1.2.8을 등록해야 한다면, 먼저 Component에 zlib을 먼저 등록한 후, Release에 zlib 1.2.8을 등록한다. Menu &gt; Components &gt; Add Component를 선택하면 Create Component 화면으로 진입하여 zlib에 대한 정보를 등록할 수 있다. 
 
-![](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
+![메뉴 Components > Add Component에서 zlib 컴포넌트 정보를 등록하는 Create Component 화면](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
 
 Component를 생성하면, Components &gt; Releases &gt; Add Release에서 zlib-1.2.8 version에 대한 정보를 등록할 수 있다. 
 
-![](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
+![메뉴 Components > Releases > Add Release에서 zlib-1.2.8 버전 정보를 등록하는 화면](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
 
 하나의 zlib이라는 Component에 1.2.8과 1.2.11 version을 각각의 Release로 등록하였을 때, Release Overview 화면에서 다음과 같이 2개의 Release가 존재하는 것을 볼 수 있다. 
 
-![](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
+![zlib 컴포넌트에 1.2.8, 1.2.11 두 개의 릴리스가 등록된 Release Overview 화면](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
 
 SW360은 다수의 Component 정보를 Import 시키기 위한 기능을 제공한다. 메뉴 &gt; Admin &gt; Import / Export에 CSV template에 등록을 원하는 Component 정보를 입력 후 Import 할 수 있다. 
 
-![](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
+![메뉴 Admin > Import / Export에서 CSV 템플릿으로 컴포넌트 정보를 일괄 등록하는 화면](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
 
 단, 이 기능은 2020년 2월 기준 아직 안정적으로 동작하지 않을 수 있다.  
 
@@ -310,29 +310,29 @@ Project 생성 시에는 다음과 같은 정보를 등록한다.
 
 메뉴 &gt; Projects &gt; Add Project를 통해 Project를 생성할 수 있다. 
 
-![](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
+![메뉴 Projects > Add Project에서 프로젝트를 생성하는 Create Project 화면](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
 
 Project를 생성하고 나면, 포함하는 Release나 하위 Project를 등록한다. 메뉴 &gt; Projects에서 해당 Project를 선택하면 “Linked Releases and Projects”에서 Linked Projects와 Linked Releases를 등록할 수 있다. 
 
-![](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
+![생성한 프로젝트의 Linked Releases and Projects에서 연결할 릴리스와 하위 프로젝트를 등록하는 화면](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
 
 다음은 SuperCalc라는 Project에 OpenSSL 1.0.1과 zlib 1.2.8을 Linked Releases로 등록한 이후의 화면이다. 
 
-![](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
+![SuperCalc 프로젝트에 OpenSSL 1.0.1과 zlib 1.2.8을 Linked Releases로 등록한 화면](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
 
 ### 4. 보안 취약점 관리
 
 SW360은 등록된 Release에 대해 보안 취약점이 있는지 자동으로 확인할 수 있다. 이를 위해 SW360은 CVE 정보를 주기적으로 수집하도록 스케쥴링하는 기능을 제공한다. 메뉴 &gt; Admin &gt; Schedule 에서 CVE SEARCH 정보를 24시간마다 수집하도록 스케쥴링을 설정할 수 있다. 
 
-![](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
+![메뉴 Admin > Schedule에서 CVE 정보를 24시간마다 수집하도록 설정하는 화면](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
 
 이렇게 스케쥴링을 설정하면 SW360은 정해진 시간에 CVE Search 사이트\([https://cve.circl.lu/](https://cve.circl.lu/)\)에서 CVE 정보를 수집한다. 수집한 CVE 정보는 메뉴 &gt; Vulnerabilities에서 확인할 수 있다. 
 
-![](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
+![메뉴 Vulnerabilities에서 수집된 CVE 취약점 목록을 확인하는 화면](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
 
 이렇게 Vulnerabilities 정보가 수집된 이후에는 생성한 Project에 보안 취약점이 있는지 조회할 수 있다. 위에서 생성한 SuperCalc Project에서는 85개의 보안 취약점이 보고된 것을 확인할 수 있다. 
 
-![](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
+![SuperCalc 프로젝트에서 85개의 보안 취약점이 보고된 화면](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
 
 이와 같은 방법으로 기업에서 개발/배포하는 소프트웨어를 SW360에 등록하여 관리한다면, 오픈소스 컴플라이언스뿐만 아니라 보안 취약점에 대해서도 리스크를 최소화할 수 있는 형태로 관리가 가능하다. 
 
