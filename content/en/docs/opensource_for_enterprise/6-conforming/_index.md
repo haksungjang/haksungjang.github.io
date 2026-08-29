@@ -78,9 +78,9 @@ ISO/IEC 5230과 ISO/IEC 18974는 또한 적합성 인증 획득 후 18개월 동
 ```
 
 기업은 이러한 문서를 오픈소스 정책에 포함시키거나, 외부에 공개된 웹사이트를 통해 게재할 수 있습니다. 예를 들어, [SK텔레콤](https://www.sktelecom.com/)은 자사의 오픈소스 포털 사이트에 이러한 내용을 게재하고 있습니다:
-![](sktiso.png)
+![SK텔레콤 Compliance 페이지에서 ISO/IEC 5230:2020 OpenChain 규격의 모든 요구 사항을 충족한다고 안내하는 화면](sktiso.png)
 [https://sktelecom.github.io/compliance/iso5230/](https://sktelecom.github.io/compliance/iso5230/)
 이러한 문서화를 통해 기업은 ISO/IEC 5230과 ISO/IEC 18974의 모든 요구사항을 충족하게 되며, 오픈소스 라이선스 컴플라이언스와 보안 보증에 대한 지속적인 관리와 개선을 보장할 수 있습니다.
 
-![](totalno.png)
+![ISO/IEC 5230과 ISO/IEC DIS 18974 요구사항 전체를 카테고리별 색상으로 구분하고, 준수(Conformance)·유지 기간 조항을 파란색으로 강조한 대조표](totalno.png)
 

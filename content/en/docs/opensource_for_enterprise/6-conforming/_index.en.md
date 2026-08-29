@@ -78,8 +78,8 @@ To this end, the following activities are carried out:
 ```
 
 An enterprise can include this document in its open source policy or publish it on a publicly accessible website. For example, [SK telecom](https://www.sktelecom.com/) publishes this content on its own open source portal site:
-![](sktiso.png)
+![SK Telecom's compliance page stating that it meets all requirements of the ISO/IEC 5230:2020 OpenChain Specification](sktiso.png)
 [https://sktelecom.github.io/compliance/iso5230/](https://sktelecom.github.io/compliance/iso5230/)
 Through this documentation, an enterprise satisfies all the requirements of ISO/IEC 5230 and ISO/IEC 18974, and can guarantee ongoing management and improvement of its open source license compliance and security assurance.
 
-![](totalno.png)
+![Full clause comparison of ISO/IEC 5230 and ISO/IEC DIS 18974 color-coded by category, with the conformance and duration clauses highlighted in blue](totalno.png)
