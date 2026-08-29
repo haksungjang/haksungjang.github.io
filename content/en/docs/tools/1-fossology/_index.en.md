@@ -56,7 +56,7 @@ Test server URL: [https://fossology.osuosl.org/](https://fossology.osuosl.org/)
 * Password: fossy
 {{< /alert  >}}
 
-![](./fossology2.png)
+![FOSSology test server login screen introducing key features such as upload, license scanning, and copyright detection](./fossology2.png)
 
 ## Basic Workflow
 
@@ -65,25 +65,25 @@ The basic usage procedure for FOSSology is as follows.
 * To check the license and copyright information of the open source you want to use, compress its source code into a single file and upload it to FOSSology.
 * To do this, select Menu &gt; Upload &gt; From File.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
+![Uploading a compressed source archive via FOSSology's Upload > From File menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
 
 * Select the file to upload and click the Upload button.
 * Once the upload completes, the Job Agent automatically performs the analysis.
 * You can check the Status of the analysis in progress at Menu &gt; Jobs &gt; My Recent Jobs.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
+![Checking analysis progress for an uploaded file in FOSSology's Jobs > My Recent Jobs menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
 
 * Once the analysis completes, you can check the results at Menu &gt; Browse.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
+![Viewing completed license analysis results in FOSSology's Browse menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
 
 * Selecting an individual file lets you see what license-related text FOSSology has detected.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
+![Viewing the license-related text FOSSology detected for an individual file](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
 
 * At Menu &gt; Browser &gt; select a file or directory &gt; Copyright/Email/Url/Author, you can see the Copyright/Email/Url/Author information FOSSology detected.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
+![Viewing copyright, email, URL, and author information FOSSology detected, in the Copyright/Email/Url/Author menu](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
 
 After checking whether these analysis results are valid, users can exclude incorrectly detected items from the analysis results. FOSSology describes this as the Clearing process; for more details, refer to the following page. : [https://www.fossology.org/get-started/basic-workflow/](https://www.fossology.org/get-started/basic-workflow/)
 
