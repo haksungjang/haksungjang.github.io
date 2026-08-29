@@ -329,7 +329,7 @@ Verification Material(s):
 
 위의 모든 역할을 처음부터 구성해야 하는 것은 아니다. 처음 시작하는 기업이라면 오픈소스 프로그램 매니저 역할을 하는 인원 한 명으로 시작할 수도 있다. 
 
-각 역할에 대한 일반적인 책임을 명시한 문서를  “[부록 1. 샘플 오픈소스 정책](#부록-1-샘플-오픈소스-정책)의 [4. 역할, 책임 및 역량](#4-역할-책임-및-역량sub3121sub)”에서 제공한다.
+각 역할에 대한 일반적인 책임을 명시한 문서를  “[부록 1. 샘플 오픈소스 정책](#부록-1-샘플-오픈소스-정책)의 4. 역할, 책임 및 역량”에서 제공한다.
 
 | 1.d  | 각 역할에 필요한 역량을 확인하고 문서화했습니까? |
 |---|:---|
@@ -337,7 +337,7 @@ Verification Material(s):
 
 
 
-각 역할과 그에 대한 책임을 정의하였으면, 그 역할을 수행할 인원이 갖춰야 할 필요 역량이 무엇인지 정의해야 한다. 이 부분도 마찬가지로 “[부록 1. 샘플 오픈소스 정책](#부록-1-샘플-오픈소스-정책)의 [4. 역할, 책임 및 역량](#4-역할-책임-및-역량sub3121sub)”에 포함하였으니 참고하기 바란다. 
+각 역할과 그에 대한 책임을 정의하였으면, 그 역할을 수행할 인원이 갖춰야 할 필요 역량이 무엇인지 정의해야 한다. 이 부분도 마찬가지로 “[부록 1. 샘플 오픈소스 정책](#부록-1-샘플-오픈소스-정책)의 4. 역할, 책임 및 역량”에 포함하였으니 참고하기 바란다. 
 
 | 1.e  | 각 프로그램 참여자의 역량을 평가한 증거를 문서화했습니까? |
 |---|:---|
@@ -510,7 +510,7 @@ Verification material(s):
 
 ~~~
 
-이 가이드에서는 프로그램 범위 지정에 대한 예시를 “[부록 1. 샘플 오픈소스 정책](#부록-1-샘플-오픈소스-정책)의 [2. 적용 범위](#2-적용-범위sub3141sub)”에서 제공한다.
+이 가이드에서는 프로그램 범위 지정에 대한 예시를 “[부록 1. 샘플 오픈소스 정책](#부록-1-샘플-오픈소스-정책)의 2. 적용 범위”에서 제공한다.
 
 
 #### 1-5. 라이선스 의무
@@ -557,7 +557,7 @@ Verification material(s):
 [^copyrightguide]: 한국저작권위원회 라이선스 가이드 - https://www.olis.or.kr/license/licenseGuide.do
 [^sktobligation]: SK텔레콤의 오픈소스 가이드 내 라이선스별 의무사항 - https://sktelecom.github.io/guide/use/obligation/
 
-여기서 요구하는 "각 식별된 라이선스에 의해 부가된 의무, 제한 및 권리를 검토하고 기록하기 위한 문서화된 절차“는 "[부록 2. 샘플 오픈소스 컴플라이언스 프로세스](#부록-2-샘플-오픈소스-컴플라이언스-프로세스)”의 [1. 오픈소스 식별 단계](#1-오픈소스-식별subidentification-of-open-sourcesub)에 해당한다.
+여기서 요구하는 "각 식별된 라이선스에 의해 부가된 의무, 제한 및 권리를 검토하고 기록하기 위한 문서화된 절차“는 "[부록 2. 샘플 오픈소스 컴플라이언스 프로세스](#부록-2-샘플-오픈소스-컴플라이언스-프로세스)”의 [1. 오픈소스 식별 단계](#1-오픈소스-식별identification-of-open-source)에 해당한다.
 
 ### 2. 관련 업무 정의 및 지원<sub>Relevant tasks defined and supported</sub>
 
@@ -863,7 +863,7 @@ Verification Material(s):
 
 오픈소스 컴플라이언스 활동의 가장 기본은 배포용 소프트웨어에 포함된 오픈소스 현황을 파악하는 것이다. 배포용 소프트웨어에 포함된 오픈소스와 그 라이선스를 식별하여 그 정보를 담고 있는 BOM(Bill of Materials)을 작성하고 관리하는 프로세스를 구축해야 한다. 배포용 소프트웨어의 버전마다 어떤 오픈소스가 포함되어 있는지 알고 있어야 소프트웨어를 배포할 때 각 오픈소스의 라이선스가 요구하는 의무 사항을 준수할 수 있기 때문이다.
 
-모든 오픈소스는 배포용 소프트웨어에 통합하기 전에 검토 및 승인되어야 한다. 오픈소스의 기능, 품질뿐만 아니라 출처, 라이선스 요건을 충족할 수 있는지 사전 검토가 되어야 한다. 이를 위해 검토 요청 → 리뷰 → 승인 과정이 필요하다. [부록 2. 샘플 오픈소스 컴플라이언스 프로세스](#부록-2-샘플-오픈소스-컴플라이언스-프로세스)에서는 기업의 오픈소스 컴플라이언스를 위한 프로세스 모든 과정에 관해 설명하고 있다. [1. 오픈소스 식별](#1-오픈소스-식별subidentification-of-open-sourcesub)부터 [6. 등록](#6-등록subregistrationsub)까지의 과정을 통해 BOM을 작성하고 관리하게 된다.
+모든 오픈소스는 배포용 소프트웨어에 통합하기 전에 검토 및 승인되어야 한다. 오픈소스의 기능, 품질뿐만 아니라 출처, 라이선스 요건을 충족할 수 있는지 사전 검토가 되어야 한다. 이를 위해 검토 요청 → 리뷰 → 승인 과정이 필요하다. [부록 2. 샘플 오픈소스 컴플라이언스 프로세스](#부록-2-샘플-오픈소스-컴플라이언스-프로세스)에서는 기업의 오픈소스 컴플라이언스를 위한 프로세스 모든 과정에 관해 설명하고 있다. [1. 오픈소스 식별](#1-오픈소스-식별identification-of-open-source)부터 [6. 등록](#6-등록registration)까지의 과정을 통해 BOM을 작성하고 관리하게 된다.
 
 또 이와 같은 오픈소스 컴플라이언스 프로세스의 모든 과정과 결과는 문서화가 되어야 한다. 이메일을 사용하는 것보다는 Jira, Bugzilla 등의 이슈 트래킹 시스템을 이용하는 것이 이러한 과정을 효율적으로 문서화 할 수 있다.
 
@@ -1704,7 +1704,7 @@ FOSSology를 설치할 수 있는 시스템 구축이 곤란한 상황이라면,
 * Password: fossy
 {{< /alert  >}}
 
-![](../fossology2.png)
+![FOSSology 테스트 서버의 로그인 화면과 업로드·라이선스 스캔·저작권 검출 등 주요 기능 소개](../fossology2.png)
 
 #### Basic Workflow
 
@@ -1713,25 +1713,25 @@ FOSSology의 기본 사용 절차는 다음과 같다.
 * 사용하고자 하는 오픈소스의 라이선스와 Copyright 정보를 확인하기 위해 오픈소스의 소스 코드를 하나의 파일로 압축하여 FOSSology에 업로드한다. 
 * 이를 위해 메뉴 &gt; Upload &gt; From File을 선택한다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
+![FOSSology 메뉴에서 Upload > From File을 선택해 압축한 소스 코드를 업로드하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/Oywr9jqM09g1SfxfZ-2HERmYA_8)
 
 * 업로드할 파일을 선택하고 Upload 버튼을 클릭한다. 
 * 업로드가 완료되면 Job Agent에 의해 자동으로 분석을 수행한다. 
 * 메뉴 &gt; Jobs &gt; My Recent Jobs에서 분석 중인 Status를 확인할 수 있다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
+![FOSSology의 Jobs > My Recent Jobs 메뉴에서 업로드한 파일의 분석 진행 상태를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9IKts-8lH7YK_Dat124-hEw_q4I)
 
 * 분석이 완료되면 메뉴 &gt; Browse에서 분석 결과를 확인할 수 있다.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
+![FOSSology의 Browse 메뉴에서 완료된 라이선스 분석 결과를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/C62vBvaVNeBLAqrRrx-XKoeuMhg)
 
 * 개별 파일을 선택하면 FOSSology가 검출한 라이선스 관련 텍스트가 무엇인지 확인할 수 있다.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
+![개별 파일을 선택해 FOSSology가 검출한 라이선스 관련 텍스트를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/9idwgtBqNj7YAl7Wg0i98QJ5b4w)
 
 * 메뉴 &gt; Browser &gt; 파일 혹은 디렉터리를 선택 &gt;  Copyright/Email/Url/Author에서는 FOSSology가 검출한 Copyright/Email/Url/Author 정보를 보여다.
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
+![FOSSology의 Copyright/Email/Url/Author 메뉴에서 검출된 저작권·이메일·URL·저자 정보를 확인하는 화면](https://t1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/NrjeCqal75rJ1bwGLPPmjhBEn4Q)
 
 사용자는 FOSSology는 이렇게 분석한 결과가 유효한지 여부에 관해 확인 후 잘못 검출된 항목에 대해서는 분석 결과에서 제외하는 작업을 할 수 있다. FOSSology는 이를 Clearing 과정이라고 설명하며, 자세한 사항은 다음 페이지를 참고할 수 있다. : [https://www.fossology.org/get-started/basic-workflow/](https://www.fossology.org/get-started/basic-workflow/)
 
@@ -1869,7 +1869,7 @@ $ vagrant up
 
 Box를 실행하면 liferay, postgresql 및 couchdb가 구성된다. 이상 없이 실행이 될 경우, [https://localhost:8443/](https://localhost:8443/) 로 Liferay 화면에 접근할 수 있다.
 
-![](https://lh6.googleusercontent.com/leof_ntxQlxjDeD91E7ZfwWY0ftUlD0D_L58AkeNJb_bEFFzKvuL28yzb4iIA6-bAuSfQydo-gVBlnn5EVGGBKcPh0-6Y7p2Qbar74qpB4uwa_nibrV535NJwEIpWXZPFeNUSRd-)
+![Vagrant box 실행 후 접속한 SW360의 Liferay 초기 화면](https://lh6.googleusercontent.com/leof_ntxQlxjDeD91E7ZfwWY0ftUlD0D_L58AkeNJb_bEFFzKvuL28yzb4iIA6-bAuSfQydo-gVBlnn5EVGGBKcPh0-6Y7p2Qbar74qpB4uwa_nibrV535NJwEIpWXZPFeNUSRd-)
 
 ##### 5) SW360 Layout Deploy
 
@@ -1882,7 +1882,7 @@ Box를 실행하면 liferay, postgresql 및 couchdb가 구성된다. 이상 없�
 
 Deploy가 완료되면 다음과 같은 화면을 볼 수 있다. 
 
-![](https://lh5.googleusercontent.com/INu1-WWi1-SA9P61IMNlgZhugTXbiwbSKUOu2eWq_d5sIIp8NfqxQntwId41ZDmTG6_5Ope8GdU1J2S0adaJDolM09dtfkwIbOE2gTDC4MZXMxhX9kN28E4Yj8a3deBUHBL7yCqj)
+![Liferay에 SW360 Layout 배포가 완료된 후의 화면](https://lh5.googleusercontent.com/INu1-WWi1-SA9P61IMNlgZhugTXbiwbSKUOu2eWq_d5sIIp8NfqxQntwId41ZDmTG6_5Ope8GdU1J2S0adaJDolM09dtfkwIbOE2gTDC4MZXMxhX9kN28E4Yj8a3deBUHBL7yCqj)
 
 #### Basic Workflow
 
@@ -1898,15 +1898,15 @@ SW360을 처음 설치하면 먼저 자주 사용하는 오픈소스 라이선�
 
 메뉴 &gt; Licenses &gt; Add License를 선택하면 다음과 같이 Create License 화면으로 진입한다. 
 
-![](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
+![메뉴 Licenses > Add License에서 라이선스를 등록하는 Create License 화면](https://lh6.googleusercontent.com/8bn6z_39PK5WrjP7mzhHrTwfM5PU19QT3TiQnAatOYywVwcGLJGFMmMgMkzh4CKAPM0SOOy7VDoboaj9OKpD1QEZv6KWOeWxZfqGA_2geYrYOBm2kOVzrNOmGPVK-8hzJvBZ-klT)
 
 이와 같이 라이선스를 하나씩 수동으로 등록하는 일은 상당히 수고스러울 수 있는데, 다행히 SW360은 SPDX License List를 한 번에 Import 하는 기능을 제공한다. 메뉴 &gt; Admin &lt; Import SPDX Information을 클릭한다.  
 
-![](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
+![메뉴 Admin > Import SPDX Information에서 SPDX License List를 한 번에 불러오는 화면](https://lh5.googleusercontent.com/d8ZK-dD34z1yKZn-szPNrN7iT4zg1EQnKnAv4QcPslSR0-laETy37ArojuweqSsxpWuvGXtdF5FabiWk57So-bD_iiEx7eVIR6tWDsYO2SkaCdlKr6ELDN9y_NdkqWFbQgRF2lXN)
 
 그러면, 곧 SPDX License List가 자동으로 등록됩니다. 메뉴 &gt; Licenses에서 338개의 License가 등록된 것을 확인할 수 있다. 
 
-![](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
+![SPDX License List Import가 완료되어 338개 라이선스가 등록된 Licenses 메뉴 화면](https://lh6.googleusercontent.com/Ucjuo09uJKhEhACZ90y98PszgSiCGtlDotH8mbTXJ2ePnF3TquzNX2yWzOCENTKNk1UjMJhyFgHxTCH6lxvZJg1l07M0hCc-v-14loAJ0efUU9V9hqS9mUabAT9QNysYL8E2tgIf)
 
 ##### 2) Component 및 Release 등록
 
@@ -1937,19 +1937,19 @@ Release는 다음과 같은 정보들을 포함한다.
 
 예를 들어, zlib-1.2.8을 등록해야 한다면, 먼저 Component에 zlib을 먼저 등록한 후, Release에 zlib 1.2.8을 등록한다. Menu &gt; Components &gt; Add Component를 선택하면 Create Component 화면으로 진입하여 zlib에 대한 정보를 등록할 수 있다. 
 
-![](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
+![메뉴 Components > Add Component에서 zlib 컴포넌트 정보를 등록하는 Create Component 화면](https://lh6.googleusercontent.com/0a3ecmmFzumTZTaoWCOZPKkQIZLJwbPoAaduCTfwQMH_N67DPaMpTkerA4LOynwkl_nLkNT-pRh-rKzj4XHtBjoTkVMW9g06Rywryk3wbAj-Y3ONDg16VcGepMEm7m7Y8M3iDWyH)
 
 Component를 생성하면, Components &gt; Releases &gt; Add Release에서 zlib-1.2.8 version에 대한 정보를 등록할 수 있다. 
 
-![](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
+![메뉴 Components > Releases > Add Release에서 zlib-1.2.8 버전 정보를 등록하는 화면](https://lh4.googleusercontent.com/ynUEB5-rGVYDirFghLx2v3tUt-uh-WL3YTN0siaGZWBrWQKYnIiV3B04mvdv3nZUW7t_U2Gl8msV_es1X181uq95YAp1bnqa0e3QLshhd1zhqk6z8ubPeEfo74cKdwho95_NyI1J)
 
 하나의 zlib이라는 Component에 1.2.8과 1.2.11 version을 각각의 Release로 등록하였을 때, Release Overview 화면에서 다음과 같이 2개의 Release가 존재하는 것을 볼 수 있다. 
 
-![](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
+![zlib 컴포넌트에 1.2.8, 1.2.11 두 개의 릴리스가 등록된 Release Overview 화면](https://lh3.googleusercontent.com/GxgMJQbNjRBNxMTMBvqEXNFNElXGXoCnaksCMs46ydREIrqrj7dFxMK0YkvjviHYMCiHY07xlR-Xixpa_C5nMFLzih0dXZAtv-6yKg4RdADJxr5qmDwhAEopVOaVNqzVWc3gMpLq)
 
 SW360은 다수의 Component 정보를 Import 시키기 위한 기능을 제공한다. 메뉴 &gt; Admin &gt; Import / Export에 CSV template에 등록을 원하는 Component 정보를 입력 후 Import 할 수 있다. 
 
-![](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
+![메뉴 Admin > Import / Export에서 CSV 템플릿으로 컴포넌트 정보를 일괄 등록하는 화면](https://lh5.googleusercontent.com/VInFwWAV-1lG1E7zFQPvn1GIlYPPY5ToGbSa49Brg7XuB-AwyCEHA9han0EUij1KX3c8aN2UZ1mKkN-5Y4BNv8LOV3O5YoypLQ7EF43QFPAU9L18XT57Ec5eoneswtGtt3rMSPoQ)
 
 단, 이 기능은 2020년 2월 기준 아직 안정적으로 동작하지 않을 수 있다.  
 
@@ -1965,29 +1965,29 @@ Project 생성 시에는 다음과 같은 정보를 등록한다.
 
 메뉴 &gt; Projects &gt; Add Project를 통해 Project를 생성할 수 있다. 
 
-![](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
+![메뉴 Projects > Add Project에서 프로젝트를 생성하는 Create Project 화면](https://lh6.googleusercontent.com/6gNtLci53U6zaU6Th5SHousuZ4VUijzuYjiJJlB0R6JwiHG4ggjb0RcnRYDkZCBhE2dMP2gGbT4qmB2FE5O8EW8hTfv1lgM4_XN0vzQUkttfTbX2cF0aNftHYuUy9EXczT2LzLO5)
 
 Project를 생성하고 나면, 포함하는 Release나 하위 Project를 등록한다. 메뉴 &gt; Projects에서 해당 Project를 선택하면 “Linked Releases and Projects”에서 Linked Projects와 Linked Releases를 등록할 수 있다. 
 
-![](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
+![생성한 프로젝트의 Linked Releases and Projects에서 연결할 릴리스와 하위 프로젝트를 등록하는 화면](https://lh4.googleusercontent.com/ZjD7r7EzxfdQ4bhw4ODsChydb6Vgqj1m4Ad0cWlYtyYXO40MCbPpTHHcy-wJmbHeA_FxTa66Mpza6-9ohu0e93b7BaGb7Zc9soTA3mGCHGnyGURukRUnJS_duI7T8IL2aTgMFzjB)
 
 다음은 SuperCalc라는 Project에 OpenSSL 1.0.1과 zlib 1.2.8을 Linked Releases로 등록한 이후의 화면이다. 
 
-![](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
+![SuperCalc 프로젝트에 OpenSSL 1.0.1과 zlib 1.2.8을 Linked Releases로 등록한 화면](https://lh3.googleusercontent.com/tZCshPwxtukNLvfL-f-LfNOH-4ATof0bIGxpghVKXQ9QMBgoc_t0ROJMYafS9V4PuRaOOEW9zp25yk0gFA_kcaoRN83UKwUaFhaXxSWg7xPWvsYoJ_-pZkROkey1mYVTqGxKsCRu)
 
 ##### 4) 보안 취약점 관리
 
 SW360은 등록된 Release에 대해 보안 취약점이 있는지 자동으로 확인할 수 있다. 이를 위해 SW360은 CVE 정보를 주기적으로 수집하도록 스케쥴링하는 기능을 제공한다. 메뉴 &gt; Admin &gt; Schedule 에서 CVE SEARCH 정보를 24시간마다 수집하도록 스케쥴링을 설정할 수 있다. 
 
-![](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
+![메뉴 Admin > Schedule에서 CVE 정보를 24시간마다 수집하도록 설정하는 화면](https://lh5.googleusercontent.com/V2AJbexZqJJqwFYD1kFpjdZ7zVM9PCd-I_6MSBu3djO2Gi6gQxxQpKoqqsETxDaSkpDXOKFOp9h0Fps1xYHEphesVX9ECwBwnSX5cWdziXoohh-CMmqRh_wVkwUD8dZE9w1raJRk)
 
 이렇게 스케쥴링을 설정하면 SW360은 정해진 시간에 CVE Search 사이트([https://cve.circl.lu/](https://cve.circl.lu/))에서 CVE 정보를 수집한다. 수집한 CVE 정보는 메뉴 &gt; Vulnerabilities에서 확인할 수 있다. 
 
-![](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
+![메뉴 Vulnerabilities에서 수집된 CVE 취약점 목록을 확인하는 화면](https://lh3.googleusercontent.com/dpIMyX7qCMdnibNihuL6RBSKg2fEckbOBPWJEtw08mY4quhv6Hh3BlgFIeydPOS6N8rF6ZSs4hpZgBGcXbcJI9saFDyfv4i-TCvxV5z-4LD9ZXpKah0jQU45j3iibxFpYoa7Hj9u)
 
 이렇게 Vulnerabilities 정보가 수집된 이후에는 생성한 Project에 보안 취약점이 있는지 조회할 수 있다. 위에서 생성한 SuperCalc Project에서는 85개의 보안 취약점이 보고된 것을 확인할 수 있다. 
 
-![](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
+![SuperCalc 프로젝트에서 85개의 보안 취약점이 보고된 화면](https://lh5.googleusercontent.com/lGeLbWHIBk6y2OSOXskcp4A2c5od0eTH6n7U5YG0p4cwTrrX02b6TpeRqJ7VXg5aUE7qDP2X2f8o4Rj1JsPHhZ-CUdLiy80O532Cgw-h_P9r-jHdL61QaXhFOPxIjTlX1cg9XPk5)
 
 이와 같은 방법으로 기업에서 개발/배포하는 소프트웨어를 SW360에 등록하여 관리한다면, 오픈소스 컴플라이언스뿐만 아니라 보안 취약점에 대해서도 리스크를 최소화할 수 있는 형태로 관리가 가능하다. 
 

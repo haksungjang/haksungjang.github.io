@@ -3,3 +3,5 @@ public/
 resources/
 node_modules/
 tech-doc-hugo
+tmp/
+.hugo_build.lock

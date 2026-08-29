@@ -24,7 +24,7 @@ description: >
 
 아래의 이미지는 기업이 일반적으로 채택하여 사용할 수 있는 샘플 오픈소스 컴플라이언스 프로세스이다.
 
-![](sampleprocess.png)
+![오픈소스 식별부터 최종 확인까지 10단계 컴플라이언스 프로세스와 개발 부서·오픈소스 프로그램 매니저·인프라 담당의 단계별 역할을 정리한 표](sampleprocess.png)
 
 이에 대한 자세한 내용은 다음 페이지를 참고할 수 있다. : [https://haksungjang.github.io/docs/openchain/#부록-2-샘플-오픈소스-컴플라이언스-프로세스](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)
 
@@ -38,9 +38,9 @@ description: >
 2. 의문 사항은 오픈소스 프로그램 매니저에게 문의하고, 필요할 경우 오픈소스 프로그램 매니저는 외부 법률 전문가에게 자문을 요청한다.
 3. 모든 내외부의 결정 결과 및 관련 근거는 보관한다.
 
-“[부록 2. 샘플 오픈소스 컴플라이언스 프로세스](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)”의 [1. 오픈소스 식별](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84subidentification-of-open-sourcesub), 검사, 문제 해결, 리뷰, 승인 단계는 각 식별된 라이선스가 부가하는 의무, 제한을 검토하고 기록하기 위한 문서화된 절차의 한 예이다. 
+“[부록 2. 샘플 오픈소스 컴플라이언스 프로세스](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)”의 [1. 오픈소스 식별](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84identification-of-open-source), 검사, 문제 해결, 리뷰, 승인 단계는 각 식별된 라이선스가 부가하는 의무, 제한을 검토하고 기록하기 위한 문서화된 절차의 한 예이다. 
 
-![](identification.png)
+![설계 단계에서 개발 부서가 오픈소스 사용 현황과 라이선스를 확인하고 소스 코드에 표기하는 절차를 설명한 오픈소스 식별 단계 문서](identification.png)
 
 
 이와 같은 절차를 마련한다면 ISO/IEC 5230에서 요구하는 다음 입증 자료를 준비할 수 있다.
@@ -63,7 +63,7 @@ description: >
 
 모든 오픈소스는 배포용 소프트웨어에 통합하기 전에 검토 및 승인되어야 한다. 오픈소스의 기능, 품질뿐만 아니라 출처, 라이선스 요건을 충족할 수 있는지 사전 검토가 되어야 한다. 이를 위해 검토 요청 → 리뷰 → 승인 과정이 필요하다. 
 
-[부록 2. 샘플 오픈소스 컴플라이언스 프로세스](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)에서는 기업의 오픈소스 컴플라이언스를 위한 프로세스 모든 과정에 관해 설명하고 있다. [1. 오픈소스 식별](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84subidentification-of-open-sourcesub)부터 [6. 등록](https://haksungjang.github.io/docs/openchain/#6-%EB%93%B1%EB%A1%9Dsubregistrationsub)까지의 과정을 통해 BOM을 작성하고 관리하게 된다.
+[부록 2. 샘플 오픈소스 컴플라이언스 프로세스](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)에서는 기업의 오픈소스 컴플라이언스를 위한 프로세스 모든 과정에 관해 설명하고 있다. [1. 오픈소스 식별](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84identification-of-open-source)부터 [6. 등록](https://haksungjang.github.io/docs/openchain/#6-%EB%93%B1%EB%A1%9Dregistration)까지의 과정을 통해 BOM을 작성하고 관리하게 된다.
 
 오픈소스 BOM 관리를 위한 도구에 대해서는 "[6. 도구](../6-tool/)"에서 자세히 설명한다. 
 
@@ -89,7 +89,7 @@ description: >
 
 1. 오픈소스 고지문 : 오픈소스 라이선스 전문과 저작권 정보 제공을 위한 문서
 
-    ![](ossnotice.png)
+    ![제품에 포함된 오픈소스 소프트웨어 목록과 라이선스 조건을 안내하는 오픈소스 소프트웨어 고지문 샘플](ossnotice.png)
 
     * 도구를 활용하여 취합한 오픈소스 BOM에 해당하는 오픈소스 고지문을 생성하는 방법에 대해 "[6. 도구](../6-tool/)"에서 추가로 설명한다. 
 
@@ -138,7 +138,7 @@ This offer is valid to anyone in receipt of this information.
 
 아래 그림은 외부 문의 대응을 위해 기업이 갖춰야할 프로세스이다. 
 
-![](access.png)
+![외부 문의 접수부터 내부 조사, 법무 자문, 결과 보고, 프로세스 개선까지 이어지는 외부 문의 대응 프로세스 흐름도](access.png)
 [https://haksungjang.github.io/docs/openchain/#2-외부-문의-대응-프로세스](https://haksungjang.github.io/docs/openchain/#2-%EC%99%B8%EB%B6%80-%EB%AC%B8%EC%9D%98-%EB%8C%80%EC%9D%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)
 
 [“부록 2. 샘플 오픈소스 컴플라이언스 프로세스의 2. 외부 문의 대응 프로세스](https://haksungjang.github.io/docs/openchain/#2-%EC%99%B8%EB%B6%80-%EB%AC%B8%EC%9D%98-%EB%8C%80%EC%9D%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)”에서 세부 내용을 확인할 수 있다.
@@ -161,7 +161,7 @@ This offer is valid to anyone in receipt of this information.
 
 SK텔레콤에서 공개한 [오픈소스 기여 절차](https://sktelecom.github.io/guide/contribute/process/)는 좋은 예이다.
 
-![](contribution.png)
+![OSPO 내부 승인과 리뷰 요청부터 프로젝트 기여문서 검토, 기여 규칙 확인, GitHub 기여 제출까지 이어지는 오픈소스 기여 절차도](contribution.png)
 [https://sktelecom.github.io/guide/contribute/process/](https://sktelecom.github.io/guide/contribute/process/)
 
 
@@ -179,5 +179,5 @@ SK텔레콤에서 공개한 [오픈소스 기여 절차](https://sktelecom.githu
 
 여기까지 프로세스를 구축하게 되면 ISO/IEC 5230 요구사항을 아래와 같이 준수하게 된다. 
 
-![](processno.png)
+![ISO/IEC 5230 요구사항 중 프로세스 관련 조항 번호가 대부분 강조 표시된 조항 체계표](processno.png)
 

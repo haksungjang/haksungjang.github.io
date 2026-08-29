@@ -25,7 +25,7 @@ resources:
 
 "Software Supply Chain"은 이미 매우 복잡하다. 예전에는 Software가 CD와 같은 물리적 매체를 사용하여 고객에게 제공되었다면, 오늘날의 Software는 \(OSS 및 독점 Software 모두\) "repository"에 저장이 되고, Project Dependency Manager \(PDM\)이나 Package Manager를 통해 수시로 원격으로 배포된다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/UFqIj_ywPKiBf0csdt91M6rzRSU.png)
+![Repository와 Package Manager를 거쳐 원격으로 배포되는 오늘날의 Software Supply Chain 구조도](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/UFqIj_ywPKiBf0csdt91M6rzRSU.png)
 
 Software Supply Chain에서의 보안에 대한 최근의 관심은 대부분이 이 Chain의 첫 번째 요소인 Developer이거나 혹은 마지막 부분인 End User였으나, 취약점은 모든 레벨에서 존재한다. 다음과 같은 사건을 살펴보자. 
 
@@ -189,11 +189,11 @@ PDM을 활용하면서 사용자는 software를 찾고 설치하고 구성하는
 
 Software supply chain의 최종에 있는 이들의 위치를 고려할 때 End User는 보안에 대한 통제력이 가장 낮을 것이다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/FO95cqN6sfQpgXkxjSfHnZnJRog.png)
+![Software Supply Chain 최종 단계에 위치해 보안 통제력이 가장 낮은 End User의 위치를 보여주는 도식](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/FO95cqN6sfQpgXkxjSfHnZnJRog.png)
 
 그러나, supply chain이 loop 형태라고 생각한다면 이야기는 달라진다. 
 
-![](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/uG9Vz6BGSxxkyT2FHCYrJATMwbM.png)
+![Software Supply Chain을 순환하는 loop 형태로 표현한 도식](https://t1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/9399/image/uG9Vz6BGSxxkyT2FHCYrJATMwbM.png)
 
 End User의 경우 일반적으로 기술 공급 업체의 솔루션을 사용할 것이고, 이 경우, PDM 또는 OSS package 선택에 대한 결정을 내릴 수 없다. 하지만, End User는 "인수 요구사항" \(Acuisition Requirement\)을 통제할 수 있다 \(다만, 많은 User는 이를 충분히 활용하지 않고 있다\). 
 

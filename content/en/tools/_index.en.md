@@ -11,7 +11,7 @@ menu:
     weight: 30
 ---
 
-Open source management tools I contribute to. Click a card to go to its GitHub repository.
+Click a card to go to its GitHub repository.
 
 <div class="tool-cards">
   <a class="tool-card" href="https://github.com/sktelecom/bomlens" target="_blank" rel="noopener">

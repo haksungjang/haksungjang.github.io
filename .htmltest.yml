@@ -1,0 +1,20 @@
+# htmltest 설정 (https://github.com/wjdp/htmltest)
+# 빌드 결과물(public/)의 깨진 내부 링크·이미지·앵커를 검사한다.
+# 외부 링크는 느리고 일시적 오류에 흔들리기 쉬워 기본적으로 검사하지 않는다.
+DirectoryPath: public
+CheckExternal: false
+CheckInternal: true
+CheckInternalHash: true
+CheckImages: true
+CheckScripts: false
+CheckMeta: false
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreInternalEmptyHash: true
+# alt 텍스트 보완은 별도로 진행 중인 작업이라 이 게이트에서는 다루지 않는다.
+# (깨진 이미지 경로 자체는 CheckImages로 계속 잡는다.)
+IgnoreAltMissing: true
+IgnoreAltEmpty: true
+# Google 사이트 소유 확인용 정적 파일(google<hash>.html)은 완전한 HTML5 문서가
+# 아니어도 되는 검증용 파일이라 doctype 검사에서 걸린다. 이 게이트의 목적은
+# HTML5 적합성 검증이 아니라 깨진 링크 검출이므로 doctype 검사는 끈다.
+CheckDoctype: false

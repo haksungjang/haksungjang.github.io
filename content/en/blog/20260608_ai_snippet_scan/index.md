@@ -11,18 +11,15 @@ ai_generator: "Claude Opus 4.8 via local Claude Code harness"
 verified_at: 2026-06-08
 verification_verdict: "CONDITIONAL PASS"
 sources: "공개 출처 — 법원 소송 자료(Doe v. GitHub), OpenChain ISO/IEC 5230, GitHub와 Microsoft 공식 문서, 법률 해설"
+images: ["snippet-decision-matrix.png"]
 aliases:
   - /en/research/2026-snippet-sca-ai-coding/
   - /research/2026-snippet-sca-ai-coding/
 ---
 
 
-{{% alert color="info" %}}
-이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 공개 출처로 교차 검증했습니다.
-{{% /alert %}}
-
-{{% alert title="고지" color="warning" %}}
-이 글은 작성자 개인의 분석과 정리이며, 법률 자문이 아닙니다. 인용한 사실은 공개 출처에 근거해 확인했으나, 구체적 사안의 판단은 변호사 등 전문가의 검토를 받으시기 바랍니다.
+{{% alert title="안내" color="info" %}}
+이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 공개 출처로 교차 검증했습니다. 다만 작성자 개인의 분석과 정리이며 법률 자문이 아니므로, 구체적 사안의 판단은 변호사 등 전문가의 검토를 받으시기 바랍니다.
 {{% /alert %}}
 
 ## 한 가지 먼저 짚을 점

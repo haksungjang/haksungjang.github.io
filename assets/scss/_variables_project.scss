@@ -12,7 +12,7 @@ $primary: #1a73e8;
 
 // 링크 — 밑줄 제거(색은 $primary 기반 자동)
 $link-decoration: none !default;
-$link-hover-decoration: none !default;
+$link-hover-decoration: underline !default;
 
 // ── 타이포그래피: 영문 Roboto + 한글 Pretendard (ai.google.dev 계열) ──
 // 웹폰트 로딩은 layouts/_partials/hooks/head-end.html 에서 수행한다.

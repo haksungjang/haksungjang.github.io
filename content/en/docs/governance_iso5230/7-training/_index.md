@@ -160,7 +160,7 @@ description: >
 
 SK텔레콤의 오픈소스 가이드 내 [라이선스별 의무사항](https://sktelecom.github.io/guide/use/obligation/) 문서도 좋은 자료이다.
 
-![](sktlicenseguide.png)
+![SK텔레콤 오픈소스 가이드 사이트에서 GPL-2.0 소스 재배포 시 고지 의무와 수정 시 의무 사항을 설명하는 화면](sktlicenseguide.png)
 [https://sktelecom.github.io/guide/use/obligation/gpl-2.0/](https://sktelecom.github.io/guide/use/obligation/gpl-2.0/)
 
 
@@ -179,4 +179,4 @@ SK텔레콤의 오픈소스 가이드 내 [라이선스별 의무사항](https:
 
 이와 같이 교육, 평가와 가이드 제공 환경까지 구축하게 되면 ISO/IEC 5230 요구사항을 아래와 같이 준수하게 된다. 
 
-![](trainingno.png)
+![ISO/IEC 5230:2020 표지와 함께, 3.6절을 제외한 대부분의 요구사항이 초록색으로 강조 표시된 조항 체계표](trainingno.png)

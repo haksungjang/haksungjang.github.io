@@ -12,14 +12,11 @@ resources:
   title: "Image #:counter"
   params:
     byline: ""
+images: ["architecture-comparison-en.png"]
 ---
 
-{{% alert color="info" %}}
-This article was written using Claude Code, and the key facts cited were cross-verified against primary sources.
-{{% /alert %}}
-
-{{% alert title="Notice" color="warning" %}}
-This article reflects the author's personal analysis and summary, and does not constitute legal advice. The facts cited have been verified based on publicly available sources, but legal determinations such as whether infringement has occurred are matters that can be disputed, so please have specific matters reviewed by an attorney or other expert.
+{{% alert title="Note" color="info" %}}
+This article was written using Claude Code, and the key facts cited were cross-verified against primary sources. It reflects the author's personal analysis and summary, not legal advice, and legal determinations such as whether infringement occurred can be disputed, so please have specific matters reviewed by an attorney or other expert.
 {{% /alert %}}
 
 Hello.

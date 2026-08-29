@@ -24,7 +24,7 @@ resources:
 
 Lightbend, a US company, [changed](https://akka.io/) Akka's license in September 2022.
 
-![](./akka_license_change.png)
+![Lightbend's announcement that Akka's license changes from Apache 2.0 to BSL v1.1 starting with Akka 2.7](./akka_license_change.png)
 
 The main points of the license change are as follows.
 
@@ -70,7 +70,7 @@ Another characteristic of BUSL-1.1 is the `Change Date` and `Change License`. On
 
 For [Akka's BUSL-1.1](https://www.lightbend.com/akka/license), the `Change Date` is 3 years after release, and the `Change License` is Apache-2.0.
 
-![](./akka_busl.png)
+![Table of Akka's BUSL-1.1 Change Date (3 years after release) and Change License (Apache 2.0) terms](./akka_busl.png)
 
 For example, if Akka 2.8 were released on January 1, 2023, after 3 years, from January 1, 2026, Apache-2.0 would apply and companies could also use it for free. BUSL-1.1 provides this `Change License` provision so that you have to pay to use the new version, but even old versions can be used for free even for commercial purposes. This appears to reflect an intent to charge large companies, the heavy users of the software.
 

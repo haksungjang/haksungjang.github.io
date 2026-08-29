@@ -11,18 +11,15 @@ ai_generator: "Claude Opus 4.8 via local Claude Code harness"
 verified_at: 2026-06-08
 verification_verdict: "CONDITIONAL PASS"
 sources: "Public sources — court litigation records (Doe v. GitHub), OpenChain ISO/IEC 5230, official GitHub and Microsoft documentation, legal commentary"
+images: ["snippet-decision-matrix-en.png"]
 aliases:
   - /en/research/2026-snippet-sca-ai-coding/
   - /research/2026-snippet-sca-ai-coding/
 ---
 
 
-{{% alert color="info" %}}
-This post was written using Claude Code, and the key facts cited were cross-checked against public sources.
-{{% /alert %}}
-
-{{% alert title="Notice" color="warning" %}}
-This post reflects the author's personal analysis and is not legal advice. The facts cited were verified against public sources, but specific matters should be reviewed by a lawyer or other qualified professional.
+{{% alert title="Note" color="info" %}}
+This post was written using Claude Code, and the key facts cited were cross-checked against public sources. It reflects the author's personal analysis and is not legal advice, so specific matters should be reviewed by a lawyer or other qualified professional.
 {{% /alert %}}
 
 ## One point to clarify first

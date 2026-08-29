@@ -1,0 +1,14 @@
+# check:links:all 전용 설정. 외부 링크까지 포함해 전부 검사한다.
+# (일반 npm run build/serve 뒤에는 느리고 흔들리기 쉬워 기본값에서는 뺐다.)
+DirectoryPath: public
+CheckExternal: true
+CheckInternal: true
+CheckInternalHash: true
+CheckImages: true
+CheckScripts: false
+CheckMeta: false
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreInternalEmptyHash: true
+IgnoreAltMissing: true
+IgnoreAltEmpty: true
+CheckDoctype: false

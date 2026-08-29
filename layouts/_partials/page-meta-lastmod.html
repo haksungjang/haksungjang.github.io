@@ -1,0 +1,7 @@
+{{/* Docsy 원본 오버라이드: 페이지 하단에 커밋 메시지·해시(예: "add research (36c192ad)")가
+     그대로 노출되던 것을 없애고 최종 수정일만 남김. */ -}}
+{{ if and .GitInfo .Site.Params.github_repo -}}
+<div class="td-page-meta__lastmod">
+  {{ T "post_last_mod" }} {{ .Lastmod.Format .Site.Params.time_format_default -}}
+</div>
+{{ end -}}

@@ -191,7 +191,7 @@ To handle open source license use cases, a license guide organized by open sourc
 The [Obligations by License](https://sktelecom.github.io/guide/use/obligation/) document within SK telecom's open source guide is also a good resource.
 
 
-![](sktlicenseguide.png)
+![SK Telecom's open source guide site explaining notice and modification obligations when redistributing GPL-2.0 source](sktlicenseguide.png)
 [https://sktelecom.github.io/guide/use/obligation/gpl-2.0/](https://sktelecom.github.io/guide/use/obligation/gpl-2.0/)
 
 An enterprise must provide the open source license guide in a location that members can easily access and reference.
@@ -250,7 +250,7 @@ Through these activities, program participants' awareness of open source can be 
 
 By building the training, assessment, awareness-raising activities, and training-effectiveness measurement and improvement process described so far, an enterprise can satisfy the key requirements of the ISO/IEC 5230 and ISO/IEC 18974 standards. 
 
-![](trainingno.png)
+![Side-by-side clause comparison of ISO/IEC 5230 and ISO/IEC DIS 18974 with policy-awareness and training clauses (3.1.1.2, 3.1.2.3, 3.1.3.1, 3.5.1.3, etc.) highlighted in cyan](trainingno.png)
 
 
 Through this training and assessment system, an enterprise can raise program participants' understanding of open source license compliance and security assurance and continuously improve their competency. In addition, through regular assessment and improvement activities, the effectiveness of the program can be continuously enhanced.

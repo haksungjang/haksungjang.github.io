@@ -83,7 +83,7 @@ This way, since you are not using the Anaconda Repository, you can use conda [wi
 
 Peter Wang, CEO of Anaconda Inc., has [stated](https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/) directly that downloading Miniconda and changing the conda config to conda-forge allows free use.
 
-![](./pwang.png)
+![Screenshot of a Reddit comment where Anaconda CEO Peter Wang states that Miniconda combined with conda-forge can be used for free](./pwang.png)
 
 [https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/](https://www.reddit.com/r/Python/comments/iqsk3y/comment/g4xuabr/)
 

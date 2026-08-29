@@ -18,10 +18,9 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       
-      # (선택) 마이너/패치 버전만 자동 병합하고 싶다면 아래 주석 해제
-      # if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
-      
+      # 메이저 버전 업데이트는 자동 병합에서 제외하고 사람이 직접 검토·병합한다.
       - name: Enable auto-merge for Dependabot PRs
+        if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}

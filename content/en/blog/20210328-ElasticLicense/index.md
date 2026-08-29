@@ -32,7 +32,7 @@ resources:
 - [유닉스, 리눅스, 자유소프트웨어, 그리고 오픈소스](#유닉스-리눅스-자유소프트웨어-그리고-오픈소스)
 - [클라우드의 출현과 AGPL](#클라우드의-출현과-agpl)
 - [AGPL과 듀얼 라이선스](#agpl과-듀얼-라이선스)
-- [무상 사용<sub>Strip-mining</sub>](#무상-사용substrip-miningsub)
+- [무상 사용<sub>Strip-mining</sub>](#무상-사용strip-mining)
 - [SSPL과 소스 공개 라이선스](#sspl과-소스-공개-라이선스)
   - [SSPL](#sspl)
   - [제한 조건을 갖는 소스 공개 라이선스](#제한-조건을-갖는-소스-공개-라이선스)
