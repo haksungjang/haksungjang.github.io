@@ -24,7 +24,7 @@ Breaking down the open source compliance process into more detail gives the diag
 
 The image below is a sample open source compliance process that a company can generally adopt and use.
 
-![](sampleprocess.png)
+![Ten-step OSS compliance process from identification to final confirmation, mapped to the roles of the dev team, OSS program manager, and infra team](sampleprocess.png)
 
 For more details, refer to the following page. : [https://haksungjang.github.io/docs/openchain/#부록-2-샘플-오픈소스-컴플라이언스-프로세스](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)
 
@@ -40,7 +40,7 @@ To determine whether open source can be used, it is first necessary to identify 
 
 The Identification, Auditing, Resolving Issues, Review, and Approval steps in "[Appendix 2. Sample Open Source Compliance Process](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-2-%EC%83%98%ED%94%8C-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)"'s [1. Identification of Open Source](https://haksungjang.github.io/docs/openchain/#1-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%8B%9D%EB%B3%84identification-of-open-source) are an example of a documented procedure for reviewing and recording the obligations and restrictions imposed by each identified license.
 
-![](identification.png)
+![Identification step describing how the dev team checks OSS usage and licenses during design and marks them in the source code](identification.png)
 
 
 Having such a procedure in place allows a company to prepare the following evidence materials required by ISO/IEC 5230.
@@ -89,7 +89,7 @@ Compliance artifacts are broadly divided into two types.
 
 1. Open source notice: A document providing the full text of the open source license and copyright information
 
-    ![](ossnotice.png)
+    ![Sample open source software notice listing included OSS components and their license terms](ossnotice.png)
 
     * How to generate an open source notice corresponding to the open source BOM collected using a tool is further explained in "[6. Tools](../6-tool/)".
 
@@ -138,7 +138,7 @@ To avoid facing legal action due to external claims, it is important for a compa
 
 The figure below is the process a company should have in place to respond to external inquiries.
 
-![](access.png)
+![Flow of the external inquiry response process, from intake through internal investigation, legal review, reporting, and process improvement](access.png)
 [https://haksungjang.github.io/docs/openchain/#2-외부-문의-대응-프로세스](https://haksungjang.github.io/docs/openchain/#2-%EC%99%B8%EB%B6%80-%EB%AC%B8%EC%9D%98-%EB%8C%80%EC%9D%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)
 
 Details can be found in "[Appendix 2. Sample Open Source Compliance Process, 2. External Inquiry Response Process](https://haksungjang.github.io/docs/openchain/#2-%EC%99%B8%EB%B6%80-%EB%AC%B8%EC%9D%98-%EB%8C%80%EC%9D%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)".
@@ -161,7 +161,7 @@ If a company has a policy that allows contributions to external open source proj
 
 The [open source contribution process](https://sktelecom.github.io/guide/contribute/process/) published by SK telecom is a good example.
 
-![](contribution.png)
+![Contribution workflow from internal approval and OSPO review to project contribution-guide review, rule check, and submission on GitHub](contribution.png)
 [https://sktelecom.github.io/guide/contribute/process/](https://sktelecom.github.io/guide/contribute/process/)
 
 
@@ -179,4 +179,4 @@ Having such a procedure in place allows a company to prepare the following evide
 
 Building the process up to this point results in compliance with the ISO/IEC 5230 requirements as shown below.
 
-![](processno.png)
+![Clause map of ISO/IEC 5230 with most process-related requirements highlighted](processno.png)
