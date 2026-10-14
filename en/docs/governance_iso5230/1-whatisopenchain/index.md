@@ -13,7 +13,7 @@ Today's software keeps growing in scale and complexity. Building a single piece 
 If even one organization in this complex software supply chain fails to comply with its open source license obligations or fails to provide accurate information about its open source usage, the company distributing the final software has no choice but to fail at open source license compliance as well. This can result in lawsuits that force the company to halt sales of its product.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/supplychain_hu_7af9bd5b7a71dad7.png" width="813" height="552">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/supplychain_hu_c0466bcb8307541e.png" width="813" height="552">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -32,7 +32,7 @@ In such a complex software supply chain environment, it is extremely difficult f
 The Linux Foundation's [OpenChain](https://www.openchainproject.org/) project was founded on the belief that if the core requirements a company must meet for open source compliance are defined concisely and consistently, and everyone complies with them, trust regarding open source licensing can be built across the entire software supply chain.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/openchainlogo_hu_7581e73b0d768d82.png" width="600" height="79">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/openchainlogo_hu_a3a5094479f35cea.png" width="600" height="79">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -74,7 +74,7 @@ Version 2.1 of the specification was released in 2020, and it defines six core r
 For a company just starting out with open source compliance, a good strategy is to raise its maturity level by fulfilling these OpenChain Specification requirements one by one.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 604px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/spec_hu_14b92d21e27f4a59.png" width="594" height="775">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/spec_hu_a1568ec0f32ac4f5.png" width="594" height="775">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -91,7 +91,7 @@ In December 2020, this OpenChain Specification was formally registered as the in
 [^ISO]: ISO/IEC 5230: https://www.iso.org/standard/81039.html
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 681px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/iso_hu_b3d947295c1afb95.png" width="671" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/iso_hu_d209686e83e6b23b.png" width="671" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -112,7 +112,7 @@ If a company complies with all of the requirements in ISO/IEC 5230, it can be ce
 The image below lists the item numbers required by ISO/IEC 5230. A company that satisfies all of these items can be recognized as having built a transparent and trustworthy open source governance system across its software supply chain.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 682px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/spec3111_hu_ca82823cea2e5897.png" width="672" height="440">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/spec3111_hu_ed4d87bb516bb6c1.png" width="672" height="440">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -129,7 +129,7 @@ The OpenChain project proposes three certification methods.
 * Third-Party Certification
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/certify_hu_6ec67eff1d183638.png" width="900" height="596">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/certify_hu_b69b57d96af983d9.png" width="900" height="596">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -148,7 +148,7 @@ Let's look at each method.
 Self certification is the method most recommended by the OpenChain project, and it has the advantage of being free of charge. The OpenChain Project provides an OpenChain self-certification website so that companies can check for themselves whether they comply with the OpenChain Specification[^question]. A company's open source manager can sign up on the OpenChain self-certification website and begin the online self-certification process. Self certification proceeds by answering Yes/No questions as shown below.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 846px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/question_hu_8cde8c4c95a4ad9f.png" width="836" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/question_hu_2a77bbfff74cff17.png" width="836" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -163,7 +163,7 @@ Self certification is the method most recommended by the OpenChain project, and 
 If a company has built a solid open source compliance system and can answer Yes to every question in OpenChain self-certification, it can submit these results on the website as a Conforming Submission. After a simple Q&A-style confirmation process by the Linux Foundation, the company can then declare ISO/IEC 5230 certification.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 877px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/sktannounce_hu_324168ab09a53f9c.png" width="867" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/sktannounce_hu_b913d30dc7ac13e8.png" width="867" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -178,7 +178,7 @@ If a company has built a solid open source compliance system and can answer Yes 
 Once this certification declaration is made, the company is recognized in the Global Software Supply Chain as having an open source program that conforms to ISO/IEC 5230.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 850px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/announcelogo_hu_baf613e8a8938a49.png" width="840" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/announcelogo_hu_f3c9d55df5d3c9e1.png" width="840" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -203,7 +203,7 @@ In independent assessment, an independent organization outside the company exami
 Through fair assessment and consulting from an independent organization, a company can raise its compliance level, and by repeating independent assessments, it can refine its policies and build out its processes.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/independent2_hu_ff934ab02968f472.png" width="900" height="409">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/independent2_hu_d75f9dc75615a60a.png" width="900" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -239,7 +239,7 @@ As of October 2021, OpenChain's authorized third-party certification bodies are 
 [^BV]: Bureau Veritas - https://group.bureauveritas.com/
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/3rdpartycertifiers_hu_7c533f93b38ab71e.png" width="900" height="320">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/3rdpartycertifiers_hu_55de1eeac0da1979.png" width="900" height="320">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -254,7 +254,7 @@ As of October 2021, OpenChain's authorized third-party certification bodies are 
 These bodies provide assessments to confirm ISO/IEC 5230 conforming programs and issue certificates to companies that pass.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/pwc_hu_5bb61fd5d863abe9.png" width="900" height="331">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/pwc_hu_63519bbd814e95b3.png" width="900" height="331">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -279,7 +279,7 @@ For more detail on the self-certification method, you can also refer to the foll
 The OpenChain project provides a variety of reference materials that companies need to build a compliance program, including policy document templates and training materials. These materials are designed to help organizations comply with the OpenChain Specification and support common open source compliance activities, and they are provided under a CC-0 license so that anyone can use them freely.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 843px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/resource_hu_bf8f6802d2e8f11f.png" width="833" height="557">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/resource_hu_e55fc97873df17ae.png" width="833" height="557">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -304,7 +304,7 @@ In early 2021, news emerged that a German automaker had begun requiring its part
 Reflecting this trend, in May 2021, Scania, part of the Volkswagen Group, included a requirement for ISO/IEC 5230 compliance in its own corporate standard (STD 4589) that suppliers must follow.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/scania_hu_2ffdfde30b765742.png" width="313" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/scania_hu_3f8c82b69f2fba84.png" width="313" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -319,7 +319,7 @@ Reflecting this trend, in May 2021, Scania, part of the Volkswagen Group, includ
 Also, in July 2021, Bosch, an automotive and industrial technology company, declared that all of its group companies would have an ISO/IEC 5230 conforming program by the end of the year. Industry observers suggest it is only a matter of time before all automakers and companies in other industries begin requiring ISO/IEC 5230 within their software supply chains.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
-<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/bosch_hu_3bddac9870a960ef.png" width="313" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/1-whatisopenchain/bosch_hu_7e00d073656916d7.png" width="313" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

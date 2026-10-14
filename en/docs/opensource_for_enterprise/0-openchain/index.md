@@ -11,7 +11,7 @@ Today, software continues to grow in scale and complexity. Developing a single p
 If even a single organization within this complex software supply chain fails to comply with open source license obligations or fails to provide accurate information about its open source use, the enterprise distributing the final software has no choice but to fail at meeting its own open source license obligations. This can result in lawsuits and even the suspension of product sales.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/supplychain_hu_7af9bd5b7a71dad7.png" width="813" height="552">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/supplychain_hu_c0466bcb8307541e.png" width="813" height="552">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -30,7 +30,7 @@ In such a complex software supply chain environment, it is very difficult for an
 The [OpenChain](https://www.openchainproject.org/) project, part of the [Linux Foundation](https://www.linuxfoundation.org/), was founded on the belief that concisely and consistently defining the core requirements enterprises must meet for open source compliance, and having everyone comply with them, can build trust in open source licensing across the entire software supply chain.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/openchainlogo_hu_7581e73b0d768d82.png" width="600" height="79">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/openchainlogo_hu_a3a5094479f35cea.png" width="600" height="79">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -68,7 +68,7 @@ In 2020, version 2.1 of the specification was released, defining the six core re
 For an enterprise just starting out with open source compliance, a good strategy is to raise its maturity level by fulfilling these OpenChain Specification requirements one by one.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 604px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec_hu_14b92d21e27f4a59.png" width="594" height="775">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec_hu_a1568ec0f32ac4f5.png" width="594" height="775">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -83,7 +83,7 @@ For an enterprise just starting out with open source compliance, a good strategy
 In December 2020, this OpenChain Specification was formally registered as [ISO/IEC 5230:2020](https://www.iso.org/standard/81039.html), the international standard for open source compliance.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 681px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/iso_hu_b3d947295c1afb95.png" width="671" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/iso_hu_d209686e83e6b23b.png" width="671" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -116,7 +116,7 @@ If an enterprise complies with all the requirements of both ISO/IEC 5230 and ISO
 The image below lists the item numbers required by ISO/IEC 5230. An enterprise that fulfills all these items can be recognized as having built a transparent and trustworthy open source governance system within the software supply chain.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 682px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec3111_hu_ca82823cea2e5897.png" width="672" height="440">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec3111_hu_ed4d87bb516bb6c1.png" width="672" height="440">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -134,7 +134,7 @@ The [OpenChain project](https://www.openchainproject.org/) proposes three certif
 * Third-Party Certification
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/certify_hu_6ec67eff1d183638.png" width="900" height="596">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/certify_hu_b69b57d96af983d9.png" width="900" height="596">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -153,7 +153,7 @@ Let's look at each method.
 Self-certification is the method most recommended by the OpenChain project and has the advantage of incurring no cost. The OpenChain Project provides an [ISO/IEC 5230 self-certification website](https://openchainproject.org/checklist-iso-5230-2020) so that enterprises can verify on their own whether they comply with the OpenChain Specification. An enterprise's open source manager can sign up on this website and begin the online self-certification process. Self-certification proceeds by answering Yes/No questions, as shown below.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 846px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/question_hu_8cde8c4c95a4ad9f.png" width="836" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/question_hu_2a77bbfff74cff17.png" width="836" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -168,7 +168,7 @@ Self-certification is the method most recommended by the OpenChain project and h
 If an enterprise has built its open source compliance system well enough to answer Yes to every question in the OpenChain self-certification, it can submit the result on the website (Conforming Submission). After a brief question-and-answer verification process with the [Linux Foundation](https://www.linuxfoundation.org/), it can then declare ISO/IEC 5230 certification.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 877px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/sktannounce_hu_324168ab09a53f9c.png" width="867" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/sktannounce_hu_b913d30dc7ac13e8.png" width="867" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -183,7 +183,7 @@ If an enterprise has built its open source compliance system well enough to answ
 By making this certification declaration, an enterprise is recognized within the global software supply chain as having an open source program that conforms to ISO/IEC 5230.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 850px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/announcelogo_hu_baf613e8a8938a49.png" width="840" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/announcelogo_hu_f3c9d55df5d3c9e1.png" width="840" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -208,7 +208,7 @@ In an independent assessment, an independent organization outside the enterprise
 By receiving impartial assessment and consulting from an independent organization, an enterprise can raise its compliance and security assurance level, and through the iterative process of undergoing independent assessment again, refine its policies and build out its processes.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/independent2_hu_ff934ab02968f472.png" width="900" height="409">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/independent2_hu_d75f9dc75615a60a.png" width="900" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -233,7 +233,7 @@ An enterprise wishing to demonstrate a more reliable and transparent level of op
 As of 2024, OpenChain's authorized third-party certification bodies are [ORCRO](https://orcro.co.uk/), [PWC](https://www.pwc.de/en/opensource), [TÜV SÜD](https://www.tuvsud.com/), [Synopsys](https://www.synopsys.com/), and [Bureau Veritas](https://group.bureauveritas.com/).
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/3rdpartycertifiers_hu_7c533f93b38ab71e.png" width="900" height="320">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/3rdpartycertifiers_hu_55de1eeac0da1979.png" width="900" height="320">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -248,7 +248,7 @@ As of 2024, OpenChain's authorized third-party certification bodies are [ORCRO](
 These bodies provide assessments to verify conformant ISO/IEC 5230 and ISO/IEC 18974 programs and issue certificates to enterprises that pass.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/pwc_hu_5bb61fd5d863abe9.png" width="900" height="331">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/pwc_hu_63519bbd814e95b3.png" width="900" height="331">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -273,7 +273,7 @@ In addition, detailed self-certification methods can be found in the following s
 The [OpenChain project](https://www.openchainproject.org/) provides a variety of documentation resources that enterprises need to build a compliance program, including policy document templates and training materials. These materials are designed to support conformance with the OpenChain Specification and general open source compliance activities, and are provided under the CC-0 license so that anyone can use them freely.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 843px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/resource_hu_bf8f6802d2e8f11f.png" width="833" height="557">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/resource_hu_e55fc97873df17ae.png" width="833" height="557">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -305,7 +305,7 @@ In early 2021, news emerged that a German automaker had begun requiring its part
 Reflecting this outlook, in May 2021, [Scania](https://www.scania.com/), part of the Volkswagen Group, incorporated a requirement for ISO/IEC 5230 compliance into its own corporate standard (STD 4589) that suppliers must follow.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/scania_hu_2ffdfde30b765742.png" width="313" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/scania_hu_3f8c82b69f2fba84.png" width="313" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -320,7 +320,7 @@ Reflecting this outlook, in May 2021, [Scania](https://www.scania.com/), part of
 Also, in July 2021, [Bosch](https://www.bosch.com/), an automotive and industrial technology company, declared that all of its group companies would have an ISO/IEC 5230-compliant program by the end of the year. The industry outlook is that it is only a matter of time before every automaker, and other industries as well, begin requiring ISO/IEC 5230 within their software supply chains.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/bosch_hu_3bddac9870a960ef.png" width="313" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/bosch_hu_7e00d073656916d7.png" width="313" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

@@ -8,7 +8,7 @@ Process is the actionable procedure that enables a company to comply with its op
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 702px">
-<img class="card-img-top" src="/docs/governance_iso5230/5-process/input_hu_eee543c7c23d09c5.png" width="692" height="176">
+<img class="card-img-top" src="/docs/governance_iso5230/5-process/input_hu_290ab2641e5f08ae.png" width="692" height="176">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -26,7 +26,7 @@ Breaking down the open source compliance process into more detail gives the diag
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 742px">
-<img class="card-img-top" src="/docs/governance_iso5230/5-process/roughprocess_hu_c9e3d7b4cd64188a.png" width="732" height="252">
+<img class="card-img-top" src="/docs/governance_iso5230/5-process/roughprocess_hu_d0d3d35b05575342.png" width="732" height="252">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

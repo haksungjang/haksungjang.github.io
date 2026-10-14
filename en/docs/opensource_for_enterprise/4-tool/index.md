@@ -16,7 +16,7 @@ Many enterprises use these automated source code scanning tools together with ma
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fossology_hu_464a11d99cc93636.png" width="474" height="231">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fossology_hu_83c54685a3d05ab7.png" width="474" height="231">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -68,7 +68,7 @@ Key features of the Analyzer:
 - Generation of reports in SPDX format
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 650px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/ort_hu_f7c8c311edcd119b.png" width="640" height="144">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/ort_hu_996395dc81ce0f9f.png" width="640" height="144">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -90,7 +90,7 @@ Key features:
 - Generation of the SBOM (Software Bill of Materials)
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 609px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightdependency_hu_4834b8de5b8621b1.png" width="599" height="409">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightdependency_hu_424abdd2ae2f49ea.png" width="599" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -157,7 +157,7 @@ Key features:
 - Open source notice generation
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightproject_hu_1eea98ab2bdc57cd.png" width="900" height="289">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightproject_hu_d4f3b7859d2f489c.png" width="900" height="289">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -172,7 +172,7 @@ Key features:
 LG Electronics has used FOSSLight for years to manage SBOMs company-wide, and released it as open source in June 2021. It provides a Korean-language guide to help domestic enterprises use it.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 849px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslight_hu_ccc47fe0e94f67ac.png" width="839" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslight_hu_1417888d5342c8e5.png" width="839" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -245,7 +245,7 @@ The open source notice, a key open source compliance artifact, is a document tha
 [FOSSLight](https://fosslight.org/) also provides a feature that automatically generates an open source notice based on the SBOM it has acquired.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightnotice_hu_a4dc2384954af939.png" width="900" height="394">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightnotice_hu_12fb9f52d1b2e017.png" width="900" height="394">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -298,7 +298,7 @@ Using GitHub Pages has the following benefits:
 This tool environment can be seen in reference on SK telecom's open source website.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktcompliance_hu_98c52e8252e285fe.png" width="900" height="313">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktcompliance_hu_b5985e1a0bf6e82c.png" width="900" height="313">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -314,7 +314,7 @@ This website was developed as open source, and its source code is public, so oth
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktgithub_hu_ed0a7b008539b471.png" width="900" height="352">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktgithub_hu_ba062bcbed47466b.png" width="900" height="352">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

@@ -9,7 +9,7 @@ The open source process is an actionable procedure that enables an enterprise to
 From the standpoint of open source license compliance, the enterprise carries out activities to comply with the conditions required by each license governing the open source used while developing and distributing the supplied software, producing compliance artifacts such as the open source notice and the source code to be disclosed.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 702px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/3-process/input_hu_eee543c7c23d09c5.png" width="692" height="176">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/3-process/input_hu_290ab2641e5f08ae.png" width="692" height="176">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

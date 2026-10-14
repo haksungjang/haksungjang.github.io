@@ -66,7 +66,7 @@ ISO 표준은 공통적으로 다음과 같이 프로그램 내 여러 참여자
 - 개발 문화 담당
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 543px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/complianceofficer_hu_27ccab53fd425923.png" width="533" height="434">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/complianceofficer_hu_d2fc436465851e3e.png" width="533" height="434">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -176,7 +176,7 @@ ISO 표준은 공통적으로 다음과 같이 프로그램 내 각 역할을 �
 [SK텔레콤](https://www.sktelecom.com/)은 [OSRB](https://sktelecom.github.io/about/osrb/)를 구성하여 기업 내 오픈소스 정책과 프로세스를 만들고, 이슈 발생 시 협업하여 대응 방안을 마련하고 있습니다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 471px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/sktosrb_hu_7da96304c6a03ac0.png" width="461" height="300">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/sktosrb_hu_7c1921e1307dd7e9.png" width="461" height="300">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

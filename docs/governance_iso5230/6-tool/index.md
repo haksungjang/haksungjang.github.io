@@ -11,7 +11,7 @@ LLMS index: [llms.txt](/llms.txt)
 많은 기업이 이러한 자동화된 소스 코드 스캔 도구와 수동 검토를 병행하여 이용한다. Linux Foundation의 [FOSSology](https://haksungjang.github.io/docs/openchain/#fn:24) 프로젝트는 오픈소스로 공개된 소스 코드 스캔 도구로서 기업들이 손쉽게 무료로 사용할 수 있다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossology_hu_464a11d99cc93636.png" width="474" height="231">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossology_hu_83c54685a3d05ab7.png" width="474" height="231">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -26,7 +26,7 @@ LLMS index: [llms.txt](/llms.txt)
 FOSSology의 설치 및 사용 방법은 [부록 3. 오픈소스 도구](https://haksungjang.github.io/docs/openchain/#1-fossology)를 참고한다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 760px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossologyguide_hu_921772d73e49e89f.png" width="750" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossologyguide_hu_8da014f45b786f76.png" width="750" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -47,7 +47,7 @@ FOSSology의 설치 및 사용 방법은 [부록 3. 오픈소스 도구](https:/
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 650px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/ort_hu_f7c8c311edcd119b.png" width="640" height="144">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/ort_hu_996395dc81ce0f9f.png" width="640" height="144">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -63,7 +63,7 @@ FOSSology의 설치 및 사용 방법은 [부록 3. 오픈소스 도구](https:/
 또한 LG전자는 FOSSLight Dependency Scanner를 오픈소스로 공개하였다. FOSSLight Dependency Scanner는 Gradle, Maven, NPM, PIP, Pub, Cocoapods 등 다양한 Package Manager를 지원한다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 609px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightdependency_hu_4834b8de5b8621b1.png" width="599" height="409">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightdependency_hu_424abdd2ae2f49ea.png" width="599" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -87,7 +87,7 @@ Eclipse 재단에서 후원하는 오픈소스 프로젝트인 [SW360](https://
 SW360의 설치 및 사용 방법은 [부록 3. 오픈소스 도구](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-3-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%8F%84%EA%B5%AC)를 참고할 수 있다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sw360guide_hu_60101c46edeb48d.png" width="900" height="567">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sw360guide_hu_9f9119837654de74.png" width="900" height="567">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -103,7 +103,7 @@ SW360의 설치 및 사용 방법은 [부록 3. 오픈소스 도구](https://ha
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightproject_hu_1eea98ab2bdc57cd.png" width="900" height="289">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightproject_hu_d4f3b7859d2f489c.png" width="900" height="289">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -122,7 +122,7 @@ LG전자는 FOSSLight를 자체 개발하여 지난 수년간 전체 사업부�
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 849px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslight_hu_ccc47fe0e94f67ac.png" width="839" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslight_hu_1417888d5342c8e5.png" width="839" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -158,7 +158,7 @@ FOSSLight에 오픈소스 BOM을 등록하면 자동으로 오픈소스 고지�
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightnotice_hu_a4dc2384954af939.png" width="900" height="394">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightnotice_hu_12fb9f52d1b2e017.png" width="900" height="394">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -182,7 +182,7 @@ SK텔레콤의 오픈소스 웹사이트를 참고할 수 있다.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktcompliance_hu_98c52e8252e285fe.png" width="900" height="313">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktcompliance_hu_b5985e1a0bf6e82c.png" width="900" height="313">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -198,7 +198,7 @@ SK텔레콤의 오픈소스 웹사이트를 참고할 수 있다.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktgithub_hu_ed0a7b008539b471.png" width="900" height="352">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktgithub_hu_ba062bcbed47466b.png" width="900" height="352">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

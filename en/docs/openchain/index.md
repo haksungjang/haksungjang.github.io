@@ -24,7 +24,7 @@ Today, software continues to grow in scale and complexity. Developing a single p
 If even one organization among the many in this complex software supply chain fails to comply with open source license obligations or fails to provide correct open source usage information, the company distributing the final software has no choice but to fail to meet its open source license obligations. This can result in being sued and having product sales halted.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
-<img class="card-img-top" src="/docs/openchain/supplychain_hu_7af9bd5b7a71dad7.png" width="813" height="552">
+<img class="card-img-top" src="/docs/openchain/supplychain_hu_c0466bcb8307541e.png" width="813" height="552">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -43,7 +43,7 @@ In such a complex software supply chain environment, it is very difficult for an
 The Linux Foundation's [OpenChain](https://www.openchainproject.org/) project was founded on the belief that concisely and consistently defining the key requirements companies must meet for open source compliance, and having everyone comply with them, can build trust in open source licensing across the entire software supply chain.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/docs/openchain/openchainlogo_hu_7581e73b0d768d82.png" width="600" height="79">
+<img class="card-img-top" src="/docs/openchain/openchainlogo_hu_a3a5094479f35cea.png" width="600" height="79">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -86,7 +86,7 @@ In April 2019, version 2.0 of the specification was released, defining six key r
 For a company just starting out with open source compliance, a good strategy is to raise its level by meeting these OpenChain Specification requirements one by one.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 604px">
-<img class="card-img-top" src="/docs/openchain/spec_hu_14b92d21e27f4a59.png" width="594" height="775">
+<img class="card-img-top" src="/docs/openchain/spec_hu_a1568ec0f32ac4f5.png" width="594" height="775">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -104,7 +104,7 @@ In December 2020, the OpenChain Specification was officially registered as the i
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 681px">
-<img class="card-img-top" src="/docs/openchain/iso_hu_b3d947295c1afb95.png" width="671" height="600">
+<img class="card-img-top" src="/docs/openchain/iso_hu_d209686e83e6b23b.png" width="671" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -138,7 +138,7 @@ Self-certification is the method most recommended by the OpenChain project, and 
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 846px">
-<img class="card-img-top" src="/docs/openchain/question_hu_8cde8c4c95a4ad9f.png" width="836" height="600">
+<img class="card-img-top" src="/docs/openchain/question_hu_2a77bbfff74cff17.png" width="836" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -154,7 +154,7 @@ Self-certification is the method most recommended by the OpenChain project, and 
 If a company has built a solid open source compliance system and can answer Yes to every item on the OpenChain self-certification questionnaire, it can submit these results on the website<sub>Conforming Submission</sub>. After that, following a simple Q&A verification process from the Linux Foundation, the company can make an OpenChain conformance declaration.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 667px">
-<img class="card-img-top" src="/docs/openchain/announce_hu_ba20ec87ce034d5b.png" width="657" height="483">
+<img class="card-img-top" src="/docs/openchain/announce_hu_972fb5ec6029697c.png" width="657" height="483">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -169,7 +169,7 @@ If a company has built a solid open source compliance system and can answer Yes 
 Once a company makes an OpenChain conformance declaration, it is recognized as having an open source program that conforms to OpenChain, and at the same time, it can register its logo on the OpenChain project's website.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/organization_hu_6cb29912cf727517.png" width="900" height="464">
+<img class="card-img-top" src="/docs/openchain/organization_hu_bef3c564a9f2df25.png" width="900" height="464">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -184,7 +184,7 @@ Once a company makes an OpenChain conformance declaration, it is recognized as h
 Companies with an OpenChain conforming program are granted the right to use the OpenChain logo.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/certilogo_hu_c76acac972f86a80.png" width="900" height="396">
+<img class="card-img-top" src="/docs/openchain/certilogo_hu_944946e2ec0bc921.png" width="900" height="396">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -208,7 +208,7 @@ Through the iterative process of receiving a fair assessment and consulting from
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/independent2_hu_ff934ab02968f472.png" width="900" height="409">
+<img class="card-img-top" src="/docs/openchain/independent2_hu_d75f9dc75615a60a.png" width="900" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -233,7 +233,7 @@ In Korea, NIPA's [Open UP](https://www.oss.kr/open_up_intro)[^openup] offers a s
 [^program]: Open Source Software Utilization Support Program - https://www.oss.kr/news/show/49e410fb-604d-4d35-ba25-8286b5f2c50d
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/openup2_hu_3112aa8297083f2f.png" width="900" height="600">
+<img class="card-img-top" src="/docs/openchain/openup2_hu_5740a7d74e7b7167.png" width="900" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -257,7 +257,7 @@ As of April 2021, OpenChain's authorized third-party certification bodies are [O
 [^TUVSUD]: TÜV SÜD - https://www.tuvsud.com
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 548px">
-<img class="card-img-top" src="/docs/openchain/3rdparty_hu_a60c20bdf04f8bb1.png" width="538" height="177">
+<img class="card-img-top" src="/docs/openchain/3rdparty_hu_bd18782c6060dc15.png" width="538" height="177">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -272,7 +272,7 @@ As of April 2021, OpenChain's authorized third-party certification bodies are [O
 These bodies provide assessments to verify an ISO/IEC 5230 conforming program and issue certificates to companies that pass.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/pwc_hu_5bb61fd5d863abe9.png" width="900" height="331">
+<img class="card-img-top" src="/docs/openchain/pwc_hu_63519bbd814e95b3.png" width="900" height="331">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -294,7 +294,7 @@ As of April 2021, there does not yet appear to be any buyer or organization that
 The OpenChain project provides a variety of documentation resources, such as policy document templates and training materials, that companies need to build a compliance program. These resources are designed to support compliance with the OpenChain Specification and general open source compliance activities, and they are provided under the CC-0 license so that anyone can use them freely.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 843px">
-<img class="card-img-top" src="/docs/openchain/resource_hu_bf8f6802d2e8f11f.png" width="833" height="557">
+<img class="card-img-top" src="/docs/openchain/resource_hu_e55fc97873df17ae.png" width="833" height="557">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -761,7 +761,7 @@ There are two ways a company can provide an external contact method for open-sou
 The Linux Foundation created the Open Compliance Directory as a space where companies can publish contact information for their open source representatives.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 627px">
-<img class="card-img-top" src="/docs/openchain/directory_hu_93863db1b18bfa43.png" width="617" height="600">
+<img class="card-img-top" src="/docs/openchain/directory_hu_bb9b2f446b7b1e9a.png" width="617" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -912,7 +912,7 @@ When a program participant needs a legal review to resolve an issue, the company
 For reference, the OpenChain Project provides, through its partner program, a list of global law firms that offer open-source-related legal advice.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 870px">
-<img class="card-img-top" src="/docs/openchain/partners_hu_28a06872fd670b42.png" width="860" height="572">
+<img class="card-img-top" src="/docs/openchain/partners_hu_6063527a42e55e8f.png" width="860" height="572">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1296,7 +1296,7 @@ A company must maintain a state of continuous conformance for at least 18 months
 It is also a good idea to use a website, as SK telecom does, to communicate this externally.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 710px">
-<img class="card-img-top" src="/docs/openchain/iso5230-skt_hu_36821d868f351c8a.png" width="700" height="504">
+<img class="card-img-top" src="/docs/openchain/iso5230-skt_hu_c664b7df3614c093.png" width="700" height="504">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1643,7 +1643,7 @@ Company OOO (hereinafter referred to as the "Company") actively uses open source
 The open source compliance process defines the procedures that must be followed at each development stage for the Company to comply with open source license obligations while developing and distributing software products and services. All members involved in software product development/distribution follow the following 10-step open source compliance process.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 871px">
-<img class="card-img-top" src="/docs/openchain/general-osc-process_hu_6a55f34038a4368b.png" width="861" height="902">
+<img class="card-img-top" src="/docs/openchain/general-osc-process_hu_3f7c79fa92cbe050.png" width="861" height="902">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1749,7 +1749,7 @@ The open source program manager performs a comprehensive check, such as confirmi
 Responding to external open source compliance inquiries quickly and accurately can greatly reduce the risk of the matter escalating to litigation. To this end, the Company follows the process below for responding to external open source compliance inquiries.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 1047px">
-<img class="card-img-top" src="/docs/openchain/general-inquiry-process_hu_e87661490555e0dd.png" width="1037" height="832">
+<img class="card-img-top" src="/docs/openchain/general-inquiry-process_hu_8f47cebea55caa3e.png" width="1037" height="832">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1822,7 +1822,7 @@ This section introduces FOSSology and SW360 and briefly explains how to use them
 Source code scanning tools can be used to detect the open source and license information included in software for open source compliance purposes.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
-<img class="card-img-top" src="/docs/openchain/fossology1_hu_464a11d99cc93636.png" width="474" height="231">
+<img class="card-img-top" src="/docs/openchain/fossology1_hu_83c54685a3d05ab7.png" width="474" height="231">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1926,7 +1926,7 @@ In particular, when a security vulnerability is reported for a specific open sou
 As such, tracking open source information is essential. Companies build their own systems for this or purchase commercial services. SW360 is an open source project sponsored by the Eclipse Foundation that provides a web application and repository for collecting and tracking software BOM information.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 574px">
-<img class="card-img-top" src="/docs/openchain/sw3601_hu_14a225c7b925a83b.png" width="564" height="185">
+<img class="card-img-top" src="/docs/openchain/sw3601_hu_f70442714c5bda17.png" width="564" height="185">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

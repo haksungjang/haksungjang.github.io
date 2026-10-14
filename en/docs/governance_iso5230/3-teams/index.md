@@ -28,7 +28,7 @@ In general, the following roles are needed to build a company's open source gove
 - Security officer
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 543px">
-<img class="card-img-top" src="/docs/governance_iso5230/3-teams/complianceofficer_hu_27ccab53fd425923.png" width="533" height="434">
+<img class="card-img-top" src="/docs/governance_iso5230/3-teams/complianceofficer_hu_d2fc436465851e3e.png" width="533" height="434">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -83,7 +83,7 @@ The open source-related organization and personnel do not necessarily need to pa
 SK telecom has formed an OSRB to create open source policies and processes within the company and to prepare response measures when issues arise.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 524px">
-<img class="card-img-top" src="/docs/governance_iso5230/3-teams/sktosrb_hu_4651b812d3f68210.png" width="514" height="424">
+<img class="card-img-top" src="/docs/governance_iso5230/3-teams/sktosrb_hu_1c3c10b7925eb437.png" width="514" height="424">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

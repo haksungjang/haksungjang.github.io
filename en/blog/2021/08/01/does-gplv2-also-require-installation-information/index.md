@@ -53,7 +53,7 @@ Nevertheless, in 2005 the FSF recognized the need to revise the license to addre
 <!-- ![gplv3](./featured_gplv3.png) -->
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 310px">
-<img class="card-img-top" src="/blog/2021/08/01/gplv2%EB%8F%84-%EC%84%A4%EC%B9%98%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%9A%94%EA%B5%AC%ED%95%9C%EB%8B%A4%EA%B3%A0/featured_gplv3_hu_24a70687ebb4ac17.png" width="300" height="149">
+<img class="card-img-top" src="/blog/2021/08/01/gplv2%EB%8F%84-%EC%84%A4%EC%B9%98%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%9A%94%EA%B5%AC%ED%95%9C%EB%8B%A4%EA%B3%A0/featured_gplv3_hu_b19b90c5f3bdf8c7.png" width="300" height="149">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

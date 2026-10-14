@@ -11,7 +11,7 @@ Source code scanning tools can be used in the open source identification and aud
 Many companies use these automated source code scanning tools alongside manual review. The Linux Foundation's [FOSSology](https://haksungjang.github.io/docs/openchain/#fn:24) project is a source code scanning tool released as open source, which companies can easily use for free.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossology_hu_464a11d99cc93636.png" width="474" height="231">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossology_hu_83c54685a3d05ab7.png" width="474" height="231">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -26,7 +26,7 @@ Many companies use these automated source code scanning tools alongside manual r
 For how to install and use FOSSology, refer to [Appendix 3. Open Source Tools](https://haksungjang.github.io/docs/openchain/#1-fossology).
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 760px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossologyguide_hu_921772d73e49e89f.png" width="750" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fossologyguide_hu_8da014f45b786f76.png" width="750" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -47,7 +47,7 @@ The open source OSS Review Toolkit provides a dependency analysis tool called An
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 650px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/ort_hu_f7c8c311edcd119b.png" width="640" height="144">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/ort_hu_996395dc81ce0f9f.png" width="640" height="144">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -63,7 +63,7 @@ The open source OSS Review Toolkit provides a dependency analysis tool called An
 In addition, LG Electronics released FOSSLight Dependency Scanner as open source. FOSSLight Dependency Scanner supports various package managers such as Gradle, Maven, NPM, PIP, Pub, and Cocoapods.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 609px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightdependency_hu_4834b8de5b8621b1.png" width="599" height="409">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightdependency_hu_424abdd2ae2f49ea.png" width="599" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -87,7 +87,7 @@ Clause 3.3.1.2 of the ISO/IEC 5230 specification requires that the open source B
 For how to install and use SW360, refer to [Appendix 3. Open Source Tools](https://haksungjang.github.io/docs/openchain/#%EB%B6%80%EB%A1%9D-3-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%8F%84%EA%B5%AC).
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sw360guide_hu_60101c46edeb48d.png" width="900" height="567">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sw360guide_hu_9f9119837654de74.png" width="900" height="567">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -103,7 +103,7 @@ In addition, FOSSLight, the open source released by LG Electronics mentioned abo
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightproject_hu_1eea98ab2bdc57cd.png" width="900" height="289">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightproject_hu_d4f3b7859d2f489c.png" width="900" height="289">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -122,7 +122,7 @@ Detailed installation and usage instructions are provided in a Korean-language g
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 849px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslight_hu_ccc47fe0e94f67ac.png" width="839" height="600">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslight_hu_1417888d5342c8e5.png" width="839" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -158,7 +158,7 @@ Registering the open source BOM in FOSSLight automatically generates the open so
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightnotice_hu_a4dc2384954af939.png" width="900" height="394">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/fosslightnotice_hu_12fb9f52d1b2e017.png" width="900" height="394">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -182,7 +182,7 @@ SK telecom's open source website can be referred to as an example.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktcompliance_hu_98c52e8252e285fe.png" width="900" height="313">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktcompliance_hu_b5985e1a0bf6e82c.png" width="900" height="313">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -198,7 +198,7 @@ In particular, this website was developed as open source and its source code is 
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktgithub_hu_ed0a7b008539b471.png" width="900" height="352">
+<img class="card-img-top" src="/docs/governance_iso5230/6-tool/sktgithub_hu_ba062bcbed47466b.png" width="900" height="352">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

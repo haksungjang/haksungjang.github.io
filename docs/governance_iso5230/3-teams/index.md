@@ -28,7 +28,7 @@ LLMS index: [llms.txt](/llms.txt)
 - 보안 담당
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 543px">
-<img class="card-img-top" src="/docs/governance_iso5230/3-teams/complianceofficer_hu_27ccab53fd425923.png" width="533" height="434">
+<img class="card-img-top" src="/docs/governance_iso5230/3-teams/complianceofficer_hu_d2fc436465851e3e.png" width="533" height="434">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -83,7 +83,7 @@ LLMS index: [llms.txt](/llms.txt)
 SK텔레콤은 OSRB를 구성하여 기업 내 오픈소스 정책과 프로세스를 만들고, 이슈 발생 시 대응 방안을 마련하고 있다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 524px">
-<img class="card-img-top" src="/docs/governance_iso5230/3-teams/sktosrb_hu_4651b812d3f68210.png" width="514" height="424">
+<img class="card-img-top" src="/docs/governance_iso5230/3-teams/sktosrb_hu_1c3c10b7925eb437.png" width="514" height="424">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

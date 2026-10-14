@@ -16,7 +16,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fossology_hu_464a11d99cc93636.png" width="474" height="231">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fossology_hu_83c54685a3d05ab7.png" width="474" height="231">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -68,7 +68,7 @@ Analyzer의 주요 기능:
 - SPDX 형식의 보고서 생성
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 650px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/ort_hu_f7c8c311edcd119b.png" width="640" height="144">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/ort_hu_996395dc81ce0f9f.png" width="640" height="144">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -90,7 +90,7 @@ Analyzer의 주요 기능:
 - SBOM(Software Bill of Materials) 생성
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 609px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightdependency_hu_4834b8de5b8621b1.png" width="599" height="409">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightdependency_hu_424abdd2ae2f49ea.png" width="599" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -157,7 +157,7 @@ SW360의 설치 및 사용 방법은 [SW360 가이드](https://openchain-project
 - 오픈소스 고지문 생성
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightproject_hu_1eea98ab2bdc57cd.png" width="900" height="289">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightproject_hu_d4f3b7859d2f489c.png" width="900" height="289">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -172,7 +172,7 @@ SW360의 설치 및 사용 방법은 [SW360 가이드](https://openchain-project
 LG전자는 FOSSLight를 수년간 사용하여 전사적으로 SBOM을 관리해왔으며, 2021년 6월에 이를 오픈소스로 공개했습니다. 한국어 가이드를 제공하여 국내 기업들의 사용을 돕고 있습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 849px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslight_hu_ccc47fe0e94f67ac.png" width="839" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslight_hu_1417888d5342c8e5.png" width="839" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -245,7 +245,7 @@ SW360으로 보안취약점을 관리하는 방법은 [SW360 가이드](https://
 [FOSSLight](https://fosslight.org/)도 취득한 SBOM을 기반으로 오픈소스 고지문을 자동으로 생성하는 기능을 제공합니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightnotice_hu_a4dc2384954af939.png" width="900" height="394">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/fosslightnotice_hu_12fb9f52d1b2e017.png" width="900" height="394">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -298,7 +298,7 @@ GitHub Pages를 사용하면 다음과 같은 이점이 있습니다:
 이러한 도구 환경은 SK텔레콤의 오픈소스 웹사이트에서 참고하실 수 있습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktcompliance_hu_98c52e8252e285fe.png" width="900" height="313">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktcompliance_hu_b5985e1a0bf6e82c.png" width="900" height="313">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -314,7 +314,7 @@ GitHub Pages를 사용하면 다음과 같은 이점이 있습니다:
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktgithub_hu_ed0a7b008539b471.png" width="900" height="352">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/4-tool/sktgithub_hu_ba062bcbed47466b.png" width="900" height="352">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

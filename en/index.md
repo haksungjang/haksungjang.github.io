@@ -79,7 +79,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/featured-image_hu_86dfb449a319c456.jpg" alt="Featured Image for Rockchip and FFmpeg: A License Dispute Case Study" width="250" height="125">
+<img src="/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/featured-image_hu_52289f72f930764e.jpg" alt="Featured Image for Rockchip and FFmpeg: A License Dispute Case Study" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">Note This article was written using Claude Code, and the key facts cited were cross-verified against primary sources. It reflects the author&rsquo;s personal analysis and summary, not legal advice, …</p>
@@ -96,7 +96,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2025/01/13/avm-%EC%86%8C%EC%86%A1-lgpl-2.1-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B6%8C%EB%A6%AC%EC%99%80-%EC%84%A4%EC%B9%98%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5-%EC%9D%98%EB%AC%B4%EC%9D%98-%EC%9E%AC%EC%A1%B0%EB%AA%85/featured_AVM_hu_969cc81d3bcec3.png" alt="Featured Image for The AVM Lawsuit: Revisiting LGPL-2.1 User Rights and the Obligation to Provide Installation Information" width="250" height="125">
+<img src="/blog/2025/01/13/avm-%EC%86%8C%EC%86%A1-lgpl-2.1-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B6%8C%EB%A6%AC%EC%99%80-%EC%84%A4%EC%B9%98%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5-%EC%9D%98%EB%AC%B4%EC%9D%98-%EC%9E%AC%EC%A1%B0%EB%AA%85/featured_AVM_hu_222acadceb4a540b.png" alt="Featured Image for The AVM Lawsuit: Revisiting LGPL-2.1 User Rights and the Obligation to Provide Installation Information" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0"> This post is based on Ars Technica&rsquo;s article &ldquo;German router maker is latest company to inadvertently clarify the LGPL license&rdquo;. The article covers the details of the lawsuit between …</p>
@@ -113,7 +113,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2024/11/12/%ED%95%9C%EA%B5%AD-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B8%B0%EC%97%85%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-eu%EC%9D%98-3%EB%8C%80-%EB%94%94%EC%A7%80%ED%84%B8-%EA%B7%9C%EC%A0%9C-%ED%95%B5%EC%8B%AC-%EB%82%B4%EC%9A%A9/featured_CRA_hu_7a1b96ee8244cdf2.png" alt="Featured Image for Key Points of the EU&#39;s Three Major Digital Regulations That Korean Software Companies Need to Know" width="250" height="125">
+<img src="/blog/2024/11/12/%ED%95%9C%EA%B5%AD-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B8%B0%EC%97%85%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-eu%EC%9D%98-3%EB%8C%80-%EB%94%94%EC%A7%80%ED%84%B8-%EA%B7%9C%EC%A0%9C-%ED%95%B5%EC%8B%AC-%EB%82%B4%EC%9A%A9/featured_CRA_hu_a5598d98e05a6c8.png" alt="Featured Image for Key Points of the EU&#39;s Three Major Digital Regulations That Korean Software Companies Need to Know" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">Introduction Three major pieces of legislation the European Union (EU) has recently introduced carry very significant implications for Korean companies. The Product Liability Directive (PLD), the …</p>
@@ -130,7 +130,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2024/11/06/to-mine-or-not-to-mine-%EB%8F%85%EC%9D%BC-%EB%B2%95%EC%9B%90%EC%9D%B4-ai-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%A0%80%EC%9E%91%EA%B6%8C-%EB%94%9C%EB%A0%88%EB%A7%88%EC%97%90-%EB%82%B4%EB%A6%B0-%ED%8C%90%EA%B2%B0/featured_Laion_hu_3eda4e29bc17e458.jpeg" alt="Featured Image for To Mine or Not To Mine: A German Court&#39;s Ruling on the Copyright Dilemma of the AI Era" width="250" height="125">
+<img src="/blog/2024/11/06/to-mine-or-not-to-mine-%EB%8F%85%EC%9D%BC-%EB%B2%95%EC%9B%90%EC%9D%B4-ai-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%A0%80%EC%9E%91%EA%B6%8C-%EB%94%9C%EB%A0%88%EB%A7%88%EC%97%90-%EB%82%B4%EB%A6%B0-%ED%8C%90%EA%B2%B0/featured_Laion_hu_b82af8a216e24b6f.jpeg" alt="Featured Image for To Mine or Not To Mine: A German Court&#39;s Ruling on the Copyright Dilemma of the AI Era" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">This post is based on JBB Rechtsanwält:innen&rsquo;s blog post &ldquo;To Mine or Not To Mine&rdquo; (https://jbb.de/to-mine-or-not-to-mine/) and is published to explain a recent German court ruling on …</p>
@@ -147,7 +147,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/featured_openwrt_hu_216b974d41d2721.png" alt="Featured Image for A Chinese Copyright Infringement Case: &#34;Since GPL-Based Software Products Already Have an Obligation to Disclose Source Anyway, Isn&#39;t It Fine to Copy Them?&#34;" width="250" height="125">
+<img src="/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/featured_openwrt_hu_6d8c1a1b1780dfe6.png" alt="Featured Image for A Chinese Copyright Infringement Case: &#34;Since GPL-Based Software Products Already Have an Obligation to Disclose Source Anyway, Isn&#39;t It Fine to Copy Them?&#34;" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">As the use of open source software has spread widely, the legal issues surrounding it have grown increasingly complex. In particular, the question of copyright over derivative works based on open …</p>

@@ -108,7 +108,7 @@ LLMS index: [llms.txt](/llms.txt)
 교육자료를 새롭게 제작하는 것도 처음 업무를 시작하는 담당자에게는 쉽지 않은 일일 수 있다. 이런 어려움을 돕고자 엔씨소프트는 사내 오픈소스 교육자료를 누구나 사용할 수 있도록 교안(PPT)와 강의 스크립트를 GitHub에 공개하였다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/7-training/ncsofttraining_hu_99d8b656159f9e27.png" width="900" height="483">
+<img class="card-img-top" src="/docs/governance_iso5230/7-training/ncsofttraining_hu_6c717d2b5f426b44.png" width="900" height="483">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -124,7 +124,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/governance_iso5230/7-training/kakaotraining_hu_2f60a795ba2987ca.png" width="900" height="507">
+<img class="card-img-top" src="/docs/governance_iso5230/7-training/kakaotraining_hu_6e5cf4fc24dd2096.png" width="900" height="507">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

@@ -11,7 +11,7 @@ LLMS index: [llms.txt](/llms.txt)
 이러한 복잡한 소프트웨어 공급망의 여러 조직 중 한 곳이라도 오픈소스 라이선스 의무를 준수하지 않거나 올바른 오픈소스 사용 정보를 제공하지 않으면 최종 소프트웨어를 배포하는 기업은 오픈소스 라이선스 의무 준수에 실패할 수밖에 없습니다. 이로 인해 소송을 제기당해 제품 판매가 중단되는 상황이 발생할 수도 있습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/supplychain_hu_7af9bd5b7a71dad7.png" width="813" height="552">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/supplychain_hu_c0466bcb8307541e.png" width="813" height="552">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -30,7 +30,7 @@ LLMS index: [llms.txt](/llms.txt)
 [Linux Foundation](https://www.linuxfoundation.org/)의 [OpenChain](https://www.openchainproject.org/) 프로젝트는 기업이 오픈소스 컴플라이언스를 위해 준수해야 할 핵심 사항을 간결하고 일관성 있게 정의하고, 이를 모두가 준수한다면 소프트웨어 공급망 전체에 걸쳐 오픈소스 라이선스 측면의 신뢰를 구축할 수 있다는 믿음으로 설립되었습니다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/openchainlogo_hu_7581e73b0d768d82.png" width="600" height="79">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/openchainlogo_hu_a3a5094479f35cea.png" width="600" height="79">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -68,7 +68,7 @@ OpenChain 규격은 오픈소스 컴플라이언스를 위한 핵심 요구사�
 오픈소스 컴플라이언스를 처음 시작하는 기업이라면 이러한 OpenChain 규격의 요구사항을 하나씩 충족해가면서 수준을 향상시키는 것이 좋은 전략입니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 604px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec_hu_14b92d21e27f4a59.png" width="594" height="775">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec_hu_a1568ec0f32ac4f5.png" width="594" height="775">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -83,7 +83,7 @@ OpenChain 규격은 오픈소스 컴플라이언스를 위한 핵심 요구사�
 이 OpenChain 규격은 2020년 12월 오픈소스 컴플라이언스에 대한 국제 표준인 [ISO/IEC 5230:2020](https://www.iso.org/standard/81039.html)으로 정식 등록되었습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 681px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/iso_hu_b3d947295c1afb95.png" width="671" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/iso_hu_d209686e83e6b23b.png" width="671" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -116,7 +116,7 @@ ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 모두 준수한다면 이 표�
 아래의 이미지는 ISO/IEC 5230이 요구하는 항목 번호를 나열한 그림입니다. 이 항목을 모두 충족하는 기업은 소프트웨어 공급망에서 투명하고 신뢰할 수 있는 오픈소스 거버넌스 체계를 구축하였다고 인정받을 수 있습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 682px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec3111_hu_ca82823cea2e5897.png" width="672" height="440">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/spec3111_hu_ed4d87bb516bb6c1.png" width="672" height="440">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -134,7 +134,7 @@ ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 모두 준수한다면 이 표�
 * 타사 인증
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/certify_hu_6ec67eff1d183638.png" width="900" height="596">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/certify_hu_b69b57d96af983d9.png" width="900" height="596">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -153,7 +153,7 @@ ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 모두 준수한다면 이 표�
 자체 인증은 OpenChain 프로젝트에서 가장 권장하는 방법이며, 비용이 발생하지 않는다는 장점이 있습니다. OpenChain Project는 기업이 OpenChain 규격을 준수하는지 자체적으로 확인할 수 있도록 [ISO/IEC 5230 자체 인증 웹사이트](https://openchainproject.org/checklist-iso-5230-2020)를 제공합니다. 기업의 오픈소스 담당자는 이 웹사이트에 가입해 온라인 자체 인증을 시작할 수 있습니다. 자체 인증은 아래와 같이 Yes/No 질문에 답변하는 방식으로 진행됩니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 846px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/question_hu_8cde8c4c95a4ad9f.png" width="836" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/question_hu_2a77bbfff74cff17.png" width="836" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -168,7 +168,7 @@ ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 모두 준수한다면 이 표�
 오픈소스 컴플라이언스 체계를 잘 구축하여 OpenChain 자체 인증의 모든 질문에 Yes로 대답할 수 있다면 이 결과를 웹사이트상에 제출할 수 있습니다(Conforming Submission). 그러면 [Linux Foundation](https://www.linuxfoundation.org/)의 간단한 문답식의 확인 절차를 거친 후 ISO/IEC 5230 인증을 선언할 수 있게 됩니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 877px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/sktannounce_hu_324168ab09a53f9c.png" width="867" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/sktannounce_hu_b913d30dc7ac13e8.png" width="867" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -183,7 +183,7 @@ ISO/IEC 5230과 ISO/IEC 18974의 요구사항을 모두 준수한다면 이 표�
 이렇게 인증 선언을 하게 되면, Global Software Supply Chain에서 ISO/IEC 5230을 준수하는 오픈소스 프로그램을 가진 기업으로 인정받게 됩니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 850px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/announcelogo_hu_baf613e8a8938a49.png" width="840" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/announcelogo_hu_f3c9d55df5d3c9e1.png" width="840" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -208,7 +208,7 @@ OpenChain 프로젝트는 자체 인증 방식을 권장합니다. 참고로, Op
 기업은 독립 기관으로부터의 공정한 평가와 컨설팅을 받아 컴플라이언스와 보안 보증 수준을 높이고, 다시 독립 평가를 수행하는 반복적인 과정을 통해 정책을 세분화하고 프로세스를 구축할 수 있습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/independent2_hu_ff934ab02968f472.png" width="900" height="409">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/independent2_hu_d75f9dc75615a60a.png" width="900" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -233,7 +233,7 @@ OpenChain 프로젝트는 자체 인증 방식을 권장합니다. 참고로, Op
 2024년 기준, OpenChain의 공인 타사 인증 기관은 [ORCRO](https://orcro.co.uk/), [PWC](https://www.pwc.de/en/opensource), [TÜV SÜD](https://www.tuvsud.com/), [Synopsys](https://www.synopsys.com/), [Bureau Veritas](https://group.bureauveritas.com/)입니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/3rdpartycertifiers_hu_7c533f93b38ab71e.png" width="900" height="320">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/3rdpartycertifiers_hu_55de1eeac0da1979.png" width="900" height="320">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -248,7 +248,7 @@ OpenChain 프로젝트는 자체 인증 방식을 권장합니다. 참고로, Op
 이들은 ISO/IEC 5230과 ISO/IEC 18974 적합 프로그램 확인을 위한 평가를 제공하고 통과한 기업에 인증서를 발급합니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/pwc_hu_5bb61fd5d863abe9.png" width="900" height="331">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/pwc_hu_63519bbd814e95b3.png" width="900" height="331">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -273,7 +273,7 @@ OpenChain 프로젝트는 자체 인증 방식을 권장합니다. 참고로, Op
 [OpenChain 프로젝트](https://www.openchainproject.org/)에서는 기업이 컴플라이언스 프로그램을 구축하는 데 필요한 정책 문서 템플릿, 교육 자료 등 다양한 문서 자료를 제공합니다. 이 자료는 OpenChain 규격을 준수하고 일반적인 오픈소스 컴플라이언스 활동을 지원하기 위해 고안됐으며, 누구나 자유롭게 사용할 수 있도록 CC-0 라이선스로 제공됩니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 843px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/resource_hu_bf8f6802d2e8f11f.png" width="833" height="557">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/resource_hu_e55fc97873df17ae.png" width="833" height="557">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -305,7 +305,7 @@ ISO/IEC 5230과 ISO/IEC 18974 표준의 적용은 글로벌 소프트웨어 공�
 이러한 전망을 반영하듯 2021년 5월, 폭스바겐 그룹의 [Scania](https://www.scania.com/)는 공급업체가 따라야 하는 자체 기업 표준(STD 4589)에 ISO/IEC 5230 준수를 요구하는 내용을 포함시켰습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/scania_hu_2ffdfde30b765742.png" width="313" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/scania_hu_3f8c82b69f2fba84.png" width="313" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -320,7 +320,7 @@ ISO/IEC 5230과 ISO/IEC 18974 표준의 적용은 글로벌 소프트웨어 공�
 또한, 2021년 7월, 자동차 및 산업 기술 기업인 [Bosch](https://www.bosch.com/)는 연말까지 모든 그룹사가 ISO/IEC 5230을 준수하는 프로그램을 갖추겠다고 선언하였습니다. 업계에서는 모든 자동차 제조사나 다른 산업에서도 소프트웨어 공급망 내에서 ISO/IEC 5230을 요구하기 시작하는 것은 시간 문제라는 전망을 내놓고 있습니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 323px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/bosch_hu_3bddac9870a960ef.png" width="313" height="600">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/0-openchain/bosch_hu_7e00d073656916d7.png" width="313" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

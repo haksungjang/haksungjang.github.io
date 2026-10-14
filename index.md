@@ -81,7 +81,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/featured-image_hu_86dfb449a319c456.jpg" alt="Featured Image for Rockchip과 FFmpeg의 라이선스 분쟁 사례" width="250" height="125">
+<img src="/blog/2026/02/20/rockchip%EA%B3%BC-ffmpeg%EC%9D%98-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%B6%84%EC%9F%81-%EC%82%AC%EB%A1%80/featured-image_hu_52289f72f930764e.jpg" alt="Featured Image for Rockchip과 FFmpeg의 라이선스 분쟁 사례" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">안내 이 글은 Claude Code를 이용해 작성했고, 인용한 핵심 사실은 1차 출처로 교차 검증했습니다. 다만 작성자 개인의 분석과 정리이며 법률 자문이 아니고, 침해 성립 여부와 같은 법적 판단은 다투어질 수 있는 사안이므로 구체적 사안의 판단은 변호사 등 전문가의 검토를 받으시기 바랍니다.
@@ -100,7 +100,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2025/01/13/avm-%EC%86%8C%EC%86%A1-lgpl-2.1-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B6%8C%EB%A6%AC%EC%99%80-%EC%84%A4%EC%B9%98%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5-%EC%9D%98%EB%AC%B4%EC%9D%98-%EC%9E%AC%EC%A1%B0%EB%AA%85/featured_AVM_hu_969cc81d3bcec3.png" alt="Featured Image for AVM 소송: LGPL-2.1 사용자 권리와 설치정보 제공 의무의 재조명" width="250" height="125">
+<img src="/blog/2025/01/13/avm-%EC%86%8C%EC%86%A1-lgpl-2.1-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B6%8C%EB%A6%AC%EC%99%80-%EC%84%A4%EC%B9%98%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5-%EC%9D%98%EB%AC%B4%EC%9D%98-%EC%9E%AC%EC%A1%B0%EB%AA%85/featured_AVM_hu_222acadceb4a540b.png" alt="Featured Image for AVM 소송: LGPL-2.1 사용자 권리와 설치정보 제공 의무의 재조명" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0"> 본 글은 Ars Technica의 &ldquo;German router maker is latest company to inadvertently clarify the LGPL license&rdquo; 기사를 바탕으로 작성되었습니다. 해당 기사는 AVM과 Sebastian Steck 간의 소송에 대한 자세한 내용과 LGPL 라이선스 준수의 중요성을 다루고 …</p>
@@ -117,7 +117,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2024/11/12/%ED%95%9C%EA%B5%AD-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B8%B0%EC%97%85%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-eu%EC%9D%98-3%EB%8C%80-%EB%94%94%EC%A7%80%ED%84%B8-%EA%B7%9C%EC%A0%9C-%ED%95%B5%EC%8B%AC-%EB%82%B4%EC%9A%A9/featured_CRA_hu_7a1b96ee8244cdf2.png" alt="Featured Image for 한국 소프트웨어 기업이 알아야 할 EU의 3대 디지털 규제 핵심 내용" width="250" height="125">
+<img src="/blog/2024/11/12/%ED%95%9C%EA%B5%AD-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B8%B0%EC%97%85%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-eu%EC%9D%98-3%EB%8C%80-%EB%94%94%EC%A7%80%ED%84%B8-%EA%B7%9C%EC%A0%9C-%ED%95%B5%EC%8B%AC-%EB%82%B4%EC%9A%A9/featured_CRA_hu_a5598d98e05a6c8.png" alt="Featured Image for 한국 소프트웨어 기업이 알아야 할 EU의 3대 디지털 규제 핵심 내용" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">서론 유럽연합(EU)이 최근 도입한 3대 주요 법안은 한국 기업에게 매우 중요한 의미를 갖습니다. Product Liability Directive(PLD), Cyber Resilience Act(CRA), 그리고 AI Act는 소프트웨어와 AI 시스템의 개발, 배포, 사용에 관한 포괄적인 규제 프레임워크를 제시하고 있습니다.
@@ -135,7 +135,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2024/11/06/to-mine-or-not-to-mine-%EB%8F%85%EC%9D%BC-%EB%B2%95%EC%9B%90%EC%9D%B4-ai-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%A0%80%EC%9E%91%EA%B6%8C-%EB%94%9C%EB%A0%88%EB%A7%88%EC%97%90-%EB%82%B4%EB%A6%B0-%ED%8C%90%EA%B2%B0/featured_Laion_hu_3eda4e29bc17e458.jpeg" alt="Featured Image for To Mine or Not To Mine: 독일 법원이 AI 시대의 저작권 딜레마에 내린 판결" width="250" height="125">
+<img src="/blog/2024/11/06/to-mine-or-not-to-mine-%EB%8F%85%EC%9D%BC-%EB%B2%95%EC%9B%90%EC%9D%B4-ai-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%A0%80%EC%9E%91%EA%B6%8C-%EB%94%9C%EB%A0%88%EB%A7%88%EC%97%90-%EB%82%B4%EB%A6%B0-%ED%8C%90%EA%B2%B0/featured_Laion_hu_b82af8a216e24b6f.jpeg" alt="Featured Image for To Mine or Not To Mine: 독일 법원이 AI 시대의 저작권 딜레마에 내린 판결" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">이 글은 JBB Rechtsanwält:innen의 블로그 포스트 &ldquo;To Mine or Not To Mine&rdquo;(https://jbb.de/to-mine-or-not-to-mine/)를 기반으로 작성하였으며, 텍스트 및 데이터 마이닝(TDM)에 관한 최근 독일 법원의 판결을 설명하고 관련 지식을 공유하기 위한 목적으로 공개합니다.
@@ -153,7 +153,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <figure class="float-start me-3 pt-1 d-none d-md-block" style="width: 250px">
-<img src="/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/featured_openwrt_hu_216b974d41d2721.png" alt="Featured Image for 중국 저작권 침해 소송 사례 “GPL 기반 소프트웨어 제품은 어차피 소스 공개 의무가 있으니 배껴도 되는 것 아닌가요?" width="250" height="125">
+<img src="/blog/2024/09/23/%EC%A4%91%EA%B5%AD-%EC%A0%80%EC%9E%91%EA%B6%8C-%EC%B9%A8%ED%95%B4-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-gpl-%EA%B8%B0%EB%B0%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%A0%9C%ED%92%88%EC%9D%80-%EC%96%B4%EC%B0%A8%ED%94%BC-%EC%86%8C%EC%8A%A4-%EA%B3%B5%EA%B0%9C-%EC%9D%98%EB%AC%B4%EA%B0%80-%EC%9E%88%EC%9C%BC%EB%8B%88-%EB%B0%B0%EA%BB%B4%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%83-%EC%95%84%EB%8B%8C%EA%B0%80%EC%9A%94/featured_openwrt_hu_6d8c1a1b1780dfe6.png" alt="Featured Image for 중국 저작권 침해 소송 사례 “GPL 기반 소프트웨어 제품은 어차피 소스 공개 의무가 있으니 배껴도 되는 것 아닌가요?" width="250" height="125">
 
 </figure>
 <p class="pt-0 mt-0">오픈소스 소프트웨어의 사용이 널리 퍼지면서, 이와 관련된 법적 문제들도 점점 더 복잡해지고 있습니다. 특히 GPL(GNU General Public License)과 같은 copyleft 라이선스를 사용하는 오픈소스 프로젝트를 기반으로 한 2차적 저작물의 저작권 문제는 많은 기업들에게 골치 아픈 주제입니다. 최근 중국에서 있었던 한 소프트웨어 저작권 침해 …</p>

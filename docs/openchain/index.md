@@ -24,7 +24,7 @@ LLMS index: [llms.txt](/llms.txt)
 이러한 복잡한 소프트웨어 공급망의 여러 조직 중 한 곳이라도 오픈소스 라이선스 의무를 준수하지 않거나 올바른 오픈소스 사용 정보를 제공하지 않으면 최종 소프트웨어를 배포하는 기업은 오픈소스 라이선스 의무 준수에 실패할 수밖에 없다. 이로 인해 소송을 제기당해 제품 판매가 중단되는 상황이 발생할 수도 있다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 823px">
-<img class="card-img-top" src="/docs/openchain/supplychain_hu_7af9bd5b7a71dad7.png" width="813" height="552">
+<img class="card-img-top" src="/docs/openchain/supplychain_hu_c0466bcb8307541e.png" width="813" height="552">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -43,7 +43,7 @@ LLMS index: [llms.txt](/llms.txt)
 Linux Foundation의 [OpenChain](https://www.openchainproject.org/) 프로젝트는 기업이 오픈소스 컴플라이언스를 위해 준수해야 할 핵심 사항을 간결하고 일관성 있게 정의하고, 이를 모두가 준수한다면 소프트웨어 공급망 전체에 걸쳐 오픈소스 라이선스 측면의 신뢰를 구축할 수 있다는 믿음으로 설립되었다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/docs/openchain/openchainlogo_hu_7581e73b0d768d82.png" width="600" height="79">
+<img class="card-img-top" src="/docs/openchain/openchainlogo_hu_a3a5094479f35cea.png" width="600" height="79">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -86,7 +86,7 @@ OpenChain 규격은 오픈소스 컴플라이언스를 위한 핵심 요구사�
 오픈소스 컴플라이언스를 처음 시작하는 기업이라면 이러한 OpenChain 규격의 요구사항을 하나씩 충족해가면서 수준을 향상시키는 것이 좋은 전략이다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 604px">
-<img class="card-img-top" src="/docs/openchain/spec_hu_14b92d21e27f4a59.png" width="594" height="775">
+<img class="card-img-top" src="/docs/openchain/spec_hu_a1568ec0f32ac4f5.png" width="594" height="775">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -104,7 +104,7 @@ OpenChain 규격은 오픈소스 컴플라이언스를 위한 핵심 요구사�
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 681px">
-<img class="card-img-top" src="/docs/openchain/iso_hu_b3d947295c1afb95.png" width="671" height="600">
+<img class="card-img-top" src="/docs/openchain/iso_hu_d209686e83e6b23b.png" width="671" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -138,7 +138,7 @@ OpenChain 프로젝트에서 제안하는 인증 방법은 세 가지 이다.
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 846px">
-<img class="card-img-top" src="/docs/openchain/question_hu_8cde8c4c95a4ad9f.png" width="836" height="600">
+<img class="card-img-top" src="/docs/openchain/question_hu_2a77bbfff74cff17.png" width="836" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -154,7 +154,7 @@ OpenChain 프로젝트에서 제안하는 인증 방법은 세 가지 이다.
 오픈소스 컴플라이언스 체계를 잘 구축하여 OpenChain 자체 인증 질문지의 모든 항목을 Yes로 대답할 수 있다면 이 결과를 웹사이트상에 제출할 수 있다<sub>Conforming Submission</sub>. 그러면 Linux Foundation의 간단한 문답식의 확인 절차를 거친 후 OpenChain 적합성 선언을 할 수 있게 된다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 667px">
-<img class="card-img-top" src="/docs/openchain/announce_hu_ba20ec87ce034d5b.png" width="657" height="483">
+<img class="card-img-top" src="/docs/openchain/announce_hu_972fb5ec6029697c.png" width="657" height="483">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -169,7 +169,7 @@ OpenChain 프로젝트에서 제안하는 인증 방법은 세 가지 이다.
 그렇게 OpenChain 적합성 선언을 하게 되면, OpenChain에 적합한 오픈소스 프로그램을 가진 기업으로 인정됨과 동시에, OpenChain 프로젝트의 웹사이트에 기업의 로고를 등록할 수 있게 된다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/organization_hu_6cb29912cf727517.png" width="900" height="464">
+<img class="card-img-top" src="/docs/openchain/organization_hu_bef3c564a9f2df25.png" width="900" height="464">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -184,7 +184,7 @@ OpenChain 프로젝트에서 제안하는 인증 방법은 세 가지 이다.
 OpenChain 적합 프로그램을 보유한 기업에는 OpenChain 로고를 사용할 수 있는 자격이 주어진다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/certilogo_hu_c76acac972f86a80.png" width="900" height="396">
+<img class="card-img-top" src="/docs/openchain/certilogo_hu_944946e2ec0bc921.png" width="900" height="396">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -208,7 +208,7 @@ OpenChain 적합 프로그램을 보유한 기업에는 OpenChain 로고를 사�
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/independent2_hu_ff934ab02968f472.png" width="900" height="409">
+<img class="card-img-top" src="/docs/openchain/independent2_hu_d75f9dc75615a60a.png" width="900" height="409">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -233,7 +233,7 @@ OpenChain 적합 프로그램을 보유한 기업에는 OpenChain 로고를 사�
 [^program]: 공개소프트웨어 활용 지원 프로그램 - https://www.oss.kr/news/show/49e410fb-604d-4d35-ba25-8286b5f2c50d
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/openup2_hu_3112aa8297083f2f.png" width="900" height="600">
+<img class="card-img-top" src="/docs/openchain/openup2_hu_5740a7d74e7b7167.png" width="900" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -257,7 +257,7 @@ OpenChain 적합 프로그램을 보유한 기업에는 OpenChain 로고를 사�
 [^TUVSUD]: TÜV SÜD - https://www.tuvsud.com
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 548px">
-<img class="card-img-top" src="/docs/openchain/3rdparty_hu_a60c20bdf04f8bb1.png" width="538" height="177">
+<img class="card-img-top" src="/docs/openchain/3rdparty_hu_bd18782c6060dc15.png" width="538" height="177">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -272,7 +272,7 @@ OpenChain 적합 프로그램을 보유한 기업에는 OpenChain 로고를 사�
 이들은 ISO/IEC 5230 적합 프로그램 확인을 위한 평가를 제공하고 통과한 기업에 인증서를 발급한다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/openchain/pwc_hu_5bb61fd5d863abe9.png" width="900" height="331">
+<img class="card-img-top" src="/docs/openchain/pwc_hu_63519bbd814e95b3.png" width="900" height="331">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -294,7 +294,7 @@ OpenChain 적합 프로그램을 보유한 기업에는 OpenChain 로고를 사�
 OpenChain 프로젝트에서는 기업이 컴플라이언스 프로그램을 구축하는 데 필요한 정책 문서 템플릿, 교육 자료 등 다양한 문서 자료를 제공한다. 이 자료는 OpenChain 규격을 준수하고 일반적인 오픈소스 컴플라이언스 활동을 지원하기 위해 고안됐으며, 누구나 자유롭게 사용할 수 있도록 CC-0 라이선스로 제공된다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 843px">
-<img class="card-img-top" src="/docs/openchain/resource_hu_bf8f6802d2e8f11f.png" width="833" height="557">
+<img class="card-img-top" src="/docs/openchain/resource_hu_e55fc97873df17ae.png" width="833" height="557">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -762,7 +762,7 @@ Verification material(s):
 Linux Foundation은 기업이 오픈소스 담당자의 연락처를 공개할 수 있도록 Open Compliance Directory라는 공간을 마련하였다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 627px">
-<img class="card-img-top" src="/docs/openchain/directory_hu_93863db1b18bfa43.png" width="617" height="600">
+<img class="card-img-top" src="/docs/openchain/directory_hu_bb9b2f446b7b1e9a.png" width="617" height="600">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -926,7 +926,7 @@ OSRB는 상위 조직의 장에게 문제를 공유하고 해결을 요청한다
 참고로, OpenChain 프로젝트에서는 파트너 프로그램을 통해 오픈소스 관련 자문을 제공하는 글로벌 법무법인 리스트를 제공한다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 870px">
-<img class="card-img-top" src="/docs/openchain/partners_hu_28a06872fd670b42.png" width="860" height="572">
+<img class="card-img-top" src="/docs/openchain/partners_hu_6063527a42e55e8f.png" width="860" height="572">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1334,7 +1334,7 @@ Verification Materials(s):
 또한, SK텔레콤과 같이 웹사이트를 이용하여 이를 외부에 알리는 것도 좋은 방법이다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 710px">
-<img class="card-img-top" src="/docs/openchain/iso5230-skt_hu_36821d868f351c8a.png" width="700" height="504">
+<img class="card-img-top" src="/docs/openchain/iso5230-skt_hu_c664b7df3614c093.png" width="700" height="504">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1684,7 +1684,7 @@ OOO 주식회사(이하 "회사"라 함)는 소프트웨어를 포함하는 제�
 오픈소스 컴플라이언스 프로세스는 회사가 소프트웨어 제품 및 서비스를 개발하고 배포하기 위한 각 개발 단계에 맞게 오픈소스 라이선스 의무 준수를 위해 수행해야 할 절차를 정의한다. 소프트웨어 제품 개발/배포에 관여하는 모든 구성원은 다음의 오픈소스 컴플라이언스 프로세스 10단계를 준수한다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 871px">
-<img class="card-img-top" src="/docs/openchain/general-osc-process_hu_6a55f34038a4368b.png" width="861" height="902">
+<img class="card-img-top" src="/docs/openchain/general-osc-process_hu_3f7c79fa92cbe050.png" width="861" height="902">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1790,7 +1790,7 @@ OOO 주식회사(이하 "회사"라 함)는 소프트웨어를 포함하는 제�
 외부로부터의 오픈소스 컴플라이언스 문의에 신속하고 정확하게 대응한다면 소송까지 진행되는 위험을 크게 줄일 수 있다. 이를 위해 기업은 외부의 오픈소스 컴플라이언스 문의에 대응하기 위해 다음과 같은 프로세스를 준수한다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 1047px">
-<img class="card-img-top" src="/docs/openchain/general-inquiry-process_hu_e87661490555e0dd.png" width="1037" height="832">
+<img class="card-img-top" src="/docs/openchain/general-inquiry-process_hu_8f47cebea55caa3e.png" width="1037" height="832">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1863,7 +1863,7 @@ Open Source Tooling Group은 여러 기업의 오픈소스 전문가들이 이�
 오픈소스 컴플라이언스를 위해 소프트웨어 내에 포함된 오픈소스와 라이선스 정보를 검출하기 위해 소스 코드 스캔 도구를 사용할 수 있다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 484px">
-<img class="card-img-top" src="/docs/openchain/fossology1_hu_464a11d99cc93636.png" width="474" height="231">
+<img class="card-img-top" src="/docs/openchain/fossology1_hu_83c54685a3d05ab7.png" width="474" height="231">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -1967,7 +1967,7 @@ FOSSology의 기본 사용 절차는 다음과 같다.
 이렇듯, 오픈소스 정보를 추적하는 활동은 꼭 필요하다. 기업들은 이를 위해 자체 시스템을 구축하거나, 상용 서비스를 구매하여 사용하기도 한다. SW360은 Eclipse 재단에서 후원하는 오픈소스로서 소프트웨어 BOM에 대한 정보를 수집 및 추적하기 위한 웹 애플리케이션 및 저장소를 제공한다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 574px">
-<img class="card-img-top" src="/docs/openchain/sw3601_hu_14a225c7b925a83b.png" width="564" height="185">
+<img class="card-img-top" src="/docs/openchain/sw3601_hu_f70442714c5bda17.png" width="564" height="185">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

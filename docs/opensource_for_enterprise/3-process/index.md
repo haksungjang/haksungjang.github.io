@@ -9,7 +9,7 @@ LLMS index: [llms.txt](/llms.txt)
 오픈소스 라이선스 컴플라이언스 측면에서는 공급 소프트웨어를 개발하고 배포하면서 사용한 오픈소스에 대해 각 라이선스가 요구하는 조건을 준수하기 위한 활동을 수행하여 오픈소스 고지문(Notice), 공개할 소스 코드 (Source Code) 등의 컴플라이언스 산출물을 생성하게 됩니다.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 702px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/3-process/input_hu_eee543c7c23d09c5.png" width="692" height="176">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/3-process/input_hu_290ab2641e5f08ae.png" width="692" height="176">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

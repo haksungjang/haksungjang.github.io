@@ -52,7 +52,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 ### 1. VirtualApp (원고 측 소프트웨어)
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 210px">
-<img class="card-img-top" src="/blog/2021/11/15/%EC%A4%91%EA%B5%AD-%EC%B2%AB-gpl-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-virtualapp/featured_va_logo_hu_cca4d1636eea6ea8.png" width="200" height="103">
+<img class="card-img-top" src="/blog/2021/11/15/%EC%A4%91%EA%B5%AD-%EC%B2%AB-gpl-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-virtualapp/featured_va_logo_hu_f44fbe116408bb38.png" width="200" height="103">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -68,7 +68,7 @@ LLMS index: [llms.txt](/llms.txt)
 * GitHub : https://github.com/asLody/VirtualApp
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/blog/2021/11/15/%EC%A4%91%EA%B5%AD-%EC%B2%AB-gpl-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-virtualapp/virtualapp_hu_f34eb89f79959f6e.png" width="600" height="532">
+<img class="card-img-top" src="/blog/2021/11/15/%EC%A4%91%EA%B5%AD-%EC%B2%AB-gpl-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-virtualapp/virtualapp_hu_8cf7ca24bda5b1cd.png" width="600" height="532">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -113,7 +113,7 @@ VirtualApp의 코드를 상업적 이익, 내부 사용을 위해 자신의 코�
 Dim Sum Desktop은 VirtualApp과 마찬가지로 가상 안드로이드 환경을 제공하는 소프트웨어이며, 피고 Fujian Fengling Chuangjing Technology Co., Ltd.가 개발하였습니다. 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-<img class="card-img-top" src="/blog/2021/11/15/%EC%A4%91%EA%B5%AD-%EC%B2%AB-gpl-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-virtualapp/dimsum_hu_cbdbc772e23274b6.png" width="600" height="488">
+<img class="card-img-top" src="/blog/2021/11/15/%EC%A4%91%EA%B5%AD-%EC%B2%AB-gpl-%EC%86%8C%EC%86%A1-%EC%82%AC%EB%A1%80-virtualapp/dimsum_hu_f6a50b6d2184b794.png" width="600" height="488">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

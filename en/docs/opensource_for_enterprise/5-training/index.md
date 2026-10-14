@@ -123,7 +123,7 @@ Accordingly, an enterprise must provide open source training so that all in-hous
 Creating training materials from scratch can also be difficult for someone new to the role. To help with this difficulty, NCSOFT made its internal open source training materials available to anyone by publishing the lesson slides (PPT) and lecture scripts on GitHub.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/5-training/ncsofttraining_hu_99d8b656159f9e27.png" width="900" height="483">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/5-training/ncsofttraining_hu_6c717d2b5f426b44.png" width="900" height="483">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -139,7 +139,7 @@ Additionally, Kakao, a leading domestic platform company, has also made its open
 
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/5-training/kakaotraining_hu_2f60a795ba2987ca.png" width="900" height="507">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/5-training/kakaotraining_hu_6e5cf4fc24dd2096.png" width="900" height="507">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 

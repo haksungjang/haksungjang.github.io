@@ -65,7 +65,7 @@ In general, the following roles are needed to build an enterprise's open source 
 - Developer Relations
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 543px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/complianceofficer_hu_27ccab53fd425923.png" width="533" height="434">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/complianceofficer_hu_d2fc436465851e3e.png" width="533" height="434">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
@@ -175,7 +175,7 @@ A documented sample of roles, responsibilities, required competencies, and owner
 [SK telecom](https://www.sktelecom.com/) has formed an [OSRB](https://sktelecom.github.io/about/osrb/) to create open source policies and processes within the company, and collaborates to prepare response plans when issues arise.
 
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 471px">
-<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/sktosrb_hu_7da96304c6a03ac0.png" width="461" height="300">
+<img class="card-img-top" src="/docs/opensource_for_enterprise/1-teams/sktosrb_hu_7c1921e1307dd7e9.png" width="461" height="300">
 <figcaption class="card-body px-0 pt-2 pb-0">
 <p class="card-text">
 
