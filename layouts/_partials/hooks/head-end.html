@@ -55,8 +55,9 @@
   "author" $person
   | jsonify | safeJS }}</script>
 <script type="application/ld+json">{{ merge $person (dict "@context" "https://schema.org") | jsonify | safeJS }}</script>
-{{- else if .IsPage }}
-{{- /* blog 글은 BlogPosting, docs·research 등 나머지 글은 TechArticle */ -}}
+{{- else if or .IsPage (and .IsSection .Params.date) }}
+{{- /* blog 글은 BlogPosting, docs·research 등 나머지 글은 TechArticle.
+   research 보고서는 페이지 번들(_index.md)이라 섹션 페이지로 잡히므로, date가 있는 섹션도 글로 본다. */ -}}
 {{- $type := cond (eq .Section "blog") "BlogPosting" "TechArticle" -}}
 {{- $ld := dict
   "@context" "https://schema.org"
