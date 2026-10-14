@@ -122,6 +122,7 @@ params:
   # 각 서비스에 사이트를 등록하면 받는 content 값을 넣는다.
   # head 출력은 layouts/_partials/hooks/head-end.html 에서 처리한다.
   naver_site_verification: "0f8fd1e446e52bf05a391ca517c84114493b21ce"
+  bing_site_verification: "1119074DA0B972AAF7594CDA2BD17360"
   # bing_site_verification: ""
 
   # Enable Mermaid diagram rendering for fenced ```mermaid code blocks.
