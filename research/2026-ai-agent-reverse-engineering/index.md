@@ -41,31 +41,48 @@ PhotoCraft와 MALUS에 대해 법원 판단이 나온 것은 이번 조사에서
 
 REA는 MCP(Model Context Protocol) 서버로 코딩 에이전트에 붙습니다. README의 설명에 따르면 에이전트가 MCP로 REA를 호출해 대상을 점검하고, REA가 근거와 함께 결과를 돌려주며, 에이전트가 그 결과로 동작을 설명하거나 구현을 작성하고 테스트합니다. 네이티브 분석의 결과물은 의사코드(pseudocode)와 어셈블리이고, 심층 분석에는 Hopper, Ghidra, IDA 중 하나를 엔진으로 씁니다<a id="e3-ref-2"></a>[E3](#e3). 분석 자체는 로컬에서 돌지만, 결과를 받는 에이전트의 모델 제공자는 "자체 데이터 정책"을 따른다고 README가 직접 적고 있습니다<a id="e3-ref-3"></a>[E3](#e3).
 
+Hopper, Ghidra, IDA는 디스어셈블러이자 디컴파일러입니다. 소스 코드 없이 배포된 실행 파일의 기계어를 사람이 읽을 수 있는 어셈블리로 풀고, 다시 C 언어와 비슷한 의사코드로 되돌려 보여 줍니다. Ghidra는 미국 국가안보국(National Security Agency, NSA)이 공개한 오픈소스 도구이고<a id="d8-ref-1"></a>[D8](#d8), IDA는 Hex-Rays의, Hopper는 Cryptic Apps의 상용 제품입니다<a id="d2-ref-1"></a>[D2](#d2)·<a id="d7-ref-1"></a>[D7](#d7). REA가 직접 디컴파일하지는 않습니다. 이 도구 안에서 분석 스크립트를 실행해 결과를 받아 오고(그림 3), 에이전트는 그 결과를 읽습니다. JavaScript나 Electron 앱은 코드가 앱 패키지 안에 남아 있으므로 이런 엔진 없이 분석합니다<a id="e3-ref-4"></a>[E3](#e3).
+
 ![REA가 Hopper에서 /usr/bin/true를 분석하는 화면](rea-hopper-analysis.png)
 
-**그림 3.** REA가 Hopper에서 macOS의 `/usr/bin/true`를 분석하는 화면. 하단 로그에 REA가 실행한 스크립트가 보임 *(morluto/rea README 수록 이미지, 커밋 877d404<a id="e3-ref-4"></a>[E3](#e3))*
+**그림 3.** REA가 Hopper에서 macOS의 `/usr/bin/true`를 분석하는 화면. 하단 로그에 REA가 실행한 스크립트가 보임 *(morluto/rea README 수록 이미지, 커밋 877d404<a id="e3-ref-5"></a>[E3](#e3))*
 
 ![에이전트, REA 서버, 디컴파일러는 사용자 PC 안에 있고 모델 제공자만 외부에 있는 연결 구조](diagram-architecture.png)
 
-**그림 4.** 에이전트 역분석 도구의 연결 구조 *(REA README의 동작 설명<a id="e3-ref-5"></a>[E3](#e3)을 바탕으로 작성, 2026-10-14)*
+**그림 4.** 에이전트 역분석 도구의 연결 구조 *(REA README의 동작 설명<a id="e3-ref-6"></a>[E3](#e3)을 바탕으로 작성, 2026-10-14)*
 
-그림 4에서 눈여겨볼 지점은 두 곳입니다. 디컴파일 결과가 에이전트의 컨텍스트에 들어가는 순간 외부 모델 제공자에게도 전달되고, 같은 컨텍스트에서 구현 코드가 나옵니다. 앞의 것은 6장의 디컴파일러 약관 문제로, 뒤의 것은 바로 아래의 클린룸 문제로 이어집니다.
+그림 4의 모델 제공자는 코딩 에이전트가 쓰는 대규모 언어 모델(Large Language Model, LLM) 서비스입니다. REA가 설정을 지원하는 에이전트로 보면 Claude Code는 Anthropic의 Claude, Codex는 OpenAI의 모델, Gemini CLI는 Google의 Gemini를 씁니다<a id="e3-ref-7"></a>[E3](#e3). 그림 4에서 눈여겨볼 지점은 두 곳입니다. 디컴파일 결과가 에이전트의 컨텍스트에 들어가는 순간 외부 모델 제공자에게도 전달되고, 같은 컨텍스트에서 구현 코드가 나옵니다. 앞의 것은 6장의 디컴파일러 약관 문제로, 뒤의 것은 바로 아래의 클린룸 문제로 이어집니다.
 
-이런 연결 방식은 REA가 처음은 아닙니다. Ghidra용 GhidraMCP가 2025-03-23에, IDA Pro용 ida-pro-mcp가 2025-03-25에 저장소가 만들어졌습니다<a id="e9-ref-1"></a>[E9](#e9)·<a id="e10-ref-1"></a>[E10](#e10). 2026년에는 벤더가 직접 나섰습니다. Hex-Rays가 2026-09-25에 공식 IDA MCP 서버를 발표하면서 외부 AI 시스템과 통신하므로 모든 조직의 보안 정책에 맞지는 않을 수 있다고 밝히고, 신뢰할 수 없는 데이터를 다룰 때는 샌드박스에서 실행하라고 권고했고<a id="e13-ref-1"></a>[E13](#e13), Hopper와 JEB도 MCP 서버를 제공한다고 밝힙니다<a id="d7-ref-1"></a>[D7](#d7)·<a id="d10-ref-1"></a>[D10](#d10).
+### 실제로는 어떻게 동작할까
+
+REA 공식 사이트의 사례 하나를 따라가 보면 흐름이 구체적으로 보입니다. 1996년 Windows 게임 DX-Ball을 실행 파일로부터 유지보수 가능한 C 코드로 다시 만드는 프로젝트의 한 단계이고, 사례 페이지가 예로 든 지시는 "Use REA to find how DX-Ball calculates sound panning. Explain the calculation and show the code."입니다<a id="e14-ref-1"></a>[E14](#e14).
+
+- 에이전트가 REA의 `analyze_function`으로 주소 `0x406400`의 함수를 분석했습니다. 디컴파일러가 내놓은 첫 의사코드는 입력이 없는 함수로 보여 계산식을 알 수 없었습니다.
+- 에이전트는 어셈블리 명령을 직접 읽어 숨은 입력을 찾았고, 이 함수를 부르는 쪽(`0x411f40`)을 분석해 그 입력이 벽돌의 화면 x좌표라는 것을 확인했습니다.
+- `read_bytes`로 실행 파일 안의 상수 1.5625와 500.0을 읽었습니다.
+- 이를 바탕으로 C 함수 `dxball_screen_pan`을 작성하고 원본과 3,205가지 경우의 결과를 비교했습니다. 당시 컴파일러(VC4.0)로 다시 컴파일하면 원본 함수와 같은 기계어 63바이트가 나온다고 사례 페이지는 밝힙니다.
+
+디컴파일러의 의사코드는 출발점일 뿐이고, 빈 곳은 에이전트가 어셈블리와 상수를 오가며 메웠습니다. 마지막 단계는 이 글의 주제와 바로 닿아 있습니다. 원본과 같은 기계어가 나오도록 맞춘 코드는 기능만 참고해 새로 쓴 코드가 아니라 원본 표현을 되살린 코드이고, 3장에서 다룰 "표현이 실질적으로 유사한 프로그램"인지가 정확히 이런 결과물에서 문제가 됩니다.
+
+같은 사이트의 Notion 사례는 상용 앱의 기능을 추적한 경우입니다. 에이전트는 Notion 데스크톱 앱에 패키지된 JavaScript를 분석해, 복사한 텍스트와 HTML이 시스템 클립보드에 쓰이기까지의 호출 경로를 단계별 코드와 함께 보여 줬습니다<a id="e15-ref-1"></a>[E15](#e15). 이 사례 페이지는 분석 권한에 대해서는 언급하지 않습니다.
+
+### 클린룸 관행과 부딪히는 지점
+
+이런 연결 방식은 REA가 처음은 아닙니다. Ghidra용 GhidraMCP가 2025-03-23에, IDA Pro용 ida-pro-mcp가 2025-03-25에 저장소가 만들어졌습니다<a id="e9-ref-1"></a>[E9](#e9)·<a id="e10-ref-1"></a>[E10](#e10). 2026년에는 벤더가 직접 나섰습니다. Hex-Rays가 2026-09-25에 공식 IDA MCP 서버를 발표하면서 외부 AI 시스템과 통신하므로 모든 조직의 보안 정책에 맞지는 않을 수 있다고 밝히고, 신뢰할 수 없는 데이터를 다룰 때는 샌드박스에서 실행하라고 권고했고<a id="e13-ref-1"></a>[E13](#e13), Hopper와 JEB도 MCP 서버를 제공한다고 밝힙니다<a id="d7-ref-2"></a>[D7](#d7)·<a id="d10-ref-1"></a>[D10](#d10).
 
 이 구조가 기존 클린룸 관행과 부딪힙니다. 클린룸 설계는 원본을 분석하는 팀과 구현하는 팀을 나누고, 구현팀은 원본 대신 기능 명세서만 보고 작업하는 방식으로 설명됩니다<a id="f18-ref-1"></a>[F18](#f18). 반면 에이전트 세션에서는 디컴파일 결과를 받은 바로 그 컨텍스트에서 구현 코드가 작성됩니다. 분석과 구현 사이에 사람이 검토한 명세서라는 차단 단계가 없으므로, 나중에 "원본 표현을 보지 않고 만들었다"고 설명할 근거가 남지 않습니다.
 
 ![전통적 클린룸 5단계와 에이전트 단일 세션 비교](diagram-cleanroom.png)
 
-**그림 5.** 전통적 클린룸과 에이전트 단일 세션의 정보 흐름 비교 *(REA README의 동작 설명<a id="e3-ref-6"></a>[E3](#e3)을 바탕으로 작성, 2026-10-14)*
+**그림 5.** 전통적 클린룸과 에이전트 단일 세션의 정보 흐름 비교 *(REA README의 동작 설명<a id="e3-ref-8"></a>[E3](#e3)을 바탕으로 작성, 2026-10-14)*
 
-REA 문서를 공정하게 읽으면 도구 쪽도 이 위험을 의식하고 있습니다. DISCLAIMER는 보안 연구, 취약점 연구와 조정된 공개, 상호운용성, 소프트웨어 보존, 본인 소유이거나 권한을 받은 소프트웨어의 감사를 허용 목적으로 들고, "copying proprietary software or reproducing its protected code and assets"는 지원하지 않는다고 명시합니다<a id="e4-ref-1"></a>[E4](#e4). 같은 문서는 소스와 비슷한 출력을 얻어도 원본에 대한 권리가 생기지 않으며, 역분석이 관할권이나 대상 소프트웨어의 라이선스에 따라 제한될 수 있다고 적습니다<a id="e4-ref-2"></a>[E4](#e4). README도 IDA Pro, Hopper, JEB 같은 상용 도구를 합법적으로 취득해야 하고 크랙본과 라이선스 우회는 허용하지 않는다고 밝힙니다<a id="e3-ref-7"></a>[E3](#e3). 공식 웹사이트의 소개 문구는 "Find out how software works"로, 저장소 README보다 설명 중심입니다<a id="e7-ref-1"></a>[E7](#e7).
+REA 문서를 공정하게 읽으면 도구 쪽도 이 위험을 의식하고 있습니다. DISCLAIMER는 보안 연구, 취약점 연구와 조정된 공개, 상호운용성, 소프트웨어 보존, 본인 소유이거나 권한을 받은 소프트웨어의 감사를 허용 목적으로 들고, "copying proprietary software or reproducing its protected code and assets"는 지원하지 않는다고 명시합니다<a id="e4-ref-1"></a>[E4](#e4). 같은 문서는 소스와 비슷한 출력을 얻어도 원본에 대한 권리가 생기지 않으며, 역분석이 관할권이나 대상 소프트웨어의 라이선스에 따라 제한될 수 있다고 적습니다<a id="e4-ref-2"></a>[E4](#e4). README도 IDA Pro, Hopper, JEB 같은 상용 도구를 합법적으로 취득해야 하고 크랙본과 라이선스 우회는 허용하지 않는다고 밝힙니다<a id="e3-ref-9"></a>[E3](#e3). 공식 웹사이트의 소개 문구는 "Find out how software works"로, 저장소 README보다 설명 중심입니다<a id="e7-ref-1"></a>[E7](#e7).
 
-한편 README 첫 문단의 "build a version for your project"와 DISCLAIMER의 비지원 항목 사이에서 어느 수준의 재구현이 어느 쪽에 속하는지 가르는 기준은 두 문서 어디에도 없습니다<a id="e3-ref-8"></a>[E3](#e3)·<a id="e4-ref-3"></a>[E4](#e4). 그 판단은 사용자 몫으로 남고, DISCLAIMER도 에이전트에게 지시한 행동의 책임이 사용자에게 있다고 적습니다<a id="e4-ref-4"></a>[E4](#e4). 기업이 사내 기준을 따로 세워야 하는 이유가 여기에 있습니다.
+한편 README 첫 문단의 "build a version for your project"와 DISCLAIMER의 비지원 항목 사이에서 어느 수준의 재구현이 어느 쪽에 속하는지 가르는 기준은 두 문서 어디에도 없습니다<a id="e3-ref-10"></a>[E3](#e3)·<a id="e4-ref-3"></a>[E4](#e4). 그 판단은 사용자 몫으로 남고, DISCLAIMER도 에이전트에게 지시한 행동의 책임이 사용자에게 있다고 적습니다<a id="e4-ref-4"></a>[E4](#e4). 기업이 사내 기준을 따로 세워야 하는 이유가 여기에 있습니다.
 
 ![REA README 첫 단락과 "Ask your agent" 예시 지시문](rea-readme-pitch.png)
 
-**그림 6.** REA README의 소개 단락과 예시 지시문. 가운데 설치 안내는 생략 *(morluto/rea README.md, 커밋 877d404<a id="e3-ref-9"></a>[E3](#e3), 2026-10-14 캡처)*
+**그림 6.** REA README의 소개 단락과 예시 지시문. 가운데 설치 안내는 생략 *(morluto/rea README.md, 커밋 877d404<a id="e3-ref-11"></a>[E3](#e3), 2026-10-14 캡처)*
 
 ![REA DISCLAIMER의 Responsible use 절](rea-disclaimer-responsible-use.png)
 
@@ -203,24 +220,24 @@ AI 재작성이 실제 분쟁으로 번진 사례는 오픈소스 쪽에서 먼�
 
 ### 디컴파일러 라이선스를 확인합니다
 
-REA 같은 통합 도구는 엔진을 사용자 환경에서 찾아 쓰므로, 어떤 에디션의 디컴파일러가 붙어 있는지가 곧 계약 문제입니다. REA README는 Hopper 최초 실행 시 데모 모드와 라이선스 활성화 중 하나를 고르는 대화상자가 뜬다고 안내합니다<a id="e3-ref-10"></a>[E3](#e3). 데모를 고르면 아래 표의 데모 제한이 그대로 적용됩니다.
+REA 같은 통합 도구는 엔진을 사용자 환경에서 찾아 쓰므로, 어떤 에디션의 디컴파일러가 붙어 있는지가 곧 계약 문제입니다. REA README는 Hopper 최초 실행 시 데모 모드와 라이선스 활성화 중 하나를 고르는 대화상자가 뜬다고 안내합니다<a id="e3-ref-12"></a>[E3](#e3). 데모를 고르면 아래 표의 데모 제한이 그대로 적용됩니다.
 
 | 도구 | 업무 사용 시 확인할 원문 |
 |---|---|
-| IDA Free, IDA Home | EULA: Free, Home, Demo License는 "only permitted in a non-commercial environment"<a id="d1-ref-1"></a>[D1](#d1). FAQ: "No, IDA Free is dedicated to non-commercial use only."<a id="d2-ref-1"></a>[D2](#d2) 상업 이용은 IDA Pro만 가능<a id="d2-ref-2"></a>[D2](#d2) |
+| IDA Free, IDA Home | EULA: Free, Home, Demo License는 "only permitted in a non-commercial environment"<a id="d1-ref-1"></a>[D1](#d1). FAQ: "No, IDA Free is dedicated to non-commercial use only."<a id="d2-ref-2"></a>[D2](#d2) 상업 이용은 IDA Pro만 가능<a id="d2-ref-3"></a>[D2](#d2) |
 | Hopper 데모 | "Demo limitations are: No save/export of disassembly or modified binaries, Debugger backend is disabled, Sessions are limited to 30 minutes."<a id="d5-ref-1"></a>[D5](#d5) |
 | Binary Ninja Free | "Not for commercial purposes"<a id="d11-ref-1"></a>[D11](#d11). 라이선스: "for your internal evaluation and non-commercial purposes only"<a id="d12-ref-1"></a>[D12](#d12) |
 | JEB | "Unless explicitly permitted by the license type (e.g., "JEB Pro OEM"...), you may not publicly distribute, disclose, or make available to third parties any output generated by the Software Product, including but not limited to decompiled code, reconstructed artifacts, and analysis reports."<a id="d9-ref-1"></a>[D9](#d9) |
-| Ghidra | Apache License 2.0<a id="d8-ref-1"></a>[D8](#d8) |
+| Ghidra | Apache License 2.0<a id="d8-ref-2"></a>[D8](#d8) |
 | JADX | Apache License 2.0<a id="d13-ref-1"></a>[D13](#d13) |
 
 **표 4.** 주요 디컴파일러의 업무 사용 관련 조건 *(각 벤더 웹 게시본, 2026-10-14 확인)*
 
-IDA Free, IDA Home, Binary Ninja Free는 약관상 상업 환경에서 쓸 수 없으므로<a id="d1-ref-2"></a>[D1](#d1)·<a id="d2-ref-3"></a>[D2](#d2)·<a id="d12-ref-2"></a>[D12](#d12) 업무용 분석 엔진에서 제외합니다. JEB 조항은 에이전트 환경에서 따로 검토가 필요합니다. 디컴파일 출력이 모델 제공자에게 전송되는 구조에서<a id="e3-ref-11"></a>[E3](#e3) 이 전송이 "third parties"에 대한 제공에 해당하는지는 약관 문언만으로 판단하기 어렵기 때문입니다. 표의 문구는 웹 게시본 기준이므로 실제 정책으로 확정할 때는 설치본에 표시되는 약관과 구매 계약서를 대조해야 합니다. 비용과 계약 부담을 줄이려면 Apache 2.0인 Ghidra와 JADX를 사내 기본 엔진으로 두는 방안도 있습니다. 이 경우에도 도구 라이선스가 분석 대상 소프트웨어에 대한 권리를 주지는 않습니다.
+IDA Free, IDA Home, Binary Ninja Free는 약관상 상업 환경에서 쓸 수 없으므로<a id="d1-ref-2"></a>[D1](#d1)·<a id="d2-ref-4"></a>[D2](#d2)·<a id="d12-ref-2"></a>[D12](#d12) 업무용 분석 엔진에서 제외합니다. JEB 조항은 에이전트 환경에서 따로 검토가 필요합니다. 디컴파일 출력이 모델 제공자에게 전송되는 구조에서<a id="e3-ref-13"></a>[E3](#e3) 이 전송이 "third parties"에 대한 제공에 해당하는지는 약관 문언만으로 판단하기 어렵기 때문입니다. 표의 문구는 웹 게시본 기준이므로 실제 정책으로 확정할 때는 설치본에 표시되는 약관과 구매 계약서를 대조해야 합니다. 비용과 계약 부담을 줄이려면 Apache 2.0인 Ghidra와 JADX를 사내 기본 엔진으로 두는 방안도 있습니다. 이 경우에도 도구 라이선스가 분석 대상 소프트웨어에 대한 권리를 주지는 않습니다.
 
 ### MCP 서버 도입 승인 절차에 넣습니다
 
-MCP 명세는 보안 원칙으로 도구 호출을 임의 코드 실행으로 취급하고 호스트가 도구 호출 전에 사용자의 명시적 동의를 받도록 정합니다. 다만 같은 명세가 밝히듯 프로토콜 수준에서 이를 강제할 수는 없으므로, 실제 통제는 구현과 조직 설정에 달려 있습니다<a id="e8-ref-1"></a>[E8](#e8). 역분석 MCP 서버는 여기에 더해 분석 대상을 실행하거나 기기를 조작하는 기능까지 갖춘 경우가 있고, REA DISCLAIMER도 "Local operation does not establish authorization"이라고 적습니다<a id="e4-ref-7"></a>[E4](#e4). 일반 MCP 서버 심사 항목(권한 범위, 데이터 반출 경로)에 더해 허용 목적 확인, 연결된 디컴파일러의 라이선스 판별, 디컴파일 결과의 외부 모델 전송 여부를 심사 항목으로 넣는 것이 좋습니다. REA처럼 릴리스가 잦은 도구는<a id="e3-ref-12"></a>[E3](#e3) 버전을 고정하고 변경 시 다시 확인합니다.
+MCP 명세는 보안 원칙으로 도구 호출을 임의 코드 실행으로 취급하고 호스트가 도구 호출 전에 사용자의 명시적 동의를 받도록 정합니다. 다만 같은 명세가 밝히듯 프로토콜 수준에서 이를 강제할 수는 없으므로, 실제 통제는 구현과 조직 설정에 달려 있습니다<a id="e8-ref-1"></a>[E8](#e8). 역분석 MCP 서버는 여기에 더해 분석 대상을 실행하거나 기기를 조작하는 기능까지 갖춘 경우가 있고, REA DISCLAIMER도 "Local operation does not establish authorization"이라고 적습니다<a id="e4-ref-7"></a>[E4](#e4). 일반 MCP 서버 심사 항목(권한 범위, 데이터 반출 경로)에 더해 허용 목적 확인, 연결된 디컴파일러의 라이선스 판별, 디컴파일 결과의 외부 모델 전송 여부를 심사 항목으로 넣는 것이 좋습니다. REA처럼 릴리스가 잦은 도구는<a id="e3-ref-14"></a>[E3](#e3) 버전을 고정하고 변경 시 다시 확인합니다.
 
 역분석 MCP 서버도 다른 MCP 서버와 같은 승인 절차를 거치게 합니다. 공개 패키지로 배포되는 서버는 출처를 확인해 전수 심사하고, 권한 범위와 데이터 반출 경로를 확인한 뒤 허용 목록에 올리며, 그 서버로 만든 코드에는 커밋 단위로 AI 사용 사실을 남깁니다. 그 위에 "무엇을 분석해도 되는가"라는 목적 심사를 더하는 것이 역분석 도구에 필요한 추가 단계입니다.
 
@@ -299,6 +316,10 @@ MCP 명세는 보안 원칙으로 도구 호출을 임의 코드 실행으로 �
 <a id="e10"></a>**E10.** mrexodia. *ida-pro-mcp* (저장소, 생성 2025-03-25). <https://github.com/mrexodia/ida-pro-mcp> - *용도: IDA Pro용 비공식 MCP 서버.* <a href="#e10-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
 
 <a id="e13"></a>**E13.** Ogilvie, Duncan (Hex-Rays) (2026-09-25). *Hex-Rays IDA MCP Server*. <https://hex-rays.com/blog/hex-rays-ida-mcp-server> - *용도: 공식 IDA MCP 서버 발표와 보안 권고.* <a href="#e13-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
+
+<a id="e14"></a>**E14.** REA 프로젝트. *DX-Ball Reverse Engineering: Sound Panning* (공식 사이트 사례). <https://rea.tools/showcase/dx-ball/> - *용도: 함수 분석, 상수 읽기, C 함수 복원과 기계어 일치 검증 과정.* <a href="#e14-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
+
+<a id="e15"></a>**E15.** REA 프로젝트. *Notion Electron Reverse Engineering: Clipboard* (공식 사이트 사례). <https://rea.tools/showcase/notion/> - *용도: Electron 앱 JavaScript 분석으로 클립보드 호출 경로 추적.* <a href="#e15-ref-1" onclick="event.preventDefault(); history.back(); return false;" title="본문으로 돌아가기">↩</a>
 
 ### F. 사례·분석
 
