@@ -1,0 +1,89 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:37:35Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "f35fa9a9-155c-4ed4-b2aa-e8c9a9e9be68",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "10444be1-b511-42e4-aa80-f9030501e248",
+      "type": "library",
+      "name": "debug",
+      "version": "4.3.4",
+      "purl": "pkg:npm/debug@4.3.4",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "bun.lock"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "f1916343-d7a4-40e7-b69a-7a49cf40853f",
+      "type": "library",
+      "name": "is-number",
+      "version": "7.0.0",
+      "purl": "pkg:npm/is-number@7.0.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "bun.lock"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "16976202-b644-401b-be2e-eebb977401be",
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.2",
+      "purl": "pkg:npm/ms@2.1.2",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "bun.lock"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "1df11120-d27e-4fc9-89ea-e5dc939432b6",
+      "type": "library",
+      "name": "scab-bun-lock",
+      "version": "1.0.0",
+      "purl": "pkg:npm/scab-bun-lock@1.0.0?source=UNKNOWN",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package.json"
+          }
+        ]
+      }
+    }
+  ]
+}

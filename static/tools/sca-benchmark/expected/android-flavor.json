@@ -1,0 +1,85 @@
+{
+  "fixture": "android-flavor",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/android-flavor"
+  },
+  "dbSnapshot": "2026-06-01",
+  "componentsComplete": true,
+  "vulnComplete": false,
+  "notes": "Android 앱 소스, Gradle, lockfile 없음. Android Gradle Plugin 8.5.2 + product flavor(free, paid). 플레이버가 있으면 배포 런타임 구성 이름이 releaseRuntimeClasspath 가 아니라 freeReleaseRuntimeClasspath / paidReleaseRuntimeClasspath 로 바뀐다. 스코프 인지 도구가 (1) 그 변형 이름을 하드코딩 없이 감지하는지, (2) 플레이버 전용 의존성을 다른 변형에 섞지 않는지를 측정한다. 정답 기준은 알파벳순 첫 배포 변형인 free release 의 실제 APK(R8 축소) 구성이다 — 스코프 인지 도구가 기본으로 해석하는 변형이며(예: bomlens 는 sort -u | head -1 로 freeReleaseRuntimeClasspath 선택), paid 전용 retrofit 은 여기에 없다. 정답 도출(2026-07-05, Android SDK android-34 + build-tools 34.0.0, Gradle 8.9, R8, min_api 24): 임시 사본에서 ./gradlew :app:assembleFreeRelease 로 R8 free release APK 를 빌드하고, R8 mapping.txt 의 원본 클래스와 freeReleaseRuntimeClasspath 해석 아티팩트(8개) 각각의 클래스를 교집합해 APK 에 실제 남는 4종을 정답으로 삼았다(okhttp, gson 직접 + okio-jvm, kotlin-stdlib 전이). componentsComplete=true 라 precision 도 채점한다. 과탐 함정: paid 전용 retrofit(모든 구성 합치는 도구의 FP), R8 축소로 잘린 4종(annotations, kotlin-stdlib-common/jdk7/jdk8), gradle wrapper. KMP 모듈은 실제 링크 아티팩트 -jvm 변형으로 담았다(okio-jvm). 라이선스 4종 모두 Apache-2.0. 재현: 직접 의존 버전 고정, 전이는 immutable POM, R8 결과는 AGP 8.5.2 고정 시 재현. 반드시 사본에서 빌드해 부산물이 fixture 에 남지 않게 한다.",
+  "components": [
+    {
+      "purl": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "version": "4.12.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.code.gson/gson@2.10.1",
+      "version": "2.10.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.squareup.okio/okio-jvm@3.6.0",
+      "version": "3.6.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.10",
+      "version": "1.9.10",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/com.squareup.retrofit2/retrofit@2.11.0",
+      "reason": "paid 플레이버 전용 의존성(paidImplementation)으로 free 배포 변형(freeReleaseRuntimeClasspath)에는 없다. 배포 변형별 scope 를 인지하지 못하고 모든 구성을 합쳐 내는 도구의 과탐 — 정답(free release APK) 기준으로 제외"
+    },
+    {
+      "id": "pkg:maven/org.gradle.wrapper.GradleWrapperMain/gradle-wrapper",
+      "reason": "저장소에 포함된 빌드 도구(gradle wrapper jar)로 배포 산출물이 아니다 — 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains/annotations@13.0",
+      "reason": "free 배포 런타임 classpath 에는 있으나 R8 축소로 클래스가 전부 제거돼 free release APK 에 없다(annotations 는 미참조, kotlin-stdlib-common/jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-common@1.9.10",
+      "reason": "free 배포 런타임 classpath 에는 있으나 R8 축소로 클래스가 전부 제거돼 free release APK 에 없다(annotations 는 미참조, kotlin-stdlib-common/jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk7@1.9.10",
+      "reason": "free 배포 런타임 classpath 에는 있으나 R8 축소로 클래스가 전부 제거돼 free release APK 에 없다(annotations 는 미참조, kotlin-stdlib-common/jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8@1.9.10",
+      "reason": "free 배포 런타임 classpath 에는 있으나 R8 축소로 클래스가 전부 제거돼 free release APK 에 없다(annotations 는 미참조, kotlin-stdlib-common/jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/com.squareup.okio/okio-jvm@3.6.0",
+      "reason": "okhttp 의 전이 의존. Kotlin 멀티플랫폼 모듈이라 실제 링크 아티팩트는 okio-jvm 이다(선언명 okio 로 보고하는 도구도 있음)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "reason": "입력(build.gradle)에 라이선스 메타데이터가 없다 — 저장소 조회나 아티팩트 설치를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ]
+}

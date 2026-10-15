@@ -1,0 +1,224 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:319bcff8-3325-4145-b62a-09b2cfc4348a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T01:15:57+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "6756a286-a9b3-48ca-b9c9-6fa3bd539abd",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/npm-nonshipped",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "8d9efebf-401c-4892-9596-1e24498dbd35",
+      "type": "application",
+      "name": "examples/demo/package-lock.json",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "98e47204-00cd-4e98-b19e-0fc52eefe3e3",
+      "type": "application",
+      "name": "test/fixtures/app/package-lock.json",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f748a00b-631f-4d07-bcf1-8ce6802ef79e",
+      "type": "application",
+      "name": "package-lock.json",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/debug@4.3.4",
+      "type": "library",
+      "name": "debug",
+      "version": "4.3.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/debug@4.3.4",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "debug@4.3.4"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/kind-of@6.0.3",
+      "type": "library",
+      "name": "kind-of",
+      "version": "6.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/kind-of@6.0.3",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "kind-of@6.0.3"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/left-pad@1.3.0",
+      "type": "library",
+      "name": "left-pad",
+      "version": "1.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "WTFPL"
+          }
+        }
+      ],
+      "purl": "pkg:npm/left-pad@1.3.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "left-pad@1.3.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/ms@2.1.2",
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ms@2.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "ms@2.1.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "6756a286-a9b3-48ca-b9c9-6fa3bd539abd",
+      "dependsOn": [
+        "8d9efebf-401c-4892-9596-1e24498dbd35",
+        "98e47204-00cd-4e98-b19e-0fc52eefe3e3",
+        "f748a00b-631f-4d07-bcf1-8ce6802ef79e"
+      ]
+    },
+    {
+      "ref": "8d9efebf-401c-4892-9596-1e24498dbd35",
+      "dependsOn": [
+        "pkg:npm/left-pad@1.3.0"
+      ]
+    },
+    {
+      "ref": "98e47204-00cd-4e98-b19e-0fc52eefe3e3",
+      "dependsOn": [
+        "pkg:npm/kind-of@6.0.3"
+      ]
+    },
+    {
+      "ref": "f748a00b-631f-4d07-bcf1-8ce6802ef79e",
+      "dependsOn": [
+        "pkg:npm/debug@4.3.4"
+      ]
+    },
+    {
+      "ref": "pkg:npm/debug@4.3.4",
+      "dependsOn": [
+        "pkg:npm/ms@2.1.2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/kind-of@6.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/left-pad@1.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ms@2.1.2",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

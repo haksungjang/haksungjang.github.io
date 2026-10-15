@@ -10,7 +10,7 @@ menu:
     weight: 30
 ---
 
-각 카드를 누르면 GitHub 저장소로 이동합니다.
+각 카드를 누르면 GitHub 저장소나 해당 페이지로 이동합니다.
 
 <div class="tool-cards">
   <a class="tool-card" href="https://github.com/sktelecom/bomlens" target="_blank" rel="noopener">
@@ -36,5 +36,13 @@ menu:
     </div>
     <p class="tool-card__desc">SBOM 문서(SPDX, CycloneDX, Excel)로부터 오픈소스 고지문(OSS Notice)을 HTML, 텍스트, Markdown, PDF로 생성합니다. 오프라인에서 동작하는 타입 안전 Python 코어에 CLI, 로컬 API, 설치형 데스크톱 앱을 제공합니다.</p>
     <div class="tool-card__meta">github.com/sktelecom/onot</div>
+  </a>
+  <a class="tool-card" href="/tools/sca-benchmark/">
+    <div class="tool-card__head">
+      <img class="tool-card__logo" src="/img/tools/sca-benchmark.svg" alt="SCA Benchmark logo" width="44" height="44" loading="lazy">
+      <h2 class="tool-card__title">SCA Benchmark</h2>
+    </div>
+    <p class="tool-card__desc">SCA(소프트웨어 구성 분석) 도구의 정확도를 사람이 큐레이션한 정답 데이터로 측정한 리더보드입니다. 의존성, 컨테이너 이미지, 바이너리, 파일 라이선스, 도달성, AI 모델 파일, SBOM 품질을 오픈소스 도구 10종으로 비교합니다. 운영자가 BomLens 메인테이너라는 이해관계를 페이지에 밝힙니다.</p>
+    <div class="tool-card__meta">리더보드, 2026-10 회차</div>
   </a>
 </div>

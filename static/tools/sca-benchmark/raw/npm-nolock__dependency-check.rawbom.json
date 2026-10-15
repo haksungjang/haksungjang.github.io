@@ -1,0 +1,38 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "13.0.0",
+        "dataSource": [
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "npm-nolock",
+        "reportDate": "2026-10-13T21:30:04.838420Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": false,
+            "fileName": "package.json",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/npm-nolock\/package.json"
+,"md5": "cfe5934f905ebad91152e71fac53c8fe",
+            "sha1": "ea61063efe97e19128237113f66582bddac0333d",
+            "sha256": "b8e4dd03f7e237fa45fc482fb62be76f248a04f156b3b2e6f264a0ee9171d4d1"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        }    ]
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T20:59:05Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "29c0ee97-78a0-4898-83c5-774363aa3f26",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "70133290-5161-4ce1-9194-f46869a43ae3",
+      "type": "library",
+      "name": "github.com/inconshreveable/mousetrap",
+      "version": "1.1.0",
+      "purl": "pkg:golang/github.com/inconshreveable/mousetrap@1.1.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "c1623c3d-9dff-45a1-8a8a-7d8a4ac07a61",
+      "type": "library",
+      "name": "github.com/spf13/cobra",
+      "version": "1.8.0",
+      "purl": "pkg:golang/github.com/spf13/cobra@1.8.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "4d4273f3-4599-46fa-908c-927f455999d7",
+      "type": "library",
+      "name": "github.com/spf13/pflag",
+      "version": "1.0.5",
+      "purl": "pkg:golang/github.com/spf13/pflag@1.0.5",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "585a2f86-b4d7-4a53-a7ce-f3cb8293169f",
+      "type": "library",
+      "name": "stdlib",
+      "version": "1.21",
+      "purl": "pkg:golang/stdlib@1.21",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    }
+  ]
+}

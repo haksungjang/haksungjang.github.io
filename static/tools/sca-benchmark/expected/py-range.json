@@ -1,0 +1,68 @@
+{
+  "fixture": "py-range",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/py-range"
+  },
+  "componentsComplete": false,
+  "vulnComplete": false,
+  "notes": "Python requirements.txt, 추상 범위(>=)로 직접 의존성을 둔다. py-pinned(정밀 핀)의 대조쌍 — 같은 4개 직접 패키지(flask, requests, urllib3, jinja2)를 범위로만 바꿔, 추상 범위에서 도구가 버전을 어떻게 해석하는지 측정한다. 설치형(bomlens·cdxgen)은 실제 설치 버전을, 정적(osv-scanner)은 범위를, 매니페스트 파서(syft)는 이름/범위를 낸다. 버전이 설치 시점에 따라 드리프트하므로 정답은 직접 패키지 이름으로만 매칭하고(version 비움), 버전 해석 차이는 outputs 로 관찰한다. 전이와 취약점은 설치 버전에 따라 달라져 제외한다(componentsComplete=false, vulnComplete=false). 라이선스는 패키지가 같아 직접 4개에 둔다. 정답 도출 절차(2026-07-03 재검증): 범위 해석은 시점에 따라 전이 집합 자체가 변한다 — 재검증 설치에서는 blinker, charset-normalizer 가 추가된 12종(최신 flask 와 requests 의 의존성 변화). 그래서 정답은 시간 표류에 안전한 직접 4종 이름으로 한정하고 recall 만 본다(componentsComplete=false). 설치 확인은 격리 가상환경에서.",
+  "components": [
+    {
+      "purl": "pkg:pypi/flask",
+      "version": "",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/requests",
+      "version": "",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/urllib3",
+      "version": "",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/jinja2",
+      "version": "",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [],
+  "fnReasons": [
+    {
+      "id": "pkg:pypi/flask",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/requests",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/urllib3",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/jinja2",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ]
+}

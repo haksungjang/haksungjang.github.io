@@ -1,0 +1,83 @@
+{
+  "fixture": "go-mod",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/go-mod"
+  },
+  "componentsComplete": true,
+  "buildTarget": "linux/amd64",
+  "notes": "Go 소스(go.mod + go.sum). 정답은 빌드 타깃 linux/amd64 의 실제 빌드 결과다: `GOOS=linux GOARCH=amd64 go list -deps` 로 검증한 실제 링크는 cobra·pflag 뿐이다. mousetrap 은 cobra 가 windows 에서만 import 하는 windows 전용 전이라 linux 빌드에 링크되지 않아 정답에서 제외한다(windows 빌드에는 포함됨 — 대조 확인). go.sum 선언에는 mousetrap 이 있으므로 매니페스트만 읽는 도구(syft go.mod·trivy)는 mousetrap 을 과포함해 precision 이 낮아지고, 빌드를 이해하는 도구(bomlens·cdxgen build)는 실제 링크만 내 정확하다 — 이것이 '배포물 구성' 목적 기준의 변별이다. purl 은 pkg:golang/<host>/<path>@v<ver>, golang v 접두는 normalize 가 흡수. rootPurls: 루트 모듈 scab-go-mod 를 컴포넌트로 내는 도구(trivy, dependency-check)가 있어 매칭에서 제외한다(자기 자신은 제3자 컴포넌트가 아니다).",
+  "components": [
+    {
+      "purl": "pkg:golang/github.com/spf13/cobra@v1.8.0",
+      "version": "v1.8.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "version": "v1.0.5",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "rootPurls": [
+    "pkg:golang/scab-go-mod"
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:golang/github.com/inconshreveable/mousetrap",
+      "reason": "windows 전용 전이 의존성이라 linux/amd64 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/cpuguy83/go-md2man/v2",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/cpuguy83/go-md2man",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/russross/blackfriday/v2",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/russross/blackfriday",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/gopkg.in/check.v1",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/go-check/check",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/gopkg.in/yaml.v3",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/go-yaml/yaml",
+      "reason": "go.sum 의 선언 초집합(문서 생성, 테스트 의존성)으로 실제 빌드에 링크되지 않는다 — go list -deps 로 검증해 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:golang/github.com/spf13/cobra@v1.8.0",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ]
+}

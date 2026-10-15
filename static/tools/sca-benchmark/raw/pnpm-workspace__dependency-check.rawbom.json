@@ -1,0 +1,68 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "13.0.0",
+        "dataSource": [
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "pnpm-workspace",
+        "reportDate": "2026-10-13T21:38:24.006563Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": false,
+            "fileName": "package.json",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/pnpm-workspace\/package.json"
+,"md5": "36e147ef8227939ccecbb4fca6dcccdc",
+            "sha1": "eee65bc13be10a41cee319851a4ca5a4ca729c6e",
+            "sha256": "37bf5b84d54bc42f8996339d6b277542060fee9133251a211cba515211eb1086"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        },{
+            "isVirtual": false,
+            "fileName": "package.json",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/pnpm-workspace\/packages\/app\/package.json"
+,"md5": "88c79d22393b04c9fda1ae8b330aad57",
+            "sha1": "5353a2c710432f43fc1e1a99e09e11c103e790ec",
+            "sha256": "d14f5a973cc0d9f08a8ce0a13c0a45aba8c6f890f7e9d6c35be964f642e39162"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        },{
+            "isVirtual": false,
+            "fileName": "package.json",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/pnpm-workspace\/packages\/util\/package.json"
+,"md5": "e711dca8c333fcb50dde24c65ad4b4d5",
+            "sha1": "7d79e9cf0c504671d4be30b70448119e7358ca66",
+            "sha256": "913e6f0fa7670ebf993af93c3fcebf781dafafbaa94ade1c0c78fe17ab25bc6e"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        }    ]
+}

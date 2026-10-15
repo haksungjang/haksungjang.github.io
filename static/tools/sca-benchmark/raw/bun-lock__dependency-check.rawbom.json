@@ -1,0 +1,38 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "13.0.0",
+        "dataSource": [
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "bun-lock",
+        "reportDate": "2026-10-13T21:37:35.750643Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": false,
+            "fileName": "package.json",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/bun-lock\/package.json"
+,"md5": "22a55f771a3d9673b06069b71ba69f4c",
+            "sha1": "85b3cee981e608b0ae504ef0bd96dc011e4ef135",
+            "sha256": "fe40ee1efea118931f78c1165ef6c59e23ae8193f207e8883a76e7b92c780672"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        }    ]
+}

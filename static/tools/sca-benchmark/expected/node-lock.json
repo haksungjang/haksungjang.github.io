@@ -1,0 +1,75 @@
+{
+  "fixture": "node-lock",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/node-lock"
+  },
+  "dbSnapshot": "2026-06-01",
+  "componentsComplete": true,
+  "vulnComplete": false,
+  "notes": "package-lock.json 포함(결정적). 완전 컴포넌트 집합 3개(minimist, debug 직접 + ms 전이)라 componentsComplete=true 로 precision 까지 채점. 라이선스는 npm 레지스트리 기준 MIT. 취약점은 minimist 1.2.5 의 대표 CVE 1건만 담아 vulnComplete=false(recall 만). 정답 도출 절차(2026-07-03 재검증 일치): 임시 사본에서 npm ci --ignore-scripts 후 npm ls --all — debug 4.3.1(전이 ms 2.1.2), minimist 1.2.5. 라이선스는 각 패키지 package.json 의 license 필드(전부 MIT). fixture 원본 디렉토리에서 설치하지 않는다(설치 부산물이 남으면 파서 도구 점수가 오염된다 — npm-nolock 오염 사고의 교훈). CVE-2021-44906 의 GHSA 별칭(GHSA-xvch-5gv4-984h, OSV 교차 확인)을 큐레이션 — GHSA 로 보고하는 도구(dependency-check 의 NPM Audit)도 TP 로 인정된다.",
+  "components": [
+    {
+      "purl": "pkg:npm/minimist@1.2.5",
+      "version": "1.2.5",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:npm/debug@4.3.1",
+      "version": "4.3.1",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:npm/ms@2.1.2",
+      "version": "2.1.2",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-44906",
+      "affectedPurl": "pkg:npm/minimist@1.2.5",
+      "fixedVersion": "1.2.6",
+      "aliases": [
+        "GHSA-xvch-5gv4-984h"
+      ]
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:npm/minimist@1.2.5",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:npm/debug@4.3.1",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:npm/ms@2.1.2",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:npm/ms@2.1.2",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "CVE-2021-44906",
+      "reason": "이 CVE 가 붙은 컴포넌트를 검출하지 못한 도구는 취약점 매칭도 불가하다 — 컴포넌트 축의 미탐과 연동",
+      "axis": "vulnerability"
+    }
+  ]
+}

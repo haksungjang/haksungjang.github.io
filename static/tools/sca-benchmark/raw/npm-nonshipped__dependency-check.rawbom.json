@@ -1,0 +1,53 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "13.0.0",
+        "dataSource": [
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "npm-nonshipped",
+        "reportDate": "2026-10-13T21:36:47.270075Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": false,
+            "fileName": "index.js",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/npm-nonshipped\/examples\/demo\/index.js"
+,"md5": "4dd7e8aa644f4efe847c1ab729103ef9",
+            "sha1": "bf66fba802108139e80a185fa76d434f04d4a6e7",
+            "sha256": "3c126eb2355b8ede2e0cb37db0983cc830af029c5bb86e95a9ffe18913422373"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        },{
+            "isVirtual": false,
+            "fileName": "index.js",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/npm-nonshipped\/index.js"
+,"md5": "9c26f01fe669e6c6e7d5a4e27488fb63",
+            "sha1": "9fcf9e656582dc5c86084f2ae9ba25a0cc2cfde0",
+            "sha256": "312408666a96cc2dda4f2880875fc3070ac6230f7a2f98882300b29a3e2fb9c5"            ,"evidenceCollected": {
+                "vendorEvidence": [
+                ],
+                "productEvidence": [
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        }    ]
+}

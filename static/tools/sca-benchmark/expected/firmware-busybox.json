@@ -1,0 +1,28 @@
+{
+  "fixture": "firmware-busybox",
+  "category": "firmware",
+  "input": {
+    "kind": "firmware",
+    "ref": "fixtures/firmware-busybox/rootfs.squashfs"
+  },
+  "componentsComplete": true,
+  "axes": [
+    "component"
+  ],
+  "tools": [
+    "syft",
+    "bomlens"
+  ],
+  "notes": "squashfs 펌웨어(busybox 1.35.0 정적 바이너리를 담은 rootfs, docker mksquashfs 로 제작, SHA256 beaa28eb5824944c2e2ee174b04099302ebab7bba4d93313723fafcc29cba4b5). 복잡 펌웨어 unpacking 능력을 변별한다: bomlens(FIRMWARE 모드 unblob+cve-bin-tool opt-in 이미지)는 squashfs 를 풀어 busybox 를 검출하지만, syft 는 squashfs 파일시스템을 못 풀어 0 이다. 단일 OSS(busybox, GPL-2.0-only)라 componentsComplete=true. purl 은 도구마다 type 이 갈리나 firmware 카테고리 name@version 매칭(binaryKey)이 흡수한다. busybox 소스는 busybox.net. binary-busybox 의 바이너리를 재사용해 rootfs 에 담았다.",
+  "components": [
+    {
+      "purl": "pkg:generic/busybox@1.35.0",
+      "version": "1.35.0",
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": []
+}

@@ -1,0 +1,461 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:542ad426-d237-408f-987c-5e7c27640b57",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T01:10:23+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "b37c89f2-b340-487c-a967-9e92603ef1b2",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/go-reach-uncalled",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "55d1a07e-922f-4f77-a674-2c6a410cdb4f",
+      "type": "application",
+      "name": "go.mod",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/example.com/scab-go-reach-uncalled",
+      "type": "library",
+      "name": "example.com/scab-go-reach-uncalled",
+      "purl": "pkg:golang/example.com/scab-go-reach-uncalled",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "example.com/scab-go-reach-uncalled"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.7",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.3.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "golang.org/x/text@v0.3.7"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "55d1a07e-922f-4f77-a674-2c6a410cdb4f",
+      "dependsOn": [
+        "pkg:golang/example.com/scab-go-reach-uncalled"
+      ]
+    },
+    {
+      "ref": "b37c89f2-b340-487c-a967-9e92603ef1b2",
+      "dependsOn": [
+        "55d1a07e-922f-4f77-a674-2c6a410cdb4f"
+      ]
+    },
+    {
+      "ref": "pkg:golang/example.com/scab-go-reach-uncalled",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/text@v0.3.7"
+      ]
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/text@v0.3.7",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2022-32149",
+      "source": {
+        "name": "govulndb",
+        "url": "https://pkg.go.dev/vuln/"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "azure"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        772
+      ],
+      "description": "An attacker may cause a denial of service by crafting an Accept-Language header which ParseAcceptLanguage will take significant time to parse.",
+      "recommendation": "Upgrade golang.org/x/text to version 0.3.8",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2022-32149"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2022-32149"
+        },
+        {
+          "url": "https://github.com/golang/text/commit/434eadcdbc3b0256971992e8c70027278364c72c%20%28v0.3.8%29"
+        },
+        {
+          "url": "https://go.dev/cl/442235"
+        },
+        {
+          "url": "https://go.dev/issue/56152"
+        },
+        {
+          "url": "https://groups.google.com/g/golang-announce/c/-hjNw559_tE/m/KlGTfid5CAAJ"
+        },
+        {
+          "url": "https://groups.google.com/g/golang-dev/c/qfPIly0X7aU"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-32149"
+        },
+        {
+          "url": "https://pkg.go.dev/vuln/GO-2022-1059"
+        },
+        {
+          "url": "https://security.netapp.com/advisory/ntap-20230203-0006/"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5873-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2022-32149"
+        }
+      ],
+      "published": "2022-10-14T15:15:34+00:00",
+      "updated": "2026-06-17T04:46:45+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/golang.org/x/text@v0.3.7",
+          "versions": [
+            {
+              "version": "v0.3.7",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-56851",
+      "source": {
+        "name": "govulndb",
+        "url": "https://pkg.go.dev/vuln/"
+      },
+      "ratings": [],
+      "cwes": [
+        787
+      ],
+      "description": "The Nickname profile can panic with an out-of-bounds slice error when transforming crafted input into a short destination buffer.",
+      "recommendation": "Upgrade golang.org/x/text to version 0.41.0",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-56851"
+        },
+        {
+          "url": "https://go.dev/cl/793360"
+        },
+        {
+          "url": "https://go.dev/issue/80112"
+        },
+        {
+          "url": "https://pkg.go.dev/vuln/GO-2026-6629"
+        }
+      ],
+      "published": "2026-10-07T18:17:20+00:00",
+      "updated": "2026-10-08T21:35:53+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/golang.org/x/text@v0.3.7",
+          "versions": [
+            {
+              "version": "v0.3.7",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-56852",
+      "source": {
+        "name": "govulndb",
+        "url": "https://pkg.go.dev/vuln/"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "azure"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "high"
+        }
+      ],
+      "cwes": [
+        835
+      ],
+      "description": "A norm.Iter can enter an infinite loop when handling input containing invalid UTF-8 bytes.",
+      "recommendation": "Upgrade golang.org/x/text to version 0.39.0",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-56852"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:70201"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-56852"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2456335"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2467809"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2504233"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2508234"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515815"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515820"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515827"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515838"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515839"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515840"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2456335"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2467809"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2504233"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2508234"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515815"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515820"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515827"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515838"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515839"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515840"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2518147"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-17106"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19730"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33810"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33818"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42499"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56852"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56853"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56858"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56859"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56860"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56862"
+        },
+        {
+          "url": "https://errata.almalinux.org/10/ALSA-2026-70201.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:70201"
+        },
+        {
+          "url": "https://go.dev/cl/794100"
+        },
+        {
+          "url": "https://go.dev/issue/80142"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-56852.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-70201.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56852"
+        },
+        {
+          "url": "https://pkg.go.dev/vuln/GO-2026-5970"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-56852"
+        }
+      ],
+      "published": "2026-07-21T20:17:02+00:00",
+      "updated": "2026-07-23T18:27:48+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/golang.org/x/text@v0.3.7",
+          "versions": [
+            {
+              "version": "v0.3.7",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

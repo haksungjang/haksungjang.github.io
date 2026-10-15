@@ -1,0 +1,39 @@
+{
+  "fixture": "bun-lock",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/bun-lock"
+  },
+  "componentsComplete": true,
+  "rootPurls": [
+    "pkg:npm/scab-bun-lock"
+  ],
+  "notes": "Bun 의 텍스트 lockfile(bun.lock, lockfileVersion 1). 운영 의존성 debug 4.3.4 와 전이 ms 2.1.2 가 정답. devDependencies 의 is-number 는 배포되지 않는다. lockfile 은 레지스트리 메타데이터로 직접 작성했다.",
+  "components": [
+    {
+      "purl": "pkg:npm/debug@4.3.4",
+      "version": "4.3.4",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:npm/ms@2.1.2",
+      "version": "2.1.2",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:npm/is-number",
+      "reason": "devDependencies(개발 의존성)라 배포물에 들어가지 않는다",
+      "axis": "component"
+    }
+  ]
+}

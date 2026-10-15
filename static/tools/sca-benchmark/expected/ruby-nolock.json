@@ -1,0 +1,42 @@
+{
+  "fixture": "ruby-nolock",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/ruby-nolock"
+  },
+  "componentsComplete": true,
+  "notes": "lockfile(Gemfile.lock) 없는 Bundler 프로젝트. 정답은 ruby:3.3-slim 컨테이너에서 bundle lock 으로 해석한 운영 의존성(2026-10-14): rack 3.0.8, mustermann 3.0.0 과 그 전이 ruby2_keywords 0.0.5(요구 ~> 0.0.1 의 최신판, 2021 이후 새 판 없음). development, test 그룹의 rake 는 배포되지 않는다. ruby2_keywords 는 Ruby 와 BSD-2-Clause 이중 라이선스라 라이선스 채점에서 뺀다.",
+  "components": [
+    {
+      "purl": "pkg:gem/rack@3.0.8",
+      "version": "3.0.8",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:gem/mustermann@3.0.0",
+      "version": "3.0.0",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:gem/ruby2_keywords@0.0.5",
+      "version": "0.0.5",
+      "licenses": [],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:gem/rake",
+      "reason": "development, test 그룹이라 배포물에 들어가지 않는다",
+      "axis": "component"
+    }
+  ]
+}

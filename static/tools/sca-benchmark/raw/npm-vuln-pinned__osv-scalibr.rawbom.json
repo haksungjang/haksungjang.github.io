@@ -1,0 +1,61 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:09:07Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "ee597b20-f34a-43ad-99c6-9e209c60efa0",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "d2891b23-2dfd-4e14-ad08-9411b1ab37a0",
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.15",
+      "purl": "pkg:npm/lodash@4.17.15?source=PUBLIC_REGISTRY",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package-lock.json"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "e9155ed9-6c68-43c7-b944-eb39ff65cafe",
+      "type": "library",
+      "name": "vuln-pinned",
+      "version": "1.0.0",
+      "purl": "pkg:npm/vuln-pinned@1.0.0?source=UNKNOWN",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package.json"
+          }
+        ]
+      }
+    }
+  ]
+}

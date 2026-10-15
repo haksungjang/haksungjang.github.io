@@ -1,0 +1,117 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:06:09Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "a2fff282-048e-4734-b59d-5975f542f1be",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "a7d3718e-6cda-43bc-939f-cb5495d394bb",
+      "type": "library",
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.18.2",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "1266ae1f-f773-4813-ac8d-b8a502f3e388",
+      "type": "library",
+      "name": "com.google.guava:guava",
+      "version": "33.3.1-jre",
+      "purl": "pkg:maven/com.google.guava/guava@33.3.1-jre",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "c819d56b-55b2-4cdd-bb5e-d62a1d070b0f",
+      "type": "library",
+      "name": "org.apache.commons:commons-lang3",
+      "version": "3.17.0",
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.17.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "efc5b067-41de-43d4-8717-599a42c3ccde",
+      "type": "library",
+      "name": "org.apache.logging.log4j:log4j-core",
+      "version": "2.14.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "af00317b-dcf8-4a32-a971-6191edb23012",
+      "type": "library",
+      "name": "org.junit.jupiter:junit-jupiter",
+      "version": "5.11.3",
+      "purl": "pkg:maven/org.junit.jupiter/junit-jupiter@5.11.3",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "31207c89-bf2c-4326-bea1-2d6ae6827ab5",
+      "type": "library",
+      "name": "org.projectlombok:lombok",
+      "version": "1.18.34",
+      "purl": "pkg:maven/org.projectlombok/lombok@1.18.34",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    }
+  ]
+}

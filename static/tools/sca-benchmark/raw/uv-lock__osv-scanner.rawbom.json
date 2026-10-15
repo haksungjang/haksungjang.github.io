@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/uv-lock/uv.lock",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "iniconfig",
+            "version": "2.0.0",
+            "ecosystem": "PyPI",
+            "purl": "pkg:pypi/iniconfig@2.0.0"
+          }
+        },
+        {
+          "package": {
+            "name": "python-dateutil",
+            "version": "2.8.2",
+            "ecosystem": "PyPI",
+            "purl": "pkg:pypi/python-dateutil@2.8.2"
+          }
+        },
+        {
+          "package": {
+            "name": "six",
+            "version": "1.16.0",
+            "ecosystem": "PyPI",
+            "purl": "pkg:pypi/six@1.16.0"
+          }
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

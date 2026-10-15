@@ -1,0 +1,19 @@
+{
+  "fixture": "rust-cargo",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/rust-cargo"
+  },
+  "componentsComplete": false,
+  "notes": "Rust 소스(Cargo.toml 만, Cargo.lock 없이 — 라이브러리 관례상 lockfile-less). 이게 변별의 핵심: syft 는 Cargo.lock 이 없으면 검출 0(실측 확인), Cargo.toml 을 직접 파싱하는 도구(cdxgen 등)나 cargo build/해석 도구만 crate 를 잡는다. Cargo.toml 의 serde=\"1.0\" 은 semver 범위라 실제 버전이 드리프트하므로 이름만 매칭한다(componentsComplete=false, recall 만). purl 은 pkg:cargo/<crate>. lockfile 없는 npm-nolock 과 같은 원리로 매니페스트-only 파서와 해석 도구를 가른다.",
+  "components": [
+    {
+      "purl": "pkg:cargo/serde",
+      "version": "",
+      "licenses": [],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": []
+}

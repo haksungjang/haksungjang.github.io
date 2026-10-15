@@ -1,0 +1,123 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "13.0.0",
+        "dataSource": [
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "node-lock",
+        "reportDate": "2026-10-13T21:30:00.324816Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": true,
+            "fileName": "minimist:1.2.5",
+            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/node-lock\/package-lock.json?minimist"
+            ,"projectReferences": [
+                "package-lock.json: transitive"
+            ]
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "package.json",
+                            "name": "name",
+                            "value": "minimist"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "package.json",
+                            "name": "name",
+                            "value": "minimist"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "package.json",
+                        "name": "version",
+                        "value": "1.2.5"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:npm\/minimist@1.2.5"
+,"confidence": "HIGHEST"                    }
+            ]
+            ,"vulnerabilities": [
+ {
+                "source": "NPM",
+                "name": "GHSA-xvch-5gv4-984h",
+"unscored": "true", "severity" : "critical",
+                    "cvssv3": {
+                        "baseScore": 9.800000190734863
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "LOW"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"scope": "UNCHANGED"
+                        ,"confidentialityImpact": "HIGH"
+                        ,"integrityImpact": "HIGH"
+                        ,"availabilityImpact": "HIGH"
+                        ,"baseSeverity": "CRITICAL"
+,"version": "3.1"                    },
+                    "cwes": [
+                        "CWE-1321"                    ],
+                "description": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+                "notes": "",
+                "references": [
+ {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/substack\/minimist\/issues\/164","name": "https:\/\/github.com\/substack\/minimist\/issues\/164"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/commit\/bc8ecee43875261f4f17eb20b1243d3ed15e70eb","name": "https:\/\/github.com\/minimistjs\/minimist\/commit\/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/nvd.nist.gov\/vuln\/detail\/CVE-2021-44906","name": "https:\/\/nvd.nist.gov\/vuln\/detail\/CVE-2021-44906"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/commit\/c2b981977fa834b223b408cfb860f933c9811e4d","name": "https:\/\/github.com\/minimistjs\/minimist\/commit\/c2b981977fa834b223b408cfb860f933c9811e4d"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/snyk.io\/vuln\/SNYK-JS-MINIMIST-559764","name": "https:\/\/snyk.io\/vuln\/SNYK-JS-MINIMIST-559764"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/commits\/v0.2.4","name": "https:\/\/github.com\/minimistjs\/minimist\/commits\/v0.2.4"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/security.netapp.com\/advisory\/ntap-20240621-0006","name": "https:\/\/security.netapp.com\/advisory\/ntap-20240621-0006"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/advisories\/GHSA-xvch-5gv4-984h","name": "https:\/\/github.com\/advisories\/GHSA-xvch-5gv4-984h"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/issues\/11","name": "https:\/\/github.com\/minimistjs\/minimist\/issues\/11"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/substack\/minimist\/blob\/master\/index.js#L69","name": "https:\/\/github.com\/substack\/minimist\/blob\/master\/index.js#L69"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/stackoverflow.com\/questions\/8588563\/adding-custom-properties-to-a-function\/20278068#20278068","name": "https:\/\/stackoverflow.com\/questions\/8588563\/adding-custom-properties-to-a-function\/20278068#20278068"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/Marynk\/JavaScript-vulnerability-detection\/blob\/main\/minimist%20PoC.zip","name": "https:\/\/github.com\/Marynk\/JavaScript-vulnerability-detection\/blob\/main\/minimist%20PoC.zip"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/pull\/24","name": "https:\/\/github.com\/minimistjs\/minimist\/pull\/24"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/commit\/ef9153fc52b6cea0744b2239921c5dcae4697f11","name": "https:\/\/github.com\/minimistjs\/minimist\/commit\/ef9153fc52b6cea0744b2239921c5dcae4697f11"                    }, {
+                        "source": "NPM Advisory reference: "
+,"url": "https:\/\/github.com\/minimistjs\/minimist\/commit\/34e20b8461118608703d6485326abbb8e35e1703","name": "https:\/\/github.com\/minimistjs\/minimist\/commit\/34e20b8461118608703d6485326abbb8e35e1703"                    }                ],
+                "vulnerableSoftware": [
+ {
+                        "software": { 
+                            "id":"cpe:2.3:a:*:minimist:\\>\\=1.0.0\\<1.2.6:*:*:*:*:*:*:*"
+                        }
+                    }                ]
+                }            ]        }    ]
+}

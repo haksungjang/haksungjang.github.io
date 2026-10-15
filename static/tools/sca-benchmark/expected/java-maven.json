@@ -1,0 +1,195 @@
+{
+  "fixture": "java-maven",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/java-maven"
+  },
+  "dbSnapshot": "2026-06-01",
+  "componentsComplete": true,
+  "vulnComplete": false,
+  "notes": "Java Maven 프로젝트(현실적 구성). compile/runtime scope 의존성 13개가 배포물(runtime 클래스패스)에 링크된다 — 직접 4개(log4j-core, guava, jackson-databind, commons-lang3)와 전이 9개(log4j-api, jackson-core, jackson-annotations, guava 의 failureaccess/listenablefuture/jsr305/checker-qual/error_prone_annotations/j2objc-annotations). test scope(junit-jupiter 트리)와 provided scope(lombok)는 배포 JAR 에 안 들어가 정답에서 제외 — Maven scope 인지를 재는 변별점이다. pom.xml 만 읽는 도구는 직접 선언(test/provided 포함)만 내 전이를 놓치고 test/provided 를 과탐하며, mvn 으로 해석하는 도구는 runtime scope 전이까지 정확히 낸다. componentsComplete=true(정답 = 임시 사본에서 mvn dependency:list -DincludeScope=runtime, mvn dependency:tree 로 검증, 2026-07-06). 취약점은 log4j-core 2.14.1 Log4Shell(CVE-2021-44228) recall 전용(vulnComplete=false, 적용 CVE 전수는 image-log4shell 담당). checker-qual 만 MIT, 나머지는 Apache-2.0.",
+  "components": [
+    {
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "version": "2.14.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/guava@33.3.1-jre",
+      "version": "33.3.1-jre",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
+      "version": "2.18.2",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.17.0",
+      "version": "3.17.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.1",
+      "version": "2.14.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.2",
+      "version": "2.18.2",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.2",
+      "version": "2.18.2",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "version": "1.0.2",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "version": "3.0.2",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+      "version": "3.43.0",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.28.0",
+      "version": "2.28.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+      "version": "3.0.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-44228",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.15.0"
+    }
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter",
+      "reason": "test scope 의존성이라 배포 JAR 에 들어가지 않는다 — 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter-api",
+      "reason": "test scope 의존성이라 배포 JAR 에 들어가지 않는다 — 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter-params",
+      "reason": "test scope 의존성이라 배포 JAR 에 들어가지 않는다 — 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter-engine",
+      "reason": "test scope 의존성이라 배포 JAR 에 들어가지 않는다 — 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.platform/junit-platform-commons",
+      "reason": "test scope 전이(junit)라 배포 JAR 에 들어가지 않는다 — 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.platform/junit-platform-engine",
+      "reason": "test scope 전이(junit)라 배포 JAR 에 들어가지 않는다 — 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.opentest4j/opentest4j",
+      "reason": "test scope 전이(junit)라 배포 JAR 에 들어가지 않는다 — 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.apiguardian/apiguardian-api",
+      "reason": "test scope 전이(junit)라 배포 JAR 에 들어가지 않는다 — 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.projectlombok/lombok",
+      "reason": "provided scope 의존성이라 배포 JAR 에 들어가지 않는다 — 배포물 구성 기준으로 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.1",
+      "reason": "전이 의존성 — pom.xml 만 읽는 도구는 전이를 해석하지 못한다(mvn 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.2",
+      "reason": "전이 의존성 — pom.xml 만 읽는 도구는 전이를 해석하지 못한다(mvn 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.2",
+      "reason": "전이 의존성 — pom.xml 만 읽는 도구는 전이를 해석하지 못한다(mvn 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "reason": "전이 의존성(guava) — pom.xml 만 읽는 도구는 전이를 해석하지 못한다",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+      "reason": "전이 의존성(guava) — pom.xml 만 읽는 도구는 전이를 해석하지 못한다",
+      "axis": "component"
+    },
+    {
+      "id": "CVE-2021-44228",
+      "reason": "이 CVE 가 붙은 컴포넌트를 검출하지 못한 도구는 취약점 매칭도 불가하다 — 컴포넌트 축의 미탐과 연동",
+      "axis": "vulnerability"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "fixture": "go-reach-called",
+  "category": "reachability",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/go-reach-called"
+  },
+  "buildTarget": "linux/amd64",
+  "dbSnapshot": "2026-10-14",
+  "componentsComplete": false,
+  "vulnComplete": false,
+  "axes": [
+    "reachability"
+  ],
+  "tools": [
+    "osv-scanner",
+    "grype",
+    "trivy",
+    "bomlens"
+  ],
+  "rootPurls": [
+    "pkg:golang/example.com/scab-go-reach-called"
+  ],
+  "notes": "Go 프로그램이 golang.org/x/text v0.3.7 의 language.ParseAcceptLanguage 를 호출한다. 정답: CVE-2022-32149(GO-2022-1059, 영향 함수 ParseAcceptLanguage, MatchStrings)는 affected. CVE-2026-56852(GO-2026-5970, unicode/norm)와 CVE-2026-56851(GO-2026-6629, secure/precis)은 그 패키지가 빌드에 들어가지 않아(go list -deps) not_affected. 영향 함수 목록은 OSV 레코드의 ecosystem_specific.imports. 판정 근거는 도구 출력이 아니라 go list -deps 와 빌드한 바이너리의 심볼 표(go tool nm)다. 다른 x/text 와 Go 표준 라이브러리 취약점은 이 축에서 보지 않는다. 빌드 재현: fixtures/go-reach-called 에서 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags=-buildid= -o ../go-reach-called-bin/app . (go1.25.5)",
+  "components": [
+    {
+      "purl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "version": "v0.3.7",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-32149",
+      "affectedPurl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "fixedVersion": "v0.3.8",
+      "aliases": [
+        "GHSA-69ch-w2m2-3vjp",
+        "GO-2022-1059"
+      ],
+      "reachability": "affected"
+    },
+    {
+      "cve": "CVE-2026-56852",
+      "affectedPurl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "fixedVersion": "v0.39.0",
+      "aliases": [
+        "GO-2026-5970"
+      ],
+      "reachability": "not_affected"
+    },
+    {
+      "cve": "CVE-2026-56851",
+      "affectedPurl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "fixedVersion": "v0.41.0",
+      "aliases": [
+        "GO-2026-6629"
+      ],
+      "reachability": "not_affected"
+    }
+  ]
+}

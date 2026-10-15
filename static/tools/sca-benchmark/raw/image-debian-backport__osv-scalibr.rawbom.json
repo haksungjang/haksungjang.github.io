@@ -1,0 +1,117 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:04:45Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "2900f247-0244-40d0-83e6-59f7ed04e831",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "b67a5bfd-6fb0-468d-92cc-1fcabef241ad",
+      "type": "library",
+      "name": "base-files",
+      "version": "12.4+deb12u12",
+      "purl": "pkg:deb/debian/base-files@12.4%2Bdeb12u12?arch=amd64\u0026distro=12",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "var/lib/dpkg/status.d/base-files"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "7ab53726-abbd-43e2-8fc9-2e564e4d387c",
+      "type": "library",
+      "name": "libc6",
+      "version": "2.36-9+deb12u13",
+      "purl": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64\u0026distro=12\u0026source=glibc",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "var/lib/dpkg/status.d/libc6"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "7d794722-59b0-4086-83cc-5637631ba907",
+      "type": "library",
+      "name": "libssl3",
+      "version": "3.0.17-1~deb12u3",
+      "purl": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64\u0026distro=12\u0026source=openssl",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "var/lib/dpkg/status.d/libssl3"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "5ce39cc6-41cf-4e7b-b4e5-d71b951a0e91",
+      "type": "library",
+      "name": "media-types",
+      "version": "10.0.0",
+      "purl": "pkg:deb/debian/media-types@10.0.0?arch=all\u0026distro=12",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "var/lib/dpkg/status.d/media-types"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "c22687e7-007a-48bf-8586-9c9d3271da77",
+      "type": "library",
+      "name": "netbase",
+      "version": "6.4",
+      "purl": "pkg:deb/debian/netbase@6.4?arch=all\u0026distro=12",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "var/lib/dpkg/status.d/netbase"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "c2ce4b5d-ee69-4fac-90c8-cac509ee395f",
+      "type": "library",
+      "name": "tzdata",
+      "version": "2025b-0+deb12u2",
+      "purl": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u2?arch=all\u0026distro=12",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "var/lib/dpkg/status.d/tzdata"
+          }
+        ]
+      }
+    }
+  ]
+}

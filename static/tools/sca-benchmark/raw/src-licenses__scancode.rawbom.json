@@ -1,0 +1,414 @@
+{
+  "headers": [
+    {
+      "tool_name": "scancode-toolkit",
+      "tool_version": "32.5.0",
+      "options": {
+        "input": [
+          "~/projects/sca-benchmark-wt/refresh/fixtures/src-licenses"
+        ],
+        "--json-pp": "~/projects/sca-benchmark-wt/refresh/results/public/raw/src-licenses__scancode.tmp.json",
+        "--license": true
+      },
+      "notice": "Generated with ScanCode and provided on an \"AS IS\" BASIS, WITHOUT WARRANTIES\nOR CONDITIONS OF ANY KIND, either express or implied. No content created from\nScanCode should be considered or used as legal advice. Consult an Attorney\nfor any legal advice.\nScanCode is a free software code scanning tool from nexB Inc. and others.\nVisit https://github.com/nexB/scancode-toolkit/ for support and download.",
+      "start_timestamp": "2026-10-13T211338.299782",
+      "end_timestamp": "2026-10-13T211344.596225",
+      "output_format_version": "4.1.0",
+      "duration": 6.29646897315979,
+      "message": null,
+      "errors": [],
+      "warnings": [],
+      "extra_data": {
+        "system_environment": {
+          "operating_system": "mac",
+          "cpu_architecture": "64",
+          "platform": "macOS-26.5.2-arm64-arm-64bit",
+          "platform_version": "Darwin Kernel Version 25.5.0: Tue Jun  9 22:28:29 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6030",
+          "python_version": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]"
+        },
+        "spdx_license_list_version": "3.27",
+        "files_count": 4
+      }
+    }
+  ],
+  "license_detections": [
+    {
+      "identifier": "apache_2_0-a4859331-ff93-1b3b-d793-1af3837f4ea7",
+      "license_expression": "apache-2.0",
+      "license_expression_spdx": "Apache-2.0",
+      "detection_count": 1,
+      "reference_matches": [
+        {
+          "license_expression": "apache-2.0",
+          "license_expression_spdx": "Apache-2.0",
+          "from_file": "src-licenses/src/apache_mod.py",
+          "start_line": 1,
+          "end_line": 1,
+          "matcher": "1-spdx-id",
+          "score": 100.0,
+          "matched_length": 6,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "spdx-license-identifier-apache_2_0-d904d6f07f8d33445270a849a3be98d8904d568a",
+          "rule_url": null
+        },
+        {
+          "license_expression": "apache-2.0",
+          "license_expression_spdx": "Apache-2.0",
+          "from_file": "src-licenses/src/apache_mod.py",
+          "start_line": 2,
+          "end_line": 2,
+          "matcher": "2-aho",
+          "score": 100.0,
+          "matched_length": 8,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "apache-2.0_151.RULE",
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_151.RULE"
+        }
+      ]
+    },
+    {
+      "identifier": "bsd_new-d9171e23-9f98-24d4-0ae6-5e68143c607d",
+      "license_expression": "bsd-new",
+      "license_expression_spdx": "BSD-3-Clause",
+      "detection_count": 1,
+      "reference_matches": [
+        {
+          "license_expression": "bsd-new",
+          "license_expression_spdx": "BSD-3-Clause",
+          "from_file": "src-licenses/src/bsd3_mod.go",
+          "start_line": 1,
+          "end_line": 1,
+          "matcher": "1-spdx-id",
+          "score": 100.0,
+          "matched_length": 6,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "spdx-license-identifier-bsd_new-44d09f027ab49aa105944dc76ae54041ea2a76e4",
+          "rule_url": null
+        },
+        {
+          "license_expression": "bsd-new",
+          "license_expression_spdx": "BSD-3-Clause",
+          "from_file": "src-licenses/src/bsd3_mod.go",
+          "start_line": 2,
+          "end_line": 2,
+          "matcher": "2-aho",
+          "score": 100.0,
+          "matched_length": 3,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "bsd-new_10.RULE",
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/bsd-new_10.RULE"
+        }
+      ]
+    },
+    {
+      "identifier": "gpl_3_0-d3130f1c-5e3f-0603-a2ee-ddadfbdf8d9e",
+      "license_expression": "gpl-3.0",
+      "license_expression_spdx": "GPL-3.0-only",
+      "detection_count": 1,
+      "reference_matches": [
+        {
+          "license_expression": "gpl-3.0",
+          "license_expression_spdx": "GPL-3.0-only",
+          "from_file": "src-licenses/src/gpl_mod.c",
+          "start_line": 1,
+          "end_line": 1,
+          "matcher": "2-aho",
+          "score": 100.0,
+          "matched_length": 7,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "gpl-3.0_623.RULE",
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-3.0_623.RULE"
+        },
+        {
+          "license_expression": "gpl-3.0",
+          "license_expression_spdx": "GPL-3.0-only",
+          "from_file": "src-licenses/src/gpl_mod.c",
+          "start_line": 2,
+          "end_line": 2,
+          "matcher": "2-aho",
+          "score": 100.0,
+          "matched_length": 7,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "gpl-3.0.RULE",
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-3.0.RULE"
+        }
+      ]
+    },
+    {
+      "identifier": "mit_and_other_permissive-86693ba7-af85-049b-5216-e6c30518099e",
+      "license_expression": "mit AND other-permissive",
+      "license_expression_spdx": "MIT AND LicenseRef-scancode-other-permissive",
+      "detection_count": 1,
+      "reference_matches": [
+        {
+          "license_expression": "mit",
+          "license_expression_spdx": "MIT",
+          "from_file": "src-licenses/src/mit_mod.js",
+          "start_line": 1,
+          "end_line": 1,
+          "matcher": "1-spdx-id",
+          "score": 100.0,
+          "matched_length": 4,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "spdx-license-identifier-mit-2410ec7d8cecfb84d911cb1c29ba44ab907b8b8f",
+          "rule_url": null
+        },
+        {
+          "license_expression": "other-permissive",
+          "license_expression_spdx": "LicenseRef-scancode-other-permissive",
+          "from_file": "src-licenses/src/mit_mod.js",
+          "start_line": 2,
+          "end_line": 2,
+          "matcher": "3-seq",
+          "score": 10.29,
+          "matched_length": 7,
+          "match_coverage": 10.29,
+          "rule_relevance": 100,
+          "rule_identifier": "other-permissive_352.RULE",
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/other-permissive_352.RULE"
+        },
+        {
+          "license_expression": "mit",
+          "license_expression_spdx": "MIT",
+          "from_file": "src-licenses/src/mit_mod.js",
+          "start_line": 2,
+          "end_line": 2,
+          "matcher": "2-aho",
+          "score": 100.0,
+          "matched_length": 2,
+          "match_coverage": 100.0,
+          "rule_relevance": 100,
+          "rule_identifier": "mit_14.RULE",
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_14.RULE"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "src-licenses",
+      "type": "directory",
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "src-licenses/src",
+      "type": "directory",
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "scan_errors": []
+    },
+    {
+      "path": "src-licenses/src/apache_mod.py",
+      "type": "file",
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "license_expression_spdx": "Apache-2.0",
+          "matches": [
+            {
+              "license_expression": "apache-2.0",
+              "license_expression_spdx": "Apache-2.0",
+              "from_file": "src-licenses/src/apache_mod.py",
+              "start_line": 1,
+              "end_line": 1,
+              "matcher": "1-spdx-id",
+              "score": 100.0,
+              "matched_length": 6,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "spdx-license-identifier-apache_2_0-5dcda840588b4f07f49f2c0100924ebca7bc0649",
+              "rule_url": null
+            },
+            {
+              "license_expression": "apache-2.0",
+              "license_expression_spdx": "Apache-2.0",
+              "from_file": "src-licenses/src/apache_mod.py",
+              "start_line": 2,
+              "end_line": 2,
+              "matcher": "2-aho",
+              "score": 100.0,
+              "matched_length": 8,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "apache-2.0_151.RULE",
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_151.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-a4859331-ff93-1b3b-d793-1af3837f4ea7"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 66.67,
+      "scan_errors": []
+    },
+    {
+      "path": "src-licenses/src/bsd3_mod.go",
+      "type": "file",
+      "detected_license_expression": "bsd-new",
+      "detected_license_expression_spdx": "BSD-3-Clause",
+      "license_detections": [
+        {
+          "license_expression": "bsd-new",
+          "license_expression_spdx": "BSD-3-Clause",
+          "matches": [
+            {
+              "license_expression": "bsd-new",
+              "license_expression_spdx": "BSD-3-Clause",
+              "from_file": "src-licenses/src/bsd3_mod.go",
+              "start_line": 1,
+              "end_line": 1,
+              "matcher": "1-spdx-id",
+              "score": 100.0,
+              "matched_length": 6,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "spdx-license-identifier-bsd_new-917808d7d4a74c55ef668cd756b4ee70c22a8c40",
+              "rule_url": null
+            },
+            {
+              "license_expression": "bsd-new",
+              "license_expression_spdx": "BSD-3-Clause",
+              "from_file": "src-licenses/src/bsd3_mod.go",
+              "start_line": 2,
+              "end_line": 2,
+              "matcher": "2-aho",
+              "score": 100.0,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "bsd-new_10.RULE",
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/bsd-new_10.RULE"
+            }
+          ],
+          "identifier": "bsd_new-d9171e23-9f98-24d4-0ae6-5e68143c607d"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 40.91,
+      "scan_errors": []
+    },
+    {
+      "path": "src-licenses/src/gpl_mod.c",
+      "type": "file",
+      "detected_license_expression": "gpl-3.0",
+      "detected_license_expression_spdx": "GPL-3.0-only",
+      "license_detections": [
+        {
+          "license_expression": "gpl-3.0",
+          "license_expression_spdx": "GPL-3.0-only",
+          "matches": [
+            {
+              "license_expression": "gpl-3.0",
+              "license_expression_spdx": "GPL-3.0-only",
+              "from_file": "src-licenses/src/gpl_mod.c",
+              "start_line": 1,
+              "end_line": 1,
+              "matcher": "2-aho",
+              "score": 100.0,
+              "matched_length": 7,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "gpl-3.0_623.RULE",
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-3.0_623.RULE"
+            },
+            {
+              "license_expression": "gpl-3.0",
+              "license_expression_spdx": "GPL-3.0-only",
+              "from_file": "src-licenses/src/gpl_mod.c",
+              "start_line": 2,
+              "end_line": 2,
+              "matcher": "2-aho",
+              "score": 100.0,
+              "matched_length": 7,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "gpl-3.0.RULE",
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-3.0.RULE"
+            }
+          ],
+          "identifier": "gpl_3_0-d3130f1c-5e3f-0603-a2ee-ddadfbdf8d9e"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 60.87,
+      "scan_errors": []
+    },
+    {
+      "path": "src-licenses/src/mit_mod.js",
+      "type": "file",
+      "detected_license_expression": "mit AND other-permissive",
+      "detected_license_expression_spdx": "MIT AND LicenseRef-scancode-other-permissive",
+      "license_detections": [
+        {
+          "license_expression": "mit AND other-permissive",
+          "license_expression_spdx": "MIT AND LicenseRef-scancode-other-permissive",
+          "matches": [
+            {
+              "license_expression": "mit",
+              "license_expression_spdx": "MIT",
+              "from_file": "src-licenses/src/mit_mod.js",
+              "start_line": 1,
+              "end_line": 1,
+              "matcher": "1-spdx-id",
+              "score": 100.0,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "spdx-license-identifier-mit-f5be3fda2f20a26515ed3dabedb3804346819bf7",
+              "rule_url": null
+            },
+            {
+              "license_expression": "other-permissive",
+              "license_expression_spdx": "LicenseRef-scancode-other-permissive",
+              "from_file": "src-licenses/src/mit_mod.js",
+              "start_line": 2,
+              "end_line": 2,
+              "matcher": "3-seq",
+              "score": 10.29,
+              "matched_length": 7,
+              "match_coverage": 10.29,
+              "rule_relevance": 100,
+              "rule_identifier": "other-permissive_352.RULE",
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/other-permissive_352.RULE"
+            },
+            {
+              "license_expression": "mit",
+              "license_expression_spdx": "MIT",
+              "from_file": "src-licenses/src/mit_mod.js",
+              "start_line": 2,
+              "end_line": 2,
+              "matcher": "2-aho",
+              "score": 100.0,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "rule_relevance": 100,
+              "rule_identifier": "mit_14.RULE",
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_14.RULE"
+            }
+          ],
+          "identifier": "mit_and_other_permissive-86693ba7-af85-049b-5216-e6c30518099e"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 65.0,
+      "scan_errors": []
+    }
+  ]
+}

@@ -11,7 +11,7 @@ menu:
     weight: 30
 ---
 
-Click a card to go to its GitHub repository.
+Click a card to go to its GitHub repository or page.
 
 <div class="tool-cards">
   <a class="tool-card" href="https://github.com/sktelecom/bomlens" target="_blank" rel="noopener">
@@ -37,5 +37,13 @@ Click a card to go to its GitHub repository.
     </div>
     <p class="tool-card__desc">Generate open source notices (OSS Notice) from SBOM documents (SPDX, CycloneDX, Excel) to HTML, Text, Markdown, or PDF. Offline, type-safe Python core with CLI, local API, and an installable desktop app.</p>
     <div class="tool-card__meta">github.com/sktelecom/onot</div>
+  </a>
+  <a class="tool-card" href="/tools/sca-benchmark/">
+    <div class="tool-card__head">
+      <img class="tool-card__logo" src="/img/tools/sca-benchmark.svg" alt="SCA Benchmark logo" width="44" height="44" loading="lazy">
+      <h2 class="tool-card__title">SCA Benchmark</h2>
+    </div>
+    <p class="tool-card__desc">A leaderboard that measures the accuracy of SCA (software composition analysis) tools against human-curated ground truth. It compares 10 open source tools across dependencies, container images, binaries, file licenses, reachability, AI model files, and SBOM quality. The page is in Korean and discloses that its operator maintains BomLens.</p>
+    <div class="tool-card__meta">Leaderboard, 2026-10 round</div>
   </a>
 </div>

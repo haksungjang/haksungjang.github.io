@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/npm-nonshipped/package-lock.json",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "debug",
+            "version": "4.3.4",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/debug@4.3.4?source=PUBLIC_REGISTRY"
+          }
+        },
+        {
+          "package": {
+            "name": "is-number",
+            "version": "7.0.0",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/is-number@7.0.0?source=PUBLIC_REGISTRY"
+          },
+          "dependency_groups": [
+            "dev"
+          ]
+        },
+        {
+          "package": {
+            "name": "ms",
+            "version": "2.1.2",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/ms@2.1.2?source=PUBLIC_REGISTRY"
+          }
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

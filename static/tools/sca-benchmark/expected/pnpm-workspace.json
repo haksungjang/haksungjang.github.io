@@ -1,0 +1,49 @@
+{
+  "fixture": "pnpm-workspace",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/pnpm-workspace"
+  },
+  "componentsComplete": true,
+  "rootPurls": [
+    "pkg:npm/scab-pnpm-workspace",
+    "pkg:npm/%40scab/app",
+    "pkg:npm/%40scab/util"
+  ],
+  "notes": "pnpm 워크스페이스(pnpm-lock.yaml v9). packages/app 이 debug 4.3.4 와 워크스페이스 패키지 @scab/util 을, @scab/util 이 kind-of 6.0.3 을 쓴다. 정답은 운영 의존성 debug, ms(전이), kind-of. 루트 devDependencies 의 is-number 는 배포되지 않고, 워크스페이스 패키지 자신(@scab/*)은 제3자 구성요소가 아니라 rootPurls 로 뺀다. lockfile 은 레지스트리 메타데이터로 직접 작성했다.",
+  "components": [
+    {
+      "purl": "pkg:npm/debug@4.3.4",
+      "version": "4.3.4",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:npm/ms@2.1.2",
+      "version": "2.1.2",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:npm/kind-of@6.0.3",
+      "version": "6.0.3",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:npm/is-number",
+      "reason": "devDependencies(개발 의존성)라 배포물에 들어가지 않는다",
+      "axis": "component"
+    }
+  ]
+}

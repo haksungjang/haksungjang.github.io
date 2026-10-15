@@ -1,0 +1,89 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:10:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "b5f0baa2-4be1-4606-8a6d-6ba6d6df33da",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "0a8bc636-caec-406f-8b39-b2377968013e",
+      "type": "library",
+      "name": "flask",
+      "version": "2.0.1",
+      "purl": "pkg:pypi/flask@2.0.1",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "3421fb67-b416-4080-b7b1-a7cb2cffcbcd",
+      "type": "library",
+      "name": "jinja2",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "ef6eedf8-f171-4583-8973-7b87f4ff4960",
+      "type": "library",
+      "name": "requests",
+      "version": "2.25.1",
+      "purl": "pkg:pypi/requests@2.25.1",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "requirements.txt"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "772371d9-9358-4cc2-afce-5860ec85ea9c",
+      "type": "library",
+      "name": "urllib3",
+      "version": "1.26.4",
+      "purl": "pkg:pypi/urllib3@1.26.4",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "requirements.txt"
+          }
+        ]
+      }
+    }
+  ]
+}

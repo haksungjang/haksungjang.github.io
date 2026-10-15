@@ -1,0 +1,51 @@
+{
+  "fixture": "npm-nonshipped",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/npm-nonshipped"
+  },
+  "componentsComplete": true,
+  "rootPurls": [
+    "pkg:npm/scab-npm-nonshipped",
+    "pkg:npm/scab-example-demo",
+    "pkg:npm/scab-test-fixture-app"
+  ],
+  "notes": "npm 프로젝트에 배포되지 않는 매니페스트가 섞인 경우. 루트 package-lock.json 의 운영 의존성 debug 4.3.4 와 그 전이 ms 2.1.2 만 배포물에 들어간다(npm ci --omit=dev 결과). devDependencies 의 is-number, examples/demo 의 left-pad, test/fixtures/app 의 kind-of 는 저장소에 있지만 배포되지 않는다. lockfile 은 레지스트리 메타데이터(무결성 해시)로 직접 작성했다. 하위 예제와 테스트 패키지 자신(scab-*)은 rootPurls 로 매칭에서 뺀다.",
+  "components": [
+    {
+      "purl": "pkg:npm/debug@4.3.4",
+      "version": "4.3.4",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:npm/ms@2.1.2",
+      "version": "2.1.2",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:npm/is-number",
+      "reason": "devDependencies(개발 의존성)라 배포물에 들어가지 않는다",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:npm/left-pad",
+      "reason": "examples/demo 아래 예제의 의존성이라 배포되지 않는다",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:npm/kind-of",
+      "reason": "test/fixtures 아래 테스트용 패키지의 의존성이라 배포되지 않는다",
+      "axis": "component"
+    }
+  ]
+}
