@@ -1,0 +1,64 @@
+{
+  "fixture": "go-reach-uncalled-bin",
+  "category": "reachability",
+  "input": {
+    "kind": "binary",
+    "ref": "fixtures/go-reach-uncalled-bin/app"
+  },
+  "buildTarget": "linux/amd64",
+  "dbSnapshot": "2026-10-14",
+  "componentsComplete": false,
+  "vulnComplete": false,
+  "axes": [
+    "reachability"
+  ],
+  "tools": [
+    "grype",
+    "trivy",
+    "bomlens"
+  ],
+  "rootPurls": [
+    "pkg:golang/example.com/scab-go-reach-uncalled"
+  ],
+  "notes": "Go 프로그램이 golang.org/x/text v0.3.7 의 language 패키지를 쓰지만 영향 함수(ParseAcceptLanguage, MatchStrings)는 호출하지 않는다(language.English.String 만). 정답: 세 취약점 모두 not_affected. CVE-2022-32149 는 language 패키지가 링크되지만 영향 함수가 바이너리 심볼 표에 없다(go tool nm). 나머지 둘은 패키지 자체가 빌드에 들어가지 않는다(go list -deps). 다른 x/text 와 Go 표준 라이브러리 취약점은 이 축에서 보지 않는다. 바이너리 판은 같은 소스를 빌드한 것이다. 빌드 재현: fixtures/go-reach-uncalled 에서 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags=-buildid= -o ../go-reach-uncalled-bin/app . (go1.25.5)",
+  "components": [
+    {
+      "purl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "version": "v0.3.7",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-32149",
+      "affectedPurl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "fixedVersion": "v0.3.8",
+      "aliases": [
+        "GHSA-69ch-w2m2-3vjp",
+        "GO-2022-1059"
+      ],
+      "reachability": "not_affected"
+    },
+    {
+      "cve": "CVE-2026-56852",
+      "affectedPurl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "fixedVersion": "v0.39.0",
+      "aliases": [
+        "GO-2026-5970"
+      ],
+      "reachability": "not_affected"
+    },
+    {
+      "cve": "CVE-2026-56851",
+      "affectedPurl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "fixedVersion": "v0.41.0",
+      "aliases": [
+        "GO-2026-6629"
+      ],
+      "reachability": "not_affected"
+    }
+  ]
+}

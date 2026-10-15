@@ -1,0 +1,103 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:02:36Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "de84b4d0-6594-448c-b60f-33e6ad1f34af",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "a77d2688-0b3d-4020-81c6-557c12541c7f",
+      "type": "library",
+      "name": "com.fasterxml.jackson.core:jackson-annotations",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.13.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "gradle.lockfile"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "153117de-f9ba-457c-a455-e481592ebfbd",
+      "type": "library",
+      "name": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.13.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "gradle.lockfile"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "763c9b5d-9061-4764-ad68-329be7edee52",
+      "type": "library",
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "gradle.lockfile"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "13bf9e56-5974-42db-b002-af6aa1092876",
+      "type": "library",
+      "name": "com.fasterxml.jackson:jackson-bom",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson/jackson-bom@2.13.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "gradle.lockfile"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "bcf6aa34-6281-43ef-b588-8285baad90fd",
+      "type": "library",
+      "name": "unknown",
+      "version": "unknown",
+      "purl": "pkg:maven/unknown/unknown@unknown",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "gradle/wrapper/gradle-wrapper.jar"
+          }
+        ]
+      }
+    }
+  ]
+}

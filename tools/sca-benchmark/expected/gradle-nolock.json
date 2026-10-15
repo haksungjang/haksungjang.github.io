@@ -1,0 +1,73 @@
+{
+  "fixture": "gradle-nolock",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/gradle-nolock"
+  },
+  "dbSnapshot": "2026-06-01",
+  "componentsComplete": true,
+  "vulnComplete": false,
+  "notes": "Gradle, lockfile 없음(dependency locking 미사용). 빌드로만 전이가 풀리는 생태계에서 전이 검출 방식 차이를 측정한다. jackson-databind 2.13.0(직접)이 전이로 jackson-core, jackson-annotations 를 끈다(gradle dependencies 로 폐쇄 확인). 직접은 버전까지, 전이는 이름만(하이브리드). 전이 폐쇄가 3개로 확인돼 componentsComplete=true. jackson-bom 은 의존성 관리 메타(jar 아님)라 컴포넌트에서 제외하며, 도구가 그것을 내면 과탐으로 본다. 취약점은 jackson-databind 2.13.0 의 CVE-2020-36518 한 건만 담아 recall 만 본다(vulnComplete=false). 일부 도구는 gradle 분석에 gradlew(wrapper)를 요구하므로 fixture 에 gradle wrapper 를 포함한다. wrapper 는 빌드 부트스트랩일 뿐 의존성 lockfile 이 아니라 lockfile-less 통제는 유지된다. 정답 도출 절차(2026-07-03 재검증 일치): 임시 사본에서 ./gradlew dependencies --configuration runtimeClasspath — gradle-lock 과 동일한 구성(databind 직접, annotations 와 core 전이, jackson-bom 은 constraint 로만). lockfile 생성 부산물이 fixture 에 남지 않도록 반드시 사본에서 실행한다.",
+  "components": [
+    {
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "version": "2.13.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-36518",
+      "affectedPurl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "fixedVersion": "2.13.2.1"
+    }
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/com.fasterxml.jackson/jackson-bom",
+      "reason": "BOM import(버전 정렬용 pom 선언)라 실제 빌드 산출물(jar)에 들어가지 않는다 — 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.gradle.wrapper.GradleWrapperMain/gradle-wrapper",
+      "reason": "저장소에 포함된 빌드 도구(gradle wrapper jar)로 배포 산출물이 아니다 — 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:maven/com.fasterxml.jackson.core/jackson-core",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "CVE-2020-36518",
+      "reason": "이 CVE 가 붙은 컴포넌트를 검출하지 못한 도구는 취약점 매칭도 불가하다 — 컴포넌트 축의 미탐과 연동",
+      "axis": "vulnerability"
+    }
+  ]
+}

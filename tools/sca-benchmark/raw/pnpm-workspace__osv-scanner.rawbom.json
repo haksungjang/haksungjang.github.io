@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/pnpm-workspace/pnpm-lock.yaml",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "debug",
+            "version": "4.3.4",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/debug@4.3.4"
+          }
+        },
+        {
+          "package": {
+            "name": "is-number",
+            "version": "7.0.0",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/is-number@7.0.0"
+          }
+        },
+        {
+          "package": {
+            "name": "kind-of",
+            "version": "6.0.3",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/kind-of@6.0.3"
+          }
+        },
+        {
+          "package": {
+            "name": "ms",
+            "version": "2.1.2",
+            "ecosystem": "npm",
+            "purl": "pkg:npm/ms@2.1.2"
+          }
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:293f6c59-b5cc-48da-a2d0-b9b9bdc7db35",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T01:21:41+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "872b407d-d5fa-477b-9c09-aff3f771b2ed",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/rust-cargo",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "872b407d-d5fa-477b-9c09-aff3f771b2ed",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

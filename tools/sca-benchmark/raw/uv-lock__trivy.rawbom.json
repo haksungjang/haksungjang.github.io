@@ -1,0 +1,133 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:53a82141-a5b8-4846-b739-b362b17ee095",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T01:24:07+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "b902922c-1aff-4fd1-8c49-d61b43d95ff4",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/uv-lock",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "69a2538f-4132-44ae-baba-74768f26dd3b",
+      "type": "application",
+      "name": "uv.lock",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/python-dateutil@2.8.2",
+      "type": "library",
+      "name": "python-dateutil",
+      "version": "2.8.2",
+      "purl": "pkg:pypi/python-dateutil@2.8.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "python-dateutil@2.8.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/scab-uv-lock@1.0.0",
+      "type": "library",
+      "name": "scab-uv-lock",
+      "version": "1.0.0",
+      "purl": "pkg:pypi/scab-uv-lock@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "scab-uv-lock@1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/six@1.16.0",
+      "type": "library",
+      "name": "six",
+      "version": "1.16.0",
+      "purl": "pkg:pypi/six@1.16.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "six@1.16.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "uv"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "69a2538f-4132-44ae-baba-74768f26dd3b",
+      "dependsOn": [
+        "pkg:pypi/scab-uv-lock@1.0.0"
+      ]
+    },
+    {
+      "ref": "b902922c-1aff-4fd1-8c49-d61b43d95ff4",
+      "dependsOn": [
+        "69a2538f-4132-44ae-baba-74768f26dd3b"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/python-dateutil@2.8.2",
+      "dependsOn": [
+        "pkg:pypi/six@1.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/scab-uv-lock@1.0.0",
+      "dependsOn": [
+        "pkg:pypi/python-dateutil@2.8.2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/six@1.16.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

@@ -1,0 +1,75 @@
+{
+  "fixture": "image-log4shell",
+  "category": "image",
+  "input": {
+    "kind": "image",
+    "ref": "ghcr.io/haksungjang/scab-log4shell:1.0@sha256:46d9c72ec86b53fe9ad58f2aab7649ffe6aacd78eae31c644982df9600f2f5d1"
+  },
+  "dbSnapshot": "2026-07-03",
+  "componentsComplete": true,
+  "vulnComplete": true,
+  "axes": [
+    "component",
+    "vulnerability"
+  ],
+  "notes": "컨테이너 이미지(input 타입 image)에서 앱 계층 취약점 축을 연다. FROM scratch + log4j-core-2.14.1.jar 하나만 담아 OS 레이어를 없앴다 → OS CVE 0, 유일 취약 컴포넌트가 log4j-core 2.14.1 로 확정된다(componentsComplete·vulnComplete 둘 다 true, image 입력에서 취약점 precision 측정을 처음 연다). CVE 7건은 dbSnapshot(2026-06-30) 시점 log4j-core 2.14.1 적용분 전수(NVD/OSV 교차): Log4Shell 4건 44228(→2.15.0)·45046(→2.16.0)·45105(→2.17.0)·44832(→2.17.1), Socket/Syslog TLS hostname 검증 계열 68161(→2.25.3)·34477(→2.25.4), XmlLayout XML 미검증 34480(→2.25.4). CVE-2021-4104 는 log4j 1.x(JMSAppender) 대상이라 제외한다. 큐레이션 교훈: Log4Shell 4건만 넣었다가 도구가 최신 3건(2025/2026)을 더 내 precision 이 0.571 로 떨어졌고, 그 3건이 실제 2.14.1 적용임을 NVD/OSV 로 확인해 정답에 보완했다 — vulnComplete 는 취약 버전만이 아니라 dbSnapshot 시점의 적용 CVE 전수를 요구한다. 취약점 채점은 CVE 식별자만 비교하므로 GHSA/BDSA 같은 비CVE 식별자는 FP 로 잡혀 precision 을 깎는다(과탐 측정). 실측: grype 는 purl·CVE 4건을 정확히 낸다. trivy 는 java-db 가 있어야 loose jar 를 잡는다(동결 캐시에 java-db 포함 필요). osv-scanner 는 loose jar 를 버전 없는 purl(pkg:maven/org.apache.logging.log4j/log4j-core)로 내 이름 매칭으로 걸린다. dbSnapshot 은 네 도구 동결일(2026-06-30) 재사용 — log4j CVE 는 2021년치라 동결 DB 에 포함된다. 2회차 동결(2026-07-03) 재검증: 새 스냅샷 스캔이 정답과 완전 일치, 추가 적용 CVE 없음 — dbSnapshot 을 2회차로 갱신.",
+  "components": [
+    {
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "version": "2.14.1",
+      "licenses": [],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-44228",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.15.0"
+    },
+    {
+      "cve": "CVE-2021-45046",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.16.0"
+    },
+    {
+      "cve": "CVE-2021-45105",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.17.0"
+    },
+    {
+      "cve": "CVE-2021-44832",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.17.1"
+    },
+    {
+      "cve": "CVE-2025-68161",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.25.3"
+    },
+    {
+      "cve": "CVE-2026-34477",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.25.4"
+    },
+    {
+      "cve": "CVE-2026-34480",
+      "affectedPurl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "fixedVersion": "2.25.4"
+    }
+  ],
+  "fpReasons": [
+    {
+      "id": "CVE-2026-34479",
+      "reason": "log4j-1.2-api 아티팩트 대상 CVE 로, 이 이미지에 없는 아티팩트라 미적용 — 아티팩트 구분 실패에 의한 과탐"
+    },
+    {
+      "id": "CVE-2026-34481",
+      "reason": "log4j-layout-template-json 대상 CVE 로, 이 이미지에 없는 아티팩트라 미적용 — 아티팩트 구분 실패에 의한 과탐"
+    },
+    {
+      "id": "CVE-2026-49844",
+      "reason": "log4j-api(2.13.1~2.25.4) 대상 CVE 로, 이 이미지에 없는 아티팩트라 미적용 — CVE-2026-34481 의 불완전한 수정을 보완하는 후속 CVE 로 서버 데이터 갱신 뒤 나타났다"
+    }
+  ]
+}

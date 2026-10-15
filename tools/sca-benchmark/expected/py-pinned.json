@@ -1,0 +1,152 @@
+{
+  "fixture": "py-pinned",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/py-pinned"
+  },
+  "dbSnapshot": "2026-06-01",
+  "vulnComplete": false,
+  "componentsComplete": true,
+  "notes": "Python requirements.txt(lockfile 없음). 직접 의존성 4개만 버전 핀(flask 2.0.1, requests 2.25.1, urllib3 1.26.4, jinja2 3.0.1)이고 전이 7개는 핀되지 않아 최신으로 드리프트한다. 정답은 깨끗한 pip 해석 기준 완전 폐쇄 11개(componentsComplete=true), 직접은 버전까지 전이는 이름으로 매칭(하이브리드). 이렇게 해야 직접만 파싱하는 도구(recall 4/11)와 전이까지 해석하는 도구(11/11)가 구분되고 빌드환경 과탐(빌드 도구가 끌어오는 cryptography 스택 등)이 precision 으로 드러난다. 라이선스는 직접 4개에만 두어 라이선스 축은 그대로 둔다(전이는 licenses 빈 배열이라 라이선스 채점 제외). 정답 도출 절차(2026-07-03 재검증 일치): python3 -m venv 로 격리 환경을 만들고 pip install -r requirements.txt 후 pip list — 11종. 직접 4종은 핀 버전 그대로, 전이 7종은 설치 시점에 버전이 표류하므로 이름만 담는다(하이브리드 매칭). 재검증 시점의 전이 버전(werkzeug 3.1.8 등)이 큐레이션 시점과 달라도 이름 집합은 동일함을 확인.",
+  "components": [
+    {
+      "purl": "pkg:pypi/flask@2.0.1",
+      "version": "2.0.1",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/requests@2.25.1",
+      "version": "2.25.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/urllib3@1.26.4",
+      "version": "1.26.4",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/jinja2@3.0.1",
+      "version": "3.0.1",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:pypi/werkzeug",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:pypi/click",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:pypi/itsdangerous",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:pypi/markupsafe",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:pypi/certifi",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:pypi/chardet",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:pypi/idna",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-33503",
+      "affectedPurl": "pkg:pypi/urllib3@1.26.4",
+      "fixedVersion": "1.26.5"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:pypi/flask@2.0.1",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/requests@2.25.1",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/urllib3@1.26.4",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/jinja2@3.0.1",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:pypi/werkzeug",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:pypi/click",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:pypi/itsdangerous",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:pypi/markupsafe",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:pypi/certifi",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:pypi/chardet",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:pypi/idna",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(설치, 빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    }
+  ]
+}

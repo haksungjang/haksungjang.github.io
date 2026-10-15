@@ -1,0 +1,42 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:518ae081-e7ef-433f-99c9-c5d5ce07bffe",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T01:15:28+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "a3b4ee18-bc4f-4ed0-926b-7670213fcafe",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/npm-nolock",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "a3b4ee18-bc4f-4ed0-926b-7670213fcafe",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

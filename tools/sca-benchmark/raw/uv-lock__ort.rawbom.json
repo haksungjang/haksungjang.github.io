@@ -1,0 +1,65 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:c50752ec-fac3-4563-8c90-862dada40322",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-10-15T01:24:25Z",
+    "tools" : {
+      "components" : [
+        {
+          "type" : "application",
+          "name" : "OSS Review Toolkit",
+          "version" : "96.0.0"
+        }
+      ]
+    },
+    "component" : {
+      "type" : "application",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "group" : "",
+      "name" : "sca-benchmark",
+      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        }
+      ]
+    },
+    "licenses" : [
+      {
+        "expression" : "CC0-1.0"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "Unmanaged::sca-benchmark:3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "group" : "",
+      "name" : "sca-benchmark",
+      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:unmanaged/sca-benchmark@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    }
+  ],
+  "externalReferences" : [
+    {
+      "type" : "vcs",
+      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "comment" : "URL to the Git repository of the projects"
+    }
+  ]
+}

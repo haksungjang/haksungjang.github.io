@@ -1,0 +1,89 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:07:53Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "9a4e1540-750e-4295-a53f-96820e5b54a2",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "962be3ef-57da-4beb-9267-af81dd470b89",
+      "type": "library",
+      "name": "debug",
+      "version": "4.3.1",
+      "purl": "pkg:npm/debug@4.3.1?source=PUBLIC_REGISTRY",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package-lock.json"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "89326f54-a385-453e-8c72-a0243b7f09be",
+      "type": "library",
+      "name": "minimist",
+      "version": "1.2.5",
+      "purl": "pkg:npm/minimist@1.2.5?source=PUBLIC_REGISTRY",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package-lock.json"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "7f972d67-c154-42ee-94a3-cc605d8ab2b1",
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.2",
+      "purl": "pkg:npm/ms@2.1.2?source=PUBLIC_REGISTRY",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package-lock.json"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "6555a052-e143-4a13-8664-85a8f5fb347c",
+      "type": "library",
+      "name": "node-lock",
+      "version": "1.0.0",
+      "purl": "pkg:npm/node-lock@1.0.0?source=UNKNOWN",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package.json"
+          }
+        ]
+      }
+    }
+  ]
+}

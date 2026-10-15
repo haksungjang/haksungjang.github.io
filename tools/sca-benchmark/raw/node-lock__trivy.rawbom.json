@@ -1,0 +1,360 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:f8ad44da-303f-4ea1-9f18-8fa2a4d2fbe3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T01:14:49+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "3fb7307d-4d75-47f8-94cf-7c4f2c325a7f",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/node-lock",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "ecdfe95f-5207-467f-a4dd-0fec4f4037cd",
+      "type": "application",
+      "name": "package-lock.json",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/debug@4.3.1",
+      "type": "library",
+      "name": "debug",
+      "version": "4.3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/debug@4.3.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "debug@4.3.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/minimist@1.2.5",
+      "type": "library",
+      "name": "minimist",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/minimist@1.2.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "minimist@1.2.5"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/ms@2.1.2",
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ms@2.1.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "ms@2.1.2"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "npm"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "3fb7307d-4d75-47f8-94cf-7c4f2c325a7f",
+      "dependsOn": [
+        "ecdfe95f-5207-467f-a4dd-0fec4f4037cd"
+      ]
+    },
+    {
+      "ref": "ecdfe95f-5207-467f-a4dd-0fec4f4037cd",
+      "dependsOn": [
+        "pkg:npm/debug@4.3.1",
+        "pkg:npm/minimist@1.2.5"
+      ]
+    },
+    {
+      "ref": "pkg:npm/debug@4.3.1",
+      "dependsOn": [
+        "pkg:npm/ms@2.1.2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/minimist@1.2.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/ms@2.1.2",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2021-44906",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 3.1,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        1321
+      ],
+      "description": "Minimist <=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95).",
+      "recommendation": "Upgrade minimist to version 1.2.6, 0.2.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2021-44906"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2023:0050"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2023:0321"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2021-44906"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2044591"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2066009"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2134609"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2140911"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2150323"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066009"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2130518"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2134609"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2140911"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2142808"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35256"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43548"
+        },
+        {
+          "url": "https://errata.almalinux.org/8/ALSA-2023-0050.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2023:0321"
+        },
+        {
+          "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-xvch-5gv4-984h"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/issues/11"
+        },
+        {
+          "url": "https://github.com/minimistjs/minimist/pull/24"
+        },
+        {
+          "url": "https://github.com/substack/minimist"
+        },
+        {
+          "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+        },
+        {
+          "url": "https://github.com/substack/minimist/issues/164"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2021-44906.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2023-0321.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+        },
+        {
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006/"
+        },
+        {
+          "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+        },
+        {
+          "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2021-44906"
+        }
+      ],
+      "published": "2022-03-17T16:15:07+00:00",
+      "updated": "2026-10-08T21:17:42+00:00",
+      "affects": [
+        {
+          "ref": "pkg:npm/minimist@1.2.5",
+          "versions": [
+            {
+              "version": "1.2.5",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

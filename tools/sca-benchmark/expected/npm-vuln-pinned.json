@@ -1,0 +1,88 @@
+{
+  "fixture": "npm-vuln-pinned",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/npm-vuln-pinned"
+  },
+  "dbSnapshot": "2026-07-03",
+  "componentsComplete": true,
+  "vulnComplete": true,
+  "notes": "npm 환경(lodash). 취약점 precision 과 컴포넌트를 함께 측정한다. lodash 4.17.15 를 lockfile 로 고정한다. 취약점은 적용 CVE 6개 전수(vulnComplete=true), 컴포넌트는 lodash 단일(componentsComplete=true). CVE 집합은 NVD/OSV 교차로 큐레이션했다: CVE-2020-8203, CVE-2020-28500, CVE-2021-23337, CVE-2025-13465, CVE-2026-2950, CVE-2026-4800. CVE-2019-10744 는 4.17.12 에서 고쳐져 4.17.15 에 미적용이라 제외한다. 각 CVE 의 GHSA 별칭을 aliases 로 큐레이션했다(osv-scanner 의 aliases 필드로 교차 확인). 별칭으로 보고하는 도구(dependency-check 의 NPM Audit 경로 등)도 같은 취약점을 찾은 것이므로 TP 로 인정한다. 별칭이 확인되지 않는 식별자(NSWG-ECO-516 등)는 여전히 FP 다. rootPurls: 스캔 대상 자기 자신(pkg:npm/vuln-pinned)을 컴포넌트로 내는 도구(syft)가 있어 매칭에서 제외한다. dbSnapshot 은 네 도구 DB 를 함께 동결한 날짜다. vuln-db refresh 로 같은 날 동결한 캐시를 SCAB_VULN_DB_DIR 로 공유하면 precision 이 안정된다(과거 날짜 재구성은 불가, 동결만 가능 — 방법론 문서의 취약점 DB 스냅샷 절 참조). 2회차 동결(2026-07-03) 재검증: 새 스냅샷 스캔이 정답과 완전 일치, 추가 적용 CVE 없음 — dbSnapshot 을 2회차로 갱신.",
+  "components": [
+    {
+      "purl": "pkg:npm/lodash@4.17.15",
+      "version": "4.17.15",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-8203",
+      "affectedPurl": "pkg:npm/lodash@4.17.15",
+      "fixedVersion": "4.17.19",
+      "aliases": [
+        "GHSA-p6mc-m468-83gw"
+      ]
+    },
+    {
+      "cve": "CVE-2020-28500",
+      "affectedPurl": "pkg:npm/lodash@4.17.15",
+      "fixedVersion": "4.17.21",
+      "aliases": [
+        "GHSA-29mw-wpgm-hmr9"
+      ]
+    },
+    {
+      "cve": "CVE-2021-23337",
+      "affectedPurl": "pkg:npm/lodash@4.17.15",
+      "fixedVersion": "4.17.21",
+      "aliases": [
+        "GHSA-35jh-r3h4-6jhm"
+      ]
+    },
+    {
+      "cve": "CVE-2025-13465",
+      "affectedPurl": "pkg:npm/lodash@4.17.15",
+      "fixedVersion": "4.17.23",
+      "aliases": [
+        "GHSA-xxjr-mmjv-4gpg"
+      ]
+    },
+    {
+      "cve": "CVE-2026-2950",
+      "affectedPurl": "pkg:npm/lodash@4.17.15",
+      "fixedVersion": "4.18.0",
+      "aliases": [
+        "GHSA-f23m-r3pf-42rh"
+      ]
+    },
+    {
+      "cve": "CVE-2026-4800",
+      "affectedPurl": "pkg:npm/lodash@4.17.15",
+      "fixedVersion": "4.18.0",
+      "aliases": [
+        "GHSA-r5fr-rjxr-66jc"
+      ]
+    }
+  ],
+  "rootPurls": [
+    "pkg:npm/vuln-pinned"
+  ],
+  "fpReasons": [
+    {
+      "id": "NSWG-ECO-516",
+      "reason": "비CVE 자체 식별자(nodejs-security-wg)로 정답 CVE 의 별칭으로 확인되지 않아 매칭되지 않는다"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:npm/lodash@4.17.15",
+      "reason": "입력(매니페스트, lockfile)에 라이선스 메타데이터가 없다 — 패키지 설치나 저장소 조회를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ]
+}

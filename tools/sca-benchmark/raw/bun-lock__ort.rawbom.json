@@ -1,0 +1,251 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:0086dfd4-ca80-467e-9997-0e95f62ee301",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-10-15T01:08:21Z",
+    "tools" : {
+      "components" : [
+        {
+          "type" : "application",
+          "name" : "OSS Review Toolkit",
+          "version" : "96.0.0"
+        }
+      ]
+    },
+    "component" : {
+      "type" : "application",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "group" : "",
+      "name" : "scab-bun-lock",
+      "version" : "1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        }
+      ]
+    },
+    "licenses" : [
+      {
+        "expression" : "CC0-1.0"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "Bun::scab-bun-lock:1.0.0",
+      "group" : "",
+      "name" : "scab-bun-lock",
+      "version" : "1.0.0",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:bun/scab-bun-lock@1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "NPM::debug:4.3.4",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "Josh Junon"
+          }
+        ]
+      },
+      "authors" : [
+        {
+          "name" : "Josh Junon"
+        }
+      ],
+      "group" : "",
+      "name" : "debug",
+      "version" : "4.3.4",
+      "description" : "Lightweight debugging utility for Node.js and the browser",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "1319f6579357f2338d3337d2cdd4914bb5dcc865"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "text" : {
+              "contentType" : "plain/text",
+              "content" : "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            },
+            "properties" : [
+              {
+                "name" : "ort:origin",
+                "value" : "declared license"
+              }
+            ]
+          }
+        }
+      ],
+      "purl" : "pkg:npm/debug@4.3.4?classifier=sources",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/debug-js/debug#readme"
+        }
+      ],
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "MIT"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "direct"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "NPM::is-number:7.0.0",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "Jon Schlinkert"
+          }
+        ]
+      },
+      "authors" : [
+        {
+          "name" : "Jon Schlinkert"
+        }
+      ],
+      "group" : "",
+      "name" : "is-number",
+      "version" : "7.0.0",
+      "description" : "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "7535345b896734d5f80c4d06c50955527a14f12b"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "text" : {
+              "contentType" : "plain/text",
+              "content" : "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            },
+            "properties" : [
+              {
+                "name" : "ort:origin",
+                "value" : "declared license"
+              }
+            ]
+          }
+        }
+      ],
+      "purl" : "pkg:npm/is-number@7.0.0?classifier=sources",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/jonschlinkert/is-number"
+        }
+      ],
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "MIT"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "direct"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "NPM::ms:2.1.2",
+      "group" : "",
+      "name" : "ms",
+      "version" : "2.1.2",
+      "description" : "Tiny millisecond conversion utility",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "d09d1f357b443f493382a8eb3ccd183872ae6009"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "text" : {
+              "contentType" : "plain/text",
+              "content" : "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            },
+            "properties" : [
+              {
+                "name" : "ort:origin",
+                "value" : "declared license"
+              }
+            ]
+          }
+        }
+      ],
+      "purl" : "pkg:npm/ms@2.1.2?classifier=sources",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/zeit/ms#readme"
+        }
+      ],
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "MIT"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    }
+  ],
+  "externalReferences" : [
+    {
+      "type" : "vcs",
+      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "comment" : "URL to the Git repository of the projects"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "dependsOn" : [
+        "NPM::is-number:7.0.0",
+        "NPM::debug:4.3.4"
+      ]
+    },
+    {
+      "ref" : "NPM::debug:4.3.4",
+      "dependsOn" : [
+        "NPM::ms:2.1.2"
+      ]
+    }
+  ]
+}

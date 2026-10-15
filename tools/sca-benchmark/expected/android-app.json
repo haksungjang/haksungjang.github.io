@@ -1,0 +1,342 @@
+{
+  "fixture": "android-app",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/android-app"
+  },
+  "dbSnapshot": "2026-06-01",
+  "componentsComplete": true,
+  "vulnComplete": false,
+  "notes": "Android 앱 소스, Gradle, lockfile 없음(dependency locking 미사용). Android Gradle Plugin 8.5.2 + AndroidX(AAR). 정답 기준은 실제 배포물(R8 축소를 켠 release APK)의 구성이다. 정답 도출(2026-07-03, Android SDK platforms;android-34 + build-tools;34.0.0, Gradle 8.9, R8 8.5.35, min_api 24): 임시 사본에서 ./gradlew :app:assembleRelease 로 R8 축소 release APK 를 빌드하고, R8 이 남긴 mapping.txt 의 원본 클래스(562개)와 releaseRuntimeClasspath 해석 아티팩트(45개) 각각의 클래스 목록을 교집합해 APK 에 실제 클래스를 남기는 컴포넌트만 정답으로 삼았다. 그 결과 31종(직접 3 + 전이 28)이 남고, 14종은 해석되나 R8 로 전부 잘려 제외된다(core-ktx 는 Java 앱이라 Kotlin 확장 68클래스 전부 제거, viewpager·drawerlayout·interpolator·vectordrawable-animated·lifecycle-livedata·concurrent-futures·listenablefuture·annotation-experimental·resourceinspection 미참조로 제거, kotlin-stdlib-common/jdk7/jdk8 는 1.9 에서 빈 shim). 이 판정으로 componentsComplete=true 라 precision 도 채점한다 — 선언 그래프를 그대로 내는 도구는 R8 로 잘린 14종을 과탐해 precision 이 낮아지고(목적=배포물 구성 기준의 정당한 감점), 매니페스트만 읽는 도구는 직접 3종만 내 recall 이 낮다. 정답이 실제 링크 아티팩트 기준이라 KMP 모듈은 -jvm 변형으로 담았다(okio-jvm, kotlinx-coroutines-core-jvm). 라이선스는 31종 모두 Apache-2.0(POM 확인). 재현: 직접 의존 버전이 고정돼 있고 전이는 immutable POM 으로 결정적으로 해석되며, R8 결과는 AGP 8.5.2 고정 시 재현된다(SDK 보유자 재현). 반드시 사본에서 빌드해 local.properties, gradle.lockfile, build 산출물이 fixture 에 남지 않게 한다. wrapper 를 요구하는 일부 도구 대비로 gradle wrapper(8.9)를 포함하며 lockfile-less 통제는 유지된다.",
+  "components": [
+    {
+      "purl": "pkg:maven/androidx.appcompat/appcompat@1.6.1",
+      "version": "1.6.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "version": "4.12.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.code.gson/gson@2.10.1",
+      "version": "2.10.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/androidx.activity/activity@1.6.0",
+      "version": "1.6.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.annotation/annotation@1.3.0",
+      "version": "1.3.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.appcompat/appcompat-resources@1.6.1",
+      "version": "1.6.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.arch.core/core-common@2.1.0",
+      "version": "2.1.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.arch.core/core-runtime@2.1.0",
+      "version": "2.1.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.collection/collection@1.1.0",
+      "version": "1.1.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.core/core@1.9.0",
+      "version": "1.9.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.cursoradapter/cursoradapter@1.0.0",
+      "version": "1.0.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.customview/customview@1.0.0",
+      "version": "1.0.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.emoji2/emoji2-views-helper@1.2.0",
+      "version": "1.2.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.emoji2/emoji2@1.2.0",
+      "version": "1.2.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.fragment/fragment@1.3.6",
+      "version": "1.3.6",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-common@2.5.1",
+      "version": "2.5.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-livedata-core@2.5.1",
+      "version": "2.5.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-process@2.4.1",
+      "version": "2.4.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-runtime@2.5.1",
+      "version": "2.5.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel-savedstate@2.5.1",
+      "version": "2.5.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.lifecycle/lifecycle-viewmodel@2.5.1",
+      "version": "2.5.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.loader/loader@1.0.0",
+      "version": "1.0.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.savedstate/savedstate@1.2.0",
+      "version": "1.2.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.startup/startup-runtime@1.1.1",
+      "version": "1.1.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.tracing/tracing@1.0.0",
+      "version": "1.0.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.vectordrawable/vectordrawable@1.1.0",
+      "version": "1.1.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/androidx.versionedparcelable/versionedparcelable@1.1.1",
+      "version": "1.1.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.squareup.okio/okio-jvm@3.6.0",
+      "version": "3.6.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.10",
+      "version": "1.9.10",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-android@1.6.1",
+      "version": "1.6.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.6.1",
+      "version": "1.6.1",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/org.gradle.wrapper.GradleWrapperMain/gradle-wrapper",
+      "reason": "저장소에 포함된 빌드 도구(gradle wrapper jar)로 배포 산출물이 아니다 — 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/androidx.annotation/annotation-experimental@1.3.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.concurrent/concurrent-futures@1.0.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.core/core-ktx@1.9.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.drawerlayout/drawerlayout@1.0.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.interpolator/interpolator@1.0.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.lifecycle/lifecycle-livedata@2.0.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.resourceinspection/resourceinspection-annotation@1.0.1",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.vectordrawable/vectordrawable-animated@1.1.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/androidx.viewpager/viewpager@1.0.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/com.google.guava/listenablefuture@1.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains/annotations@13.0",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-common@1.9.10",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk7@1.9.10",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8@1.9.10",
+      "reason": "releaseRuntimeClasspath 에 해석되나 R8 축소로 클래스가 전부 제거돼 release APK 에 없다(예: Java 앱이라 core-ktx 의 Kotlin 확장 미사용, kotlin-stdlib-jdk7/jdk8 는 1.9 에서 빈 shim). 배포물 구성 기준으로 정답에서 제외 — 선언 그래프를 그대로 내는 도구의 precision 함정"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/androidx.activity/activity@1.6.0",
+      "reason": "전이 의존성 — 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이나 lockfile 이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.squareup.okio/okio-jvm@3.6.0",
+      "reason": "okhttp 의 전이 의존. Kotlin 멀티플랫폼 모듈이라 실제 링크 아티팩트는 okio-jvm 이다(선언명 okio 로 보고하는 도구도 있음)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/androidx.appcompat/appcompat@1.6.1",
+      "reason": "입력(build.gradle)에 라이선스 메타데이터가 없다 — 저장소 조회나 아티팩트 설치를 하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "fixture": "binary-go",
+  "category": "firmware",
+  "input": {
+    "kind": "binary",
+    "ref": "fixtures/binary-go/app"
+  },
+  "componentsComplete": false,
+  "axes": [
+    "component"
+  ],
+  "tools": [
+    "syft",
+    "bomlens"
+  ],
+  "notes": "static Go 바이너리(CGO_ENABLED=0, cobra 소수 모듈). 정답 = 빌드에 실제 포함된 의존 모듈 cobra·pflag(mousetrap 은 windows 전용이라 arm64/darwin 빌드에 미포함). syft 는 임베드된 buildinfo 로 전 모듈+버전을 정확히 낸다(pkg:golang/...). Go 모듈 커버리지가 도구마다 갈리는 것이 변별점이다. componentsComplete=false(recall 만): 도구가 자기 모듈(scab-binary-go)과 Go stdlib 도 컴포넌트로 내는데 이는 SBOM 관례상 포함·제외가 갈리는 논쟁 대상이라, precision 을 채점하지 않고 실제 의존 모듈의 recall 만 본다. 빌드 재현: fixtures/binary-go/(main.go·go.mod·go.sum·산출물 app). purl type 은 golang 으로 수렴(componentKey 정합 위험 낮음).",
+  "components": [
+    {
+      "purl": "pkg:golang/github.com/spf13/cobra@v1.8.0",
+      "version": "v1.8.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "version": "v1.0.5",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "direct"
+    }
+  ],
+  "vulnerabilities": [],
+  "fnReasons": [
+    {
+      "id": "pkg:golang/github.com/spf13/pflag",
+      "reason": "Go 전이 모듈 — 바이너리에 임베드된 buildinfo 를 파싱하면 나오지만, 시그니처 매칭 방식은 전이 모듈의 흔적이 약해 놓친다",
+      "axis": "component"
+    }
+  ]
+}

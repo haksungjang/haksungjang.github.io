@@ -1,0 +1,134 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:e3e2f44e-35a9-422a-931a-43472c163569",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-10-15T01:17:04Z",
+    "tools" : {
+      "components" : [
+        {
+          "type" : "application",
+          "name" : "OSS Review Toolkit",
+          "version" : "96.0.0"
+        }
+      ]
+    },
+    "component" : {
+      "type" : "application",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "group" : "",
+      "name" : "vuln-pinned",
+      "version" : "1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        }
+      ]
+    },
+    "licenses" : [
+      {
+        "expression" : "CC0-1.0"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "NPM::vuln-pinned:1.0.0",
+      "group" : "",
+      "name" : "vuln-pinned",
+      "version" : "1.0.0",
+      "description" : "SCA 벤치마크 fixture — 취약 버전 고정으로 취약점 precision 측정",
+      "scope" : "required",
+      "purl" : "pkg:npm/vuln-pinned@1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "NPM::lodash:4.17.15",
+      "supplier" : {
+        "contact" : [
+          {
+            "name" : "John-David Dalton"
+          }
+        ]
+      },
+      "authors" : [
+        {
+          "name" : "John-David Dalton"
+        }
+      ],
+      "group" : "",
+      "name" : "lodash",
+      "version" : "4.17.15",
+      "description" : "Lodash modular utilities.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "SHA-1",
+          "content" : "b447f6670a0455bbfeedd11392eff330ea097548"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "text" : {
+              "contentType" : "plain/text",
+              "content" : "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            },
+            "properties" : [
+              {
+                "name" : "ort:origin",
+                "value" : "declared license"
+              }
+            ]
+          }
+        }
+      ],
+      "purl" : "pkg:npm/lodash@4.17.15?classifier=sources",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://lodash.com/"
+        }
+      ],
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "MIT"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "direct"
+        }
+      ]
+    }
+  ],
+  "externalReferences" : [
+    {
+      "type" : "vcs",
+      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "comment" : "URL to the Git repository of the projects"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "dependsOn" : [
+        "NPM::lodash:4.17.15"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T21:38:24Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "ed3b8056-7edd-4e72-ad83-9e5fdab74fd3",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "1f31335f-da9e-4a9c-8270-2404aa59a138",
+      "type": "library",
+      "name": "@scab/app",
+      "version": "1.0.0",
+      "purl": "pkg:npm/%40scab/app@1.0.0?source=UNKNOWN",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "packages/app/package.json"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "b4c48170-6c22-4011-a148-910448aed6bd",
+      "type": "library",
+      "name": "@scab/util",
+      "version": "1.0.0",
+      "purl": "pkg:npm/%40scab/util@1.0.0?source=UNKNOWN",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "packages/util/package.json"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "0cca4a42-c1d8-4a13-822f-a1890ddd0283",
+      "type": "library",
+      "name": "debug",
+      "version": "4.3.4",
+      "purl": "pkg:npm/debug@4.3.4",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pnpm-lock.yaml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "783390a7-d295-4e4d-9d0c-7305f3ccaa87",
+      "type": "library",
+      "name": "is-number",
+      "version": "7.0.0",
+      "purl": "pkg:npm/is-number@7.0.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pnpm-lock.yaml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "bc913da7-3d49-48a3-86af-e86d3b821774",
+      "type": "library",
+      "name": "kind-of",
+      "version": "6.0.3",
+      "purl": "pkg:npm/kind-of@6.0.3",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pnpm-lock.yaml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "92164e4d-7230-4965-9547-e10f224c808c",
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.2",
+      "purl": "pkg:npm/ms@2.1.2",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pnpm-lock.yaml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "0b3ba91f-fe57-45b2-b7ca-9fead7edea35",
+      "type": "library",
+      "name": "scab-pnpm-workspace",
+      "version": "1.0.0",
+      "purl": "pkg:npm/scab-pnpm-workspace@1.0.0?source=UNKNOWN",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "package.json"
+          }
+        ]
+      }
+    }
+  ]
+}

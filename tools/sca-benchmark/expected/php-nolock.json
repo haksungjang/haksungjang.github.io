@@ -1,0 +1,39 @@
+{
+  "fixture": "php-nolock",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/php-nolock"
+  },
+  "componentsComplete": true,
+  "rootPurls": [
+    "pkg:composer/scab/php-nolock"
+  ],
+  "notes": "lockfile(composer.lock) 없는 Composer 프로젝트. 정답은 composer:2.8 컨테이너에서 composer update --no-install --no-scripts --no-plugins 로 해석한 운영 의존성(2026-10-14): monolog/monolog 3.5.0 과 그 전이 psr/log 3.0.2(monolog 의 요구 ^2.0 || ^3.0 을 만족하는 최신판으로, 2024-09 이후 새 판이 없어 시점 표류가 작다). require-dev 의 symfony/polyfill-ctype 은 배포되지 않는다. lockfile 이 없으므로 lockfile 만 읽는 도구는 결과가 없다.",
+  "components": [
+    {
+      "purl": "pkg:composer/monolog/monolog@3.5.0",
+      "version": "3.5.0",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:composer/psr/log@3.0.2",
+      "version": "3.0.2",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [],
+  "fpReasons": [
+    {
+      "id": "pkg:composer/symfony/polyfill-ctype",
+      "reason": "require-dev(개발 의존성)라 배포물에 들어가지 않는다",
+      "axis": "component"
+    }
+  ]
+}
