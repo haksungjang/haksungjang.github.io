@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:275ee689-3104-4940-a31c-664ce1c77b1d",
+  "serialNumber": "urn:uuid:529903b1-4ff3-4afa-a194-70a9cc1d146e",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:08:48+00:00",
+    "timestamp": "2026-11-14T07:46:58+00:00",
     "tools": {
       "components": [
         {
@@ -15,7 +15,7 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
@@ -58,7 +58,7 @@
   },
   "components": [
     {
-      "bom-ref": "8b6d2494-f4c5-43f4-877e-2249f3edac09",
+      "bom-ref": "3448bbd1-0a54-4693-9383-30a851dddd0d",
       "type": "operating-system",
       "name": "alpine",
       "version": "3.18.12",
@@ -831,7 +831,7 @@
   ],
   "dependencies": [
     {
-      "ref": "8b6d2494-f4c5-43f4-877e-2249f3edac09",
+      "ref": "3448bbd1-0a54-4693-9383-30a851dddd0d",
       "dependsOn": [
         "pkg:apk/alpine/alpine-baselayout@3.4.3-r1?arch=x86_64&distro=3.18.12",
         "pkg:apk/alpine/alpine-keys@2.4-r1?arch=x86_64&distro=3.18.12",
@@ -934,7 +934,7 @@
     {
       "ref": "pkg:oci/alpine@sha256:fd032399cd767f310a1d1274e81cab9f0fd8a49b3589eba2c3420228cd45b6a7?arch=amd64&repository_url=index.docker.io%2Flibrary%2Falpine",
       "dependsOn": [
-        "8b6d2494-f4c5-43f4-877e-2249f3edac09"
+        "3448bbd1-0a54-4693-9383-30a851dddd0d"
       ]
     }
   ],

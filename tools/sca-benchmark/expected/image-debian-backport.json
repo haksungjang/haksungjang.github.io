@@ -5,7 +5,7 @@
     "kind": "image",
     "ref": "gcr.io/distroless/base-debian12@sha256:32e0952baa02da4713cf71be3824d8495a8cc41901d75d2807e5d91e47703cb9"
   },
-  "dbSnapshot": "2026-10-14",
+  "dbSnapshot": "2026-11-14",
   "buildTarget": "linux/amd64",
   "componentsComplete": true,
   "vulnComplete": true,
@@ -13,7 +13,7 @@
     "component",
     "vulnerability"
   ],
-  "notes": "OS 패키지 백포트 변별 fixture. Debian 은 보안 결함을 버전 인상 없이 백포트 리비전(예: 3.0.17-1~deb12u3)으로 고치므로, upstream 버전 범위로 매칭하는 도구는 이미 고쳐진 CVE 를 과탐하고, distro 보안 DB 를 쓰는 도구는 정확하다 — 그 차이를 정답으로 채점한다. 이미지: gcr.io/distroless/base-debian12 의 2025-12-23 자 linux/amd64 전용 이미지(sha256 고정, 스냅샷보다 6개월 전)라 '이후 리비전에서 고쳐진 CVE'(29건, Debian fixedVersion 으로 대응 측정)와 '수정판 없는 CVE'(13건, unfixed/wontfix — 배포물에 실제 존재하므로 정답 포함)가 공존한다. 패키지 6종(dpkg): base-files 12.4+deb12u12, libc6 2.36-9+deb12u13, libssl3 3.0.17-1~deb12u3, media-types, netbase, tzdata. 정답 42건의 큐레이션 근거: 동결 DB(2026-06-30)의 trivy 와 grype 가 42건으로 완전 일치(둘 다 Debian 보안 트래커 계열 데이터), 경계 사례를 트래커에서 직접 검증 — CVE-2026-4046(glibc, 2.36-9+deb12u14 에서 수정 = 이 이미지에 적용), CVE-2026-9076(openssl, 3.0.20-1~deb12u2/DSA-6335-1 = 적용), CVE-2026-42767(최신 리비전도 vulnerable = unfixed), base-files 의 CVE-2010-0834 와 CVE-2018-6557 은 Debian not-affected(Ubuntu 전용)로 제외. netbase, media-types, tzdata 는 트래커에 적용 CVE 없음. fixedVersion 은 upstream 버전이 아니라 Debian 백포트 리비전으로 기재한다(대응 제시율은 distro 컨텍스트를 아는 도구가 유리 — 목적 기준으로 정당). 유의: osv-scanner 는 동결 OSV 캐시에 Debian 생태계가 없어(동결 당시 npm, PyPI, Maven 만 적재) 실행 오류가 된다 — 도구 결함이 아니라 스냅샷 캐시 한계이며, 다음 동결 때 Debian 과 Alpine 을 포함한다(vuln-db refresh 개선 과제). 이미지 해시는 gcr 레지스트리의 서명 태그 업로드 시각(2025-12-23)으로 시점을 특정했다. 정정(2026-07-02): 최초 고정한 해시(dd8572ad)는 인덱스에서 플랫폼 짝을 잘못 읽어 arm64 이미지였다(bomlens 팀 회신으로 발견). linux/amd64 전용 해시(32e0952b)로 교체 — 두 아키텍처의 dpkg 패키지와 버전이 완전히 동일해(실측 대조) 정답 42건은 변하지 않는다. 2회차 동결(2026-07-03) 재검증: 새 스냅샷 스캔이 정답과 완전 일치, 추가 적용 CVE 없음 — dbSnapshot 을 2회차로 갱신. 3회차 동결(2026-10-14) 재검증: 새 스냅샷에서 네 취약점 도구(trivy, grype, osv-scanner, bomlens)가 공통으로 보고한 2026년 CVE 23건을 Debian 보안 추적기 데이터(security-tracker.debian.org/tracker/data/json, 2026-10-14 취득)로 확인했다. 모두 이 이미지의 libc6, libssl3 에 적용된다(bookworm open 18건, 3.0.22-1~deb12u1 에서 수정 5건). 정답에 보태고 dbSnapshot 을 3회차로 갱신. bomlens 와 trivy 가 함께 낸 DLA-4792-1 은 CVE 가 아닌 Debian LTS 권고 식별자라 정답에 넣지 않는다.",
+  "notes": "OS 패키지 백포트 변별 fixture. Debian 은 보안 결함을 버전 인상 없이 백포트 리비전(예: 3.0.17-1~deb12u3)으로 고치므로, upstream 버전 범위로 매칭하는 도구는 이미 고쳐진 CVE 를 과탐하고, distro 보안 DB 를 쓰는 도구는 정확하다 — 그 차이를 정답으로 채점한다. 이미지: gcr.io/distroless/base-debian12 의 2025-12-23 자 linux/amd64 전용 이미지(sha256 고정, 스냅샷보다 6개월 전)라 '이후 리비전에서 고쳐진 CVE'(29건, Debian fixedVersion 으로 대응 측정)와 '수정판 없는 CVE'(13건, unfixed/wontfix — 배포물에 실제 존재하므로 정답 포함)가 공존한다. 패키지 6종(dpkg): base-files 12.4+deb12u12, libc6 2.36-9+deb12u13, libssl3 3.0.17-1~deb12u3, media-types, netbase, tzdata. 정답 42건의 큐레이션 근거: 동결 DB(2026-06-30)의 trivy 와 grype 가 42건으로 완전 일치(둘 다 Debian 보안 트래커 계열 데이터), 경계 사례를 트래커에서 직접 검증 — CVE-2026-4046(glibc, 2.36-9+deb12u14 에서 수정 = 이 이미지에 적용), CVE-2026-9076(openssl, 3.0.20-1~deb12u2/DSA-6335-1 = 적용), CVE-2026-42767(최신 리비전도 vulnerable = unfixed), base-files 의 CVE-2010-0834 와 CVE-2018-6557 은 Debian not-affected(Ubuntu 전용)로 제외. netbase, media-types, tzdata 는 트래커에 적용 CVE 없음. fixedVersion 은 upstream 버전이 아니라 Debian 백포트 리비전으로 기재한다(대응 제시율은 distro 컨텍스트를 아는 도구가 유리 — 목적 기준으로 정당). 유의: osv-scanner 는 동결 OSV 캐시에 Debian 생태계가 없어(동결 당시 npm, PyPI, Maven 만 적재) 실행 오류가 된다 — 도구 결함이 아니라 스냅샷 캐시 한계이며, 다음 동결 때 Debian 과 Alpine 을 포함한다(vuln-db refresh 개선 과제). 이미지 해시는 gcr 레지스트리의 서명 태그 업로드 시각(2025-12-23)으로 시점을 특정했다. 정정(2026-07-02): 최초 고정한 해시(dd8572ad)는 인덱스에서 플랫폼 짝을 잘못 읽어 arm64 이미지였다(bomlens 팀 회신으로 발견). linux/amd64 전용 해시(32e0952b)로 교체 — 두 아키텍처의 dpkg 패키지와 버전이 완전히 동일해(실측 대조) 정답 42건은 변하지 않는다. 2회차 동결(2026-07-03) 재검증: 새 스냅샷 스캔이 정답과 완전 일치, 추가 적용 CVE 없음 — dbSnapshot 을 2회차로 갱신. 3회차 동결(2026-10-14) 재검증: 새 스냅샷에서 네 취약점 도구(trivy, grype, osv-scanner, bomlens)가 공통으로 보고한 2026년 CVE 23건을 Debian 보안 추적기 데이터(security-tracker.debian.org/tracker/data/json, 2026-10-14 취득)로 확인했다. 모두 이 이미지의 libc6, libssl3 에 적용된다(bookworm open 18건, 3.0.22-1~deb12u1 에서 수정 5건). 정답에 보태고 dbSnapshot 을 3회차로 갱신. bomlens 와 trivy 가 함께 낸 DLA-4792-1 은 CVE 가 아닌 Debian LTS 권고 식별자라 정답에 넣지 않는다. 4회차 동결(2026-11-14) 재검증: 새 스냅샷에서 trivy, grype, osv-scanner 가 공통으로 보고한 2026년 CVE 8건을 Debian 보안 추적기 데이터(2026-11-14 취득)와 OpenSSL 공식 취약점 목록(openssl-library.org/news/vulnerabilities, 2026-11-14 취득)으로 확인했다. 8건 모두 추적기에서 bookworm open(미분류)이다. glibc 3건(CVE-2026-84243, CVE-2026-100290, CVE-2026-115819)은 설명에 적힌 영향 버전이 2.36 을 포함하고, OpenSSL CVE-2026-107496 은 3.0.0 이상 3.0.24 미만이 영향 범위라 이 이미지의 libssl3 3.0.17 에 적용된다. 4건을 정답에 보탰다(65건에서 69건). 나머지 OpenSSL 4건(CVE-2026-88822, CVE-2026-95691 은 QUIC, CVE-2026-88823, CVE-2026-95692 는 AES-GCM-SIV)은 영향 범위가 3.5.0 이상이고 두 기능 모두 3.0 에는 없어 미적용이다. 추적기가 아직 분류하지 않아 distro 데이터를 쓰는 도구도 함께 과탐한다. trivy 가 낸 DLA-4854-1, DLA-4867-1 은 CVE 가 아닌 Debian LTS 권고 식별자라 정답에 넣지 않는다.",
   "components": [
     {
       "purl": "pkg:deb/debian/base-files@12.4+deb12u12",
@@ -346,6 +346,22 @@
     {
       "cve": "CVE-2026-97399",
       "affectedPurl": "pkg:deb/debian/libc6@2.36-9+deb12u13"
+    },
+    {
+      "cve": "CVE-2026-84243",
+      "affectedPurl": "pkg:deb/debian/libc6@2.36-9+deb12u13"
+    },
+    {
+      "cve": "CVE-2026-100290",
+      "affectedPurl": "pkg:deb/debian/libc6@2.36-9+deb12u13"
+    },
+    {
+      "cve": "CVE-2026-115819",
+      "affectedPurl": "pkg:deb/debian/libc6@2.36-9+deb12u13"
+    },
+    {
+      "cve": "CVE-2026-107496",
+      "affectedPurl": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3"
     }
   ],
   "fnReasons": [
@@ -628,6 +644,26 @@
       "id": "pkg:generic/libutil.so.1",
       "reason": "패키지(libc6)에 속한 개별 공유 라이브러리를 별도 컴포넌트로 냈다 — 설치 패키지와 중복이라 정답에서 제외",
       "axis": "component"
+    },
+    {
+      "id": "CVE-2026-88822",
+      "reason": "OpenSSL 공식 목록의 영향 범위가 3.5.0 이상이고 해당 기능(QUIC 또는 AES-GCM-SIV)이 3.0 에 없어 libssl3 3.0.17 에는 미적용이다. Debian 추적기가 bookworm 을 아직 분류하지 않아(open) distro 데이터를 쓰는 도구도 과탐한다",
+      "axis": "vulnerability"
+    },
+    {
+      "id": "CVE-2026-88823",
+      "reason": "OpenSSL 공식 목록의 영향 범위가 3.5.0 이상이고 해당 기능(QUIC 또는 AES-GCM-SIV)이 3.0 에 없어 libssl3 3.0.17 에는 미적용이다. Debian 추적기가 bookworm 을 아직 분류하지 않아(open) distro 데이터를 쓰는 도구도 과탐한다",
+      "axis": "vulnerability"
+    },
+    {
+      "id": "CVE-2026-95691",
+      "reason": "OpenSSL 공식 목록의 영향 범위가 3.5.0 이상이고 해당 기능(QUIC 또는 AES-GCM-SIV)이 3.0 에 없어 libssl3 3.0.17 에는 미적용이다. Debian 추적기가 bookworm 을 아직 분류하지 않아(open) distro 데이터를 쓰는 도구도 과탐한다",
+      "axis": "vulnerability"
+    },
+    {
+      "id": "CVE-2026-95692",
+      "reason": "OpenSSL 공식 목록의 영향 범위가 3.5.0 이상이고 해당 기능(QUIC 또는 AES-GCM-SIV)이 3.0 에 없어 libssl3 3.0.17 에는 미적용이다. Debian 추적기가 bookworm 을 아직 분류하지 않아(open) distro 데이터를 쓰는 도구도 과탐한다",
+      "axis": "vulnerability"
     }
   ]
 }

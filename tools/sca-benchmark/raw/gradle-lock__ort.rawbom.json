@@ -1,22 +1,22 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:ac8d7ebf-0f05-4e19-ae81-05d9ae2bc8b4",
+  "serialNumber" : "urn:uuid:9e4a3b05-8128-418a-98be-3257ec1c693b",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:11:06Z",
+    "timestamp" : "2026-11-14T08:14:57Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "gradle-lock",
       "version" : "",
@@ -326,13 +326,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "Maven:com.fasterxml.jackson.core:jackson-databind:2.13.0"
       ]

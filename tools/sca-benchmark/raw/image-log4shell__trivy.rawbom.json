@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:51f99825-c445-40e0-9353-8e59eaccccfa",
+  "serialNumber": "urn:uuid:0673b32f-8cc1-4dae-9a3d-5bc25dc2038c",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:12:53+00:00",
+    "timestamp": "2026-11-14T08:32:56+00:00",
     "tools": {
       "components": [
         {
@@ -15,7 +15,7 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
@@ -465,7 +465,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "medium"
+          "severity": "critical"
         },
         {
           "source": {
@@ -809,7 +809,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "medium"
+          "severity": "critical"
         },
         {
           "source": {
@@ -1021,9 +1021,6 @@
           "url": "https://access.redhat.com/security/cve/CVE-2025-68161"
         },
         {
-          "url": "https://advisory.echohq.com/cve/CVE-2025-68161"
-        },
-        {
           "url": "https://github.com/apache/logging-log4j2"
         },
         {
@@ -1120,9 +1117,6 @@
           "url": "https://access.redhat.com/security/cve/CVE-2026-34477"
         },
         {
-          "url": "https://advisory.echohq.com/cve/CVE-2026-34477"
-        },
-        {
           "url": "https://github.com/apache/logging-log4j2"
         },
         {
@@ -1148,7 +1142,102 @@
         }
       ],
       "published": "2026-04-10T16:16:30+00:00",
-      "updated": "2026-06-17T10:39:06+00:00",
+      "updated": "2026-10-26T22:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+          "versions": [
+            {
+              "version": "2.14.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34479",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 6.9,
+          "severity": "medium",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        116
+      ],
+      "description": "The Log4j1XmlLayout from the Apache Log4j 1-to-Log4j 2 bridge fails to escape characters forbidden by the XML 1.0 standard, producing malformed XML output. Conforming XML parsers are required to reject documents containing such characters with a fatal error, which may cause downstream log processing systems to drop or fail to index affected records.\n\nTwo groups of users are affected:\n\n  *  Those using Log4j1XmlLayout directly in a Log4j Core 2 configuration file.\n  *  Those using the Log4j 1 configuration compatibility layer with org.apache.log4j.xml.XMLLayout specified as the layout class.\n\n\nUsers are advised to upgrade to Apache Log4j 1-to-Log4j 2 bridge version 2.25.4, which corrects this issue.\n\nNote: The Apache Log4j 1-to-Log4j 2 bridge is deprecated and will not be present in Log4j 3. Users are encouraged to consult the  Log4j 1 to Log4j 2 migration guide https://logging.apache.org/log4j/2.x/migrate-from-log4j1.html , and specifically the section on eliminating reliance on the bridge.",
+      "recommendation": "Upgrade org.apache.logging.log4j:log4j-core to version 2.25.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-34479"
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2026/04/10/8"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-34479"
+        },
+        {
+          "url": "https://github.com/apache/logging-log4j2"
+        },
+        {
+          "url": "https://github.com/apache/logging-log4j2/pull/4078"
+        },
+        {
+          "url": "https://lists.apache.org/thread/gd0hp6mj17rn3kj279vgy4p7kd4zz5on"
+        },
+        {
+          "url": "https://logging.apache.org/cyclonedx/vdr.xml"
+        },
+        {
+          "url": "https://logging.apache.org/log4j/2.x/migrate-from-log4j1.html"
+        },
+        {
+          "url": "https://logging.apache.org/security.html#CVE-2026-34479"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34479"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-34479"
+        }
+      ],
+      "published": "2026-04-10T16:16:31+00:00",
+      "updated": "2026-10-26T21:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
@@ -1194,6 +1283,12 @@
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -1210,9 +1305,6 @@
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-34480"
-        },
-        {
-          "url": "https://advisory.echohq.com/cve/CVE-2026-34480"
         },
         {
           "url": "https://github.com/apache/logging-log4j2"
@@ -1240,7 +1332,7 @@
         }
       ],
       "published": "2026-04-10T16:16:31+00:00",
-      "updated": "2026-06-17T10:39:07+00:00",
+      "updated": "2026-10-26T22:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",

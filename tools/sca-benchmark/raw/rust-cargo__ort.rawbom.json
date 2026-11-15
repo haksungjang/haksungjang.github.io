@@ -1,22 +1,22 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:e866777a-bf38-4e0d-9d34-74ca6ef9a70f",
+  "serialNumber" : "urn:uuid:e2e0eb7d-51ad-48d2-a9bc-daa04fc68aca",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:21:55Z",
+    "timestamp" : "2026-11-14T09:22:39Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "scab-rust-cargo",
       "version" : "0.1.0",
@@ -448,7 +448,7 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "Crate::syn:3.0.9",
+      "bom-ref" : "Crate::syn:3.0.10",
       "supplier" : {
         "contact" : [
           {
@@ -463,13 +463,13 @@
       ],
       "group" : "",
       "name" : "syn",
-      "version" : "3.0.9",
+      "version" : "3.0.10",
       "description" : "Parser for Rust source code",
       "scope" : "required",
       "hashes" : [
         {
           "alg" : "SHA-256",
-          "content" : "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b"
+          "content" : "4ae9ccbea3a7b0b09443036490c8f34a8b1b760fd345e5c0dae0aac718faea79"
         }
       ],
       "licenses" : [
@@ -504,7 +504,7 @@
           }
         }
       ],
-      "purl" : "pkg:cargo/syn@3.0.9?classifier=sources",
+      "purl" : "pkg:cargo/syn@3.0.10?classifier=sources",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -605,13 +605,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "Crate::serde:1.0.229"
       ]
@@ -633,7 +633,7 @@
       "dependsOn" : [
         "Crate::proc-macro2:1.0.107",
         "Crate::quote:1.0.47",
-        "Crate::syn:3.0.9"
+        "Crate::syn:3.0.10"
       ]
     },
     {
@@ -649,7 +649,7 @@
       ]
     },
     {
-      "ref" : "Crate::syn:3.0.9",
+      "ref" : "Crate::syn:3.0.10",
       "dependsOn" : [
         "Crate::unicode-ident:1.0.27",
         "Crate::proc-macro2:1.0.107",

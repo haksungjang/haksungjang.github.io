@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T20:55:17Z",
+    "timestamp": "2026-11-14T07:47:25Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "84a1187b-5443-4859-aed7-dc68f715ba3a",
+      "bom-ref": "32a15703-95b4-45bf-bc4f-16afc1d06732",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "749c64d8-a120-4a22-8052-6b42ea652d72",
+      "bom-ref": "71fc0dbf-139a-4f1d-9758-09d8393d75e6",
       "type": "library",
       "name": "alpine-baselayout",
       "version": "3.4.3-r1",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "1ae79a99-eabd-486e-99c8-77b0a316a4e8",
+      "bom-ref": "d719dcea-cb54-4750-b125-12cdac22e2fb",
       "type": "library",
       "name": "alpine-baselayout-data",
       "version": "3.4.3-r1",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "e78b3259-0801-48c1-8f45-2d62e47128e1",
+      "bom-ref": "50af67fe-6c06-4b1b-98c7-0a18a574df87",
       "type": "library",
       "name": "alpine-keys",
       "version": "2.4-r1",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "1e4acd65-5b58-4fc6-b0a9-7902cca65bf7",
+      "bom-ref": "f116d899-89bc-4695-8190-d3df36aef91d",
       "type": "library",
       "name": "apk-tools",
       "version": "2.14.4-r0",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "bom-ref": "0396478b-492b-4282-bc98-c2fe1df8a416",
+      "bom-ref": "d9f0b146-851c-4846-8126-450c88a45881",
       "type": "library",
       "name": "busybox",
       "version": "1.36.1-r7",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "bom-ref": "3174e893-d8c9-4181-9ab8-fad429e38160",
+      "bom-ref": "e29cf3e5-2f29-43ed-8ade-73d078655b05",
       "type": "library",
       "name": "busybox-binsh",
       "version": "1.36.1-r7",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "bom-ref": "7c2e1c3f-fffa-4151-935e-3a95c1180ad9",
+      "bom-ref": "b52fe91b-7b27-4ea7-827d-12a72c80f217",
       "type": "library",
       "name": "ca-certificates-bundle",
       "version": "20241121-r1",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "bom-ref": "717a8c8e-caf0-4ecb-a807-0531013822ec",
+      "bom-ref": "3e27ee52-5c37-43af-8077-066dfc5bf96e",
       "type": "library",
       "name": "libc-utils",
       "version": "0.7.2-r5",
@@ -142,7 +142,7 @@
       }
     },
     {
-      "bom-ref": "888ca5d0-92c6-4b94-b4df-1ed15acd86ec",
+      "bom-ref": "07be0803-23bb-4185-845f-9906be15d941",
       "type": "library",
       "name": "libcrypto3",
       "version": "3.1.8-r0",
@@ -156,7 +156,7 @@
       }
     },
     {
-      "bom-ref": "a551fe45-0826-49a0-86e8-e7f1ced339db",
+      "bom-ref": "65fafff9-eb03-4eea-ab7e-99644c27c0f1",
       "type": "library",
       "name": "libssl3",
       "version": "3.1.8-r0",
@@ -170,7 +170,7 @@
       }
     },
     {
-      "bom-ref": "3fa62dcb-5992-4f3d-9f45-2ce69cb190d4",
+      "bom-ref": "37aa63ef-d630-4d20-958e-8c99a12158a5",
       "type": "library",
       "name": "musl",
       "version": "1.2.4-r3",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "bom-ref": "e875f71a-d144-4c83-ae98-8065ec117073",
+      "bom-ref": "86616abd-285b-4d7c-948d-4e15ddcc8327",
       "type": "library",
       "name": "musl-utils",
       "version": "1.2.4-r3",
@@ -198,7 +198,7 @@
       }
     },
     {
-      "bom-ref": "d02589bd-b044-4a90-8867-9e642351e1f6",
+      "bom-ref": "1c09282f-2975-4e64-807b-da5d92608cdd",
       "type": "library",
       "name": "scanelf",
       "version": "1.3.7-r1",
@@ -212,7 +212,7 @@
       }
     },
     {
-      "bom-ref": "58b8d5bb-c37a-4b42-8fe3-efb801aeac78",
+      "bom-ref": "1b7e571b-01ed-4d6b-a650-0e2c381cafc1",
       "type": "library",
       "name": "ssl_client",
       "version": "1.36.1-r7",
@@ -226,7 +226,7 @@
       }
     },
     {
-      "bom-ref": "446a908c-81f2-4e79-9aed-8e74e4e92db7",
+      "bom-ref": "7543223a-4a74-4b8e-ad26-1103dd4634d4",
       "type": "library",
       "name": "zlib",
       "version": "1.2.13-r1",

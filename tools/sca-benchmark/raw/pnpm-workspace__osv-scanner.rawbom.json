@@ -2,7 +2,7 @@
   "results": [
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/pnpm-workspace/pnpm-lock.yaml",
+        "path": "~/projects/sca-benchmark-internal/fixtures/pnpm-workspace/pnpm-lock.yaml",
         "type": "lockfile"
       },
       "packages": [

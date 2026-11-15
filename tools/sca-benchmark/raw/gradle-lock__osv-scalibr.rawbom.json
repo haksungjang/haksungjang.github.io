@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:02:36Z",
+    "timestamp": "2026-11-14T08:14:25Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "de84b4d0-6594-448c-b60f-33e6ad1f34af",
+      "bom-ref": "816dcc3d-e3b2-4330-b06a-0cebfa901a05",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "a77d2688-0b3d-4020-81c6-557c12541c7f",
+      "bom-ref": "7e3b12c9-de3a-4822-8347-852d3ba99bbf",
       "type": "library",
       "name": "com.fasterxml.jackson.core:jackson-annotations",
       "version": "2.13.0",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "153117de-f9ba-457c-a455-e481592ebfbd",
+      "bom-ref": "e6d80535-9189-4f8d-960c-e6bf519eb97d",
       "type": "library",
       "name": "com.fasterxml.jackson.core:jackson-core",
       "version": "2.13.0",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "763c9b5d-9061-4764-ad68-329be7edee52",
+      "bom-ref": "bf2e63bb-66cb-4364-bddf-899988daba07",
       "type": "library",
       "name": "com.fasterxml.jackson.core:jackson-databind",
       "version": "2.13.0",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "13bf9e56-5974-42db-b002-af6aa1092876",
+      "bom-ref": "d5437b50-7b82-473d-87bd-2fd206e529dd",
       "type": "library",
       "name": "com.fasterxml.jackson:jackson-bom",
       "version": "2.13.0",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "bom-ref": "bcf6aa34-6281-43ef-b588-8285baad90fd",
+      "bom-ref": "b3c366fd-8935-48fa-82a9-56c34744c12b",
       "type": "library",
       "name": "unknown",
       "version": "unknown",

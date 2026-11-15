@@ -1,0 +1,182 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:6a8803de-e4bb-4bcc-866e-e0694c6bd90e",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-11-14T08:05:11Z",
+    "tools" : {
+      "components" : [
+        {
+          "type" : "application",
+          "name" : "OSS Review Toolkit",
+          "version" : "99.0.0"
+        }
+      ]
+    },
+    "component" : {
+      "type" : "application",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
+      "group" : "",
+      "name" : "example.com/scab-go-vuln-subpackage",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        }
+      ]
+    },
+    "licenses" : [
+      {
+        "expression" : "CC0-1.0"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "GoMod::example.com/scab-go-vuln-subpackage:4166e1e7c97719881040e0da220ca0c15a2365b1",
+      "group" : "",
+      "name" : "example.com/scab-go-vuln-subpackage",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:gomod/example.com/scab-go-vuln-subpackage@4166e1e7c97719881040e0da220ca0c15a2365b1",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "Go::github.com/jackc/pgpassfile:1.0.0",
+      "group" : "",
+      "name" : "github.com/jackc/pgpassfile",
+      "version" : "1.0.0",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:golang/github.com/jackc/pgpassfile@1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "Go::github.com/jackc/pgservicefile:0.0.0-20221227161230-091c0ba34f0a",
+      "group" : "",
+      "name" : "github.com/jackc/pgservicefile",
+      "version" : "0.0.0-20221227161230-091c0ba34f0a",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:golang/github.com/jackc/pgservicefile@0.0.0-20221227161230-091c0ba34f0a",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "Go::github.com/jackc/pgx/v5:5.5.1",
+      "group" : "",
+      "name" : "github.com/jackc/pgx/v5",
+      "version" : "5.5.1",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:golang/github.com/jackc/pgx/v5@5.5.1",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "direct"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "Go::golang.org/x/crypto:0.59.0",
+      "group" : "",
+      "name" : "golang.org/x/crypto",
+      "version" : "0.59.0",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:golang/golang.org/x/crypto@0.59.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "Go::golang.org/x/text:0.44.0",
+      "group" : "",
+      "name" : "golang.org/x/text",
+      "version" : "0.44.0",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:golang/golang.org/x/text@0.44.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    }
+  ],
+  "externalReferences" : [
+    {
+      "type" : "vcs",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
+      "comment" : "URL to the Git repository of the projects"
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
+      "dependsOn" : [
+        "Go::github.com/jackc/pgx/v5:5.5.1"
+      ]
+    },
+    {
+      "ref" : "Go::github.com/jackc/pgx/v5:5.5.1",
+      "dependsOn" : [
+        "Go::github.com/jackc/pgpassfile:1.0.0",
+        "Go::github.com/jackc/pgservicefile:0.0.0-20221227161230-091c0ba34f0a",
+        "Go::golang.org/x/crypto:0.59.0",
+        "Go::golang.org/x/text:0.44.0"
+      ]
+    }
+  ]
+}

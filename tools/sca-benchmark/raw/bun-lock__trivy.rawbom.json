@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:25144019-42b6-478a-814e-e5fce1174683",
+  "serialNumber": "urn:uuid:ca2fc288-a376-43a3-9b6e-41325bb1eee8",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:08:05+00:00",
+    "timestamp": "2026-11-14T07:39:50+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "eea363b0-a8cf-4127-bd7e-024d4afd7c82",
+      "bom-ref": "fce858d7-7070-4a91-8a0f-49a0a4c262c9",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/bun-lock",
+      "name": "~/projects/sca-benchmark-internal/fixtures/bun-lock",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "20d25387-7e61-4dde-88ae-20abed463ba5",
+      "bom-ref": "6120593e-7623-4021-a2a2-47d52b21363f",
       "type": "application",
       "name": "bun.lock",
       "properties": [
@@ -84,15 +84,15 @@
   ],
   "dependencies": [
     {
-      "ref": "20d25387-7e61-4dde-88ae-20abed463ba5",
+      "ref": "6120593e-7623-4021-a2a2-47d52b21363f",
       "dependsOn": [
         "pkg:npm/debug@4.3.4"
       ]
     },
     {
-      "ref": "eea363b0-a8cf-4127-bd7e-024d4afd7c82",
+      "ref": "fce858d7-7070-4a91-8a0f-49a0a4c262c9",
       "dependsOn": [
-        "20d25387-7e61-4dde-88ae-20abed463ba5"
+        "6120593e-7623-4021-a2a2-47d52b21363f"
       ]
     },
     {

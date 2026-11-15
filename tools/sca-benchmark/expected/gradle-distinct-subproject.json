@@ -1,0 +1,97 @@
+{
+  "fixture": "gradle-distinct-subproject",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/gradle-distinct-subproject"
+  },
+  "componentsComplete": true,
+  "notes": "Gradle, lockfile 없음. gradle-samename-subproject 의 대조 fixture 로, 루트 프로젝트 이름만 demo-root 로 다르고 나머지(하위 프로젝트 :demo, allprojects 의 group 과 version, 의존성)는 같다. 두 fixture 의 결과 차이는 '루트와 하위 프로젝트의 이름이 같다'는 조건 하나에서 나온다. 정답 도출 절차(2026-11-13): 임시 사본에서 ./gradlew :demo:dependencies --configuration runtimeClasspath(Gradle 9.3.1, JDK 17). 결과는 gradle-samename-subproject 와 같다(guava 33.0.0-jre 직접, failureaccess, listenablefuture, jsr305, checker-qual, error_prone_annotations 전이). 직접은 버전까지, 전이는 이름만(하이브리드). 루트 프로젝트 자신(com.example:demo-root)과 하위 프로젝트 자신(com.example:demo)은 rootPurls 로 매칭에서 제외한다.",
+  "rootPurls": [
+    "pkg:maven/com.example/demo-root",
+    "pkg:maven/com.example/demo"
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/org.gradle.wrapper.GradleWrapperMain/gradle-wrapper",
+      "reason": "저장소에 포함된 빌드 도구(gradle wrapper jar)로 배포 산출물이 아니다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/com.google.j2objc/j2objc-annotations",
+      "reason": "guava 33.0.0-jre 의 POM 에는 있지만 Gradle module metadata 기준 runtimeClasspath 에는 없다. Gradle 빌드 결과 기준으로 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/com.google.guava/failureaccess",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.guava/listenablefuture",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.code.findbugs/jsr305",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.checkerframework/checker-qual",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.errorprone/error_prone_annotations",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.guava/guava@33.0.0-jre",
+      "reason": "입력(빌드 스크립트, POM)에 라이선스 메타데이터가 없다. 패키지를 받거나 저장소를 조회하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ],
+  "components": [
+    {
+      "purl": "pkg:maven/com.google.guava/guava@33.0.0-jre",
+      "version": "33.0.0-jre",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/failureaccess",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/listenablefuture",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.checkerframework/checker-qual",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": []
+}

@@ -1,22 +1,22 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:7dea5545-af27-4ab6-9d67-60cb91eece46",
+  "serialNumber" : "urn:uuid:5bcb18d4-5933-4ca9-9b31-8c8704d234b0",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:18:05Z",
+    "timestamp" : "2026-11-14T09:02:28Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "name" : "scab-pnpm-workspace",
       "version" : "1.0.0",
       "properties" : [
@@ -329,13 +329,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "NPM::is-number:7.0.0",
         "NPM::debug:4.3.4",

@@ -1,0 +1,180 @@
+{
+  "fixture": "go-vuln-subpackage",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/go-vuln-subpackage"
+  },
+  "buildTarget": "linux/amd64",
+  "dbSnapshot": "2026-11-14",
+  "componentsComplete": true,
+  "vulnComplete": true,
+  "rootPurls": [
+    "pkg:golang/example.com/scab-go-vuln-subpackage"
+  ],
+  "notes": "Go 모듈(go.mod + go.sum). 취약점 축을 겨냥한다. 프로그램은 github.com/jackc/pgx/v5 v5.5.1 의 하위 패키지 pgconn 만 직접 import 해 Connect, Pipeline.Sync 를 호출한다(루트 패키지 pgx 와 pgxpool 은 쓰지 않음). 변별점은 둘이다. (1) CVE 별칭이 없는 권고: GHSA-fqpg-rq76-99pq(GO-2024-2567, Pipeline.Sync 의 panic)는 OSV API 와 vuln.go.dev 모두 CVE 별칭이 없다. 영향 패키지 github.com/jackc/pgx/v5/pgconn 하나, 영향 범위 5.0.0-alpha.5 이상 5.5.2 미만. 정답의 대표 식별자는 GHSA, 별칭은 GO 다. CVE 만 비교하거나 GO 식별자를 GHSA 로 잇지 못하는 도구는 이 건을 놓치거나 과탐으로 낸다. (2) 하위 패키지 단위 권고: 다섯 권고가 모두 pgx/v5 모듈에 걸리지만 영향 패키지가 다르다. 모듈 버전만 보는 도구는 다섯 건을 모두 내고(vulnerability 축 정답), 패키지와 심볼을 보는 도구는 reachability 축에서 갈린다. 도달성 판정(go-reach-uncalled 와 같은 방식, 근거는 go list -deps 와 빌드한 바이너리의 go tool nm 심볼 표): GHSA-fqpg-rq76-99pq 와 CVE-2024-27304(GO-2024-2606, pgconn.Connect 등과 pgproto3 의 Encode 계열이 영향 심볼)는 심볼이 바이너리에 있어 affected. CVE-2026-33815(GO-2026-4771, pgproto3 Backend.Receive, Bind.Decode)와 CVE-2026-33816(GO-2026-4772, pgproto3 Backend.Receive, FunctionCall.Decode)은 pgproto3 패키지는 링크되지만 서버 측 영향 함수가 심볼 표에 없어 not_affected. CVE-2026-41889(GO-2026-5004, pgx/v5/internal/sanitize)는 그 패키지가 빌드에 들어가지 않아 not_affected. 영향 패키지와 심볼은 OSV 레코드의 ecosystem_specific.imports 다. 컴포넌트 정답은 GOOS=linux GOARCH=amd64 go list -deps 로 확인한 링크 모듈 5개다(pgx/v5, pgpassfile, pgservicefile, x/crypto 의 pbkdf2, x/text 의 secure/precis 등). go.sum 과 모듈 그래프에만 있는 puddle/v2, testify, yaml.v3, x/net, x/sys 등은 링크되지 않아 제외한다. x/crypto 는 v0.59.0, x/text 는 v0.44.0 으로 올려 두었다(pgx 5.5.1 이 요구하는 v0.9.0 에는 ssh, unicode/norm 등 다른 패키지의 권고가 20건 넘게 걸려 pgx 의 하위 패키지 권고라는 변수가 흐려진다). 두 버전과 pgpassfile, pgservicefile 에는 적용 권고가 없다. go 지시문은 1.27.4 로, 표준 라이브러리 1.27.3 의 GO-2026-6859(CVE-2026-97054, net/http)가 고쳐진 판이라 표준 라이브러리 권고도 0건이다. 권고 전수는 OSV API(api.osv.dev v1/query, ecosystem Go)로 다섯 모듈 버전과 stdlib 1.27.4 를 조회하고 vuln.go.dev 의 ID 레코드와 대조했다(2026-11-13 조회). vulnComplete=true, 기준 시점은 회차 DB 동결일 2026-11-14 이며 동결 뒤 그 스냅샷으로 다시 확인할 예정이다. 빌드 재현: fixtures/go-vuln-subpackage 사본에서 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags=-buildid= (go1.27.4). 라이선스는 모듈 캐시의 LICENSE 파일로 확인했다(jackc 3종 MIT, x/crypto 와 x/text BSD-3-Clause).",
+  "components": [
+    {
+      "purl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "version": "v5.5.1",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+      "version": "v1.0.0",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a",
+      "version": "v0.0.0-20221227161230-091c0ba34f0a",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/crypto@v0.59.0",
+      "version": "v0.59.0",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:golang/golang.org/x/text@v0.44.0",
+      "version": "v0.44.0",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "GHSA-fqpg-rq76-99pq",
+      "affectedPurl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "fixedVersion": "v5.5.2",
+      "aliases": [
+        "GO-2024-2567"
+      ],
+      "reachability": "affected"
+    },
+    {
+      "cve": "CVE-2024-27304",
+      "affectedPurl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "fixedVersion": "v5.5.4",
+      "aliases": [
+        "GHSA-mrww-27vc-gghv",
+        "GHSA-7jwh-3vrq-q3m8",
+        "GO-2024-2606"
+      ],
+      "reachability": "affected"
+    },
+    {
+      "cve": "CVE-2026-33815",
+      "affectedPurl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "fixedVersion": "v5.9.0",
+      "aliases": [
+        "GHSA-xgrm-4fwx-7qm8",
+        "GO-2026-4771"
+      ],
+      "reachability": "not_affected"
+    },
+    {
+      "cve": "CVE-2026-33816",
+      "affectedPurl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "fixedVersion": "v5.9.0",
+      "aliases": [
+        "GHSA-9jj7-4m8r-rfcm",
+        "GO-2026-4772"
+      ],
+      "reachability": "not_affected"
+    },
+    {
+      "cve": "CVE-2026-41889",
+      "affectedPurl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "fixedVersion": "v5.9.2",
+      "aliases": [
+        "GHSA-j88v-2chj-qfwx",
+        "GO-2026-5004"
+      ],
+      "reachability": "not_affected"
+    }
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:golang/github.com/stretchr/testify",
+      "reason": "go.sum 에 go.mod 해시만 있는 모듈 그래프 항목(pgx 와 그 의존성의 테스트용)이다. linux/amd64 빌드(go list -deps)에 링크되지 않아 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/stretchr/objx",
+      "reason": "go.sum 에 go.mod 해시만 있는 모듈 그래프 항목(pgx 와 그 의존성의 테스트용)이다. linux/amd64 빌드(go list -deps)에 링크되지 않아 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/davecgh/go-spew",
+      "reason": "go.sum 에 go.mod 해시만 있는 모듈 그래프 항목(pgx 와 그 의존성의 테스트용)이다. linux/amd64 빌드(go list -deps)에 링크되지 않아 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/pmezard/go-difflib",
+      "reason": "go.sum 에 go.mod 해시만 있는 모듈 그래프 항목(pgx 와 그 의존성의 테스트용)이다. linux/amd64 빌드(go list -deps)에 링크되지 않아 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/gopkg.in/yaml.v3",
+      "reason": "go.sum 에 go.mod 해시만 있는 모듈 그래프 항목(pgx 와 그 의존성의 테스트용)이다. linux/amd64 빌드(go list -deps)에 링크되지 않아 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/gopkg.in/check.v1",
+      "reason": "go.sum 에 go.mod 해시만 있는 모듈 그래프 항목(pgx 와 그 의존성의 테스트용)이다. linux/amd64 빌드(go list -deps)에 링크되지 않아 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/jackc/puddle/v2",
+      "reason": "pgx/v5 의 pgxpool 이 쓰는 모듈이다. 이 프로그램은 pgconn 만 import 해 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/golang.org/x/net",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/golang.org/x/sys",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/golang.org/x/sync",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/golang.org/x/term",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/golang.org/x/tools",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/golang.org/x/mod",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/github.com/kr/pretty",
+      "reason": "모듈 그래프(go list -m all)에는 있지만 이 프로그램이 import 하는 패키지(pgconn)의 의존 패키지가 아니어서 linux/amd64 빌드(go list -deps)에 링크되지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:golang/stdlib",
+      "reason": "Go 표준 라이브러리는 이 벤치마크의 Go 정답에서 컴포넌트로 세지 않는다(go-mod 와 같은 기준). go 1.27.4 에는 dbSnapshot 시점에 적용되는 권고가 없다",
+      "axis": "component"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "GHSA-fqpg-rq76-99pq",
+      "reason": "CVE 별칭이 없는 권고(GHSA 와 GO 식별자만 있음). CVE 만 다루는 취약점 DB(NVD 기반 등)에는 없다",
+      "axis": "vulnerability"
+    }
+  ]
+}

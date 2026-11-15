@@ -2,7 +2,7 @@
   "results": [
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/uv-lock/uv.lock",
+        "path": "~/projects/sca-benchmark-internal/fixtures/uv-lock/uv.lock",
         "type": "lockfile"
       },
       "packages": [

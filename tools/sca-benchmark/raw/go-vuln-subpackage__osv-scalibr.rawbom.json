@@ -1,0 +1,117 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:01:12Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "fabf1971-2152-4245-9b79-f80271a43c95",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "58f2aea8-d883-47c7-a095-38e84ef606b1",
+      "type": "library",
+      "name": "github.com/jackc/pgpassfile",
+      "version": "1.0.0",
+      "purl": "pkg:golang/github.com/jackc/pgpassfile@1.0.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "cdc4b0cb-6301-488c-bcb4-57bb4e24ccfa",
+      "type": "library",
+      "name": "github.com/jackc/pgservicefile",
+      "version": "0.0.0-20221227161230-091c0ba34f0a",
+      "purl": "pkg:golang/github.com/jackc/pgservicefile@0.0.0-20221227161230-091c0ba34f0a",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "5c49b3dd-e0ac-44a1-80aa-3be60202c9be",
+      "type": "library",
+      "name": "github.com/jackc/pgx/v5",
+      "version": "5.5.1",
+      "purl": "pkg:golang/github.com/jackc/pgx/v5@5.5.1",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "5e63ae2f-9c71-44c5-94a8-04c53b1322bf",
+      "type": "library",
+      "name": "golang.org/x/crypto",
+      "version": "0.59.0",
+      "purl": "pkg:golang/golang.org/x/crypto@0.59.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "109e9909-4769-4f03-a607-17cdb0ecd3af",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "0.44.0",
+      "purl": "pkg:golang/golang.org/x/text@0.44.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "c527b766-7839-4362-b1e3-78bafe657ba3",
+      "type": "library",
+      "name": "stdlib",
+      "version": "1.27.4",
+      "purl": "pkg:golang/stdlib@1.27.4",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "go.mod"
+          }
+        ]
+      }
+    }
+  ]
+}

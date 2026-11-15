@@ -1,22 +1,22 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:26f293b8-d752-4e1a-b3ae-067bcb3aed16",
+  "serialNumber" : "urn:uuid:1985282e-63c4-4f80-97d5-194751cf120c",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:15:07Z",
+    "timestamp" : "2026-11-14T08:45:21Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "node-lock",
       "version" : "1.0.0",
@@ -263,13 +263,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "NPM::debug:4.3.1",
         "NPM::minimist:1.2.5"

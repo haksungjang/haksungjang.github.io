@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:36:47Z",
+    "timestamp": "2026-11-14T08:51:42Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "9e1911aa-267e-40ce-b385-859c4a0aabd4",
+      "bom-ref": "fce00c51-c64d-428e-8836-c9a7e4dac840",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "82cce18e-ddf3-469b-86eb-53d69df92249",
+      "bom-ref": "e101aae1-1a6d-4cf2-8e69-ac1e20d40b49",
       "type": "library",
       "name": "debug",
       "version": "4.3.4",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "8c759679-4700-4792-81a3-1cae74187bd9",
+      "bom-ref": "0817b5a9-caa9-4f0d-a28d-d15dcb8c8532",
       "type": "library",
       "name": "is-number",
       "version": "7.0.0",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "333e2fef-a4a1-4ce9-ad00-6b4a7c008dca",
+      "bom-ref": "29625ff0-db3d-42ea-917c-b631a9a7c4f5",
       "type": "library",
       "name": "kind-of",
       "version": "6.0.3",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "bc833905-8820-45a3-b35a-7bab8662db92",
+      "bom-ref": "3258538a-a03b-46a0-8a16-9e43bbe42d5f",
       "type": "library",
       "name": "left-pad",
       "version": "1.3.0",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "bom-ref": "9e1fc17d-336d-415a-b900-0f96550f4e63",
+      "bom-ref": "fd34f13d-9c4e-4cf1-bda1-e1bd93c4afab",
       "type": "library",
       "name": "ms",
       "version": "2.1.2",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "bom-ref": "98c98b47-0e9b-4d44-8822-9529f760f051",
+      "bom-ref": "33314f3d-d289-4f06-b3ec-fdb1f6c8ee6e",
       "type": "library",
       "name": "scab-example-demo",
       "version": "0.0.0",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "bom-ref": "d7fb7553-6318-408f-8a20-aee9867ea184",
+      "bom-ref": "c6a4fbe2-72ad-4036-830e-92ec63046caa",
       "type": "library",
       "name": "scab-npm-nonshipped",
       "version": "1.0.0",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "bom-ref": "efb6e54a-52cc-460a-8ee0-65902dbdb8e2",
+      "bom-ref": "8d644184-3075-41df-aafb-b9cc4d22c038",
       "type": "library",
       "name": "scab-test-fixture-app",
       "version": "0.0.0",

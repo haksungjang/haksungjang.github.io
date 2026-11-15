@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:af60c9ad-d9ad-45c8-834a-11711a37c185",
+  "serialNumber": "urn:uuid:cde684ea-9e0b-49e8-9699-7c384c2c4b5d",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:17:43+00:00",
+    "timestamp": "2026-11-14T09:02:11+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "23ad7edf-1bfb-4663-b95a-cce6e0e2b746",
+      "bom-ref": "c106d159-b1be-41e0-85b0-d37510bfd44b",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/pnpm-workspace",
+      "name": "~/projects/sca-benchmark-internal/fixtures/pnpm-workspace",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "1c1b04a8-758a-4fa8-ab7e-c82a39a20507",
+      "bom-ref": "2049c9e4-de7a-4c5e-ad36-5f46ac0b0ef6",
       "type": "application",
       "name": "pnpm-lock.yaml",
       "properties": [
@@ -101,16 +101,16 @@
   ],
   "dependencies": [
     {
-      "ref": "1c1b04a8-758a-4fa8-ab7e-c82a39a20507",
+      "ref": "2049c9e4-de7a-4c5e-ad36-5f46ac0b0ef6",
       "dependsOn": [
         "pkg:npm/debug@4.3.4",
         "pkg:npm/kind-of@6.0.3"
       ]
     },
     {
-      "ref": "23ad7edf-1bfb-4663-b95a-cce6e0e2b746",
+      "ref": "c106d159-b1be-41e0-85b0-d37510bfd44b",
       "dependsOn": [
-        "1c1b04a8-758a-4fa8-ab7e-c82a39a20507"
+        "2049c9e4-de7a-4c5e-ad36-5f46ac0b0ef6"
       ]
     },
     {

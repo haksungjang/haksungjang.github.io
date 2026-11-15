@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:f8ad44da-303f-4ea1-9f18-8fa2a4d2fbe3",
+  "serialNumber": "urn:uuid:a2b9091b-e765-48f3-ae37-2baaaa2a36a5",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:14:49+00:00",
+    "timestamp": "2026-11-14T08:45:02+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "3fb7307d-4d75-47f8-94cf-7c4f2c325a7f",
+      "bom-ref": "c8481cd6-9669-4f9d-88cc-12ffefb0a525",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/node-lock",
+      "name": "~/projects/sca-benchmark-internal/fixtures/node-lock",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "ecdfe95f-5207-467f-a4dd-0fec4f4037cd",
+      "bom-ref": "f338a8bb-5aa5-469c-8144-39d8373c6e33",
       "type": "application",
       "name": "package-lock.json",
       "properties": [
@@ -122,13 +122,13 @@
   ],
   "dependencies": [
     {
-      "ref": "3fb7307d-4d75-47f8-94cf-7c4f2c325a7f",
+      "ref": "c8481cd6-9669-4f9d-88cc-12ffefb0a525",
       "dependsOn": [
-        "ecdfe95f-5207-467f-a4dd-0fec4f4037cd"
+        "f338a8bb-5aa5-469c-8144-39d8373c6e33"
       ]
     },
     {
-      "ref": "ecdfe95f-5207-467f-a4dd-0fec4f4037cd",
+      "ref": "f338a8bb-5aa5-469c-8144-39d8373c6e33",
       "dependsOn": [
         "pkg:npm/debug@4.3.1",
         "pkg:npm/minimist@1.2.5"
@@ -222,28 +222,22 @@
           "url": "https://avd.aquasec.com/nvd/cve-2021-44906"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2023:0050"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2023:0321"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2021-44906"
         },
         {
-          "url": "https://bugzilla.redhat.com/2044591"
+          "url": "https://bugzilla.redhat.com/2066009"
         },
         {
-          "url": "https://bugzilla.redhat.com/2066009"
+          "url": "https://bugzilla.redhat.com/2130518"
         },
         {
           "url": "https://bugzilla.redhat.com/2134609"
         },
         {
           "url": "https://bugzilla.redhat.com/2140911"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2150323"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2066009"
@@ -276,7 +270,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43548"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2023-0050.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2023-0321.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2023:0321"

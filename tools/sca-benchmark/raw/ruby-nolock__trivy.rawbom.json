@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:3b061d03-eba7-4b02-9192-4a2494d84a18",
+  "serialNumber": "urn:uuid:e82809de-c07a-4a2c-ac4a-78b23e8f0088",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:20:58+00:00",
+    "timestamp": "2026-11-14T09:29:20+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "97d9d920-8f7e-4957-b0cc-69899a676c0a",
+      "bom-ref": "c601fe3f-2e30-425c-8d25-0ceac2c4be8a",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/ruby-nolock",
+      "name": "~/projects/sca-benchmark-internal/fixtures/ruby-nolock",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -34,7 +34,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "97d9d920-8f7e-4957-b0cc-69899a676c0a",
+      "ref": "c601fe3f-2e30-425c-8d25-0ceac2c4be8a",
       "dependsOn": []
     }
   ],

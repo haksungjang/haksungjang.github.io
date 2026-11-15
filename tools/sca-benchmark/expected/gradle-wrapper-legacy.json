@@ -1,0 +1,151 @@
+{
+  "fixture": "gradle-wrapper-legacy",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/gradle-wrapper-legacy"
+  },
+  "componentsComplete": true,
+  "notes": "Gradle(Groovy DSL), lockfile 없음. Gradle 6.9.4 wrapper 를 포함하고 툴체인 선언은 없다. 실행할 JDK 를 wrapper 버전만 보고 골라야 하는 빌드다. Gradle 6.9.4 는 JDK 17 이상에서 빌드 스크립트를 컴파일하지 못한다(settings.gradle 컴파일 단계에서 Gradle 6 의 Groovy 가 JDK 클래스 파일을 읽지 못해 Unsupported class file major version 61 로 실패. JDK 21 은 65, JDK 25 는 69). 따라서 스캐너 실행 환경에 JDK 11(또는 16 이하)이 없으면 ./gradlew 로 하는 의존성 해석 자체가 실패한다. 이런 빌드에서 의존성을 해석하는 도구와 실패하거나 직접 의존성만 내는 도구가 갈리는지 측정한다. 정답 도출 절차(2026-11-13): 임시 사본에서 eclipse-temurin:11-jdk 컨테이너(JDK 11.0.33)로 ./gradlew dependencies --configuration runtimeClasspath(Gradle 6.9.4) 후 ./gradlew installDist 의 lib 디렉터리와 대조했다(같은 10개). 같은 명령을 eclipse-temurin:17-jdk, 21-jre, 25-jdk 에서 빈 GRADLE_USER_HOME 으로 돌리면 위 오류로 실패함을 함께 확인했다(JDK 11 실행에서 컴파일된 스크립트 캐시가 GRADLE_USER_HOME 에 남아 있으면 JDK 17 에서도 해석이 통과해 실패가 가려진다). wrapper 를 쓰지 않고 Gradle 8.10(JDK 17)으로 돌리면 같은 트리가 나온다. 사본에서는 distributionUrl 을 미리 받은 gradle-6.9.4-bin.zip(sha256 3e240228...389a, services.gradle.org 게시값과 일치)의 로컬 경로로 바꿔 실행했고 fixture 의 wrapper 설정은 원래 값(services.gradle.org)이다. 직접은 okhttp 4.12.0, commons-csv 1.12.0 이다. okhttp 가 okio(멀티플랫폼 모듈, JVM 에서는 okio-jvm 3.6.0 로 해석), kotlin-stdlib-jdk8 1.8.21(충돌 해소로 1.9.10), kotlin-stdlib, kotlin-stdlib-common, kotlin-stdlib-jdk7, annotations 13.0 을, commons-csv 가 commons-io 2.17.0, commons-codec 1.17.1 을 전이로 끈다. okio 3.6.0 자체는 jar 가 없는 Gradle 모듈 메타데이터 루트라 배포물(installDist 의 lib)에 없어 제외한다. 직접은 버전까지, 전이는 이름만(하이브리드). testImplementation 의 junit 과 hamcrest-core 는 runtimeClasspath 에 없어 제외한다.",
+  "rootPurls": [
+    "pkg:maven/com.example.scab/legacy-wrapper-demo",
+    "pkg:maven/legacy-wrapper-demo"
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/org.gradle.wrapper.GradleWrapperMain/gradle-wrapper",
+      "reason": "저장소에 포함된 빌드 도구(gradle wrapper jar, Gradle 6.9.4)로 배포 산출물이 아니다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/com.squareup.okio/okio",
+      "reason": "Kotlin 멀티플랫폼 모듈의 루트(jar 없음)다. Gradle 모듈 메타데이터로 okio-jvm 으로 해석되며 배포물에는 okio-jvm 만 들어간다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/junit/junit",
+      "reason": "testImplementation 의존성이라 runtimeClasspath 와 배포물에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.hamcrest/hamcrest-core",
+      "reason": "test 전이(junit)라 runtimeClasspath 와 배포물에 들어가지 않는다. 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/com.squareup.okio/okio-jvm",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-common",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk7",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.jetbrains/annotations",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/commons-io/commons-io",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/commons-codec/commons-codec",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드 해석이 필요하고, 이 빌드는 JDK 11 이 있어야 해석된다)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "reason": "입력(빌드 스크립트)에 라이선스 메타데이터가 없다. 패키지를 받거나 저장소를 조회하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:maven/org.apache.commons/commons-csv@1.12.0",
+      "reason": "입력(빌드 스크립트)에 라이선스 메타데이터가 없다. 패키지를 받거나 저장소를 조회하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ],
+  "components": [
+    {
+      "purl": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0",
+      "version": "4.12.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/org.apache.commons/commons-csv@1.12.0",
+      "version": "1.12.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.squareup.okio/okio-jvm",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-common",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk7",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jetbrains/annotations",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/commons-io/commons-io",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/commons-codec/commons-codec",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": []
+}

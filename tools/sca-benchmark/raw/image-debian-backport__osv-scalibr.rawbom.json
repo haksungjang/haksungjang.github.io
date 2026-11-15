@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:04:45Z",
+    "timestamp": "2026-11-14T08:31:47Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "2900f247-0244-40d0-83e6-59f7ed04e831",
+      "bom-ref": "4cdf2d7f-b86c-4526-999d-01ab2b9ce463",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "b67a5bfd-6fb0-468d-92cc-1fcabef241ad",
+      "bom-ref": "37499aca-314f-4c46-8378-7f9887c757fa",
       "type": "library",
       "name": "base-files",
       "version": "12.4+deb12u12",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "7ab53726-abbd-43e2-8fc9-2e564e4d387c",
+      "bom-ref": "bce65484-0108-48aa-bd2f-e3c5df255425",
       "type": "library",
       "name": "libc6",
       "version": "2.36-9+deb12u13",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "7d794722-59b0-4086-83cc-5637631ba907",
+      "bom-ref": "f82be4bf-b5b3-4400-97fe-4f432501dc22",
       "type": "library",
       "name": "libssl3",
       "version": "3.0.17-1~deb12u3",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "5ce39cc6-41cf-4e7b-b4e5-d71b951a0e91",
+      "bom-ref": "c7d359e8-f150-4766-9038-978b09307245",
       "type": "library",
       "name": "media-types",
       "version": "10.0.0",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "bom-ref": "c22687e7-007a-48bf-8586-9c9d3271da77",
+      "bom-ref": "2141eeb7-f9a8-4374-b0ca-fa6d66e29cb1",
       "type": "library",
       "name": "netbase",
       "version": "6.4",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "bom-ref": "c2ce4b5d-ee69-4fac-90c8-cac509ee395f",
+      "bom-ref": "4078748b-608a-47e0-b736-8f56b1b04d5d",
       "type": "library",
       "name": "tzdata",
       "version": "2025b-0+deb12u2",

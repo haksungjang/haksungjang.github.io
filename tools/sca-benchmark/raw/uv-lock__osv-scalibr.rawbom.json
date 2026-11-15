@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:39:07Z",
+    "timestamp": "2026-11-14T09:35:45Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "20be63e2-34c6-41a6-aa9c-e998360aa34c",
+      "bom-ref": "819c0d41-28fd-4fef-b777-2346e074a1df",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "4005e810-bc74-4f2f-ba85-021bcc8f718a",
+      "bom-ref": "2f3f8b1c-0624-4c2a-aa0a-8a03585c1e75",
       "type": "library",
       "name": "iniconfig",
       "version": "2.0.0",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "1ba64a7f-d595-441f-ba2e-77f35110ca9e",
+      "bom-ref": "a55aa0eb-9e96-48e2-8607-492c2f4e99e0",
       "type": "library",
       "name": "python-dateutil",
       "version": "2.8.2",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "1dca5283-99e7-4df8-974d-909f9463af10",
+      "bom-ref": "adaab6e1-51c1-4ca1-b8c8-373536d8cfa7",
       "type": "library",
       "name": "scab-uv-lock",
       "version": "1.0.0",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "eeda215a-f720-4141-9977-a134a02b5c39",
+      "bom-ref": "f2808bca-0ac9-43dd-a223-2d6195df14e3",
       "type": "library",
       "name": "six",
       "version": "1.16.0",

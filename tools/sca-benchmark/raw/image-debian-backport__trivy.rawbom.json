@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:fe3f422f-87df-4e24-8f7d-1810901dbff2",
+  "serialNumber": "urn:uuid:8831b491-195e-412c-a1bd-d805460aadca",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:12:19+00:00",
+    "timestamp": "2026-11-14T08:29:04+00:00",
     "tools": {
       "components": [
         {
@@ -15,7 +15,7 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
@@ -110,7 +110,7 @@
   },
   "components": [
     {
-      "bom-ref": "76390265-a7c0-4a9c-a93e-c92d67bace1c",
+      "bom-ref": "74778cff-1be0-4f4e-862b-8d5817428117",
       "type": "operating-system",
       "name": "debian",
       "version": "12.12",
@@ -418,7 +418,7 @@
   ],
   "dependencies": [
     {
-      "ref": "76390265-a7c0-4a9c-a93e-c92d67bace1c",
+      "ref": "74778cff-1be0-4f4e-862b-8d5817428117",
       "dependsOn": [
         "pkg:deb/debian/base-files@12.4%2Bdeb12u12?arch=amd64&distro=debian-12.12",
         "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -455,7 +455,7 @@
     {
       "ref": "pkg:oci/base-debian12@sha256:32e0952baa02da4713cf71be3824d8495a8cc41901d75d2807e5d91e47703cb9?arch=amd64&repository_url=gcr.io%2Fdistroless%2Fbase-debian12",
       "dependsOn": [
-        "76390265-a7c0-4a9c-a93e-c92d67bace1c"
+        "74778cff-1be0-4f4e-862b-8d5817428117"
       ]
     }
   ],
@@ -680,6 +680,9 @@
           "url": "https://access.redhat.com/security/cve/CVE-2019-1010022"
         },
         {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-398330.html"
+        },
+        {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010022"
         },
         {
@@ -699,7 +702,7 @@
         }
       ],
       "published": "2019-07-15T04:15:13+00:00",
-      "updated": "2026-06-17T02:09:43+00:00",
+      "updated": "2026-10-14T09:17:15+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -765,6 +768,9 @@
           "url": "https://access.redhat.com/security/cve/CVE-2019-1010023"
         },
         {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-398330.html"
+        },
+        {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010023"
         },
         {
@@ -784,7 +790,7 @@
         }
       ],
       "published": "2019-07-15T04:15:13+00:00",
-      "updated": "2026-06-17T02:09:44+00:00",
+      "updated": "2026-10-14T09:17:15+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -853,6 +859,9 @@
           "url": "https://access.redhat.com/security/cve/CVE-2019-1010024"
         },
         {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-398330.html"
+        },
+        {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010024"
         },
         {
@@ -875,7 +884,7 @@
         }
       ],
       "published": "2019-07-15T04:15:13+00:00",
-      "updated": "2026-06-17T02:09:44+00:00",
+      "updated": "2026-10-14T09:17:15+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -941,6 +950,9 @@
           "url": "https://access.redhat.com/security/cve/CVE-2019-1010025"
         },
         {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-398330.html"
+        },
+        {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010025"
         },
         {
@@ -963,7 +975,7 @@
         }
       ],
       "published": "2019-07-15T04:15:13+00:00",
-      "updated": "2026-06-17T02:09:44+00:00",
+      "updated": "2026-10-14T09:17:15+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -1145,10 +1157,10 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:2786"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:4772"
+          "url": "https://access.redhat.com/security/cve/CVE-2025-15281"
         },
         {
-          "url": "https://access.redhat.com/security/cve/CVE-2025-15281"
+          "url": "https://bugzilla.redhat.com/2429771"
         },
         {
           "url": "https://bugzilla.redhat.com/2430201"
@@ -1178,7 +1190,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-0915"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-4772.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-2786.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:2786"
@@ -1554,7 +1566,7 @@
         }
       ],
       "published": "2026-01-27T16:16:14+00:00",
-      "updated": "2026-09-07T13:17:27+00:00",
+      "updated": "2026-11-10T13:17:30+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -2223,7 +2235,7 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:1473"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:3042"
+          "url": "https://access.redhat.com/errata/RHSA-2026:4472"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2025-69419"
@@ -2310,7 +2322,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-22796"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-3042.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-4472.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:1473"
@@ -2976,9 +2988,6 @@
           "url": "http://www.openwall.com/lists/oss-security/2026/01/16/5"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:1334"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:2786"
         },
         {
@@ -2989,6 +2998,9 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2430201"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2431196"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2429771"
@@ -3012,7 +3024,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-0915"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-1334.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-2786.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:2786"
@@ -3128,10 +3140,10 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:2786"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:4772"
+          "url": "https://access.redhat.com/security/cve/CVE-2026-0915"
         },
         {
-          "url": "https://access.redhat.com/security/cve/CVE-2026-0915"
+          "url": "https://bugzilla.redhat.com/2429771"
         },
         {
           "url": "https://bugzilla.redhat.com/2430201"
@@ -3161,7 +3173,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-0915"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-4772.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-2786.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:2786"
@@ -3203,6 +3215,133 @@
       ]
     },
     {
+      "id": "CVE-2026-100290",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [],
+      "cwes": [
+        415
+      ],
+      "description": "The regcomp and regexec functions in the GNU C Library version 2.3 to version 2.44 may read freed memory and free the same heap block twice when a memory allocation fails while a regular expression is compiled or matched.  The re_dfa_add_node (the NFA node table) and build_range_exp (bracket ranges) grow several arrays with consecutive realloc calls and store the new pointers only after all of them succeed.  When a later call fails, the pattern buffer keeps pointers to blocks that were already freed, and the error cleanup frees them again.  In regexec, the back-reference cache (match_ctx_add_entry) frees its array when a realloc fails but keeps the pointer, which is freed again on the error path.\n\nAn attacker does not need to supply a crafted regular expression: patterns large enough to grow these arrays are common.  The failure has to hit a specific allocation, though, so the issue can only be reached when the system is already under memory pressure.  An attacker who supplies the pattern or the subject string has little control over which allocation fails, so the expected impact is a crash of the process.  This issue affects all architectures and ABIs supported by the GNU C Library.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-100290"
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=31935"
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=34991"
+        },
+        {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0028"
+        }
+      ],
+      "published": "2026-11-11T16:17:24+00:00",
+      "updated": "2026-11-12T22:09:39+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "2.36-9+deb12u13",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-107496",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        835
+      ],
+      "description": "Issue summary: Encrypting a CMS message to an EC certificate whose group order\nis 1 may cause CMS_encrypt() or CMS_encrypt_ex() to loop indefinitely.\n\nImpact summary: An attacker able to supply the recipient certificate to an\napplication performing CMS encryption can cause that application to loop\nindefinitely, consuming CPU and resulting in Denial of Service.\n\nCWE: CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop')\n\nDescription: CMS_encrypt() and CMS_encrypt_ex() encrypt a message to one or\nmore recipient certificates and, for an EC recipient, generate an ephemeral\nkey in the recipient's group. If the certificate declares a group order of 1,\nrandom scalar generation can only produce zero. The key generation routine\nthen retries without limit while waiting for a nonzero private scalar, so the\ncall never returns.\n\nThe OpenSSL TLS and QUIC implementations do not use this path. An application\nis exposed only if it calls CMS_encrypt() or CMS_encrypt_ex() with a recipient\ncertificate whose EC parameters are attacker-controlled. Certificates with\nnormal EC group orders do not trigger the loop.\n\nOpenSSL 4.0 and later reject unknown explicit EC groups in default builds.\nThese versions are affected only when configured with the\nenable-ec_explicit_curves option.\n\nThe result is a hang that consumes a CPU core until the process is\ninterrupted, a Denial of Service. The severity is Low because the attacker\nmust supply the recipient certificate and the application must choose to\nencrypt to it; ordinary CMS encryption to trusted recipients is unaffected.\n\nThe fix makes EC key generation fail when the group has no valid nonzero\nprivate scalar, instead of retrying indefinitely.\n\nFIPS impact: no\nThe FIPS modules in 4.1, 4.0, 3.5 and 3.0 are not affected. The FIPS provider\ndoes not support arbitrary explicit EC domain parameters, so an order-1 group\nis rejected during key import before the vulnerable key generation path is\nreached.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-107496"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/36e15b618decdff1b116eead6747718e6e729ad2"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/a0051cfe699bf5a047bc1c4faef65f80f7987366"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/a8531368ddb1f86d2a2782a8b693926bb67b59e7"
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20261110.txt"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-107496"
+        }
+      ],
+      "published": "2026-11-10T19:18:02+00:00",
+      "updated": "2026-11-10T22:10:04+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "3.0.17-1~deb12u3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-115819",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [],
+      "cwes": [
+        193
+      ],
+      "description": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf, vswscanf, vfwscanf and vwscanf) with a %s or %[ conversion without the 'l' length modifier in the GNU C Library version 2.2 to version 2.44 writes an extra null byte one past the end of the destination array when the converted multibyte string and its terminating null byte exactly fill that array.\n\nThese conversions store each wide input character into the caller's char array as a multibyte sequence.  The conversion ends with the sequence that returns to the initial shift state, which also stores the terminating null byte, and the functions then append a second null byte.  A destination sized for the converted string and one terminator, as the C standard requires the caller to provide, is therefore written one byte past its end.  The out-of-bounds byte is always a null byte, which may corrupt adjacent data or crash the process.  An attacker who supplies the input can trigger the overflow with a string whose converted length exactly fills the destination.\n\nThe narrow scanf functions, the %ls and %l[ conversions into a wchar_t array, and the 'a' and 'm' allocation modifiers are not affected, and storing a wide scanf conversion into a narrow char array is uncommon.  This issue affects all architectures and ABIs supported by the GNU C Library.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-115819"
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=34989"
+        },
+        {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0027"
+        }
+      ],
+      "published": "2026-11-11T16:17:24+00:00",
+      "updated": "2026-11-12T22:09:39+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "2.36-9+deb12u13",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "CVE-2026-18374",
       "source": {
         "name": "debian",
@@ -3212,6 +3351,12 @@
         {
           "source": {
             "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
           },
           "severity": "medium"
         },
@@ -3252,10 +3397,13 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:79281"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:80798"
+          "url": "https://access.redhat.com/security/cve/CVE-2026-18374"
         },
         {
-          "url": "https://access.redhat.com/security/cve/CVE-2026-18374"
+          "url": "https://bugzilla.redhat.com/2513603"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513608"
         },
         {
           "url": "https://bugzilla.redhat.com/2523249"
@@ -3265,9 +3413,6 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2524870"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2525256"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2513603"
@@ -3309,10 +3454,16 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80489"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-80798.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-79281.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:79281"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-18374.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-84753.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18374"
@@ -3325,6 +3476,9 @@
         },
         {
           "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0015"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
         },
         {
           "url": "https://www.cve.org/CVERecord?id=CVE-2026-18374"
@@ -3354,6 +3508,12 @@
         {
           "source": {
             "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
           },
           "severity": "medium"
         },
@@ -3427,6 +3587,12 @@
           "url": "https://errata.rockylinux.org/RLSA-2026:76781"
         },
         {
+          "url": "https://linux.oracle.com/cve/CVE-2026-19499.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-76781.html"
+        },
+        {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19499"
         },
         {
@@ -3474,6 +3640,12 @@
         },
         {
           "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 4.2,
@@ -3506,10 +3678,13 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:79281"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:80798"
+          "url": "https://access.redhat.com/security/cve/CVE-2026-19542"
         },
         {
-          "url": "https://access.redhat.com/security/cve/CVE-2026-19542"
+          "url": "https://bugzilla.redhat.com/2513603"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513608"
         },
         {
           "url": "https://bugzilla.redhat.com/2523249"
@@ -3519,9 +3694,6 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2524870"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2525256"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2513603"
@@ -3563,10 +3735,16 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80489"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-80798.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-79281.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:79281"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-19542.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-80798.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19542"
@@ -4595,7 +4773,7 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:22312"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:38503"
+          "url": "https://access.redhat.com/errata/RHSA-2026:22313"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-28390"
@@ -4619,7 +4797,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-28390"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-38503.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-22313.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:22312"
@@ -4875,16 +5053,10 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:19218"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:39297"
-        },
-        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-31790"
         },
         {
           "url": "https://bugzilla.redhat.com/2451094"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2456314"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2451094"
@@ -4899,7 +5071,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-31790"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-39297.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-19218.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:19218"
@@ -5034,9 +5206,6 @@
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-34180"
-        },
-        {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
         },
         {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
@@ -5183,7 +5352,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -5335,9 +5504,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-34182"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
         },
         {
@@ -5482,7 +5648,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -5567,7 +5733,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "high"
+          "severity": "low"
         },
         {
           "source": {
@@ -5595,12 +5761,16 @@
         770
       ],
       "description": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL\ndistribution points causes disproportionate heap growth when OpenSSL caches\nX.509 extensions.\n\nImpact summary: Receiving a crafted certificate from a malicious peer can lead\nto significant memory pressure and possible Denial of Service in clients or\nin servers that solicit client certificates.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: A certificate or a set of certificates that fits under the limit for\nsize of certificates accepted from the peer (~100 KiB) can result in allocation\nof several hundred MiB of resident memory on the receiving side\nduring a normal TLS handshake.  This may be enough to crash the client or\nserver, if multiple concurrent connections lead to similarly large memory\nallocations.\n\nThe fix postpones processing of the CRL distribution points extensions in\ncertificates to the time when the processed value is required for CRL processing.\nThis avoids keeping large memory allocations for a long time when such\ncertificates are received.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.",
+      "recommendation": "Upgrade libssl3 to version 3.0.22-1~deb12u2",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-35189"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-35189"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-457936.html"
         },
         {
           "url": "https://github.com/openssl/openssl/commit/2b93c73b2c70ddc4c61c5e4bfaaa6bd71379eb84"
@@ -5631,7 +5801,7 @@
         }
       ],
       "published": "2026-09-29T16:17:07+00:00",
-      "updated": "2026-10-08T01:01:54+00:00",
+      "updated": "2026-11-10T13:19:05+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -5713,13 +5883,16 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-4046"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:20587"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:20597"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-4046"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2449777"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2449783"
         },
         {
           "url": "https://bugzilla.redhat.com/2453117"
@@ -5749,7 +5922,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-4438"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-20587.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-20597.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:20597"
@@ -5875,9 +6048,6 @@
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-42766"
-        },
-        {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
         },
         {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
@@ -6024,7 +6194,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -6176,9 +6346,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-42767"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
         },
         {
@@ -6323,7 +6490,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -6472,9 +6639,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-42770"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
         },
         {
@@ -6619,7 +6783,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -6753,9 +6917,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-4437"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:19061"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:20597"
         },
         {
@@ -6766,6 +6927,9 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2449783"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2453117"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2449777"
@@ -6792,7 +6956,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-4438"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-19061.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-20597.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:20597"
@@ -6897,9 +7061,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-4438"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:19061"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:20597"
         },
         {
@@ -6910,6 +7071,9 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2449783"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2453117"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2449777"
@@ -6936,7 +7100,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-4438"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-19061.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-20597.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:20597"
@@ -7053,9 +7217,6 @@
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-45445"
-        },
-        {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
         },
         {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
@@ -7202,7 +7363,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -7351,9 +7512,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-45446"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
         },
         {
@@ -7498,7 +7656,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -7804,7 +7962,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-36215.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-44438.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -7931,9 +8089,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-5435"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:42733"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:42952"
         },
         {
@@ -7973,7 +8128,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-6238"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-42733.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-42952.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:42952"
@@ -8007,7 +8162,7 @@
         }
       ],
       "published": "2026-04-28T13:19:22+00:00",
-      "updated": "2026-07-14T13:19:01+00:00",
+      "updated": "2026-11-11T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -8077,9 +8232,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-5450"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:33126"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:33226"
         },
         {
@@ -8101,7 +8253,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-5450"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-33126.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-33226.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:33226"
@@ -8135,7 +8287,7 @@
         }
       ],
       "published": "2026-04-20T21:16:36+00:00",
-      "updated": "2026-07-14T13:19:01+00:00",
+      "updated": "2026-11-11T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -8187,12 +8339,16 @@
         208
       ],
       "description": "Issue summary: The generic elliptic-curve scalar multiplication used for\nECDSA and SM2 signature operations with curves that do not have a dedicated\nimplementation leaks information about the secret nonce through timing.\n\nImpact summary: An attacker able to measure signing times may learn\ninformation about the per-signature secret nonce, which over many signatures\ncan, via a lattice / Hidden Number Problem attack, lead to recovery of the\nprivate key.\n\nCWE: CWE-208: Observable Timing Discrepancy\n\nDescription: The generic elliptic-curve scalar multiplication used for\ncurves that do not have a dedicated constant-time implementation pads the\nsecret scalar with non-constant-time BIGNUM operations, so the time taken\ndepends on the value of the secret scalar derived from the ECDSA and SM2 nonce.\n\nThe leak is very small; observing it requires a large number of\nmeasurements. The effect is largest for curves whose group order lies\non a machine-word boundary, such as brainpoolP384r1.\n\nApplications using ECDSA signing over the Brainpool and other generic prime\ncurves, and SM2 signing on platforms that use the generic implementation,\nare vulnerable to this issue.\n\nThe NIST curves P-256, P-384 and P-521 use dedicated constant-time\nimplementations and are not affected.\n\nFIPS Impact: no\nThe FIPS modules are not affected: the approved NIST curves used in the FIPS\nprovider have dedicated constant-time implementations and do not use the\naffected code path.",
+      "recommendation": "Upgrade libssl3 to version 3.0.22-1~deb12u2",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-54872"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-54872"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-457936.html"
         },
         {
           "url": "https://github.com/openssl/openssl/commit/1a5bee8dc57430a2be69cd1ffe7fec6a62f4f179"
@@ -8223,7 +8379,7 @@
         }
       ],
       "published": "2026-09-29T16:17:08+00:00",
-      "updated": "2026-10-08T01:19:04+00:00",
+      "updated": "2026-11-10T13:19:26+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -8303,9 +8459,6 @@
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-54874"
-        },
-        {
-          "url": "https://access.redhat.com/errata/RHSA-2026:67154"
         },
         {
           "url": "https://access.redhat.com/errata/RHSA-2026:67165"
@@ -8398,7 +8551,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-63076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-67154.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-67165.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:67165"
@@ -8513,9 +8666,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-5928"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:42733"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:42952"
         },
         {
@@ -8555,7 +8705,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-6238"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-42733.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-42952.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:42952"
@@ -8583,7 +8733,7 @@
         }
       ],
       "published": "2026-04-20T21:16:36+00:00",
-      "updated": "2026-07-14T13:19:01+00:00",
+      "updated": "2026-11-11T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -8646,9 +8796,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-6238"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:42733"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:42952"
         },
         {
@@ -8688,7 +8835,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-6238"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-42733.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-42952.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:42952"
@@ -8722,7 +8869,7 @@
         }
       ],
       "published": "2026-04-28T19:37:47+00:00",
-      "updated": "2026-07-14T13:19:09+00:00",
+      "updated": "2026-11-11T21:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -8746,7 +8893,7 @@
           "source": {
             "name": "alma"
           },
-          "severity": "high"
+          "severity": "medium"
         },
         {
           "source": {
@@ -8764,7 +8911,7 @@
           "source": {
             "name": "oracle-oval"
           },
-          "severity": "medium"
+          "severity": "high"
         },
         {
           "source": {
@@ -8804,40 +8951,19 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-63072"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:67154"
+          "url": "https://access.redhat.com/errata/RHSA-2026:67165"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:67165"
+          "url": "https://access.redhat.com/errata/RHSA-2026:80514"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-63072"
         },
         {
-          "url": "https://bugzilla.redhat.com/2515348"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2517559"
-        },
-        {
           "url": "https://bugzilla.redhat.com/2517560"
         },
         {
-          "url": "https://bugzilla.redhat.com/2517561"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2517562"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2517564"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2517565"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2517566"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2517570"
+          "url": "https://bugzilla.redhat.com/2537080"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2515348"
@@ -8897,7 +9023,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-63076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-67154.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-80514.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:67165"
@@ -8921,7 +9047,7 @@
           "url": "https://linux.oracle.com/cve/CVE-2026-63072.html"
         },
         {
-          "url": "https://linux.oracle.com/errata/ELSA-2026-80514.html"
+          "url": "https://linux.oracle.com/errata/ELSA-2026-85968.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63072"
@@ -9019,9 +9145,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-63074"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:67154"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:67165"
         },
         {
@@ -9112,7 +9235,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-63076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-67154.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-67165.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:67165"
@@ -9237,9 +9360,6 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-63076"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:67154"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:67165"
         },
         {
@@ -9330,7 +9450,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-63076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-67154.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-67165.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:67165"
@@ -9404,6 +9524,12 @@
         },
         {
           "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 5.5,
@@ -9433,13 +9559,25 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-6368"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:76777"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:79281"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-6368"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513603"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513608"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2523249"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2523274"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2524870"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2513603"
@@ -9481,10 +9619,16 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80489"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-76777.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-79281.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:79281"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-6368.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-79281.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6368"
@@ -9537,6 +9681,12 @@
         },
         {
           "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 5.9,
@@ -9566,13 +9716,25 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-6791"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:76777"
-        },
-        {
           "url": "https://access.redhat.com/errata/RHSA-2026:79281"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-6791"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513603"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513608"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2523249"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2523274"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2524870"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2513603"
@@ -9614,10 +9776,16 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80489"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-76777.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-79281.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:79281"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-6791.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-79281.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6791"
@@ -9639,7 +9807,7 @@
         }
       ],
       "published": "2026-08-10T19:17:30+00:00",
-      "updated": "2026-09-03T16:43:15+00:00",
+      "updated": "2026-10-24T16:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -9728,9 +9896,6 @@
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-7383"
-        },
-        {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
         },
         {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
@@ -9877,7 +10042,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -9960,6 +10125,12 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
             "name": "amazon"
           },
           "severity": "high"
@@ -9969,6 +10140,12 @@
             "name": "azure"
           },
           "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "photon"
+          },
+          "severity": "critical"
         },
         {
           "source": {
@@ -9996,7 +10173,40 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-75803"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:67165"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-75803"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2515348"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517559"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517560"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517561"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517562"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517564"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517565"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517566"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517570"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-67165.html"
         },
         {
           "url": "https://github.com/openssl/openssl/commit/119ab9555dc62275bbd71f6f49529b1a44feba42"
@@ -10085,12 +10295,16 @@
         476
       ],
       "description": "Issue summary: A CMP client that requests certificate revocation on the basis\nof a PKCS#10 CSR may dereference a NULL pointer and terminate abnormally when\nprocessing a crafted revocation response. \n\nImpact summary: The NULL pointer dereference happens on a read which \nleads to a crash and a Denial of Service for the affected client application.\n\nCWE: CWE-476: NULL-pointer dereference\n\nDescription: A CMP client revoking a certificate has to tell the server which\ncertificate to revoke, and may do so by supplying a PKCS#10 CSR instead of the\ncertificate itself or its issuer name and serial number. This is\n'openssl cmp -cmd rr -csr <file>' on the command line, or\nOSSL_CMP_exec_RR_ses() with the certificate supplied via\nOSSL_CMP_CTX_set1_p10CSR() through the API.\n\nA CSR does not contain the issuer name and serial number of the certificate,\nso the client does not send them. A server may optionally name the\ncertificate it revoked in its response, and the client then compares that\nname against what it sent. Having sent neither an issuer name nor a serial\nnumber, it has nothing to compare against, and a server returning a specially\ncrafted name causes the client to read from a NULL pointer and crash.\n\nThe revocation response is checked for valid message protection before\nthe affected code is reached, so an attacker must be a malicious or\ncompromised CMP server, or a man-in-the-middle in possession of the\nsecret used for message protection. Clients that identify the certificate\nto be revoked by a certificate or by issuer and serial number rather\nthan by a PKCS#10 CSR are not affected.\n\nFIPS impact: no\nNo FIPS modules are affected by this issue, as the CMP protocol\nimplementation is outside the OpenSSL FIPS module boundary.",
+      "recommendation": "Upgrade libssl3 to version 3.0.22-1~deb12u2",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-75805"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-75805"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-457936.html"
         },
         {
           "url": "https://github.com/openssl/openssl/commit/7588db7fef14209c3caa3a101d11a02006b19166"
@@ -10118,7 +10332,7 @@
         }
       ],
       "published": "2026-09-29T16:17:11+00:00",
-      "updated": "2026-10-08T01:20:24+00:00",
+      "updated": "2026-11-10T13:19:39+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -10170,12 +10384,16 @@
         1284
       ],
       "description": "Issue summary: An established DTLS 1.2 association using an AEAD cipher suite\ncan be terminated by a single unauthenticated datagram whose encrypted\nfragment is shorter than the mandatory explicit IV and authentication tag\noverhead.\n\nImpact summary: An attacker who can send a datagram that is routed to an\nexisting DTLS 1.2 association can tear that association down without knowing\nany key material. This is a Denial of Service limited to the targeted\nassociation. There is no memory safety or confidentiality impact.\n\nCWE: CWE-1284: Improper Validation of Specified Quantity in Input\n\nDescription: In TLS 1.2 and DTLS 1.2 every record protected by an AEAD cipher\nsuite carries an explicit IV followed by the ciphertext and an authentication\ntag. When decrypting such a record the record layer passed the record length to\nthe cipher implementation before checking that the record was long enough to\ncontain the explicit IV and the tag. For a record shorter than that overhead the\ncipher implementation rejected the impossible length, and the record layer\ntreated this as an internal failure and raised a fatal internal_error alert\ninstead of treating the record as one that failed authentication.\n\nIn TLS 1.2 the same record causes a fatal internal_error alert instead of the\nexpected bad_record_mac alert. Since any undecryptable record already\nterminates a TLS connection, this is a protocol conformance issue rather than\na security issue in TLS.\n\nThe fix validates the record length against the explicit IV and tag length\nbefore any AEAD processing, so that TLS reports bad_record_mac and DTLS\nsilently discards the record.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.",
+      "recommendation": "Upgrade libssl3 to version 3.0.22-1~deb12u2",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-75806"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-75806"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-457936.html"
         },
         {
           "url": "https://github.com/openssl/openssl/commit/04728a289a823e68137f88da016cb9ede307217d"
@@ -10203,7 +10421,7 @@
         }
       ],
       "published": "2026-09-29T16:17:11+00:00",
-      "updated": "2026-10-08T01:20:33+00:00",
+      "updated": "2026-11-10T13:19:39+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -10226,6 +10444,12 @@
         {
           "source": {
             "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
           },
           "severity": "medium"
         },
@@ -10263,10 +10487,13 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:79281"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:80798"
+          "url": "https://access.redhat.com/security/cve/CVE-2026-77117"
         },
         {
-          "url": "https://access.redhat.com/security/cve/CVE-2026-77117"
+          "url": "https://bugzilla.redhat.com/2513603"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513608"
         },
         {
           "url": "https://bugzilla.redhat.com/2523249"
@@ -10276,9 +10503,6 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2524870"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2525256"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2513603"
@@ -10320,10 +10544,16 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80489"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-80798.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-79281.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:79281"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-77117.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-84753.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77117"
@@ -10391,12 +10621,16 @@
         208
       ],
       "description": "Issue summary: SM2 signature generation uses non-constant-time arithmetic\non secret values, forming a timing side-channel.\n\nImpact summary: An attacker able to measure SM2 signing times may learn\ninformation about the per-signature secret nonce, which over many signatures\ncan, via a lattice / Hidden Number Problem attack, lead to recovery of the\nprivate key.\n\nCWE: CWE-208: Observable Timing Discrepancy\n\nDescription: SM2 signature generation computes the signature value using\nvariable-time BIGNUM operations on the secret nonce and the private key, so\nthe time taken to produce an SM2 signature depends on these secret values,\nforming a timing side-channel.\n\nApplications performing SM2 signature generation are affected on all\nplatforms.\n\nFIPS Impact: no\nSM2 is not a FIPS algorithm.",
+      "recommendation": "Upgrade libssl3 to version 3.0.22-1~deb12u2",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-77696"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-77696"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-457936.html"
         },
         {
           "url": "https://github.com/openssl/openssl/commit/1c4aed808a7aea32d2d013049c2e0d9fef164fc9"
@@ -10427,7 +10661,7 @@
         }
       ],
       "published": "2026-09-29T16:17:11+00:00",
-      "updated": "2026-10-08T01:20:41+00:00",
+      "updated": "2026-11-10T13:19:40+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -10450,6 +10684,12 @@
         {
           "source": {
             "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
           },
           "severity": "medium"
         },
@@ -10487,10 +10727,13 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:79281"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:80798"
+          "url": "https://access.redhat.com/security/cve/CVE-2026-80489"
         },
         {
-          "url": "https://access.redhat.com/security/cve/CVE-2026-80489"
+          "url": "https://bugzilla.redhat.com/2513603"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2513608"
         },
         {
           "url": "https://bugzilla.redhat.com/2523249"
@@ -10500,9 +10743,6 @@
         },
         {
           "url": "https://bugzilla.redhat.com/2524870"
-        },
-        {
-          "url": "https://bugzilla.redhat.com/2525256"
         },
         {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2513603"
@@ -10544,10 +10784,16 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80489"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-80798.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-79281.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:79281"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-80489.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-84753.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80489"
@@ -10583,6 +10829,73 @@
       ]
     },
     {
+      "id": "CVE-2026-84243",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        22
+      ],
+      "description": "The gettext family of functions in the GNU C Library version 2.0 and later accept LANGUAGE environment variable entries that contain '/' or that are equal to \"..\", unless the program is setuid or setgid (AT_SECURE).  An attacker who can set LANGUAGE in the environment of a program that uses gettext can make it load a message catalog (.mo file) from an arbitrary location in the file system.  A crafted .mo file can crash the program through out-of-range offsets, or supply translations whose format directives do not match the arguments passed by the program.  That causes undefined behaviour in the printf family of functions and may allow arbitrary code execution with the privileges of the program.  The safety of message catalogs relies on them being installed in trusted, read-only locations, and the directory traversal bypasses this.\n\nThe fix for CVE-2014-0475 rejects \"..\" path components in locale names passed to setlocale or taken from the LC_ALL, LC_* and LANG environment variables.  gettext reads LANGUAGE directly and appends each colon-separated entry to the message catalog directory, so that fix did not cover LANGUAGE.\n\nLANGUAGE is only used when the LC_MESSAGES locale is not \"C\", \"C.<encoding>\" or \"POSIX\", so the attacker must also be able to select another installed locale, for example through LANG or LC_ALL.  Exploitation also requires that the attacker can place the crafted file in a location readable by the target program, and that the environment crosses a trust boundary without the program running as AT_SECURE.  An example is an SSH server that accepts LANGUAGE and LANG from clients through the AcceptEnv directive and restricts an account to a forced command; the attacker may use this to escape the restriction.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-84243"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-84243"
+        },
+        {
+          "url": "https://inbox.sourceware.org/libc-alpha/20261012112453.47383-1-avinal.xlvii@gmail.com"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84243"
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=17142"
+        },
+        {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0025"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-84243"
+        }
+      ],
+      "published": "2026-10-30T18:18:13+00:00",
+      "updated": "2026-10-31T04:18:21+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "2.36-9+deb12u13",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "CVE-2026-84782",
       "source": {
         "name": "debian",
@@ -10593,7 +10906,7 @@
           "source": {
             "name": "alma"
           },
-          "severity": "high"
+          "severity": "medium"
         },
         {
           "source": {
@@ -10611,7 +10924,7 @@
           "source": {
             "name": "oracle-oval"
           },
-          "severity": "medium"
+          "severity": "high"
         },
         {
           "source": {
@@ -10639,6 +10952,7 @@
         125
       ],
       "description": "Issue summary: The DTLS retransmission logic does not correctly handle\na handshake message write that is suspended part-way through.\nThe retransmitted message can be read past the message buffer and\nthe retransmission overwrites the internal state the suspended write\nneeds to resume correctly.\n\nImpact summary: The retransmitted message can disclose a heap memory\nto the peer as plaintext handshake data or cause a crash and a Denial\nof Service when the read reaches an unmapped memory region.\n\nCWE: CWE-125: Out-of-bounds Read\n\nDescription: DTLS handshake messages can be written out in multiple\nfragments, and a write can suspend mid-message (returning WANT_WRITE)\nif the underlying transport temporarily cannot accept more data. While\nsuch a write is suspended, the DTLS retransmission timer may\nindependently fire and ask the retransmission logic to resend an\nearlier, already-acknowledged-as-sent message from its retransmit\nqueue.\n\nThe retransmission logic reused the same internal buffer and position\ntracking as the message that was still being written, without\nresetting the position back to the start of the message being\nretransmitted. As a result the retransmission was read starting from\nwherever the suspended write had left off, producing a mislabelled\nmessage whose body was leftover bytes from the other, larger message\nstill in flight - content that was never meant to be sent at that\npoint, and which could run past the end of the allocated buffer.\n\nSeparately, even when the retransmission is positioned correctly,\nallowing it to run to completion while another write is suspended\noverwrites the same shared bookkeeping that the suspended write\ndepends on to resume. When the application later resumes the\nsuspended write (via a subsequent SSL_read(), SSL_write(),\nSSL_accept(), or SSL_connect() call), it finds that bookkeeping in a\nstate inconsistent with the message and aborts the process in\na debugging build.\n\nThe fix resets the retransmission's read position to the start of the\nmessage before resending, and skips retransmission entirely whenever a\nhandshake write is still suspended, deferring to the next call that\nresumes it instead.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.",
+      "recommendation": "Upgrade libssl3 to version 3.0.22-1~deb12u2",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-84782"
@@ -10647,10 +10961,13 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:77396"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:80510"
+          "url": "https://access.redhat.com/errata/RHSA-2026:80514"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-84782"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2517560"
         },
         {
           "url": "https://bugzilla.redhat.com/2537080"
@@ -10659,13 +10976,16 @@
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2537080"
         },
         {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-457936.html"
+        },
+        {
           "url": "https://creativecommons.org/licenses/by/4.0/"
         },
         {
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84782"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-80510.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-80514.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:77396"
@@ -10686,7 +11006,7 @@
           "url": "https://linux.oracle.com/cve/CVE-2026-84782.html"
         },
         {
-          "url": "https://linux.oracle.com/errata/ELSA-2026-80514.html"
+          "url": "https://linux.oracle.com/errata/ELSA-2026-85968.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84782"
@@ -10708,7 +11028,7 @@
         }
       ],
       "published": "2026-09-29T16:17:12+00:00",
-      "updated": "2026-10-08T01:20:56+00:00",
+      "updated": "2026-11-10T13:19:41+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
@@ -10730,12 +11050,36 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 5.3,
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -10750,10 +11094,64 @@
           "url": "http://www.openwall.com/lists/oss-security/2026/09/17/4"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:95618"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-8674"
         },
         {
+          "url": "https://bugzilla.redhat.com/2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538306"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538306"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-8674"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-86805"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89092"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-95818"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-95618.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:95618"
+        },
+        {
           "url": "https://joshua.hu/fuzzing-glibc-libresolv"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-8674.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-96087.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8674"
@@ -10762,13 +11160,22 @@
           "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=31026"
         },
         {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0021"
+        },
+        {
           "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0021"
         },
         {
           "url": "https://sourceware.org/git/?p=glibc.git;a=commit;h=506ea57086bfb9ce3daff1c14246a1cb532aba0a"
         },
         {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
+        },
+        {
           "url": "https://www.cve.org/CVERecord?id=CVE-2026-8674"
+        },
+        {
+          "url": "https://www.openwall.com/lists/oss-security/2026/09/17/4"
         }
       ],
       "published": "2026-09-17T17:16:53+00:00",
@@ -10794,12 +11201,42 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 7,
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -10811,7 +11248,61 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-86805"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:95618"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-86805"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538306"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538306"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-8674"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-86805"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89092"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-95818"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-95618.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:95618"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-86805.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-96087.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86805"
@@ -10820,7 +11311,13 @@
           "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=34360"
         },
         {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0022"
+        },
+        {
           "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0022"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
         },
         {
           "url": "https://www.cve.org/CVERecord?id=CVE-2026-86805"
@@ -10841,6 +11338,110 @@
       ]
     },
     {
+      "id": "CVE-2026-88822",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        457
+      ],
+      "description": "Issue summary: QUIC, when performing automated peer detection, may allow\nuninitialized stack data to leak into the received address which is then used\nas the destination for outgoing packets.\n\nImpact summary: Applications using QUIC's automated peer detection mechanism\nmay receive an invalid address, leading to connection loss and disclosure of\nuninitialized stack data to an attacker observing the outgoing network traffic.\n\nCWE: CWE-457 (Use of Uninitialized Variable)\n\nDescription: The OpenSSL QUIC stack contains a feature in which, when using an\nalready connected socket, it will auto-detect the peer address during the SSL\nhandshake.  This feature uses the getpeername() function, passing a buffer of\nsufficient length to hold any supported address family, but passes a buffer\nlength that is only sized such that larger addresses, such as IPv6, cannot be\nretrieved. The getpeername() function however, still returns the full address\nlength, which is accepted as the valid input buffer length, leading to the\naddress buffer containing uninitialized stack data instead of the actual peer\naddress. The invalid peer address is then used as destination for the outgoing\npackets which leads to a connectivity breakage and a leakage of the\nuninitialized stack data to passive network observers.\n\nFIPS impact: no\nThe FIPS modules in 4.0, 3.6, 3.5, 3.4, and 3.0 are not affected by this CVE as\nthe affected protocol is not implemented in the FIPS module.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-88822"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/1a73dc590cbad62d6f0329ea4779eadaa8d8fd75"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/7b4f5344aa0401e7b777640050b5257ed2a70e88"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/911eee8eb7550b95a206f1ad8cbdb986098982f3"
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20261110.txt"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-88822"
+        }
+      ],
+      "published": "2026-11-10T19:21:34+00:00",
+      "updated": "2026-11-10T22:10:04+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "3.0.17-1~deb12u3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-88823",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        325
+      ],
+      "description": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Additional\nAuthenticated Data (AAD) update as a reset of all the AAD supplied so far,\ninstead of leaving the AAD unchanged. An application that supplies its AAD in\nseveral fragments, one of which is empty, therefore produces or verifies\nmessages whose authentication tag does not cover the AAD supplied before\nthe empty fragment.\n\nImpact summary: Data an application intended to authenticate alongside a\nmessage is silently left unauthenticated. An attacker can forge the AAD of such\na message.\n\nCWE: CWE-325: Missing Cryptographic Step\n\nDescription: An application passing AAD in multiple chunks of which some have\nzero length will have the previous AAD chunks effectively unauthenticated. Also,\non context re-initialisation, the AAD was not reset, which meant that any AAD\naccumulated from the previous context usage were also included in the AAD of the\nnew message.\n\nThe fix makes a zero-length AAD update a no-op and clears any accumulated AAD\nwhenever the context is re-initialised with a key or a nonce.\nA re-initialisation that only changes parameters keeps the AAD.\n\nFIPS impact: no\nThe FIPS modules are not affected, as AES-GCM-SIV is not a FIPS approved\nalgorithm and is implemented only in the default provider, outside the\nOpenSSL FIPS module boundary.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-88823"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/159e1de0c448d7b9f09ad768c8e141def4aa1eb4"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/2f5fc833ff9b5bfe00b32f8b5c74f73c5773c682"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/6747b1a278816dd7db46438040a70b0b5e5e0a90"
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20261110.txt"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-88823"
+        }
+      ],
+      "published": "2026-11-10T19:21:34+00:00",
+      "updated": "2026-11-10T22:10:04+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "3.0.17-1~deb12u3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "CVE-2026-89092",
       "source": {
         "name": "debian",
@@ -10849,12 +11450,30 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 4.2,
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
         },
         {
           "source": {
@@ -10875,7 +11494,61 @@
           "url": "http://www.openwall.com/lists/oss-security/2026/09/11/2"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:95618"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-89092"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538306"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538306"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-8674"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-86805"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89092"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-95818"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-95618.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:95618"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-89092.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-96087.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89092"
@@ -10890,11 +11563,14 @@
           "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0016"
         },
         {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
+        },
+        {
           "url": "https://www.cve.org/CVERecord?id=CVE-2026-89092"
         }
       ],
       "published": "2026-09-11T02:18:35+00:00",
-      "updated": "2026-09-11T18:17:00+00:00",
+      "updated": "2026-10-26T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=amd64&distro=debian-12.12",
@@ -10983,9 +11659,6 @@
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-9076"
-        },
-        {
-          "url": "https://access.redhat.com/errata/RHSA-2026:25237"
         },
         {
           "url": "https://access.redhat.com/errata/RHSA-2026:25239"
@@ -11132,7 +11805,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9076"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-25237.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-25239.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:25239"
@@ -11207,6 +11880,110 @@
       ]
     },
     {
+      "id": "CVE-2026-95691",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        416
+      ],
+      "description": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet storage\nwhile the TLS record layer retains a direct pointer into that storage causing\nuse after free.\n\nImpact summary: A malicious QUIC server can cause a heap-use-after-free read\nin the OpenSSL QUIC client. The server can also identify one allocator-adjacent\nbyte through the client's protected Handshake response.\n\nCWE: CWE-416: Use After Free\n\nDescription: During CRYPTO stream processing, a pointer into the first frame's\nmemory on the stream is lent to the TLS handshake processing. The memory\nmust remain stable until it is processed and released. However the processing\nof retransmitted CRYPTO frames could release the memory if the retransmitted\nframe fully overlapped the existing frame. This then causes use-after-free read\nwhen the TLS handshake processing continues.\n\nThe use-after-free read can lead to a Denial-of-Service of the client\napplication or a minor leak of information about the heap memory contents\nthat might be overwritten with other data, subsequently allocated by\nthe application, to the peer.\n\nFIPS impact: no\nThe FIPS module is not affected as the QUIC implementation is outside of\nthe OpenSSL FIPS module boundary.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-95691"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/dd90ceb99a3c2ddba336bb4a00be9ebabd84c2a1"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/ec9d4de9d03989b29db5a3d7efdb4c285deaf386"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/f6244675833e097c2429a40d1b206d95385bd42f"
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20261110.txt"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-95691"
+        }
+      ],
+      "published": "2026-11-10T19:21:39+00:00",
+      "updated": "2026-11-10T22:10:04+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "3.0.17-1~deb12u3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-95692",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        125
+      ],
+      "description": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected nonce\nlength via EVP_CipherInit_ex() may trigger a heap out-of-bounds read.\nSupplying a longer IV is silently truncated instead of rejected.\n\nImpact summary: An application passing a caller-supplied IV of the wrong\nlength may crash or read beyond its buffer. Because trailing IV bytes are\nignored, an attacker who knows one message and tag may forge messages under a\ndifferent IV.\n\nCWE: CWE-125: Out-of-bounds Read\n\nDescription: AES-GCM-SIV copies the caller-supplied IV or nonce into its\ninternal state using a copy whose length is taken from the expected nonce size\nrather than from the length the caller actually provided. When the caller\npasses a shorter IV, the copy reads past the end of the caller's buffer;\nAddressSanitizer confirms a heap out-of-bounds read reached through\nEVP_CipherInit_ex() into ossl_aes_gcm_siv_init(). When the caller passes a\nlonger IV, the implementation silently discards the trailing bytes instead of\nrejecting the length.\n\nThe truncation breaks the binding between the IV and the computed\nauthentication tag. An attacker who has observed a message and its tag under\none IV can produce a message and tag that verify under a different IV whose\nfirst bytes match, since the surplus bytes never influence the computation.\nThe message itself is unchanged, so this is a failure of IV commitment rather\nthan a classic existential forgery.\n\nOnly applications that call EVP_CipherInit_ex() (or the equivalent provider\ncipher initialization) with an IV length other than the standard 12 bytes for\nAES-GCM-SIV are affected. The severity is limited because the out-of-bounds\nread is small and attacker-controlled only in length, and the forgery requires\nan unusual IV length choice by the application.\n\nFIPS impact: no\nThe FIPS modules are not affected by this issue, as AES-GCM-SIV is not an\napproved algorithm.",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-95692"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/257a3427aa0ef8d9dd2ef5b3e2d1c021a221b116"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/510872388f5d145cf870868b3d288a23822cb776"
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/70a47ac78b6f3be1b22fb1551bd0bfcff4f29613"
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20261110.txt"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-95692"
+        }
+      ],
+      "published": "2026-11-10T19:21:39+00:00",
+      "updated": "2026-11-10T22:10:04+00:00",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u3?arch=amd64&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "3.0.17-1~deb12u3",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "CVE-2026-95818",
       "source": {
         "name": "debian",
@@ -11215,12 +11992,36 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 7,
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -11232,7 +12033,61 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-95818"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:95618"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-95818"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538306"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2531725"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2536382"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538209"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538306"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-8674"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-86805"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89092"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-95818"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-95618.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:95618"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-95818.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-96087.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95818"
@@ -11241,7 +12096,13 @@
           "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=34360"
         },
         {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0023"
+        },
+        {
           "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0023"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
         },
         {
           "url": "https://www.cve.org/CVERecord?id=CVE-2026-95818"
@@ -11276,6 +12137,12 @@
           "severity": "low",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -11299,7 +12166,13 @@
           "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=34683"
         },
         {
+          "url": "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0024"
+        },
+        {
           "url": "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0024"
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-9065-1"
         },
         {
           "url": "https://www.cve.org/CVERecord?id=CVE-2026-97399"
@@ -11326,7 +12199,50 @@
         "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
       },
       "ratings": [],
+      "description": "Description Not Available",
       "recommendation": "Upgrade tzdata to version 2026c-0+deb12u1",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u2?arch=all&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "2025b-0+deb12u2",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DLA-4854-1",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [],
+      "description": "Description Not Available",
+      "recommendation": "Upgrade tzdata to version 2026e-0+deb12u1",
+      "affects": [
+        {
+          "ref": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u2?arch=all&distro=debian-12.12",
+          "versions": [
+            {
+              "version": "2025b-0+deb12u2",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DLA-4867-1",
+      "source": {
+        "name": "debian",
+        "url": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "ratings": [],
+      "description": "Description Not Available",
+      "recommendation": "Upgrade tzdata to version 2026f-0+deb12u1",
       "affects": [
         {
           "ref": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u2?arch=all&distro=debian-12.12",

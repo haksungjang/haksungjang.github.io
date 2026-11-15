@@ -1,25 +1,25 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:ee139a3f-8c31-479f-8ba9-6a15d914eb9a",
+  "serialNumber" : "urn:uuid:35f38066-d079-416e-88dc-dc9eb17db5e0",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:16:19Z",
+    "timestamp" : "2026-11-14T08:52:17Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "scab-npm-nonshipped",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -391,13 +391,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "NPM::left-pad:1.3.0",
         "NPM::is-number:7.0.0",

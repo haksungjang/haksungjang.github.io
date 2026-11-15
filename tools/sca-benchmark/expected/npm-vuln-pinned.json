@@ -5,10 +5,10 @@
     "kind": "source",
     "ref": "fixtures/npm-vuln-pinned"
   },
-  "dbSnapshot": "2026-07-03",
+  "dbSnapshot": "2026-11-14",
   "componentsComplete": true,
   "vulnComplete": true,
-  "notes": "npm 환경(lodash). 취약점 precision 과 컴포넌트를 함께 측정한다. lodash 4.17.15 를 lockfile 로 고정한다. 취약점은 적용 CVE 6개 전수(vulnComplete=true), 컴포넌트는 lodash 단일(componentsComplete=true). CVE 집합은 NVD/OSV 교차로 큐레이션했다: CVE-2020-8203, CVE-2020-28500, CVE-2021-23337, CVE-2025-13465, CVE-2026-2950, CVE-2026-4800. CVE-2019-10744 는 4.17.12 에서 고쳐져 4.17.15 에 미적용이라 제외한다. 각 CVE 의 GHSA 별칭을 aliases 로 큐레이션했다(osv-scanner 의 aliases 필드로 교차 확인). 별칭으로 보고하는 도구(dependency-check 의 NPM Audit 경로 등)도 같은 취약점을 찾은 것이므로 TP 로 인정한다. 별칭이 확인되지 않는 식별자(NSWG-ECO-516 등)는 여전히 FP 다. rootPurls: 스캔 대상 자기 자신(pkg:npm/vuln-pinned)을 컴포넌트로 내는 도구(syft)가 있어 매칭에서 제외한다. dbSnapshot 은 네 도구 DB 를 함께 동결한 날짜다. vuln-db refresh 로 같은 날 동결한 캐시를 SCAB_VULN_DB_DIR 로 공유하면 precision 이 안정된다(과거 날짜 재구성은 불가, 동결만 가능 — 방법론 문서의 취약점 DB 스냅샷 절 참조). 2회차 동결(2026-07-03) 재검증: 새 스냅샷 스캔이 정답과 완전 일치, 추가 적용 CVE 없음 — dbSnapshot 을 2회차로 갱신.",
+  "notes": "npm 환경(lodash). 취약점 precision 과 컴포넌트를 함께 측정한다. lodash 4.17.15 를 lockfile 로 고정한다. 취약점은 적용 CVE 5개 전수(vulnComplete=true), 컴포넌트는 lodash 단일(componentsComplete=true). CVE 집합은 NVD/OSV 교차로 큐레이션했다: CVE-2020-8203, CVE-2020-28500, CVE-2021-23337, CVE-2025-13465, CVE-2026-4800. CVE-2019-10744 는 4.17.12 에서 고쳐져 4.17.15 에 미적용이라 제외한다. 각 CVE 의 GHSA 별칭을 aliases 로 큐레이션했다(osv-scanner 의 aliases 필드로 교차 확인). 별칭으로 보고하는 도구(dependency-check 의 NPM Audit 경로 등)도 같은 취약점을 찾은 것이므로 TP 로 인정한다. 별칭이 확인되지 않는 식별자(NSWG-ECO-516 등)는 여전히 FP 다. rootPurls: 스캔 대상 자기 자신(pkg:npm/vuln-pinned)을 컴포넌트로 내는 도구(syft)가 있어 매칭에서 제외한다. dbSnapshot 은 네 도구 DB 를 함께 동결한 날짜다. vuln-db refresh 로 같은 날 동결한 캐시를 SCAB_VULN_DB_DIR 로 공유하면 precision 이 안정된다(과거 날짜 재구성은 불가, 동결만 가능 — 방법론 문서의 취약점 DB 스냅샷 절 참조). 2회차 동결(2026-07-03) 재검증: 새 스냅샷 스캔이 정답과 완전 일치, 추가 적용 CVE 없음 — dbSnapshot 을 2회차로 갱신. 4회차 동결(2026-11-14) 재검증: CVE-2026-2950(GHSA-f23m-r3pf-42rh)을 정답에서 뺐다. 이 권고는 4.17.23 에 들어간 CVE-2025-13465 수정을 배열 경로로 우회하는 문제이고, 2026-11-03 권고 수정으로 lodash 영향 범위가 4.17.23 이상 4.18.1 미만으로 좁혀졌다. 그 수정이 없는 4.17.15 는 CVE-2025-13465 자체에 해당하고(정답에 있음) 이 우회 CVE 에는 해당하지 않는다. 새 스냅샷의 trivy, grype, osv-scanner 모두 이 CVE 를 내지 않았다. 추가 적용 CVE 없음.",
   "components": [
     {
       "purl": "pkg:npm/lodash@4.17.15",
@@ -53,14 +53,6 @@
       ]
     },
     {
-      "cve": "CVE-2026-2950",
-      "affectedPurl": "pkg:npm/lodash@4.17.15",
-      "fixedVersion": "4.18.0",
-      "aliases": [
-        "GHSA-f23m-r3pf-42rh"
-      ]
-    },
-    {
       "cve": "CVE-2026-4800",
       "affectedPurl": "pkg:npm/lodash@4.17.15",
       "fixedVersion": "4.18.0",
@@ -76,6 +68,11 @@
     {
       "id": "NSWG-ECO-516",
       "reason": "비CVE 자체 식별자(nodejs-security-wg)로 정답 CVE 의 별칭으로 확인되지 않아 매칭되지 않는다"
+    },
+    {
+      "id": "CVE-2026-2950",
+      "reason": "CVE-2025-13465 수정(4.17.23)을 우회하는 CVE 로, 권고 영향 범위가 4.17.23 이상 4.18.1 미만이다(2026-11-03 권고 수정). 4.17.15 에는 미적용이다. 수정 전 권고 데이터로 매칭한 과탐",
+      "axis": "vulnerability"
     }
   ],
   "fnReasons": [

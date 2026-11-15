@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:07:53Z",
+    "timestamp": "2026-11-14T08:45:05Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "9a4e1540-750e-4295-a53f-96820e5b54a2",
+      "bom-ref": "f0bbec3f-ae76-4ba9-93ca-daccda30f406",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "962be3ef-57da-4beb-9267-af81dd470b89",
+      "bom-ref": "4d237138-240d-4ef2-905f-610adc2b9cbb",
       "type": "library",
       "name": "debug",
       "version": "4.3.1",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "89326f54-a385-453e-8c72-a0243b7f09be",
+      "bom-ref": "b512f01b-2b06-4cfd-bffc-cda0adbdc29a",
       "type": "library",
       "name": "minimist",
       "version": "1.2.5",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "7f972d67-c154-42ee-94a3-cc605d8ab2b1",
+      "bom-ref": "4fa54e78-5aaa-4f25-b7f6-f314ef4ca8bc",
       "type": "library",
       "name": "ms",
       "version": "2.1.2",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "6555a052-e143-4a13-8664-85a8f5fb347c",
+      "bom-ref": "b166950c-53a0-4e17-878e-282f1a57f519",
       "type": "library",
       "name": "node-lock",
       "version": "1.0.0",

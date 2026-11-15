@@ -2,7 +2,7 @@
   "results": [
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/bun-lock/bun.lock",
+        "path": "~/projects/sca-benchmark-internal/fixtures/bun-lock/bun.lock",
         "type": "lockfile"
       },
       "packages": [

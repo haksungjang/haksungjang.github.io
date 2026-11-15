@@ -3,13 +3,21 @@
     "scanInfo": {
         "engineVersion": "13.0.0",
         "dataSource": [
+{
+                "name": "NVD API Last Checked",
+                "timestamp": "2026-11-14T19:29:00+09"
+            }
+,{
+                "name": "NVD API Last Modified",
+                "timestamp": "2026-11-14T09:16:48Z"
+            }
         ]
 
 
     },
     "projectInfo": {
         "name": "py-range",
-        "reportDate": "2026-10-13T21:30:34.197644Z",
+        "reportDate": "2026-11-14T10:30:46.073577Z",
         "credits": {
             "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
             "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
@@ -22,7 +30,7 @@
 {
             "isVirtual": true,
             "fileName": "flask:2.0",
-            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/py-range\/requirements.txt:flask\/2.0"
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/py-range\/requirements.txt:flask\/2.0"
             ,"evidenceCollected": {
                 "vendorEvidence": [
 {
@@ -60,7 +68,7 @@
         },{
             "isVirtual": true,
             "fileName": "jinja2:3.0",
-            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/py-range\/requirements.txt:jinja2\/3.0"
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/py-range\/requirements.txt:jinja2\/3.0"
             ,"evidenceCollected": {
                 "vendorEvidence": [
 {
@@ -98,7 +106,7 @@
         },{
             "isVirtual": true,
             "fileName": "requests:2.25",
-            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/py-range\/requirements.txt:requests\/2.25"
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/py-range\/requirements.txt:requests\/2.25"
             ,"evidenceCollected": {
                 "vendorEvidence": [
 {
@@ -136,7 +144,7 @@
         },{
             "isVirtual": true,
             "fileName": "urllib3:1.26",
-            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/py-range\/requirements.txt:urllib3\/1.26"
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/py-range\/requirements.txt:urllib3\/1.26"
             ,"evidenceCollected": {
                 "vendorEvidence": [
 {

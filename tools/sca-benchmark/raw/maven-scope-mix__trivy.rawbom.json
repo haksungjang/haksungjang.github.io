@@ -1,0 +1,663 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:ee99d064-cba1-454f-b24d-9c15f6bf43ef",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:42:55+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "bb01d72e-3861-4b37-b4b2-55ab6440d54e",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-internal/fixtures/maven-scope-mix",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "0c09045b-b556-4e05-a8cf-58e63ed0b0f1",
+      "type": "application",
+      "name": "pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.12",
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-classic",
+      "version": "1.5.12",
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.12",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "ch.qos.logback:logback-classic:1.5.12::90d03769"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-core",
+      "version": "1.5.12",
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-1.0"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "ch.qos.logback:logback-core:1.5.12::7d154eac"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.example.scab/scope-mix-web@1.0.0",
+      "type": "library",
+      "group": "com.example.scab",
+      "name": "scope-mix-web",
+      "version": "1.0.0",
+      "purl": "pkg:maven/com.example.scab/scope-mix-web@1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.example.scab:scope-mix-web:1.0.0::c02fcabc"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.code.gson/gson@2.11.0",
+      "type": "library",
+      "group": "com.google.code.gson",
+      "name": "gson",
+      "version": "2.11.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.code.gson/gson@2.11.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.code.gson:gson:2.11.0::f3f8784f"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0",
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.27.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "com.google.errorprone:error_prone_annotations:2.27.0::3954e6c1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@2.0.15",
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "slf4j-api",
+      "version": "2.0.15",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.15",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "org.slf4j:slf4j-api:2.0.15::1a80c91b"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "0c09045b-b556-4e05-a8cf-58e63ed0b0f1",
+      "dependsOn": [
+        "pkg:maven/com.example.scab/scope-mix-web@1.0.0"
+      ]
+    },
+    {
+      "ref": "bb01d72e-3861-4b37-b4b2-55ab6440d54e",
+      "dependsOn": [
+        "0c09045b-b556-4e05-a8cf-58e63ed0b0f1"
+      ]
+    },
+    {
+      "ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.12",
+      "dependsOn": [
+        "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.15"
+      ]
+    },
+    {
+      "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/com.example.scab/scope-mix-web@1.0.0",
+      "dependsOn": [
+        "pkg:maven/ch.qos.logback/logback-classic@1.5.12",
+        "pkg:maven/com.google.code.gson/gson@2.11.0"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.google.code.gson/gson@2.11.0",
+      "dependsOn": [
+        "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0"
+      ]
+    },
+    {
+      "ref": "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.slf4j/slf4j-api@2.0.15",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2024-12798",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:L/RE:L/U:Clear"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:H/A:L"
+        }
+      ],
+      "cwes": [
+        917
+      ],
+      "description": "ACE vulnerability in JaninoEventEvaluator  by QOS.CH logback-core\n      upto including version 0.1 to 1.3.14 and 1.4.0 to 1.5.12 in Java applications allows\n      attacker to execute arbitrary code by compromising an existing\n      logback configuration file or by injecting an environment variable\n      before program execution.\n\n\n\n\n\nMalicious logback configuration files can allow the attacker to execute \narbitrary code using the JaninoEventEvaluator extension.\n\n\n\nA successful attack requires the user to have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege.",
+      "recommendation": "Upgrade ch.qos.logback:logback-core to version 1.5.13, 1.3.15",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-12798"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-12798"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/commit/2cb6d520df7592ef1c3a198f1b5df3c10c93e183"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.3.15"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.5.13"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12798"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-12798"
+        }
+      ],
+      "published": "2024-12-19T16:15:07+00:00",
+      "updated": "2026-06-17T07:00:31+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+          "versions": [
+            {
+              "version": "1.5.12",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2024-12801",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 2.4,
+          "severity": "low",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:N/VA:L/SC:H/SI:H/SA:H/V:D/U:Clear"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 3.3,
+          "severity": "low",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "cwes": [
+        918
+      ],
+      "description": "Server-Side Request Forgery (SSRF) in SaxEventRecorder by QOS.CH logback version 0.1 to 1.3.14 and 1.4.0 to 1.5.12  on the Java platform, allows an attacker to \nforge requests by compromising logback configuration files in XML.\n\n\n\nThe attacks involves the modification of DOCTYPE declaration in  XML configuration files.",
+      "recommendation": "Upgrade ch.qos.logback:logback-core to version 1.5.13, 1.3.15",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-12801"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-12801"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/commit/5f05041cba4c4ac0a62748c5c527a2da48999f2d"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.3.15"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.5.13"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12801"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-12801"
+        }
+      ],
+      "published": "2024-12-19T17:15:08+00:00",
+      "updated": "2026-06-17T07:00:31+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+          "versions": [
+            {
+              "version": "1.5.12",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2025-11226",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:P/VC:H/VI:L/VA:L/SC:H/SI:L/SA:L"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 6.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:L/A:L"
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "ACE vulnerability in conditional configuration file processing  by QOS.CH logback-core up to and including version 1.5.18 in Java applications, allows an attacker to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\n\n\nA successful attack requires the presence of Janino library and Spring Framework to be present on the user's class path. In addition, the attacker must  have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege.",
+      "recommendation": "Upgrade ch.qos.logback:logback-core to version 1.5.19, 1.3.16",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2025-11226"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2025-11226"
+        },
+        {
+          "url": "https://advisory.echohq.com/cve/CVE-2025-11226"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-25qh-j22f-pwp8"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/commit/61f6a2544f36b3016e0efd434ee21f19269f1df7"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/issues/974"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/releases/tag/v_1.5.19"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.3.16"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.5.19"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11226"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-11226"
+        }
+      ],
+      "published": "2025-10-01T08:15:31+00:00",
+      "updated": "2026-10-09T09:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+          "versions": [
+            {
+              "version": "1.5.12",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-10532",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 2.9,
+          "severity": "low",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:P/RE:M/U:Green"
+        }
+      ],
+      "cwes": [
+        502
+      ],
+      "description": "Deserialization of untrusted data vulnerability in QOS.CH Sarl logback logback-core (HardenedObjectInputStream (logback-core) modules) allows Object Injection, albeit heavily restricted.\n\nMore precisely, an attacker able to influence serialized data sent to \nSimpleSocketServer or SimpleSSLSocketServer can instantiate Proxy objects.\n\n\nAlthough deserialization is heavily restricted by HardenedObjectInputStream and no \npractical way to achieve remote code execution or significant privilege \nescalation has been identified, this issue constitutes a bypass of the \nintended security restrictions.\n\n\n\nThis issue affects logback: through 1.5.33 inclusive.",
+      "recommendation": "Upgrade ch.qos.logback:logback-core to version 1.5.34",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-10532"
+        },
+        {
+          "url": "https://advisory.echohq.com/cve/CVE-2026-10532"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/releases/tag/v_1.5.34"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.5.34"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10532"
+        }
+      ],
+      "published": "2026-06-01T13:16:30+00:00",
+      "updated": "2026-07-22T07:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+          "versions": [
+            {
+              "version": "1.5.12",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-1225",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 1.8,
+          "severity": "low",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:L"
+        }
+      ],
+      "cwes": [
+        20
+      ],
+      "description": "ACE vulnerability in configuration file processing  by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file.\n\n\n\n\nThe instantiation of a potentially malicious Java class requires that said class is present on the user's class-path. In addition, the attacker must  have write access to a \nconfiguration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado.",
+      "recommendation": "Upgrade ch.qos.logback:logback-core to version 1.5.25",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-1225"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-1225"
+        },
+        {
+          "url": "https://advisory.echohq.com/cve/CVE-2026-1225"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-qqpg-mvqg-649v"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/commit/1f97ae1844b1be8486e4e9cade98d7123d3eded5"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback/issues/997"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.5.25"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1225"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-1225"
+        }
+      ],
+      "published": "2026-01-22T10:16:07+00:00",
+      "updated": "2026-06-17T10:15:21+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+          "versions": [
+            {
+              "version": "1.5.12",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-9828",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 1.2,
+          "severity": "low",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:P/RE:L/U:Green"
+        }
+      ],
+      "cwes": [
+        502
+      ],
+      "description": "Deserialization of untrusted data vulnerability in QOS.CH Sarl logback logback-core (HardenedObjectInputStream (logback-core) modules) allows Object Injection albeit heavily restricted.\n\nMore precisely, an attacker able to influence serialized data sent to \nSimpleSocketServer or SimpleSSLSocketServer can instantiate objects from\n classes in the java.lang and java.util packages that are not explicitly\n blocked.\n\nAlthough deserialization is heavily restricted by HardenedObjectInputStream and no \npractical way to achieve remote code execution or significant privilege \nescalation has been identified, this issue constitutes a bypass of the \nintended security restrictions.\n\n\n\nThis issue affects logback: through 1.5.32 inclusive.",
+      "recommendation": "Upgrade ch.qos.logback:logback-core to version 1.5.33",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-9828"
+        },
+        {
+          "url": "https://advisory.echohq.com/cve/CVE-2026-9828"
+        },
+        {
+          "url": "https://github.com/qos-ch/logback"
+        },
+        {
+          "url": "https://logback.qos.ch/news.html#1.5.33"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9828"
+        }
+      ],
+      "published": "2026-05-28T14:16:27+00:00",
+      "updated": "2026-10-26T11:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+          "versions": [
+            {
+              "version": "1.5.12",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

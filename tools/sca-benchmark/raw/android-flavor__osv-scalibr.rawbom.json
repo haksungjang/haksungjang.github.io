@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T20:53:41Z",
+    "timestamp": "2026-11-14T07:34:44Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "53948d67-afce-4015-9507-8eeab87dec26",
+      "bom-ref": "f45253b2-3f8c-4907-bf19-03c5f09a07d8",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "29a9a18a-8828-4e58-ab71-1931f37fe273",
+      "bom-ref": "1a993c9a-34fc-43ab-ba2c-d485e057be6a",
       "type": "library",
       "name": "unknown",
       "version": "unknown",

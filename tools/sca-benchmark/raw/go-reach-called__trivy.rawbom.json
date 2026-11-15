@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:e63a5883-91e3-4dd0-b514-87c4b0b42b49",
+  "serialNumber": "urn:uuid:5f9d148b-3296-42b3-814a-47cff3448cb3",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:10:08+00:00",
+    "timestamp": "2026-11-14T07:55:31+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "3004c519-a725-4f2b-ba79-8ad93d77bcc2",
+      "bom-ref": "263d3bbb-5454-4d54-8c69-394ca76111ef",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/go-reach-called",
+      "name": "~/projects/sca-benchmark-internal/fixtures/go-reach-called",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "14205091-21e3-4c6f-b0ad-d87586515e0b",
+      "bom-ref": "dffaac39-2887-46d1-bbe5-4d7bb408d58a",
       "type": "application",
       "name": "go.mod",
       "properties": [
@@ -83,15 +83,15 @@
   ],
   "dependencies": [
     {
-      "ref": "14205091-21e3-4c6f-b0ad-d87586515e0b",
+      "ref": "263d3bbb-5454-4d54-8c69-394ca76111ef",
       "dependsOn": [
-        "pkg:golang/example.com/scab-go-reach-called"
+        "dffaac39-2887-46d1-bbe5-4d7bb408d58a"
       ]
     },
     {
-      "ref": "3004c519-a725-4f2b-ba79-8ad93d77bcc2",
+      "ref": "dffaac39-2887-46d1-bbe5-4d7bb408d58a",
       "dependsOn": [
-        "14205091-21e3-4c6f-b0ad-d87586515e0b"
+        "pkg:golang/example.com/scab-go-reach-called"
       ]
     },
     {
@@ -213,7 +213,29 @@
         "name": "govulndb",
         "url": "https://pkg.go.dev/vuln/"
       },
-      "ratings": [],
+      "ratings": [
+        {
+          "source": {
+            "name": "azure"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
       "cwes": [
         787
       ],
@@ -224,13 +246,25 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-56851"
         },
         {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-56851"
+        },
+        {
+          "url": "https://github.com/golang/go/issues/80112"
+        },
+        {
           "url": "https://go.dev/cl/793360"
         },
         {
           "url": "https://go.dev/issue/80112"
         },
         {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56851"
+        },
+        {
           "url": "https://pkg.go.dev/vuln/GO-2026-6629"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-56851"
         }
       ],
       "published": "2026-10-07T18:17:20+00:00",
@@ -437,7 +471,7 @@
         }
       ],
       "published": "2026-07-21T20:17:02+00:00",
-      "updated": "2026-07-23T18:27:48+00:00",
+      "updated": "2026-10-24T19:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:golang/golang.org/x/text@v0.3.7",

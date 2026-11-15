@@ -1,0 +1,141 @@
+{
+  "fixture": "maven-scope-mix",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/maven-scope-mix"
+  },
+  "componentsComplete": true,
+  "notes": "Maven war 프로젝트, lockfile 없음. 직접 의존성에 compile(logback-classic, gson), optional(true)(xz), provided(jakarta.servlet-api), system(lib/legacy-codec-1.0.jar), test(junit-jupiter)를 섞었고, 전이 logback-classic 과 logback-core 의 POM 에는 optional 의존성(jakarta.mail-api, janino 등)이 있다. scope 와 optional 을 배포물 기준으로 구분하는지 측정한다. 정답은 war 의 WEB-INF/lib 에 실제로 들어간 jar 5개다. 도출 절차(2026-11-13): 임시 사본에서 maven:3.9-eclipse-temurin-17 컨테이너로 mvn -B package(Maven 3.9.16, maven-war-plugin 3.4.0, JDK 17) 후 unzip -l 로 WEB-INF/lib 를 확인했고, mvn dependency:tree, mvn dependency:list -DincludeScope=runtime 으로 대조했다. 판단이 필요했던 두 지점은 빌드로 정했다. (1) 직접 선언한 optional 의존성 xz 는 dependency:list 의 runtime 결과에 compile (optional) 로 나오지만 war 에는 없다. maven-war-plugin 이 optional 아티팩트를 패키징하지 않기 때문이다. 따라서 정답에서 제외한다(Maven 해석 결과를 그대로 내는 도구는 xz 를 과탐한다). 코드는 xz 가 없으면 gzip 으로 돌아가도록 작성했다. (2) system scope 의 legacy-codec 도 war 에 없다(runtime 해석 결과에도 없다). 서버의 공용 lib 디렉터리 등 배포 환경이 제공한다는 전제의 선언이다. 직접은 logback-classic 1.5.12, gson 2.11.0 이고, 전이는 logback-core 1.5.12, slf4j-api 2.0.15, error_prone_annotations 2.27.0 이다. 전이 버전이 POM 해석으로 결정되므로 전이도 버전까지 둔다. 라이선스는 각 POM 의 licenses 로 확인했다(logback 은 EPL-1.0 과 LGPL-2.1 이중 라이선스, slf4j-api MIT, 나머지 Apache-2.0).",
+  "rootPurls": [
+    "pkg:maven/com.example.scab/scope-mix-web"
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/org.tukaani/xz",
+      "reason": "이 프로젝트가 직접 선언한 optional(true) 의존성이다. 컴파일, 런타임 클래스패스(mvn dependency:list -DincludeScope=runtime)에는 들어가지만 maven-war-plugin 이 optional 아티팩트를 WEB-INF/lib 에 넣지 않아 war 에 없다(mvn package 로 확인). 배포물 구성 기준으로 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/jakarta.servlet/jakarta.servlet-api",
+      "reason": "provided scope 라 서블릿 컨테이너가 제공하고 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/com.example.legacy/legacy-codec",
+      "reason": "system scope 의존성(fixture 의 lib/legacy-codec-1.0.jar)이다. maven-war-plugin 이 system scope 를 WEB-INF/lib 에 넣지 않아 war 에 없다(mvn package 로 확인). 저장소에 jar 파일로 있어 파일을 훑는 도구가 낼 수 있지만 배포물에는 없다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter",
+      "reason": "test scope 의존성라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter-api",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter-params",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.jupiter/junit-jupiter-engine",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.platform/junit-platform-commons",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.junit.platform/junit-platform-engine",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.opentest4j/opentest4j",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.apiguardian/apiguardian-api",
+      "reason": "test scope 전이(junit-jupiter)라 war 에 들어가지 않는다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/jakarta.mail/jakarta.mail-api",
+      "reason": "logback-classic, logback-core 의 POM 에 optional 로 선언된 의존성이다. optional 은 소비자에게 전이되지 않아 Maven 이 해석하지 않고 war 에도 없다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/jakarta.activation/jakarta.activation-api",
+      "reason": "logback-classic 의 POM 에 optional 로 선언된 의존성이다. optional 은 소비자에게 전이되지 않아 Maven 이 해석하지 않고 war 에도 없다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.codehaus.janino/janino",
+      "reason": "logback-classic, logback-core 의 POM 에 optional 로 선언된 의존성이다. optional 은 소비자에게 전이되지 않아 Maven 이 해석하지 않고 war 에도 없다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.codehaus.janino/commons-compiler",
+      "reason": "logback-core 의 POM 에 optional 로 선언된 의존성이다. optional 은 소비자에게 전이되지 않아 Maven 이 해석하지 않고 war 에도 없다. 정답에서 제외"
+    },
+    {
+      "id": "pkg:maven/org.fusesource.jansi/jansi",
+      "reason": "logback-core 의 POM 에 optional 로 선언된 의존성이다. optional 은 소비자에게 전이되지 않아 Maven 이 해석하지 않고 war 에도 없다. 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+      "reason": "전이 의존성. pom.xml 만 읽는 도구는 전이를 해석하지 못한다(mvn 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.slf4j/slf4j-api@2.0.15",
+      "reason": "전이 의존성. pom.xml 만 읽는 도구는 전이를 해석하지 못한다(mvn 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0",
+      "reason": "전이 의존성. pom.xml 만 읽는 도구는 전이를 해석하지 못한다(mvn 해석이 필요)",
+      "axis": "component"
+    }
+  ],
+  "components": [
+    {
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.12",
+      "version": "1.5.12",
+      "licenses": [
+        "EPL-1.0",
+        "LGPL-2.1-only"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.code.gson/gson@2.11.0",
+      "version": "2.11.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.12",
+      "version": "1.5.12",
+      "licenses": [
+        "EPL-1.0",
+        "LGPL-2.1-only"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.15",
+      "version": "2.0.15",
+      "licenses": [
+        "MIT"
+      ],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0",
+      "version": "2.27.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": []
+}

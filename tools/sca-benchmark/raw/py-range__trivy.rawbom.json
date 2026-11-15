@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:75bebb51-7ec2-4407-81d4-0b9550e01c83",
+  "serialNumber": "urn:uuid:a408bfde-5e95-417d-a15f-4544aca8e114",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:19:56+00:00",
+    "timestamp": "2026-11-14T09:34:50+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "abae4cbb-01da-4f83-a4fe-332807a3546b",
+      "bom-ref": "7b90f94d-5154-462c-b15c-204c410adbc9",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/py-range",
+      "name": "~/projects/sca-benchmark-internal/fixtures/py-range",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -34,7 +34,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "abae4cbb-01da-4f83-a4fe-332807a3546b",
+      "ref": "7b90f94d-5154-462c-b15c-204c410adbc9",
       "dependsOn": []
     }
   ],

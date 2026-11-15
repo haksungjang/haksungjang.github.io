@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:293f6c59-b5cc-48da-a2d0-b9b9bdc7db35",
+  "serialNumber": "urn:uuid:9c1feba8-b9e8-46fc-abb3-e76709cdec02",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:21:41+00:00",
+    "timestamp": "2026-11-14T09:22:22+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "872b407d-d5fa-477b-9c09-aff3f771b2ed",
+      "bom-ref": "3461f772-6e5f-4654-b51f-a7cf25c54c3b",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/rust-cargo",
+      "name": "~/projects/sca-benchmark-internal/fixtures/rust-cargo",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -34,7 +34,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "872b407d-d5fa-477b-9c09-aff3f771b2ed",
+      "ref": "3461f772-6e5f-4654-b51f-a7cf25c54c3b",
       "dependsOn": []
     }
   ],
