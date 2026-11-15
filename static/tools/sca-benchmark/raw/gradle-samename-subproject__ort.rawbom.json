@@ -1,0 +1,65 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:8af9a8e6-6558-4bb5-beb2-db5075988382",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-11-15T15:45:26Z",
+    "tools" : {
+      "components" : [
+        {
+          "type" : "application",
+          "name" : "OSS Review Toolkit",
+          "version" : "99.0.0"
+        }
+      ]
+    },
+    "component" : {
+      "type" : "application",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@7ed391d55eeb4a81ba0e1c46d828920f281fab19",
+      "group" : "com.example",
+      "name" : "demo",
+      "version" : "1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        }
+      ]
+    },
+    "licenses" : [
+      {
+        "expression" : "CC0-1.0"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "Gradle:com.example:demo:1.0.0",
+      "group" : "com.example",
+      "name" : "demo",
+      "version" : "1.0.0",
+      "description" : "",
+      "scope" : "required",
+      "purl" : "pkg:gradle/com.example/demo@1.0.0",
+      "properties" : [
+        {
+          "name" : "ort:effectiveLicense",
+          "value" : "NONE"
+        },
+        {
+          "name" : "ort:dependencyType",
+          "value" : "transitive"
+        }
+      ]
+    }
+  ],
+  "externalReferences" : [
+    {
+      "type" : "vcs",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
+      "comment" : "URL to the Git repository of the projects"
+    }
+  ]
+}

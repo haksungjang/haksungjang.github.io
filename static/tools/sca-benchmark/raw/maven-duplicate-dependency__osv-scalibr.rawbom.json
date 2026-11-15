@@ -1,0 +1,61 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:41:17Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "4143c46b-bb81-4162-9f5e-fc2bfa6632fc",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "de1f33db-1af3-49a8-863a-8dce6b89048f",
+      "type": "library",
+      "name": "com.google.guava:guava",
+      "version": "33.4.8-jre",
+      "purl": "pkg:maven/com.google.guava/guava@33.4.8-jre",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "1c472cba-17f6-41c4-96aa-2bef616880de",
+      "type": "library",
+      "name": "junit:junit",
+      "version": "4.12",
+      "purl": "pkg:maven/junit/junit@4.12",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    }
+  ]
+}

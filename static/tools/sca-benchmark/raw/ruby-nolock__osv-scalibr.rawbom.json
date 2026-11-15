@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:43:30Z",
+    "timestamp": "2026-11-14T09:29:22Z",
     "tools": {
       "components": [
         {
@@ -23,7 +23,7 @@
       {}
     ],
     "component": {
-      "bom-ref": "14a8ad5f-a82c-49d7-89cb-fa6144668359",
+      "bom-ref": "424cd14c-7961-4c23-86d8-a0cb3e9de797",
       "type": "",
       "name": ""
     }

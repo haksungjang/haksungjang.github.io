@@ -1,25 +1,25 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:9ed7b284-5d4c-4aa7-bc35-d94c4e7e6145",
+  "serialNumber" : "urn:uuid:e2a294af-c8d0-40e8-ac45-3b82e1aff4c7",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:09:52Z",
+    "timestamp" : "2026-11-14T07:51:47Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "scab-go-mod",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -36,13 +36,13 @@
   "components" : [
     {
       "type" : "library",
-      "bom-ref" : "GoMod::scab-go-mod:3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "GoMod::scab-go-mod:4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "scab-go-mod",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "description" : "",
       "scope" : "required",
-      "purl" : "pkg:gomod/scab-go-mod@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "purl" : "pkg:gomod/scab-go-mod@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -118,13 +118,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "Go::github.com/spf13/cobra:1.8.0"
       ]

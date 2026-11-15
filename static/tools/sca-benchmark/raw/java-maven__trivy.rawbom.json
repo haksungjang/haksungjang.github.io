@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:f51a340a-f19a-41aa-9f8d-5ec2555a7ca9",
+  "serialNumber": "urn:uuid:53b62206-fbb7-4f06-8a6d-c0147e0e14df",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:13:09+00:00",
+    "timestamp": "2026-11-14T08:34:33+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "f3da36a3-05f5-4141-8a06-06d669c08e1a",
+      "bom-ref": "c3dfdf84-56a2-44a5-93df-f9aab414f6ef",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/java-maven",
+      "name": "~/projects/sca-benchmark-internal/fixtures/java-maven",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "ce69fe35-516b-458b-843b-df6c073370db",
+      "bom-ref": "b28d343e-a6fa-4e41-8995-f30944a3028d",
       "type": "application",
       "name": "pom.xml",
       "properties": [
@@ -57,7 +57,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.example:java-maven:1.0.0::b8ca3225"
+          "value": "com.example:java-maven:1.0.0::f404bbf9"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -82,7 +82,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.fasterxml.jackson.core:jackson-annotations:2.18.2::6877372b"
+          "value": "com.fasterxml.jackson.core:jackson-annotations:2.18.2::33f91b70"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -107,7 +107,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.fasterxml.jackson.core:jackson-core:2.18.2::68951023"
+          "value": "com.fasterxml.jackson.core:jackson-core:2.18.2::7e4f1e81"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -132,7 +132,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.fasterxml.jackson.core:jackson-databind:2.18.2::6606498f"
+          "value": "com.fasterxml.jackson.core:jackson-databind:2.18.2::c70d97e1"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -157,7 +157,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.google.code.findbugs:jsr305:3.0.2::32b4157c"
+          "value": "com.google.code.findbugs:jsr305:3.0.2::22016626"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -182,7 +182,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.google.errorprone:error_prone_annotations:2.28.0::a6e62bae"
+          "value": "com.google.errorprone:error_prone_annotations:2.28.0::ebff5dab"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -207,7 +207,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.google.guava:failureaccess:1.0.2::96726e71"
+          "value": "com.google.guava:failureaccess:1.0.2::eecf7e3b"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -232,7 +232,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.google.guava:guava:33.3.1-jre::bb23d6d5"
+          "value": "com.google.guava:guava:33.3.1-jre::e78153d8"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -257,7 +257,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::fe3f0d13"
+          "value": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::5840f7f6"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -282,7 +282,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "com.google.j2objc:j2objc-annotations:3.0.0::6e9c5c63"
+          "value": "com.google.j2objc:j2objc-annotations:3.0.0::9e7a9933"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -307,7 +307,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "org.apache.commons:commons-lang3:3.17.0::45b6bf5b"
+          "value": "org.apache.commons:commons-lang3:3.17.0::ce8e5f11"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -332,7 +332,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "org.apache.logging.log4j:log4j-api:2.14.1::931af8bb"
+          "value": "org.apache.logging.log4j:log4j-api:2.14.1::5e5c9ba9"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -357,7 +357,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "org.apache.logging.log4j:log4j-core:2.14.1::8c551333"
+          "value": "org.apache.logging.log4j:log4j-core:2.14.1::7cc46434"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -382,7 +382,7 @@
       "properties": [
         {
           "name": "aquasecurity:trivy:PkgID",
-          "value": "org.checkerframework:checker-qual:3.43.0::762dab30"
+          "value": "org.checkerframework:checker-qual:3.43.0::2c4a9fcb"
         },
         {
           "name": "aquasecurity:trivy:PkgType",
@@ -393,15 +393,15 @@
   ],
   "dependencies": [
     {
-      "ref": "ce69fe35-516b-458b-843b-df6c073370db",
+      "ref": "b28d343e-a6fa-4e41-8995-f30944a3028d",
       "dependsOn": [
         "pkg:maven/com.example/java-maven@1.0.0"
       ]
     },
     {
-      "ref": "f3da36a3-05f5-4141-8a06-06d669c08e1a",
+      "ref": "c3dfdf84-56a2-44a5-93df-f9aab414f6ef",
       "dependsOn": [
-        "ce69fe35-516b-458b-843b-df6c073370db"
+        "b28d343e-a6fa-4e41-8995-f30944a3028d"
       ]
     },
     {
@@ -834,7 +834,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "medium"
+          "severity": "critical"
         },
         {
           "source": {
@@ -1178,7 +1178,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "medium"
+          "severity": "critical"
         },
         {
           "source": {
@@ -1506,9 +1506,6 @@
           "url": "https://access.redhat.com/security/cve/CVE-2025-68161"
         },
         {
-          "url": "https://advisory.echohq.com/cve/CVE-2025-68161"
-        },
-        {
           "url": "https://github.com/apache/logging-log4j2"
         },
         {
@@ -1550,6 +1547,114 @@
           "versions": [
             {
               "version": "2.14.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-102554",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "azure"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.9,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 8.2,
+          "severity": "high",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        502,
+        770
+      ],
+      "description": "Allocation of resources without limits or throttling (CWE-770) during Java object deserialization in Google Guava versions 4.0 through 33.7.1 allows an attacker to cause a Denial of Service via OutOfMemoryError. When deserializing CompactHashMap, CompactHashSet, or MapMakerInternalMap instances, Guava eagerly allocates an array based on a caller-specified size parameter without throttling, permitting memory exhaustion from crafted serialization streams.",
+      "recommendation": "Upgrade com.google.guava:guava to version 33.7.2",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-102554"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-102554"
+        },
+        {
+          "url": "https://advisory.echohq.com/cve/CVE-2026-102554"
+        },
+        {
+          "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1150495"
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-xxph-c9ww-hj94"
+        },
+        {
+          "url": "https://github.com/google/guava"
+        },
+        {
+          "url": "https://github.com/google/guava/commit/b931fe9d6d5cf00bc55714ad3308d086f71850fe"
+        },
+        {
+          "url": "https://github.com/google/guava/releases/tag/v33.7.2"
+        },
+        {
+          "url": "https://github.com/google/guava/security/advisories/GHSA-xxph-c9ww-hj94"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102554"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-102554"
+        }
+      ],
+      "published": "2026-10-09T16:17:20+00:00",
+      "updated": "2026-10-09T18:17:01+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/com.google.guava/guava@33.3.1-jre",
+          "versions": [
+            {
+              "version": "33.3.1-jre",
               "status": "affected"
             }
           ]
@@ -1626,7 +1731,7 @@
         }
       ],
       "published": "2026-08-04T15:16:29+00:00",
-      "updated": "2026-09-08T19:29:32+00:00",
+      "updated": "2026-10-23T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.2",
@@ -1650,7 +1755,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "medium"
+          "severity": "high"
         },
         {
           "source": {
@@ -1790,9 +1895,6 @@
           "url": "https://access.redhat.com/security/cve/CVE-2026-34477"
         },
         {
-          "url": "https://advisory.echohq.com/cve/CVE-2026-34477"
-        },
-        {
           "url": "https://github.com/apache/logging-log4j2"
         },
         {
@@ -1818,7 +1920,102 @@
         }
       ],
       "published": "2026-04-10T16:16:30+00:00",
-      "updated": "2026-06-17T10:39:06+00:00",
+      "updated": "2026-10-26T22:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+          "versions": [
+            {
+              "version": "2.14.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-34479",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 6.9,
+          "severity": "medium",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
+        }
+      ],
+      "cwes": [
+        116
+      ],
+      "description": "The Log4j1XmlLayout from the Apache Log4j 1-to-Log4j 2 bridge fails to escape characters forbidden by the XML 1.0 standard, producing malformed XML output. Conforming XML parsers are required to reject documents containing such characters with a fatal error, which may cause downstream log processing systems to drop or fail to index affected records.\n\nTwo groups of users are affected:\n\n  *  Those using Log4j1XmlLayout directly in a Log4j Core 2 configuration file.\n  *  Those using the Log4j 1 configuration compatibility layer with org.apache.log4j.xml.XMLLayout specified as the layout class.\n\n\nUsers are advised to upgrade to Apache Log4j 1-to-Log4j 2 bridge version 2.25.4, which corrects this issue.\n\nNote: The Apache Log4j 1-to-Log4j 2 bridge is deprecated and will not be present in Log4j 3. Users are encouraged to consult the  Log4j 1 to Log4j 2 migration guide https://logging.apache.org/log4j/2.x/migrate-from-log4j1.html , and specifically the section on eliminating reliance on the bridge.",
+      "recommendation": "Upgrade org.apache.logging.log4j:log4j-core to version 2.25.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-34479"
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2026/04/10/8"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-34479"
+        },
+        {
+          "url": "https://github.com/apache/logging-log4j2"
+        },
+        {
+          "url": "https://github.com/apache/logging-log4j2/pull/4078"
+        },
+        {
+          "url": "https://lists.apache.org/thread/gd0hp6mj17rn3kj279vgy4p7kd4zz5on"
+        },
+        {
+          "url": "https://logging.apache.org/cyclonedx/vdr.xml"
+        },
+        {
+          "url": "https://logging.apache.org/log4j/2.x/migrate-from-log4j1.html"
+        },
+        {
+          "url": "https://logging.apache.org/security.html#CVE-2026-34479"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34479"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-34479"
+        }
+      ],
+      "published": "2026-04-10T16:16:31+00:00",
+      "updated": "2026-10-26T21:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
@@ -1864,6 +2061,12 @@
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -1880,9 +2083,6 @@
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-34480"
-        },
-        {
-          "url": "https://advisory.echohq.com/cve/CVE-2026-34480"
         },
         {
           "url": "https://github.com/apache/logging-log4j2"
@@ -1910,7 +2110,7 @@
         }
       ],
       "published": "2026-04-10T16:16:31+00:00",
-      "updated": "2026-06-17T10:39:07+00:00",
+      "updated": "2026-10-26T22:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
@@ -1962,6 +2162,12 @@
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -1975,9 +2181,6 @@
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-49844"
-        },
-        {
-          "url": "https://advisory.echohq.com/cve/CVE-2026-49844"
         },
         {
           "url": "https://github.com/apache/logging-log4j2"
@@ -2014,7 +2217,7 @@
         }
       ],
       "published": "2026-07-10T22:16:42+00:00",
-      "updated": "2026-07-14T20:03:09+00:00",
+      "updated": "2026-10-25T15:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.1",
@@ -2097,9 +2300,6 @@
           "url": "https://access.redhat.com/errata/RHSA-2026:40895"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:43400"
-        },
-        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-54512"
         },
         {
@@ -2127,7 +2327,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-54513"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-43400.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-40895.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:40895"
@@ -2161,7 +2361,7 @@
         }
       ],
       "published": "2026-06-23T21:17:02+00:00",
-      "updated": "2026-06-27T21:01:36+00:00",
+      "updated": "2026-10-25T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
@@ -2222,6 +2422,12 @@
             "name": "rocky"
           },
           "severity": "high"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -2312,6 +2518,9 @@
           "url": "https://bugzilla.redhat.com/2492010"
         },
         {
+          "url": "https://bugzilla.redhat.com/2492015"
+        },
+        {
           "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492010"
         },
         {
@@ -2327,7 +2536,7 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-54513"
         },
         {
-          "url": "https://errata.almalinux.org/8/ALSA-2026-43218.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-40895.html"
         },
         {
           "url": "https://errata.rockylinux.org/RLSA-2026:40895"
@@ -2339,13 +2548,22 @@
           "url": "https://github.com/FasterXML/jackson-databind/commit/01d1692c8d0ed03e51a0e3c4f8a9e6908e4931e5"
         },
         {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/01d1692c8d0ed03e51a0e3c4f8a9e6908e4931e5%20%28jackson-databind-2.18.8%29"
+        },
+        {
           "url": "https://github.com/FasterXML/jackson-databind/commit/24529da29fdf46ff94ca38de9ebf31cd188f5e8e"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/commit/24529da29fdf46ff94ca38de9ebf31cd188f5e8e%20%28jackson-databind-3.1.4%29"
         },
         {
           "url": "https://github.com/FasterXML/jackson-databind/issues/5981"
         },
         {
           "url": "https://github.com/FasterXML/jackson-databind/issues/5983"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/pull/5983"
         },
         {
           "url": "https://github.com/FasterXML/jackson-databind/pull/5984"
@@ -2370,7 +2588,7 @@
         }
       ],
       "published": "2026-06-23T21:17:02+00:00",
-      "updated": "2026-09-14T13:18:40+00:00",
+      "updated": "2026-10-25T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
@@ -2419,7 +2637,7 @@
         918
       ],
       "description": "jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.0.0 until 2.18.8, 2.21.4, and 3.1.4, JDKFromStringDeserializer constructed InetSocketAddress with new InetSocketAddress(host, port), which performs eager DNS name resolution for hostname inputs at deserialization time. An application that binds untrusted JSON into a type containing an InetSocketAddress field issues an attacker-chosen DNS query during readValue, before any application-level validation or connect logic. The fix uses InetSocketAddress.createUnresolved(host, port), deferring DNS to an explicit connect. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.",
-      "recommendation": "Upgrade com.fasterxml.jackson.core:jackson-databind to version 2.18.8, 2.21.4, 3.1.4",
+      "recommendation": "Upgrade com.fasterxml.jackson.core:jackson-databind to version 2.18.8, 2.21.4",
       "advisories": [
         {
           "url": "https://avd.aquasec.com/nvd/cve-2026-54514"
@@ -2450,7 +2668,7 @@
         }
       ],
       "published": "2026-06-23T21:17:02+00:00",
-      "updated": "2026-06-27T20:55:09+00:00",
+      "updated": "2026-10-25T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
@@ -2533,7 +2751,7 @@
         }
       ],
       "published": "2026-06-23T21:17:02+00:00",
-      "updated": "2026-06-29T13:38:59+00:00",
+      "updated": "2026-10-25T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
@@ -2616,7 +2834,7 @@
         }
       ],
       "published": "2026-07-14T17:17:15+00:00",
-      "updated": "2026-07-15T20:18:23+00:00",
+      "updated": "2026-10-24T21:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
@@ -2699,7 +2917,7 @@
         }
       ],
       "published": "2026-07-14T21:17:06+00:00",
-      "updated": "2026-07-16T16:19:15+00:00",
+      "updated": "2026-10-24T21:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.2",
@@ -2791,7 +3009,7 @@
         }
       ],
       "published": "2026-08-04T15:16:41+00:00",
-      "updated": "2026-09-08T19:29:32+00:00",
+      "updated": "2026-10-23T23:10:00+00:00",
       "affects": [
         {
           "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.2",
@@ -2814,6 +3032,12 @@
         {
           "source": {
             "name": "alma"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "amazon"
           },
           "severity": "high"
         },
@@ -2865,7 +3089,7 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-68497"
         },
         {
-          "url": "https://access.redhat.com/errata/RHSA-2026:77648"
+          "url": "https://access.redhat.com/errata/RHSA-2026:80504"
         },
         {
           "url": "https://access.redhat.com/security/cve/CVE-2026-68497"
@@ -2886,10 +3110,10 @@
           "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-68497"
         },
         {
-          "url": "https://errata.almalinux.org/10/ALSA-2026-77648.html"
+          "url": "https://errata.almalinux.org/9/ALSA-2026-80504.html"
         },
         {
-          "url": "https://errata.rockylinux.org/RLSA-2026:77648"
+          "url": "https://errata.rockylinux.org/RLSA-2026:80504"
         },
         {
           "url": "https://github.com/FasterXML/jackson-databind"
@@ -3051,7 +3275,7 @@
           "source": {
             "name": "amazon"
           },
-          "severity": "medium"
+          "severity": "high"
         },
         {
           "source": {
@@ -3151,6 +3375,12 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "amazon"
           },
           "severity": "high"
@@ -3166,12 +3396,24 @@
         },
         {
           "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 5.9,
           "severity": "medium",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -3185,13 +3427,37 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-89407"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:86706"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-89407"
         },
         {
-          "url": "https://advisory.echohq.com/cve/CVE-2026-89407"
+          "url": "https://bugzilla.redhat.com/2538720"
         },
         {
-          "url": "https://getsafety.com/vulnerabilities/SFTY-20260922-89449/CVE-2026-89407"
+          "url": "https://bugzilla.redhat.com/2539084"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538720"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2539084"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89407"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89425"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-86706.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:86706"
         },
         {
           "url": "https://github.com/FasterXML/jackson-core"
@@ -3213,6 +3479,12 @@
         },
         {
           "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-p6pp-m3f8-5c89"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-89407.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-92408.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89407"
@@ -3244,6 +3516,12 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
             "name": "amazon"
           },
           "severity": "high"
@@ -3259,12 +3537,30 @@
         },
         {
           "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 7.5,
           "severity": "high",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "medium"
+        },
+        {
+          "source": {
+            "name": "ubuntu"
+          },
+          "severity": "medium"
         }
       ],
       "cwes": [
@@ -3278,10 +3574,40 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-89425"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:86706"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-89425"
         },
         {
           "url": "https://advisory.echohq.com/cve/CVE-2026-89425"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2538720"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2539084"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2538720"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2539084"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89407"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-89425"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-86706.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:86706"
         },
         {
           "url": "https://github.com/FasterXML/jackson-core"
@@ -3300,6 +3626,12 @@
         },
         {
           "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-7hhh-6rmp-j9qf"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-89425.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-90909.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89425"
@@ -3329,6 +3661,12 @@
         "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
       },
       "ratings": [
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "high"
+        },
         {
           "source": {
             "name": "ghsa"
@@ -3429,6 +3767,18 @@
       "ratings": [
         {
           "source": {
+            "name": "alma"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "amazon"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
             "name": "ghsa"
           },
           "score": 7.5,
@@ -3438,12 +3788,24 @@
         },
         {
           "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
             "name": "redhat"
           },
           "score": 7.5,
           "severity": "high",
           "method": "CVSSv31",
           "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "high"
         },
         {
           "source": {
@@ -3462,10 +3824,31 @@
           "url": "https://avd.aquasec.com/nvd/cve-2026-91777"
         },
         {
+          "url": "https://access.redhat.com/errata/RHSA-2026:85231"
+        },
+        {
           "url": "https://access.redhat.com/security/cve/CVE-2026-91777"
         },
         {
           "url": "https://advisory.echohq.com/cve/CVE-2026-91777"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2539085"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2539085"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-91777"
+        },
+        {
+          "url": "https://errata.almalinux.org/9/ALSA-2026-85231.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:85231"
         },
         {
           "url": "https://github.com/FasterXML/jackson-databind"
@@ -3496,6 +3879,12 @@
         },
         {
           "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-cxp5-3px4-pw24"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-91777.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-90909.html"
         },
         {
           "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91777"

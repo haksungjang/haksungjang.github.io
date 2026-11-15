@@ -1,0 +1,47 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:09:12Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "f032301f-53d6-479d-93c8-85319541ab3b",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "48a61001-484a-42f1-988f-40a43ce723d6",
+      "type": "library",
+      "name": "unknown",
+      "version": "unknown",
+      "purl": "pkg:maven/unknown/unknown@unknown",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "gradle/wrapper/gradle-wrapper.jar"
+          }
+        ]
+      }
+    }
+  ]
+}

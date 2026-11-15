@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:09:07Z",
+    "timestamp": "2026-11-14T08:57:41Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "ee597b20-f34a-43ad-99c6-9e209c60efa0",
+      "bom-ref": "1d997338-0b14-4772-a832-3d8ec7f10731",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "d2891b23-2dfd-4e14-ad08-9411b1ab37a0",
+      "bom-ref": "8846c2da-7fa0-422b-9232-f1ffd681e6ec",
       "type": "library",
       "name": "lodash",
       "version": "4.17.15",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "e9155ed9-6c68-43c7-b944-eb39ff65cafe",
+      "bom-ref": "8454f18a-2418-4e52-98a5-2cb3db3fa038",
       "type": "library",
       "name": "vuln-pinned",
       "version": "1.0.0",

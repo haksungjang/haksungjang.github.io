@@ -2,7 +2,7 @@
   "results": [
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/npm-vuln-pinned/package-lock.json",
+        "path": "~/projects/sca-benchmark-internal/fixtures/npm-vuln-pinned/package-lock.json",
         "type": "lockfile"
       },
       "packages": [
@@ -26,29 +26,13 @@
             },
             {
               "ids": [
-                "GHSA-35jh-r3h4-6jhm",
-                "GHSA-r5fr-rjxr-66jc"
+                "GHSA-35jh-r3h4-6jhm"
               ],
               "aliases": [
                 "CVE-2021-23337",
-                "CVE-2026-4800",
-                "GHSA-35jh-r3h4-6jhm",
-                "GHSA-r5fr-rjxr-66jc"
+                "GHSA-35jh-r3h4-6jhm"
               ],
-              "max_severity": "8.1"
-            },
-            {
-              "ids": [
-                "GHSA-f23m-r3pf-42rh",
-                "GHSA-xxjr-mmjv-4gpg"
-              ],
-              "aliases": [
-                "CVE-2025-13465",
-                "CVE-2026-2950",
-                "GHSA-f23m-r3pf-42rh",
-                "GHSA-xxjr-mmjv-4gpg"
-              ],
-              "max_severity": "6.9"
+              "max_severity": "7.2"
             },
             {
               "ids": [
@@ -59,6 +43,26 @@
                 "GHSA-p6mc-m468-83gw"
               ],
               "max_severity": "7.4"
+            },
+            {
+              "ids": [
+                "GHSA-r5fr-rjxr-66jc"
+              ],
+              "aliases": [
+                "CVE-2026-4800",
+                "GHSA-r5fr-rjxr-66jc"
+              ],
+              "max_severity": "8.1"
+            },
+            {
+              "ids": [
+                "GHSA-xxjr-mmjv-4gpg"
+              ],
+              "aliases": [
+                "CVE-2025-13465",
+                "GHSA-xxjr-mmjv-4gpg"
+              ],
+              "max_severity": "6.9"
             }
           ],
           "vulnerabilities": [
@@ -486,9 +490,7 @@
                 }
               ],
               "aliases": [
-                "CVE-2021-23337",
-                "CVE-2026-4800",
-                "GHSA-r5fr-rjxr-66jc"
+                "CVE-2021-23337"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -502,7 +504,7 @@
               },
               "details": "`lodash` versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
               "id": "GHSA-35jh-r3h4-6jhm",
-              "modified": "2026-09-10T03:49:04.067984836Z",
+              "modified": "2026-10-17T02:55:38.085813876Z",
               "published": "2021-05-06T16:05:51Z",
               "references": [
                 {
@@ -582,149 +584,6 @@
                 }
               ],
               "summary": "Command Injection in lodash"
-            },
-            {
-              "affected": [
-                {
-                  "database_specific": {
-                    "last_known_affected_version_range": "\u003c= 4.17.23",
-                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f23m-r3pf-42rh/GHSA-f23m-r3pf-42rh.json"
-                  },
-                  "package": {
-                    "ecosystem": "npm",
-                    "name": "lodash",
-                    "purl": "pkg:npm/lodash"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "0"
-                        },
-                        {
-                          "fixed": "4.18.0"
-                        }
-                      ],
-                      "type": "SEMVER"
-                    }
-                  ]
-                },
-                {
-                  "database_specific": {
-                    "last_known_affected_version_range": "\u003c= 4.17.23",
-                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f23m-r3pf-42rh/GHSA-f23m-r3pf-42rh.json"
-                  },
-                  "package": {
-                    "ecosystem": "npm",
-                    "name": "lodash-es",
-                    "purl": "pkg:npm/lodash-es"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "0"
-                        },
-                        {
-                          "fixed": "4.18.0"
-                        }
-                      ],
-                      "type": "SEMVER"
-                    }
-                  ]
-                },
-                {
-                  "database_specific": {
-                    "last_known_affected_version_range": "\u003c= 4.17.23",
-                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f23m-r3pf-42rh/GHSA-f23m-r3pf-42rh.json"
-                  },
-                  "package": {
-                    "ecosystem": "npm",
-                    "name": "lodash-amd",
-                    "purl": "pkg:npm/lodash-amd"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "0"
-                        },
-                        {
-                          "fixed": "4.18.0"
-                        }
-                      ],
-                      "type": "SEMVER"
-                    }
-                  ]
-                },
-                {
-                  "database_specific": {
-                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-f23m-r3pf-42rh/GHSA-f23m-r3pf-42rh.json"
-                  },
-                  "package": {
-                    "ecosystem": "npm",
-                    "name": "lodash.unset",
-                    "purl": "pkg:npm/lodash.unset"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "4.0.0"
-                        },
-                        {
-                          "fixed": "4.18.0"
-                        }
-                      ],
-                      "type": "SEMVER"
-                    }
-                  ]
-                }
-              ],
-              "aliases": [
-                "CVE-2025-13465",
-                "CVE-2026-2950",
-                "GHSA-xxjr-mmjv-4gpg"
-              ],
-              "database_specific": {
-                "cwe_ids": [
-                  "CWE-1321"
-                ],
-                "github_reviewed": true,
-                "github_reviewed_at": "2026-04-01T23:50:27Z",
-                "nvd_published_at": "2026-03-31T20:16:26Z",
-                "severity": "MODERATE"
-              },
-              "details": "### Impact\n\nLodash versions 4.17.23 and earlier are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. The fix for [CVE-2025-13465](https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as `Object.prototype`, `Number.prototype`, and `String.prototype`.\n\nThe issue permits deletion of prototype properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThis issue is patched in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version.",
-              "id": "GHSA-f23m-r3pf-42rh",
-              "modified": "2026-09-10T03:50:44.050013812Z",
-              "published": "2026-04-01T23:50:27Z",
-              "references": [
-                {
-                  "type": "WEB",
-                  "url": "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
-                },
-                {
-                  "type": "WEB",
-                  "url": "https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg"
-                },
-                {
-                  "type": "ADVISORY",
-                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2950"
-                },
-                {
-                  "type": "PACKAGE",
-                  "url": "https://github.com/lodash/lodash"
-                }
-              ],
-              "schema_version": "1.9.0",
-              "severity": [
-                {
-                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
-                  "type": "CVSS_V3"
-                }
-              ],
-              "summary": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`"
             },
             {
               "affected": [
@@ -1114,9 +973,7 @@
                 }
               ],
               "aliases": [
-                "CVE-2021-23337",
-                "CVE-2026-4800",
-                "GHSA-35jh-r3h4-6jhm"
+                "CVE-2026-4800"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -1129,7 +986,7 @@
               },
               "details": "### Impact\n\nThe fix for [CVE-2021-23337](https://github.com/advisories/GHSA-35jh-r3h4-6jhm) added validation for the `variable` option in `_.template` but did not apply the same validation to `options.imports` key names. Both paths flow into the same `Function()` constructor sink.\n\nWhen an application passes untrusted input as `options.imports` key names, an attacker can inject default-parameter expressions that execute arbitrary code at template compilation time.\n\nAdditionally, `_.template` uses `assignInWith` to merge imports, which enumerates inherited properties via `for..in`. If `Object.prototype` has been polluted by any other vector, the polluted keys are copied into the imports object and passed to `Function()`.\n\n### Patches\n\nUsers should upgrade to version 4.18.0.\n\nThe fix applies two changes:\n1. Validate `importsKeys` against the existing `reForbiddenIdentifierChars` regex (same check already used for the `variable` option)\n2. Replace `assignInWith` with `assignWith` when merging imports, so only own properties are enumerated\n\n### Workarounds\n\nDo not pass untrusted input as key names in `options.imports`. Only use developer-controlled, static key names.",
               "id": "GHSA-r5fr-rjxr-66jc",
-              "modified": "2026-09-10T03:51:02.970455926Z",
+              "modified": "2026-10-17T02:56:15.633068434Z",
               "published": "2026-04-01T23:51:12Z",
               "references": [
                 {
@@ -1194,12 +1051,13 @@
                 },
                 {
                   "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.17.22",
                     "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xxjr-mmjv-4gpg/GHSA-xxjr-mmjv-4gpg.json"
                   },
                   "package": {
                     "ecosystem": "npm",
-                    "name": "lodash.unset",
-                    "purl": "pkg:npm/lodash.unset"
+                    "name": "lodash-amd",
+                    "purl": "pkg:npm/lodash-amd"
                   },
                   "ranges": [
                     {
@@ -1208,7 +1066,7 @@
                           "introduced": "4.0.0"
                         },
                         {
-                          "last_affected": "4.5.2"
+                          "fixed": "4.17.23"
                         }
                       ],
                       "type": "SEMVER"
@@ -1217,7 +1075,6 @@
                 },
                 {
                   "database_specific": {
-                    "last_known_affected_version_range": "\u003c= 4.17.22",
                     "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xxjr-mmjv-4gpg/GHSA-xxjr-mmjv-4gpg.json"
                   },
                   "package": {
@@ -1241,13 +1098,12 @@
                 },
                 {
                   "database_specific": {
-                    "last_known_affected_version_range": "\u003c= 4.17.22",
                     "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xxjr-mmjv-4gpg/GHSA-xxjr-mmjv-4gpg.json"
                   },
                   "package": {
                     "ecosystem": "npm",
-                    "name": "lodash-amd",
-                    "purl": "pkg:npm/lodash-amd"
+                    "name": "lodash.omit",
+                    "purl": "pkg:npm/lodash.omit"
                   },
                   "ranges": [
                     {
@@ -1256,7 +1112,30 @@
                           "introduced": "4.0.0"
                         },
                         {
-                          "fixed": "4.17.23"
+                          "fixed": "4.18.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/01/GHSA-xxjr-mmjv-4gpg/GHSA-xxjr-mmjv-4gpg.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "lodash.unset",
+                    "purl": "pkg:npm/lodash.unset"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.18.0"
                         }
                       ],
                       "type": "SEMVER"
@@ -1265,9 +1144,7 @@
                 }
               ],
               "aliases": [
-                "CVE-2025-13465",
-                "CVE-2026-2950",
-                "GHSA-f23m-r3pf-42rh"
+                "CVE-2025-13465"
               ],
               "database_specific": {
                 "cwe_ids": [
@@ -1278,9 +1155,9 @@
                 "nvd_published_at": "2026-01-21T20:16:05Z",
                 "severity": "MODERATE"
               },
-              "details": "### Impact\n\nLodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the `_.unset` and `_.omit` functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes. \n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.  \n\n### Patches\n\nThis issue is patched on 4.17.23.",
+              "details": "### Impact\n\nThe `_.unset`, `_.omit`, and `_.pullAt` functions are vulnerable to prototype pollution. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\n### Patches\n\nThe issue is patched from 4.17.23 to 4.18.0 depending on the package: `lodash`, `lodash-es`, and `lodash-amd` in 4.17.23, and the standalone `lodash.unset` and `lodash.omit` packages in 4.18.0.\n\n### Workarounds\n\nNone. Upgrade to the patched version.",
               "id": "GHSA-xxjr-mmjv-4gpg",
-              "modified": "2026-09-10T03:50:33.722177022Z",
+              "modified": "2026-11-04T03:15:10.832238351Z",
               "published": "2026-01-21T23:01:22Z",
               "references": [
                 {
@@ -1297,14 +1174,366 @@
                 },
                 {
                   "type": "WEB",
-                  "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
+                  "url": "https://access.redhat.com/errata/RHSA-2026:41941"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:41928"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:41064"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:40984"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:40945"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:40138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:40118"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3962"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3960"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3958"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3884"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3874"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3870"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3869"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3825"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3782"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3710"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:36882"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:36651"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:34608"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3422"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:34100"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-13465.json"
                 },
                 {
                   "type": "PACKAGE",
                   "url": "https://github.com/lodash/lodash"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2431740"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2025-13465"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:9848"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:8229"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:8218"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:6567"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:6497"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:6288"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:6192"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:57487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:5636"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:5633"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:4782"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:4630"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:4467"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:4466"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:4423"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:41944"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:24331"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:21658"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2149"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2148"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2147"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2145"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2119"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2078"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:20088"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:20042"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:19712"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:18868"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:18480"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:1845"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:17469"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:15091"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:14871"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:14870"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:14774"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:13829"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:13548"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:13542"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:11414"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:33371"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:33154"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:3087"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2990"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2984"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2926"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2900"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2819"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2818"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2817"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2816"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2694"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2675"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2672"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2661"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2651"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:25089"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2484"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2469"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2465"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2462"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2452"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2026:2438"
                 }
               ],
-              "schema_version": "1.9.0",
+              "schema_version": "1.9.2",
               "severity": [
                 {
                   "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
@@ -1315,7 +1544,7 @@
                   "type": "CVSS_V4"
                 }
               ],
-              "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions"
+              "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset`, `_.omit`, and `_.pullAt` functions"
             }
           ]
         }

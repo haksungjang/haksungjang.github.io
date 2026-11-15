@@ -2,7 +2,7 @@
   "results": [
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/java-maven/pom.xml",
+        "path": "~/projects/sca-benchmark-internal/fixtures/java-maven/pom.xml",
         "type": "lockfile"
       },
       "packages": [
@@ -335,7 +335,7 @@
                     {
                       "events": [
                         {
-                          "introduced": "2.21.0"
+                          "introduced": "2.19.0"
                         },
                         {
                           "fixed": "2.21.5"
@@ -345,6 +345,15 @@
                     }
                   ],
                   "versions": [
+                    "2.19.0",
+                    "2.19.1",
+                    "2.19.2",
+                    "2.19.3",
+                    "2.19.4",
+                    "2.20.0",
+                    "2.20.0-rc1",
+                    "2.20.1",
+                    "2.20.2",
                     "2.21.0",
                     "2.21.1",
                     "2.21.2",
@@ -391,7 +400,6 @@
                 },
                 {
                   "database_specific": {
-                    "last_known_affected_version_range": "\u003c= 2.18.8",
                     "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/07/GHSA-5gvw-p9qm-jgwh/GHSA-5gvw-p9qm-jgwh.json"
                   },
                   "package": {
@@ -403,7 +411,7 @@
                     {
                       "events": [
                         {
-                          "introduced": "2.18.0"
+                          "introduced": "2.0.0-RC1"
                         },
                         {
                           "fixed": "2.18.9"
@@ -413,7 +421,88 @@
                     }
                   ],
                   "versions": [
+                    "2.0.0",
+                    "2.0.0-RC1",
+                    "2.0.0-RC2",
+                    "2.0.0-RC3",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.1.5",
+                    "2.10.0",
+                    "2.10.0.pr1",
+                    "2.10.0.pr2",
+                    "2.10.0.pr3",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.10.4",
+                    "2.10.5",
+                    "2.10.5.1",
+                    "2.11.0",
+                    "2.11.0.rc1",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.11.3",
+                    "2.11.4",
+                    "2.12.0",
+                    "2.12.0-rc1",
+                    "2.12.0-rc2",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.12.6",
+                    "2.12.6.1",
+                    "2.12.7",
+                    "2.12.7.1",
+                    "2.12.7.2",
+                    "2.13.0",
+                    "2.13.0-rc1",
+                    "2.13.0-rc2",
+                    "2.13.1",
+                    "2.13.2",
+                    "2.13.2.1",
+                    "2.13.2.2",
+                    "2.13.3",
+                    "2.13.4",
+                    "2.13.4.1",
+                    "2.13.4.2",
+                    "2.13.5",
+                    "2.14.0",
+                    "2.14.0-rc1",
+                    "2.14.0-rc2",
+                    "2.14.0-rc3",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.14.3",
+                    "2.15.0",
+                    "2.15.0-rc1",
+                    "2.15.0-rc2",
+                    "2.15.0-rc3",
+                    "2.15.1",
+                    "2.15.2",
+                    "2.15.3",
+                    "2.15.4",
+                    "2.16.0",
+                    "2.16.0-rc1",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.17.0",
+                    "2.17.0-rc1",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
                     "2.18.0",
+                    "2.18.0-rc1",
                     "2.18.1",
                     "2.18.2",
                     "2.18.3",
@@ -421,7 +510,127 @@
                     "2.18.5",
                     "2.18.6",
                     "2.18.7",
-                    "2.18.8"
+                    "2.18.8",
+                    "2.2.0",
+                    "2.2.0-rc1",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.3.0",
+                    "2.3.0-rc1",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.4.0",
+                    "2.4.0-rc1",
+                    "2.4.0-rc2",
+                    "2.4.0-rc3",
+                    "2.4.1",
+                    "2.4.1.1",
+                    "2.4.1.2",
+                    "2.4.1.3",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.5.1",
+                    "2.4.6",
+                    "2.4.6.1",
+                    "2.5.0",
+                    "2.5.0-rc1",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6.0",
+                    "2.6.0-rc1",
+                    "2.6.0-rc2",
+                    "2.6.0-rc3",
+                    "2.6.0-rc4",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.7.1",
+                    "2.6.7.2",
+                    "2.6.7.3",
+                    "2.6.7.4",
+                    "2.6.7.5",
+                    "2.7.0",
+                    "2.7.0-rc1",
+                    "2.7.0-rc2",
+                    "2.7.0-rc3",
+                    "2.7.1",
+                    "2.7.1-1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.7.5",
+                    "2.7.6",
+                    "2.7.7",
+                    "2.7.8",
+                    "2.7.9",
+                    "2.7.9.1",
+                    "2.7.9.2",
+                    "2.7.9.3",
+                    "2.7.9.4",
+                    "2.7.9.5",
+                    "2.7.9.6",
+                    "2.7.9.7",
+                    "2.8.0",
+                    "2.8.0.rc1",
+                    "2.8.0.rc2",
+                    "2.8.1",
+                    "2.8.10",
+                    "2.8.11",
+                    "2.8.11.1",
+                    "2.8.11.2",
+                    "2.8.11.3",
+                    "2.8.11.4",
+                    "2.8.11.5",
+                    "2.8.11.6",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.8.5",
+                    "2.8.6",
+                    "2.8.7",
+                    "2.8.8",
+                    "2.8.8.1",
+                    "2.8.9",
+                    "2.9.0",
+                    "2.9.0.pr1",
+                    "2.9.0.pr2",
+                    "2.9.0.pr3",
+                    "2.9.0.pr4",
+                    "2.9.1",
+                    "2.9.10",
+                    "2.9.10.1",
+                    "2.9.10.2",
+                    "2.9.10.3",
+                    "2.9.10.4",
+                    "2.9.10.5",
+                    "2.9.10.6",
+                    "2.9.10.7",
+                    "2.9.10.8",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6",
+                    "2.9.7",
+                    "2.9.8",
+                    "2.9.9",
+                    "2.9.9.1",
+                    "2.9.9.2",
+                    "2.9.9.3"
                   ]
                 },
                 {
@@ -491,7 +700,7 @@
               },
               "details": "## Summary\n`UnwrappedPropertyHandler.processUnwrapped()` replays the buffered JSON for a `@JsonUnwrapped` property by iterating its properties and calling `prop.deserializeAndSet()` with **no `prop.visibleInView(ctxt.getActiveView())` guard** — the exact guard `processUnwrappedCreatorProperties()` received in the #5971 / GHSA-rcqc-6cw3-h962 fix, and the guard `BeanDeserializer.deserializeWithUnwrapped` applies to directly-matched properties. As a result, a property annotated with both `@JsonView(PrivilegedView.class)` and `@JsonUnwrapped` is written from attacker JSON even when deserializing under a more-restrictive active view.\n\n**Correction to the original framing (runtime-verified):** the gap is NOT a per-field inner `@JsonView` (the unwrapped sub-object's own `BeanDeserializer` gates inner fields correctly). The unchecked gate is the **view of the unwrapped CONTAINER property**.\n\n## Intent proof (runtime, 2.x HEAD 21dd70dd and 3.x HEAD 7a5939d6)\nAn `@JsonView(AdminView)` property that is NOT `@JsonUnwrapped` → `null` under `PublicView` (correctly gated). The identical property WITH `@JsonUnwrapped` → fully populated (bypass). The fix the creator path already received, not applied to the regular-property method.\n\n## Impact — write-side mass-assignment / privilege escalation\n`@JsonView` is commonly used as a write-side authorization guard: a public endpoint binds the body under `readerWithView(PublicView.class)` and groups privileged state in a nested object whose container property is `@JsonView(AdminView)`. When that property is `@JsonUnwrapped`, an untrusted caller mass-assigns it. PoC: a self-service registration where `AccountFlags{role,approved,creditBalance}` is `@JsonView(AdminView) @JsonUnwrapped`; attacker JSON `{role:ADMIN,approved:true,creditBalance:1000000}` under `PublicView` binds all three → approved admin with arbitrary balance. The failing gate is a WRITE gate, hence integrity-high (`C:N/I:H/A:N`); no worse than the C:L/I:L parent and arguably higher as `@JsonView`-as-write-guard is the exact use case #5971/#5969 defended.\n\n## Affected\n- `com.fasterxml.jackson.core:jackson-databind` 2.x: confirmed bypass at 21dd70dd (== released 2.21.4 / 2.22.0 line; includes the #5973 backport). `DEFAULT_VIEW_INCLUSION` default=true.\n- `tools.jackson.core:jackson-databind` 3.x: confirmed bypass at HEAD 7a5939d6 (latest 3.x). `DEFAULT_VIEW_INCLUSION` default=false → the stock-config repro is the common shape where privileged inner fields are individually `@JsonView(PublicView)` and the developer relies on the container `@JsonView(AdminView)`; the 3.x PoC mass-assigns role/approved/creditBalance under PublicView. (The other simultaneous report's PoC was reportedly fixed on 3.x; this distinct container-property path is not.)\n\n## Additive variants (runtime-confirmed both branches; all closed by the same one-line guard)\n- nested `@JsonUnwrapped` (unwrapped-in-unwrapped) — recursive bypass.\n- merge / `readerWithView(...).withValueToUpdate(...)` (PATCH/partial-update) — bypass; non-unwrapped merge control gates correctly.\n- builder-based deserializer (`@JsonDeserialize(builder=...)`) — `BuilderBasedDeserializer` routes through the same `processUnwrapped`.\n- Honest non-findings: read-side serialization correctly honors views (no leak); `@JsonAnySetter`+view and `@JsonTypeInfo`+`@JsonUnwrapped` are separate/unsupported behaviors, not this bug.\n\n## Fix\nAdd `prop.visibleInView(ctxt.getActiveView())` (when `MapperFeature.DEFAULT_VIEW_INCLUSION`/active-view applies) to the `processUnwrapped()` property loop, mirroring `processUnwrappedCreatorProperties()`. One change closes the impact PoC + all three variants across `BeanDeserializer` and `BuilderBasedDeserializer`. Full runnable PoCs (2.x + 3.x) + variant harnesses available on request.",
               "id": "GHSA-5gvw-p9qm-jgwh",
-              "modified": "2026-09-10T03:51:10.658074231Z",
+              "modified": "2026-10-19T19:45:04.650428177Z",
               "published": "2026-07-21T22:00:43Z",
               "references": [
                 {
@@ -1824,52 +2033,6 @@
                   },
                   "package": {
                     "ecosystem": "Maven",
-                    "name": "com.fasterxml.jackson.core:jackson-databind",
-                    "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "3.0.0"
-                        },
-                        {
-                          "fixed": "3.1.4"
-                        }
-                      ],
-                      "type": "ECOSYSTEM"
-                    }
-                  ]
-                },
-                {
-                  "database_specific": {
-                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-hgj6-7826-r7m5/GHSA-hgj6-7826-r7m5.json"
-                  },
-                  "package": {
-                    "ecosystem": "Maven",
-                    "name": "tools.jackson.core:jackson-databind",
-                    "purl": "pkg:maven/tools.jackson.core/jackson-databind"
-                  },
-                  "ranges": [
-                    {
-                      "events": [
-                        {
-                          "introduced": "2.19.0"
-                        },
-                        {
-                          "fixed": "2.21.4"
-                        }
-                      ],
-                      "type": "ECOSYSTEM"
-                    }
-                  ]
-                },
-                {
-                  "database_specific": {
-                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-hgj6-7826-r7m5/GHSA-hgj6-7826-r7m5.json"
-                  },
-                  "package": {
-                    "ecosystem": "Maven",
                     "name": "tools.jackson.core:jackson-databind",
                     "purl": "pkg:maven/tools.jackson.core/jackson-databind"
                   },
@@ -1914,7 +2077,7 @@
               },
               "details": "## Summary\n`JDKFromStringDeserializer` constructed `InetSocketAddress` with `new InetSocketAddress(host, port)`, which performs eager DNS name resolution for hostname inputs at deserialization time. An application that binds untrusted JSON into a type containing an `InetSocketAddress` field issues an attacker-chosen DNS query during `readValue`, before any application-level validation or connect logic. The fix uses `InetSocketAddress.createUnresolved(host, port)`, deferring DNS to an explicit connect.\n\n## Impact\nAn attacker controlling JSON deserialized into an `InetSocketAddress`-bearing type can force outbound DNS lookups for attacker-chosen hostnames at deserialization time (SSRF / DNS-based out-of-band interaction / internal-resolver probing), purely from binding.\n\n## Affected / Patched (verified via `git tag --contains` on `1f5a103`)\n- 2.18 line: `\u003e= 2.18.0, \u003c 2.18.8` -\u003e fixed in **2.18.8**\n- 2.19-2.21 line: `\u003e= 2.19.0, \u003c 2.21.4` -\u003e fixed in **2.21.4**\n- 3.x line: `\u003e= 3.0.0, \u003c 3.1.4` -\u003e fixed in **3.1.4**\n\n## Severity / CWE\nMaintainer: minor. Reporter: LOW. CWE-918 (SSRF).\n\n## Upstream fix\nFasterXML/jackson-databind#5951 (\"Improve InetSocketAddress deserialization\"). Released 2026-06-04 in 2.18.8 / 2.21.4 / 3.1.4.\n\n## Credits\nOmkhar Arasaratnam (@omkhar) - finder.",
               "id": "GHSA-hgj6-7826-r7m5",
-              "modified": "2026-09-10T03:50:49.909813840Z",
+              "modified": "2026-11-10T19:45:35.335928286Z",
               "published": "2026-06-23T21:22:54Z",
               "references": [
                 {
@@ -1938,7 +2101,7 @@
                   "url": "https://github.com/FasterXML/jackson-databind"
                 }
               ],
-              "schema_version": "1.9.0",
+              "schema_version": "1.9.2",
               "severity": [
                 {
                   "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
@@ -2164,7 +2327,7 @@
               },
               "details": "`jackson-databind`'s `PolymorphicTypeValidator` (PTV) is the primary safety mechanism guarding polymorphic deserialization. When polymorphic typing is enabled and a type identifier contains generic parameters (i.e. the type ID string contains `\u003c`), `DatabindContext._resolveAndValidateGeneric()` validates **only the raw container class name** (the substring before `\u003c`) against the configured PTV.\n\nIf the container type is approved, the method parses the full canonical type string via `TypeFactory.constructFromCanonical()` and returns the fully parameterized type **without ever validating the nested type arguments** against the PTV. The nested type arguments are then resolved, instantiated, and populated as beans during deserialization.\n\nAn attacker who controls the type ID can therefore place a denied class as a generic type parameter of an allowed container — for example `java.util.ArrayList\u003ccom.evil.Gadget\u003e` when only `java.util.ArrayList` is allow-listed. The container passes the PTV check; `com.evil.Gadget` is loaded via `Class.forName(name, true, loader)`, instantiated, and its properties are set from attacker-controlled JSON. This completely bypasses an explicitly configured PTV allow-list.\n\nThis is the same vulnerability class responsible for the historical sequence of jackson-databind deserialization CVEs; here it manifests as a validator bypass rather than a missing deny-list entry.\n\n\n## Impact\n\n- **Bypass of the PTV allow-list**, including the recommended `BasicPolymorphicTypeValidator` configured with name-prefix allow rules.\n- **Arbitrary class instantiation** of any type assignable to the container's element/parameter position, with attacker-controlled property values (setter/field injection).\n- **Potential unauthenticated remote code execution** when a class with exploitable side effects (JNDI lookup, JDBC/connection-pool gadgets,`TemplatesImpl`-style loaders, etc.) is present on the classpath.\n\nApplications that accept untrusted JSON and rely on a configured PTV — the documented, security-conscious configuration — are affected.\n\n\n## Proof of Concept\n\nConfiguration restricting polymorphic deserialization to a single safe container:\n\n```java\nBasicPolymorphicTypeValidator ptv = BasicPolymorphicTypeValidator.builder()\n        .allowIfSubType(\"java.util.ArrayList\")\n        .build();\n\nObjectMapper mapper = JsonMapper.builder()\n        .polymorphicTypeValidator(ptv)\n        .build();\n```\n\nMalicious payload (`Wrapper.value` is `Object` with `@JsonTypeInfo(use = Id.CLASS, include = As.WRAPPER_ARRAY)`):\n\n```json\n{\"value\":[\"java.util.ArrayList\u003ccom.evil.EvilGadget\u003e\",[{\"cmd\":\"calc.exe\"}]]}\n```\n\nOn vulnerable versions, `com.evil.EvilGadget` is instantiated and its `cmd` property is set, despite only `java.util.ArrayList` being allow-listed. On `2.18.8` / `2.21.4` / `3.1.4` the deserialization throws `InvalidTypeIdException` before instantiation.\n\n**Variant payloads** (all bypass an `ArrayList`/`HashMap` allow-list):\n\n| Type ID | Smuggled type position |\n|---|---|\n| `java.util.ArrayList\u003cEvil\u003e` | list element |\n| `java.util.HashMap\u003cEvil,String\u003e` | map key |\n| `java.util.HashMap\u003cString,Evil\u003e` | map value |\n| `java.util.ArrayList\u003cjava.util.ArrayList\u003cEvil\u003e\u003e` | nested element |\n| `java.util.ArrayList\u003cEvil[]\u003e` | array element |\n\n---\n\n## Patches\n\nFixed in **2.18.8**, **2.21.4** and **3.1.4** via the changes for [FasterXML/jackson-databind#5988](https://github.com/FasterXML/jackson-databind/issues/5988), commit `434d6c511`. The fix adds recursive validation of each non-trivial type parameter (and array element types appearing as parameters) through the full PTV chain, with documented exemptions for `Object` (wildcard resolution) and `Enum` types.\n\n`PolymorphicTypeValidator` was added in 2.10.0 so vulnerability N/A for versions prior to that.",
               "id": "GHSA-j3rv-43j4-c7qm",
-              "modified": "2026-09-10T03:50:50.187641487Z",
+              "modified": "2026-10-28T10:56:49.472327085Z",
               "published": "2026-06-23T21:21:38Z",
               "references": [
                 {
@@ -2187,6 +2350,9 @@
                   "type": "PACKAGE",
                   "url": "https://github.com/FasterXML/jackson-databind"
                 }
+              ],
+              "related": [
+                "CVE-2026-110879"
               ],
               "schema_version": "1.9.0",
               "severity": [
@@ -4162,7 +4328,255 @@
             "version": "33.3.1-jre",
             "ecosystem": "Maven",
             "purl": "pkg:maven/com.google.guava/guava@33.3.1-jre"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xxph-c9ww-hj94"
+              ],
+              "aliases": [
+                "CVE-2026-102554",
+                "GHSA-xxph-c9ww-hj94"
+              ],
+              "max_severity": "8.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 33.7.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-xxph-c9ww-hj94/GHSA-xxph-c9ww-hj94.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.guava:guava",
+                    "purl": "pkg:maven/com.google.guava/guava"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0"
+                        },
+                        {
+                          "fixed": "33.7.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "10.0",
+                    "10.0-rc1",
+                    "10.0-rc2",
+                    "10.0-rc3",
+                    "10.0.1",
+                    "11.0",
+                    "11.0-rc1",
+                    "11.0.1",
+                    "11.0.2",
+                    "12.0",
+                    "12.0-rc1",
+                    "12.0-rc2",
+                    "12.0.1",
+                    "13.0",
+                    "13.0-rc1",
+                    "13.0-rc2",
+                    "13.0.1",
+                    "14.0",
+                    "14.0-rc1",
+                    "14.0-rc2",
+                    "14.0-rc3",
+                    "14.0.1",
+                    "15.0",
+                    "15.0-rc1",
+                    "16.0",
+                    "16.0-rc1",
+                    "16.0.1",
+                    "17.0",
+                    "17.0-rc1",
+                    "17.0-rc2",
+                    "18.0",
+                    "18.0-rc1",
+                    "18.0-rc2",
+                    "19.0",
+                    "19.0-rc1",
+                    "19.0-rc2",
+                    "19.0-rc3",
+                    "20.0",
+                    "20.0-rc1",
+                    "21.0",
+                    "21.0-rc1",
+                    "21.0-rc2",
+                    "22.0",
+                    "22.0-android",
+                    "22.0-rc1",
+                    "22.0-rc1-android",
+                    "23.0",
+                    "23.0-android",
+                    "23.0-rc1",
+                    "23.0-rc1-android",
+                    "23.1-android",
+                    "23.1-jre",
+                    "23.2-android",
+                    "23.2-jre",
+                    "23.3-android",
+                    "23.3-jre",
+                    "23.4-android",
+                    "23.4-jre",
+                    "23.5-android",
+                    "23.5-jre",
+                    "23.6-android",
+                    "23.6-jre",
+                    "23.6.1-android",
+                    "23.6.1-jre",
+                    "24.0-android",
+                    "24.0-jre",
+                    "24.1-android",
+                    "24.1-jre",
+                    "24.1.1-android",
+                    "24.1.1-jre",
+                    "25.0-android",
+                    "25.0-jre",
+                    "25.1-android",
+                    "25.1-jre",
+                    "26.0-android",
+                    "26.0-jre",
+                    "27.0-android",
+                    "27.0-jre",
+                    "27.0.1-android",
+                    "27.0.1-jre",
+                    "27.1-android",
+                    "27.1-jre",
+                    "28.0-android",
+                    "28.0-jre",
+                    "28.1-android",
+                    "28.1-jre",
+                    "28.2-android",
+                    "28.2-jre",
+                    "29.0-android",
+                    "29.0-jre",
+                    "30.0-android",
+                    "30.0-jre",
+                    "30.1-android",
+                    "30.1-jre",
+                    "30.1.1-android",
+                    "30.1.1-jre",
+                    "31.0-android",
+                    "31.0-jre",
+                    "31.0.1-android",
+                    "31.0.1-jre",
+                    "31.1-android",
+                    "31.1-jre",
+                    "32.0.0-android",
+                    "32.0.0-jre",
+                    "32.0.1-android",
+                    "32.0.1-jre",
+                    "32.1.0-android",
+                    "32.1.0-jre",
+                    "32.1.1-android",
+                    "32.1.1-jre",
+                    "32.1.2-android",
+                    "32.1.2-jre",
+                    "32.1.3-android",
+                    "32.1.3-jre",
+                    "33.0.0-android",
+                    "33.0.0-jre",
+                    "33.1.0-android",
+                    "33.1.0-jre",
+                    "33.2.0-android",
+                    "33.2.0-jre",
+                    "33.2.1-android",
+                    "33.2.1-jre",
+                    "33.3.0-android",
+                    "33.3.0-jre",
+                    "33.3.1-android",
+                    "33.3.1-jre",
+                    "33.4.0-android",
+                    "33.4.0-jre",
+                    "33.4.1-android",
+                    "33.4.1-jre",
+                    "33.4.2-android",
+                    "33.4.2-jre",
+                    "33.4.3-android",
+                    "33.4.3-jre",
+                    "33.4.4-android",
+                    "33.4.4-jre",
+                    "33.4.5-android",
+                    "33.4.5-jre",
+                    "33.4.6-android",
+                    "33.4.6-jre",
+                    "33.4.7-android",
+                    "33.4.7-jre",
+                    "33.4.8-android",
+                    "33.4.8-jre",
+                    "33.5.0-android",
+                    "33.5.0-jre",
+                    "33.6.0-android",
+                    "33.6.0-jre",
+                    "33.7.0-android",
+                    "33.7.0-jre",
+                    "33.7.1-android",
+                    "33.7.1-jre"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-102554"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-502",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-10-27T14:27:53Z",
+                "nvd_published_at": "2026-10-09T16:17:20Z",
+                "severity": "HIGH"
+              },
+              "details": "# CompactHashMap/CompactHashSet/MapMakerInternalMap native deserialization triggers uncontrolled memory allocation\n\n## Summary\n\n`CompactHashMap`, `CompactHashSet`, and `MapMakerInternalMap` implement `readObject(ObjectInputStream)` by reading an attacker-controlled `elementCount` or `initialCapacity` from the stream. On the very first insertion during or after deserialization (for the `CompactHash*` collections, inside `allocArrays()`) or immediately during deserialization (for `MapMakerInternalMap`), the implementation eagerly allocates arrays sized to that full, unvalidated value (up to `CompactHashing.MAX_SIZE` = 2^30-1, ~1.07 billion, for example) before the rest of the stream's actual content has been consumed. A 72-byte malicious serialized stream containing a single tiny element can force a multi-gigabyte allocation and crash a JVM with `OutOfMemoryError`, dynamically confirmed against the current release.\n\n## Details\n\n`CompactHashMap.readObject()` (`guava/src/com/google/common/collect/CompactHashMap.java`):\n\n```java\nprivate void readObject(ObjectInputStream stream) throws IOException, ClassNotFoundException {\n  stream.defaultReadObject();\n  int elementCount = stream.readInt();\n  if (elementCount \u003c 0) {\n    throw new InvalidObjectException(\"Invalid size: \" + elementCount);\n  }\n  init(elementCount);\n  for (int i = 0; i \u003c elementCount; i++) {\n    K key = (K) stream.readObject();\n    V value = (V) stream.readObject();\n    put(key, value);\n  }\n}\n```\n\n`elementCount` is only checked for being non-negative; there is no upper bound and no relationship enforced between the declared count and how much data actually follows in the stream. `init(elementCount)` (line 251) just stores the value (clamped to `[1, CompactHashing.MAX_SIZE]`, i.e. up to 2^30-1):\n\n```java\nvoid init(int expectedSize) {\n  Preconditions.checkArgument(expectedSize \u003e= 0, \"Expected size must be \u003e= 0\");\n  this.metadata = Ints.constrainToRange(expectedSize, 1, CompactHashing.MAX_SIZE);\n}\n```\n\nThe real allocation is deferred to `allocArrays()`, which fires lazily on the *first* `put()` call — i.e. after only one key/value pair has actually been read off the wire:\n\n```java\nint allocArrays() {\n  ...\n  int expectedSize = metadata;\n  int buckets = CompactHashing.tableSize(expectedSize);\n  this.table = CompactHashing.createTable(buckets);\n  setHashTableMask(buckets - 1);\n  this.entries = new int[expectedSize];\n  this.keys = new Object[expectedSize];\n  this.values = new Object[expectedSize];\n  return expectedSize;\n}\n```\n\nWith `expectedSize` near `CompactHashing.MAX_SIZE` (2^30-1), this single call allocates a hash `table` plus three `expectedSize`-length arrays — multiple gigabytes — triggered by a stream that has, at that point, only supplied one small real element. `CompactHashSet.readObject()`/`allocArrays()` have the identical shape. `CompactLinkedHashMap`/`CompactLinkedHashSet` extend these classes and inherit the same unguarded path.\n\nThe problem with `MapMakerInternalMap` is similar, with [a size read from the serialized data and stored in a `MapMaker` instance](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L2848-L2851) for [later user during deserialization](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L2897), when [the `MapMaker` is passed back to `MapMakerInternalMap`](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMaker.java#L287) and [segments are allocated](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L173-L200) by [calling `newSegment`](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L1143), whose implementations ([example](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L443)) create `Segment` instances ([example](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L2019)) that [allocate arrays of the requested capacity](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L1234) through [the `newTable`](https://github.com/google/guava/blob/1278ad9c2257f48dc82fb7b7c625ab563605aa24/guava/src/com/google/common/collect/MapMakerInternalMap.java#L1262) helper.\n\nThis is the same amplification shape as the already-fixed **CVE-2018-10237** (`AtomicDoubleArray`/`CompoundOrdering`: attacker declares a large size, library eagerly allocates before validating against actual stream content). That fix rewrote `AtomicDoubleArray.readObject()` to grow an `ImmutableLongArray.Builder` incrementally per element actually read, rather than pre-allocating from the declared size — Guava's own `HashBiMap.readObject()` documents the same defensive principle explicitly in a comment: `init(16); // resist hostile attempts to allocate gratuitous heap`. `CompactHashMap`/`CompactHashSet` do not follow either of these two patterns already present elsewhere in the same codebase.\n\n**Reachability**: All classes are top-level, `implements ... Serializable`, and require no special classpath setup beyond Guava being present (near-ubiquitous on JVM backends). A native Java deserialization attacker names the class directly in a hand-crafted stream — no particular Guava factory method needs to have been used by the victim application, exactly as with the precedent CVE.\n\n## PoC\n\nFull source and run instructions in the attached `poc-guava-compacthash-dos.zip` (Maven project, `guava:33.7.1-jre` — the current latest release — as the only dependency). The PoC:\n\n1. Uses reflection only to legitimately obtain a `CompactHashSet` instance (it is package-private; a real attacker does not need this step, since they craft the serialized bytes directly rather than calling Guava's own serialization code).\n2. Serializes one set with 1 element and one with 2 elements, diffs the two byte streams to locate the exact offset of the `elementCount` field (byte-precise, not guessed).\n3. Patches that one 4-byte field in the 1-element stream from `1` to `0x3FFFFFFF` (`CompactHashing.MAX_SIZE`), leaving the rest of the 72-byte stream (one real `\"A\"` element) untouched.\n4. Feeds the resulting 72-byte malicious stream into a plain `new ObjectInputStream(...).readObject()` call against the real, unmodified `guava-33.7.1-jre.jar`.\n\nActual run output:\n\n```\n### -Xmx8g (generous heap) ###\nLocated size field at offset 63, value=1 (expected 1)\nMalicious stream size: 72 bytes\nDeclared elementCount: 1073741823 (~1.07 billion)\nReal payload: 1 tiny string element (\"A\")\n=== RESULT ===\nException: java.lang.OutOfMemoryError: Java heap space\nTime to allocate+fail: 4013 ms\nHeap used before: 3 MB\nHeap used after (at failure point): 4103 MB\nJVM max heap (-Xmx): 8192 MB\n\n### -Xmx128m (ordinary service-sized heap) ###\nLocated size field at offset 63, value=1 (expected 1)\nMalicious stream size: 72 bytes\nDeclared elementCount: 1073741823 (~1.07 billion)\nReal payload: 1 tiny string element (\"A\")\n=== RESULT ===\nException: java.lang.OutOfMemoryError: Java heap space\nTime to allocate+fail: 24 ms\nHeap used before: 4 MB\nHeap used after (at failure point): 2 MB\nJVM max heap (-Xmx): 128 MB\n```\n\nA 72-byte input forces ~4.1 GB of real allocation before failing on an 8 GB heap, and crashes a 128 MB heap in 24 ms — over 50,000x amplification between input size and forced allocation.\n\nTo reproduce: `mvn -q compile dependency:build-classpath -Dmdep.outputFile=cp.txt \u0026\u0026 java -Xmx128m -cp \"target/classes:$(cat cp.txt)\" poc.Poc`\n\n## Impact\n\nUncontrolled resource consumption (CWE-770 / CWE-400) via native Java deserialization: any application that runs `ObjectInputStream.readObject()` on data reachable by an attacker, and has Guava on its classpath (true for a large fraction of the JVM ecosystem), can be crashed with a single ~72-byte payload, regardless of what type the application itself expected to deserialize.\n\n## Severity\n\nCVSS 3.1: `AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H` — identical vector to CVE-2018-10237, the precedent this is a sibling of. Recomputed with the full formula: exploitability = 8.22×0.85×0.44×0.85×0.85 = 2.221; ISS = 1-(1×1×0.44) = 0.56; impact = 6.42×0.56 = 3.595; base = roundup(5.816) = **5.9 (Medium)**.\n\n## Affected\n\n`com.google.guava:guava`, all editions (`-jre`/`-android`) — confirmed on the current latest release, 33.7.1-jre. `CompactHashMap`/`CompactHashSet`/`CompactLinkedHashMap`/`CompactLinkedHashSet` have had this same `readObject`/`allocArrays` shape for a long time (probably since they were added in Guava 23.6), and similarly for `MapMakerInternalMap` (which was introduced in Guava 4.0); not tested against older individual releases.\n\n## Suggested fix\n\nApply the same defense already used elsewhere in this codebase: either clamp the initial `init()` capacity to a small constant regardless of the declared `elementCount` (as `HashBiMap.readObject()` already does — `init(16); // resist hostile attempts to allocate gratuitous heap`) and grow incrementally as elements are actually read, or grow the backing arrays incrementally per iteration of the deserialization loop (as the fixed `AtomicDoubleArray.readObject()` does via `ImmutableLongArray.Builder`) instead of eagerly sizing to the full attacker-declared count on first insert.",
+              "id": "GHSA-xxph-c9ww-hj94",
+              "modified": "2026-10-27T14:45:04.803511466Z",
+              "published": "2026-10-27T14:27:53Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/security/advisories/GHSA-xxph-c9ww-hj94"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102554"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/commit/b931fe9d6d5cf00bc55714ad3308d086f71850fe"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/google/guava"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/releases/tag/v33.7.2"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Google Guava: CompactHashMap/CompactHashSet/MapMakerInternalMap deserialization triggers uncontrolled memory allocation"
+            }
+          ]
         },
         {
           "package": {
@@ -4379,6 +4793,16 @@
                 "GHSA-8489-44mv-ggj8"
               ],
               "max_severity": "6.6"
+            },
+            {
+              "ids": [
+                "GHSA-h383-gmxw-35v2"
+              ],
+              "aliases": [
+                "CVE-2026-34479",
+                "GHSA-h383-gmxw-35v2"
+              ],
+              "max_severity": "6.9"
             },
             {
               "ids": [
@@ -5494,6 +5918,163 @@
                 }
               ],
               "summary": "Improper Input Validation and Injection in Apache Log4j2"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.logging.log4j:log4j-core",
+                    "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.7"
+                        },
+                        {
+                          "fixed": "2.25.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.13.0",
+                    "2.13.1",
+                    "2.13.2",
+                    "2.13.3",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.15.0",
+                    "2.16.0",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.18.0",
+                    "2.19.0",
+                    "2.20.0",
+                    "2.21.0",
+                    "2.21.1",
+                    "2.22.0",
+                    "2.22.1",
+                    "2.23.0",
+                    "2.23.1",
+                    "2.24.0",
+                    "2.24.1",
+                    "2.24.2",
+                    "2.24.3",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.25.2",
+                    "2.25.3",
+                    "2.7",
+                    "2.8",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.9.0",
+                    "2.9.1"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.logging.log4j:log4j-core",
+                    "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0-beta1"
+                        },
+                        {
+                          "last_affected": "3.0.0-beta2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0-beta1",
+                    "3.0.0-beta2"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-34479"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-116"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-04-14T00:10:59Z",
+                "nvd_published_at": "2026-04-10T16:16:31Z",
+                "severity": "MODERATE"
+              },
+              "details": "The `Log4j1XmlLayout` from the Apache Log4j 1-to-Log4j 2 bridge fails to escape characters forbidden by the XML 1.0 standard, producing malformed XML output. Conforming XML parsers are required to reject documents containing such characters with a fatal error, which may cause downstream log processing systems to drop or fail to index affected records.\n\nTwo groups of users are affected:\n\n* Those using `Log4j1XmlLayout` directly in a Log4j Core 2 configuration file.\n* Those using the Log4j 1 configuration compatibility layer with `org.apache.log4j.xml.XMLLayout` specified as the layout class.\n\nUsers are advised to upgrade to Apache Log4j 1-to-Log4j 2 bridge version `2.25.4`, which corrects this issue.\n\n\u003e [!NOTE]\n\u003e The Apache Log4j 1-to-Log4j 2 bridge is deprecated and will not be present in Log4j 3. Users are encouraged to consult the\n\u003e [Log4j 1 to Log4j 2 migration guide](https://logging.apache.org/log4j/2.x/migrate-from-log4j1.html), and specifically the section on eliminating reliance on the bridge.",
+              "id": "GHSA-h383-gmxw-35v2",
+              "modified": "2026-10-26T15:30:05.719203570Z",
+              "published": "2026-04-10T18:31:18Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34479"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/logging-log4j2/pull/4078"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/logging-log4j2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/gd0hp6mj17rn3kj279vgy4p7kd4zz5on"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logging.apache.org/cyclonedx/vdr.xml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logging.apache.org/log4j/2.x/migrate-from-log4j1.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logging.apache.org/security.html#CVE-2026-34479"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2026/04/10/8"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Apache Log4j 1 to Log4j 2 bridge: silent log event loss in Log4j1XmlLayout due to unescaped XML 1.0 forbidden characters"
             },
             {
               "affected": [
@@ -7038,7 +7619,7 @@
     },
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/java-maven/pom.xml",
+        "path": "~/projects/sca-benchmark-internal/fixtures/java-maven/pom.xml",
         "type": "unknown"
       },
       "packages": [

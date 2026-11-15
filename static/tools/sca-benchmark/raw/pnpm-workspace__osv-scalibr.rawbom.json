@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:38:24Z",
+    "timestamp": "2026-11-14T09:02:14Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "ed3b8056-7edd-4e72-ad83-9e5fdab74fd3",
+      "bom-ref": "f6da9d9c-ffb7-40e0-aeec-06eae4520e04",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "1f31335f-da9e-4a9c-8270-2404aa59a138",
+      "bom-ref": "c74489ce-9a9d-41e1-8023-1e496a90df36",
       "type": "library",
       "name": "@scab/app",
       "version": "1.0.0",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "b4c48170-6c22-4011-a148-910448aed6bd",
+      "bom-ref": "cb58ac46-fdc6-44de-824b-830f0f6b1a18",
       "type": "library",
       "name": "@scab/util",
       "version": "1.0.0",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "0cca4a42-c1d8-4a13-822f-a1890ddd0283",
+      "bom-ref": "b8ae3b56-196e-4c01-80ee-6f872f1ac83d",
       "type": "library",
       "name": "debug",
       "version": "4.3.4",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "783390a7-d295-4e4d-9d0c-7305f3ccaa87",
+      "bom-ref": "32b97b7c-90ff-464a-9f92-74e5089367f9",
       "type": "library",
       "name": "is-number",
       "version": "7.0.0",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "bom-ref": "bc913da7-3d49-48a3-86af-e86d3b821774",
+      "bom-ref": "ebc4cdee-e090-4c70-a7d2-d8af8d69a4fa",
       "type": "library",
       "name": "kind-of",
       "version": "6.0.3",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "bom-ref": "92164e4d-7230-4965-9547-e10f224c808c",
+      "bom-ref": "fe7b96ad-1f6e-4288-ad81-7c2e732e6ea9",
       "type": "library",
       "name": "ms",
       "version": "2.1.2",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "bom-ref": "0b3ba91f-fe57-45b2-b7ca-9fead7edea35",
+      "bom-ref": "a4a89778-f465-4b3a-b6ce-d28c4be9b43f",
       "type": "library",
       "name": "scab-pnpm-workspace",
       "version": "1.0.0",

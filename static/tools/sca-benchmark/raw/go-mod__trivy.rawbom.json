@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:1fad6a28-b48b-48af-b63a-05e41446569f",
+  "serialNumber": "urn:uuid:7421160b-c2c3-40c8-b679-cd084b3ede3a",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:09:18+00:00",
+    "timestamp": "2026-11-14T07:48:43+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "e1372046-9b33-472a-bee7-5dd62627be68",
+      "bom-ref": "77c20035-f6d7-448f-91c8-63375ca99e02",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/go-mod",
+      "name": "~/projects/sca-benchmark-internal/fixtures/go-mod",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "46e8d45a-540e-471f-8264-2c002f7ab7f2",
+      "bom-ref": "fd2402fa-8424-4bb0-b4da-a1a764b4f6fa",
       "type": "application",
       "name": "go.mod",
       "properties": [
@@ -131,15 +131,15 @@
   ],
   "dependencies": [
     {
-      "ref": "46e8d45a-540e-471f-8264-2c002f7ab7f2",
+      "ref": "77c20035-f6d7-448f-91c8-63375ca99e02",
       "dependsOn": [
-        "pkg:golang/scab-go-mod"
+        "fd2402fa-8424-4bb0-b4da-a1a764b4f6fa"
       ]
     },
     {
-      "ref": "e1372046-9b33-472a-bee7-5dd62627be68",
+      "ref": "fd2402fa-8424-4bb0-b4da-a1a764b4f6fa",
       "dependsOn": [
-        "46e8d45a-540e-471f-8264-2c002f7ab7f2"
+        "pkg:golang/scab-go-mod"
       ]
     },
     {

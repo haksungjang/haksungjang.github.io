@@ -1,0 +1,782 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:fa82e6aa-ee33-4185-b38f-f743d66477d3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:00:51+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "b51c2452-2833-4891-890e-b57e5abd2d5d",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-internal/fixtures/go-vuln-subpackage",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "9276a858-491b-4531-aaf7-aeaa32990a13",
+      "type": "application",
+      "name": "go.mod",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/example.com/scab-go-vuln-subpackage",
+      "type": "library",
+      "name": "example.com/scab-go-vuln-subpackage",
+      "purl": "pkg:golang/example.com/scab-go-vuln-subpackage",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "example.com/scab-go-vuln-subpackage"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+      "type": "library",
+      "name": "github.com/jackc/pgpassfile",
+      "version": "v1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/jackc/pgpassfile@v1.0.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a",
+      "type": "library",
+      "name": "github.com/jackc/pgservicefile",
+      "version": "v0.0.0-20221227161230-091c0ba34f0a",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/jackc/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "type": "library",
+      "name": "github.com/jackc/pgx/v5",
+      "version": "v5.5.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "github.com/jackc/pgx/v5@v5.5.1"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/crypto@v0.59.0",
+      "type": "library",
+      "name": "golang.org/x/crypto",
+      "version": "v0.59.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/crypto@v0.59.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "golang.org/x/crypto@v0.59.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.44.0",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.44.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:golang/golang.org/x/text@v0.44.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "golang.org/x/text@v0.44.0"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "gomod"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "9276a858-491b-4531-aaf7-aeaa32990a13",
+      "dependsOn": [
+        "pkg:golang/example.com/scab-go-vuln-subpackage"
+      ]
+    },
+    {
+      "ref": "b51c2452-2833-4891-890e-b57e5abd2d5d",
+      "dependsOn": [
+        "9276a858-491b-4531-aaf7-aeaa32990a13"
+      ]
+    },
+    {
+      "ref": "pkg:golang/example.com/scab-go-vuln-subpackage",
+      "dependsOn": [
+        "pkg:golang/github.com/jackc/pgx/v5@v5.5.1"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+      "dependsOn": [
+        "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+        "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a",
+        "pkg:golang/golang.org/x/crypto@v0.59.0",
+        "pkg:golang/golang.org/x/text@v0.44.0"
+      ]
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/crypto@v0.59.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/text@v0.44.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2024-27304",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "azure"
+          },
+          "severity": "critical"
+        },
+        {
+          "source": {
+            "name": "cbl-mariner"
+          },
+          "severity": "critical"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 8.1,
+          "severity": "high",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 8.1,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [
+        89,
+        190
+      ],
+      "description": "pgx is a PostgreSQL driver and toolkit for Go. SQL injection can occur if an attacker can cause a single query or bind message to exceed 4 GB in size. An integer overflow in the calculated message size can cause the one large message to be sent as multiple messages under the attacker's control. The problem is resolved in v4.18.2 and v5.5.4. As a workaround, reject user input large enough to cause a single query or bind message to exceed 4 GB in size.",
+      "recommendation": "Upgrade github.com/jackc/pgx/v5 to version 5.5.4",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2024-27304"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2024-27304"
+        },
+        {
+          "url": "https://github.com/jackc/pgproto3/commit/945c2126f6db8f3bea7eeebe307c01fe92bca007"
+        },
+        {
+          "url": "https://github.com/jackc/pgproto3/security/advisories/GHSA-7jwh-3vrq-q3m8"
+        },
+        {
+          "url": "https://github.com/jackc/pgx"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/commit/adbb38f298c76e283ffc7c7a3f571036fea47fd4"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/commit/c543134753a0c5d22881c12404025724cb05ffd8"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/commit/f94eb0e2f96782042c96801b5ac448f44f0a81df"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/security/advisories/GHSA-mrww-27vc-gghv"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27304"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-27304"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Tfg1B8u1yvE"
+        }
+      ],
+      "published": "2024-03-06T19:15:08+00:00",
+      "updated": "2026-06-17T07:19:36+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+          "versions": [
+            {
+              "version": "v5.5.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-33815",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 8.3,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "cwes": [
+        787
+      ],
+      "description": "Memory-safety vulnerability in github.com/jackc/pgx/v5.",
+      "recommendation": "Upgrade github.com/jackc/pgx/v5 to version 5.9.0",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-33815"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11070"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11217"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13791"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13829"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:17789"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:22423"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24475"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24479"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24482"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24503"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24539"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:25273"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:26636"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:36796"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:40984"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:41019"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:60388"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-33815"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2455975"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/commit/6dbad4cafdb8a4daab7ff79c858c95da4b6109e8"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/issues/2519"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/issues/2530"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33815"
+        },
+        {
+          "url": "https://pkg.go.dev/vuln/GO-2026-4771"
+        },
+        {
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33815.json"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-33815"
+        }
+      ],
+      "published": "2026-04-07T16:16:24+00:00",
+      "updated": "2026-10-26T22:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+          "versions": [
+            {
+              "version": "v5.5.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-33816",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "alma"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "oracle-oval"
+          },
+          "severity": "high"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 8.3,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L"
+        },
+        {
+          "source": {
+            "name": "rocky"
+          },
+          "severity": "high"
+        }
+      ],
+      "cwes": [
+        787
+      ],
+      "description": "Memory-safety vulnerability in github.com/jackc/pgx/v5.",
+      "recommendation": "Upgrade github.com/jackc/pgx/v5 to version 5.9.0",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-33816"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11070"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11217"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13791"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13829"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13907"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:17789"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:19137"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:22423"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24475"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24479"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24482"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24503"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:24539"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:25273"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:26519"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:26636"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:36796"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:40118"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:40945"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:40984"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:41019"
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:62866"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-33816"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2455972"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/2456338"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2455972"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2456338"
+        },
+        {
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32283"
+        },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33816"
+        },
+        {
+          "url": "https://errata.almalinux.org/10/ALSA-2026-19137.html"
+        },
+        {
+          "url": "https://errata.rockylinux.org/RLSA-2026:19137"
+        },
+        {
+          "url": "https://github.com/jackc/pgx"
+        },
+        {
+          "url": "https://linux.oracle.com/cve/CVE-2026-33816.html"
+        },
+        {
+          "url": "https://linux.oracle.com/errata/ELSA-2026-19137.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33816"
+        },
+        {
+          "url": "https://pkg.go.dev/vuln/GO-2026-4772"
+        },
+        {
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33816.json"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-33816"
+        }
+      ],
+      "published": "2026-04-07T16:16:24+00:00",
+      "updated": "2026-10-26T21:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+          "versions": [
+            {
+              "version": "v5.5.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-41889",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "azure"
+          },
+          "severity": "low"
+        },
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 2.3,
+          "severity": "low",
+          "method": "CVSSv4",
+          "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+        },
+        {
+          "source": {
+            "name": "nvd"
+          },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": {
+            "name": "redhat"
+          },
+          "score": 5.9,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "cwes": [
+        89
+      ],
+      "description": "pgx is a PostgreSQL driver and toolkit for Go. Prior to version 5.9.2, SQL injection can occur when the non-default simple protocol is used, a dollar quoted string literal is used in the SQL query, that string literal contains text that would be would be interpreted as a placeholder outside of a string literal, and the value of that placeholder is controllable by the attacker. This issue has been patched in version 5.9.2.",
+      "recommendation": "Upgrade github.com/jackc/pgx/v5 to version 5.9.2",
+      "advisories": [
+        {
+          "url": "https://avd.aquasec.com/nvd/cve-2026-41889"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-41889"
+        },
+        {
+          "url": "https://github.com/jackc/pgx"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/commit/60644f84918a8af66d14a4b0d865d4edafd955da"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/releases/tag/v5.9.2"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/security/advisories/GHSA-j88v-2chj-qfwx"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41889"
+        },
+        {
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-41889"
+        }
+      ],
+      "published": "2026-05-08T17:16:31+00:00",
+      "updated": "2026-10-26T18:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+          "versions": [
+            {
+              "version": "v5.5.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fqpg-rq76-99pq",
+      "source": {
+        "name": "ghsa",
+        "url": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+      },
+      "ratings": [
+        {
+          "source": {
+            "name": "ghsa"
+          },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "description": "Pipeline can panic when PgConn is busy or closed.",
+      "recommendation": "Upgrade github.com/jackc/pgx/v5 to version 5.5.2",
+      "advisories": [
+        {
+          "url": "https://github.com/advisories/GHSA-fqpg-rq76-99pq"
+        },
+        {
+          "url": "https://github.com/jackc/pgx"
+        },
+        {
+          "url": "https://github.com/jackc/pgx/commit/dfd198003a03dbb96e4607b0d3a0bb9a7398ccb7"
+        }
+      ],
+      "published": "2024-07-05T20:08:26+00:00",
+      "updated": "2026-03-19T18:41:01+00:00",
+      "affects": [
+        {
+          "ref": "pkg:golang/github.com/jackc/pgx/v5@v5.5.1",
+          "versions": [
+            {
+              "version": "v5.5.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

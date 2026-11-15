@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:06:09Z",
+    "timestamp": "2026-11-14T08:34:48Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "a2fff282-048e-4734-b59d-5975f542f1be",
+      "bom-ref": "fff9addd-86e1-42fe-bf3c-d464bc675623",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "a7d3718e-6cda-43bc-939f-cb5495d394bb",
+      "bom-ref": "30db66b7-3194-41ae-966f-75204e5c3a50",
       "type": "library",
       "name": "com.fasterxml.jackson.core:jackson-databind",
       "version": "2.18.2",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "1266ae1f-f773-4813-ac8d-b8a502f3e388",
+      "bom-ref": "287aa347-b43e-491e-aa3e-39f5c4681028",
       "type": "library",
       "name": "com.google.guava:guava",
       "version": "33.3.1-jre",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "c819d56b-55b2-4cdd-bb5e-d62a1d070b0f",
+      "bom-ref": "df7973c9-34b2-4c90-97c6-b5cfb99bd038",
       "type": "library",
       "name": "org.apache.commons:commons-lang3",
       "version": "3.17.0",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "efc5b067-41de-43d4-8717-599a42c3ccde",
+      "bom-ref": "90eb71bb-1812-4b64-89ce-be7f1204cca2",
       "type": "library",
       "name": "org.apache.logging.log4j:log4j-core",
       "version": "2.14.1",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "bom-ref": "af00317b-dcf8-4a32-a971-6191edb23012",
+      "bom-ref": "1ecf8071-8ab4-4853-8cf3-84a4122110ec",
       "type": "library",
       "name": "org.junit.jupiter:junit-jupiter",
       "version": "5.11.3",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "bom-ref": "31207c89-bf2c-4326-bea1-2d6ae6827ab5",
+      "bom-ref": "0d8d9fb2-3d23-4a00-9a1e-c086e5842518",
       "type": "library",
       "name": "org.projectlombok:lombok",
       "version": "1.18.34",

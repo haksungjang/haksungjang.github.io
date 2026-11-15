@@ -3,13 +3,21 @@
     "scanInfo": {
         "engineVersion": "13.0.0",
         "dataSource": [
+{
+                "name": "NVD API Last Checked",
+                "timestamp": "2026-11-14T19:29:00+09"
+            }
+,{
+                "name": "NVD API Last Modified",
+                "timestamp": "2026-11-14T09:16:48Z"
+            }
         ]
 
 
     },
     "projectInfo": {
         "name": "uv-lock",
-        "reportDate": "2026-10-13T21:39:06.620219Z",
+        "reportDate": "2026-11-14T10:30:55.354014Z",
         "credits": {
             "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
             "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",

@@ -2,7 +2,7 @@
   "results": [
     {
       "source": {
-        "path": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/go-mod/go.mod",
+        "path": "~/projects/sca-benchmark-internal/fixtures/go-mod/go.mod",
         "type": "lockfile"
       },
       "packages": [

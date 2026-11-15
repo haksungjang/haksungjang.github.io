@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:08:33Z",
+    "timestamp": "2026-11-14T08:47:47Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "18eccc01-72fc-404e-89d7-7be0c67914d1",
+      "bom-ref": "59152722-fd4b-48ea-ac61-6d2b81e03ae8",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "ee5dd1bb-227e-43eb-ba8a-c540f6cb27db",
+      "bom-ref": "af3f39fa-276e-406e-a391-ed747cab781d",
       "type": "library",
       "name": "npm-nolock",
       "version": "1.0.0",

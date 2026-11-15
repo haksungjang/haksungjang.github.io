@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:518ae081-e7ef-433f-99c9-c5d5ce07bffe",
+  "serialNumber": "urn:uuid:b8e86b4f-b23d-4b72-aec2-d384e8090213",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-15T01:15:28+00:00",
+    "timestamp": "2026-11-14T08:47:43+00:00",
     "tools": {
       "components": [
         {
@@ -15,14 +15,14 @@
           },
           "group": "aquasecurity",
           "name": "trivy",
-          "version": "0.76.0"
+          "version": "0.76.2"
         }
       ]
     },
     "component": {
-      "bom-ref": "a3b4ee18-bc4f-4ed0-926b-7670213fcafe",
+      "bom-ref": "be0999e5-8928-49b5-8b24-305ed08c7c38",
       "type": "application",
-      "name": "~/projects/sca-benchmark-wt/refresh-latest/fixtures/npm-nolock",
+      "name": "~/projects/sca-benchmark-internal/fixtures/npm-nolock",
       "properties": [
         {
           "name": "aquasecurity:trivy:SchemaVersion",
@@ -34,7 +34,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "a3b4ee18-bc4f-4ed0-926b-7670213fcafe",
+      "ref": "be0999e5-8928-49b5-8b24-305ed08c7c38",
       "dependsOn": []
     }
   ],

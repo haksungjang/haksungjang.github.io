@@ -1,0 +1,1417 @@
+{
+    "reportSchema": "1.1",
+    "scanInfo": {
+        "engineVersion": "13.0.0",
+        "dataSource": [
+{
+                "name": "NVD API Last Checked",
+                "timestamp": "2026-11-14T19:29:00+09"
+            }
+,{
+                "name": "NVD API Last Modified",
+                "timestamp": "2026-11-14T09:16:48Z"
+            }
+        ]
+
+
+    },
+    "projectInfo": {
+        "name": "go-vuln-subpackage",
+        "reportDate": "2026-11-14T10:29:40.325293Z",
+        "credits": {
+            "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+            "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+            "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+            "OSSINDEX": "This report may contain data retrieved from the Sonatype Guide OSS Index API: https://www.sonatype.com/products/sonatype-guide/oss-index-users"
+        }
+    },
+    "dependencies": [
+{
+            "isVirtual": true,
+            "fileName": "example.com\/scab-go-vuln-subpackage:null",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "scab-go-vuln-subpackage"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "scab-go-vuln-subpackage"
+                    }
+                ],
+                "versionEvidence": [
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/example.com\/scab-go-vuln-subpackage"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/davecgh\/go-spew:1.1.1",
+            "filePath": "~\/go\/pkg\/mod\/github.com\/davecgh\/go-spew@v1.1.1"
+,"license": "ISC License\n\nCopyright (c) 2012-2016 Dave Collins <dave@davec.name>\n\nPermission to use, copy, modify, and\/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "go-spew"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "davecgh"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "go-spew"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "davecgh"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "1.1.1"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/davecgh\/go-spew@1.1.1"
+,"confidence": "HIGHEST"                    }
+            ]                ,"vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:go:go:1.1.1:*:*:*:*:*:*:*"
+,"confidence": "HIGH","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Ago%3Ago%3A1.1.1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/jackc\/pgpassfile:1.0.0",
+            "filePath": "~\/go\/pkg\/mod\/github.com\/jackc\/pgpassfile@v1.0.0"
+,"license": "Copyright (c) 2019 Jack Christensen\n\nMIT License\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and\/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "pgpassfile"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "pgpassfile"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "1.0.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/jackc\/pgpassfile@1.0.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/jackc\/pgservicefile:0.0.0-20221227161230-091c0ba34f0a",
+            "filePath": "~\/go\/pkg\/mod\/github.com\/jackc\/pgservicefile@v0.0.0-20221227161230-091c0ba34f0a"
+,"license": "Copyright (c) 2020 Jack Christensen\n\nMIT License\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and\/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "pgservicefile"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "pgservicefile"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.0.0-20221227161230-091c0ba34f0a"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/jackc\/pgservicefile@0.0.0-20221227161230-091c0ba34f0a"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/jackc\/pgx\/v5:5.5.1",
+            "filePath": "~\/go\/pkg\/mod\/github.com\/jackc\/pgx\/v5@v5.5.1"
+,"license": "Copyright (c) 2013-2021 Jack Christensen\n\nMIT License\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and\/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "v5"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc\/pgx"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "v5"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc\/pgx"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "5.5.1"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/jackc\/pgx\/v5@5.5.1"
+,"confidence": "HIGHEST"                    }
+            ]                ,"vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:jackc:pgx:5.5.1:*:*:*:*:*:*:*"
+,"confidence": "LOW"                }
+            ]
+            ,"vulnerabilities": [
+ {
+                "source": "NVD",
+                "name": "CVE-2024-27304",
+                    "severity" : "CRITICAL",
+                    "cvssv3": {
+                        "baseScore": 9.8
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "LOW"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"scope": "UNCHANGED"
+                        ,"confidentialityImpact": "HIGH"
+                        ,"integrityImpact": "HIGH"
+                        ,"availabilityImpact": "HIGH"
+                        ,"baseSeverity": "CRITICAL"
+,"exploitabilityScore": "3.9","impactScore": "5.9","version": "3.1"                    },
+                    "cwes": [
+                        "CWE-89",                        "CWE-190"                    ],
+                "description": "pgx is a PostgreSQL driver and toolkit for Go. SQL injection can occur if an attacker can cause a single query or bind message to exceed 4 GB in size. An integer overflow in the calculated message size can cause the one large message to be sent as multiple messages under the attacker's control. The problem is resolved in v4.18.2 and v5.5.4. As a workaround, reject user input large enough to cause a single query or bind message to exceed 4 GB in size.",
+                "notes": "",
+                "references": [
+ {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/security\/advisories\/GHSA-mrww-27vc-gghv","name": "VENDOR_ADVISORY"                    }, {
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+,"url": "https:\/\/github.com\/jackc\/pgproto3\/commit\/945c2126f6db8f3bea7eeebe307c01fe92bca007","name": "PATCH"                    }, {
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+,"url": "https:\/\/github.com\/jackc\/pgproto3\/security\/advisories\/GHSA-7jwh-3vrq-q3m8","name": "VENDOR_ADVISORY"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/f94eb0e2f96782042c96801b5ac448f44f0a81df","name": "PATCH"                    }, {
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/adbb38f298c76e283ffc7c7a3f571036fea47fd4","name": "PATCH"                    }, {
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+,"url": "https:\/\/github.com\/jackc\/pgx\/security\/advisories\/GHSA-mrww-27vc-gghv","name": "VENDOR_ADVISORY"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/c543134753a0c5d22881c12404025724cb05ffd8","name": "PATCH"                    }, {
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/c543134753a0c5d22881c12404025724cb05ffd8","name": "PATCH"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgproto3\/commit\/945c2126f6db8f3bea7eeebe307c01fe92bca007","name": "PATCH"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgproto3\/security\/advisories\/GHSA-7jwh-3vrq-q3m8","name": "VENDOR_ADVISORY"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/adbb38f298c76e283ffc7c7a3f571036fea47fd4","name": "PATCH"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/www.youtube.com\/watch?v=Tfg1B8u1yvE","name": "PRESS\/MEDIA_COVERAGE"                    }, {
+                        "source": "af854a3a-2127-422b-91ae-364da2661108"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/f94eb0e2f96782042c96801b5ac448f44f0a81df","name": "PATCH"                    }                ],
+                "vulnerableSoftware": [
+ {
+                        "software": { 
+                            "id":"cpe:2.3:a:jackc:pgproto3:*:*:*:*:*:go:*:*"
+,"versionEndExcluding":"2.3.3"                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:jackc:pgx:*:*:*:*:*:go:*:*"
+,"versionEndExcluding":"4.18.2"                        }
+                    }, {
+                        "software": { 
+                            "id":"cpe:2.3:a:jackc:pgx:*:*:*:*:*:go:*:*"
+,"vulnerabilityIdMatched":"true","versionStartIncluding":"5.0.0","versionEndExcluding":"5.5.4"                        }
+                    }                ]
+                }, {
+                "source": "NVD",
+                "name": "CVE-2026-33815",
+                    "severity" : "CRITICAL",
+                    "cvssv3": {
+                        "baseScore": 9.8
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "LOW"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"scope": "UNCHANGED"
+                        ,"confidentialityImpact": "HIGH"
+                        ,"integrityImpact": "HIGH"
+                        ,"availabilityImpact": "HIGH"
+                        ,"baseSeverity": "CRITICAL"
+,"exploitabilityScore": "3.9","impactScore": "5.9","version": "3.1"                    },
+                    "cwes": [
+                        "CWE-787",                        "NVD-CWE-noinfo"                    ],
+                "description": "Memory-safety vulnerability in github.com\/jackc\/pgx\/v5.",
+                "notes": "",
+                "references": [
+ {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/bugzilla.redhat.com\/show_bug.cgi?id=2455975"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:17789"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:13791"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:41019"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:11070"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24539"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:22423"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24479"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:60388"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24503"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:26636"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24475"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:40984"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/security.access.redhat.com\/data\/csaf\/v2\/vex\/2026\/cve-2026-33815.json"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24482"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:13829"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:11217"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:25273"                    }, {
+                        "source": "security@golang.org"
+,"url": "https:\/\/pkg.go.dev\/vuln\/GO-2026-4771","name": "THIRD_PARTY_ADVISORY"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:36796"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/security\/cve\/CVE-2026-33815"                    }                ],
+                "vulnerableSoftware": [
+ {
+                        "software": { 
+                            "id":"cpe:2.3:a:jackc:pgx:*:*:*:*:*:go:*:*"
+,"vulnerabilityIdMatched":"true"                        }
+                    }                ]
+                }, {
+                "source": "NVD",
+                "name": "CVE-2026-33816",
+                    "severity" : "CRITICAL",
+                    "cvssv3": {
+                        "baseScore": 9.8
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "LOW"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"scope": "UNCHANGED"
+                        ,"confidentialityImpact": "HIGH"
+                        ,"integrityImpact": "HIGH"
+                        ,"availabilityImpact": "HIGH"
+                        ,"baseSeverity": "CRITICAL"
+,"exploitabilityScore": "3.9","impactScore": "5.9","version": "3.1"                    },
+                    "cwes": [
+                        "CWE-787",                        "NVD-CWE-noinfo"                    ],
+                "description": "Memory-safety vulnerability in github.com\/jackc\/pgx\/v5.",
+                "notes": "",
+                "references": [
+ {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:13791"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:11070"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/bugzilla.redhat.com\/show_bug.cgi?id=2455972"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:62866"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:22423"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24503"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:40118"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:13907"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:13829"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/security.access.redhat.com\/data\/csaf\/v2\/vex\/2026\/cve-2026-33816.json"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/security\/cve\/CVE-2026-33816"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:17789"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:41019"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24539"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:26519"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24479"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:40945"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:26636"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24475"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:40984"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:24482"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:11217"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:25273"                    }, {
+                        "source": "security@golang.org"
+,"url": "https:\/\/pkg.go.dev\/vuln\/GO-2026-4772","name": "THIRD_PARTY_ADVISORY"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:19137"                    }, {
+                        "source": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c"
+,"url": "https:\/\/access.redhat.com\/errata\/RHSA-2026:36796"                    }                ],
+                "vulnerableSoftware": [
+ {
+                        "software": { 
+                            "id":"cpe:2.3:a:jackc:pgx:*:*:*:*:*:go:*:*"
+,"vulnerabilityIdMatched":"true","versionEndExcluding":"5.9.0"                        }
+                    }                ]
+                }, {
+                "source": "NVD",
+                "name": "CVE-2026-41889",
+                    "severity" : "LOW",
+                    "cvssv3": {
+                        "baseScore": 9.8
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "LOW"
+                        ,"privilegesRequired": "NONE"
+                        ,"userInteraction": "NONE"
+                        ,"scope": "UNCHANGED"
+                        ,"confidentialityImpact": "HIGH"
+                        ,"integrityImpact": "HIGH"
+                        ,"availabilityImpact": "HIGH"
+                        ,"baseSeverity": "CRITICAL"
+,"exploitabilityScore": "3.9","impactScore": "5.9","version": "3.1"                    },
+                    "cvssv4": {
+                        "vectorString": "CVSS:4.0\/AV:N\/AC:H\/AT:P\/PR:L\/UI:N\/VC:N\/VI:L\/VA:N\/SC:N\/SI:N\/SA:N\/E:X\/CR:X\/IR:X\/AR:X\/MAV:X\/MAC:X\/MAT:X\/MPR:X\/MUI:X\/MVC:X\/MVI:X\/MVA:X\/MSC:X\/MSI:X\/MSA:X\/S:X\/AU:X\/R:X\/V:X\/RE:X\/U:X"
+                        ,"source": "security-advisories@github.com"
+                        ,"type": "Secondary"
+                        ,"version": "4.0"
+                        ,"attackVector": "NETWORK"
+                        ,"attackComplexity": "HIGH"
+                        ,"attackRequirements": "PRESENT"
+                        ,"privilegesRequired": "LOW"
+                        ,"userInteraction": "NONE"
+                        ,"vulnerableSystemConfidentiality": "NONE"
+                        ,"vulnerableSystemIntegrity": "LOW"
+                        ,"vulnerableSystemAvailability": "NONE"
+                        ,"subsequentSystemConfidentiality": "NONE"
+                        ,"subsequentSystemIntegrity": "NONE"
+                        ,"subsequentSystemAvailability": "NONE"
+                        ,"exploitMaturity": "NOT_DEFINED"
+                        ,"confidentialityRequirements": "NOT_DEFINED"
+                        ,"integrityRequirements": "NOT_DEFINED"
+                        ,"availabilityRequirements": "NOT_DEFINED"
+                        ,"modifiedAttackVector": "NOT_DEFINED"
+                        ,"modifiedAttackComplexity": "NOT_DEFINED"
+                        ,"modifiedAttackRequirements": "NOT_DEFINED"
+                        ,"modifiedPrivilegesRequired": "NOT_DEFINED"
+                        ,"modifiedUserInteraction": "NOT_DEFINED"
+                        ,"modifiedVulnerableSystemConfidentiality": "NOT_DEFINED"
+                        ,"modifiedVulnerableSystemIntegrity": "NOT_DEFINED"
+                        ,"modifiedVulnerableSystemAvailability": "NOT_DEFINED"
+                        ,"modifiedSubsequentSystemConfidentiality": "NOT_DEFINED"
+                        ,"modifiedSubsequentSystemIntegrity": "NOT_DEFINED"
+                        ,"modifiedSubsequentSystemAvailability": "NOT_DEFINED"
+                        ,"safety": "NOT_DEFINED"
+                        ,"automatable": "NOT_DEFINED"
+                        ,"recovery": "NOT_DEFINED"
+                        ,"valueDensity": "NOT_DEFINED"
+                        ,"vulnerabilityResponseEffort": "NOT_DEFINED"
+                        ,"providerUrgency": "NOT_DEFINED"
+                        ,"baseScore": 2.3
+                        ,"baseSeverity": "LOW"
+                    },
+                    "cwes": [
+                        "CWE-89"                    ],
+                "description": "pgx is a PostgreSQL driver and toolkit for Go. Prior to version 5.9.2, SQL injection can occur when the non-default simple protocol is used, a dollar quoted string literal is used in the SQL query, that string literal contains text that would be would be interpreted as a placeholder outside of a string literal, and the value of that placeholder is controllable by the attacker. This issue has been patched in version 5.9.2.",
+                "notes": "",
+                "references": [
+ {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/releases\/tag\/v5.9.2","name": "RELEASE_NOTES"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/commit\/60644f84918a8af66d14a4b0d865d4edafd955da","name": "PATCH"                    }, {
+                        "source": "security-advisories@github.com"
+,"url": "https:\/\/github.com\/jackc\/pgx\/security\/advisories\/GHSA-j88v-2chj-qfwx","name": "MITIGATION,VENDOR_ADVISORY"                    }                ],
+                "vulnerableSoftware": [
+ {
+                        "software": { 
+                            "id":"cpe:2.3:a:jackc:pgx:*:*:*:*:*:go:*:*"
+,"vulnerabilityIdMatched":"true","versionEndExcluding":"5.9.2"                        }
+                    }                ]
+                }            ]        },{
+            "isVirtual": true,
+            "fileName": "github.com\/jackc\/puddle\/v2:2.2.1",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:github.com\/jackc\/puddle\/v2\/2.2.1"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "v2"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc\/puddle"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "v2"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "jackc\/puddle"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "2.2.1"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/jackc\/puddle\/v2@2.2.1"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/kr\/pretty:0.3.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:github.com\/kr\/pretty\/0.3.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "pretty"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "kr"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "pretty"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "kr"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.3.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/kr\/pretty@0.3.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/pmezard\/go-difflib:1.0.0",
+            "filePath": "~\/go\/pkg\/mod\/github.com\/pmezard\/go-difflib@v1.0.0"
+,"license": "Copyright (c) 2013, Patrick Mezard\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n    Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n    Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and\/or other materials provided with the distribution.\n    The names of its contributors may not be used to endorse or promote\nproducts derived from this software without specific prior written\npermission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS\nIS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED\nTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A\nPARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nHOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED\nTO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "go-difflib"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "pmezard"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "go-difflib"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "pmezard"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "1.0.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/pmezard\/go-difflib@1.0.0"
+,"confidence": "HIGHEST"                    }
+            ]                ,"vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:go:go:1.0.0:*:*:*:*:*:*:*"
+,"confidence": "HIGH","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Ago%3Ago%3A1.0.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/stretchr\/objx:0.1.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:github.com\/stretchr\/objx\/0.1.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "objx"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "stretchr"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "objx"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "stretchr"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.1.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/stretchr\/objx@0.1.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "github.com\/stretchr\/testify:1.8.1",
+            "filePath": "~\/go\/pkg\/mod\/github.com\/stretchr\/testify@v1.8.1"
+,"license": "MIT License\n\nCopyright (c) 2012-2020 Mat Ryer, Tyler Bunnell and contributors.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and\/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "testify"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "LOW",
+                            "source": "go.mod",
+                            "name": "namespace",
+                            "value": "github.com"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "stretchr"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "testify"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "stretchr"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "1.8.1"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/github.com\/stretchr\/testify@1.8.1"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": false,
+            "fileName": "go.mod",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod"
+,"md5": "f95e0f2af790015e55b72963b1cd6a17",
+            "sha1": "87a247faba51618502b856d8650e9eaea3523ea9",
+            "sha256": "aeb4310a6119c8d6a59eca7a26d7e6c904e04a30b6113511c3e9cd30ce768700"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "file",
+                            "name": "name",
+                            "value": "go"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGH",
+                            "source": "file",
+                            "name": "name",
+                            "value": "go"
+                    }
+                ],
+                "versionEvidence": [
+                ]
+            }
+
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/crypto:0.59.0",
+            "filePath": "~\/go\/pkg\/mod\/golang.org\/x\/crypto@v0.59.0"
+,"license": "Copyright 2009 The Go Authors.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n   * Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n   * Redistributions in binary form must reproduce the above\ncopyright notice, this list of conditions and the following disclaimer\nin the documentation and\/or other materials provided with the\ndistribution.\n   * Neither the name of Google LLC nor the names of its\ncontributors may be used to endorse or promote products derived from\nthis software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "crypto"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "crypto"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.59.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/crypto@0.59.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/mod:0.42.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:golang.org\/x\/mod\/0.42.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "mod"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "mod"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.42.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/mod@0.42.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/net:0.62.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:golang.org\/x\/net\/0.62.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "net"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "net"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.62.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/net@0.62.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/sync:0.25.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:golang.org\/x\/sync\/0.25.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "sync"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "sync"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.25.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/sync@0.25.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/sys:0.50.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:golang.org\/x\/sys\/0.50.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "sys"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "sys"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.50.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/sys@0.50.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/term:0.48.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:golang.org\/x\/term\/0.48.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "term"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "term"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.48.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/term@0.48.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/text:0.44.0",
+            "filePath": "~\/go\/pkg\/mod\/golang.org\/x\/text@v0.44.0"
+,"license": "Copyright 2009 The Go Authors.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n   * Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n   * Redistributions in binary form must reproduce the above\ncopyright notice, this list of conditions and the following disclaimer\nin the documentation and\/or other materials provided with the\ndistribution.\n   * Neither the name of Google LLC nor the names of its\ncontributors may be used to endorse or promote products derived from\nthis software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "text"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "text"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.44.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/text@0.44.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "golang.org\/x\/tools:0.52.0",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:golang.org\/x\/tools\/0.52.0"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "tools"
+                        }
+,{
+                            "type": "vendor",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "tools"
+                    }
+,{
+                            "type": "product",
+                            "confidence": "MEDIUM",
+                            "source": "go.mod",
+                            "name": "vendor",
+                            "value": "x"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "0.52.0"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/golang.org\/x\/tools@0.52.0"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "gopkg.in\/check.v1:1.0.0-20201130134442-10cb98267c6c",
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/go-vuln-subpackage\/go.mod:gopkg.in\/check.v1\/1.0.0-20201130134442-10cb98267c6c"
+            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "check.v1"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "check.v1"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "1.0.0-20201130134442-10cb98267c6c"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/gopkg.in\/check.v1@1.0.0-20201130134442-10cb98267c6c"
+,"confidence": "HIGHEST"                    }
+            ]
+        },{
+            "isVirtual": true,
+            "fileName": "gopkg.in\/yaml.v3:3.0.1",
+            "filePath": "~\/go\/pkg\/mod\/gopkg.in\/yaml.v3@v3.0.1"
+,"license": "\nThis project is covered by two different licenses: MIT and Apache.\n\n#### MIT License ####\n\nThe following files were ported to Go from C files of libyaml, and thus\nare still covered by their original MIT license, with the additional\ncopyright staring in 2011 when the project was ported over:\n\n    apic.go emitterc.go parserc.go readerc.go scannerc.go\n    writerc.go yamlh.go yamlprivateh.go\n\nCopyright (c) 2006-2010 Kirill Simonov\nCopyright (c) 2006-2011 Kirill Simonov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and\/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n### Apache License ###\n\nAll the remaining project files are covered by the Apache license:\n\nCopyright (c) 2011-2019 Canonical Ltd\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http:\/\/www.apache.org\/licenses\/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n"            ,"evidenceCollected": {
+                "vendorEvidence": [
+{
+                            "type": "vendor",
+                            "confidence": "HIGH",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "yaml.v3"
+                        }
+                ],
+                "productEvidence": [
+{
+                            "type": "product",
+                            "confidence": "HIGHEST",
+                            "source": "go.mod",
+                            "name": "name",
+                            "value": "yaml.v3"
+                    }
+                ],
+                "versionEvidence": [
+                    {
+                        "type": "version",
+                        "confidence": "HIGHEST",
+                        "source": "go.mod",
+                        "name": "version",
+                        "value": "3.0.1"
+                    }
+                ]
+            }
+                ,"packages": [
+                    {
+                        "id": "pkg:golang\/gopkg.in\/yaml.v3@3.0.1"
+,"confidence": "HIGHEST"                    }
+            ]                ,"vulnerabilityIds": [
+                {
+                    "id": "cpe:2.3:a:yaml_project:yaml:3.0.1:*:*:*:*:*:*:*"
+,"confidence": "HIGH","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Ayaml_project%3Ayaml%3A3.0.1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
+            ]
+        }    ]
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:4184805c-72f6-453e-afd9-c25e00a48f60",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:25:16+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.76.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "9fc008fb-bd09-4e1b-ac34-9c3b5f13c4dc",
+      "type": "application",
+      "name": "~/projects/sca-benchmark-internal/fixtures/gradle-wrapper-legacy",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "9fc008fb-bd09-4e1b-ac34-9c3b5f13c4dc",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

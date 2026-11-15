@@ -1,25 +1,25 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:af0481a3-952c-400e-a682-a507129a5373",
+  "serialNumber" : "urn:uuid:0273b253-3dc1-4d10-9f5d-c143e0abe72c",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:19:02Z",
+    "timestamp" : "2026-11-14T09:34:06Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "requirements.txt",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -36,13 +36,13 @@
   "components" : [
     {
       "type" : "library",
-      "bom-ref" : "PIP::requirements.txt:3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "PIP::requirements.txt:4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
       "name" : "requirements.txt",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "description" : "",
       "scope" : "required",
-      "purl" : "pkg:pip/requirements.txt@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "purl" : "pkg:pip/requirements.txt@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -56,7 +56,7 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "PyPI::certifi:2026.7.22",
+      "bom-ref" : "PyPI::certifi:2026.10.23",
       "supplier" : {
         "contact" : [
           {
@@ -71,13 +71,13 @@
       ],
       "group" : "",
       "name" : "certifi",
-      "version" : "2026.7.22",
+      "version" : "2026.10.23",
       "description" : "Python package for providing Mozilla's CA Bundle.",
       "scope" : "required",
       "hashes" : [
         {
           "alg" : "SHA-256",
-          "content" : "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+          "content" : "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"
         }
       ],
       "licenses" : [
@@ -97,7 +97,7 @@
           }
         }
       ],
-      "purl" : "pkg:pypi/certifi@2026.7.22",
+      "purl" : "pkg:pypi/certifi@2026.10.23",
       "externalReferences" : [
         {
           "type" : "website",
@@ -193,16 +193,16 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "PyPI::click:8.5.0",
+      "bom-ref" : "PyPI::click:8.5.1",
       "group" : "",
       "name" : "click",
-      "version" : "8.5.0",
+      "version" : "8.5.1",
       "description" : "Composable command line interface toolkit",
       "scope" : "required",
       "hashes" : [
         {
           "alg" : "SHA-256",
-          "content" : "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+          "content" : "8bb5376d2006950386f8c6427613334a2acadc5f559cb80e638d00b4df957e37"
         }
       ],
       "licenses" : [
@@ -222,7 +222,7 @@
           }
         }
       ],
-      "purl" : "pkg:pypi/click@8.5.0",
+      "purl" : "pkg:pypi/click@8.5.1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -655,13 +655,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "PyPI::flask:2.0.1",
         "PyPI::requests:2.25.1"
@@ -670,7 +670,7 @@
     {
       "ref" : "PyPI::flask:2.0.1",
       "dependsOn" : [
-        "PyPI::click:8.5.0",
+        "PyPI::click:8.5.1",
         "PyPI::itsdangerous:2.2.0",
         "PyPI::jinja2:3.0.1",
         "PyPI::werkzeug:3.1.9"
@@ -691,7 +691,7 @@
     {
       "ref" : "PyPI::requests:2.25.1",
       "dependsOn" : [
-        "PyPI::certifi:2026.7.22",
+        "PyPI::certifi:2026.10.23",
         "PyPI::chardet:4.0.0",
         "PyPI::idna:2.10",
         "PyPI::urllib3:1.26.4"

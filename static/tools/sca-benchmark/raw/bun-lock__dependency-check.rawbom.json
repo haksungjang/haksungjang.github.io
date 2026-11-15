@@ -3,13 +3,21 @@
     "scanInfo": {
         "engineVersion": "13.0.0",
         "dataSource": [
+{
+                "name": "NVD API Last Checked",
+                "timestamp": "2026-11-14T19:29:00+09"
+            }
+,{
+                "name": "NVD API Last Modified",
+                "timestamp": "2026-11-14T09:16:48Z"
+            }
         ]
 
 
     },
     "projectInfo": {
         "name": "bun-lock",
-        "reportDate": "2026-10-13T21:37:35.750643Z",
+        "reportDate": "2026-11-14T10:29:33.958921Z",
         "credits": {
             "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
             "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
@@ -22,7 +30,7 @@
 {
             "isVirtual": false,
             "fileName": "package.json",
-            "filePath": "~\/projects\/sca-benchmark-wt\/refresh\/fixtures\/bun-lock\/package.json"
+            "filePath": "~\/projects\/sca-benchmark-internal\/fixtures\/bun-lock\/package.json"
 ,"md5": "22a55f771a3d9673b06069b71ba69f4c",
             "sha1": "85b3cee981e608b0ae504ef0bd96dc011e4ef135",
             "sha256": "fe40ee1efea118931f78c1165ef6c59e23ae8193f207e8883a76e7b92c780672"            ,"evidenceCollected": {

@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T20:59:05Z",
+    "timestamp": "2026-11-14T07:49:26Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "29c0ee97-78a0-4898-83c5-774363aa3f26",
+      "bom-ref": "bed63fdd-ad22-42ba-a499-67fd8963ad0a",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "70133290-5161-4ce1-9194-f46869a43ae3",
+      "bom-ref": "39db2d7c-0389-4271-aff6-027049ece323",
       "type": "library",
       "name": "github.com/inconshreveable/mousetrap",
       "version": "1.1.0",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "c1623c3d-9dff-45a1-8a8a-7d8a4ac07a61",
+      "bom-ref": "f12260bd-6380-4a3a-8c41-452efe70bc9f",
       "type": "library",
       "name": "github.com/spf13/cobra",
       "version": "1.8.0",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "4d4273f3-4599-46fa-908c-927f455999d7",
+      "bom-ref": "67d65e66-e145-492e-b4d0-9fefafaaa89c",
       "type": "library",
       "name": "github.com/spf13/pflag",
       "version": "1.0.5",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "585a2f86-b4d7-4a53-a7ce-f3cb8293169f",
+      "bom-ref": "cfe84380-f659-410c-8a3a-5011ee1c04d8",
       "type": "library",
       "name": "stdlib",
       "version": "1.21",

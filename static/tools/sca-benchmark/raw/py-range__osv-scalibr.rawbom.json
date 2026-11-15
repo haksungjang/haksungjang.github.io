@@ -4,7 +4,7 @@
   "specVersion": "1.7",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-13T21:10:50Z",
+    "timestamp": "2026-11-14T09:34:57Z",
     "tools": {
       "components": [
         {
@@ -23,14 +23,14 @@
       {}
     ],
     "component": {
-      "bom-ref": "0de80cfb-2967-4f96-a4e8-0a13cce8d132",
+      "bom-ref": "86dc84b0-acf1-4ae4-86f4-a5730af7d2c0",
       "type": "",
       "name": ""
     }
   },
   "components": [
     {
-      "bom-ref": "1b8ead6f-c5cc-467b-b534-502f54f9c08e",
+      "bom-ref": "75db750d-0f0e-46ac-adfe-43093674dce8",
       "type": "library",
       "name": "flask",
       "version": "2.0",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "bom-ref": "e9ee8a82-6abd-4170-8d00-d0450b772273",
+      "bom-ref": "f5bd4b33-5a46-4ee6-9131-056382e50734",
       "type": "library",
       "name": "jinja2",
       "version": "3.0",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "bom-ref": "29e1a206-32b0-4de0-87e7-71640beeea0a",
+      "bom-ref": "8dcd720b-db1e-458d-a923-a828932abc65",
       "type": "library",
       "name": "requests",
       "version": "2.25",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "bom-ref": "b6691f0a-8be1-466c-beb9-94cb2568abb1",
+      "bom-ref": "bb275ebd-7422-4af7-95dd-b01c33a02bd1",
       "type": "library",
       "name": "urllib3",
       "version": "1.26",

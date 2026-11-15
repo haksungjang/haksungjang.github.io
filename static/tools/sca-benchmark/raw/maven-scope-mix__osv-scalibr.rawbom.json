@@ -1,0 +1,134 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-14T08:43:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SCALIBR",
+          "externalReferences": [
+            {
+              "url": "https://github.com/google/osv-scalibr",
+              "type": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {}
+    ],
+    "component": {
+      "bom-ref": "22fec070-1165-4e24-989a-522b927d095d",
+      "type": "",
+      "name": ""
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "95bf0b9e-51fa-45d2-88c0-e3304401e281",
+      "type": "library",
+      "name": "ch.qos.logback:logback-classic",
+      "version": "1.5.12",
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.12",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "344cbd67-a6a8-4318-9b91-77e8ee5889b5",
+      "type": "library",
+      "name": "com.example.legacy:legacy-codec",
+      "version": "1.0",
+      "purl": "pkg:maven/com.example.legacy/legacy-codec@1.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "lib/legacy-codec-1.0.jar"
+          },
+          {
+            "location": "lib/legacy-codec-1.0.jar/META-INF/maven/com.example.legacy/legacy-codec/pom.properties"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "55e6eb1a-14af-48dc-8e4f-703ce59e7d3d",
+      "type": "library",
+      "name": "com.example.legacy:legacy-codec",
+      "version": "1.0",
+      "purl": "pkg:maven/com.example.legacy/legacy-codec@1.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "9e123c53-be12-48b4-b4aa-a223f00e379a",
+      "type": "library",
+      "name": "com.google.code.gson:gson",
+      "version": "2.11.0",
+      "purl": "pkg:maven/com.google.code.gson/gson@2.11.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "d086b391-efcf-4198-84ab-599bf575f21a",
+      "type": "library",
+      "name": "jakarta.servlet:jakarta.servlet-api",
+      "version": "6.0.0",
+      "purl": "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "bba80906-8b1f-4aea-809f-6bd30f508985",
+      "type": "library",
+      "name": "org.junit.jupiter:junit-jupiter",
+      "version": "5.11.3",
+      "purl": "pkg:maven/org.junit.jupiter/junit-jupiter@5.11.3",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "a87fd055-6cb0-4cac-a05d-f8641ad9e843",
+      "type": "library",
+      "name": "org.tukaani:xz",
+      "version": "1.10",
+      "purl": "pkg:maven/org.tukaani/xz@1.10",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "pom.xml"
+          }
+        ]
+      }
+    }
+  ]
+}

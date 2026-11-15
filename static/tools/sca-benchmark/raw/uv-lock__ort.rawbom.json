@@ -1,25 +1,25 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:c50752ec-fac3-4563-8c90-862dada40322",
+  "serialNumber" : "urn:uuid:867c1178-3888-4826-a16d-877f32007ce2",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:24:25Z",
+    "timestamp" : "2026-11-14T09:35:53Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
-      "name" : "sca-benchmark",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "name" : "sca-benchmark-internal",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -36,13 +36,13 @@
   "components" : [
     {
       "type" : "library",
-      "bom-ref" : "Unmanaged::sca-benchmark:3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "Unmanaged::sca-benchmark-internal:4166e1e7c97719881040e0da220ca0c15a2365b1",
       "group" : "",
-      "name" : "sca-benchmark",
-      "version" : "3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "name" : "sca-benchmark-internal",
+      "version" : "4166e1e7c97719881040e0da220ca0c15a2365b1",
       "description" : "",
       "scope" : "required",
-      "purl" : "pkg:unmanaged/sca-benchmark@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "purl" : "pkg:unmanaged/sca-benchmark-internal@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "properties" : [
         {
           "name" : "ort:effectiveLicense",
@@ -58,7 +58,7 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ]

@@ -1,0 +1,105 @@
+{
+  "fixture": "gradle-toolchain25",
+  "category": "dependency",
+  "input": {
+    "kind": "source",
+    "ref": "fixtures/gradle-toolchain25"
+  },
+  "componentsComplete": true,
+  "notes": "Gradle, lockfile 없음. java.toolchain.languageVersion=25 를 선언한 빌드다. 스캐너 실행 환경에 JDK 25 가 없으면 Gradle 이 툴체인을 찾지 못해 의존성 해석 자체가 실패한다(Toolchain download repositories have not been configured). 이런 빌드에서 의존성을 해석하는 도구와 실패하거나 직접 의존성만 내는 도구가 갈리는지 측정한다. 정답 도출 절차(2026-11-13): 임시 사본에서 eclipse-temurin:25-jdk 컨테이너로 ./gradlew dependencies --configuration runtimeClasspath(Gradle 9.3.1). JDK 17 호스트에서는 같은 명령이 툴체인을 찾지 못해 실패함을 함께 확인했다. 직접은 commons-lang3 3.18.0, guava 33.4.8-jre 이고, guava 가 failureaccess, listenablefuture, jspecify, error_prone_annotations, j2objc-annotations 를 전이로 끈다. 직접은 버전까지, 전이는 이름만(하이브리드).",
+  "rootPurls": [
+    "pkg:maven/toolchain25-demo"
+  ],
+  "fpReasons": [
+    {
+      "id": "pkg:maven/org.gradle.wrapper.GradleWrapperMain/gradle-wrapper",
+      "reason": "저장소에 포함된 빌드 도구(gradle wrapper jar)로 배포 산출물이 아니다. 정답에서 제외"
+    }
+  ],
+  "fnReasons": [
+    {
+      "id": "pkg:maven/com.google.guava/failureaccess",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.guava/listenablefuture",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.jspecify/jspecify",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.errorprone/error_prone_annotations",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/com.google.j2objc/j2objc-annotations",
+      "reason": "전이 의존성. 매니페스트만 읽는 도구는 전이를 해석하지 못한다(빌드, lockfile 해석이 필요)",
+      "axis": "component"
+    },
+    {
+      "id": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+      "reason": "입력(빌드 스크립트, POM)에 라이선스 메타데이터가 없다. 패키지를 받거나 저장소를 조회하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    },
+    {
+      "id": "pkg:maven/com.google.guava/guava@33.4.8-jre",
+      "reason": "입력(빌드 스크립트, POM)에 라이선스 메타데이터가 없다. 패키지를 받거나 저장소를 조회하지 않는 도구는 라이선스를 낼 수 없다",
+      "axis": "license"
+    }
+  ],
+  "components": [
+    {
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+      "version": "3.18.0",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/guava@33.4.8-jre",
+      "version": "33.4.8-jre",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "scope": "direct"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/failureaccess",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.guava/listenablefuture",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/org.jspecify/jspecify",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    },
+    {
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations",
+      "version": "",
+      "licenses": [],
+      "scope": "transitive"
+    }
+  ],
+  "vulnerabilities": []
+}

@@ -1,0 +1,1309 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "~/projects/sca-benchmark-internal/fixtures/go-vuln-subpackage/go.mod",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/jackc/pgpassfile",
+            "version": "1.0.0",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/github.com/jackc/pgpassfile@1.0.0"
+          }
+        },
+        {
+          "package": {
+            "name": "github.com/jackc/pgservicefile",
+            "version": "0.0.0-20221227161230-091c0ba34f0a",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/github.com/jackc/pgservicefile@0.0.0-20221227161230-091c0ba34f0a"
+          }
+        },
+        {
+          "package": {
+            "name": "github.com/jackc/pgx/v5",
+            "version": "5.5.1",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/github.com/jackc/pgx/v5@5.5.1"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GO-2024-2567",
+                "GHSA-fqpg-rq76-99pq"
+              ],
+              "aliases": [
+                "GHSA-fqpg-rq76-99pq",
+                "GO-2024-2567"
+              ],
+              "experimental_analysis": {
+                "GO-2024-2567": {
+                  "called": true,
+                  "unimportant": false
+                }
+              },
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GO-2024-2606",
+                "GHSA-mrww-27vc-gghv"
+              ],
+              "aliases": [
+                "CVE-2024-27304",
+                "GHSA-7jwh-3vrq-q3m8",
+                "GHSA-mrww-27vc-gghv",
+                "GO-2024-2606"
+              ],
+              "experimental_analysis": {
+                "GO-2024-2606": {
+                  "called": true,
+                  "unimportant": false
+                }
+              },
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GO-2026-4771",
+                "GHSA-xgrm-4fwx-7qm8"
+              ],
+              "aliases": [
+                "CVE-2026-33815",
+                "GHSA-xgrm-4fwx-7qm8",
+                "GO-2026-4771"
+              ],
+              "experimental_analysis": {
+                "GO-2026-4771": {
+                  "called": false,
+                  "unimportant": false
+                }
+              },
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GO-2026-4772",
+                "GHSA-9jj7-4m8r-rfcm"
+              ],
+              "aliases": [
+                "CVE-2026-33816",
+                "GHSA-9jj7-4m8r-rfcm",
+                "GO-2026-4772"
+              ],
+              "experimental_analysis": {
+                "GO-2026-4772": {
+                  "called": false,
+                  "unimportant": false
+                }
+              },
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GO-2026-5004",
+                "GHSA-j88v-2chj-qfwx"
+              ],
+              "aliases": [
+                "CVE-2026-41889",
+                "GHSA-j88v-2chj-qfwx",
+                "GO-2026-5004"
+              ],
+              "experimental_analysis": {
+                "GO-2026-5004": {
+                  "called": false,
+                  "unimportant": false
+                }
+              },
+              "max_severity": "2.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2567.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v5/pgconn",
+                        "symbols": [
+                          "Pipeline.Sync"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0-alpha.5"
+                        },
+                        {
+                          "fixed": "5.5.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "GHSA-fqpg-rq76-99pq"
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2567"
+              },
+              "details": "Pipeline can panic when PgConn is busy or closed.",
+              "id": "GO-2024-2567",
+              "modified": "2024-07-09T20:29:41.998256Z",
+              "published": "2024-07-02T19:20:38Z",
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/jackc/pgx/commit/dfd198003a03dbb96e4607b0d3a0bb9a7398ccb7"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "summary": "Panic in Pipeline when PgConn is busy or closed in github.com/jackc/pgx"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2606.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgproto3/v2",
+                        "symbols": [
+                          "AuthenticationCleartextPassword.Encode",
+                          "AuthenticationGSS.Encode",
+                          "AuthenticationGSSContinue.Encode",
+                          "AuthenticationMD5Password.Encode",
+                          "AuthenticationOk.Encode",
+                          "AuthenticationSASL.Encode",
+                          "AuthenticationSASLContinue.Encode",
+                          "AuthenticationSASLFinal.Encode",
+                          "Backend.Send",
+                          "BackendKeyData.Encode",
+                          "Bind.Encode",
+                          "BindComplete.Encode",
+                          "CancelRequest.Encode",
+                          "Close.Encode",
+                          "CloseComplete.Encode",
+                          "CommandComplete.Encode",
+                          "CopyBothResponse.Encode",
+                          "CopyData.Encode",
+                          "CopyDone.Encode",
+                          "CopyFail.Encode",
+                          "CopyInResponse.Encode",
+                          "CopyOutResponse.Encode",
+                          "DataRow.Encode",
+                          "Describe.Encode",
+                          "EmptyQueryResponse.Encode",
+                          "ErrorResponse.Encode",
+                          "ErrorResponse.marshalBinary",
+                          "Execute.Encode",
+                          "Flush.Encode",
+                          "Frontend.Send",
+                          "FunctionCall.Encode",
+                          "FunctionCallResponse.Encode",
+                          "GSSEncRequest.Encode",
+                          "GSSResponse.Encode",
+                          "NoData.Encode",
+                          "NoticeResponse.Encode",
+                          "NotificationResponse.Encode",
+                          "ParameterDescription.Encode",
+                          "ParameterStatus.Encode",
+                          "Parse.Encode",
+                          "ParseComplete.Encode",
+                          "PasswordMessage.Encode",
+                          "PortalSuspended.Encode",
+                          "Query.Encode",
+                          "ReadyForQuery.Encode",
+                          "RowDescription.Encode",
+                          "SASLInitialResponse.Encode",
+                          "SASLResponse.Encode",
+                          "SSLRequest.Encode",
+                          "StartupMessage.Encode",
+                          "Sync.Encode",
+                          "Terminate.Encode"
+                        ]
+                      },
+                      {
+                        "path": "github.com/jackc/pgproto3/v2/example/pgfortune",
+                        "symbols": [
+                          "PgFortuneBackend.Run",
+                          "PgFortuneBackend.handleStartup",
+                          "main"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgproto3/v2",
+                    "purl": "pkg:golang/github.com/jackc/pgproto3/v2"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2606.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/internal/sanitize",
+                        "symbols": [
+                          "Query.Sanitize",
+                          "SanitizeSQL"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx",
+                    "purl": "pkg:golang/github.com/jackc/pgx"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2606.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v4/internal/sanitize",
+                        "symbols": [
+                          "Query.Sanitize",
+                          "SanitizeSQL"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v4",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v4"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.18.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2606.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v5/internal/sanitize",
+                        "symbols": [
+                          "Query.Sanitize",
+                          "SanitizeSQL"
+                        ]
+                      },
+                      {
+                        "path": "github.com/jackc/pgx/v5/pgproto3",
+                        "symbols": [
+                          "AuthenticationCleartextPassword.Encode",
+                          "AuthenticationGSS.Encode",
+                          "AuthenticationGSSContinue.Encode",
+                          "AuthenticationMD5Password.Encode",
+                          "AuthenticationOk.Encode",
+                          "AuthenticationSASL.Encode",
+                          "AuthenticationSASLContinue.Encode",
+                          "AuthenticationSASLFinal.Encode",
+                          "Backend.Flush",
+                          "Backend.Send",
+                          "BackendKeyData.Encode",
+                          "Bind.Encode",
+                          "BindComplete.Encode",
+                          "CancelRequest.Encode",
+                          "Close.Encode",
+                          "CloseComplete.Encode",
+                          "CommandComplete.Encode",
+                          "CopyBothResponse.Encode",
+                          "CopyData.Encode",
+                          "CopyDone.Encode",
+                          "CopyFail.Encode",
+                          "CopyInResponse.Encode",
+                          "CopyOutResponse.Encode",
+                          "DataRow.Encode",
+                          "Describe.Encode",
+                          "EmptyQueryResponse.Encode",
+                          "ErrorResponse.Encode",
+                          "ErrorResponse.marshalBinary",
+                          "Execute.Encode",
+                          "Flush.Encode",
+                          "Frontend.Flush",
+                          "Frontend.Send",
+                          "Frontend.SendBind",
+                          "Frontend.SendClose",
+                          "Frontend.SendDescribe",
+                          "Frontend.SendExecute",
+                          "Frontend.SendParse",
+                          "Frontend.SendQuery",
+                          "Frontend.SendSync",
+                          "Frontend.SendUnbufferedEncodedCopyData",
+                          "FunctionCall.Encode",
+                          "FunctionCallResponse.Encode",
+                          "GSSEncRequest.Encode",
+                          "GSSResponse.Encode",
+                          "NoData.Encode",
+                          "NoticeResponse.Encode",
+                          "NotificationResponse.Encode",
+                          "ParameterDescription.Encode",
+                          "ParameterStatus.Encode",
+                          "Parse.Encode",
+                          "ParseComplete.Encode",
+                          "PasswordMessage.Encode",
+                          "PortalSuspended.Encode",
+                          "Query.Encode",
+                          "ReadyForQuery.Encode",
+                          "RowDescription.Encode",
+                          "SASLInitialResponse.Encode",
+                          "SASLResponse.Encode",
+                          "SSLRequest.Encode",
+                          "StartupMessage.Encode",
+                          "Sync.Encode",
+                          "Terminate.Encode"
+                        ]
+                      },
+                      {
+                        "path": "github.com/jackc/pgx/v5/pgconn",
+                        "symbols": [
+                          "Batch.ExecParams",
+                          "Batch.ExecPrepared",
+                          "Connect",
+                          "ConnectConfig",
+                          "ConnectWithOptions",
+                          "MultiResultReader.Close",
+                          "MultiResultReader.NextResult",
+                          "MultiResultReader.ReadAll",
+                          "PgConn.CheckConn",
+                          "PgConn.Close",
+                          "PgConn.CopyFrom",
+                          "PgConn.CopyTo",
+                          "PgConn.Deallocate",
+                          "PgConn.Exec",
+                          "PgConn.ExecBatch",
+                          "PgConn.ExecParams",
+                          "PgConn.ExecPrepared",
+                          "PgConn.Ping",
+                          "PgConn.Prepare",
+                          "PgConn.ReceiveMessage",
+                          "PgConn.SyncConn",
+                          "PgConn.WaitForNotification",
+                          "Pipeline.Close",
+                          "Pipeline.Flush",
+                          "Pipeline.GetResults",
+                          "Pipeline.SendDeallocate",
+                          "Pipeline.SendPrepare",
+                          "Pipeline.SendQueryParams",
+                          "Pipeline.SendQueryPrepared",
+                          "Pipeline.Sync",
+                          "ResultReader.Close",
+                          "ResultReader.NextRow",
+                          "ResultReader.Read",
+                          "ValidateConnectTargetSessionAttrsPreferStandby",
+                          "ValidateConnectTargetSessionAttrsPrimary",
+                          "ValidateConnectTargetSessionAttrsReadOnly",
+                          "ValidateConnectTargetSessionAttrsReadWrite",
+                          "ValidateConnectTargetSessionAttrsStandby"
+                        ]
+                      },
+                      {
+                        "path": "github.com/jackc/pgx/v5/pgproto3/example/pgfortune",
+                        "symbols": [
+                          "PgFortuneBackend.Run",
+                          "PgFortuneBackend.handleStartup",
+                          "main"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-27304",
+                "GHSA-7jwh-3vrq-q3m8",
+                "GHSA-mrww-27vc-gghv"
+              ],
+              "credits": [
+                {
+                  "name": "paul-gerste-sonarsource"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2606"
+              },
+              "details": "An integer overflow in the calculated message size of a query or bind message could allow a single large message to be sent as multiple messages under the attacker's control. This could lead to SQL injection if an attacker can cause a single query or bind message to exceed 4 GB in size.",
+              "id": "GO-2024-2606",
+              "modified": "2026-02-04T03:55:09.802349Z",
+              "published": "2024-03-14T17:12:43Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/jackc/pgx/security/advisories/GHSA-mrww-27vc-gghv"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/jackc/pgproto3/commit/945c2126f6db8f3bea7eeebe307c01fe92bca007"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/jackc/pgx/commit/adbb38f298c76e283ffc7c7a3f571036fea47fd4"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/jackc/pgx/commit/c543134753a0c5d22881c12404025724cb05ffd8"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/jackc/pgx/commit/f94eb0e2f96782042c96801b5ac448f44f0a81df"
+                }
+              ],
+              "related": [
+                "CGA-3c9g-45p3-h9m3"
+              ],
+              "schema_version": "1.7.3",
+              "summary": "SQL injection in github.com/jackc/pgproto3 and github.com/jackc/pgx"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2026-4771.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v5/pgproto3",
+                        "symbols": [
+                          "Backend.Receive",
+                          "Bind.Decode"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.9.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-33815",
+                "GHSA-xgrm-4fwx-7qm8"
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2026-4771"
+              },
+              "details": "Memory-safety vulnerability in github.com/jackc/pgx/v5.",
+              "id": "GO-2026-4771",
+              "modified": "2026-07-17T10:29:27.547954010Z",
+              "published": "2026-04-07T14:58:41Z",
+              "related": [
+                "CGA-7v58-q3h2-qfr7",
+                "RHSA-2026:36796",
+                "RHSA-2026:41019"
+              ],
+              "schema_version": "1.7.5",
+              "summary": "CVE-2026-33815 in github.com/jackc/pgx"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2026-4772.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v5/pgproto3",
+                        "symbols": [
+                          "Backend.Receive",
+                          "FunctionCall.Decode"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.9.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-33816",
+                "GHSA-9jj7-4m8r-rfcm"
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2026-4772"
+              },
+              "details": "Memory-safety vulnerability in github.com/jackc/pgx/v5.",
+              "id": "GO-2026-4772",
+              "modified": "2026-07-17T10:29:27.835853208Z",
+              "published": "2026-04-07T14:58:41Z",
+              "related": [
+                "CGA-93c9-w6q6-9vf3",
+                "RHSA-2026:13907",
+                "RHSA-2026:19137",
+                "RHSA-2026:36796",
+                "RHSA-2026:41019"
+              ],
+              "schema_version": "1.7.5",
+              "summary": "CVE-2026-33816 in github.com/jackc/pgx"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2026-5004.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/internal/sanitize",
+                        "symbols": [
+                          "Query.Sanitize",
+                          "SanitizeSQL"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx",
+                    "purl": "pkg:golang/github.com/jackc/pgx"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2026-5004.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v4/internal/sanitize",
+                        "symbols": [
+                          "Query.Sanitize",
+                          "SanitizeSQL"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v4",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v4"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2026-5004.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/jackc/pgx/v5/internal/sanitize",
+                        "symbols": [
+                          "Query.Sanitize",
+                          "SanitizeSQL"
+                        ]
+                      }
+                    ]
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.9.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-41889",
+                "GHSA-j88v-2chj-qfwx"
+              ],
+              "credits": [
+                {
+                  "name": "Jack Christensen"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2026-5004"
+              },
+              "details": "SQL Injection can occur when using the non-default simple protocol with a dollar quoted string literal in the SQL query. If that string literal contains text that would be interpreted as a placeholder outside of a string literal, and the value of that placeholder is controllable by the attacker, an injection may be possible.\n\nFor example, an attacker could provide a value that includes a closing dollar quote followed by malicious SQL commands. This is unlikely to occur outside of a contrived scenario.",
+              "id": "GO-2026-5004",
+              "modified": "2026-06-25T18:45:14.963912684Z",
+              "published": "2026-06-22T18:40:49Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/jackc/pgx/security/advisories/GHSA-j88v-2chj-qfwx"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/jackc/pgx/commit/60644f84918a8af66d14a4b0d865d4edafd955da"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/releases/tag/v5.9.2"
+                }
+              ],
+              "related": [
+                "CGA-rrgr-7xqx-rg3q"
+              ],
+              "schema_version": "1.7.5",
+              "summary": "SQL Injection via placeholder confusion with dollar quoted string literals in github.com/jackc/pgx"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-9jj7-4m8r-rfcm/GHSA-9jj7-4m8r-rfcm.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.9.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-33816",
+                "GO-2026-4772"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-04-16T21:31:34Z",
+                "nvd_published_at": "2026-04-07T16:16:24Z",
+                "severity": "CRITICAL"
+              },
+              "details": "Memory-safety vulnerability in github.com/jackc/pgx/v5.",
+              "id": "GHSA-9jj7-4m8r-rfcm",
+              "modified": "2026-09-10T03:50:43.842159740Z",
+              "published": "2026-04-07T18:31:36Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33816"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jackc/pgx"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2026-4772"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Memory-safety vulnerability in github.com/jackc/pgx/v5."
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-fqpg-rq76-99pq/GHSA-fqpg-rq76-99pq.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.5.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "GO-2024-2567"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-754"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-05T20:08:26Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "Pipeline can panic when PgConn is busy or closed.",
+              "id": "GHSA-fqpg-rq76-99pq",
+              "modified": "2026-03-19T18:46:54.238511Z",
+              "published": "2024-07-05T20:08:26Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/commit/dfd198003a03dbb96e4607b0d3a0bb9a7398ccb7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jackc/pgx"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Panic in Pipeline when PgConn is busy or closed in github.com/jackc/pgx"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j88v-2chj-qfwx/GHSA-j88v-2chj-qfwx.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.9.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j88v-2chj-qfwx/GHSA-j88v-2chj-qfwx.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v4",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v4"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "4.18.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-j88v-2chj-qfwx/GHSA-j88v-2chj-qfwx.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx",
+                    "purl": "pkg:golang/github.com/jackc/pgx"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "3.6.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-41889",
+                "GO-2026-5004"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-89"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-04-22T20:46:51Z",
+                "nvd_published_at": "2026-05-08T17:16:31Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nSQL Injection can occur when:\n\n1. The non-default simple protocol is used.\n2. A dollar quoted string literal is used in the SQL query.\n3. That string literal contains text that would be would be interpreted as a placeholder outside of a string literal.\n4. The value of that placeholder is controllable by the attacker.\n\ne.g.\n\n```go\nattackValue := `$tag$; drop table canary; --`\n_, err = tx.Exec(ctx, `select $tag$ $1 $tag$, $1`, pgx.QueryExecModeSimpleProtocol, attackValue)\n```\n\nThis is unlikely to occur outside of a contrived scenario.\n\n### Patches\n\nThe problem is resolved in v5.9.2.\n\n### Workarounds\n\nDo not use the simple protocol to execute queries matching all the above conditions.",
+              "id": "GHSA-j88v-2chj-qfwx",
+              "modified": "2026-09-10T03:51:02.204456790Z",
+              "published": "2026-04-22T20:46:51Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/security/advisories/GHSA-j88v-2chj-qfwx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41889"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/commit/60644f84918a8af66d14a4b0d865d4edafd955da"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jackc/pgx"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/releases/tag/v5.9.2"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "pgx: SQL Injection via placeholder confusion with dollar quoted string literals"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-mrww-27vc-gghv/GHSA-mrww-27vc-gghv.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx",
+                    "purl": "pkg:golang/github.com/jackc/pgx"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.18.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-mrww-27vc-gghv/GHSA-mrww-27vc-gghv.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx",
+                    "purl": "pkg:golang/github.com/jackc/pgx"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-mrww-27vc-gghv/GHSA-mrww-27vc-gghv.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v4",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v4"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.18.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-mrww-27vc-gghv/GHSA-mrww-27vc-gghv.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-27304",
+                "GHSA-7jwh-3vrq-q3m8",
+                "GO-2024-2606"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-190",
+                  "CWE-89"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-04T20:43:24Z",
+                "nvd_published_at": "2024-03-06T19:15:08Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\nSQL injection can occur if an attacker can cause a single query or bind message to exceed 4 GB in size. An integer overflow in the calculated message size can cause the one large message to be sent as multiple messages under the attacker's control.\n\n### Patches\n\nThe problem is resolved in v4.18.2 and v5.5.4.\n\n### Workarounds\n\nReject user input large enough to cause a single query or bind message to exceed 4 GB in size.\n",
+              "id": "GHSA-mrww-27vc-gghv",
+              "modified": "2026-09-10T03:50:10.601755576Z",
+              "published": "2024-03-04T20:43:24Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgproto3/security/advisories/GHSA-7jwh-3vrq-q3m8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/security/advisories/GHSA-mrww-27vc-gghv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27304"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgproto3/commit/945c2126f6db8f3bea7eeebe307c01fe92bca007"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/commit/adbb38f298c76e283ffc7c7a3f571036fea47fd4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/commit/c543134753a0c5d22881c12404025724cb05ffd8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/commit/f94eb0e2f96782042c96801b5ac448f44f0a81df"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jackc/pgx"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.youtube.com/watch?v=Tfg1B8u1yvE"
+                }
+              ],
+              "related": [
+                "CVE-2024-27304"
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "pgx SQL Injection via Protocol Message Size Overflow"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/04/GHSA-xgrm-4fwx-7qm8/GHSA-xgrm-4fwx-7qm8.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/jackc/pgx/v5",
+                    "purl": "pkg:golang/github.com/jackc/pgx/v5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.9.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-33815",
+                "GO-2026-4771"
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-04-10T14:10:46Z",
+                "nvd_published_at": "2026-04-07T16:16:24Z",
+                "severity": "CRITICAL"
+              },
+              "details": "[pgx](github.com/jackc/pgx/v5) is a pure Go driver and toolkit for PostgreSQL. pgx prior to v5.9.0 contains a memory-safety vulnerability.",
+              "id": "GHSA-xgrm-4fwx-7qm8",
+              "modified": "2026-09-10T03:50:44.892822027Z",
+              "published": "2026-04-07T18:31:36Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33815"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/issues/2519"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/issues/2530"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jackc/pgx/commit/6dbad4cafdb8a4daab7ff79c858c95da4b6109e8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2026-4771"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "github.com/jackc/pgx/v5"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "pgx contains memory-safety vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "golang.org/x/crypto",
+            "version": "0.59.0",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/golang.org/x/crypto@0.59.0"
+          }
+        },
+        {
+          "package": {
+            "name": "golang.org/x/text",
+            "version": "0.44.0",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/golang.org/x/text@0.44.0"
+          }
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

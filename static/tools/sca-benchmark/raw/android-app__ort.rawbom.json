@@ -1,22 +1,22 @@
 {
   "bomFormat" : "CycloneDX",
   "specVersion" : "1.6",
-  "serialNumber" : "urn:uuid:4a2ed0f5-f37e-48df-9f65-d4b9e7b4d506",
+  "serialNumber" : "urn:uuid:5cb7bace-bf1e-4b8b-81ee-3a49a0628f7f",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-10-15T01:07:02Z",
+    "timestamp" : "2026-11-14T07:27:20Z",
     "tools" : {
       "components" : [
         {
           "type" : "application",
           "name" : "OSS Review Toolkit",
-          "version" : "96.0.0"
+          "version" : "99.0.0"
         }
       ]
     },
     "component" : {
       "type" : "application",
-      "bom-ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "bom-ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "name" : "android-app",
       "version" : "",
       "properties" : [
@@ -7741,13 +7741,13 @@
   "externalReferences" : [
     {
       "type" : "vcs",
-      "url" : "https://github.com/haksungjang/sca-benchmark.git",
+      "url" : "https://github.com/haksungjang/sca-benchmark-internal.git",
       "comment" : "URL to the Git repository of the projects"
     }
   ],
   "dependencies" : [
     {
-      "ref" : "https://github.com/haksungjang/sca-benchmark.git@3caff3daebaf80e9e449c823cebf6042d7d16856",
+      "ref" : "https://github.com/haksungjang/sca-benchmark-internal.git@4166e1e7c97719881040e0da220ca0c15a2365b1",
       "dependsOn" : [
         "Maven:com.android.tools.utp:android-test-plugin-host-device-info:31.5.2",
         "Maven:com.android.tools.utp:android-device-provider-ddmlib:31.5.2",
